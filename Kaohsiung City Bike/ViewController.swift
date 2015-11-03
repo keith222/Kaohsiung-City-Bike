@@ -10,7 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
 
     @IBOutlet var mapView:MKMapView!
     
