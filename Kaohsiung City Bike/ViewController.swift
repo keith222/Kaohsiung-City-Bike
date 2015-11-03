@@ -11,18 +11,25 @@ import MapKit
 import CoreLocation
 
 
-class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
+class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate{
 
     @IBOutlet var mapView:MKMapView!
     
     
     let locationManager = CLLocationManager();
     var transportType = MKDirectionsTransportType.Walking
-    var currentLocation:CLLocationCoordinate2D!
-    
+    var currentLocation: CLLocationCoordinate2D!
+    var searchController: UISearchController!
+    var leftBarButton: UIBarButtonItem!
+    var rightBarButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        configureSearchBar()
+        
+        leftBarButton = navigationItem.leftBarButtonItem
+        rightBarButton = navigationItem.rightBarButtonItem
+        
         locationManager.requestWhenInUseAuthorization();
         let status = CLLocationManager.authorizationStatus();
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
@@ -33,8 +40,29 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = CLLocationDistance(100)
+    }
+    
+    func configureSearchBar(){
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
+        searchController.searchBar.autocapitalizationType = UITextAutocapitalizationType.None
+        searchController.searchBar.keyboardType = UIKeyboardType.Default
+        navigationItem.titleView = searchController.searchBar
+        definesPresentationContext = true
         
         
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.rightBarButtonItem = nil
+    }
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        navigationItem.leftBarButtonItem = leftBarButton
+        navigationItem.rightBarButtonItem = rightBarButton
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
