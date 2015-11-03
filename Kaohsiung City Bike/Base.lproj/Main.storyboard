@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,49 +11,79 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kaohsiung_City_Bike" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="YRb-3D-p1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="uIw-MI-wJo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="JoM-Tj-qPj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-ok-Glp">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0R-Vk-sZ0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B1K-Wx-2iu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Byt-tA-YcD"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghs-kv-5qw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ndd-pV-fsg"/>
+                                </constraints>
+                                <state key="normal" title="Buttonfff"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ndd-pV-fsg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ndd-pV-fsg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="locateMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vo9-Hw-TiD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="m3D-ok-Glp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VD2-B3-RBl"/>
-                            <constraint firstAttribute="trailing" secondItem="m3D-ok-Glp" secondAttribute="trailing" id="ZnJ-j6-YBm"/>
-                            <constraint firstItem="m3D-ok-Glp" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gUA-GJ-Gox"/>
-                            <constraint firstItem="m3D-ok-Glp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kLC-3n-Axg"/>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" id="5ft-HW-Hu3"/>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="top" secondItem="JoM-Tj-qPj" secondAttribute="top" id="9IC-rl-oqd"/>
+                            <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="Ghs-kv-5qw" secondAttribute="bottom" constant="76" id="HGI-ld-zhL"/>
+                            <constraint firstAttribute="trailing" secondItem="H0R-Vk-sZ0" secondAttribute="trailing" id="Liv-0V-dp0"/>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="bottom" secondItem="uIw-MI-wJo" secondAttribute="top" id="fV8-FF-pUF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ghs-kv-5qw" secondAttribute="trailing" constant="12" id="fwx-X2-Zp8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="m3D-ok-Glp"/>
+                                <exclude reference="H0R-Vk-sZ0"/>
+                                <exclude reference="Ghs-kv-5qw"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VD2-B3-RBl"/>
-                                <exclude reference="ZnJ-j6-YBm"/>
-                                <exclude reference="gUA-GJ-Gox"/>
-                                <exclude reference="kLC-3n-Axg"/>
+                                <exclude reference="5ft-HW-Hu3"/>
+                                <exclude reference="9IC-rl-oqd"/>
+                                <exclude reference="Liv-0V-dp0"/>
+                                <exclude reference="fV8-FF-pUF"/>
+                                <exclude reference="fwx-X2-Zp8"/>
+                                <exclude reference="HGI-ld-zhL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="m3D-ok-Glp"/>
+                                <include reference="H0R-Vk-sZ0"/>
+                                <include reference="Ghs-kv-5qw"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="VD2-B3-RBl"/>
-                                <include reference="ZnJ-j6-YBm"/>
-                                <include reference="gUA-GJ-Gox"/>
-                                <include reference="kLC-3n-Axg"/>
+                                <include reference="5ft-HW-Hu3"/>
+                                <include reference="9IC-rl-oqd"/>
+                                <include reference="Liv-0V-dp0"/>
+                                <include reference="fV8-FF-pUF"/>
+                                <include reference="fwx-X2-Zp8"/>
+                                <include reference="HGI-ld-zhL"/>
                             </mask>
                         </variation>
                     </view>
@@ -61,7 +92,7 @@
                         <barButtonItem key="rightBarButtonItem" image="Info" id="hlk-Ws-oVp"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="m3D-ok-Glp" id="9j7-uz-5u0"/>
+                        <outlet property="mapView" destination="H0R-Vk-sZ0" id="aEe-ls-gDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
