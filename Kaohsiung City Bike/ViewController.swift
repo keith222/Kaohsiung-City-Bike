@@ -22,20 +22,17 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var searchController: UISearchController!
     var leftBarButton: UIBarButtonItem!
     var rightBarButton: UIBarButtonItem!
-    let bikePlace = DataGet()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureSearchBar()
         
-        
-        
         leftBarButton = navigationItem.leftBarButtonItem
         rightBarButton = navigationItem.rightBarButtonItem
         
-        locationManager.requestWhenInUseAuthorization();
-        let status = CLLocationManager.authorizationStatus();
+        locationManager.requestWhenInUseAuthorization()
+        let status = CLLocationManager.authorizationStatus()
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
         }
@@ -44,6 +41,16 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = CLLocationDistance(50)
+        
+        let stationData = DataGet().bikeLocationJson()
+        
+        for element in stationData{
+            let annotation = MKPointAnnotation()
+            annotation.title = element["StationName"] as? String
+            annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
+            mapView.showAnnotations([annotation], animated: true)
+        }
+        
     }
     
     func configureSearchBar(){
