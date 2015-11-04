@@ -22,10 +22,14 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var searchController: UISearchController!
     var leftBarButton: UIBarButtonItem!
     var rightBarButton: UIBarButtonItem!
+    let bikePlace = DataGet()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureSearchBar()
+        
+        
         
         leftBarButton = navigationItem.leftBarButtonItem
         rightBarButton = navigationItem.rightBarButtonItem
@@ -39,7 +43,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startUpdatingLocation()
-        locationManager.distanceFilter = CLLocationDistance(100)
+        locationManager.distanceFilter = CLLocationDistance(50)
     }
     
     func configureSearchBar(){

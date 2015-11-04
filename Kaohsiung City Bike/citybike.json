@@ -1,7 +1,4 @@
 [
-  "BIKEStationData": {
-    "BIKEStation": {
-      "Station": [
         {
           "StationID": "1",
           "StationNO": "0019",
@@ -9,7 +6,7 @@
           "StationAddress": "高雄市左營區博愛三路",
           "StationLat": "22.676995542475076",
           "StationLon": "120.30648350715637",
-          "StationDesc": "R15生態園區站 2號出口",
+          "StationDesc": "R15生態園區站 2號出口"
         },
         {
           "StationID": "2",
@@ -294,11 +291,11 @@
           "StationID": "150",
           "StationNO": "0103",
           "StationName": "南華市場站",
-          "StationAddress": "高雄市前金區中正三路”,
+          "StationAddress": "高雄市前金區中正三路",
           "StationLat": "22.631456",
           "StationLon": "120.303227",
           "StationDesc": "O5R10美麗島站 7號出口"        
-	 },
+        },
         {
           "StationID": "151",
           "StationNO": "0104",
@@ -384,7 +381,7 @@
           "StationID": "260",
           "StationNO": "0137",
           "StationName": "捷運大寮站",
-          "StationAddress": "高雄市大寮區捷西路”,
+          "StationAddress": "高雄市大寮區捷西路",
           "StationLat": "22.621312",
           "StationLon": "120.390423",
           "StationDesc": "OT1大寮站 1號出口"
@@ -411,7 +408,7 @@
           "StationID": "264",
           "StationNO": "0141",
           "StationName": "高雄榮總站",
-          "StationAddress": "高雄市左營區榮總路”,
+          "StationAddress": "高雄市左營區榮總路",
           "StationLat": "22.680077",
           "StationLon": "120.321723",
           "StationDesc": "高雄榮民總醫院急診室對面，榮總路上"
@@ -510,7 +507,7 @@
           "StationID": "277",
           "StationNO": "0154",
           "StationName": "正義市場站",
-          "StationAddress": 高雄市苓雅區文昌路",
+          "StationAddress": "高雄市苓雅區文昌路",
           "StationLat": "22.631218",
           "StationLon": "120.338583",
           "StationDesc": "正義市場後方，文昌路上"
@@ -545,9 +542,6 @@
         {
           "StationID": "282",
           "StationNO": "0158",
-          "StationPic": "http://www.c-bike.com.tw/Uploads/Station/282_s.jpg",
-          "StationPic2": "http://www.c-bike.com.tw/Uploads/Station/282_m.jpg",
-          "StationPic3": "http://www.c-bike.com.tw/Uploads/Station/282_l.jpg",
           "StationName": "鳳新高中站(2)",
           "StationAddress": "高雄市鳳山區新康街",
           "StationLat": "22.614189",
@@ -561,7 +555,7 @@
           "StationAddress": "高雄市鼓山區至聖路與龍德路口",
           "StationLat": "22.659623",
           "StationLon": "120.296881",
-          "StationDesc": "凹子底森林公園”
+          "StationDesc": "凹子底森林公園"
         },
         {
           "StationID": "317",
@@ -777,7 +771,7 @@
           "StationAddress": "面對原站址右側擴充",
           "StationLat": "22.608306",
           "StationLon": "120.316265",
-          "StationDesc": "光華公園”
+          "StationDesc": "光華公園"
         },
         {
           "StationID": "168",
@@ -804,7 +798,7 @@
           "StationAddress": "面對原站址左側擴充",
           "StationLat": "22.620097",
           "StationLon": "120.311969",
-          "StationDesc": "市政府前”
+          "StationDesc": "市政府前"
         },
         {
           "StationID": "162",
@@ -813,7 +807,7 @@
           "StationAddress": "面對原站址左側擴充",
           "StationLat": "22.620733",
           "StationLon": "120.293601",
-          "StationDesc": "高雄女中前”
+          "StationDesc": "高雄女中前"
         },
         {
           "StationID": "160",
@@ -880,7 +874,7 @@
         },
         {
           "StationID": "146",
-          "StationNO": "0099”,
+          "StationNO": "0099",
           "StationName": "道明中學站",
           "StationAddress": "建國一路上，道明中學與聖功醫院中間空地",
           "StationLat": "22.633129",
@@ -963,7 +957,7 @@
           "StationID": "122",
           "StationNO": "0074",
           "StationName": "高雄第一科技大學站",
-          "StationAddress": "校內",
+          "StationAddress": "高雄市楠梓區卓越路2號",
           "StationLat": "22.752774",
           "StationLon": "120.331578",
           "StationDesc": "高雄第一科技大學校內"
@@ -1200,7 +1194,7 @@
           "StationAddress": "高雄市三民區同盟一路(高醫大學大門旁)",
           "StationLat": "22.64921",
           "StationLon": "120.309919",
-          "StationDesc": "高雄醫學大學大門旁”
+          "StationDesc": "高雄醫學大學大門旁"
         },
         {
           "StationID": "98",
@@ -1218,7 +1212,7 @@
           "StationAddress": "高雄市左營區環潭路蓮池潭風景區管理所後方入口處",
           "StationLat": "22.680599",
           "StationLon": "120.297466",
-          "StationDesc": "蓮池潭環潭路-停車場P"
+          "StationDesc": "蓮池潭環潭路-停車場"
         },
         {
           "StationID": "21",
@@ -1303,7 +1297,7 @@
         },
         {
           "StationID": "30",
-          "StationNO": "0007"
+          "StationNO": "0007",
           "StationName": "高雄電影館站",
           "StationAddress": "高雄市盬埕區下水道展示館前",
           "StationLat": "22.62257258348331",
@@ -1312,7 +1306,7 @@
         },
         {
           "StationID": "32",
-          "StationNO": "0032"
+          "StationNO": "0032",
           "StationName": "家樂福愛河站",
           "StationAddress": "三民區河東路距河北二路約72米處",
           "StationLat": "22.633975813377926",
@@ -1344,7 +1338,7 @@
           "StationAddress": "前金區五福三路高雄女中前",
           "StationLat": "22.620789969654606",
           "StationLon": "120.29359817504883",
-          "StationDesc": "高雄女中前”
+          "StationDesc": "高雄女中前"
         },
         {
           "StationID": "36",
@@ -1434,9 +1428,6 @@
           "StationAddress": "高雄市前鎮區成功二路與時代大道口東北側",
           "StationLat": "22.595860665927464",
           "StationLon": "120.30492782592773",
-          "StationDesc": "統一阪急前方草坪（時代大道與成功路口）"
+          "StationDesc": "統一阪急前方草坪(時代大道與成功路口)"
         }
-      ]
-    }
-  }
 ]

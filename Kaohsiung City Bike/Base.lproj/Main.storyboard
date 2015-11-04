@@ -30,16 +30,21 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="ndd-pV-fsg"/>
+                                    <constraint firstAttribute="height" constant="40" id="2u4-WK-P8Q"/>
+                                    <constraint firstAttribute="width" constant="46" id="ndd-pV-fsg">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Buttonfff"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="2u4-WK-P8Q"/>
                                         <exclude reference="ndd-pV-fsg"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
+                                        <include reference="2u4-WK-P8Q"/>
                                         <include reference="ndd-pV-fsg"/>
                                     </mask>
                                 </variation>
@@ -53,10 +58,14 @@
                         <constraints>
                             <constraint firstItem="H0R-Vk-sZ0" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" id="5ft-HW-Hu3"/>
                             <constraint firstItem="H0R-Vk-sZ0" firstAttribute="top" secondItem="JoM-Tj-qPj" secondAttribute="top" id="9IC-rl-oqd"/>
-                            <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="Ghs-kv-5qw" secondAttribute="bottom" constant="76" id="HGI-ld-zhL"/>
+                            <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="Ghs-kv-5qw" secondAttribute="bottom" constant="76" id="HGI-ld-zhL">
+                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="H0R-Vk-sZ0" secondAttribute="trailing" id="Liv-0V-dp0"/>
                             <constraint firstItem="H0R-Vk-sZ0" firstAttribute="bottom" secondItem="uIw-MI-wJo" secondAttribute="top" id="fV8-FF-pUF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ghs-kv-5qw" secondAttribute="trailing" constant="12" id="fwx-X2-Zp8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ghs-kv-5qw" secondAttribute="trailing" constant="12" id="fwx-X2-Zp8">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -64,12 +73,12 @@
                                 <exclude reference="Ghs-kv-5qw"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="HGI-ld-zhL"/>
+                                <exclude reference="fwx-X2-Zp8"/>
                                 <exclude reference="5ft-HW-Hu3"/>
                                 <exclude reference="9IC-rl-oqd"/>
                                 <exclude reference="Liv-0V-dp0"/>
                                 <exclude reference="fV8-FF-pUF"/>
-                                <exclude reference="fwx-X2-Zp8"/>
-                                <exclude reference="HGI-ld-zhL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -78,12 +87,12 @@
                                 <include reference="Ghs-kv-5qw"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="HGI-ld-zhL"/>
+                                <include reference="fwx-X2-Zp8"/>
                                 <include reference="5ft-HW-Hu3"/>
                                 <include reference="9IC-rl-oqd"/>
                                 <include reference="Liv-0V-dp0"/>
                                 <include reference="fV8-FF-pUF"/>
-                                <include reference="fwx-X2-Zp8"/>
-                                <include reference="HGI-ld-zhL"/>
                             </mask>
                         </variation>
                     </view>
