@@ -33,14 +33,10 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         
         leftBarButton = navigationItem.leftBarButtonItem
         rightBarButton = navigationItem.rightBarButtonItem
-        
-<<<<<<< HEAD
+
         locationManager.requestWhenInUseAuthorization()//確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
-=======
-        locationManager.requestWhenInUseAuthorization();
-        let status = CLLocationManager.authorizationStatus();
->>>>>>> parent of 44e5d0c... add annotation to map
+
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
         }
@@ -49,7 +45,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = CLLocationDistance(50)
-<<<<<<< HEAD
+        
         
         let stationData = DataGet().bikeLocationJson()//抓腳踏車站點位置
         
@@ -59,9 +55,6 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
             mapView.showAnnotations([annotation], animated: true)
         }
-        
-=======
->>>>>>> parent of 44e5d0c... add annotation to map
     }
     
     func configureSearchBar(){
