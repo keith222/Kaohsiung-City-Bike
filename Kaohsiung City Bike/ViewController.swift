@@ -17,7 +17,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
     
     let locationManager = CLLocationManager();
-    var transportType = MKDirectionsTransportType.Walking
+    var transportType = MKDirectionsTransportType.Walking //以步行方式導航
     var currentLocation: CLLocationCoordinate2D!
     var searchController: UISearchController!
     var leftBarButton: UIBarButtonItem!
@@ -31,7 +31,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         leftBarButton = navigationItem.leftBarButtonItem
         rightBarButton = navigationItem.rightBarButtonItem
         
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()//確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
@@ -42,9 +42,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = CLLocationDistance(50)
         
-        let stationData = DataGet().bikeLocationJson()
+        let stationData = DataGet().bikeLocationJson()//抓腳踏車站點位置
         
-        for element in stationData{
+        for element in stationData{//將位置作成annotation
             let annotation = MKPointAnnotation()
             annotation.title = element["StationName"] as? String
             annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
@@ -54,6 +54,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     
     func configureSearchBar(){
+        //將UISearchBar放到Navigation的titleView上
         searchController = UISearchController(searchResultsController: nil)
         searchController.delegate = self
         searchController.searchBar.delegate = self
@@ -63,14 +64,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         searchController.searchBar.keyboardType = UIKeyboardType.Default
         navigationItem.titleView = searchController.searchBar
         definesPresentationContext = true
-        
-        
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = nil
     }
+    
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         navigationItem.leftBarButtonItem = leftBarButton
         navigationItem.rightBarButtonItem = rightBarButton
@@ -86,9 +86,11 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     
     override func viewDidDisappear(animated: Bool) {
+        //畫面消失時停止更新位置（節省電量）
         locationManager.stopUpdatingLocation()
     }
     override func viewWillAppear(animated: Bool) {
+        //畫面將要出現時啟動更新位置
         locationManager.startUpdatingLocation()
     }
     
@@ -96,7 +98,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func locateMe(sender: AnyObject) {
+        //定位按鈕function實作
         mapView.showsUserLocation = true
         mapView.delegate = self
         let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
