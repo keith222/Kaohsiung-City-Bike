@@ -1077,7 +1077,7 @@
           "StationAddress": "餐旅高中正門右邊",
           "StationLat": "22.566265",
           "StationLon": "120.372176",
-          "StationDesc": "餐旅高中正門右邊"
+          "StationDesc": "餐旅國中站-餐旅國中正門右邊"
         },
         {
           "StationID": "109",
@@ -1092,7 +1092,7 @@
           "StationID": "110",
           "StationNO": "0062",
           "StationName": "班超公園站",
-          "StationAddress": "班超路上",
+          "StationAddress": "班超路上(岡山中街與忠誠路284巷中間)",
           "StationLat": "22.600957",
           "StationLon": "120.32557",
           "StationDesc": "班超路上"

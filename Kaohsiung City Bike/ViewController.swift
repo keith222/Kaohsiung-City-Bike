@@ -22,17 +22,25 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var searchController: UISearchController!
     var leftBarButton: UIBarButtonItem!
     var rightBarButton: UIBarButtonItem!
+    let bikePlace = DataGet()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureSearchBar()
         
+        
+        
         leftBarButton = navigationItem.leftBarButtonItem
         rightBarButton = navigationItem.rightBarButtonItem
         
+<<<<<<< HEAD
         locationManager.requestWhenInUseAuthorization()//確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
+=======
+        locationManager.requestWhenInUseAuthorization();
+        let status = CLLocationManager.authorizationStatus();
+>>>>>>> parent of 44e5d0c... add annotation to map
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
         }
@@ -41,6 +49,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = CLLocationDistance(50)
+<<<<<<< HEAD
         
         let stationData = DataGet().bikeLocationJson()//抓腳踏車站點位置
         
@@ -51,6 +60,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             mapView.showAnnotations([annotation], animated: true)
         }
         
+=======
+>>>>>>> parent of 44e5d0c... add annotation to map
     }
     
     func configureSearchBar(){
