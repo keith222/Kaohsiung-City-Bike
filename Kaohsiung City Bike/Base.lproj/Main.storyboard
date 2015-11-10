@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,29 +21,106 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0R-Vk-sZ0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Byt-tA-YcD"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F70-fn-jXP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dLb-Ej-JBh">
+                                        <variation key="widthClass=compact" constant="40"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="35" id="nXu-El-ctO">
+                                        <variation key="widthClass=compact" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dLb-Ej-JBh"/>
+                                        <exclude reference="nXu-El-ctO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dLb-Ej-JBh"/>
+                                        <include reference="nXu-El-ctO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dLb-Ej-JBh"/>
+                                        <include reference="nXu-El-ctO"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="locateMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1kr-D9-BPz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="top" secondItem="YRb-3D-p1h" secondAttribute="bottom" constant="-64" id="99d-pB-gbV"/>
+                            <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="H0R-Vk-sZ0" secondAttribute="bottom" id="EDo-ge-YC0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F70-fn-jXP" secondAttribute="trailing" constant="11" id="Fjx-Ma-XhJ">
+                                <variation key="widthClass=compact" constant="-5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="F70-fn-jXP" secondAttribute="bottom" constant="49" id="FpN-s9-caF">
+                                <variation key="widthClass=compact" constant="44"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="H0R-Vk-sZ0" secondAttribute="trailing" id="P27-2t-Ome"/>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="top" secondItem="YRb-3D-p1h" secondAttribute="bottom" constant="-64" id="QqI-61-9db"/>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" id="Tx2-rX-6IW"/>
+                            <constraint firstItem="H0R-Vk-sZ0" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" id="anw-zK-YrV"/>
+                            <constraint firstAttribute="trailing" secondItem="H0R-Vk-sZ0" secondAttribute="trailing" id="scU-Xf-GBB"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="H0R-Vk-sZ0"/>
+                                <exclude reference="F70-fn-jXP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="99d-pB-gbV"/>
+                                <exclude reference="P27-2t-Ome"/>
+                                <exclude reference="QqI-61-9db"/>
+                                <exclude reference="Tx2-rX-6IW"/>
+                                <exclude reference="anw-zK-YrV"/>
+                                <exclude reference="scU-Xf-GBB"/>
+                                <exclude reference="EDo-ge-YC0"/>
+                                <exclude reference="FpN-s9-caF"/>
+                                <exclude reference="Fjx-Ma-XhJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="H0R-Vk-sZ0"/>
+                                <include reference="F70-fn-jXP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="99d-pB-gbV"/>
+                                <include reference="anw-zK-YrV"/>
+                                <include reference="scU-Xf-GBB"/>
+                                <include reference="EDo-ge-YC0"/>
+                                <include reference="FpN-s9-caF"/>
+                                <include reference="Fjx-Ma-XhJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="H0R-Vk-sZ0"/>
+                                <include reference="F70-fn-jXP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="P27-2t-Ome"/>
+                                <include reference="QqI-61-9db"/>
+                                <include reference="Tx2-rX-6IW"/>
+                                <include reference="FpN-s9-caF"/>
+                                <include reference="Fjx-Ma-XhJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -56,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="-316"/>
+            <point key="canvasLocation" x="1380" y="-317.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J7l-LR-swk">

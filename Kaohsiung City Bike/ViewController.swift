@@ -49,12 +49,52 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         
         let stationData = DataGet().bikeLocationJson()//抓腳踏車站點位置
         
-        for element in stationData{//將位置作成annotation
+        for element in stationData{//將位製作成annotation
             let annotation = MKPointAnnotation()
             annotation.title = element["StationName"] as? String
             annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
             mapView.showAnnotations([annotation], animated: true)
         }
+    }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        let selectedAnnotation = view.annotation
+        showRoute(selectedAnnotation!)
+        
+    }
+    
+    func showRoute(currentAnnotation: MKAnnotation){
+        
+        //設定路徑起始與目的地
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = MKMapItem.mapItemForCurrentLocation()
+        let destinationPlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
+        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
+        directionRequest.transportType = MKDirectionsTransportType.Walking
+        
+        //方位計算
+        let directions = MKDirections(request: directionRequest)
+        directions.calculateDirectionsWithCompletionHandler{
+            response, error in
+            guard let response = response else {
+                //handle the error here
+                print("Error: \(error?.localizedDescription)")
+                return
+            }
+            let route = response.routes[0] 
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveLabels)
+            let etaMin = (NSInteger(route.expectedTravelTime)/60)%60 //預估步行時間
+            print(etaMin)
+        }
+    }
+    
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        //將路線畫至地圖
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor(red: 53/255, green: 1, blue: 171/255, alpha: 0.7)
+        renderer.lineWidth = 5.0
+        
+        return renderer
     }
     
     func configureSearchBar(){
@@ -89,6 +129,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
     }
     
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let selectedLoc = view.annotation
+        print("tsest")
+         print("Annotation '\(selectedLoc!.title!)' has been selected")
+    }
+    
+    
     override func viewDidDisappear(animated: Bool) {
         //畫面消失時停止更新位置（節省電量）
         locationManager.stopUpdatingLocation()
@@ -108,6 +155,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         mapView.showsUserLocation = true
         mapView.delegate = self
         let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
+    
         mapView.setRegion(region, animated: true)
 
     }
