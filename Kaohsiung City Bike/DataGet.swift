@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataGet {
+class DataGet :NSObject,NSXMLParserDelegate{
     
     func bikeLocationJson()->NSMutableArray{
         let path:NSString = NSBundle.mainBundle().pathForResource("citybike", ofType: "json")!

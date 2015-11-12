@@ -14,6 +14,8 @@ import CoreLocation
 class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate{
 
     @IBOutlet var mapView:MKMapView!
+    @IBOutlet var travelTimeLabel: UILabel!
+    @IBOutlet var infoView: UIView!
     
     
     let locationManager = CLLocationManager();
@@ -22,13 +24,17 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var searchController: UISearchController!
     var leftBarButton: UIBarButtonItem!
     var rightBarButton: UIBarButtonItem!
+    var currentA: MKAnnotation!
     let bikePlace = DataGet()
+    var timer:NSTimer!
+    
+    private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureSearchBar()
-        
+        infoView.transform = CGAffineTransformMakeTranslation(0, -131)
         
         
         leftBarButton = navigationItem.leftBarButtonItem
@@ -57,10 +63,53 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         }
     }
     
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        let selectedAnnotation = view.annotation
-        showRoute(selectedAnnotation!)
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        if currentA != nil{
+            showRoute(currentA)
+        }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if !(annotation is MKPointAnnotation) {
+            return nil
+        }
         
+        let reuseId = "test"
+        
+        var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+        if anView == nil {
+            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            anView!.image = UIImage(named:"bikePin")
+            anView!.canShowCallout = true
+        }
+        else {
+            anView!.annotation = annotation
+        }
+        
+        return anView
+       
+    }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        //點下annotation後的動作
+        self.mapView.removeOverlays(self.mapView.overlays)
+        
+        currentA = view.annotation
+        showRoute(currentA)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+        //infoview滑下動畫
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
+        },completion: nil)
+        
+    }
+    
+    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
+        UIView.animateWithDuration(0.2, animations: {
+            self.infoView.transform = CGAffineTransformMakeTranslation(0, -130)
+        })
+        self.timer.invalidate()
+        self.timer = nil
     }
     
     func showRoute(currentAnnotation: MKAnnotation){
@@ -84,7 +133,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             let route = response.routes[0] 
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveLabels)
             let etaMin = (NSInteger(route.expectedTravelTime)/60)%60 //預估步行時間
-            print(etaMin)
+            self.travelTimeLabel.text = String(etaMin)
+
         }
     }
     
@@ -95,6 +145,14 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         renderer.lineWidth = 5.0
         
         return renderer
+    }
+    
+    func bikeInfo(timer:NSTimer){
+        let xmlParser = BikeParser()
+        xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
+            self.xmlItems = xmlItems
+            print(xmlItems)
+        })
     }
     
     func configureSearchBar(){
@@ -123,7 +181,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude , longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         mapView.setRegion(region, animated: false)
         currentLocation = center
     
@@ -154,7 +212,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         //定位按鈕function實作
         mapView.showsUserLocation = true
         mapView.delegate = self
-        let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
+        let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
         mapView.setRegion(region, animated: true)
 

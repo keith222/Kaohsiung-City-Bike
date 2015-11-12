@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F22331BF3A18D00ECE80D /* BikeParser.swift */; };
 		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
 		534962951BE07BE700BFFD71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962941BE07BE700BFFD71 /* ViewController.swift */; };
 		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		531F22331BF3A18D00ECE80D /* BikeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeParser.swift; sourceTree = "<group>"; };
 		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534962941BE07BE700BFFD71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				534962921BE07BE700BFFD71 /* AppDelegate.swift */,
 				534962941BE07BE700BFFD71 /* ViewController.swift */,
 				53893AED1BE9CAF700E32ECD /* DataGet.swift */,
+				531F22331BF3A18D00ECE80D /* BikeParser.swift */,
 				534962961BE07BE700BFFD71 /* Main.storyboard */,
 				534962991BE07BE700BFFD71 /* Assets.xcassets */,
 				5349629B1BE07BE700BFFD71 /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 				534962951BE07BE700BFFD71 /* ViewController.swift in Sources */,
 				53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */,
 				534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */,
+				531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
