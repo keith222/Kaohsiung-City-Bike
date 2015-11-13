@@ -16,6 +16,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
     @IBOutlet var infoView: UIView!
+    @IBOutlet var staName: UILabel!
+    @IBOutlet var avaNum: UILabel!
+    @IBOutlet var parkNum: UILabel!
     
     
     let locationManager = CLLocationManager();
@@ -27,14 +30,16 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var currentA: MKAnnotation!
     let bikePlace = DataGet()
     var timer:NSTimer!
+    var annoArray:NSMutableArray? = NSMutableArray()
+    var staNum:NSInteger!
     
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configureSearchBar()
-        infoView.transform = CGAffineTransformMakeTranslation(0, -131)
+        //configureSearchBar()
+        infoView.transform = CGAffineTransformMakeTranslation(0, -140)
         
         
         leftBarButton = navigationItem.leftBarButtonItem
@@ -53,13 +58,15 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         locationManager.distanceFilter = CLLocationDistance(50)
         
         
-        let stationData = DataGet().bikeLocationJson()//抓腳踏車站點位置
+        let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
         
-        for element in stationData{//將位製作成annotation
+        for element in stationData{//將位置作成annotation
             let annotation = MKPointAnnotation()
             annotation.title = element["StationName"] as? String
             annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
             mapView.showAnnotations([annotation], animated: true)
+            annoArray?.addObject(annotation)
+            
         }
     }
     
@@ -73,9 +80,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         if !(annotation is MKPointAnnotation) {
             return nil
         }
-        
-        let reuseId = "test"
-        
+ 
+        let reuseId = "pin"
         var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
@@ -85,18 +91,23 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         else {
             anView!.annotation = annotation
         }
-        
         return anView
-       
     }
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        //點下annotation後的動作
-        self.mapView.removeOverlays(self.mapView.overlays)
         
+        self.staNum = self.annoArray?.indexOfObject(view.annotation!)
+        
+        //點下annotation後的動作
+        mapView.removeOverlays(self.mapView.overlays)
+        self.staName.text = (view.annotation?.title)!
         currentA = view.annotation
         showRoute(currentA)
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+
+        //啟動timer每一分鐘抓腳踏車資訊
+        NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+        
         //infoview滑下動畫
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
@@ -106,7 +117,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
     func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
         UIView.animateWithDuration(0.2, animations: {
-            self.infoView.transform = CGAffineTransformMakeTranslation(0, -130)
+            self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
         })
         self.timer.invalidate()
         self.timer = nil
@@ -134,7 +145,6 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveLabels)
             let etaMin = (NSInteger(route.expectedTravelTime)/60)%60 //預估步行時間
             self.travelTimeLabel.text = String(etaMin)
-
         }
     }
     
@@ -148,11 +158,25 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     
     func bikeInfo(timer:NSTimer){
+        
         let xmlParser = BikeParser()
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
-            print(xmlItems)
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                if Int(self.xmlItems![self.staNum].ava)<10{
+                    self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                }
+                if Int(self.xmlItems![self.staNum].unava)<10{
+                    self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                }
+                self.avaNum.text = self.xmlItems![self.staNum].ava
+                self.parkNum.text = self.xmlItems![self.staNum].unava
+            })
+            
+            //print(xmlItems[self.staNum])
         })
+
     }
     
     func configureSearchBar(){
@@ -186,14 +210,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         currentLocation = center
     
     }
-    
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let selectedLoc = view.annotation
-        print("tsest")
-         print("Annotation '\(selectedLoc!.title!)' has been selected")
-    }
-    
-    
+
     override func viewDidDisappear(animated: Bool) {
         //畫面消失時停止更新位置（節省電量）
         locationManager.stopUpdatingLocation()
