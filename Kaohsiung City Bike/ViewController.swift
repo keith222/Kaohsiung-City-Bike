@@ -19,6 +19,11 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     @IBOutlet var staName: UILabel!
     @IBOutlet var avaNum: UILabel!
     @IBOutlet var parkNum: UILabel!
+    @IBOutlet var timeButtonOutlet: UIButton!
+    @IBOutlet var spendInfo: UIView!
+    @IBOutlet var timeSpend: UILabel!
+    @IBOutlet var costSpend: UILabel!
+    @IBOutlet var lightBlur: UIVisualEffectView!
     
     
     let locationManager = CLLocationManager();
@@ -30,6 +35,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var currentA: MKAnnotation!
     let bikePlace = DataGet()
     var timer:NSTimer!
+    var stopWatch:NSTimer!
+    var count = 0
     var annoArray:NSMutableArray? = NSMutableArray()
     var staNum:NSInteger!
     
@@ -39,8 +46,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //configureSearchBar()
-        infoView.transform = CGAffineTransformMakeTranslation(0, -140)
-        
+        self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
+        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+        self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
         
         leftBarButton = navigationItem.leftBarButtonItem
         rightBarButton = navigationItem.rightBarButtonItem
@@ -108,10 +116,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
         self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
         
-        //infoview滑下動畫
+        //infoview滑下及timeButton滑上動畫
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
+            self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
         },completion: nil)
+        
+        
         
     }
     
@@ -173,10 +184,43 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
                 self.avaNum.text = self.xmlItems![self.staNum].ava
                 self.parkNum.text = self.xmlItems![self.staNum].unava
             })
-            
-            //print(xmlItems[self.staNum])
         })
 
+    }
+    
+    func stopWatchTimer(timer:NSTimer){
+        count++
+        let minute = (count/60)%60
+        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d",minute,count), forState: .Normal)
+    }
+    
+    func showSpendInfo(){
+
+        var minute = (count/60)%60//計算使用時間
+        let timeInfo = "\(minute) min \(count) sec"
+        self.timeSpend.text = timeInfo
+        
+        var cost = 0//計算花費
+        switch minute{
+            case 0...60: cost = 0 //不滿60分鐘免費
+            case 61...90: cost = 10 //90分鐘 10元
+            default: //90分後每30分20元
+                minute -= 90
+                if minute % 30 != 0{
+                     minute = Int(minute/30)+1
+                }else{
+                    minute = Int(minute/30)
+                }
+                cost = 10 + (minute*20)
+        }
+        let costInfo = "NT$ \(cost)"
+        self.costSpend.text = costInfo
+
+        //spendInfo滑下動畫
+        UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
+            },completion: nil)
+        
     }
     
     func configureSearchBar(){
@@ -232,8 +276,31 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
         mapView.setRegion(region, animated: true)
-
     }
 
+    @IBAction func timeButton(sender: AnyObject) {
+        if timeButtonOutlet.titleLabel?.text == "Time Start"{//一開始按下後
+            self.timeButtonOutlet.setTitle("00:00", forState: .Normal)
+            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "stopWatchTimer:", userInfo: nil, repeats: true)
+            self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
+            
+        }else{//結束計時
+            self.stopWatch.invalidate()
+            self.stopWatch = nil
+            self.timeButtonOutlet.setTitle("Time Start", forState: .Normal)
+            self.timeButtonOutlet.backgroundColor = UIColor(red: 0, green: 1, blue: 128/255, alpha: 1)
+            self.lightBlur.hidden = false
+            showSpendInfo()
+        }
+        
+    }
+    @IBAction func doneButton(sender: AnyObject) {
+        UIView.animateWithDuration(0.2, animations: {
+            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+        })
+        self.lightBlur.hidden = true
+        
+    }
+    
 }
 
