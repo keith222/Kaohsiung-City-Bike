@@ -216,7 +216,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         self.costSpend.text = costInfo
 
         //spendInfo滑下動畫
-        UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
             },completion: nil)
         
