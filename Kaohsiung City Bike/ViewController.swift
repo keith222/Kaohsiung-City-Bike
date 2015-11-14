@@ -122,13 +122,12 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
         },completion: nil)
         
-        
-        
     }
     
     func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
-        UIView.animateWithDuration(0.2, animations: {
+        UIView.animateWithDuration(0.5, animations: {
             self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
+            self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
         })
         self.timer.invalidate()
         self.timer = nil
@@ -279,7 +278,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
 
     @IBAction func timeButton(sender: AnyObject) {
-        if timeButtonOutlet.titleLabel?.text == "Time Start"{//一開始按下後
+        if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
             self.timeButtonOutlet.setTitle("00:00", forState: .Normal)
             self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "stopWatchTimer:", userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
@@ -287,7 +286,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         }else{//結束計時
             self.stopWatch.invalidate()
             self.stopWatch = nil
-            self.timeButtonOutlet.setTitle("Time Start", forState: .Normal)
+            self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 0, green: 1, blue: 128/255, alpha: 1)
             self.lightBlur.hidden = false
             showSpendInfo()

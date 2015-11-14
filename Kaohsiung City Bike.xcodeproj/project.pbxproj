@@ -17,6 +17,7 @@
 		534962B31BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */; };
 		534962C11BE3719400BFFD71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534962C01BE3719400BFFD71 /* MapKit.framework */; };
 		534962C31BE39D6600BFFD71 /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
+		536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53893AED1BE9CAF700E32ECD /* DataGet.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,10 @@
 		534962B41BE07BE700BFFD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534962C01BE3719400BFFD71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
+		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		537149671BF721500098DC66 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		537149681BF721500098DC66 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		53893AED1BE9CAF700E32ECD /* DataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +129,7 @@
 				5349629B1BE07BE700BFFD71 /* LaunchScreen.storyboard */,
 				5349629E1BE07BE700BFFD71 /* Info.plist */,
 				534962C21BE39D6600BFFD71 /* citybike.json */,
+				536E2C151BF726C500B5E7DE /* Localizable.strings */,
 			);
 			path = "Kaohsiung City Bike";
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
 				5349629D1BE07BE700BFFD71 /* LaunchScreen.storyboard in Resources */,
 				534962C31BE39D6600BFFD71 /* citybike.json in Resources */,
 				5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */,
@@ -327,6 +334,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				534962971BE07BE700BFFD71 /* Base */,
+				537149671BF721500098DC66 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -335,8 +343,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				5349629C1BE07BE700BFFD71 /* Base */,
+				537149681BF721500098DC66 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		536E2C151BF726C500B5E7DE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536E2C141BF726C500B5E7DE /* zh-Hant */,
+				536E2C161BF726C900B5E7DE /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
