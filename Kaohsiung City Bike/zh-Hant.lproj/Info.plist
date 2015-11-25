@@ -43,7 +43,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>CityBike is required to find out your current location</string>
+	<string>CityBike 將要使用您目前的地理位置</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

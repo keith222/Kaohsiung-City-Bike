@@ -6,3 +6,5 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 "Time_Start" = "Time Start";
+"Twenty_Minutes_Alert" = "Free Time will be ended in 10 minutes!!";
+"Thirty_Minutes_Alert" = "Now Time Charging Starting!!";

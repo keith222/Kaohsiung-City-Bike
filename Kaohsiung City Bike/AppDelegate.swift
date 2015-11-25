@@ -19,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         UINavigationBar.appearance().barTintColor = UIColor(red: 20.0/255.0, green: 232.0/255.0, blue: 184.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:"))) {
+            UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: nil))
+        }
+        
+        
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        application.applicationIconBadgeNumber = 0
     }
 
     func applicationWillResignActive(application: UIApplication) {

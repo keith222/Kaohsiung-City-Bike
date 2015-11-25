@@ -44,6 +44,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>CityBike is required to find out your current location</string>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

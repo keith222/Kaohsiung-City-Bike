@@ -521,7 +521,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k9-6D-3g5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.17578365521591138" green="0.87195512820512822" blue="0.58563299183767992" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="473-gZ-Y4M"/>
                                 </constraints>
@@ -628,7 +628,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnB-32-cFG">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.17578365521591138" green="0.87195512820512822" blue="0.58563299183767992" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="KFW-9T-B0d"/>
                                         </constraints>
@@ -733,9 +733,13 @@
                                     <constraint firstItem="r9g-v8-ykh" firstAttribute="top" secondItem="j50-6a-fWj" secondAttribute="bottom" constant="21" id="XcO-Sl-hB4"/>
                                     <constraint firstItem="YnB-32-cFG" firstAttribute="top" secondItem="nst-lC-46h" secondAttribute="bottom" constant="18" id="Zck-4z-D6X"/>
                                     <constraint firstItem="nst-lC-46h" firstAttribute="top" secondItem="P5h-Mn-xj4" secondAttribute="bottom" constant="21" id="dQo-CM-JAH"/>
-                                    <constraint firstItem="nst-lC-46h" firstAttribute="leading" secondItem="3Gv-yA-S3e" secondAttribute="leading" constant="103" id="dU6-VR-nmh"/>
+                                    <constraint firstItem="nst-lC-46h" firstAttribute="leading" secondItem="3Gv-yA-S3e" secondAttribute="leading" constant="103" id="dU6-VR-nmh">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="108"/>
+                                    </constraint>
                                     <constraint firstItem="r9g-v8-ykh" firstAttribute="leading" secondItem="3Gv-yA-S3e" secondAttribute="leading" constant="8" id="jHq-0n-p4V"/>
-                                    <constraint firstItem="j50-6a-fWj" firstAttribute="leading" secondItem="3Gv-yA-S3e" secondAttribute="leading" constant="103" id="jir-km-juO"/>
+                                    <constraint firstItem="j50-6a-fWj" firstAttribute="leading" secondItem="3Gv-yA-S3e" secondAttribute="leading" constant="103" id="jir-km-juO">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="108"/>
+                                    </constraint>
                                     <constraint firstItem="YnB-32-cFG" firstAttribute="leading" secondItem="3Gv-yA-S3e" secondAttribute="leading" constant="8" id="jjd-Li-c6N"/>
                                     <constraint firstItem="r9g-v8-ykh" firstAttribute="top" secondItem="j50-6a-fWj" secondAttribute="bottom" constant="21" id="k3n-6N-a0L"/>
                                     <constraint firstItem="j50-6a-fWj" firstAttribute="top" secondItem="ZgZ-uz-J8Z" secondAttribute="bottom" constant="12" id="kuG-8w-FwN"/>

@@ -112,9 +112,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         currentA = view.annotation
         showRoute(currentA)
 
-        //啟動timer每一分鐘抓腳踏車資訊
+        //啟動timer每五分鐘抓腳踏車資訊
         NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
         
         //infoview滑下及timeButton滑上動畫
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
@@ -135,6 +135,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
     func showRoute(currentAnnotation: MKAnnotation){
         
+        let overlays = self.mapView.overlays//移除位置更新後的舊線條
+        mapView.removeOverlays(overlays)
+        
         //設定路徑起始與目的地
         let directionRequest = MKDirectionsRequest()
         directionRequest.source = MKMapItem.mapItemForCurrentLocation()
@@ -152,8 +155,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
                 return
             }
             let route = response.routes[0] 
-            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveLabels)
-            let etaMin = (NSInteger(route.expectedTravelTime)/60)%60 //預估步行時間
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
+            let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
             self.travelTimeLabel.text = String(etaMin)
         }
     }
@@ -176,9 +179,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             dispatch_async(dispatch_get_main_queue(), {
                 if Int(self.xmlItems![self.staNum].ava)<10{
                     self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                }else{
+                    self.avaNum.textColor = UIColor.blackColor()
                 }
                 if Int(self.xmlItems![self.staNum].unava)<10{
                     self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                }else{
+                    self.parkNum.textColor = UIColor.blackColor()
                 }
                 self.avaNum.text = self.xmlItems![self.staNum].ava
                 self.parkNum.text = self.xmlItems![self.staNum].unava
@@ -189,8 +196,9 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
     func stopWatchTimer(timer:NSTimer){
         count++
+        let second = count%60
         let minute = (count/60)%60
-        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d",minute,count), forState: .Normal)
+        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d",minute,second), forState: .Normal)
     }
     
     func showSpendInfo(){
@@ -222,6 +230,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         
     }
     
+    /*
     func configureSearchBar(){
         //將UISearchBar放到Navigation的titleView上
         searchController = UISearchController(searchResultsController: nil)
@@ -234,7 +243,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         navigationItem.titleView = searchController.searchBar
         definesPresentationContext = true
     }
-    
+
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = nil
@@ -244,6 +253,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         navigationItem.leftBarButtonItem = leftBarButton
         navigationItem.rightBarButtonItem = rightBarButton
     }
+    */
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
@@ -261,6 +271,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     override func viewWillAppear(animated: Bool) {
         //畫面將要出現時啟動更新位置
         locationManager.startUpdatingLocation()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -280,16 +291,40 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     @IBAction func timeButton(sender: AnyObject) {
         if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
             self.timeButtonOutlet.setTitle("00:00", forState: .Normal)
+            
+            var bgTask = UIBackgroundTaskIdentifier()
+            let app = UIApplication.sharedApplication()
+            bgTask = app.beginBackgroundTaskWithExpirationHandler({ () -> Void in
+                app.endBackgroundTask(bgTask)
+            })
+            
+            
             self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "stopWatchTimer:", userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
+            
+            let localNotification = UILocalNotification()
+            let pushDate = NSDate(timeIntervalSinceNow: 20)
+            localNotification.fireDate = pushDate
+            localNotification.timeZone = NSTimeZone.defaultTimeZone()
+            localNotification.soundName = UILocalNotificationDefaultSoundName
+            localNotification.alertBody = NSLocalizedString("Twenty_Minutes_Alert", comment: "")
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+            
+            let finalNotification = UILocalNotification()
+            finalNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+            finalNotification.timeZone = NSTimeZone.defaultTimeZone()
+            finalNotification.soundName = UILocalNotificationDefaultSoundName
+            finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")
+            UIApplication.sharedApplication().scheduleLocalNotification(finalNotification)
             
         }else{//結束計時
             self.stopWatch.invalidate()
             self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
-            self.timeButtonOutlet.backgroundColor = UIColor(red: 0, green: 1, blue: 128/255, alpha: 1)
+            self.timeButtonOutlet.backgroundColor = UIColor(red: 45/255, green: 222/255, blue: 149/255, alpha: 1)
             self.lightBlur.hidden = false
             showSpendInfo()
+            self.count = 0;
         }
         
     }

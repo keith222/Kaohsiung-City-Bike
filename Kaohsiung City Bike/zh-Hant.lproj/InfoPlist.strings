@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Kaohsiung City Bike
+
+  Created by Yang Tun-Kai on 2015/11/20.
+  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
+*/
+"NSLocationWhenInUseUsageDescription" = "CityBike 將會使用您目前的地理位置";

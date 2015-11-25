@@ -18,7 +18,7 @@
 "YnB-32-cFG.normalTitle" = "OK";
 
 /* Class = "UILabel"; text = "Trip Result"; ObjectID = "ZgZ-uz-J8Z"; */
-"ZgZ-uz-J8Z.text" = "旅程結果";
+"ZgZ-uz-J8Z.text" = "旅程記錄";
 
 /* Class = "UILabel"; text = "0 min 0 sec"; ObjectID = "j50-6a-fWj"; */
 "j50-6a-fWj.text" = "0 分 0 秒";
