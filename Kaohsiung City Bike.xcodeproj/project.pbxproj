@@ -220,7 +220,7 @@
 				TargetAttributes = {
 					5349628E1BE07BE700BFFD71 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 93HV9299MU;
+						DevelopmentTeam = 8MREJM6257;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -450,7 +450,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-Bike";
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkr.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -463,7 +463,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-Bike";
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkr.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
