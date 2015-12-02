@@ -8,10 +8,11 @@
 
 import UIKit
 import MapKit
+import WatchConnectivity
 import CoreLocation
 
 
-class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate{
+class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate{
 
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
@@ -39,6 +40,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var count = 0
     var annoArray:NSMutableArray? = NSMutableArray()
     var staNum:NSInteger!
+    var watchSession:WCSession?
     
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
@@ -46,6 +48,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //configureSearchBar()
+        if(WCSession.isSupported()){
+            watchSession = WCSession.defaultSession()
+            watchSession!.delegate = self
+            watchSession!.activateSession()
+        }
+        
+        //將一些預設在螢幕外
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
         self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
@@ -111,6 +120,18 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         self.staName.text = (view.annotation?.title)!
         currentA = view.annotation
         showRoute(currentA)
+        
+        //儲存annotation位置以分享給watchapp
+        let annolong = view.annotation?.coordinate.longitude
+        let annolati = view.annotation?.coordinate.latitude
+        let title = view.annotation?.title
+
+        
+        if WCSession.defaultSession().reachable == true {
+            let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!]
+            let session = WCSession.defaultSession()
+            session.sendMessage(locationSession as! [String : AnyObject], replyHandler:nil, errorHandler: nil)
+        }
 
         //啟動timer每五分鐘抓腳踏車資訊
         NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
@@ -173,9 +194,16 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     func bikeInfo(timer:NSTimer){
         
         let xmlParser = BikeParser()
+    
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
             
+            if WCSession.defaultSession().reachable == true {
+                let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
+                let session = WCSession.defaultSession()
+                session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
+            }
+    
             dispatch_async(dispatch_get_main_queue(), {
                 if Int(self.xmlItems![self.staNum].ava)<10{
                     self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
@@ -198,13 +226,16 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         count++
         let second = count%60
         let minute = (count/60)%60
-        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d",minute,second), forState: .Normal)
+        let hour = Int(count/3600)
+        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), forState: .Normal)
     }
     
     func showSpendInfo(){
-
-        var minute = (count/60)%60//計算使用時間
-        let timeInfo = "\(minute) min \(count) sec"
+        let second = count%60
+        let minute = (count/60)%60//計算使用時間
+        var calMinute = Int(count/60)
+        let hour = Int(count/3600)
+        let timeInfo = String(format:"%02d:%02d:%02d",hour,minute,second)
         self.timeSpend.text = timeInfo
         
         var cost = 0//計算花費
@@ -212,13 +243,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             case 0...60: cost = 0 //不滿60分鐘免費
             case 61...90: cost = 10 //90分鐘 10元
             default: //90分後每30分20元
-                minute -= 90
-                if minute % 30 != 0{
-                     minute = Int(minute/30)+1
+                calMinute -= 90
+                if calMinute % 30 != 0{
+                     calMinute = Int(calMinute/30)+1
                 }else{
-                    minute = Int(minute/30)
+                    calMinute = Int(calMinute/30)
                 }
-                cost = 10 + (minute*20)
+                cost = 10 + (calMinute*20)
         }
         let costInfo = "NT$ \(cost)"
         self.costSpend.text = costInfo
@@ -303,7 +334,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
             
             let localNotification = UILocalNotification()
-            let pushDate = NSDate(timeIntervalSinceNow: 20)
+            let pushDate = NSDate(timeIntervalSinceNow: 1200)
             localNotification.fireDate = pushDate
             localNotification.timeZone = NSTimeZone.defaultTimeZone()
             localNotification.soundName = UILocalNotificationDefaultSoundName
@@ -311,7 +342,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
             
             let finalNotification = UILocalNotification()
-            finalNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+            finalNotification.fireDate = NSDate(timeIntervalSinceNow: 1800)
             finalNotification.timeZone = NSTimeZone.defaultTimeZone()
             finalNotification.soundName = UILocalNotificationDefaultSoundName
             finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")

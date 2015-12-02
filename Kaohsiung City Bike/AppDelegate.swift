@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: nil))
         }
         
-        
         return true
     }
     

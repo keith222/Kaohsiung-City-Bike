@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-oA-OnQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="0BW-gW-HLh"/>
+                                    <constraint firstAttribute="height" constant="172" id="mSk-xE-qUa"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0BW-gW-HLh"/>
+                                        <exclude reference="mSk-xE-qUa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0BW-gW-HLh"/>
+                                        <include reference="mSk-xE-qUa"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzM-96-xO2">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="G68-P9-0lU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G68-P9-0lU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="G68-P9-0lU"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kaohsiung City Bike" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="20" y="178" width="560" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.1757836552" green="0.87195512819999998" blue="0.58563299179999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="s1k-oA-OnQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0E5-PS-42k">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-35"/>
+                            </constraint>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="vzM-96-xO2" secondAttribute="bottom" constant="15" id="2dY-fX-6Q0">
+                                <variation key="heightClass=regular-widthClass=compact" constant="7"/>
+                            </constraint>
+                            <constraint firstItem="vzM-96-xO2" firstAttribute="trailing" secondItem="s1k-oA-OnQ" secondAttribute="trailing" id="4ep-RZ-oEb"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5tu-3L-W87"/>
+                            <constraint firstItem="s1k-oA-OnQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="79a-Q6-8xC"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Mlf-RM-1Kh">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-2"/>
+                            </constraint>
+                            <constraint firstItem="vzM-96-xO2" firstAttribute="top" secondItem="s1k-oA-OnQ" secondAttribute="bottom" constant="-3" id="dNk-OO-V7J"/>
+                            <constraint firstItem="vzM-96-xO2" firstAttribute="leading" secondItem="s1k-oA-OnQ" secondAttribute="leading" id="wb3-H6-m9G"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="s1k-oA-OnQ"/>
+                                <exclude reference="vzM-96-xO2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4ep-RZ-oEb"/>
+                                <exclude reference="dNk-OO-V7J"/>
+                                <exclude reference="wb3-H6-m9G"/>
+                                <exclude reference="0E5-PS-42k"/>
+                                <exclude reference="79a-Q6-8xC"/>
+                                <exclude reference="2dY-fX-6Q0"/>
+                                <exclude reference="5tu-3L-W87"/>
+                                <exclude reference="Mlf-RM-1Kh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="s1k-oA-OnQ"/>
+                                <include reference="vzM-96-xO2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4ep-RZ-oEb"/>
+                                <include reference="dNk-OO-V7J"/>
+                                <include reference="wb3-H6-m9G"/>
+                                <include reference="0E5-PS-42k"/>
+                                <include reference="79a-Q6-8xC"/>
+                                <include reference="2dY-fX-6Q0"/>
+                                <include reference="5tu-3L-W87"/>
+                                <include reference="Mlf-RM-1Kh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bike" width="482" height="288"/>
+    </resources>
+</document>

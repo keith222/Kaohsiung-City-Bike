@@ -16,9 +16,25 @@
 		534962B31BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */; };
 		534962C11BE3719400BFFD71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534962C01BE3719400BFFD71 /* MapKit.framework */; };
 		534962C31BE39D6600BFFD71 /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
+		534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */; };
+		534E08D91C0DFF6A00AA0133 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
+		537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0E11C0B35BB008501B0 /* Interface.storyboard */; };
+		537EE0E51C0B35BB008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0E41C0B35BB008501B0 /* Assets.xcassets */; };
+		537EE0EC1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F21C0B35BB008501B0 /* InterfaceController.swift */; };
+		537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */; };
+		537EE0F71C0B35BB008501B0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F61C0B35BB008501B0 /* NotificationController.swift */; };
+		537EE0FD1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */; };
+		537EE1081C0B45D8008501B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537EE1071C0B45D8008501B0 /* MapKit.framework */; };
+		537EE12A1C0B5F00008501B0 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */; };
+		537EE1301C0B6EBC008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0F81C0B35BB008501B0 /* Assets.xcassets */; };
+		537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0F81C0B35BB008501B0 /* Assets.xcassets */; };
+		537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
+		537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
 		53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53893AED1BE9CAF700E32ECD /* DataGet.swift */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
+		53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +52,51 @@
 			remoteGlobalIDString = 5349628E1BE07BE700BFFD71;
 			remoteInfo = "Kaohsiung City Bike";
 		};
+		537EE0ED1C0B35BB008501B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 537EE0EA1C0B35BB008501B0;
+			remoteInfo = "Kaohsiung CityBike WatchApp Extension";
+		};
+		537EE0FB1C0B35BB008501B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 537EE0DE1C0B35BB008501B0;
+			remoteInfo = "Kaohsiung CityBike WatchApp";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		537EE1031C0B35BB008501B0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				537EE0EC1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C793DB1C09E0D2000FBA3B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				537EE0FD1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		531551251C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		531551271C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		531F22331BF3A18D00ECE80D /* BikeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeParser.swift; sourceTree = "<group>"; };
 		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,13 +111,31 @@
 		534962B41BE07BE700BFFD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534962C01BE3719400BFFD71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
+		534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
+		534E08D41C0DFEF700AA0133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
+		534E08D61C0DFEFA00AA0133 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
+		534E08D81C0DFEFD00AA0133 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
 		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		537149671BF721500098DC66 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		537EE0E21C0B35BB008501B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		537EE0E41C0B35BB008501B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		537EE0E61C0B35BB008501B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		537EE0F11C0B35BB008501B0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		537EE0F21C0B35BB008501B0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		537EE0F61C0B35BB008501B0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		537EE0F81C0B35BB008501B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		537EE0FA1C0B35BB008501B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		537EE1071C0B45D8008501B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		53893AED1BE9CAF700E32ECD /* DataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGet.swift; sourceTree = "<group>"; };
 		53E232591BFE38B800F36B71 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537EE12A1C0B5F00008501B0 /* WatchConnectivity.framework in Frameworks */,
 				534962C11BE3719400BFFD71 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +162,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		537EE0E81C0B35BB008501B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537EE1081C0B45D8008501B0 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,11 +183,15 @@
 		534962861BE07BE700BFFD71 = {
 			isa = PBXGroup;
 			children = (
+				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
+				537EE1071C0B45D8008501B0 /* MapKit.framework */,
 				534962C01BE3719400BFFD71 /* MapKit.framework */,
 				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
 				53E232591BFE38B800F36B71 /* Info.plist */,
 				534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
 				534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
+				537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
+				537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
 				534962901BE07BE700BFFD71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +202,8 @@
 				5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */,
 				534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */,
 				534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */,
+				537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */,
+				537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +218,7 @@
 				531F22331BF3A18D00ECE80D /* BikeParser.swift */,
 				534962961BE07BE700BFFD71 /* Main.storyboard */,
 				534962991BE07BE700BFFD71 /* Assets.xcassets */,
+				53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */,
 				534962C21BE39D6600BFFD71 /* citybike.json */,
 				536E2C151BF726C500B5E7DE /* Localizable.strings */,
 				53E2325F1BFE39A700F36B71 /* InfoPlist.strings */,
@@ -152,6 +244,38 @@
 			path = "Kaohsiung City BikeUITests";
 			sourceTree = "<group>";
 		};
+		537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				537EE0E11C0B35BB008501B0 /* Interface.storyboard */,
+				537EE0E41C0B35BB008501B0 /* Assets.xcassets */,
+				537EE0E61C0B35BB008501B0 /* Info.plist */,
+			);
+			path = "Kaohsiung CityBike WatchApp";
+			sourceTree = "<group>";
+		};
+		537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				537EE0F21C0B35BB008501B0 /* InterfaceController.swift */,
+				534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */,
+				537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */,
+				537EE0F61C0B35BB008501B0 /* NotificationController.swift */,
+				537EE0F81C0B35BB008501B0 /* Assets.xcassets */,
+				537EE0FA1C0B35BB008501B0 /* Info.plist */,
+				537EE0F01C0B35BB008501B0 /* Supporting Files */,
+			);
+			path = "Kaohsiung CityBike WatchApp Extension";
+			sourceTree = "<group>";
+		};
+		537EE0F01C0B35BB008501B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				537EE0F11C0B35BB008501B0 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,10 +286,12 @@
 				5349628B1BE07BE700BFFD71 /* Sources */,
 				5349628C1BE07BE700BFFD71 /* Frameworks */,
 				5349628D1BE07BE700BFFD71 /* Resources */,
+				53C793DB1C09E0D2000FBA3B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				537EE0FC1C0B35BB008501B0 /* PBXTargetDependency */,
 			);
 			name = "Kaohsiung City Bike";
 			productName = "Kaohsiung City Bike";
@@ -208,6 +334,40 @@
 			productReference = 534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 537EE1041C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp" */;
+			buildPhases = (
+				537EE0DD1C0B35BB008501B0 /* Resources */,
+				537EE1031C0B35BB008501B0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				537EE0EE1C0B35BB008501B0 /* PBXTargetDependency */,
+			);
+			name = "Kaohsiung CityBike WatchApp";
+			productName = "Kaohsiung CityBike WatchApp";
+			productReference = 537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 537EE1021C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp Extension" */;
+			buildPhases = (
+				537EE0E71C0B35BB008501B0 /* Sources */,
+				537EE0E81C0B35BB008501B0 /* Frameworks */,
+				537EE0E91C0B35BB008501B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kaohsiung CityBike WatchApp Extension";
+			productName = "Kaohsiung CityBike WatchApp Extension";
+			productReference = 537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +382,12 @@
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 8MREJM6257;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -235,6 +401,27 @@
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 5349628E1BE07BE700BFFD71;
 					};
+					537EE0DE1C0B35BB008501B0 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 8MREJM6257;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					537EE0EA1C0B35BB008501B0 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 8MREJM6257;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 5349628A1BE07BE700BFFD71 /* Build configuration list for PBXProject "Kaohsiung City Bike" */;
@@ -245,6 +432,7 @@
 				en,
 				Base,
 				"zh-Hant",
+				ja,
 			);
 			mainGroup = 534962861BE07BE700BFFD71;
 			productRefGroup = 534962901BE07BE700BFFD71 /* Products */;
@@ -254,6 +442,8 @@
 				5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */,
 				534962A21BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
 				534962AD1BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
+				537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
+				537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */,
 				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
 				53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */,
 				534962C31BE39D6600BFFD71 /* citybike.json in Resources */,
@@ -282,6 +473,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537EE0DD1C0B35BB008501B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537EE0E51C0B35BB008501B0 /* Assets.xcassets in Resources */,
+				537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */,
+				537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */,
+				537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537EE0E91C0B35BB008501B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */,
+				534E08D91C0DFF6A00AA0133 /* Localizable.strings in Resources */,
+				537EE1301C0B6EBC008501B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +527,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		537EE0E71C0B35BB008501B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537EE0F71C0B35BB008501B0 /* NotificationController.swift in Sources */,
+				537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */,
+				537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */,
+				534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -328,6 +551,16 @@
 			target = 5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */;
 			targetProxy = 534962AF1BE07BE700BFFD71 /* PBXContainerItemProxy */;
 		};
+		537EE0EE1C0B35BB008501B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */;
+			targetProxy = 537EE0ED1C0B35BB008501B0 /* PBXContainerItemProxy */;
+		};
+		537EE0FC1C0B35BB008501B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */;
+			targetProxy = 537EE0FB1C0B35BB008501B0 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -336,6 +569,7 @@
 			children = (
 				534962971BE07BE700BFFD71 /* Base */,
 				537149671BF721500098DC66 /* zh-Hant */,
+				531551251C08B65E00DA0285 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -345,8 +579,20 @@
 			children = (
 				536E2C141BF726C500B5E7DE /* zh-Hant */,
 				536E2C161BF726C900B5E7DE /* en */,
+				531551261C08B65E00DA0285 /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		537EE0E11C0B35BB008501B0 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				537EE0E21C0B35BB008501B0 /* Base */,
+				534E08D41C0DFEF700AA0133 /* en */,
+				534E08D61C0DFEFA00AA0133 /* zh-Hant */,
+				534E08D81C0DFEFD00AA0133 /* ja */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		53E2325F1BFE39A700F36B71 /* InfoPlist.strings */ = {
@@ -354,6 +600,7 @@
 			children = (
 				53E232601BFE39A800F36B71 /* en */,
 				53E232611BFE39AB00F36B71 /* zh-Hant */,
+				531551271C08B65E00DA0285 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -448,10 +695,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkr.CityBike;
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -461,10 +710,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkr.CityBike;
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -516,6 +767,82 @@
 			};
 			name = Release;
 		};
+		537EE0FE1C0B35BB008501B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
+				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		537EE0FF1C0B35BB008501B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
+				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		537EE1001C0B35BB008501B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		537EE1011C0B35BB008501B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,6 +878,24 @@
 			buildConfigurations = (
 				534962BE1BE07BE700BFFD71 /* Debug */,
 				534962BF1BE07BE700BFFD71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		537EE1021C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537EE1001C0B35BB008501B0 /* Debug */,
+				537EE1011C0B35BB008501B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		537EE1041C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537EE0FE1C0B35BB008501B0 /* Debug */,
+				537EE0FF1C0B35BB008501B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
