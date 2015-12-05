@@ -6,8 +6,9 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 
-"Time_Start" = "開始計時";
-"Twenty_Minutes_Alert" = "已經騎乘20分鐘囉！再過10分鐘就要開始收費了！！";
-"Thirty_Minutes_Alert" = "已經騎乘30分鐘囉！現在開始計費！！";
-"TimeStart" = "開始計時";
-"TimeStop" = "停止計時";
+"Time_Start" = "Time Start";
+"Twenty_Minutes_Alert" = "20分が経過しました!10分後、料金を支払う!!";
+"Thirty_Minutes_Alert" = "30分が経過しました!料金を支払う!!";
+"TimeStart" = "Start";
+"TimeStop" = "Stop";
+"Time_Alert" = "通知";

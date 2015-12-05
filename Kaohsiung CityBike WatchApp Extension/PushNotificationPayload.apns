@@ -1,8 +1,8 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
-            "title": "Optional title"
+            "body": "已經騎乘20分鐘囉！再過10分鐘就要開始收費了！！",
+            "title": "Time Alert"
         },
         "category": "myCategory"
     },

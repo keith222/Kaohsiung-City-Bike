@@ -12,7 +12,7 @@
 "9mC-tq-r1S.text" = "0";
 
 /* Class = "WKInterfaceLabel"; text = "Click the Station"; ObjectID = "CD5-fp-3Uq"; */
-"CD5-fp-3Uq.text" = "Click the Station";
+"CD5-fp-3Uq.text" = "駅をクリックします";
 
 /* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "ITY-c2-mA4"; */
 "ITY-c2-mA4.title" = "Start";

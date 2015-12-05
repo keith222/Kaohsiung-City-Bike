@@ -16,14 +16,19 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
+    
     @IBOutlet var infoView: UIView!
     @IBOutlet var staName: UILabel!
     @IBOutlet var avaNum: UILabel!
     @IBOutlet var parkNum: UILabel!
     @IBOutlet var timeButtonOutlet: UIButton!
+    
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
     @IBOutlet var costSpend: UILabel!
+    
+    @IBOutlet var errorInfo: UIView!
+  
     @IBOutlet var lightBlur: UIVisualEffectView!
     
     
@@ -58,9 +63,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
         self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
+        self.errorInfo.transform = CGAffineTransformMakeTranslation(0,-400)
         
-        leftBarButton = navigationItem.leftBarButtonItem
-        rightBarButton = navigationItem.rightBarButtonItem
+        //leftBarButton = navigationItem.leftBarButtonItem
+        //rightBarButton = navigationItem.rightBarButtonItem
 
         locationManager.requestWhenInUseAuthorization()//確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
@@ -198,26 +204,42 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
             
-            if WCSession.defaultSession().reachable == true {
-                let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
-                let session = WCSession.defaultSession()
-                session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
-            }
+            if (self.xmlItems != nil){
+                
+                if WCSession.defaultSession().reachable == true {
+                    let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
+                    let session = WCSession.defaultSession()
+                    session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
+                }
     
-            dispatch_async(dispatch_get_main_queue(), {
-                if Int(self.xmlItems![self.staNum].ava)<10{
-                    self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
-                }else{
-                    self.avaNum.textColor = UIColor.blackColor()
-                }
-                if Int(self.xmlItems![self.staNum].unava)<10{
-                    self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
-                }else{
-                    self.parkNum.textColor = UIColor.blackColor()
-                }
-                self.avaNum.text = self.xmlItems![self.staNum].ava
-                self.parkNum.text = self.xmlItems![self.staNum].unava
-            })
+                dispatch_async(dispatch_get_main_queue(), {
+                    if Int(self.xmlItems![self.staNum].ava)<10{
+                        self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                    }else{
+                        self.avaNum.textColor = UIColor.blackColor()
+                    }
+                    if Int(self.xmlItems![self.staNum].unava)<10{
+                        self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                    }else{
+                        self.parkNum.textColor = UIColor.blackColor()
+                    }
+                    self.avaNum.text = self.xmlItems![self.staNum].ava
+                    self.parkNum.text = self.xmlItems![self.staNum].unava
+                })
+            }else{
+                //簡易錯誤視窗
+                self.timer.invalidate()
+                self.timer = nil
+                dispatch_async(dispatch_get_main_queue(), {
+                UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.errorInfo.transform = CGAffineTransformMakeTranslation(0,0)
+                    },completion: nil)
+                    
+                    self.lightBlur.effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+                    self.lightBlur.hidden = false
+                })
+                
+            }
         })
 
     }
@@ -321,7 +343,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
     @IBAction func timeButton(sender: AnyObject) {
         if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
-            self.timeButtonOutlet.setTitle("00:00", forState: .Normal)
+            self.timeButtonOutlet.setTitle("00:00:00", forState: .Normal)
             
             var bgTask = UIBackgroundTaskIdentifier()
             let app = UIApplication.sharedApplication()
@@ -339,6 +361,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             localNotification.timeZone = NSTimeZone.defaultTimeZone()
             localNotification.soundName = UILocalNotificationDefaultSoundName
             localNotification.alertBody = NSLocalizedString("Twenty_Minutes_Alert", comment: "")
+            localNotification.alertTitle = NSLocalizedString("Time_Alert", comment: "")
+            localNotification.category = "myCategory"
             UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
             
             let finalNotification = UILocalNotification()
@@ -346,6 +370,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             finalNotification.timeZone = NSTimeZone.defaultTimeZone()
             finalNotification.soundName = UILocalNotificationDefaultSoundName
             finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")
+            finalNotification.alertTitle = NSLocalizedString("Time_Alert", comment: "")
+            finalNotification.category = "myCategory"
             UIApplication.sharedApplication().scheduleLocalNotification(finalNotification)
             
         }else{//結束計時
@@ -354,6 +380,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 45/255, green: 222/255, blue: 149/255, alpha: 1)
             self.lightBlur.hidden = false
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
             showSpendInfo()
             self.count = 0;
         }
@@ -367,5 +394,12 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
     }
     
+    @IBAction func errorDoneButton(sender: AnyObject) {
+        UIView.animateWithDuration(0.2, animations: {
+            self.errorInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+        })
+        self.lightBlur.hidden = true
+        self.lightBlur.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+    }
 }
 

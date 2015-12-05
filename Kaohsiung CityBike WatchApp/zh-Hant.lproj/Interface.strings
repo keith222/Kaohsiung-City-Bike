@@ -6,7 +6,7 @@
 "1G9-ZZ-ttH.text" = "--";
 
 /* Class = "WKInterfaceButton"; title = "Timer"; ObjectID = "586-ZP-uRE"; */
-"586-ZP-uRE.title" = "時間計時";
+"586-ZP-uRE.title" = "Timer";
 
 /* Class = "WKInterfaceLabel"; text = "0"; ObjectID = "9mC-tq-r1S"; */
 "9mC-tq-r1S.text" = "0";
@@ -15,10 +15,7 @@
 "CD5-fp-3Uq.text" = "手機點擊站點";
 
 /* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "ITY-c2-mA4"; */
-"ITY-c2-mA4.title" = "開始計時";
-
-/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
-"IdU-wH-bcW.text" = "Alert Label";
+"ITY-c2-mA4.title" = "Start";
 
 /* Class = "WKInterfaceLabel"; text = "00:00:00"; ObjectID = "RWS-cV-8s0"; */
 "RWS-cV-8s0.text" = "00:00:00";

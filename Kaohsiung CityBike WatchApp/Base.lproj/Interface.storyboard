@@ -54,6 +54,7 @@
                         <outlet property="avaLabel" destination="0ux-Zs-fhH" id="0fr-3t-INd"/>
                         <outlet property="staNameLabel" destination="CD5-fp-3Uq" id="KGD-lR-vDK"/>
                         <outlet property="stationMap" destination="AkF-xH-238" id="mZU-q0-lFP"/>
+                        <outlet property="unavaLabel" destination="1G9-ZZ-ttH" id="RrW-ZQ-CYE"/>
                     </connections>
                 </controller>
             </objects>
@@ -109,23 +110,21 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label height="83" alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="3" id="IdU-wH-bcW">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                        </label>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sashColor" red="0.1757836552" green="0.87195512819999998" blue="0.58563299179999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Kaohsiung_CityBike_WatchApp" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
 </document>
