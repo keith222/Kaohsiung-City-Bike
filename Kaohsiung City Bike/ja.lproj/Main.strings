@@ -1,11 +1,8 @@
 
-/* Class = "UILabel"; text = "Walking Time："; ObjectID = "0Ho-z7-sSo"; */
+/* Class = "UILabel"; text = "歩き時間："; ObjectID = "0Ho-z7-sSo"; */
 "0Ho-z7-sSo.text" = "歩き時間：";
 
-/* Class = "UILabel"; text = "Oops! We Got Error!"; ObjectID = "0gY-rf-rxt"; */
-"0gY-rf-rxt.text" = "エラーが発生しました!";
-
-/* Class = "UIButton"; normalTitle = "Time Start"; ObjectID = "4k9-6D-3g5"; */
+/* Class = "UIButton"; normalTitle = "タイムスタート"; ObjectID = "4k9-6D-3g5"; */
 "4k9-6D-3g5.normalTitle" = "Time Start";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "KPl-25-HmO"; */
@@ -14,20 +11,14 @@
 /* Class = "UILabel"; text = "Time："; ObjectID = "P5h-Mn-xj4"; */
 "P5h-Mn-xj4.text" = "時間：";
 
-/* Class = "UINavigationItem"; title = "Kaohsiung CityBike"; ObjectID = "TLt-Vv-NrU"; */
+/* Class = "UINavigationItem"; title = "高雄シティバイク"; ObjectID = "TLt-Vv-NrU"; */
 "TLt-Vv-NrU.title" = "高雄シティバイク";
-
-/* Class = "UILabel"; text = "Alert"; ObjectID = "WM9-nD-zhP"; */
-"WM9-nD-zhP.text" = "警告";
 
 /* Class = "UIButton"; normalTitle = "OK"; ObjectID = "YnB-32-cFG"; */
 "YnB-32-cFG.normalTitle" = "OK";
 
-/* Class = "UILabel"; text = "Trip Result"; ObjectID = "ZgZ-uz-J8Z"; */
-"ZgZ-uz-J8Z.text" = "Trip Result";
-
-/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "fpI-0A-nLZ"; */
-"fpI-0A-nLZ.normalTitle" = "OK";
+/* Class = "UILabel"; text = "トリップ"; ObjectID = "ZgZ-uz-J8Z"; */
+"ZgZ-uz-J8Z.text" = "トリップ";
 
 /* Class = "UILabel"; text = "00:00:00"; ObjectID = "j50-6a-fWj"; */
 "j50-6a-fWj.text" = "00:00:00";
@@ -44,5 +35,5 @@
 /* Class = "UILabel"; text = "NT$"; ObjectID = "nst-lC-46h"; */
 "nst-lC-46h.text" = "NT$";
 
-/* Class = "UILabel"; text = "Cost："; ObjectID = "r9g-v8-ykh"; */
-"r9g-v8-ykh.text" = "費用：";
+/* Class = "UILabel"; text = "料金："; ObjectID = "r9g-v8-ykh"; */
+"r9g-v8-ykh.text" = "料金：";

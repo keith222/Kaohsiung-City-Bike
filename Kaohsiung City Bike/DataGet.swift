@@ -14,7 +14,6 @@ class DataGet :NSObject,NSXMLParserDelegate{
         let path:NSString = NSBundle.mainBundle().pathForResource("citybike", ofType: "json")!
         let data:NSData = try! NSData(contentsOfFile: path as String, options: NSDataReadingOptions.DataReadingMapped)
         let jsonResult = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSMutableArray
-        
         return jsonResult
     }
 }

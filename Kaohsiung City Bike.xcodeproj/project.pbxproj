@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F22331BF3A18D00ECE80D /* BikeParser.swift */; };
+		5336E98F1C1B14FA00AAA7D7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5336E98E1C1B14FA00AAA7D7 /* MapKit.framework */; };
 		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
 		534962951BE07BE700BFFD71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962941BE07BE700BFFD71 /* ViewController.swift */; };
 		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
@@ -26,12 +27,12 @@
 		537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */; };
 		537EE0F71C0B35BB008501B0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F61C0B35BB008501B0 /* NotificationController.swift */; };
 		537EE0FD1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */; };
-		537EE1081C0B45D8008501B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537EE1071C0B45D8008501B0 /* MapKit.framework */; };
 		537EE12A1C0B5F00008501B0 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */; };
 		537EE1301C0B6EBC008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0F81C0B35BB008501B0 /* Assets.xcassets */; };
 		537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0F81C0B35BB008501B0 /* Assets.xcassets */; };
 		537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
 		537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
+		5380329C1C20236C00E07131 /* geojson.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 5380329B1C20236B00E07131 /* geojson.geojson */; };
 		53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53893AED1BE9CAF700E32ECD /* DataGet.swift */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */; };
@@ -97,8 +98,7 @@
 		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		531551271C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		531F22331BF3A18D00ECE80D /* BikeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeParser.swift; sourceTree = "<group>"; };
-		53377A211C0F4120001C790B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		53377A231C0F42E4001C790B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		5336E98E1C1B14FA00AAA7D7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534962941BE07BE700BFFD71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,9 +127,11 @@
 		537EE0F61C0B35BB008501B0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		537EE0F81C0B35BB008501B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537EE0FA1C0B35BB008501B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537EE1071C0B45D8008501B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		5380329B1C20236B00E07131 /* geojson.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = geojson.geojson; path = "Kaohsiung City Bike/geojson.geojson"; sourceTree = "<group>"; };
 		53893AED1BE9CAF700E32ECD /* DataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGet.swift; sourceTree = "<group>"; };
+		53AD6D951C3C14F80093A317 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		53AD6D961C3C14FF0093A317 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		53E232591BFE38B800F36B71 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -165,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537EE1081C0B45D8008501B0 /* MapKit.framework in Frameworks */,
+				5336E98F1C1B14FA00AAA7D7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,11 +184,12 @@
 		534962861BE07BE700BFFD71 = {
 			isa = PBXGroup;
 			children = (
+				5336E98E1C1B14FA00AAA7D7 /* MapKit.framework */,
 				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
-				537EE1071C0B45D8008501B0 /* MapKit.framework */,
 				534962C01BE3719400BFFD71 /* MapKit.framework */,
 				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
 				53E232591BFE38B800F36B71 /* Info.plist */,
+				5380329B1C20236B00E07131 /* geojson.geojson */,
 				534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
 				534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
 				537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
@@ -454,6 +457,7 @@
 			files = (
 				53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */,
 				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
+				5380329C1C20236C00E07131 /* geojson.geojson in Resources */,
 				53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */,
 				534962C31BE39D6600BFFD71 /* citybike.json in Resources */,
 				5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */,
@@ -567,8 +571,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				534962971BE07BE700BFFD71 /* Base */,
-				53377A211C0F4120001C790B /* zh-Hant */,
-				53377A231C0F42E4001C790B /* ja */,
+				53AD6D951C3C14F80093A317 /* zh-Hant */,
+				53AD6D961C3C14FF0093A317 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

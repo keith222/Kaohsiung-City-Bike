@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
-class BikeParser: NSObject,NSXMLParserDelegate {
-    
+class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate{
+
     private var xmlItems:[(staID: String, staName: String, ava: String, unava: String)] = []
     private var currentElement = ""
     private var currentId = "" {
@@ -43,15 +44,21 @@ class BikeParser: NSObject,NSXMLParserDelegate {
     
         self.paraserCompletionHandler = completionHandler
         let request = NSURLRequest(URL: NSURL(string: xmlUrl)!)
-        let urlSession = NSURLSession.sharedSession()
+        let urlConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        urlConfig.timeoutIntervalForRequest = 30
+        urlConfig.timeoutIntervalForResource = 60
+        let urlSession = NSURLSession(configuration: urlConfig, delegate: self, delegateQueue: nil)
+        
         let task = urlSession.dataTaskWithRequest(request, completionHandler: {(data,response,error)->Void in
             if error != nil{
                 print(error?.localizedDescription)
-            }
-            let parser = NSXMLParser(data: data!)
-            parser.delegate = self
-            parser.parse()
-            
+                if (error?.code == NSURLErrorTimedOut || error?.code == NSURLErrorNotConnectedToInternet){
+                }
+            }else{
+                let parser = NSXMLParser(data: data!)
+                parser.delegate = self
+                parser.parse()
+            }            
         })
         task.resume()
     }

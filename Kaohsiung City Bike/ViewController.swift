@@ -12,7 +12,7 @@ import WatchConnectivity
 import CoreLocation
 
 
-class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate{
+class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate,UIAlertViewDelegate{
 
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
@@ -26,9 +26,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
     @IBOutlet var costSpend: UILabel!
-    
-    @IBOutlet var errorInfo: UIView!
-  
     @IBOutlet var lightBlur: UIVisualEffectView!
     
     
@@ -63,8 +60,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
         self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
-        self.errorInfo.transform = CGAffineTransformMakeTranslation(0,-400)
-        
+
         //leftBarButton = navigationItem.leftBarButtonItem
         //rightBarButton = navigationItem.rightBarButtonItem
 
@@ -73,6 +69,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
+        }else{
+            locationManager.requestWhenInUseAuthorization()
         }
         mapView.delegate = self
         locationManager.delegate = self
@@ -119,45 +117,52 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
-        self.staNum = self.annoArray?.indexOfObject(view.annotation!)
+        //分離出UserLocation Annotation
+        if !(view.annotation is MKUserLocation){
+            self.staNum = self.annoArray?.indexOfObject(view.annotation!)
         
-        //點下annotation後的動作
-        mapView.removeOverlays(self.mapView.overlays)
-        self.staName.text = (view.annotation?.title)!
-        currentA = view.annotation
-        showRoute(currentA)
+            //點下annotation後的動作
+            mapView.removeOverlays(self.mapView.overlays)
+            self.staName.text = (view.annotation?.title)!
+            currentA = view.annotation
+            showRoute(currentA)
         
-        //儲存annotation位置以分享給watchapp
-        let annolong = view.annotation?.coordinate.longitude
-        let annolati = view.annotation?.coordinate.latitude
-        let title = view.annotation?.title
+            //儲存annotation位置以分享給watchapp
+            let annolong = view.annotation?.coordinate.longitude
+            let annolati = view.annotation?.coordinate.latitude
+            let title = view.annotation?.title
 
         
-        if WCSession.defaultSession().reachable == true {
-            let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!]
-            let session = WCSession.defaultSession()
-            session.sendMessage(locationSession as! [String : AnyObject], replyHandler:nil, errorHandler: nil)
+            if WCSession.defaultSession().reachable == true {
+                let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!]
+                let session = WCSession.defaultSession()
+                session.sendMessage(locationSession as! [String : AnyObject], replyHandler:nil, errorHandler: nil)
+            }
+
+            //啟動timer每五分鐘抓腳踏車資訊
+            NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+        
+            //infoview滑下及timeButton滑上動畫
+            UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
+                self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+                },completion: nil)
         }
-
-        //啟動timer每五分鐘抓腳踏車資訊
-        NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
-        
-        //infoview滑下及timeButton滑上動畫
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
-            self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
-        },completion: nil)
         
     }
     
     func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
-        UIView.animateWithDuration(0.5, animations: {
-            self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
-            self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
-        })
-        self.timer.invalidate()
-        self.timer = nil
+
+        //分離出UserLocation Annotation
+        if !(view.annotation is MKUserLocation){
+            UIView.animateWithDuration(0.5, animations: {
+                self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
+                self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
+            })
+            self.timer.invalidate()
+            self.timer = nil
+        }
     }
     
     func showRoute(currentAnnotation: MKAnnotation){
@@ -231,12 +236,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 self.timer.invalidate()
                 self.timer = nil
                 dispatch_async(dispatch_get_main_queue(), {
-                UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.errorInfo.transform = CGAffineTransformMakeTranslation(0,0)
-                    },completion: nil)
-                    
-                    self.lightBlur.effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-                    self.lightBlur.hidden = false
                 })
                 
             }
@@ -355,6 +354,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "stopWatchTimer:", userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
             
+            //設定Local Notification
             let localNotification = UILocalNotification()
             let pushDate = NSDate(timeIntervalSinceNow: 1200)
             localNotification.fireDate = pushDate
@@ -392,14 +392,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         })
         self.lightBlur.hidden = true
         
-    }
-    
-    @IBAction func errorDoneButton(sender: AnyObject) {
-        UIView.animateWithDuration(0.2, animations: {
-            self.errorInfo.transform = CGAffineTransformMakeTranslation(0, -400)
-        })
-        self.lightBlur.hidden = true
-        self.lightBlur.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
     }
 }
 
