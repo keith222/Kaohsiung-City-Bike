@@ -13,3 +13,4 @@
 "TimeStop" = "Stop";
 "Time_Alert" = "通知";
 "Alert" = "警告";
+"Error_Log" = "インターネット接続がオフラインのようです。";

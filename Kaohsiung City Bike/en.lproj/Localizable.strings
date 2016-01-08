@@ -12,3 +12,4 @@
 "TimeStop" = "Stop";
 "Time_Alert" = "Time Alert";
 "Alert" = "Alert";
+"Error_Log" = "The Internet connection appears to be offline.";

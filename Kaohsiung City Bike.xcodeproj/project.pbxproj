@@ -36,6 +36,7 @@
 		53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53893AED1BE9CAF700E32ECD /* DataGet.swift */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */; };
+		53F165F21C402F6900E851F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F165F11C402F6900E851F0 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		53F165F11C402F6900E851F0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		53FA8C481C11FD5600B4FD10 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +220,7 @@
 				534962941BE07BE700BFFD71 /* ViewController.swift */,
 				53893AED1BE9CAF700E32ECD /* DataGet.swift */,
 				531F22331BF3A18D00ECE80D /* BikeParser.swift */,
+				53F165F11C402F6900E851F0 /* Reachability.swift */,
 				534962961BE07BE700BFFD71 /* Main.storyboard */,
 				534962991BE07BE700BFFD71 /* Assets.xcassets */,
 				53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */,
@@ -510,6 +513,7 @@
 				534962951BE07BE700BFFD71 /* ViewController.swift in Sources */,
 				53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */,
 				534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */,
+				53F165F21C402F6900E851F0 /* Reachability.swift in Sources */,
 				531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@
         <!--Kaohsiung CityBike-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Map" id="BYZ-38-t0r" customClass="ViewController" customModule="Kaohsiung_City_Bike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Kaohsiung_City_Bike" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YRb-3D-p1h"/>
                         <viewControllerLayoutGuide type="bottom" id="uIw-MI-wJo"/>
@@ -162,7 +162,7 @@
                                             <constraint firstItem="r5s-va-RW7" firstAttribute="top" secondItem="wmc-rb-skc" secondAttribute="top" constant="4" id="bzT-Zi-boN"/>
                                             <constraint firstItem="r5s-va-RW7" firstAttribute="leading" secondItem="wmc-rb-skc" secondAttribute="leading" constant="45" id="eqf-5u-Uf9"/>
                                             <constraint firstItem="KBM-cy-aT4" firstAttribute="top" secondItem="wmc-rb-skc" secondAttribute="top" constant="4" id="kK0-pz-zFX"/>
-                                            <constraint firstAttribute="trailing" secondItem="KPl-25-HmO" secondAttribute="trailing" constant="45" id="rzX-6M-bDz"/>
+                                            <constraint firstAttribute="trailing" secondItem="KPl-25-HmO" secondAttribute="trailing" constant="40" id="rzX-6M-bDz"/>
                                             <constraint firstItem="KPl-25-HmO" firstAttribute="leading" secondItem="KBM-cy-aT4" secondAttribute="trailing" constant="10" id="vjG-sa-cQ2"/>
                                             <constraint firstItem="kEI-Dj-7LM" firstAttribute="top" secondItem="wmc-rb-skc" secondAttribute="top" constant="4" id="yqD-pR-eXX"/>
                                         </constraints>
@@ -174,18 +174,18 @@
                                                 <exclude reference="KPl-25-HmO"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="3KS-Nf-5q6"/>
-                                                <exclude reference="bzT-Zi-boN"/>
-                                                <exclude reference="eqf-5u-Uf9"/>
+                                                <exclude reference="Av7-q9-pgD"/>
+                                                <exclude reference="Qe3-WC-Qrn"/>
+                                                <exclude reference="rzX-6M-bDz"/>
+                                                <exclude reference="vjG-sa-cQ2"/>
                                                 <exclude reference="TJr-yc-gSc"/>
                                                 <exclude reference="Uwp-3m-FvL"/>
                                                 <exclude reference="yqD-pR-eXX"/>
                                                 <exclude reference="3qD-04-BND"/>
                                                 <exclude reference="kK0-pz-zFX"/>
-                                                <exclude reference="Av7-q9-pgD"/>
-                                                <exclude reference="Qe3-WC-Qrn"/>
-                                                <exclude reference="rzX-6M-bDz"/>
-                                                <exclude reference="vjG-sa-cQ2"/>
+                                                <exclude reference="3KS-Nf-5q6"/>
+                                                <exclude reference="bzT-Zi-boN"/>
+                                                <exclude reference="eqf-5u-Uf9"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -196,18 +196,18 @@
                                                 <include reference="KPl-25-HmO"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="3KS-Nf-5q6"/>
-                                                <include reference="bzT-Zi-boN"/>
-                                                <include reference="eqf-5u-Uf9"/>
+                                                <include reference="Av7-q9-pgD"/>
+                                                <include reference="Qe3-WC-Qrn"/>
+                                                <include reference="rzX-6M-bDz"/>
+                                                <include reference="vjG-sa-cQ2"/>
                                                 <include reference="TJr-yc-gSc"/>
                                                 <include reference="Uwp-3m-FvL"/>
                                                 <include reference="yqD-pR-eXX"/>
                                                 <include reference="3qD-04-BND"/>
                                                 <include reference="kK0-pz-zFX"/>
-                                                <include reference="Av7-q9-pgD"/>
-                                                <include reference="Qe3-WC-Qrn"/>
-                                                <include reference="rzX-6M-bDz"/>
-                                                <include reference="vjG-sa-cQ2"/>
+                                                <include reference="3KS-Nf-5q6"/>
+                                                <include reference="bzT-Zi-boN"/>
+                                                <include reference="eqf-5u-Uf9"/>
                                             </mask>
                                         </variation>
                                     </view>

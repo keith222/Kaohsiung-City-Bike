@@ -44,6 +44,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     var staNum:NSInteger!
     var watchSession:WCSession?
     
+    
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
     override func viewDidLoad() {
@@ -120,7 +121,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //分離出UserLocation Annotation
         if !(view.annotation is MKUserLocation){
             self.staNum = self.annoArray?.indexOfObject(view.annotation!)
-        
             //點下annotation後的動作
             mapView.removeOverlays(self.mapView.overlays)
             self.staName.text = (view.annotation?.title)!
@@ -138,10 +138,19 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 let session = WCSession.defaultSession()
                 session.sendMessage(locationSession as! [String : AnyObject], replyHandler:nil, errorHandler: nil)
             }
-
-            //啟動timer每五分鐘抓腳踏車資訊
-            NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+            
+            //偵測網路是否連線
+            if Reachability.isConnectedToNetwork() == true {
+                //啟動timer每五分鐘抓腳踏車資訊
+                NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+            } else {
+                let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            
+            
         
             //infoview滑下及timeButton滑上動畫
             UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {

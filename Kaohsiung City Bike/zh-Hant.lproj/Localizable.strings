@@ -13,3 +13,4 @@
 "TimeStop" = "停止計時";
 "Time_Alert" = "時間提醒";
 "Alert" = "錯誤";
+"Error_Log" = "網路連線異常。";

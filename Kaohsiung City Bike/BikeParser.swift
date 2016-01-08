@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate{
+class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate,UIAlertViewDelegate{
 
     private var xmlItems:[(staID: String, staName: String, ava: String, unava: String)] = []
     private var currentElement = ""
