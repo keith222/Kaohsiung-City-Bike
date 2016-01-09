@@ -648,6 +648,24 @@
           "StationDesc": "大寮區公所內，臨鳳林三路"
         },
         {
+        "StationID": "336",
+        "StationNO": "0170",
+        "StationName": "長青綜合服務中心站",
+        "StationAddress": "長青綜合服務中心停車場內，臨英明路",
+        "StationLat": "22.623122",
+        "StationLon": "120.322092",
+        "StationDesc": "長青綜合服務中心停車場內，臨英明路"
+        },
+        {
+        "StationID": "340",
+        "StationNO": "340",
+        "StationName": "圖書總館站",
+        "StationAddress": "新光路上，面對大門廣場左側自行車停車場內",
+        "StationLat": "22.610606",
+        "StationLon": "120.302104",
+        "StationDesc": "新光路上，面對大門廣場左側自行車停車場內"
+        },
+        {
           "StationID": "244",
           "StationNO": "0124",
           "StationName": "美術館馬卡道站",
@@ -655,6 +673,51 @@
           "StationLat": "22.65495",
           "StationLon": "120.283089",
           "StationDesc": "立體停車場入口前平面停車格，美術館路上，近龍水路"
+        },
+        {
+        "StationID": "346",
+        "StationNO": "0180",
+        "StationName": "三信家商站",
+        "StationAddress": "三信家商大門旁，三多一路上",
+        "StationLat": "22.622089",
+        "StationLon": "120.32909",
+        "StationDesc": "三信家商大門旁，三多一路上"
+        },
+        {
+        "StationID": "354",
+        "StationNO": "0188",
+        "StationName": "海青工商站",
+        "StationAddress": "海青工商側門旁，左營大路上",
+        "StationLat": "22.674425",
+        "StationLon": "120.286455",
+        "StationDesc": "海青工商側門旁，左營大路上"
+        },
+        {
+        "StationID": "355",
+        "StationNO": "0189",
+        "StationName": "合群新城和區站",
+        "StationAddress": "合群新城和區，緯九路與海景街口",
+        "StationLat": "22.695437",
+        "StationLon": "120.287370",
+        "StationDesc": "合群新城和區，緯九路與海景街口"
+        },
+        {
+        "StationID": "357",
+        "StationNO": "0191",
+        "StationName": "鼓山高中站",
+        "StationAddress": "青海路與鼓山三路口",
+        "StationLat": "22.651728",
+        "StationLon": "120.276293",
+        "StationDesc": "青海路與鼓山三路口"
+        },
+        {
+        "StationID": "244",
+        "StationNO": "0124",
+        "StationName": "美術館馬卡道站",
+        "StationAddress": "立體停車場入口前平面停車格，美術館路上，近龍水路",
+        "StationLat": "22.65495",
+        "StationLon": "120.283089",
+        "StationDesc": "立體停車場入口前平面停車格，美術館路上，近龍水路"
         },
         {
           "StationID": "245",
