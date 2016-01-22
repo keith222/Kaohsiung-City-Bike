@@ -65,20 +65,21 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //leftBarButton = navigationItem.leftBarButtonItem
         //rightBarButton = navigationItem.rightBarButtonItem
 
-        locationManager.requestWhenInUseAuthorization()//確認地理位置請求
+        mapView.delegate = self
+        locationManager.delegate = self
+        
+        //確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
-
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
+            locationManager.startUpdatingLocation()
         }else{
             locationManager.requestWhenInUseAuthorization()
         }
-        mapView.delegate = self
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager.startUpdatingLocation()
-        locationManager.distanceFilter = CLLocationDistance(50)
+
         
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.distanceFilter = CLLocationDistance(50)
         
         let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
         
@@ -324,6 +325,28 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         currentLocation = center
     
     }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        switch status{
+        case .Denied,.Restricted:
+            requestAgain()
+        default:
+            break
+        }
+    }
+    
+    func requestAgain(){
+        //前往設定 AlertView
+        let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("SetButton", comment: ""), style: .Default, handler: {
+            action in
+            let url = NSURL(string: UIApplicationOpenSettingsURLString)
+            UIApplication.sharedApplication().openURL(url!)
+        }))
+        alert.addAction(UIAlertAction(title:  NSLocalizedString("OkButton", comment: ""), style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
 
     override func viewDidDisappear(animated: Bool) {
         //畫面消失時停止更新位置（節省電量）
@@ -342,11 +365,17 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     @IBAction func locateMe(sender: AnyObject) {
         //定位按鈕function實作
-        mapView.showsUserLocation = true
-        mapView.delegate = self
-        let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        let status = CLLocationManager.authorizationStatus()
+        if(status == .AuthorizedWhenInUse){
+            mapView.showsUserLocation = true
+            mapView.delegate = self
+            let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
-        mapView.setRegion(region, animated: true)
+            mapView.setRegion(region, animated: true)
+        }else{
+            //取得地理授權
+            requestAgain()
+        }
     }
 
     @IBAction func timeButton(sender: AnyObject) {
