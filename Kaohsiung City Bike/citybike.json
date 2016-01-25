@@ -369,6 +369,15 @@
           "StationDesc": "R5前鎮高中站 1號出口"
         },
         {
+        "StationID": "244",
+        "StationNO": "0124",
+        "StationName": "美術館馬卡道站",
+        "StationAddress": "立體停車場入口前平面停車格，美術館路上，近龍水路",
+        "StationLat": "22.65495",
+        "StationLon": "120.283089",
+        "StationDesc": "立體停車場入口前平面停車格，美術館路上，近龍水路"
+        },
+        {
           "StationID": "262",
           "StationNO": "0139",
           "StationName": "台鐵新左營站",
@@ -666,15 +675,6 @@
         "StationDesc": "新光路上，面對大門廣場左側自行車停車場內"
         },
         {
-          "StationID": "244",
-          "StationNO": "0124",
-          "StationName": "美術館馬卡道站",
-          "StationAddress": "立體停車場入口前平面停車格，美術館路上，近龍水路",
-          "StationLat": "22.65495",
-          "StationLon": "120.283089",
-          "StationDesc": "立體停車場入口前平面停車格，美術館路上，近龍水路"
-        },
-        {
         "StationID": "346",
         "StationNO": "0180",
         "StationName": "三信家商站",
@@ -682,6 +682,51 @@
         "StationLat": "22.622089",
         "StationLon": "120.32909",
         "StationDesc": "三信家商大門旁，三多一路上"
+        },
+        {
+        "StationID": "349",
+        "StationNO": "0183",
+        "StationName": "後備指揮部站",
+        "StationAddress": "高雄市後備指揮部大門旁，武功巷上",
+        "StationLat": "22.672199",
+        "StationLon": "120.331266",
+        "StationDesc": "高雄市後備指揮部大門旁，武功巷上"
+        },
+        {
+        "StationID": "350",
+        "StationNO": "0184",
+        "StationName": "三民高中站",
+        "StationAddress": "金鼎路與金山路口",
+        "StationLat": "22.663383",
+        "StationLon": "120.326475",
+        "StationDesc": "金鼎路與金山路口"
+        },
+        {
+        "StationID": "351",
+        "StationNO": "0185",
+        "StationName": "家樂福鼎山站",
+        "StationAddress": "家樂福鼎山店旁，鼎山街上",
+        "StationLat": "22.653207",
+        "StationLon": "120.318751",
+        "StationDesc": "家樂福鼎山店旁，鼎山街上"
+        },
+        {
+        "StationID": "352",
+        "StationNO": "0186",
+        "StationName": "新光國小站",
+        "StationAddress": "新光國小側門旁，曾子路上",
+        "StationLat": "22.680522",
+        "StationLon": "120.305831",
+        "StationDesc": "新光國小側門旁，曾子路上"
+        },
+        {
+        "StationID": "353",
+        "StationNO": "0187",
+        "StationName": "新莊高中站",
+        "StationAddress": "新莊高中大門旁，文慈路上",
+        "StationLat": "22.680827",
+        "StationLon": "120.317428",
+        "StationDesc": "新莊高中大門旁，文慈路上"
         },
         {
         "StationID": "354",

@@ -5,6 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
+//  站點更新至105-01-21 
 
 import UIKit
 import MapKit
@@ -56,6 +57,9 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             watchSession!.delegate = self
             watchSession!.activateSession()
         }
+        
+        //加入NotificationCenter Observer
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timeOutAlert:"), name: "timeOut", object: nil)
         
         //將一些預設在螢幕外
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
@@ -151,8 +155,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 self.presentViewController(alert, animated: true, completion: nil)
             }
             
-            
-        
             //infoview滑下及timeButton滑上動畫
             UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
@@ -219,36 +221,26 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
             
-            if (self.xmlItems != nil){
-                
-                if WCSession.defaultSession().reachable == true {
-                    let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
-                    let session = WCSession.defaultSession()
-                    session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
-                }
-    
-                dispatch_async(dispatch_get_main_queue(), {
-                    if Int(self.xmlItems![self.staNum].ava)<10{
-                        self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
-                    }else{
-                        self.avaNum.textColor = UIColor.blackColor()
-                    }
-                    if Int(self.xmlItems![self.staNum].unava)<10{
-                        self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
-                    }else{
-                        self.parkNum.textColor = UIColor.blackColor()
-                    }
-                    self.avaNum.text = self.xmlItems![self.staNum].ava
-                    self.parkNum.text = self.xmlItems![self.staNum].unava
-                })
-            }else{
-                //簡易錯誤視窗
-                self.timer.invalidate()
-                self.timer = nil
-                dispatch_async(dispatch_get_main_queue(), {
-                })
-                
+            if WCSession.defaultSession().reachable == true {
+                let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
+                let session = WCSession.defaultSession()
+                session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
             }
+    
+            dispatch_async(dispatch_get_main_queue(), {
+                if Int(self.xmlItems![self.staNum].ava)<10{
+                    self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                }else{
+                    self.avaNum.textColor = UIColor.blackColor()
+                }
+                if Int(self.xmlItems![self.staNum].unava)<10{
+                    self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                }else{
+                    self.parkNum.textColor = UIColor.blackColor()
+                }
+                self.avaNum.text = self.xmlItems![self.staNum].ava
+                self.parkNum.text = self.xmlItems![self.staNum].unava
+            })
         })
 
     }
@@ -336,7 +328,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func requestAgain(){
-        //前往設定 AlertView
+        //前往設定APP
         let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("SetButton", comment: ""), style: .Default, handler: {
             action in
@@ -347,10 +339,21 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    func timeOutAlert(notification:NSNotification){
+        //連線逾時AlerView
+        let message = notification.userInfo!["message"] as! String
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        timer.invalidate()
+    }
 
     override func viewDidDisappear(animated: Bool) {
         //畫面消失時停止更新位置（節省電量）
         locationManager.stopUpdatingLocation()
+        //移除NotificationCenter
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "timeOut", object: nil)
     }
     override func viewWillAppear(animated: Bool) {
         //畫面將要出現時啟動更新位置

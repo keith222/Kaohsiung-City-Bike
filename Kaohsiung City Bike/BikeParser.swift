@@ -52,7 +52,8 @@ class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate,UIAler
         let task = urlSession.dataTaskWithRequest(request, completionHandler: {(data,response,error)->Void in
             if error != nil{
                 print(error?.localizedDescription)
-                if (error?.code == NSURLErrorTimedOut || error?.code == NSURLErrorNotConnectedToInternet){
+                if (error?.code == NSURLErrorTimedOut){
+                    NSNotificationCenter.defaultCenter().postNotificationName("timeOut",object: self, userInfo: ["message":(error?.localizedDescription)!])
                 }
             }else{
                 let parser = NSXMLParser(data: data!)
