@@ -667,12 +667,21 @@
         },
         {
         "StationID": "340",
-        "StationNO": "340",
+        "StationNO": "0174",
         "StationName": "圖書總館站",
         "StationAddress": "新光路上，面對大門廣場左側自行車停車場內",
         "StationLat": "22.610606",
         "StationLon": "120.302104",
         "StationDesc": "新光路上，面對大門廣場左側自行車停車場內"
+        },
+        {
+        "StationID": "342",
+        "StationNO": "0176",
+        "StationName": "高雄監理所(武營)站",
+        "StationAddress": "高雄區監理所側門旁，武林路與武營路口",
+        "StationLat": "22.614298",
+        "StationLon": "120.336654",
+        "StationDesc": "高雄區監理所側門旁，武林路與武營路口"
         },
         {
         "StationID": "346",
