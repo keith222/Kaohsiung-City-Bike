@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Kaohsiung City Bike
+
+  Created by Yang Tun-Kai on 2015/11/14.
+  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
+*/
+
+"Time_Start" = "开始计时";
+"Twenty_Minutes_Alert" = "已经骑乘20分钟啰!再过10分钟就要开始收费了!!";
+"Thirty_Minutes_Alert" = "已经骑乘30分钟啰!现在开始计费!!";
+"TimeStart" = "开始计时";
+"TimeStop" = "停止计时";
+"Time_Alert" = "时间提醒";
+"Alert" = "错误";
+"Error_Log" = "互联网连线异常。";
+"Title" = "已关闭定位服务";
+"Content" = "在”设置” >”隐私”中打”开定位服务”來允許”Kaohsiung CityBike”确定您当前的位置";
+"SetButton" = "設定";
+"OkButton" = "好";
