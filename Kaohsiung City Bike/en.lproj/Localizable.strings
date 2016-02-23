@@ -17,3 +17,4 @@
 "Content" = "Turn on Location Services in Settings > Privacy to allow Kaohsiung CityBike to determine current location";
 "SetButton" = "Settings";
 "OkButton" = "OK";
+"Range" = "There is no station nearby.";

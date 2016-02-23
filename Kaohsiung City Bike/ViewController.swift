@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至105-01-26
+//  站點更新至105-02-10
 
 import UIKit
 import MapKit
@@ -41,11 +41,12 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     var timer:NSTimer!
     var stopWatch:NSTimer!
     var count = 0
+    var type = 0
     var annoArray:NSMutableArray? = NSMutableArray()
     var staNum:NSInteger!
     var watchSession:WCSession?
-    
-    
+    let customAnnotation:MKPointAnnotation = MKPointAnnotation()
+
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
     override func viewDidLoad() {
@@ -59,7 +60,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         
         //加入NotificationCenter Observer
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timeOutAlert:"), name: "timeOut", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timeOutAlert:"), name: "timeOut:", object: nil)
         
         //將一些預設在螢幕外
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
@@ -81,7 +82,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             locationManager.requestWhenInUseAuthorization()
         }
 
-        
+        //精準度設為100m且移動50公尺才更新位置
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.distanceFilter = CLLocationDistance(50)
         
@@ -91,13 +92,40 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let annotation = MKPointAnnotation()
             annotation.title = element["StationName"] as? String
             annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
-            mapView.showAnnotations([annotation], animated: true)
             annoArray?.addObject(annotation)
-            
+            mapView.showAnnotations([annotation], animated: true)
         }
+        
+        //添加手勢
+        let longPress = UILongPressGestureRecognizer(target: self, action: Selector("addAnnotation:"))
+        //長壓兩秒才有反應
+        longPress.minimumPressDuration = 2
+        mapView.addGestureRecognizer(longPress)
+    
+    }
+    
+    func addAnnotation(gestureRecognizer: UIGestureRecognizer){
+        print("add customeAnnotation")
+        let touchPoint: CGPoint! = gestureRecognizer.locationInView(self.mapView)
+        let touchMapCoordinate: CLLocationCoordinate2D = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+        self.customAnnotation.title = "目的地"//
+        self.customAnnotation.coordinate = touchMapCoordinate
+        showRoute(customAnnotation)
+        self.mapView.addAnnotation(customAnnotation)
+        
+        let shortPress = UITapGestureRecognizer(target: self, action: Selector("removeAnnotation:"))
+        self.mapView.addGestureRecognizer(shortPress)
+        
+    }
+    
+    func removeAnnotation(gestureRecognizer: UIGestureRecognizer){
+        print("remove customeAnnotation")
+        self.mapView.removeAnnotation(customAnnotation)
+        self.mapView.removeGestureRecognizer(gestureRecognizer)
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        checkIfInCity()
         if currentA != nil{
             showRoute(currentA)
         }
@@ -107,16 +135,18 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         if !(annotation is MKPointAnnotation) {
             return nil
         }
- 
+        
         let reuseId = "pin"
         var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             anView!.image = UIImage(named:"bikePin")
             anView!.canShowCallout = true
-        }
-        else {
+        }else {
             anView!.annotation = annotation
+            if(!(self.annoArray!.containsObject((anView?.annotation)!))){
+                anView!.image = UIImage(named:"flagpin")
+            }
         }
         return anView
     }
@@ -149,17 +179,17 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 //啟動timer每五分鐘抓腳踏車資訊
                 NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+                
+                //infoview滑下及timeButton滑上動畫
+                UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
+                    self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+                    },completion: nil)
             } else {
                 let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }
-            
-            //infoview滑下及timeButton滑上動畫
-            UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
-                self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
-                },completion: nil)
         }
         
     }
@@ -172,8 +202,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
                 self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
             })
-            self.timer.invalidate()
-            self.timer = nil
+            if(self.timer != nil){
+                self.timer.invalidate()
+                self.timer = nil
+            }
         }
     }
     
@@ -208,7 +240,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         //將路線畫至地圖
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor(red: 53/255, green: 1, blue: 171/255, alpha: 0.7)
+        renderer.strokeColor = UIColor(red: 0, green: 145/255, blue: 245/255, alpha: 0.7)
         renderer.lineWidth = 5.0
         
         return renderer
@@ -315,7 +347,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         mapView.setRegion(region, animated: false)
         currentLocation = center
-    
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -324,6 +355,19 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             requestAgain()
         default:
             break
+        }
+    }
+    
+    func checkIfInCity(){
+        //不在範圍內跳出警示
+        print("\(currentLocation.longitude);\(currentLocation.latitude)")
+        if((currentLocation.longitude < 120.17 || currentLocation.longitude > 120.43) || (currentLocation.latitude > 22.91 || currentLocation.latitude < 22.508)){
+            locationManager.stopUpdatingLocation()
+            let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }else{
+            
         }
     }
     
@@ -434,5 +478,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.lightBlur.hidden = true
         
     }
+    
 }
 

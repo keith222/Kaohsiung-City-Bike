@@ -387,6 +387,15 @@
           "StationDesc": "台鐵新左營站旁，臨站前北路"
         },
         {
+          "StationID": "343",
+          "StationNO": "0177",
+          "StationName": "捷運鳳山國中站",
+          "StationAddress": "O14鳳山國中站1號出入口，中山東路上",
+          "StationLat": "22.624523",
+          "StationLon": "120.371078",
+          "StationDesc": "O14鳳山國中站1號出入口，中山東路上"
+        },
+        {
           "StationID": "260",
           "StationNO": "0137",
           "StationName": "捷運大寮站",
@@ -666,6 +675,33 @@
         "StationDesc": "長青綜合服務中心停車場內，臨英明路"
         },
         {
+        "StationID": "337",
+        "StationNO": "0171",
+        "StationName": "翠平公園站",
+        "StationAddress": "翠亨南路上，豐田街與平和東路間",
+        "StationLat": "22.570005",
+        "StationLon": "120.335748",
+        "StationDesc": "翠亨南路上，豐田街與平和東路間"
+        },
+        {
+        "StationID": "338",
+        "StationNO": "0172",
+        "StationName": "中鋼成功站",
+        "StationAddress": "中鋼會館7-11前方，忠勤路上",
+        "StationLat": "22.60411",
+        "StationLon": "120.302531",
+        "StationDesc": "中鋼會館7-11前方，忠勤路上"
+        },
+        {
+        "StationID": "339",
+        "StationNO": "0173",
+        "StationName": "聖和公園站",
+        "StationAddress": "二聖一路上，和平二路與英明一路間",
+        "StationLat": "22.61211",
+        "StationLon": "120.323489",
+        "StationDesc": "二聖一路上，和平二路與英明一路間"
+        },
+        {
         "StationID": "340",
         "StationNO": "0174",
         "StationName": "圖書總館站",
@@ -673,6 +709,15 @@
         "StationLat": "22.610606",
         "StationLon": "120.302104",
         "StationDesc": "新光路上，面對大門廣場左側自行車停車場內"
+        },
+        {
+        "StationID": "341",
+        "StationNO": "0175",
+        "StationName": "中山公園站",
+        "StationAddress": "誠義路與國泰路一段路口",
+        "StationLat": "22.614312",
+        "StationLon": "120.360651",
+        "StationDesc": "誠義路與國泰路一段路口"
         },
         {
         "StationID": "342",
@@ -684,6 +729,15 @@
         "StationDesc": "高雄區監理所側門旁，武林路與武營路口"
         },
         {
+        "StationID": "344",
+        "StationNO": "0178",
+        "StationName": "新甲國小站",
+        "StationAddress": "新甲國小對面，新富路上，大明路與新強路間",
+        "StationLat": "22.61274",
+        "StationLon": "120.34035",
+        "StationDesc": "新甲國小對面，新富路上，大明路與新強路間"
+        },
+        {
         "StationID": "346",
         "StationNO": "0180",
         "StationName": "三信家商站",
@@ -691,6 +745,24 @@
         "StationLat": "22.622089",
         "StationLon": "120.32909",
         "StationDesc": "三信家商大門旁，三多一路上"
+        },
+        {
+        "StationID": "347",
+        "StationNO": "0181",
+        "StationName": "大同醫院站",
+        "StationAddress": "大同一路與中華三路口",
+        "StationLat": "22.627568",
+        "StationLon": "120.296977",
+        "StationDesc": "大同一路與中華三路口"
+        },
+        {
+        "StationID": "348",
+        "StationNO": "0182",
+        "StationName": "公二公園站",
+        "StationAddress": "正義路與九如一路口",
+        "StationLat": "22.636053",
+        "StationLon": "120.343413",
+        "StationDesc": "正義路與九如一路口"
         },
         {
         "StationID": "349",
@@ -763,6 +835,33 @@
         "StationLat": "22.651728",
         "StationLon": "120.276293",
         "StationDesc": "青海路與鼓山三路口"
+        },
+        {
+        "StationID": "358",
+        "StationNO": "0192",
+        "StationName": "仁武區運動公園站",
+        "StationAddress": "仁武區運動公園旁，仁信巷與仁祥街口",
+        "StationLat": "22.703625",
+        "StationLon": "120.345135",
+        "StationDesc": "仁武區運動公園旁，仁信巷與仁祥街口"
+        },
+        {
+        "StationID": "359",
+        "StationNO": "0193",
+        "StationName": "旗津醫院站",
+        "StationAddress": "旗津醫院大門旁，旗港路上",
+        "StationLat": "22.590139",
+        "StationLon": "120.285186",
+        "StationDesc": "旗津醫院急診室旁，旗港路上"
+        },
+        {
+        "StationID": "360",
+        "StationNO": "0194",
+        "StationName": "興達港站(2)",
+        "StationAddress": "興達港立體停車場旁，民有路上，民族路與尚禮街間",
+        "StationLat": "22.871535",
+        "StationLon": "120.19391",
+        "StationDesc": "興達港立體停車場旁，民有路上，民族路與尚禮街間"
         },
         {
         "StationID": "244",
