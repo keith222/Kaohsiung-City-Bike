@@ -51,13 +51,15 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         let title = message["stationName"] as? String
         let ava = message["ava"] as? String
         let unava = message["unava"] as? String
+        let annoType = message["annoType"] as? Int
         
         if(longitude != nil && latitude != nil && title != nil){
             let location = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
             let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             self.staNameLabel.setText(title)
             self.stationMap.removeAllAnnotations()
-            self.stationMap.addAnnotation(location, withImageNamed: "bikepinwatch" ,centerOffset: CGPointMake(0, 0))
+            let imgName = (annoType == 0) ? "flagpinwatch" : "bikepinwatch"
+            self.stationMap.addAnnotation(location, withImageNamed: imgName ,centerOffset: CGPointMake(0, 0))
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
         if(ava != nil && unava != nil){

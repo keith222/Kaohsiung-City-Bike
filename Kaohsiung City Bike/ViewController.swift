@@ -17,12 +17,17 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
-    
+    @IBOutlet var bikeTravelTimeLabel: UILabel!
     @IBOutlet var infoView: UIView!
     @IBOutlet var staName: UILabel!
     @IBOutlet var avaNum: UILabel!
     @IBOutlet var parkNum: UILabel!
     @IBOutlet var timeButtonOutlet: UIButton!
+    
+    @IBOutlet var customInfo: UIView!
+    @IBOutlet var customWalkingTimeLabel: UILabel!
+    @IBOutlet var customRidingTimeLabel: UILabel!
+    
     
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
@@ -30,7 +35,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var lightBlur: UIVisualEffectView!
     
     
-    let locationManager = CLLocationManager();
+    let locationManager = CLLocationManager()
     var transportType = MKDirectionsTransportType.Walking //以步行方式導航
     var currentLocation: CLLocationCoordinate2D!
     var searchController: UISearchController!
@@ -46,7 +51,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     var staNum:NSInteger!
     var watchSession:WCSession?
     let customAnnotation:MKPointAnnotation = MKPointAnnotation()
-
+    var longPress:UILongPressGestureRecognizer!
+    var shortPress:UITapGestureRecognizer!
+    
+    
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
     override func viewDidLoad() {
@@ -63,8 +71,9 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timeOutAlert:"), name: "timeOut:", object: nil)
         
         //將一些預設在螢幕外
-        self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
+        self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
         self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+        self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
 
         //leftBarButton = navigationItem.leftBarButtonItem
@@ -97,35 +106,56 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         
         //添加手勢
-        let longPress = UILongPressGestureRecognizer(target: self, action: Selector("addAnnotation:"))
+        self.longPress = UILongPressGestureRecognizer(target: self, action: Selector("addAnnotation:"))
         //長壓兩秒才有反應
-        longPress.minimumPressDuration = 2
-        mapView.addGestureRecognizer(longPress)
+        self.longPress.minimumPressDuration = 1.5
+        self.mapView.addGestureRecognizer(longPress)
     
     }
     
     func addAnnotation(gestureRecognizer: UIGestureRecognizer){
         print("add customeAnnotation")
+        
+        //偵測開始即移除手勢以免多按
+        if(gestureRecognizer.state == .Began){
+            self.mapView.removeGestureRecognizer(gestureRecognizer)
+        }
+        
+        //取得所點位置的座標
         let touchPoint: CGPoint! = gestureRecognizer.locationInView(self.mapView)
         let touchMapCoordinate: CLLocationCoordinate2D = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
-        self.customAnnotation.title = "目的地"//
-        self.customAnnotation.coordinate = touchMapCoordinate
-        showRoute(customAnnotation)
-        self.mapView.addAnnotation(customAnnotation)
         
-        let shortPress = UITapGestureRecognizer(target: self, action: Selector("removeAnnotation:"))
+        self.customAnnotation.title = NSLocalizedString("Destination", comment: "")
+        self.customAnnotation.coordinate = touchMapCoordinate
+        //顯示到customAnnotation的路線
+        showRoute(customAnnotation)
+        //把customAnnotation加到地圖上
+        self.mapView.addAnnotation(customAnnotation)
+        //設定customAnnotation已選狀態
+        self.mapView.selectAnnotation(customAnnotation, animated: true)
+        //加入點壓手勢
+        self.shortPress = UITapGestureRecognizer(target: self, action: Selector("removeAnnotation:"))
         self.mapView.addGestureRecognizer(shortPress)
         
     }
     
     func removeAnnotation(gestureRecognizer: UIGestureRecognizer){
         print("remove customeAnnotation")
+        //移除路線、customAnnotation、手勢
+        self.mapView.removeOverlays(self.mapView.overlays)
         self.mapView.removeAnnotation(customAnnotation)
         self.mapView.removeGestureRecognizer(gestureRecognizer)
+        
+        //CustomInfo 回到螢幕外
+        UIView.animateWithDuration(0.5, animations: {
+            self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
+        })
+        
+        self.mapView.addGestureRecognizer(self.longPress)
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        checkIfInCity()
+        //checkIfInCity()
         if currentA != nil{
             showRoute(currentA)
         }
@@ -135,13 +165,13 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         if !(annotation is MKPointAnnotation) {
             return nil
         }
-        
         let reuseId = "pin"
         var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             anView!.image = UIImage(named:"bikePin")
             anView!.canShowCallout = true
+            anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
         }else {
             anView!.annotation = annotation
             if(!(self.annoArray!.containsObject((anView?.annotation)!))){
@@ -153,42 +183,53 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
-        //分離出UserLocation Annotation
+        //分離出UserLocation Annotation及Custom Annotation
         if !(view.annotation is MKUserLocation){
-            self.staNum = self.annoArray?.indexOfObject(view.annotation!)
-            //點下annotation後的動作
-            mapView.removeOverlays(self.mapView.overlays)
-            self.staName.text = (view.annotation?.title)!
+            //規劃路徑
             currentA = view.annotation
             showRoute(currentA)
-        
+            var annoType = 0
+            
+            if !(view.annotation!.isEqual(self.customAnnotation)){
+                self.staNum = self.annoArray?.indexOfObject(view.annotation!)
+                //點下annotation後的動作
+                mapView.removeOverlays(self.mapView.overlays)
+                self.staName.text = (view.annotation?.title)!
+                annoType = 1
+                
+                //偵測網路是否連線
+                if Reachability.isConnectedToNetwork() == true {
+                    //啟動timer每五分鐘抓腳踏車資訊
+                    NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+                
+                    //infoview滑下及timeButton滑上動畫
+                    UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                        self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
+                        self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+                        },completion: nil)
+                }else{
+                    let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+            }else{
+                UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.customInfo.transform = CGAffineTransformMakeTranslation(0,0)
+                    self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+                    },completion: nil)
+            }
+            
             //儲存annotation位置以分享給watchapp
             let annolong = view.annotation?.coordinate.longitude
             let annolati = view.annotation?.coordinate.latitude
             let title = view.annotation?.title
-
-        
+            
+            
             if WCSession.defaultSession().reachable == true {
-                let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!]
+                let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!, "annoType": annoType]
                 let session = WCSession.defaultSession()
                 session.sendMessage(locationSession as! [String : AnyObject], replyHandler:nil, errorHandler: nil)
-            }
-            
-            //偵測網路是否連線
-            if Reachability.isConnectedToNetwork() == true {
-                //啟動timer每五分鐘抓腳踏車資訊
-                NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
-                
-                //infoview滑下及timeButton滑上動畫
-                UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
-                    self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
-                    },completion: nil)
-            } else {
-                let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
         
@@ -197,9 +238,9 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
 
         //分離出UserLocation Annotation
-        if !(view.annotation is MKUserLocation){
+        if !(view.annotation is MKUserLocation) && !(view.annotation!.isEqual(self.customAnnotation)){
             UIView.animateWithDuration(0.5, animations: {
-                self.infoView.transform = CGAffineTransformMakeTranslation(0, -140)
+                self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
                 self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
             })
             if(self.timer != nil){
@@ -233,7 +274,34 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let route = response.routes[0] 
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
             let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
-            self.travelTimeLabel.text = String(etaMin)
+            
+            if currentAnnotation.isEqual(self.customAnnotation){
+                self.customWalkingTimeLabel.text = String(etaMin)
+            }else{
+                self.travelTimeLabel.text = String(etaMin)
+            }
+        }
+        
+        //計算腳踏車行車時間（以Automobile暫代，因Apple Map不提供 Bike）
+        let bikeRequest = MKDirectionsRequest()
+        bikeRequest.source = MKMapItem.mapItemForCurrentLocation()
+        let bikePlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
+        bikeRequest.destination = MKMapItem(placemark: bikePlacemark)
+        bikeRequest.transportType = MKDirectionsTransportType.Automobile
+        let bikeDirections = MKDirections(request: bikeRequest)
+        bikeDirections.calculateDirectionsWithCompletionHandler{
+            response, error in
+            guard let response = response else {
+                //handle the error here
+                print("Error: \(error?.localizedDescription)")
+                return
+            }
+            let bikeTime = response.routes[0].expectedTravelTime
+            if currentAnnotation.isEqual(self.customAnnotation){
+                self.customRidingTimeLabel.text = String(NSInteger(bikeTime)/60)
+            }else{
+                self.bikeTravelTimeLabel.text = String(NSInteger(bikeTime)/60)
+            }
         }
     }
     
@@ -241,7 +309,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //將路線畫至地圖
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor(red: 0, green: 145/255, blue: 245/255, alpha: 0.7)
-        renderer.lineWidth = 5.0
+        renderer.lineWidth = 10.0
         
         return renderer
     }
@@ -414,11 +482,11 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //定位按鈕function實作
         let status = CLLocationManager.authorizationStatus()
         if(status == .AuthorizedWhenInUse){
-            mapView.showsUserLocation = true
-            mapView.delegate = self
-            let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            if(currentLocation != nil){
+                let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
-            mapView.setRegion(region, animated: true)
+                mapView.setRegion(region, animated: true)
+            }
         }else{
             //取得地理授權
             requestAgain()

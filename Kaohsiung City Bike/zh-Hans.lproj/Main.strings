@@ -1,39 +1,69 @@
 
-/* Class = "UILabel"; text = "步行時間："; ObjectID = "0Ho-z7-sSo"; */
+/* Class = "UILabel"; text = "步行时间："; ObjectID = "0Ho-z7-sSo"; */
 "0Ho-z7-sSo.text" = "步行时间：";
 
-/* Class = "UIButton"; normalTitle = "開始計時"; ObjectID = "4k9-6D-3g5"; */
+/* Class = "UILabel"; text = "步行时间："; ObjectID = "3xp-Cc-D7A"; */
+"3xp-Cc-D7A.text" = "步行时间：";
+
+/* Class = "UIButton"; normalTitle = "开始计时"; ObjectID = "4k9-6D-3g5"; */
 "4k9-6D-3g5.normalTitle" = "开始计时";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "7oU-y1-Hc3"; */
+"7oU-y1-Hc3.text" = "--";
+
+/* Class = "UILabel"; text = "骑乘时间："; ObjectID = "DQN-oU-HZn"; */
+"DQN-oU-HZn.text" = "骑乘时间：";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "KPl-25-HmO"; */
 "KPl-25-HmO.text" = "0";
 
-/* Class = "UILabel"; text = "Time："; ObjectID = "P5h-Mn-xj4"; */
+/* Class = "UILabel"; text = "分"; ObjectID = "Kyz-F5-WrK"; */
+"Kyz-F5-WrK.text" = "分";
+
+/* Class = "UILabel"; text = "使用时间："; ObjectID = "P5h-Mn-xj4"; */
 "P5h-Mn-xj4.text" = "使用时间：";
 
 /* Class = "UINavigationItem"; title = "Kaohsiung CityBike"; ObjectID = "TLt-Vv-NrU"; */
 "TLt-Vv-NrU.title" = "Kaohsiung CityBike";
 
+/* Class = "UILabel"; text = "--"; ObjectID = "Y8Q-8Z-BQC"; */
+"Y8Q-8Z-BQC.text" = "--";
+
+/* Class = "UILabel"; text = "分"; ObjectID = "YVR-k0-x7f"; */
+"YVR-k0-x7f.text" = "分";
+
 /* Class = "UIButton"; normalTitle = "OK"; ObjectID = "YnB-32-cFG"; */
 "YnB-32-cFG.normalTitle" = "OK";
 
-/* Class = "UILabel"; text = "旅程記錄"; ObjectID = "ZgZ-uz-J8Z"; */
+/* Class = "UILabel"; text = "旅程记录"; ObjectID = "ZgZ-uz-J8Z"; */
 "ZgZ-uz-J8Z.text" = "旅程记录";
+
+/* Class = "UILabel"; text = "分"; ObjectID = "bLN-Vw-PmY"; */
+"bLN-Vw-PmY.text" = "分";
+
+/* Class = "UILabel"; text = "目的地"; ObjectID = "ecY-Up-qTJ"; */
+"ecY-Up-qTJ.text" = "目的地";
 
 /* Class = "UILabel"; text = "00:00:00"; ObjectID = "j50-6a-fWj"; */
 "j50-6a-fWj.text" = "00:00:00";
 
-/* Class = "UILabel"; text = "Min"; ObjectID = "jWH-8r-gAb"; */
+/* Class = "UILabel"; text = "分"; ObjectID = "jWH-8r-gAb"; */
 "jWH-8r-gAb.text" = "分";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "kEI-Dj-7LM"; */
 "kEI-Dj-7LM.text" = "0";
 
-/* Class = "UILabel"; text = "0"; ObjectID = "kUZ-xI-qPS"; */
-"kUZ-xI-qPS.text" = "0";
+/* Class = "UILabel"; text = "--"; ObjectID = "kUZ-xI-qPS"; */
+"kUZ-xI-qPS.text" = "--";
+
+/* Class = "UILabel"; text = "骑乘时间："; ObjectID = "lWa-Fo-Bza"; */
+"lWa-Fo-Bza.text" = "骑乘时间：";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "n9O-qe-dOk"; */
+"n9O-qe-dOk.text" = "--";
 
 /* Class = "UILabel"; text = "NT$"; ObjectID = "nst-lC-46h"; */
 "nst-lC-46h.text" = "NT$";
 
-/* Class = "UILabel"; text = "使用費用："; ObjectID = "r9g-v8-ykh"; */
+/* Class = "UILabel"; text = "使用费用："; ObjectID = "r9g-v8-ykh"; */
 "r9g-v8-ykh.text" = "使用费用：";

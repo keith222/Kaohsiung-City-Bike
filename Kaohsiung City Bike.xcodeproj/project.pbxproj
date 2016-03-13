@@ -115,6 +115,9 @@
 		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
 		534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
 		534E08D81C0DFEFD00AA0133 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
+		534E44531C7F406000159E20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		534E44541C7F406600159E20 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		534E44551C7F406B00159E20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,12 +134,9 @@
 		537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		5380329B1C20236B00E07131 /* geojson.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = geojson.geojson; path = "Kaohsiung City Bike/geojson.geojson"; sourceTree = "<group>"; };
 		53893AED1BE9CAF700E32ECD /* DataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGet.swift; sourceTree = "<group>"; };
-		53928D061C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		53928D071C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		53928D081C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		53928D091C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
-		53AD6D951C3C14F80093A317 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		53AD6D961C3C14FF0093A317 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		53E232591BFE38B800F36B71 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -580,9 +580,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				534962971BE07BE700BFFD71 /* Base */,
-				53AD6D951C3C14F80093A317 /* zh-Hant */,
-				53AD6D961C3C14FF0093A317 /* ja */,
-				53928D061C57BB070072FA37 /* zh-Hans */,
+				534E44531C7F406000159E20 /* zh-Hant */,
+				534E44541C7F406600159E20 /* ja */,
+				534E44551C7F406B00159E20 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -712,6 +712,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -727,6 +728,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
