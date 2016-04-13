@@ -68,7 +68,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         
         //加入NotificationCenter Observer
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timeOutAlert:"), name: "timeOut:", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.timeOutAlert(_:)), name: "timeOut:", object: nil)
         
         //將一些預設在螢幕外
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
@@ -106,7 +106,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         
         //添加手勢
-        self.longPress = UILongPressGestureRecognizer(target: self, action: Selector("addAnnotation:"))
+        self.longPress = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.addAnnotation(_:)))
         //長壓兩秒才有反應
         self.longPress.minimumPressDuration = 1.5
         self.mapView.addGestureRecognizer(longPress)
@@ -134,7 +134,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //設定customAnnotation已選狀態
         self.mapView.selectAnnotation(customAnnotation, animated: true)
         //加入點壓手勢
-        self.shortPress = UITapGestureRecognizer(target: self, action: Selector("removeAnnotation:"))
+        self.shortPress = UITapGestureRecognizer(target: self, action: #selector(ViewController.removeAnnotation(_:)))
         self.mapView.addGestureRecognizer(shortPress)
         
     }
@@ -200,8 +200,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 //偵測網路是否連線
                 if Reachability.isConnectedToNetwork() == true {
                     //啟動timer每五分鐘抓腳踏車資訊
-                    NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: "bikeInfo:", userInfo: nil, repeats: false)
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: "bikeInfo:", userInfo: nil, repeats: true)
+                    NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: false)
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: true)
                 
                     //infoview滑下及timeButton滑上動畫
                     UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
@@ -346,7 +346,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func stopWatchTimer(timer:NSTimer){
-        count++
+        count += 1
         let second = count%60
         let minute = (count/60)%60
         let hour = Int(count/3600)
@@ -504,7 +504,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             })
             
             
-            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "stopWatchTimer:", userInfo: nil, repeats: true)
+            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
             
             //設定Local Notification

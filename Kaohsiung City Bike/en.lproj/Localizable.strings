@@ -19,3 +19,5 @@
 "OkButton" = "OK";
 "Range" = "There is no station nearby.";
 "Destination" = "Destination";
+"Search" = "Site/Address";
+"Station_List" = "Station List";

@@ -20,3 +20,5 @@
 "OkButton" = "好";
 "Range" = "附近沒有CityBike站點。";
 "Destination" = "目的地";
+"Search" = "站點/地址";
+"Station_List" = "站點列表";
