@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol sendData {
+    func sendData(stationName: String)
+}
+
 class StationTableViewController: UITableViewController, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating{
 
     let staInfo = DataGet().bikeLocationJson()
+    var mDelegate: sendData?
     var searchButton: UIBarButtonItem!
     var noTitleButton: UIBarButtonItem!
     var searchController: UISearchController!
@@ -34,6 +39,7 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         self.searchController.searchBar.delegate = self
         //呈現結果不會有black mask
         self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.loadViewIfNeeded()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,18 +68,17 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = (self.searchController.active) ? (self.searchResults[indexPath.row]["StationName"] as? String) : (staInfo[indexPath.row]["StationName"] as? String)
 
+        self.mDelegate?.sendData(selectedCell!)
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     //搜尋功能
     func configureSearchBar(){
-        self.searchController.hidesNavigationBarDuringPresentation = false
-        //結果呈現在此VC上
-        definesPresentationContext = true
-        //輸入框自動大小寫轉換>不設定
-        self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationType.None
-        //使用預設鍵盤
-        self.searchController.searchBar.keyboardType = UIKeyboardType.Default
-        //search bar placeholder
-        self.searchController.searchBar.placeholder = NSLocalizedString("Search", comment: "")
+        
         //將UISearchBar放到Navigation的titleView上
         self.navigationItem.titleView = self.searchController.searchBar
     }
@@ -108,6 +113,5 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         self.navigationItem.rightBarButtonItem = self.searchButton
         self.navigationItem.titleView = nil
     }
-        
 
 }

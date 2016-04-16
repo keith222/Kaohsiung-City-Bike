@@ -12,8 +12,7 @@ import MapKit
 import WatchConnectivity
 import CoreLocation
 
-
-class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate,UIAlertViewDelegate{
+class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate,UIAlertViewDelegate, sendData{
 
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
@@ -53,6 +52,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     let customAnnotation:MKPointAnnotation = MKPointAnnotation()
     var longPress:UILongPressGestureRecognizer!
     var shortPress:UITapGestureRecognizer!
+    var locateCheck: Bool = true
     
     
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
@@ -78,7 +78,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
         //leftBarButton = navigationItem.leftBarButtonItem
         //rightBarButton = navigationItem.rightBarButtonItem
-
+        let StationTable = StationTableViewController()
+        StationTable.mDelegate = self
         mapView.delegate = self
         locationManager.delegate = self
         
@@ -111,6 +112,24 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.longPress.minimumPressDuration = 1.5
         self.mapView.addGestureRecognizer(longPress)
     
+    }
+    
+    func sendData(stationName: String) {
+        //將車站列表被點選的站點與地圖上的站點對照
+        let result = self.mapView.annotations.filter{
+            if let staName = $0.title{
+                return staName == stationName
+            }
+            return false
+        }
+        self.mapView.selectAnnotation(result[0], animated: true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueToStation"{
+            let destination = segue.destinationViewController as! StationTableViewController
+            destination.mDelegate = self
+        }
     }
     
     func addAnnotation(gestureRecognizer: UIGestureRecognizer){
@@ -155,11 +174,17 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        //checkIfInCity()
+        
         if currentA != nil{
             showRoute(currentA)
         }
+        
+        if locateCheck{
+            locateCheck = false
+            //checkIfInCity()
+        }
     }
+
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is MKPointAnnotation) {
@@ -428,7 +453,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     func checkIfInCity(){
         //不在範圍內跳出警示
-        print("\(currentLocation.longitude);\(currentLocation.latitude)")
+        print("current location:\(currentLocation.longitude);\(currentLocation.latitude)")
         if((currentLocation.longitude < 120.17 || currentLocation.longitude > 120.43) || (currentLocation.latitude > 22.91 || currentLocation.latitude < 22.508)){
             locationManager.stopUpdatingLocation()
             let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
@@ -470,7 +495,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     override func viewWillAppear(animated: Bool) {
         //畫面將要出現時啟動更新位置
         locationManager.startUpdatingLocation()
-        
     }
     
     override func didReceiveMemoryWarning() {

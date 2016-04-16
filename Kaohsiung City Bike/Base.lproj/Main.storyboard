@@ -1511,7 +1511,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="QlF-dS-Khu">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="878-rG-xie" kind="show" id="fWe-SL-Fpn"/>
+                                <segue destination="878-rG-xie" kind="show" identifier="segueToStation" id="fWe-SL-Fpn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1569,14 +1569,26 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCj-rS-ngt">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-Hv-HAB">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE8-dN-4LI">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="23r-pc-jqm">
-                                                    <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="40"/>
                                                 </constraint>
                                                 <constraint firstAttribute="height" constant="40" id="TOo-eu-WiA">
-                                                    <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="40"/>
                                                 </constraint>
                                             </constraints>
                                             <state key="normal" image="star"/>
@@ -1593,18 +1605,6 @@
                                                 </mask>
                                             </variation>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCj-rS-ngt">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-Hv-HAB">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -1619,7 +1619,7 @@
                                         <constraint firstItem="iWr-Hv-HAB" firstAttribute="leading" secondItem="cgA-Tg-AX8" secondAttribute="trailing" constant="25" id="dmY-0y-8X7"/>
                                         <constraint firstItem="UCj-rS-ngt" firstAttribute="leading" secondItem="cgA-Tg-AX8" secondAttribute="trailing" constant="25" id="jXj-yi-deF"/>
                                         <constraint firstAttribute="trailing" secondItem="uE8-dN-4LI" secondAttribute="trailing" constant="30" id="w0V-mW-ZuV">
-                                            <variation key="heightClass=regular-widthClass=compact" constant="41"/>
+                                            <variation key="heightClass=regular-widthClass=compact" constant="36"/>
                                         </constraint>
                                         <constraint firstItem="cgA-Tg-AX8" firstAttribute="width" secondItem="Ans-8l-dKc" secondAttribute="height" multiplier="40:69" id="w4g-Bn-bJZ"/>
                                         <constraint firstItem="cgA-Tg-AX8" firstAttribute="leading" secondItem="Ans-8l-dKc" secondAttribute="leading" constant="21" id="zcK-Kb-EAC"/>
@@ -1627,9 +1627,9 @@
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="cgA-Tg-AX8"/>
-                                            <exclude reference="uE8-dN-4LI"/>
                                             <exclude reference="UCj-rS-ngt"/>
                                             <exclude reference="iWr-Hv-HAB"/>
+                                            <exclude reference="uE8-dN-4LI"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="CrC-WV-exy"/>
@@ -1648,9 +1648,9 @@
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="cgA-Tg-AX8"/>
-                                            <include reference="uE8-dN-4LI"/>
                                             <include reference="UCj-rS-ngt"/>
                                             <include reference="iWr-Hv-HAB"/>
+                                            <include reference="uE8-dN-4LI"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="CrC-WV-exy"/>
