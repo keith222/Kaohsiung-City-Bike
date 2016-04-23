@@ -823,6 +823,15 @@
         "StationNO": "0189",
         "StationName": "合群新城和區站",
         "StationAddress": "合群新城和區，緯九路與海景街口",
+        "StationLat": "22.663878",
+        "StationLon": "120.306713",
+        "StationDesc": "富國路與保靖街口"
+        },
+        {
+        "StationID": "356",
+        "StationNO": "0190",
+        "StationName": "富國公園站",
+        "StationAddress": "富國路與保靖街口",
         "StationLat": "22.695437",
         "StationLon": "120.287370",
         "StationDesc": "合群新城和區，緯九路與海景街口"
@@ -862,6 +871,15 @@
         "StationLat": "22.871535",
         "StationLon": "120.19391",
         "StationDesc": "興達港立體停車場旁，民有路上，民族路與尚禮街間"
+        },
+        {
+        "StationID": "361",
+        "StationNO": "0195",
+        "StationName": "明德國小站",
+        "StationAddress": "海富路與海平路口",
+        "StationLat": "22.687264",
+        "StationLon": "120.289478",
+        "StationDesc": "海富路與海平路口"
         },
         {
         "StationID": "244",

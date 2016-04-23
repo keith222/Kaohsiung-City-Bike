@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至105-02-10
+//  站點更新至105-04-22
 
 import UIKit
 import MapKit
@@ -178,7 +178,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         if currentA != nil{
             showRoute(currentA)
         }
-        
         if locateCheck{
             locateCheck = false
             //checkIfInCity()
@@ -340,7 +339,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func bikeInfo(timer:NSTimer){
-        
         let xmlParser = BikeParser()
     
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in

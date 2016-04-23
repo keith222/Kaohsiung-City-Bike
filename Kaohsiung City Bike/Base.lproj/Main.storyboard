@@ -1557,15 +1557,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="cgA-Tg-AX8" secondAttribute="height" multiplier="1:1" id="7j9-4w-dRB"/>
+                                                <constraint firstAttribute="width" constant="40" id="8XK-o8-vBI"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="7j9-4w-dRB"/>
+                                                    <exclude reference="8XK-o8-vBI"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="7j9-4w-dRB"/>
+                                                    <include reference="8XK-o8-vBI"/>
                                                 </mask>
                                             </variation>
                                         </imageView>
@@ -1575,9 +1578,9 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-Hv-HAB">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-Hv-HAB">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1616,6 +1619,7 @@
                                         </constraint>
                                         <constraint firstItem="cgA-Tg-AX8" firstAttribute="centerY" secondItem="Ans-8l-dKc" secondAttribute="centerY" id="PKV-01-4mg"/>
                                         <constraint firstItem="uE8-dN-4LI" firstAttribute="leading" secondItem="iWr-Hv-HAB" secondAttribute="trailing" constant="15" id="Vpy-1R-8T3"/>
+                                        <constraint firstItem="UCj-rS-ngt" firstAttribute="top" secondItem="Ans-8l-dKc" secondAttribute="top" constant="8" id="dTp-8d-yid"/>
                                         <constraint firstItem="iWr-Hv-HAB" firstAttribute="leading" secondItem="cgA-Tg-AX8" secondAttribute="trailing" constant="25" id="dmY-0y-8X7"/>
                                         <constraint firstItem="UCj-rS-ngt" firstAttribute="leading" secondItem="cgA-Tg-AX8" secondAttribute="trailing" constant="25" id="jXj-yi-deF"/>
                                         <constraint firstAttribute="trailing" secondItem="uE8-dN-4LI" secondAttribute="trailing" constant="30" id="w0V-mW-ZuV">
@@ -1637,6 +1641,7 @@
                                             <exclude reference="Vpy-1R-8T3"/>
                                             <exclude reference="w0V-mW-ZuV"/>
                                             <exclude reference="NlE-si-hMW"/>
+                                            <exclude reference="dTp-8d-yid"/>
                                             <exclude reference="jXj-yi-deF"/>
                                             <exclude reference="Gcm-61-70C"/>
                                             <exclude reference="dmY-0y-8X7"/>
@@ -1658,11 +1663,12 @@
                                             <include reference="Vpy-1R-8T3"/>
                                             <include reference="w0V-mW-ZuV"/>
                                             <include reference="NlE-si-hMW"/>
+                                            <include reference="dTp-8d-yid"/>
                                             <include reference="jXj-yi-deF"/>
                                             <include reference="Gcm-61-70C"/>
                                             <include reference="dmY-0y-8X7"/>
                                             <include reference="PKV-01-4mg"/>
-                                            <include reference="w4g-Bn-bJZ"/>
+                                            <exclude reference="w4g-Bn-bJZ"/>
                                             <include reference="zcK-Kb-EAC"/>
                                         </mask>
                                     </variation>

@@ -5,7 +5,6 @@
   Created by Yang Tun-Kai on 2015/11/14.
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
-
 "Time_Start" = "開始計時";
 "Twenty_Minutes_Alert" = "已經騎乘20分鐘囉!再過10分鐘就要開始收費了!!";
 "Thirty_Minutes_Alert" = "已經騎乘30分鐘囉!現在開始計費!!";
@@ -22,3 +21,5 @@
 "Destination" = "目的地";
 "Search" = "站點/地址";
 "Station_List" = "站點列表";
+"Reached_the_limit" = "已達上限";
+"Only_7_Station_can_be_added" = "最多存取7個站點。";

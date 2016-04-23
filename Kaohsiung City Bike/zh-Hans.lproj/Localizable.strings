@@ -22,3 +22,5 @@
 "Destination" = "目的地";
 "Search" = "站点/地址";
 "Station_List" = "站点列表";
+"Reached_the_limit" = "已达上限";
+"Access_up_to_7_sites" = "最多存取7个站点。";

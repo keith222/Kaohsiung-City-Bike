@@ -21,3 +21,5 @@
 "Destination" = "Destination";
 "Search" = "Site/Address";
 "Station_List" = "Station List";
+"Reached_the_limit" = "Reached the limit";
+"Only_7_Station_can_be_added" = "Only 7 stations can be added.";

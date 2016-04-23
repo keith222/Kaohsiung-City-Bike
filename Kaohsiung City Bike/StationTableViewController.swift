@@ -15,6 +15,7 @@ protocol sendData {
 class StationTableViewController: UITableViewController, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating{
 
     let staInfo = DataGet().bikeLocationJson()
+    let userDefault: NSUserDefaults = NSUserDefaults(suiteName: "group.kcb.todaywidget")!
     var mDelegate: sendData?
     var searchButton: UIBarButtonItem!
     var noTitleButton: UIBarButtonItem!
@@ -23,6 +24,8 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = 70.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.title = NSLocalizedString("Station_List", comment: "")
         self.noTitleButton = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = noTitleButton
@@ -66,6 +69,18 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         cell.nameLabel.text = (self.searchController.active) ? (self.searchResults[indexPath.row]["StationName"] as? String) : (staInfo[indexPath.row]["StationName"] as? String)
         cell.addressLabel.text = (self.searchController.active) ? (self.searchResults[indexPath.row]["StationAddress"] as? String) : (staInfo[indexPath.row]["StationAddress"] as? String)
         
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(self.likeButtonAction(_:)), forControlEvents: .TouchUpInside)
+        
+        if let staArray = self.userDefault.objectForKey("staForTodayWidget"){
+            if (staArray as! NSArray).contains({$0 as? String == cell.nameLabel.text}){
+                cell.likeButton.setImage(UIImage(named: "starfilled"), forState: .Normal)
+            }else{
+                cell.likeButton.setImage(UIImage(named: "star"), forState: .Normal)
+            }
+        }else{
+            cell.likeButton.setImage(UIImage(named: "star"), forState: .Normal)
+        }
         return cell
     }
     
@@ -76,8 +91,52 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    func likeButtonAction(sender:UIButton){
+        if var staArray = self.userDefault.arrayForKey("staForTodayWidget"){
+            if staArray.count < 8{
+                let staName = (self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as? String) : (staInfo[sender.tag]["StationName"] as? String)
+                if staArray.contains({$0 as? String == staName}){
+                    staArray = staArray.filter({$0 as? String != staName})
+                    self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
+                    self.userDefault.synchronize()
+                    NSLog("remove station")
+                    sender.setImage(UIImage(named: "star"), forState: .Normal)
+                }else{
+                    staArray.append(staName!)
+                    self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
+                    self.userDefault.synchronize()
+                    NSLog("add station to array")
+                    sender.setImage(UIImage(named: "starfilled"), forState: .Normal)
+                }
+            }else{
+                let alert = UIAlertController(title: NSLocalizedString("Reached_the_limit", comment: ""), message: NSLocalizedString("Only_7_Station_can_be_added", comment: ""), preferredStyle: .Alert)
+                let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+                alert.addAction(okAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+
+            }
+        }else{
+            let array = [(self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as! String) : (staInfo[sender.tag]["StationName"] as! String)]
+            self.userDefault.setObject(array, forKey: "staForTodayWidget")
+            self.userDefault.synchronize()
+            NSLog("empty array now saves station")
+            sender.setImage(UIImage(named: "starfilled"), forState: .Normal)
+        }
+        print(self.userDefault.arrayForKey("staForTodayWidget"))
+    }
+    
     //搜尋功能
     func configureSearchBar(){
+        
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        //結果呈現在此VC上
+        definesPresentationContext = true
+        //輸入框自動大小寫轉換>不設定
+        self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationType.None
+        //使用預設鍵盤
+        self.searchController.searchBar.keyboardType = UIKeyboardType.Default
+        //search bar placeholder
+        self.searchController.searchBar.placeholder = NSLocalizedString("Search", comment: "")
         
         //將UISearchBar放到Navigation的titleView上
         self.navigationItem.titleView = self.searchController.searchBar

@@ -9,10 +9,10 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-
+    var mDelegate: sendData?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -29,6 +29,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         application.applicationIconBadgeNumber = 0
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        if sourceApplication == "Sparkrs.CityBike.Kaohsiung-CityBike-Widget"{
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("Map") as! ViewController
+            navigatorController.viewControllers = [viewController]
+            self.window?.rootViewController = navigatorController
+            
+            let triggerTime = (Int64(NSEC_PER_SEC)*1)
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
+                viewController.sendData(url.query!.stringByRemovingPercentEncoding!)
+            })
+
+            return true
+        }else{
+            return false
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

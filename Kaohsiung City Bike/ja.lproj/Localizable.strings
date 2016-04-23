@@ -22,3 +22,5 @@
 "Destination" = "デスティネーション";
 "Search" = "サイト/アドレス";
 "Station_List" = "サイトリスト";
+"Reached_the_limit" = "限界に達して";
+"Only_7_Station_can_be_added" = "7サイトを追加することができます。";
