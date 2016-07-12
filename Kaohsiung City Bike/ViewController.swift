@@ -12,6 +12,10 @@ import MapKit
 import WatchConnectivity
 import CoreLocation
 
+//for spotlight search
+import CoreSpotlight
+import MobileCoreServices
+
 class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate,UIAlertViewDelegate, sendData{
 
     @IBOutlet var mapView:MKMapView!
@@ -111,6 +115,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //長壓兩秒才有反應
         self.longPress.minimumPressDuration = 1.5
         self.mapView.addGestureRecognizer(longPress)
+        
+        self.setupSearchableContent()
     
     }
     
@@ -180,7 +186,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         if locateCheck{
             locateCheck = false
-            //checkIfInCity()
+            checkIfInCity()
         }
     }
 
@@ -569,5 +575,40 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
     }
     
+}
+
+// spotlight search feature
+extension ViewController{
+    
+    func setupSearchableContent(){
+        let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
+        var searchableItems = [CSSearchableItem]()
+        
+        for element in stationData{//將位置作成Searchable data
+            
+            let searchableItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+            searchableItemAttributeSet.title = element["StationName"] as? String
+            searchableItemAttributeSet.contentDescription = element["StationAddress"] as? String
+            searchableItemAttributeSet.thumbnailData = UIImagePNGRepresentation(UIImage(named:"available-widget")!)
+            
+            var keywords = [String]()
+            keywords.append(element["StationName"] as! String)
+            keywords.append(element["StationAddress"] as! String)
+            searchableItemAttributeSet.keywords = keywords
+            
+            let index = stationData.indexOfObject(element)
+            
+            let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(index)", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
+            
+            searchableItems.append(searchableItem)
+        }
+        
+        CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(searchableItems, completionHandler: {(error)->Void in
+            if(error != nil){
+                print(error?.localizedDescription)
+            }
+        })
+        
+    }
 }
 
