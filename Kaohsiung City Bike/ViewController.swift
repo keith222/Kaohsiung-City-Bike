@@ -489,6 +489,51 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.presentViewController(alert, animated: true, completion: nil)
         timer.invalidate()
     }
+    
+    // spotlight search feature
+    func setupSearchableContent(){
+        let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
+        var searchableItems = [CSSearchableItem]()
+        
+        for element in stationData{//將位置作成Searchable data
+            
+            let searchableItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+            searchableItemAttributeSet.title = element["StationName"] as? String
+            searchableItemAttributeSet.contentDescription = element["StationAddress"] as? String
+            searchableItemAttributeSet.thumbnailData = UIImagePNGRepresentation(UIImage(named:"available-widget")!)
+            
+            var keywords = [String]()
+            keywords.append(element["StationName"] as! String)
+            keywords.append(element["StationAddress"] as! String)
+            searchableItemAttributeSet.keywords = keywords
+            
+            let index = stationData.indexOfObject(element)
+            
+            let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(index)", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
+            searchableItems.append(searchableItem)
+        }
+        
+        CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(searchableItems, completionHandler: {(error)->Void in
+            if(error != nil){
+                print(error?.localizedDescription)
+            }
+        })
+        
+    }
+    
+    override func restoreUserActivityState(activity: NSUserActivity) {
+        if activity.activityType == CSSearchableItemActionType{
+            if let userInfo = activity.userInfo{
+                let selectedStation = userInfo[CSSearchableItemActivityIdentifier] as! String
+                let selectedIndex = Int(selectedStation.componentsSeparatedByString(".").last!)
+                //print(selectedIndex)
+                let stationData = bikePlace.bikeLocationJson()
+                let stationName = stationData[selectedIndex!]["StationName"] as! String
+                //print(stationName)
+                self.sendData(stationName)
+            }
+        }
+    }
 
     override func viewDidDisappear(animated: Bool) {
         //畫面消失時停止更新位置（節省電量）
@@ -575,40 +620,5 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
     }
     
-}
-
-// spotlight search feature
-extension ViewController{
-    
-    func setupSearchableContent(){
-        let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
-        var searchableItems = [CSSearchableItem]()
-        
-        for element in stationData{//將位置作成Searchable data
-            
-            let searchableItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
-            searchableItemAttributeSet.title = element["StationName"] as? String
-            searchableItemAttributeSet.contentDescription = element["StationAddress"] as? String
-            searchableItemAttributeSet.thumbnailData = UIImagePNGRepresentation(UIImage(named:"available-widget")!)
-            
-            var keywords = [String]()
-            keywords.append(element["StationName"] as! String)
-            keywords.append(element["StationAddress"] as! String)
-            searchableItemAttributeSet.keywords = keywords
-            
-            let index = stationData.indexOfObject(element)
-            
-            let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(index)", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
-            
-            searchableItems.append(searchableItem)
-        }
-        
-        CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(searchableItems, completionHandler: {(error)->Void in
-            if(error != nil){
-                print(error?.localizedDescription)
-            }
-        })
-        
-    }
 }
 
