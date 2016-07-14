@@ -524,12 +524,13 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     override func restoreUserActivityState(activity: NSUserActivity) {
         if activity.activityType == CSSearchableItemActionType{
             if let userInfo = activity.userInfo{
+                //取得spotlight search裡的 identifier
                 let selectedStation = userInfo[CSSearchableItemActivityIdentifier] as! String
+                //將identifier切割取最後一位
                 let selectedIndex = Int(selectedStation.componentsSeparatedByString(".").last!)
-                //print(selectedIndex)
                 let stationData = bikePlace.bikeLocationJson()
                 let stationName = stationData[selectedIndex!]["StationName"] as! String
-                //print(stationName)
+                //將stationname送入senddata以被找出選擇的點
                 self.sendData(stationName)
             }
         }
