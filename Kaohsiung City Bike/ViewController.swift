@@ -463,8 +463,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-        }else{
-            
         }
     }
     
@@ -531,7 +529,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 let stationData = bikePlace.bikeLocationJson()
                 let stationName = stationData[selectedIndex!]["StationName"] as! String
                 //將stationname送入senddata以被找出選擇的點
-                self.sendData(stationName)
+                sendData(stationName)
             }
         }
     }
