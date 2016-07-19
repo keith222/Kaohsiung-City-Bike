@@ -25,6 +25,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var staName: UILabel!
     @IBOutlet var avaNum: UILabel!
     @IBOutlet var parkNum: UILabel!
+    @IBOutlet var resultButtonOutlet: UIButton!
     @IBOutlet var timeButtonOutlet: UIButton!
     
     @IBOutlet var customInfo: UIView!
@@ -35,7 +36,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
     @IBOutlet var costSpend: UILabel!
-    @IBOutlet var lightBlur: UIVisualEffectView!
+    @IBOutlet var blurView: UIView!
     
     
     let locationManager = CLLocationManager()
@@ -75,11 +76,12 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.timeOutAlert(_:)), name: "timeOut:", object: nil)
         
         //將一些預設在螢幕外
-        self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
-        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+        self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
+        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
         self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
+        self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -155)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
-
+        self.blurView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-record")!)
         //leftBarButton = navigationItem.leftBarButtonItem
         //rightBarButton = navigationItem.rightBarButtonItem
         let StationTable = StationTableViewController()
@@ -407,8 +409,11 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.costSpend.text = costInfo
 
         //spendInfo滑下動畫
+        self.spendInfo.hidden = false
+        self.resultButtonOutlet.hidden = false
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
+            self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
             },completion: nil)
         
     }
@@ -604,7 +609,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 45/255, green: 222/255, blue: 149/255, alpha: 1)
-            self.lightBlur.hidden = false
+            self.blurView.hidden = false
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             showSpendInfo()
             self.count = 0;
@@ -612,10 +617,12 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
     }
     @IBAction func doneButton(sender: AnyObject) {
+        let button = sender as! UIButton
         UIView.animateWithDuration(0.2, animations: {
             self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+            button.transform = CGAffineTransformMakeTranslation(0, -400)
         })
-        self.lightBlur.hidden = true
+        self.blurView.hidden = true
         
     }
     
