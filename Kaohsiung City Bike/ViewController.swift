@@ -82,8 +82,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -155)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
         self.blurView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-record")!)
-        //leftBarButton = navigationItem.leftBarButtonItem
-        //rightBarButton = navigationItem.rightBarButtonItem
+        
         let StationTable = StationTableViewController()
         StationTable.mDelegate = self
         mapView.delegate = self
@@ -176,6 +175,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //CustomInfo 回到螢幕外
         UIView.animateWithDuration(0.5, animations: {
             self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
+        },completion:{(completion) -> Void in
+            self.customInfo.hidden = true
         })
         
         self.mapView.addGestureRecognizer(self.longPress)
@@ -236,6 +237,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                     self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: true)
                 
                     //infoview滑下及timeButton滑上動畫
+                    self.infoView.hidden = false
+                    self.timeButtonOutlet.hidden = false
                     UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                         self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
                         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
@@ -246,6 +249,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
             }else{
+                self.customInfo.hidden = false
                 UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.customInfo.transform = CGAffineTransformMakeTranslation(0,0)
                     self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
@@ -272,8 +276,11 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //分離出UserLocation Annotation
         if !(view.annotation is MKUserLocation) && !(view.annotation!.isEqual(self.customAnnotation)){
             UIView.animateWithDuration(0.5, animations: {
-                self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
+                self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
                 self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
+            },completion: {(completion)-> Void in
+                self.infoView.hidden = true
+                self.timeButtonOutlet.hidden = true
             })
             if(self.timer != nil){
                 self.timer.invalidate()
@@ -340,7 +347,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         //將路線畫至地圖
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor(red: 0, green: 145/255, blue: 245/255, alpha: 0.7)
+        renderer.strokeColor = UIColor(red: 40/255, green: 144/255, blue: 244/255, alpha: 1.0)
         renderer.lineWidth = 10.0
         
         return renderer
@@ -360,14 +367,14 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
             dispatch_async(dispatch_get_main_queue(), {
                 if Int(self.xmlItems![self.staNum].ava)<10{
-                    self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                    self.avaNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
-                    self.avaNum.textColor = UIColor.blackColor()
+                    self.avaNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
                 if Int(self.xmlItems![self.staNum].unava)<10{
-                    self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                    self.parkNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
-                    self.parkNum.textColor = UIColor.blackColor()
+                    self.parkNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
                 self.avaNum.text = self.xmlItems![self.staNum].ava
                 self.parkNum.text = self.xmlItems![self.staNum].unava
@@ -619,11 +626,13 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBAction func doneButton(sender: AnyObject) {
         let button = sender as! UIButton
         UIView.animateWithDuration(0.2, animations: {
-            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
-            button.transform = CGAffineTransformMakeTranslation(0, -400)
+            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
+            button.transform = CGAffineTransformMakeTranslation(0, -368)
+        },completion: {(completion) -> Void in
+            self.spendInfo.hidden = true
+            self.blurView.hidden = true
+            button.hidden = true
         })
-        self.blurView.hidden = true
-        
     }
     
 }

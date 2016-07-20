@@ -22,7 +22,6 @@
 		534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */; };
 		536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0E11C0B35BB008501B0 /* Interface.storyboard */; };
-		537EE0E51C0B35BB008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0E41C0B35BB008501B0 /* Assets.xcassets */; };
 		537EE0EC1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F21C0B35BB008501B0 /* InterfaceController.swift */; };
 		537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */; };
@@ -589,7 +588,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537EE0E51C0B35BB008501B0 /* Assets.xcassets in Resources */,
 				537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */,
 				537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */,
 				537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */,
@@ -925,7 +923,7 @@
 		537EE0FE1C0B35BB008501B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
@@ -945,7 +943,7 @@
 		537EE0FF1C0B35BB008501B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
