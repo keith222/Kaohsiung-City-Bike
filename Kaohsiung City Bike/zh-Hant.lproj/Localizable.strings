@@ -5,7 +5,7 @@
   Created by Yang Tun-Kai on 2015/11/14.
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
-"Time_Start" = "開始計時";
+"Time_Start" = "租借計時";
 "Twenty_Minutes_Alert" = "已經騎乘20分鐘囉!再過10分鐘就要開始收費了!!";
 "Thirty_Minutes_Alert" = "已經騎乘30分鐘囉!現在開始計費!!";
 "TimeStart" = "開始計時";
