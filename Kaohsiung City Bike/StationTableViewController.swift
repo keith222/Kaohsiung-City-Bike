@@ -44,6 +44,11 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.loadViewIfNeeded()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -96,17 +101,25 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
             if staArray.count < 8{
                 let staName = (self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as? String) : (staInfo[sender.tag]["StationName"] as? String)
                 if staArray.contains({$0 as? String == staName}){
+                    
                     staArray = staArray.filter({$0 as? String != staName})
                     self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
                     self.userDefault.synchronize()
                     NSLog("remove station")
                     sender.setImage(UIImage(named: "star"), forState: .Normal)
                 }else{
-                    staArray.append(staName!)
-                    self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
-                    self.userDefault.synchronize()
-                    NSLog("add station to array")
-                    sender.setImage(UIImage(named: "starfilled"), forState: .Normal)
+                    let widgetAlert = UIAlertController(title: NSLocalizedString("Widget_alert_title", comment: ""), message: NSLocalizedString("Widget_alert_content", comment: ""), preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: NSLocalizedString("Widget_alert_ok", comment: ""), style: .Default, handler: {(action)->Void in
+                        staArray.append(staName!)
+                        self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
+                        self.userDefault.synchronize()
+                        NSLog("add station to array")
+                        sender.setImage(UIImage(named: "starfilled"), forState: .Normal)
+                    })
+                    let cancelAction = UIAlertAction(title: NSLocalizedString("Widget_alert_cancel", comment: ""), style: .Cancel, handler: nil)
+                    widgetAlert.addAction(cancelAction)
+                    widgetAlert.addAction(okAction)
+                    self.presentViewController(widgetAlert, animated: true, completion: nil)
                 }
             }else{
                 let alert = UIAlertController(title: NSLocalizedString("Reached_the_limit", comment: ""), message: NSLocalizedString("Only_7_Station_can_be_added", comment: ""), preferredStyle: .Alert)

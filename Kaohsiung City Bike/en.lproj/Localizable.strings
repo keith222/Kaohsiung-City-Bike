@@ -19,7 +19,11 @@
 "OkButton" = "OK";
 "Range" = "There is no station nearby.";
 "Destination" = "Destination";
-"Search" = "Site/Address";
+"Search" = "Station/Address";
 "Station_List" = "Station List";
 "Reached_the_limit" = "Reached the limit";
 "Only_7_Station_can_be_added" = "Only 7 stations can be added.";
+"Widget_alert_title" = "Add to \"Today Widget\"";
+"Widget_alert_content" = "It can allow you to get real-time information of this station in \"Notification Center\"";
+"Widget_alert_ok" = "OK";
+"Widget_alert_cancel" = "Cancel";

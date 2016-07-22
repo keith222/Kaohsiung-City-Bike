@@ -27,7 +27,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var parkNum: UILabel!
     @IBOutlet var resultButtonOutlet: UIButton!
     @IBOutlet var timeButtonOutlet: UIButton!
-    
+    @IBOutlet var locateButton: UIButton!
+
     @IBOutlet var customInfo: UIView!
     @IBOutlet var customWalkingTimeLabel: UILabel!
     @IBOutlet var customRidingTimeLabel: UILabel!
@@ -79,7 +80,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
         self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
         self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
-        self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -155)
+        self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -368)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
         self.blurView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-record")!)
         
@@ -118,7 +119,20 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.mapView.addGestureRecognizer(longPress)
         
         self.setupSearchableContent()
-    
+        
+        //設定UIView,UIButton 邊線及陰影
+        self.locateButton.addBorder(5.0, thickness: 1.0, color: UIColor(red: 93/255, green: 110/255, blue: 120/255, alpha: 0.3))
+        self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
+        self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.resultButtonOutlet.addBorder(10.0, thickness: 0, color: self.resultButtonOutlet.backgroundColor!)
+        self.resultButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        
+        self.infoView.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.infoView.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.customInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.customInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.spendInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
     }
     
     func sendData(stationName: String) {
@@ -204,7 +218,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             anView!.image = UIImage(named:"bikePin")
             anView!.canShowCallout = true
-            anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
+            //anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
         }else {
             anView!.annotation = annotation
             if(!(self.annoArray!.containsObject((anView?.annotation)!))){
@@ -215,7 +229,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        
         //分離出UserLocation Annotation及Custom Annotation
         if !(view.annotation is MKUserLocation){
             //規劃路徑
@@ -272,15 +285,11 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
-
         //分離出UserLocation Annotation
         if !(view.annotation is MKUserLocation) && !(view.annotation!.isEqual(self.customAnnotation)){
             UIView.animateWithDuration(0.5, animations: {
                 self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
                 self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
-            },completion: {(completion)-> Void in
-                self.infoView.hidden = true
-                self.timeButtonOutlet.hidden = true
             })
             if(self.timer != nil){
                 self.timer.invalidate()
@@ -590,6 +599,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             
             self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
+            self.timeButtonOutlet.addShadow(UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1))
+            self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
             
             //設定Local Notification
             let localNotification = UILocalNotification()
@@ -615,7 +626,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.stopWatch.invalidate()
             self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
-            self.timeButtonOutlet.backgroundColor = UIColor(red: 45/255, green: 222/255, blue: 149/255, alpha: 1)
+            self.timeButtonOutlet.backgroundColor = UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1)
+            self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
+            self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+            
             self.blurView.hidden = false
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             showSpendInfo()
@@ -635,5 +649,23 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         })
     }
     
+}
+
+extension UIView{
+    
+    func addBorder(radius:CGFloat,thickness:CGFloat,color:UIColor){
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = thickness
+        self.layer.borderColor = color.CGColor
+    }
+    
+    func addShadow(color:UIColor){
+        self.layer.shadowColor = color.CGColor
+        self.layer.shadowOffset = CGSizeMake(0, 5)
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius = 15
+        self.layer.shadowOpacity = 0.31
+    }
 }
 

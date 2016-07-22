@@ -12,6 +12,7 @@
 		5333917E1CA67804005EFA48 /* StationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5333917D1CA67804005EFA48 /* StationTableViewController.swift */; };
 		533391801CA6781D005EFA48 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */; };
 		533391811CA67D55005EFA48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534962C01BE3719400BFFD71 /* MapKit.framework */; };
+		53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */; };
 		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
 		534962951BE07BE700BFFD71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962941BE07BE700BFFD71 /* ViewController.swift */; };
 		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
@@ -44,7 +45,6 @@
 		53C362331CC9FE2100050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53C362341CC9FE2200050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */; };
 		53F165F21C402F6900E851F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F165F11C402F6900E851F0 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,10 +124,18 @@
 
 /* Begin PBXFileReference section */
 		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		531551271C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		531F22331BF3A18D00ECE80D /* BikeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeParser.swift; sourceTree = "<group>"; };
 		5333917D1CA67804005EFA48 /* StationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewController.swift; sourceTree = "<group>"; };
 		5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
+		53356CBE1D4279BC00A20515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		53356CCB1D42863000A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53356CCC1D42866700A20515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		53356CD11D42884600A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		53356CD21D42884A00A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = "ja.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		53356CD31D42885000A20515 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		53356CD71D42889700A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		53356CD81D42889F00A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		53356CD91D4288A600A20515 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534962941BE07BE700BFFD71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,9 +151,6 @@
 		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
 		534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
 		534E08D81C0DFEFD00AA0133 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
-		534E44531C7F406000159E20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		534E44541C7F406600159E20 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		534E44551C7F406B00159E20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,10 +178,8 @@
 		53B362B91CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayWidgetTableViewCell.swift; sourceTree = "<group>"; };
 		53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kaohsiung City Bike.entitlements"; sourceTree = "<group>"; };
 		53B362BD1CC4D88C003CF0E7 /* Kaohsiung CityBike Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kaohsiung CityBike Widget.entitlements"; sourceTree = "<group>"; };
-		53E232591BFE38B800F36B71 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		53F165F11C402F6900E851F0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		53FA8C481C11FD5600B4FD10 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,7 +239,7 @@
 				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
 				534962C01BE3719400BFFD71 /* MapKit.framework */,
 				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
-				53E232591BFE38B800F36B71 /* Info.plist */,
+				53356CCD1D42866700A20515 /* Info.plist */,
 				5380329B1C20236B00E07131 /* geojson.geojson */,
 				534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
 				534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
@@ -275,7 +278,7 @@
 				5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */,
 				534962961BE07BE700BFFD71 /* Main.storyboard */,
 				534962991BE07BE700BFFD71 /* Assets.xcassets */,
-				53E33FEF1C0AE5380026B264 /* Launch Screen.storyboard */,
+				53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */,
 				534962C21BE39D6600BFFD71 /* citybike.json */,
 				536E2C151BF726C500B5E7DE /* Localizable.strings */,
 				53E2325F1BFE39A700F36B71 /* InfoPlist.strings */,
@@ -560,7 +563,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53E33FF01C0AE5380026B264 /* Launch Screen.storyboard in Resources */,
+				53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */,
 				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
 				5380329C1C20236C00E07131 /* geojson.geojson in Resources */,
 				53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */,
@@ -700,13 +703,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53356CBE1D4279BC00A20515 /* Base */,
+				53356CD11D42884600A20515 /* zh-Hant */,
+				53356CD21D42884A00A20515 /* ja */,
+				53356CD31D42885000A20515 /* zh-Hans */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
+		53356CCD1D42866700A20515 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53356CCC1D42866700A20515 /* Base */,
+			);
+			name = Info.plist;
+			path = "Kaohsiung City Bike";
+			sourceTree = "<group>";
+		};
 		534962961BE07BE700BFFD71 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				534962971BE07BE700BFFD71 /* Base */,
-				534E44531C7F406000159E20 /* zh-Hant */,
-				534E44541C7F406600159E20 /* ja */,
-				534E44551C7F406B00159E20 /* zh-Hans */,
+				53356CD71D42889700A20515 /* zh-Hant */,
+				53356CD81D42889F00A20515 /* ja */,
+				53356CD91D4288A600A20515 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -746,8 +769,8 @@
 			children = (
 				53E232601BFE39A800F36B71 /* en */,
 				53E232611BFE39AB00F36B71 /* zh-Hant */,
-				531551271C08B65E00DA0285 /* ja */,
 				53928D081C57BB070072FA37 /* zh-Hans */,
+				53356CCB1D42863000A20515 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

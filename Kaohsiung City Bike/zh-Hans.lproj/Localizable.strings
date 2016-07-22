@@ -24,3 +24,7 @@
 "Station_List" = "站点列表";
 "Reached_the_limit" = "已达上限";
 "Access_up_to_7_sites" = "最多存取7个站点。";
+"Widget_alert_title" = "新增至「脚踏车站点即时查」";
+"Widget_alert_content" = "透过「脚踏车站点即时查」可以让您在「通知中心」快速掌握站点的即时资讯。";
+"Widget_alert_ok" = "确认";
+"Widget_alert_cancel" = "不允许";

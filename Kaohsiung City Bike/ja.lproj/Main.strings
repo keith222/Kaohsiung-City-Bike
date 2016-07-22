@@ -26,6 +26,9 @@
 /* Class = "UINavigationItem"; title = "高雄シティバイク"; ObjectID = "TLt-Vv-NrU"; */
 "TLt-Vv-NrU.title" = "高雄シティバイク";
 
+/* Class = "UILabel"; text = "Label"; ObjectID = "UCj-rS-ngt"; */
+"UCj-rS-ngt.text" = "Label";
+
 /* Class = "UILabel"; text = "--"; ObjectID = "Y8Q-8Z-BQC"; */
 "Y8Q-8Z-BQC.text" = "--";
 
@@ -41,8 +44,17 @@
 /* Class = "UILabel"; text = "分"; ObjectID = "bLN-Vw-PmY"; */
 "bLN-Vw-PmY.text" = "分";
 
+/* Class = "UILabel"; text = "/ 停車位"; ObjectID = "c9n-UB-EPQ"; */
+"c9n-UB-EPQ.text" = "/ 駐車場";
+
 /* Class = "UILabel"; text = "デスティネーション"; ObjectID = "ecY-Up-qTJ"; */
 "ecY-Up-qTJ.text" = "デスティネーション";
+
+/* Class = "UILabel"; text = "/ 腳踏車"; ObjectID = "g5t-pP-YYH"; */
+"g5t-pP-YYH.text" = "/ 自転車";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iWr-Hv-HAB"; */
+"iWr-Hv-HAB.text" = "Label";
 
 /* Class = "UILabel"; text = "00:00:00"; ObjectID = "j50-6a-fWj"; */
 "j50-6a-fWj.text" = "00:00:00";
