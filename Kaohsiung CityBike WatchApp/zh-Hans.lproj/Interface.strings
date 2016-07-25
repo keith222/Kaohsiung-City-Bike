@@ -12,7 +12,7 @@
 "9mC-tq-r1S.text" = "0";
 
 /* Class = "WKInterfaceLabel"; text = "Click the Station"; ObjectID = "CD5-fp-3Uq"; */
-"CD5-fp-3Uq.text" = "手机点击站点";
+"CD5-fp-3Uq.text" = "Click the Station";
 
 /* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "ITY-c2-mA4"; */
 "ITY-c2-mA4.title" = "Start";
@@ -20,5 +20,5 @@
 /* Class = "WKInterfaceLabel"; text = "00:00:00"; ObjectID = "RWS-cV-8s0"; */
 "RWS-cV-8s0.text" = "00:00:00";
 
-/* Class = "WKInterfaceLabel"; text = "$"; ObjectID = "eaJ-gL-mps"; */
-"eaJ-gL-mps.text" = "$";
+/* Class = "WKInterfaceLabel"; text = "NT$"; ObjectID = "eaJ-gL-mps"; */
+"eaJ-gL-mps.text" = "NT$";

@@ -58,20 +58,20 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             self.staNameLabel.setText(title)
             self.stationMap.removeAllAnnotations()
-            let imgName = (annoType == 0) ? "flagpinwatch" : "bikepinwatch"
+            let imgName = (annoType == 0) ? "locate-pin-custom" : "locate-pin"
             self.stationMap.addAnnotation(location, withImageNamed: imgName ,centerOffset: CGPointMake(0, 0))
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
         if(ava != nil && unava != nil){
-            avaLabel.setText(String(ava!))
-            unavaLabel.setText(String(unava!))
+            avaLabel.setText(String(ava!)+NSLocalizedString("Watch_Bike", comment: ""))
+            unavaLabel.setText(String(unava!)+NSLocalizedString("Watch_Parking", comment: ""))
             if Int(ava!)<10{
-                self.avaLabel.setTextColor( UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1))
+                self.avaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
                 self.avaLabel.setTextColor(UIColor.whiteColor())
             }
             if Int(unava!)<10{
-                self.unavaLabel.setTextColor(UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1))
+                self.unavaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
                 self.unavaLabel.setTextColor(UIColor.whiteColor())
             }

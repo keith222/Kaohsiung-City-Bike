@@ -41,7 +41,7 @@ class TimerInterfaceController: WKInterfaceController {
             self.timeLabel.setText("00:00:00")
             self.priceLabel.setText("0")
             self.stopTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TimerInterfaceController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
-            self.startStopButtonOutlet.setBackgroundColor(UIColor(red: 1, green: 0, blue: 128/255, alpha: 1))
+            self.startStopButtonOutlet.setBackgroundColor(UIColor(red: 243/255, green: 130/255, blue: 174/255, alpha: 1))
             self.startStopButtonOutlet.setTitle(NSLocalizedString("TimeStop", comment: ""))
             
         }else{
@@ -49,7 +49,7 @@ class TimerInterfaceController: WKInterfaceController {
             self.stopTimer.invalidate()
             self.stopTimer = nil
             self.startStopButtonOutlet.setTitle(NSLocalizedString("TimeStart", comment: ""))
-            self.startStopButtonOutlet.setBackgroundColor(UIColor(red: 45/255, green: 222/255, blue: 149/255, alpha: 1))
+            self.startStopButtonOutlet.setBackgroundColor(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1))
             
             var calMinute = Int(count/60)
             var cost = 0//計算花費

@@ -7,8 +7,8 @@
 */
 
 "Time_Start" = "开始计时";
-"Twenty_Minutes_Alert" = "已经骑乘20分钟啰!再过10分钟就要开始收费了!!";
-"Thirty_Minutes_Alert" = "已经骑乘30分钟啰!现在开始计费!!";
+"Twenty_Minutes_Alert" = "高雄城市单车免费租借时段即将于10分钟后结束！";
+"Thirty_Minutes_Alert" = "高雄城市单车免费租借时段结束，开始计费！";
 "TimeStart" = "开始计时";
 "TimeStop" = "停止计时";
 "Time_Alert" = "时间提醒";
@@ -28,3 +28,5 @@
 "Widget_alert_content" = "透过「脚踏车站点即时查」可以让您在「通知中心」快速掌握站点的即时资讯。";
 "Widget_alert_ok" = "确认";
 "Widget_alert_cancel" = "不允许";
+"Watch_Bike" = " / 脚踏车";
+"Watch_Parking" = " / 停车位";
