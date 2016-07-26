@@ -6,6 +6,7 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 "Time_Start" = "Time Start";
+"Time_Stop" = "Time Stop";
 "Twenty_Minutes_Alert" = "Free time will be ended in 10 minutes!!";
 "Thirty_Minutes_Alert" = "Now, time charge is starting!!";
 "TimeStart" = "Start";

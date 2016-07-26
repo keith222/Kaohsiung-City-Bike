@@ -78,7 +78,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         //將一些預設在螢幕外
         self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
-        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
+//        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
         self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
         self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -368)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
@@ -131,8 +131,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.infoView.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
         self.customInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
         self.customInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
-        self.spendInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
-        self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+//        self.spendInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+//        self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
     }
     
     func sendData(stationName: String) {
@@ -392,47 +392,47 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
     }
     
-    func stopWatchTimer(timer:NSTimer){
-        count += 1
-        let second = count%60
-        let minute = (count/60)%60
-        let hour = Int(count/3600)
-        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), forState: .Normal)
-    }
+//    func stopWatchTimer(timer:NSTimer){
+//        count += 1
+//        let second = count%60
+//        let minute = (count/60)%60
+//        let hour = Int(count/3600)
+//        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), forState: .Normal)
+//    }
     
-    func showSpendInfo(){
-        let second = count%60
-        let minute = (count/60)%60//計算使用時間
-        var calMinute = Int(count/60)
-        let hour = Int(count/3600)
-        let timeInfo = String(format:"%02d:%02d:%02d",hour,minute,second)
-        self.timeSpend.text = timeInfo
-        
-        var cost = 0//計算花費
-        switch minute{
-            case 0...60: cost = 0 //不滿60分鐘免費
-            case 61...90: cost = 10 //90分鐘 10元
-            default: //90分後每30分20元
-                calMinute -= 90
-                if calMinute % 30 != 0{
-                     calMinute = Int(calMinute/30)+1
-                }else{
-                    calMinute = Int(calMinute/30)
-                }
-                cost = 10 + (calMinute*20)
-        }
-        let costInfo = "NT$ \(cost)"
-        self.costSpend.text = costInfo
-
-        //spendInfo滑下動畫
-        self.spendInfo.hidden = false
-        self.resultButtonOutlet.hidden = false
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
-            self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
-            },completion: nil)
-        
-    }
+//    func showSpendInfo(){
+//        let second = count%60
+//        let minute = (count/60)%60//計算使用時間
+//        var calMinute = Int(count/60)
+//        let hour = Int(count/3600)
+//        let timeInfo = String(format:"%02d:%02d:%02d",hour,minute,second)
+//        self.timeSpend.text = timeInfo
+//        
+//        var cost = 0//計算花費
+//        switch minute{
+//            case 0...60: cost = 0 //不滿60分鐘免費
+//            case 61...90: cost = 10 //90分鐘 10元
+//            default: //90分後每30分20元
+//                calMinute -= 90
+//                if calMinute % 30 != 0{
+//                     calMinute = Int(calMinute/30)+1
+//                }else{
+//                    calMinute = Int(calMinute/30)
+//                }
+//                cost = 10 + (calMinute*20)
+//        }
+//        let costInfo = "NT$ \(cost)"
+//        self.costSpend.text = costInfo
+//
+//        //spendInfo滑下動畫
+//        self.spendInfo.hidden = false
+//        self.resultButtonOutlet.hidden = false
+//        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+//            self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
+//            self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+//            },completion: nil)
+//        
+//    }
     
     /*
     func configureSearchBar(){
@@ -588,16 +588,16 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
     @IBAction func timeButton(sender: AnyObject) {
         if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
-            self.timeButtonOutlet.setTitle("00:00:00", forState: .Normal)
+            self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Stop", comment: ""), forState: .Normal)
             
-            var bgTask = UIBackgroundTaskIdentifier()
-            let app = UIApplication.sharedApplication()
-            bgTask = app.beginBackgroundTaskWithExpirationHandler({ () -> Void in
-                app.endBackgroundTask(bgTask)
-            })
+//            var bgTask = UIBackgroundTaskIdentifier()
+//            let app = UIApplication.sharedApplication()
+//            bgTask = app.beginBackgroundTaskWithExpirationHandler({ () -> Void in
+//                app.endBackgroundTask(bgTask)
+//            })
             
-            
-            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+//            
+//            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
             self.timeButtonOutlet.addShadow(UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1))
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
@@ -623,8 +623,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             UIApplication.sharedApplication().scheduleLocalNotification(finalNotification)
             
         }else{//結束計時
-            self.stopWatch.invalidate()
-            self.stopWatch = nil
+//            self.stopWatch.invalidate()
+//            self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1)
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
@@ -632,22 +632,22 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             
             self.blurView.hidden = false
             UIApplication.sharedApplication().cancelAllLocalNotifications()
-            showSpendInfo()
+//            showSpendInfo()
             self.count = 0;
         }
         
     }
-    @IBAction func doneButton(sender: AnyObject) {
-        let button = sender as! UIButton
-        UIView.animateWithDuration(0.2, animations: {
-            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
-            button.transform = CGAffineTransformMakeTranslation(0, -368)
-        },completion: {(completion) -> Void in
-            self.spendInfo.hidden = true
-            self.blurView.hidden = true
-            button.hidden = true
-        })
-    }
+//    @IBAction func doneButton(sender: AnyObject) {
+//        let button = sender as! UIButton
+//        UIView.animateWithDuration(0.2, animations: {
+//            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
+//            button.transform = CGAffineTransformMakeTranslation(0, -368)
+//        },completion: {(completion) -> Void in
+//            self.spendInfo.hidden = true
+//            self.blurView.hidden = true
+//            button.hidden = true
+//        })
+//    }
     
 }
 

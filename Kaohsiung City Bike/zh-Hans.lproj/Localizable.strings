@@ -6,7 +6,8 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 
-"Time_Start" = "开始计时";
+"Time_Start" = "租借开始";
+"Time_Stop" = "租借结束";
 "Twenty_Minutes_Alert" = "高雄城市单车免费租借时段即将于10分钟后结束！";
 "Thirty_Minutes_Alert" = "高雄城市单车免费租借时段结束，开始计费！";
 "TimeStart" = "开始计时";

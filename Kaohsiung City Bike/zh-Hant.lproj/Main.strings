@@ -48,7 +48,7 @@
 "c9n-UB-EPQ.text" = "/ 停車位";
 
 /* Class = "UILabel"; text = "目的地"; ObjectID = "ecY-Up-qTJ"; */
-"ecY-Up-qTJ.text" = "自定位置";
+"ecY-Up-qTJ.text" = "自訂位置";
 
 /* Class = "UILabel"; text = "/ 腳踏車"; ObjectID = "g5t-pP-YYH"; */
 "g5t-pP-YYH.text" = "/ 腳踏車";
