@@ -6,10 +6,10 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 
-"Time_Start" = "Time Start";
-"Time_Stop" = "Time Stop";
-"Twenty_Minutes_Alert" = "20分が経過しました!10分後、料金を支払う!!";
-"Thirty_Minutes_Alert" = "30分が経過しました!料金を支払う!!";
+"Time_Start" = "賃貸タイミング";
+"Time_Stop" = "賃貸終了";
+"Twenty_Minutes_Alert" = "50分が経過しました!10分後、料金を支払う!!";
+"Thirty_Minutes_Alert" = "60分が経過しました!料金を支払う!!";
 "TimeStart" = "Start";
 "TimeStop" = "Stop";
 "Time_Alert" = "通知";

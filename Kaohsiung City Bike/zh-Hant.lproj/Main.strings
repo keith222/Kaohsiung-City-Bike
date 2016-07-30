@@ -36,7 +36,7 @@
 "YVR-k0-x7f.text" = "分";
 
 /* Class = "UIButton"; normalTitle = "OK"; ObjectID = "YnB-32-cFG"; */
-"YnB-32-cFG.normalTitle" = "OK";
+"YnB-32-cFG.normalTitle" = "返回";
 
 /* Class = "UILabel"; text = "旅程記錄"; ObjectID = "ZgZ-uz-J8Z"; */
 "ZgZ-uz-J8Z.text" = "租借旅程記錄";

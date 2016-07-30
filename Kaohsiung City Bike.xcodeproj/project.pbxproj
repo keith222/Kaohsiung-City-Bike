@@ -138,9 +138,6 @@
 		5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		53356CBE1D4279BC00A20515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		53356CCB1D42863000A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53356CD11D42884600A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
-		53356CD21D42884A00A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = "ja.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
-		53356CD31D42885000A20515 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		53356CD71D42889700A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		53356CD81D42889F00A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		53356CD91D4288A600A20515 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -716,9 +713,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				53356CBE1D4279BC00A20515 /* Base */,
-				53356CD11D42884600A20515 /* zh-Hant */,
-				53356CD21D42884A00A20515 /* ja */,
-				53356CD31D42885000A20515 /* zh-Hans */,
 			);
 			name = "Launch Screen.storyboard";
 			sourceTree = "<group>";

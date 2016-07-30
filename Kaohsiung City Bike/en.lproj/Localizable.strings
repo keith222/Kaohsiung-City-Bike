@@ -5,10 +5,10 @@
   Created by Yang Tun-Kai on 2015/11/14.
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
-"Time_Start" = "Time Start";
-"Time_Stop" = "Time Stop";
+"Time_Start" = "Rental Timing";
+"Time_Stop" = "Timing Stop";
 "Twenty_Minutes_Alert" = "Free time will be ended in 10 minutes!!";
-"Thirty_Minutes_Alert" = "Now, time charge is starting!!";
+"Thirty_Minutes_Alert" = "Now, start charging!!";
 "TimeStart" = "Start";
 "TimeStop" = "Stop";
 "Time_Alert" = "Time Alert";
