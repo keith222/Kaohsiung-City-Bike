@@ -25,7 +25,7 @@
                             <items>
                                 <imageView alignment="left" image="available" id="C5u-re-oPx"/>
                                 <label width="83" height="40" alignment="left" verticalAlignment="center" text="--" textAlignment="right" id="0ux-Zs-fhH">
-                                    <fontDescription key="font" type="system" weight="light" pointSize="15"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
@@ -33,14 +33,14 @@
                             <items>
                                 <imageView alignment="left" image="park" contentMode="scaleAspectFill" id="TVs-Oa-Dsn"/>
                                 <label width="83" height="40" alignment="left" text="--" textAlignment="right" id="1G9-ZZ-ttH">
-                                    <fontDescription key="font" type="system" weight="light" pointSize="15"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                         <separator alignment="left" alpha="0.80000000000000004" id="CbD-nm-4Q8"/>
                         <group width="1" height="44" alignment="left" id="UdK-6f-gwN">
                             <items>
-                                <button width="1" alignment="left" verticalAlignment="center" title="Timer" id="586-ZP-uRE">
+                                <button width="1" alignment="left" verticalAlignment="center" title="Timing" id="586-ZP-uRE">
                                     <color key="backgroundColor" red="0.090196078431372548" green="0.66274509803921566" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
@@ -73,7 +73,7 @@
                                 </label>
                             </items>
                         </group>
-                        <separator alignment="left" id="Yaj-ba-6Jy"/>
+                        <separator alignment="left" alpha="0.80000000000000004" id="Yaj-ba-6Jy"/>
                         <group width="136" height="61" alignment="right" id="ayo-76-MZx">
                             <items>
                                 <label width="51" height="29" alignment="center" verticalAlignment="bottom" text="NT$" textAlignment="center" id="eaJ-gL-mps">

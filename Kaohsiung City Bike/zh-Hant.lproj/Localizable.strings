@@ -15,10 +15,10 @@
 "Alert" = "錯誤";
 "Error_Log" = "網路連線異常。";
 "Title" = "已關閉定位服務";
-"Content" = "開啟「設定」>「隱私權」中的「定位服務」來允許「Kaohsiung CityBike」確認您的目前位置";
+"Content" = "開啟「設定」>「隱私權」中的「定位服務」來允許「高雄城市單車」確認您的目前位置";
 "SetButton" = "設定";
 "OkButton" = "好";
-"Range" = "附近沒有CityBike站點。";
+"Range" = "附近沒有腳踏車站點。";
 "Destination" = "目的地";
 "Search" = "站點/地址";
 "Station_List" = "站點列表";

@@ -6,7 +6,7 @@
 "1G9-ZZ-ttH.text" = "--";
 
 /* Class = "WKInterfaceButton"; title = "Timer"; ObjectID = "586-ZP-uRE"; */
-"586-ZP-uRE.title" = "Timer";
+"586-ZP-uRE.title" = "租借計時";
 
 /* Class = "WKInterfaceLabel"; text = "0"; ObjectID = "9mC-tq-r1S"; */
 "9mC-tq-r1S.text" = "0";

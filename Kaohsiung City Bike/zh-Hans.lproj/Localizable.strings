@@ -6,7 +6,7 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 
-"Time_Start" = "租借开始";
+"Time_Start" = "租借计时";
 "Time_Stop" = "租借结束";
 "Twenty_Minutes_Alert" = "高雄城市单车免费租借时段即将于10分钟后结束！";
 "Thirty_Minutes_Alert" = "高雄城市单车免费租借时段结束，开始计费！";
@@ -16,10 +16,10 @@
 "Alert" = "错误";
 "Error_Log" = "互联网连线异常。";
 "Title" = "已关闭定位服务";
-"Content" = "在”设置” >”隐私”中打”开定位服务”來允許”Kaohsiung CityBike”确定您当前的位置";
+"Content" = "在”设置” >”隐私”中打”开定位服务”來允許”高雄城市单车”确定您当前的位置";
 "SetButton" = "設定";
 "OkButton" = "好";
-"Range" = "附近没有CityBike站点";
+"Range" = "附近没有脚踏车站点";
 "Destination" = "目的地";
 "Search" = "站点/地址";
 "Station_List" = "站点列表";

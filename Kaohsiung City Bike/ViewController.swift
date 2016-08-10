@@ -401,15 +401,19 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func pauseStopWatch(){
-        self.stopWatch.invalidate()
-        self.stopWatch = nil
-        self.duration = NSDate()
+        if(self.stopWatch != nil){
+            self.stopWatch.invalidate()
+            self.stopWatch = nil
+            self.duration = NSDate()
+        }
     }
     
     func startStopWatch(){
-        let newSecond: NSTimeInterval = NSDate().timeIntervalSinceDate(self.duration!)
-        count = count + lround(newSecond)
-        self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+        if(self.duration != nil){
+            let newSecond: NSTimeInterval = NSDate().timeIntervalSinceDate(self.duration!)
+            count = count + lround(newSecond)
+            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+        }
     }
     
     func showSpendInfo(){
@@ -421,7 +425,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.timeSpend.text = timeInfo
         
         var cost = 0//計算花費
-        switch minute{
+        switch calMinute{
             case 0...60: cost = 0 //不滿60分鐘免費
             case 61...90: cost = 10 //90分鐘 10元
             default: //90分後每30分20元
@@ -435,14 +439,15 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         let costInfo = "NT$ \(cost)"
         self.costSpend.text = costInfo
-
+        self.duration = nil
+        
         //spendInfo滑下動畫
         self.spendInfo.hidden = false
         self.resultButtonOutlet.hidden = false
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
             self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
-            },completion: nil)
+        },completion: nil)
         
     }
     
@@ -643,7 +648,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.blurView.hidden = false
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             showSpendInfo()
-            self.count = 0;
+            self.count = 0
         }
         
     }

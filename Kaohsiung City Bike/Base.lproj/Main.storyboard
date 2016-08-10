@@ -1051,7 +1051,7 @@
                             <constraint firstItem="YnB-32-cFG" firstAttribute="top" secondItem="3Gv-yA-S3e" secondAttribute="bottom" constant="24" id="5cW-lL-fkC"/>
                             <constraint firstItem="Tla-Qk-ZyH" firstAttribute="top" secondItem="YRb-3D-p1h" secondAttribute="bottom" id="5tN-Mx-dAc"/>
                             <constraint firstItem="H0R-Vk-sZ0" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" id="8wS-CB-1SS"/>
-                            <constraint firstItem="YnB-32-cFG" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" constant="25" id="9pE-Re-YYj"/>
+                            <constraint firstItem="YnB-32-cFG" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" constant="15" id="9pE-Re-YYj"/>
                             <constraint firstItem="bNQ-Pa-6bF" firstAttribute="top" secondItem="YRb-3D-p1h" secondAttribute="bottom" constant="25" id="9xR-JS-Elw"/>
                             <constraint firstItem="H0R-Vk-sZ0" firstAttribute="top" secondItem="YRb-3D-p1h" secondAttribute="bottom" id="AGg-Oc-Tbg"/>
                             <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="Tla-Qk-ZyH" secondAttribute="bottom" id="BFH-Qo-uxz"/>
@@ -1064,9 +1064,8 @@
                             <constraint firstItem="Tla-Qk-ZyH" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" id="XnK-sv-vb3"/>
                             <constraint firstItem="uIw-MI-wJo" firstAttribute="top" secondItem="F70-fn-jXP" secondAttribute="bottom" constant="97" id="d20-oh-Com"/>
                             <constraint firstAttribute="trailing" secondItem="H0R-Vk-sZ0" secondAttribute="trailing" id="dWH-Oh-7nw"/>
-                            <constraint firstItem="4k9-6D-3g5" firstAttribute="top" secondItem="F70-fn-jXP" secondAttribute="bottom" constant="17" id="eCh-mK-SQs"/>
                             <constraint firstItem="4k9-6D-3g5" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" constant="25" id="gh3-Wr-Q8z"/>
-                            <constraint firstAttribute="trailing" secondItem="YnB-32-cFG" secondAttribute="trailing" constant="25" id="klP-c6-Lf8"/>
+                            <constraint firstAttribute="trailing" secondItem="YnB-32-cFG" secondAttribute="trailing" constant="15" id="klP-c6-Lf8"/>
                             <constraint firstItem="bNQ-Pa-6bF" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" constant="15" id="lZV-ni-pVK"/>
                             <constraint firstAttribute="trailing" secondItem="bNQ-Pa-6bF" secondAttribute="trailing" constant="15" id="mpH-KZ-bcu"/>
                             <constraint firstItem="3Gv-yA-S3e" firstAttribute="leading" secondItem="JoM-Tj-qPj" secondAttribute="leading" constant="15" id="mrU-21-jY8"/>
@@ -1089,7 +1088,6 @@
                                 <exclude reference="BFH-Qo-uxz"/>
                                 <exclude reference="d20-oh-Com"/>
                                 <exclude reference="Qsk-3L-exz"/>
-                                <exclude reference="eCh-mK-SQs"/>
                                 <exclude reference="gh3-Wr-Q8z"/>
                                 <exclude reference="VtM-FM-7ya"/>
                                 <exclude reference="5cW-lL-fkC"/>
@@ -1128,7 +1126,6 @@
                                 <include reference="2VW-tr-i4N"/>
                                 <include reference="BFH-Qo-uxz"/>
                                 <include reference="Qsk-3L-exz"/>
-                                <include reference="eCh-mK-SQs"/>
                                 <include reference="gh3-Wr-Q8z"/>
                                 <include reference="VtM-FM-7ya"/>
                                 <include reference="5cW-lL-fkC"/>
@@ -1167,7 +1164,6 @@
                                 <include reference="BFH-Qo-uxz"/>
                                 <include reference="d20-oh-Com"/>
                                 <include reference="Qsk-3L-exz"/>
-                                <exclude reference="eCh-mK-SQs"/>
                                 <include reference="gh3-Wr-Q8z"/>
                                 <include reference="VtM-FM-7ya"/>
                                 <include reference="5cW-lL-fkC"/>
@@ -1192,7 +1188,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Kaohsiung CityBike" id="TLt-Vv-NrU">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="QlF-dS-Khu">
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="QlF-dS-Khu">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="878-rG-xie" kind="show" identifier="segueToStation" id="fWe-SL-Fpn"/>
@@ -1400,7 +1396,7 @@
         <image name="bike-icon" width="94" height="80"/>
         <image name="dash-line" width="276" height="2"/>
         <image name="locate" width="35" height="36"/>
-        <image name="menu" width="28" height="21"/>
+        <image name="menu" width="24" height="20"/>
         <image name="park" width="42" height="42"/>
         <image name="star" width="29" height="27"/>
         <image name="stationIcon" width="48" height="48"/>

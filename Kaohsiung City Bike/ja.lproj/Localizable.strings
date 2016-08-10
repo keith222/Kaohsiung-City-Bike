@@ -6,7 +6,7 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 
-"Time_Start" = "賃貸タイミング";
+"Time_Start" = "賃借のタイミング";
 "Time_Stop" = "賃貸終了";
 "Twenty_Minutes_Alert" = "50分が経過しました!10分後、料金を支払う!!";
 "Thirty_Minutes_Alert" = "60分が経過しました!料金を支払う!!";
@@ -30,4 +30,4 @@
 "Widget_alert_ok" = "OK";
 "Widget_alert_cancel" = "Cancel";
 "Watch_Bike" = " / 自転車";
-"Watch_Parking" = " /　駐車場";
+"Watch_Parking" = " /　駐車スペース";

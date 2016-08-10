@@ -63,8 +63,8 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
         if(ava != nil && unava != nil){
-            avaLabel.setText(String(ava!)+NSLocalizedString("Watch_Bike", comment: ""))
-            unavaLabel.setText(String(unava!)+NSLocalizedString("Watch_Parking", comment: ""))
+            avaLabel.setText(String(ava!))
+            unavaLabel.setText(String(unava!))
             if Int(ava!)<10{
                 self.avaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
