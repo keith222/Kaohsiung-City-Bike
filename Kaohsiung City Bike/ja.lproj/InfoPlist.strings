@@ -6,4 +6,4 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 "NSLocationWhenInUseUsageDescription" = "現在位置の表示や、ルート案内を行うために位置情報を利用します";
-"Bundle display name" = "高雄シティバイク";
+"CFBundleDisplayName" = "高雄シティバイク";

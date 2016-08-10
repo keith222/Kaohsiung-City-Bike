@@ -1,18 +1,18 @@
 
 /* Class = "UILabel"; text = "步行時間："; ObjectID = "0Ho-z7-sSo"; */
-"0Ho-z7-sSo.text" = "步行時間：";
+"0Ho-z7-sSo.text" = "步行前往時間：";
 
 /* Class = "UILabel"; text = "步行時間："; ObjectID = "3xp-Cc-D7A"; */
-"3xp-Cc-D7A.text" = "步行時間：";
+"3xp-Cc-D7A.text" = "步行前往時間：";
 
 /* Class = "UIButton"; normalTitle = "開始計時"; ObjectID = "4k9-6D-3g5"; */
-"4k9-6D-3g5.normalTitle" = "開始計時";
+"4k9-6D-3g5.normalTitle" = "租借計時";
 
 /* Class = "UILabel"; text = "--"; ObjectID = "7oU-y1-Hc3"; */
 "7oU-y1-Hc3.text" = "--";
 
 /* Class = "UILabel"; text = "騎乘時間："; ObjectID = "DQN-oU-HZn"; */
-"DQN-oU-HZn.text" = "騎乘時間：";
+"DQN-oU-HZn.text" = "騎乘前往時間：";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "KPl-25-HmO"; */
 "KPl-25-HmO.text" = "0";
@@ -21,10 +21,13 @@
 "Kyz-F5-WrK.text" = "分";
 
 /* Class = "UILabel"; text = "使用時間："; ObjectID = "P5h-Mn-xj4"; */
-"P5h-Mn-xj4.text" = "使用時間：";
+"P5h-Mn-xj4.text" = "租借時間：";
 
 /* Class = "UINavigationItem"; title = "Kaohsiung CityBike"; ObjectID = "TLt-Vv-NrU"; */
-"TLt-Vv-NrU.title" = "Kaohsiung CityBike";
+"TLt-Vv-NrU.title" = "高雄城市單車";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UCj-rS-ngt"; */
+"UCj-rS-ngt.text" = "Label";
 
 /* Class = "UILabel"; text = "--"; ObjectID = "Y8Q-8Z-BQC"; */
 "Y8Q-8Z-BQC.text" = "--";
@@ -33,16 +36,25 @@
 "YVR-k0-x7f.text" = "分";
 
 /* Class = "UIButton"; normalTitle = "OK"; ObjectID = "YnB-32-cFG"; */
-"YnB-32-cFG.normalTitle" = "OK";
+"YnB-32-cFG.normalTitle" = "返回";
 
 /* Class = "UILabel"; text = "旅程記錄"; ObjectID = "ZgZ-uz-J8Z"; */
-"ZgZ-uz-J8Z.text" = "旅程記錄";
+"ZgZ-uz-J8Z.text" = "租借旅程記錄";
 
 /* Class = "UILabel"; text = "分"; ObjectID = "bLN-Vw-PmY"; */
 "bLN-Vw-PmY.text" = "分";
 
+/* Class = "UILabel"; text = "/ 停車位"; ObjectID = "c9n-UB-EPQ"; */
+"c9n-UB-EPQ.text" = "/ 停車位";
+
 /* Class = "UILabel"; text = "目的地"; ObjectID = "ecY-Up-qTJ"; */
-"ecY-Up-qTJ.text" = "目的地";
+"ecY-Up-qTJ.text" = "自訂位置";
+
+/* Class = "UILabel"; text = "/ 腳踏車"; ObjectID = "g5t-pP-YYH"; */
+"g5t-pP-YYH.text" = "/ 腳踏車";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iWr-Hv-HAB"; */
+"iWr-Hv-HAB.text" = "Label";
 
 /* Class = "UILabel"; text = "00:00:00"; ObjectID = "j50-6a-fWj"; */
 "j50-6a-fWj.text" = "00:00:00";
@@ -57,7 +69,7 @@
 "kUZ-xI-qPS.text" = "--";
 
 /* Class = "UILabel"; text = "騎乘時間："; ObjectID = "lWa-Fo-Bza"; */
-"lWa-Fo-Bza.text" = "騎乘時間：";
+"lWa-Fo-Bza.text" = "騎乘前往時間：";
 
 /* Class = "UILabel"; text = "--"; ObjectID = "n9O-qe-dOk"; */
 "n9O-qe-dOk.text" = "--";
@@ -66,4 +78,4 @@
 "nst-lC-46h.text" = "NT$";
 
 /* Class = "UILabel"; text = "使用費用："; ObjectID = "r9g-v8-ykh"; */
-"r9g-v8-ykh.text" = "使用費用：";
+"r9g-v8-ykh.text" = "租借費用：";

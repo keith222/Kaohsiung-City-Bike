@@ -19,11 +19,11 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
         // Do any additional setup after loading the view from its nib.
         self.tableView.cellLayoutMarginsFollowReadableWidth = false
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 10)
         self.clearsSelectionOnViewWillAppear = true
-        self.tableView.separatorColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 0.6)
         var currentSize: CGSize = self.preferredContentSize
         if let saved = self.userDefault.arrayForKey("staForTodayWidget"){
-            currentSize.height = (50 * CGFloat(saved.count)) - 1
+            currentSize.height = (55 * CGFloat(saved.count))
             self.preferredContentSize = currentSize
         }
     }

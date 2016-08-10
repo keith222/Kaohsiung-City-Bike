@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -24,24 +24,24 @@
                         <group width="1" height="40" alignment="left" id="Q9E-rh-0kE">
                             <items>
                                 <imageView alignment="left" image="available" id="C5u-re-oPx"/>
-                                <label width="90" height="40" alignment="left" text="--" textAlignment="center" id="0ux-Zs-fhH">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="25"/>
+                                <label width="83" height="40" alignment="left" verticalAlignment="center" text="--" textAlignment="right" id="0ux-Zs-fhH">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="IGU-rB-nJV">
                             <items>
                                 <imageView alignment="left" image="park" contentMode="scaleAspectFill" id="TVs-Oa-Dsn"/>
-                                <label width="90" height="40" alignment="left" text="--" textAlignment="center" id="1G9-ZZ-ttH">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="25"/>
+                                <label width="83" height="40" alignment="left" text="--" textAlignment="right" id="1G9-ZZ-ttH">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                         <separator alignment="left" alpha="0.80000000000000004" id="CbD-nm-4Q8"/>
                         <group width="1" height="44" alignment="left" id="UdK-6f-gwN">
                             <items>
-                                <button width="1" alignment="left" verticalAlignment="center" title="Timer" id="586-ZP-uRE">
-                                    <color key="backgroundColor" red="0.1757836552" green="0.87195512819999998" blue="0.58563299179999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <button width="1" alignment="left" verticalAlignment="center" title="Timing" id="586-ZP-uRE">
+                                    <color key="backgroundColor" red="0.090196078431372548" green="0.66274509803921566" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <segue destination="gw9-tw-fgo" kind="modal" id="PeJ-CH-6do"/>
@@ -58,7 +58,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219" y="359"/>
+            <point key="canvasLocation" x="219" y="358.5"/>
         </scene>
         <!--Timer Interface Controller-->
         <scene sceneID="1zP-Xy-to7">
@@ -67,19 +67,22 @@
                     <items>
                         <group width="1" alignment="left" id="b3v-k9-NWP">
                             <items>
-                                <imageView alignment="center" verticalAlignment="center" image="time" id="k6u-RB-089"/>
-                                <label width="100" alignment="center" verticalAlignment="center" text="00:00:00" textAlignment="left" id="RWS-cV-8s0">
+                                <label alignment="right" verticalAlignment="center" text="00:00:00" textAlignment="right" id="RWS-cV-8s0">
+                                    <color key="textColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="25"/>
                                 </label>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="ayo-76-MZx">
+                        <separator alignment="left" alpha="0.80000000000000004" id="Yaj-ba-6Jy"/>
+                        <group width="136" height="61" alignment="right" id="ayo-76-MZx">
                             <items>
-                                <label width="25" alignment="center" text="$" textAlignment="center" id="eaJ-gL-mps">
+                                <label width="51" height="29" alignment="center" verticalAlignment="bottom" text="NT$" textAlignment="center" id="eaJ-gL-mps">
+                                    <color key="textColor" red="0.83529411764705885" green="0.27843137254901962" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="25"/>
                                 </label>
-                                <label width="100" height="1" alignment="center" verticalAlignment="center" text="0" textAlignment="left" id="9mC-tq-r1S">
-                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                <label height="40" alignment="right" verticalAlignment="bottom" text="0" textAlignment="right" id="9mC-tq-r1S">
+                                    <color key="textColor" red="0.83529411760000005" green="0.2784313725" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="47"/>
                                 </label>
                             </items>
                         </group>
@@ -87,7 +90,7 @@
                         <group width="1" alignment="left" id="Wx4-3N-NLc">
                             <items>
                                 <button width="1" alignment="left" title="Start" id="ITY-c2-mA4">
-                                    <color key="backgroundColor" red="0.1764705882352941" green="0.87058823529411766" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.66274509800000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="startStopButton" destination="gw9-tw-fgo" id="6te-fD-UHP"/>
@@ -103,7 +106,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="486" y="359"/>
+            <point key="canvasLocation" x="486" y="356"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -117,14 +120,15 @@
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sashColor" red="0.1757836552" green="0.87195512819999998" blue="0.58563299179999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sashColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                     </notificationCategory>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="219" y="728"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.090196078431372548" green="0.66274509803921566" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
 </document>

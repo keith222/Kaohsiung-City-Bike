@@ -13,12 +13,15 @@ class TodayWidgetTableViewCell: UITableViewCell {
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var available: UILabel!
     @IBOutlet weak var park: UILabel!
+    @IBOutlet var sitePoint: UIView!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .None
+        self.sitePoint.layer.cornerRadius = self.sitePoint.frame.width / 2
+        self.sitePoint.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

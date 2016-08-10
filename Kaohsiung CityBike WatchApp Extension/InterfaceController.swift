@@ -58,7 +58,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             self.staNameLabel.setText(title)
             self.stationMap.removeAllAnnotations()
-            let imgName = (annoType == 0) ? "flagpinwatch" : "bikepinwatch"
+            let imgName = (annoType == 0) ? "locate-pin-custom" : "locate-pin"
             self.stationMap.addAnnotation(location, withImageNamed: imgName ,centerOffset: CGPointMake(0, 0))
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
@@ -66,12 +66,12 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             avaLabel.setText(String(ava!))
             unavaLabel.setText(String(unava!))
             if Int(ava!)<10{
-                self.avaLabel.setTextColor( UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1))
+                self.avaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
                 self.avaLabel.setTextColor(UIColor.whiteColor())
             }
             if Int(unava!)<10{
-                self.unavaLabel.setTextColor(UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1))
+                self.unavaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
                 self.unavaLabel.setTextColor(UIColor.whiteColor())
             }

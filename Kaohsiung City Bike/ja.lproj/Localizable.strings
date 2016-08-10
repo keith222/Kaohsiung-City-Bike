@@ -6,9 +6,10 @@
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
 
-"Time_Start" = "Time Start";
-"Twenty_Minutes_Alert" = "20分が経過しました!10分後、料金を支払う!!";
-"Thirty_Minutes_Alert" = "30分が経過しました!料金を支払う!!";
+"Time_Start" = "賃借のタイミング";
+"Time_Stop" = "賃貸終了";
+"Twenty_Minutes_Alert" = "50分が経過しました!10分後、料金を支払う!!";
+"Thirty_Minutes_Alert" = "60分が経過しました!料金を支払う!!";
 "TimeStart" = "Start";
 "TimeStop" = "Stop";
 "Time_Alert" = "通知";
@@ -24,3 +25,9 @@
 "Station_List" = "サイトリスト";
 "Reached_the_limit" = "限界に達して";
 "Only_7_Station_can_be_added" = "7サイトを追加することができます。";
+"Widget_alert_title" = "\"今日 ウィジェット\"に追加する";
+"Widget_alert_content" = "\"通知センター\"にこのサイトのリアルタイムの情報を入手できることができます";
+"Widget_alert_ok" = "OK";
+"Widget_alert_cancel" = "Cancel";
+"Watch_Bike" = " / 自転車";
+"Watch_Parking" = " /　駐車スペース";

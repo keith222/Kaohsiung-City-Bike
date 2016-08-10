@@ -5,13 +5,13 @@
 /* Class = "WKInterfaceLabel"; text = "--"; ObjectID = "1G9-ZZ-ttH"; */
 "1G9-ZZ-ttH.text" = "--";
 
-/* Class = "WKInterfaceButton"; title = "Timer"; ObjectID = "586-ZP-uRE"; */
-"586-ZP-uRE.title" = "Timer";
+/* Class = "WKInterfaceButton"; title = "租借計時"; ObjectID = "586-ZP-uRE"; */
+"586-ZP-uRE.title" = "租借計時";
 
 /* Class = "WKInterfaceLabel"; text = "0"; ObjectID = "9mC-tq-r1S"; */
 "9mC-tq-r1S.text" = "0";
 
-/* Class = "WKInterfaceLabel"; text = "Click the Station"; ObjectID = "CD5-fp-3Uq"; */
+/* Class = "WKInterfaceLabel"; text = "手機點擊站點"; ObjectID = "CD5-fp-3Uq"; */
 "CD5-fp-3Uq.text" = "手機點擊站點";
 
 /* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "ITY-c2-mA4"; */
@@ -21,4 +21,4 @@
 "RWS-cV-8s0.text" = "00:00:00";
 
 /* Class = "WKInterfaceLabel"; text = "$"; ObjectID = "eaJ-gL-mps"; */
-"eaJ-gL-mps.text" = "$";
+"eaJ-gL-mps.text" = "NT$";

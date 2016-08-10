@@ -25,8 +25,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var staName: UILabel!
     @IBOutlet var avaNum: UILabel!
     @IBOutlet var parkNum: UILabel!
+    @IBOutlet var resultButtonOutlet: UIButton!
     @IBOutlet var timeButtonOutlet: UIButton!
-    
+    @IBOutlet var locateButton: UIButton!
+
     @IBOutlet var customInfo: UIView!
     @IBOutlet var customWalkingTimeLabel: UILabel!
     @IBOutlet var customRidingTimeLabel: UILabel!
@@ -35,7 +37,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
     @IBOutlet var costSpend: UILabel!
-    @IBOutlet var lightBlur: UIVisualEffectView!
+    @IBOutlet var blurView: UIView!
     
     
     let locationManager = CLLocationManager()
@@ -57,7 +59,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     var longPress:UILongPressGestureRecognizer!
     var shortPress:UITapGestureRecognizer!
     var locateCheck: Bool = true
-    
+    var duration: NSDate?
     
     private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
@@ -75,13 +77,13 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.timeOutAlert(_:)), name: "timeOut:", object: nil)
         
         //將一些預設在螢幕外
-        self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
-        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+        self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
+        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
         self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
+        self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -368)
         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
-
-        //leftBarButton = navigationItem.leftBarButtonItem
-        //rightBarButton = navigationItem.rightBarButtonItem
+        self.blurView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-record")!)
+        
         let StationTable = StationTableViewController()
         StationTable.mDelegate = self
         mapView.delegate = self
@@ -117,7 +119,20 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.mapView.addGestureRecognizer(longPress)
         
         self.setupSearchableContent()
-    
+        
+        //設定UIView,UIButton 邊線及陰影
+        self.locateButton.addBorder(5.0, thickness: 1.0, color: UIColor(red: 93/255, green: 110/255, blue: 120/255, alpha: 0.3))
+        self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
+        self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.resultButtonOutlet.addBorder(10.0, thickness: 0, color: self.resultButtonOutlet.backgroundColor!)
+        self.resultButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        
+        self.infoView.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.infoView.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.customInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.customInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.spendInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
     }
     
     func sendData(stationName: String) {
@@ -174,6 +189,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //CustomInfo 回到螢幕外
         UIView.animateWithDuration(0.5, animations: {
             self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
+        },completion:{(completion) -> Void in
+            self.customInfo.hidden = true
         })
         
         self.mapView.addGestureRecognizer(self.longPress)
@@ -201,7 +218,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             anView!.image = UIImage(named:"bikePin")
             anView!.canShowCallout = true
-            anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
+            //anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
         }else {
             anView!.annotation = annotation
             if(!(self.annoArray!.containsObject((anView?.annotation)!))){
@@ -212,7 +229,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        
         //分離出UserLocation Annotation及Custom Annotation
         if !(view.annotation is MKUserLocation){
             //規劃路徑
@@ -234,6 +250,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                     self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: true)
                 
                     //infoview滑下及timeButton滑上動畫
+                    self.infoView.hidden = false
+                    self.timeButtonOutlet.hidden = false
                     UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                         self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
                         self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
@@ -244,6 +262,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
             }else{
+                self.customInfo.hidden = false
                 UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.customInfo.transform = CGAffineTransformMakeTranslation(0,0)
                     self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
@@ -266,11 +285,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     }
     
     func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
-
         //分離出UserLocation Annotation
         if !(view.annotation is MKUserLocation) && !(view.annotation!.isEqual(self.customAnnotation)){
             UIView.animateWithDuration(0.5, animations: {
-                self.infoView.transform = CGAffineTransformMakeTranslation(0, -200)
+                self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
                 self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
             })
             if(self.timer != nil){
@@ -338,7 +356,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         //將路線畫至地圖
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor(red: 0, green: 145/255, blue: 245/255, alpha: 0.7)
+        renderer.strokeColor = UIColor(red: 40/255, green: 144/255, blue: 244/255, alpha: 1.0)
         renderer.lineWidth = 10.0
         
         return renderer
@@ -358,14 +376,14 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
             dispatch_async(dispatch_get_main_queue(), {
                 if Int(self.xmlItems![self.staNum].ava)<10{
-                    self.avaNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                    self.avaNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
-                    self.avaNum.textColor = UIColor.blackColor()
+                    self.avaNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
                 if Int(self.xmlItems![self.staNum].unava)<10{
-                    self.parkNum.textColor = UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1)
+                    self.parkNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
-                    self.parkNum.textColor = UIColor.blackColor()
+                    self.parkNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
                 self.avaNum.text = self.xmlItems![self.staNum].ava
                 self.parkNum.text = self.xmlItems![self.staNum].unava
@@ -382,6 +400,22 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), forState: .Normal)
     }
     
+    func pauseStopWatch(){
+        if(self.stopWatch != nil){
+            self.stopWatch.invalidate()
+            self.stopWatch = nil
+            self.duration = NSDate()
+        }
+    }
+    
+    func startStopWatch(){
+        if(self.duration != nil){
+            let newSecond: NSTimeInterval = NSDate().timeIntervalSinceDate(self.duration!)
+            count = count + lround(newSecond)
+            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+        }
+    }
+    
     func showSpendInfo(){
         let second = count%60
         let minute = (count/60)%60//計算使用時間
@@ -391,7 +425,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.timeSpend.text = timeInfo
         
         var cost = 0//計算花費
-        switch minute{
+        switch calMinute{
             case 0...60: cost = 0 //不滿60分鐘免費
             case 61...90: cost = 10 //90分鐘 10元
             default: //90分後每30分20元
@@ -405,11 +439,15 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         let costInfo = "NT$ \(cost)"
         self.costSpend.text = costInfo
-
+        self.duration = nil
+        
         //spendInfo滑下動畫
+        self.spendInfo.hidden = false
+        self.resultButtonOutlet.hidden = false
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
-            },completion: nil)
+            self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+        },completion: nil)
         
     }
     
@@ -463,8 +501,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-        }else{
-            
         }
     }
     
@@ -531,7 +567,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 let stationData = bikePlace.bikeLocationJson()
                 let stationName = stationData[selectedIndex!]["StationName"] as! String
                 //將stationname送入senddata以被找出選擇的點
-                self.sendData(stationName)
+                sendData(stationName)
             }
         }
     }
@@ -541,10 +577,15 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         locationManager.stopUpdatingLocation()
         //移除NotificationCenter
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "timeOut", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillResignActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
     override func viewWillAppear(animated: Bool) {
         //畫面將要出現時啟動更新位置
         locationManager.startUpdatingLocation()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.startStopWatch), name: UIApplicationDidBecomeActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.pauseStopWatch), name: UIApplicationWillResignActiveNotification, object: nil)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -571,19 +612,14 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
             self.timeButtonOutlet.setTitle("00:00:00", forState: .Normal)
             
-            var bgTask = UIBackgroundTaskIdentifier()
-            let app = UIApplication.sharedApplication()
-            bgTask = app.beginBackgroundTaskWithExpirationHandler({ () -> Void in
-                app.endBackgroundTask(bgTask)
-            })
-            
-            
-            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
+            self.timeButtonOutlet.addShadow(UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1))
+            self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
             
             //設定Local Notification
             let localNotification = UILocalNotification()
-            let pushDate = NSDate(timeIntervalSinceNow: 1200)
+            let pushDate = NSDate(timeIntervalSinceNow: 3000)
             localNotification.fireDate = pushDate
             localNotification.timeZone = NSTimeZone.defaultTimeZone()
             localNotification.soundName = UILocalNotificationDefaultSoundName
@@ -593,7 +629,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
             
             let finalNotification = UILocalNotification()
-            finalNotification.fireDate = NSDate(timeIntervalSinceNow: 1800)
+            finalNotification.fireDate = NSDate(timeIntervalSinceNow: 3600)
             finalNotification.timeZone = NSTimeZone.defaultTimeZone()
             finalNotification.soundName = UILocalNotificationDefaultSoundName
             finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")
@@ -605,21 +641,46 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.stopWatch.invalidate()
             self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
-            self.timeButtonOutlet.backgroundColor = UIColor(red: 45/255, green: 222/255, blue: 149/255, alpha: 1)
-            self.lightBlur.hidden = false
+            self.timeButtonOutlet.backgroundColor = UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1)
+            self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
+            self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+            
+            self.blurView.hidden = false
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             showSpendInfo()
-            self.count = 0;
+            self.count = 0
         }
         
     }
     @IBAction func doneButton(sender: AnyObject) {
+        let button = sender as! UIButton
         UIView.animateWithDuration(0.2, animations: {
-            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -400)
+            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
+            button.transform = CGAffineTransformMakeTranslation(0, -368)
+        },completion: {(completion) -> Void in
+            self.spendInfo.hidden = true
+            self.blurView.hidden = true
+            button.hidden = true
         })
-        self.lightBlur.hidden = true
-        
     }
     
+}
+
+extension UIView{
+    
+    func addBorder(radius:CGFloat,thickness:CGFloat,color:UIColor){
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = thickness
+        self.layer.borderColor = color.CGColor
+    }
+    
+    func addShadow(color:UIColor){
+        self.layer.shadowColor = color.CGColor
+        self.layer.shadowOffset = CGSizeMake(0, 5)
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius = 15
+        self.layer.shadowOpacity = 0.31
+    }
 }
 

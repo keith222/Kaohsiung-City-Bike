@@ -5,21 +5,28 @@
   Created by Yang Tun-Kai on 2015/11/14.
   Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 */
-"Time_Start" = "開始計時";
-"Twenty_Minutes_Alert" = "已經騎乘20分鐘囉!再過10分鐘就要開始收費了!!";
-"Thirty_Minutes_Alert" = "已經騎乘30分鐘囉!現在開始計費!!";
+"Time_Start" = "租借計時";
+"Time_Stop" = "租借結束";
+"Twenty_Minutes_Alert" = "高雄城市單車免費租借時段即將於10分鐘後結束！";
+"Thirty_Minutes_Alert" = "高雄城市單車免費租借時段結束，開始計費！";
 "TimeStart" = "開始計時";
 "TimeStop" = "停止計時";
 "Time_Alert" = "時間提醒";
 "Alert" = "錯誤";
 "Error_Log" = "網路連線異常。";
 "Title" = "已關閉定位服務";
-"Content" = "開啟「設定」>「隱私權」中的「定位服務」來允許「Kaohsiung CityBike」確認您的目前位置";
+"Content" = "開啟「設定」>「隱私權」中的「定位服務」來允許「高雄城市單車」確認您的目前位置";
 "SetButton" = "設定";
 "OkButton" = "好";
-"Range" = "附近沒有CityBike站點。";
+"Range" = "附近沒有腳踏車站點。";
 "Destination" = "目的地";
 "Search" = "站點/地址";
 "Station_List" = "站點列表";
 "Reached_the_limit" = "已達上限";
 "Only_7_Station_can_be_added" = "最多存取7個站點。";
+"Widget_alert_title" = "新增至「腳踏車站點即時查」";
+"Widget_alert_content" = "透過「腳踏車站點即時查」可以讓您在「通知中心」快速掌握站點的即時資訊。";
+"Widget_alert_ok" = "確認";
+"Widget_alert_cancel" = "不允許";
+"Watch_Bike" = " / 腳踏車";
+"Watch_Parking" = " / 停車位";

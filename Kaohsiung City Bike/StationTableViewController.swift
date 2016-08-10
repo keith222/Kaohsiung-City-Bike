@@ -44,6 +44,11 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.loadViewIfNeeded()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,10 +108,7 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
                     sender.setImage(UIImage(named: "star"), forState: .Normal)
                 }else{
                     staArray.append(staName!)
-                    self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
-                    self.userDefault.synchronize()
-                    NSLog("add station to array")
-                    sender.setImage(UIImage(named: "starfilled"), forState: .Normal)
+                    self.addAlert(staArray, button: sender)
                 }
             }else{
                 let alert = UIAlertController(title: NSLocalizedString("Reached_the_limit", comment: ""), message: NSLocalizedString("Only_7_Station_can_be_added", comment: ""), preferredStyle: .Alert)
@@ -117,12 +119,25 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
             }
         }else{
             let array = [(self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as! String) : (staInfo[sender.tag]["StationName"] as! String)]
-            self.userDefault.setObject(array, forKey: "staForTodayWidget")
-            self.userDefault.synchronize()
-            NSLog("empty array now saves station")
-            sender.setImage(UIImage(named: "starfilled"), forState: .Normal)
+            self.addAlert(array, button: sender)
         }
-        print(self.userDefault.arrayForKey("staForTodayWidget"))
+//        print(self.userDefault.arrayForKey("staForTodayWidget"))
+    }
+    
+    //Alert
+    func addAlert(stationArray: NSArray,button: UIButton){
+        let widgetAlert = UIAlertController(title: NSLocalizedString("Widget_alert_title", comment: ""), message: NSLocalizedString("Widget_alert_content", comment: ""), preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: NSLocalizedString("Widget_alert_ok", comment: ""), style: .Default, handler: {(action)->Void in
+            
+            self.userDefault.setObject(stationArray, forKey: "staForTodayWidget")
+            self.userDefault.synchronize()
+            NSLog("saves station")
+            button.setImage(UIImage(named: "starfilled"), forState: .Normal)
+        })
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Widget_alert_cancel", comment: ""), style: .Cancel, handler: nil)
+        widgetAlert.addAction(cancelAction)
+        widgetAlert.addAction(okAction)
+        self.presentViewController(widgetAlert, animated: true, completion: nil)
     }
     
     //搜尋功能
