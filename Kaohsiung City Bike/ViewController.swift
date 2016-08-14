@@ -536,7 +536,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let searchableItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
             searchableItemAttributeSet.title = element["StationName"] as? String
             searchableItemAttributeSet.contentDescription = element["StationAddress"] as? String
-            searchableItemAttributeSet.thumbnailData = UIImagePNGRepresentation(UIImage(named:"available-widget")!)
+            searchableItemAttributeSet.thumbnailData = UIImagePNGRepresentation(UIImage(named:"bike-mark-fill")!)
             
             var keywords = [String]()
             keywords.append(element["StationName"] as! String)
