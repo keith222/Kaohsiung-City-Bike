@@ -1,1124 +1,2823 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		530A42E51CC76A5E00796DCF /* BikeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F22331BF3A18D00ECE80D /* BikeParser.swift */; };
-		5319C3871D4657CB0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		5319C3881D4657CC0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F22331BF3A18D00ECE80D /* BikeParser.swift */; };
-		53235FD51D4363B6008C5B47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
-		5333917E1CA67804005EFA48 /* StationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5333917D1CA67804005EFA48 /* StationTableViewController.swift */; };
-		533391801CA6781D005EFA48 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */; };
-		533391811CA67D55005EFA48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534962C01BE3719400BFFD71 /* MapKit.framework */; };
-		53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */; };
-		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
-		534962951BE07BE700BFFD71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962941BE07BE700BFFD71 /* ViewController.swift */; };
-		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
-		5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
-		534962A81BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */; };
-		534962B31BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */; };
-		534962C31BE39D6600BFFD71 /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
-		534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */; };
-		536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
-		537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0E11C0B35BB008501B0 /* Interface.storyboard */; };
-		537EE0EC1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F21C0B35BB008501B0 /* InterfaceController.swift */; };
-		537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */; };
-		537EE0F71C0B35BB008501B0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F61C0B35BB008501B0 /* NotificationController.swift */; };
-		537EE0FD1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */; };
-		537EE12A1C0B5F00008501B0 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */; };
-		537EE1301C0B6EBC008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0F81C0B35BB008501B0 /* Assets.xcassets */; };
-		537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0F81C0B35BB008501B0 /* Assets.xcassets */; };
-		537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
-		537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
-		5380329C1C20236C00E07131 /* geojson.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 5380329B1C20236B00E07131 /* geojson.geojson */; };
-		53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53893AED1BE9CAF700E32ECD /* DataGet.swift */; };
-		53B362AA1CC4CA39003CF0E7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */; };
-		53B362AD1CC4CA3A003CF0E7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B362AC1CC4CA3A003CF0E7 /* TodayViewController.swift */; };
-		53B362B01CC4CA3A003CF0E7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B362AE1CC4CA3A003CF0E7 /* MainInterface.storyboard */; };
-		53B362B41CC4CA3A003CF0E7 /* Kaohsiung CityBike Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 53B362A71CC4CA39003CF0E7 /* Kaohsiung CityBike Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		53B362BA1CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B362B91CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift */; };
-		53B362BB1CC4CFF3003CF0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
-		53C362311CC9D54200050EBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		53C362331CC9FE2100050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
-		53C362341CC9FE2200050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
-		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		53F165F21C402F6900E851F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F165F11C402F6900E851F0 /* Reachability.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		534962A41BE07BE700BFFD71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5349628E1BE07BE700BFFD71;
-			remoteInfo = "Kaohsiung City Bike";
-		};
-		534962AF1BE07BE700BFFD71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5349628E1BE07BE700BFFD71;
-			remoteInfo = "Kaohsiung City Bike";
-		};
-		537EE0ED1C0B35BB008501B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 537EE0EA1C0B35BB008501B0;
-			remoteInfo = "Kaohsiung CityBike WatchApp Extension";
-		};
-		537EE0FB1C0B35BB008501B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 537EE0DE1C0B35BB008501B0;
-			remoteInfo = "Kaohsiung CityBike WatchApp";
-		};
-		53B362B21CC4CA3A003CF0E7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53B362A61CC4CA39003CF0E7;
-			remoteInfo = "Kaohsiung CityBike Widget";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		537EE1031C0B35BB008501B0 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				537EE0EC1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53B362B81CC4CA3A003CF0E7 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				53B362B41CC4CA3A003CF0E7 /* Kaohsiung CityBike Widget.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53C793DB1C09E0D2000FBA3B /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				537EE0FD1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5319C38C1D46615C0014C51E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
-		5319C38D1D4661630014C51E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
-		5319C38E1D46616A0014C51E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
-		531F22331BF3A18D00ECE80D /* BikeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeParser.swift; sourceTree = "<group>"; };
-		53235FD71D4364F7008C5B47 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainInterface.strings"; sourceTree = "<group>"; };
-		53235FD91D4364F9008C5B47 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainInterface.strings; sourceTree = "<group>"; };
-		53235FDB1D4364FA008C5B47 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
-		5333917D1CA67804005EFA48 /* StationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewController.swift; sourceTree = "<group>"; };
-		5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
-		53356CBE1D4279BC00A20515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
-		53356CCB1D42863000A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53356CD71D42889700A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		53356CD81D42889F00A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		53356CD91D4288A600A20515 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		534962941BE07BE700BFFD71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		534962971BE07BE700BFFD71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		534962991BE07BE700BFFD71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaohsiung City BikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaohsiung_City_BikeTests.swift; sourceTree = "<group>"; };
-		534962A91BE07BE700BFFD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaohsiung City BikeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaohsiung_City_BikeUITests.swift; sourceTree = "<group>"; };
-		534962B41BE07BE700BFFD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		534962C01BE3719400BFFD71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
-		534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
-		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		537EE0E21C0B35BB008501B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		537EE0E41C0B35BB008501B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		537EE0E61C0B35BB008501B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		537EE0F11C0B35BB008501B0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		537EE0F21C0B35BB008501B0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		537EE0F61C0B35BB008501B0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		537EE0F81C0B35BB008501B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		537EE0FA1C0B35BB008501B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
-		5380329B1C20236B00E07131 /* geojson.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = geojson.geojson; path = "Kaohsiung City Bike/geojson.geojson"; sourceTree = "<group>"; };
-		53893AED1BE9CAF700E32ECD /* DataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGet.swift; sourceTree = "<group>"; };
-		53928D071C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		53928D081C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		53B362A71CC4CA39003CF0E7 /* Kaohsiung CityBike Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Kaohsiung CityBike Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		53B362AC1CC4CA3A003CF0E7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		53B362AF1CC4CA3A003CF0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		53B362B11CC4CA3A003CF0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53B362B91CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayWidgetTableViewCell.swift; sourceTree = "<group>"; };
-		53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kaohsiung City Bike.entitlements"; sourceTree = "<group>"; };
-		53B362BD1CC4D88C003CF0E7 /* Kaohsiung CityBike Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kaohsiung CityBike Widget.entitlements"; sourceTree = "<group>"; };
-		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		53E42D161D436EB0004B9B98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
-		53F165F11C402F6900E851F0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		5349628C1BE07BE700BFFD71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				533391811CA67D55005EFA48 /* MapKit.framework in Frameworks */,
-				537EE12A1C0B5F00008501B0 /* WatchConnectivity.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962A01BE07BE700BFFD71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962AB1BE07BE700BFFD71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		537EE0E81C0B35BB008501B0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53B362A41CC4CA39003CF0E7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53B362AA1CC4CA39003CF0E7 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		5340DAF51BE51047009EBF16 /* image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = image;
-			sourceTree = "<group>";
-		};
-		534962861BE07BE700BFFD71 = {
-			isa = PBXGroup;
-			children = (
-				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
-				534962C01BE3719400BFFD71 /* MapKit.framework */,
-				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
-				5380329B1C20236B00E07131 /* geojson.geojson */,
-				53E42D161D436EB0004B9B98 /* Info.plist */,
-				534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
-				534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
-				537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
-				537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
-				53B362AB1CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */,
-				53B362A81CC4CA39003CF0E7 /* Frameworks */,
-				534962901BE07BE700BFFD71 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		534962901BE07BE700BFFD71 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */,
-				534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */,
-				534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */,
-				537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */,
-				537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */,
-				53B362A71CC4CA39003CF0E7 /* Kaohsiung CityBike Widget.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		534962911BE07BE700BFFD71 /* Kaohsiung City Bike */ = {
-			isa = PBXGroup;
-			children = (
-				53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */,
-				5340DAF51BE51047009EBF16 /* image */,
-				534962921BE07BE700BFFD71 /* AppDelegate.swift */,
-				534962941BE07BE700BFFD71 /* ViewController.swift */,
-				53893AED1BE9CAF700E32ECD /* DataGet.swift */,
-				531F22331BF3A18D00ECE80D /* BikeParser.swift */,
-				53F165F11C402F6900E851F0 /* Reachability.swift */,
-				5333917D1CA67804005EFA48 /* StationTableViewController.swift */,
-				5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */,
-				534962961BE07BE700BFFD71 /* Main.storyboard */,
-				534962991BE07BE700BFFD71 /* Assets.xcassets */,
-				53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */,
-				534962C21BE39D6600BFFD71 /* citybike.json */,
-				536E2C151BF726C500B5E7DE /* Localizable.strings */,
-				53E2325F1BFE39A700F36B71 /* InfoPlist.strings */,
-			);
-			path = "Kaohsiung City Bike";
-			sourceTree = "<group>";
-		};
-		534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */ = {
-			isa = PBXGroup;
-			children = (
-				534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */,
-				534962A91BE07BE700BFFD71 /* Info.plist */,
-			);
-			path = "Kaohsiung City BikeTests";
-			sourceTree = "<group>";
-		};
-		534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */,
-				534962B41BE07BE700BFFD71 /* Info.plist */,
-			);
-			path = "Kaohsiung City BikeUITests";
-			sourceTree = "<group>";
-		};
-		537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */ = {
-			isa = PBXGroup;
-			children = (
-				537EE0E11C0B35BB008501B0 /* Interface.storyboard */,
-				537EE0E41C0B35BB008501B0 /* Assets.xcassets */,
-				537EE0E61C0B35BB008501B0 /* Info.plist */,
-			);
-			path = "Kaohsiung CityBike WatchApp";
-			sourceTree = "<group>";
-		};
-		537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */ = {
-			isa = PBXGroup;
-			children = (
-				537EE0F21C0B35BB008501B0 /* InterfaceController.swift */,
-				534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */,
-				537EE0F41C0B35BB008501B0 /* ExtensionDelegate.swift */,
-				537EE0F61C0B35BB008501B0 /* NotificationController.swift */,
-				537EE0F81C0B35BB008501B0 /* Assets.xcassets */,
-				537EE0FA1C0B35BB008501B0 /* Info.plist */,
-				537EE0F01C0B35BB008501B0 /* Supporting Files */,
-			);
-			path = "Kaohsiung CityBike WatchApp Extension";
-			sourceTree = "<group>";
-		};
-		537EE0F01C0B35BB008501B0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				537EE0F11C0B35BB008501B0 /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		53B362A81CC4CA39003CF0E7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		53B362AB1CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */ = {
-			isa = PBXGroup;
-			children = (
-				53B362BD1CC4D88C003CF0E7 /* Kaohsiung CityBike Widget.entitlements */,
-				53B362AC1CC4CA3A003CF0E7 /* TodayViewController.swift */,
-				53B362B91CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift */,
-				53B362AE1CC4CA3A003CF0E7 /* MainInterface.storyboard */,
-				53B362B11CC4CA3A003CF0E7 /* Info.plist */,
-			);
-			path = "Kaohsiung CityBike Widget";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 534962B71BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City Bike" */;
-			buildPhases = (
-				5349628B1BE07BE700BFFD71 /* Sources */,
-				5349628C1BE07BE700BFFD71 /* Frameworks */,
-				5349628D1BE07BE700BFFD71 /* Resources */,
-				53C793DB1C09E0D2000FBA3B /* Embed Watch Content */,
-				53B362B81CC4CA3A003CF0E7 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				537EE0FC1C0B35BB008501B0 /* PBXTargetDependency */,
-				53B362B31CC4CA3A003CF0E7 /* PBXTargetDependency */,
-			);
-			name = "Kaohsiung City Bike";
-			productName = "Kaohsiung City Bike";
-			productReference = 5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */;
-			productType = "com.apple.product-type.application";
-		};
-		534962A21BE07BE700BFFD71 /* Kaohsiung City BikeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 534962BA1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeTests" */;
-			buildPhases = (
-				5349629F1BE07BE700BFFD71 /* Sources */,
-				534962A01BE07BE700BFFD71 /* Frameworks */,
-				534962A11BE07BE700BFFD71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				534962A51BE07BE700BFFD71 /* PBXTargetDependency */,
-			);
-			name = "Kaohsiung City BikeTests";
-			productName = "Kaohsiung City BikeTests";
-			productReference = 534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		534962AD1BE07BE700BFFD71 /* Kaohsiung City BikeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 534962BD1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeUITests" */;
-			buildPhases = (
-				534962AA1BE07BE700BFFD71 /* Sources */,
-				534962AB1BE07BE700BFFD71 /* Frameworks */,
-				534962AC1BE07BE700BFFD71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				534962B01BE07BE700BFFD71 /* PBXTargetDependency */,
-			);
-			name = "Kaohsiung City BikeUITests";
-			productName = "Kaohsiung City BikeUITests";
-			productReference = 534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 537EE1041C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp" */;
-			buildPhases = (
-				537EE0DD1C0B35BB008501B0 /* Resources */,
-				537EE1031C0B35BB008501B0 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				537EE0EE1C0B35BB008501B0 /* PBXTargetDependency */,
-			);
-			name = "Kaohsiung CityBike WatchApp";
-			productName = "Kaohsiung CityBike WatchApp";
-			productReference = 537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 537EE1021C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp Extension" */;
-			buildPhases = (
-				537EE0E71C0B35BB008501B0 /* Sources */,
-				537EE0E81C0B35BB008501B0 /* Frameworks */,
-				537EE0E91C0B35BB008501B0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Kaohsiung CityBike WatchApp Extension";
-			productName = "Kaohsiung CityBike WatchApp Extension";
-			productReference = 537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		53B362A61CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 53B362B71CC4CA3A003CF0E7 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike Widget" */;
-			buildPhases = (
-				53B362A31CC4CA39003CF0E7 /* Sources */,
-				53B362A41CC4CA39003CF0E7 /* Frameworks */,
-				53B362A51CC4CA39003CF0E7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Kaohsiung CityBike Widget";
-			productName = "Kaohsiung CityBike Widget";
-			productReference = 53B362A71CC4CA39003CF0E7 /* Kaohsiung CityBike Widget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		534962871BE07BE700BFFD71 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Yang Tun-Kai";
-				TargetAttributes = {
-					5349628E1BE07BE700BFFD71 = {
-						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 8MREJM6257;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-							com.apple.Maps.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					534962A21BE07BE700BFFD71 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 5349628E1BE07BE700BFFD71;
-					};
-					534962AD1BE07BE700BFFD71 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 5349628E1BE07BE700BFFD71;
-					};
-					537EE0DE1C0B35BB008501B0 = {
-						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 8MREJM6257;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-						};
-					};
-					537EE0EA1C0B35BB008501B0 = {
-						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 8MREJM6257;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-							com.apple.Maps.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					53B362A61CC4CA39003CF0E7 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8MREJM6257;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-				};
-			};
-			buildConfigurationList = 5349628A1BE07BE700BFFD71 /* Build configuration list for PBXProject "Kaohsiung City Bike" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-				"zh-Hant",
-				ja,
-				"zh-Hans",
-			);
-			mainGroup = 534962861BE07BE700BFFD71;
-			productRefGroup = 534962901BE07BE700BFFD71 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */,
-				534962A21BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
-				534962AD1BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
-				537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
-				537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
-				53B362A61CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		5349628D1BE07BE700BFFD71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */,
-				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
-				5380329C1C20236C00E07131 /* geojson.geojson in Resources */,
-				53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */,
-				534962C31BE39D6600BFFD71 /* citybike.json in Resources */,
-				5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */,
-				534962981BE07BE700BFFD71 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962A11BE07BE700BFFD71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962AC1BE07BE700BFFD71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		537EE0DD1C0B35BB008501B0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */,
-				53235FD51D4363B6008C5B47 /* Localizable.strings in Resources */,
-				537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */,
-				537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */,
-				5319C3871D4657CB0014C51E /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		537EE0E91C0B35BB008501B0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */,
-				5319C3881D4657CC0014C51E /* InfoPlist.strings in Resources */,
-				53C362341CC9FE2200050EBE /* Localizable.strings in Resources */,
-				537EE1301C0B6EBC008501B0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53B362A51CC4CA39003CF0E7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53B362BB1CC4CFF3003CF0E7 /* Assets.xcassets in Resources */,
-				53C362331CC9FE2100050EBE /* Localizable.strings in Resources */,
-				53C362311CC9D54200050EBE /* InfoPlist.strings in Resources */,
-				53B362B01CC4CA3A003CF0E7 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		5349628B1BE07BE700BFFD71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				534962951BE07BE700BFFD71 /* ViewController.swift in Sources */,
-				53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */,
-				534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */,
-				533391801CA6781D005EFA48 /* StationTableViewCell.swift in Sources */,
-				53F165F21C402F6900E851F0 /* Reachability.swift in Sources */,
-				5333917E1CA67804005EFA48 /* StationTableViewController.swift in Sources */,
-				531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5349629F1BE07BE700BFFD71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				534962A81BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962AA1BE07BE700BFFD71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				534962B31BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		537EE0E71C0B35BB008501B0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				537EE0F71C0B35BB008501B0 /* NotificationController.swift in Sources */,
-				537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */,
-				537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */,
-				534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53B362A31CC4CA39003CF0E7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53B362AD1CC4CA3A003CF0E7 /* TodayViewController.swift in Sources */,
-				530A42E51CC76A5E00796DCF /* BikeParser.swift in Sources */,
-				53B362BA1CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		534962A51BE07BE700BFFD71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */;
-			targetProxy = 534962A41BE07BE700BFFD71 /* PBXContainerItemProxy */;
-		};
-		534962B01BE07BE700BFFD71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */;
-			targetProxy = 534962AF1BE07BE700BFFD71 /* PBXContainerItemProxy */;
-		};
-		537EE0EE1C0B35BB008501B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */;
-			targetProxy = 537EE0ED1C0B35BB008501B0 /* PBXContainerItemProxy */;
-		};
-		537EE0FC1C0B35BB008501B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */;
-			targetProxy = 537EE0FB1C0B35BB008501B0 /* PBXContainerItemProxy */;
-		};
-		53B362B31CC4CA3A003CF0E7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53B362A61CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */;
-			targetProxy = 53B362B21CC4CA3A003CF0E7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53356CBE1D4279BC00A20515 /* Base */,
-			);
-			name = "Launch Screen.storyboard";
-			sourceTree = "<group>";
-		};
-		534962961BE07BE700BFFD71 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				534962971BE07BE700BFFD71 /* Base */,
-				53356CD71D42889700A20515 /* zh-Hant */,
-				53356CD81D42889F00A20515 /* ja */,
-				53356CD91D4288A600A20515 /* zh-Hans */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		536E2C151BF726C500B5E7DE /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				536E2C141BF726C500B5E7DE /* zh-Hant */,
-				536E2C161BF726C900B5E7DE /* en */,
-				531551261C08B65E00DA0285 /* ja */,
-				53928D071C57BB070072FA37 /* zh-Hans */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		537EE0E11C0B35BB008501B0 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				537EE0E21C0B35BB008501B0 /* Base */,
-				5319C38C1D46615C0014C51E /* zh-Hant */,
-				5319C38D1D4661630014C51E /* ja */,
-				5319C38E1D46616A0014C51E /* zh-Hans */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		53B362AE1CC4CA3A003CF0E7 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53B362AF1CC4CA3A003CF0E7 /* Base */,
-				53235FD71D4364F7008C5B47 /* zh-Hant */,
-				53235FD91D4364F9008C5B47 /* ja */,
-				53235FDB1D4364FA008C5B47 /* zh-Hans */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		53E2325F1BFE39A700F36B71 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53E232601BFE39A800F36B71 /* en */,
-				53E232611BFE39AB00F36B71 /* zh-Hant */,
-				53928D081C57BB070072FA37 /* zh-Hans */,
-				53356CCB1D42863000A20515 /* ja */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		534962B51BE07BE700BFFD71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		534962B61BE07BE700BFFD71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		534962B81BE07BE700BFFD71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-			};
-			name = Debug;
-		};
-		534962B91BE07BE700BFFD71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		534962BB1BE07BE700BFFD71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
-			};
-			name = Debug;
-		};
-		534962BC1BE07BE700BFFD71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
-			};
-			name = Release;
-		};
-		534962BE1BE07BE700BFFD71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Kaohsiung City Bike";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		534962BF1BE07BE700BFFD71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Kaohsiung City Bike";
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
-		537EE0FE1C0B35BB008501B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
-				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		537EE0FF1C0B35BB008501B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
-				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		537EE1001C0B35BB008501B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		537EE1011C0B35BB008501B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		53B362B51CC4CA3A003CF0E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		53B362B61CC4CA3A003CF0E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		5349628A1BE07BE700BFFD71 /* Build configuration list for PBXProject "Kaohsiung City Bike" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				534962B51BE07BE700BFFD71 /* Debug */,
-				534962B61BE07BE700BFFD71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		534962B71BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City Bike" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				534962B81BE07BE700BFFD71 /* Debug */,
-				534962B91BE07BE700BFFD71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		534962BA1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				534962BB1BE07BE700BFFD71 /* Debug */,
-				534962BC1BE07BE700BFFD71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		534962BD1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				534962BE1BE07BE700BFFD71 /* Debug */,
-				534962BF1BE07BE700BFFD71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		537EE1021C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				537EE1001C0B35BB008501B0 /* Debug */,
-				537EE1011C0B35BB008501B0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		537EE1041C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				537EE0FE1C0B35BB008501B0 /* Debug */,
-				537EE0FF1C0B35BB008501B0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		53B362B71CC4CA3A003CF0E7 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53B362B51CC4CA3A003CF0E7 /* Debug */,
-				53B362B61CC4CA3A003CF0E7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 534962871BE07BE700BFFD71 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1A7A39DF3FC028862A2B2B0C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B125F1B793279BF9D4551FB7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>47537362D604483186170D27</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>530A42E51CC76A5E00796DCF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>531F22331BF3A18D00ECE80D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53134F621D60AF4000B44343</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>GoogleService-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53134F631D60AF4000B44343</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53134F621D60AF4000B44343</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>531551261C08B65E00DA0285</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>ja</string>
+			<key>path</key>
+			<string>ja.lproj/Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5319C3871D4657CB0014C51E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53E2325F1BFE39A700F36B71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5319C3881D4657CC0014C51E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53E2325F1BFE39A700F36B71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5319C38C1D46615C0014C51E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hant</string>
+			<key>path</key>
+			<string>zh-Hant.lproj/Interface.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5319C38D1D4661630014C51E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>ja</string>
+			<key>path</key>
+			<string>ja.lproj/Interface.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5319C38E1D46616A0014C51E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hans</string>
+			<key>path</key>
+			<string>zh-Hans.lproj/Interface.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>531F22331BF3A18D00ECE80D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BikeParser.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>531F22341BF3A18D00ECE80D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>531F22331BF3A18D00ECE80D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53235FD51D4363B6008C5B47</key>
+		<dict>
+			<key>fileRef</key>
+			<string>536E2C151BF726C500B5E7DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53235FD71D4364F7008C5B47</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hant</string>
+			<key>path</key>
+			<string>zh-Hant.lproj/MainInterface.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53235FD91D4364F9008C5B47</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>ja</string>
+			<key>path</key>
+			<string>ja.lproj/MainInterface.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53235FDB1D4364FA008C5B47</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hans</string>
+			<key>path</key>
+			<string>zh-Hans.lproj/MainInterface.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5333917D1CA67804005EFA48</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>StationTableViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5333917E1CA67804005EFA48</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5333917D1CA67804005EFA48</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5333917F1CA6781D005EFA48</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>StationTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>533391801CA6781D005EFA48</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5333917F1CA6781D005EFA48</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>533391811CA67D55005EFA48</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962C01BE3719400BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53356CBD1D4279BC00A20515</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53356CBF1D4279BC00A20515</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53356CBE1D4279BC00A20515</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Launch Screen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53356CBF1D4279BC00A20515</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53356CBE1D4279BC00A20515</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Launch Screen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53356CCB1D42863000A20515</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>ja</string>
+			<key>path</key>
+			<string>ja.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53356CD71D42889700A20515</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hant</string>
+			<key>path</key>
+			<string>zh-Hant.lproj/Main.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53356CD81D42889F00A20515</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>ja</string>
+			<key>path</key>
+			<string>ja.lproj/Main.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53356CD91D4288A600A20515</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hans</string>
+			<key>path</key>
+			<string>zh-Hans.lproj/Main.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5340DAF51BE51047009EBF16</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>image</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962861BE07BE700BFFD71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>537EE1291C0B5F00008501B0</string>
+				<string>534962C01BE3719400BFFD71</string>
+				<string>534962911BE07BE700BFFD71</string>
+				<string>5380329B1C20236B00E07131</string>
+				<string>53134F621D60AF4000B44343</string>
+				<string>53E42D161D436EB0004B9B98</string>
+				<string>534962A61BE07BE700BFFD71</string>
+				<string>534962B11BE07BE700BFFD71</string>
+				<string>537EE0E01C0B35BB008501B0</string>
+				<string>537EE0EF1C0B35BB008501B0</string>
+				<string>53B362AB1CC4CA39003CF0E7</string>
+				<string>53B362A81CC4CA39003CF0E7</string>
+				<string>534962901BE07BE700BFFD71</string>
+				<string>9F3B8B38637C9C5DF0F3947D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962871BE07BE700BFFD71</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0710</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Yang Tun-Kai</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>5349628E1BE07BE700BFFD71</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.1</string>
+						<key>DevelopmentTeam</key>
+						<string>8MREJM6257</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.ApplicationGroups.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+							<key>com.apple.BackgroundModes</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+							<key>com.apple.Maps.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>534962A21BE07BE700BFFD71</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.1</string>
+						<key>TestTargetID</key>
+						<string>5349628E1BE07BE700BFFD71</string>
+					</dict>
+					<key>534962AD1BE07BE700BFFD71</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.1</string>
+						<key>TestTargetID</key>
+						<string>5349628E1BE07BE700BFFD71</string>
+					</dict>
+					<key>537EE0DE1C0B35BB008501B0</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.1.1</string>
+						<key>DevelopmentTeam</key>
+						<string>8MREJM6257</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.ApplicationGroups.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>0</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>537EE0EA1C0B35BB008501B0</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.1.1</string>
+						<key>DevelopmentTeam</key>
+						<string>8MREJM6257</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.ApplicationGroups.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>0</string>
+							</dict>
+							<key>com.apple.Maps.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>53B362A61CC4CA39003CF0E7</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>8MREJM6257</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.ApplicationGroups.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>5349628A1BE07BE700BFFD71</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+				<string>zh-Hant</string>
+				<string>ja</string>
+				<string>zh-Hans</string>
+			</array>
+			<key>mainGroup</key>
+			<string>534962861BE07BE700BFFD71</string>
+			<key>productRefGroup</key>
+			<string>534962901BE07BE700BFFD71</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>5349628E1BE07BE700BFFD71</string>
+				<string>534962A21BE07BE700BFFD71</string>
+				<string>534962AD1BE07BE700BFFD71</string>
+				<string>537EE0DE1C0B35BB008501B0</string>
+				<string>537EE0EA1C0B35BB008501B0</string>
+				<string>53B362A61CC4CA39003CF0E7</string>
+			</array>
+		</dict>
+		<key>5349628A1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>534962B51BE07BE700BFFD71</string>
+				<string>534962B61BE07BE700BFFD71</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5349628B1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>534962951BE07BE700BFFD71</string>
+				<string>53893AEE1BE9CAF700E32ECD</string>
+				<string>534962931BE07BE700BFFD71</string>
+				<string>533391801CA6781D005EFA48</string>
+				<string>53F165F21C402F6900E851F0</string>
+				<string>5333917E1CA67804005EFA48</string>
+				<string>531F22341BF3A18D00ECE80D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5349628C1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>533391811CA67D55005EFA48</string>
+				<string>537EE12A1C0B5F00008501B0</string>
+				<string>1A7A39DF3FC028862A2B2B0C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5349628D1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>53356CBD1D4279BC00A20515</string>
+				<string>53134F631D60AF4000B44343</string>
+				<string>536E2C131BF726C500B5E7DE</string>
+				<string>5380329C1C20236C00E07131</string>
+				<string>53E2325D1BFE39A700F36B71</string>
+				<string>534962C31BE39D6600BFFD71</string>
+				<string>5349629A1BE07BE700BFFD71</string>
+				<string>534962981BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5349628E1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>534962B71BE07BE700BFFD71</string>
+			<key>buildPhases</key>
+			<array>
+				<string>AA8C478B0EE433A82845A910</string>
+				<string>5349628B1BE07BE700BFFD71</string>
+				<string>5349628C1BE07BE700BFFD71</string>
+				<string>5349628D1BE07BE700BFFD71</string>
+				<string>53C793DB1C09E0D2000FBA3B</string>
+				<string>53B362B81CC4CA3A003CF0E7</string>
+				<string>A5C872EABF216D2209885B25</string>
+				<string>47537362D604483186170D27</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>537EE0FC1C0B35BB008501B0</string>
+				<string>53B362B31CC4CA3A003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaohsiung City Bike</string>
+			<key>productName</key>
+			<string>Kaohsiung City Bike</string>
+			<key>productReference</key>
+			<string>5349628F1BE07BE700BFFD71</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>5349628F1BE07BE700BFFD71</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaohsiung City Bike.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>534962901BE07BE700BFFD71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5349628F1BE07BE700BFFD71</string>
+				<string>534962A31BE07BE700BFFD71</string>
+				<string>534962AE1BE07BE700BFFD71</string>
+				<string>537EE0DF1C0B35BB008501B0</string>
+				<string>537EE0EB1C0B35BB008501B0</string>
+				<string>53B362A71CC4CA39003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962911BE07BE700BFFD71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53B362BC1CC4D72E003CF0E7</string>
+				<string>5340DAF51BE51047009EBF16</string>
+				<string>534962921BE07BE700BFFD71</string>
+				<string>534962941BE07BE700BFFD71</string>
+				<string>53893AED1BE9CAF700E32ECD</string>
+				<string>531F22331BF3A18D00ECE80D</string>
+				<string>53F165F11C402F6900E851F0</string>
+				<string>5333917D1CA67804005EFA48</string>
+				<string>5333917F1CA6781D005EFA48</string>
+				<string>534962961BE07BE700BFFD71</string>
+				<string>534962991BE07BE700BFFD71</string>
+				<string>53356CBF1D4279BC00A20515</string>
+				<string>534962C21BE39D6600BFFD71</string>
+				<string>536E2C151BF726C500B5E7DE</string>
+				<string>53E2325F1BFE39A700F36B71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Kaohsiung City Bike</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962921BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962931BE07BE700BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962921BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>534962941BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962951BE07BE700BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962941BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>534962961BE07BE700BFFD71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>534962971BE07BE700BFFD71</string>
+				<string>53356CD71D42889700A20515</string>
+				<string>53356CD81D42889F00A20515</string>
+				<string>53356CD91D4288A600A20515</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962971BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962981BE07BE700BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962961BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>534962991BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5349629A1BE07BE700BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962991BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5349629F1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>534962A81BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>534962A01BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>534962A11BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>534962A21BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>534962BA1BE07BE700BFFD71</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5349629F1BE07BE700BFFD71</string>
+				<string>534962A01BE07BE700BFFD71</string>
+				<string>534962A11BE07BE700BFFD71</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>534962A51BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaohsiung City BikeTests</string>
+			<key>productName</key>
+			<string>Kaohsiung City BikeTests</string>
+			<key>productReference</key>
+			<string>534962A31BE07BE700BFFD71</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>534962A31BE07BE700BFFD71</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaohsiung City BikeTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>534962A41BE07BE700BFFD71</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>534962871BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5349628E1BE07BE700BFFD71</string>
+			<key>remoteInfo</key>
+			<string>Kaohsiung City Bike</string>
+		</dict>
+		<key>534962A51BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>5349628E1BE07BE700BFFD71</string>
+			<key>targetProxy</key>
+			<string>534962A41BE07BE700BFFD71</string>
+		</dict>
+		<key>534962A61BE07BE700BFFD71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>534962A71BE07BE700BFFD71</string>
+				<string>534962A91BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Kaohsiung City BikeTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962A71BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Kaohsiung_City_BikeTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962A81BE07BE700BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962A71BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>534962A91BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962AA1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>534962B31BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>534962AB1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>534962AC1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>534962AD1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>534962BD1BE07BE700BFFD71</string>
+			<key>buildPhases</key>
+			<array>
+				<string>534962AA1BE07BE700BFFD71</string>
+				<string>534962AB1BE07BE700BFFD71</string>
+				<string>534962AC1BE07BE700BFFD71</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>534962B01BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaohsiung City BikeUITests</string>
+			<key>productName</key>
+			<string>Kaohsiung City BikeUITests</string>
+			<key>productReference</key>
+			<string>534962AE1BE07BE700BFFD71</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>534962AE1BE07BE700BFFD71</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaohsiung City BikeUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>534962AF1BE07BE700BFFD71</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>534962871BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5349628E1BE07BE700BFFD71</string>
+			<key>remoteInfo</key>
+			<string>Kaohsiung City Bike</string>
+		</dict>
+		<key>534962B01BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>5349628E1BE07BE700BFFD71</string>
+			<key>targetProxy</key>
+			<string>534962AF1BE07BE700BFFD71</string>
+		</dict>
+		<key>534962B11BE07BE700BFFD71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>534962B21BE07BE700BFFD71</string>
+				<string>534962B41BE07BE700BFFD71</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Kaohsiung City BikeUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962B21BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Kaohsiung_City_BikeUITests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962B31BE07BE700BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962B21BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>534962B41BE07BE700BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962B51BE07BE700BFFD71</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>534962B61BE07BE700BFFD71</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>534962B71BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>534962B81BE07BE700BFFD71</string>
+				<string>534962B91BE07BE700BFFD71</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>534962B81BE07BE700BFFD71</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6E9097E921CBE7FD845A3441</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>Kaohsiung City Bike/Kaohsiung City Bike.entitlements</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung City Bike/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>534962B91BE07BE700BFFD71</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7013A5A988DFE3F57B957927</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>Kaohsiung City Bike/Kaohsiung City Bike.entitlements</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung City Bike/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>534962BA1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>534962BB1BE07BE700BFFD71</string>
+				<string>534962BC1BE07BE700BFFD71</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>534962BB1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung City BikeTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkr.Kaohsiung-City-BikeTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>534962BC1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung City BikeTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkr.Kaohsiung-City-BikeTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>534962BD1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>534962BE1BE07BE700BFFD71</string>
+				<string>534962BF1BE07BE700BFFD71</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>534962BE1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung City BikeUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkr.Kaohsiung-City-BikeUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>Kaohsiung City Bike</string>
+				<key>USES_XCTRUNNER</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>534962BF1BE07BE700BFFD71</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung City BikeUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkr.Kaohsiung-City-BikeUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>Kaohsiung City Bike</string>
+				<key>USES_XCTRUNNER</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>534962C01BE3719400BFFD71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MapKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MapKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>534962C21BE39D6600BFFD71</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>citybike.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534962C31BE39D6600BFFD71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962C21BE39D6600BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>534E08D11C0DEB9400AA0133</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TimerInterfaceController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>534E08D21C0DEB9400AA0133</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534E08D11C0DEB9400AA0133</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>536E2C131BF726C500B5E7DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>536E2C151BF726C500B5E7DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>536E2C141BF726C500B5E7DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hant</string>
+			<key>path</key>
+			<string>zh-Hant.lproj/Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>536E2C151BF726C500B5E7DE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>536E2C141BF726C500B5E7DE</string>
+				<string>536E2C161BF726C900B5E7DE</string>
+				<string>531551261C08B65E00DA0285</string>
+				<string>53928D071C57BB070072FA37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>536E2C161BF726C900B5E7DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0DD1C0B35BB008501B0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>537EE1311C0B6EBC008501B0</string>
+				<string>53235FD51D4363B6008C5B47</string>
+				<string>537EE1341C0B73A0008501B0</string>
+				<string>537EE0E31C0B35BB008501B0</string>
+				<string>5319C3871D4657CB0014C51E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>537EE0DE1C0B35BB008501B0</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>537EE1041C0B35BB008501B0</string>
+			<key>buildPhases</key>
+			<array>
+				<string>537EE0DD1C0B35BB008501B0</string>
+				<string>537EE1031C0B35BB008501B0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>537EE0EE1C0B35BB008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaohsiung CityBike WatchApp</string>
+			<key>productName</key>
+			<string>Kaohsiung CityBike WatchApp</string>
+			<key>productReference</key>
+			<string>537EE0DF1C0B35BB008501B0</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application.watchapp2</string>
+		</dict>
+		<key>537EE0DF1C0B35BB008501B0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike WatchApp.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>537EE0E01C0B35BB008501B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>537EE0E11C0B35BB008501B0</string>
+				<string>537EE0E41C0B35BB008501B0</string>
+				<string>537EE0E61C0B35BB008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike WatchApp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0E11C0B35BB008501B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>537EE0E21C0B35BB008501B0</string>
+				<string>5319C38C1D46615C0014C51E</string>
+				<string>5319C38D1D4661630014C51E</string>
+				<string>5319C38E1D46616A0014C51E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Interface.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0E21C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Interface.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0E31C0B35BB008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0E11C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE0E41C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0E61C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0E71C0B35BB008501B0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>537EE0F71C0B35BB008501B0</string>
+				<string>537EE0F51C0B35BB008501B0</string>
+				<string>537EE0F31C0B35BB008501B0</string>
+				<string>534E08D21C0DEB9400AA0133</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>537EE0E81C0B35BB008501B0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>537EE0E91C0B35BB008501B0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>537EE1331C0B7349008501B0</string>
+				<string>5319C3881D4657CC0014C51E</string>
+				<string>53C362341CC9FE2200050EBE</string>
+				<string>537EE1301C0B6EBC008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>537EE0EA1C0B35BB008501B0</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>537EE1021C0B35BB008501B0</string>
+			<key>buildPhases</key>
+			<array>
+				<string>537EE0E71C0B35BB008501B0</string>
+				<string>537EE0E81C0B35BB008501B0</string>
+				<string>537EE0E91C0B35BB008501B0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaohsiung CityBike WatchApp Extension</string>
+			<key>productName</key>
+			<string>Kaohsiung CityBike WatchApp Extension</string>
+			<key>productReference</key>
+			<string>537EE0EB1C0B35BB008501B0</string>
+			<key>productType</key>
+			<string>com.apple.product-type.watchkit2-extension</string>
+		</dict>
+		<key>537EE0EB1C0B35BB008501B0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.app-extension</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike WatchApp Extension.appex</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>537EE0EC1C0B35BB008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0EB1C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>RemoveHeadersOnCopy</string>
+				</array>
+			</dict>
+		</dict>
+		<key>537EE0ED1C0B35BB008501B0</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>534962871BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>537EE0EA1C0B35BB008501B0</string>
+			<key>remoteInfo</key>
+			<string>Kaohsiung CityBike WatchApp Extension</string>
+		</dict>
+		<key>537EE0EE1C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>537EE0EA1C0B35BB008501B0</string>
+			<key>targetProxy</key>
+			<string>537EE0ED1C0B35BB008501B0</string>
+		</dict>
+		<key>537EE0EF1C0B35BB008501B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>537EE0F21C0B35BB008501B0</string>
+				<string>534E08D11C0DEB9400AA0133</string>
+				<string>537EE0F41C0B35BB008501B0</string>
+				<string>537EE0F61C0B35BB008501B0</string>
+				<string>537EE0F81C0B35BB008501B0</string>
+				<string>537EE0FA1C0B35BB008501B0</string>
+				<string>537EE0F01C0B35BB008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike WatchApp Extension</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0F01C0B35BB008501B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>537EE0F11C0B35BB008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0F11C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>PushNotificationPayload.apns</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0F21C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>InterfaceController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0F31C0B35BB008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0F21C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE0F41C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ExtensionDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0F51C0B35BB008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0F41C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE0F61C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NotificationController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0F71C0B35BB008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0F61C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE0F81C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0FA1C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>537EE0FB1C0B35BB008501B0</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>534962871BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>537EE0DE1C0B35BB008501B0</string>
+			<key>remoteInfo</key>
+			<string>Kaohsiung CityBike WatchApp</string>
+		</dict>
+		<key>537EE0FC1C0B35BB008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>537EE0DE1C0B35BB008501B0</string>
+			<key>targetProxy</key>
+			<string>537EE0FB1C0B35BB008501B0</string>
+		</dict>
+		<key>537EE0FD1C0B35BB008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0DF1C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE0FE1C0B35BB008501B0</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
+				<string>iPhone Developer</string>
+				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
+				<string>YES</string>
+				<key>IBSC_MODULE</key>
+				<string>Kaohsiung_CityBike_WatchApp_Extension</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung CityBike WatchApp/Info.plist</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike.watchkitapp</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>watchos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>WATCHOS_DEPLOYMENT_TARGET</key>
+				<string>2.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>537EE0FF1C0B35BB008501B0</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
+				<string>iPhone Developer</string>
+				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
+				<string>YES</string>
+				<key>IBSC_MODULE</key>
+				<string>Kaohsiung_CityBike_WatchApp_Extension</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung CityBike WatchApp/Info.plist</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike.watchkitapp</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>watchos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>WATCHOS_DEPLOYMENT_TARGET</key>
+				<string>2.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>537EE1001C0B35BB008501B0</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung CityBike WatchApp Extension/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike.watchkitapp.watchkitextension</string>
+				<key>PRODUCT_NAME</key>
+				<string>${TARGET_NAME}</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>watchos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>WATCHOS_DEPLOYMENT_TARGET</key>
+				<string>2.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>537EE1011C0B35BB008501B0</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung CityBike WatchApp Extension/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike.watchkitapp.watchkitextension</string>
+				<key>PRODUCT_NAME</key>
+				<string>${TARGET_NAME}</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>watchos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>4</string>
+				<key>WATCHOS_DEPLOYMENT_TARGET</key>
+				<string>2.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>537EE1021C0B35BB008501B0</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>537EE1001C0B35BB008501B0</string>
+				<string>537EE1011C0B35BB008501B0</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>537EE1031C0B35BB008501B0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string></string>
+			<key>dstSubfolderSpec</key>
+			<string>13</string>
+			<key>files</key>
+			<array>
+				<string>537EE0EC1C0B35BB008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>name</key>
+			<string>Embed App Extensions</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>537EE1041C0B35BB008501B0</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>537EE0FE1C0B35BB008501B0</string>
+				<string>537EE0FF1C0B35BB008501B0</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>537EE1291C0B5F00008501B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>WatchConnectivity.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/WatchConnectivity.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>537EE12A1C0B5F00008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE1291C0B5F00008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE1301C0B6EBC008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0F81C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE1311C0B6EBC008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>537EE0F81C0B35BB008501B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE1331C0B7349008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962991BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>537EE1341C0B73A0008501B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962991BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5380329B1C20236B00E07131</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>geojson.geojson</string>
+			<key>path</key>
+			<string>Kaohsiung City Bike/geojson.geojson</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5380329C1C20236C00E07131</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5380329B1C20236B00E07131</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53893AED1BE9CAF700E32ECD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DataGet.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53893AEE1BE9CAF700E32ECD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53893AED1BE9CAF700E32ECD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53928D071C57BB070072FA37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hans</string>
+			<key>path</key>
+			<string>zh-Hans.lproj/Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53928D081C57BB070072FA37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hans</string>
+			<key>path</key>
+			<string>zh-Hans.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362A31CC4CA39003CF0E7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>53B362AD1CC4CA3A003CF0E7</string>
+				<string>530A42E51CC76A5E00796DCF</string>
+				<string>53B362BA1CC4CF7C003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>53B362A41CC4CA39003CF0E7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>53B362AA1CC4CA39003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>53B362A51CC4CA39003CF0E7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>53B362BB1CC4CFF3003CF0E7</string>
+				<string>53C362331CC9FE2100050EBE</string>
+				<string>53C362311CC9D54200050EBE</string>
+				<string>53B362B01CC4CA3A003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>53B362A61CC4CA39003CF0E7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>53B362B71CC4CA3A003CF0E7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>53B362A31CC4CA39003CF0E7</string>
+				<string>53B362A41CC4CA39003CF0E7</string>
+				<string>53B362A51CC4CA39003CF0E7</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaohsiung CityBike Widget</string>
+			<key>productName</key>
+			<string>Kaohsiung CityBike Widget</string>
+			<key>productReference</key>
+			<string>53B362A71CC4CA39003CF0E7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.app-extension</string>
+		</dict>
+		<key>53B362A71CC4CA39003CF0E7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.app-extension</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike Widget.appex</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>53B362A81CC4CA39003CF0E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53B362A91CC4CA39003CF0E7</string>
+				<string>B125F1B793279BF9D4551FB7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362A91CC4CA39003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>NotificationCenter.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/NotificationCenter.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>53B362AA1CC4CA39003CF0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53B362A91CC4CA39003CF0E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53B362AB1CC4CA39003CF0E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53B362BD1CC4D88C003CF0E7</string>
+				<string>53B362AC1CC4CA3A003CF0E7</string>
+				<string>53B362B91CC4CF7C003CF0E7</string>
+				<string>53B362AE1CC4CA3A003CF0E7</string>
+				<string>53B362B11CC4CA3A003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike Widget</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362AC1CC4CA3A003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TodayViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362AD1CC4CA3A003CF0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53B362AC1CC4CA3A003CF0E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53B362AE1CC4CA3A003CF0E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53B362AF1CC4CA3A003CF0E7</string>
+				<string>53235FD71D4364F7008C5B47</string>
+				<string>53235FD91D4364F9008C5B47</string>
+				<string>53235FDB1D4364FA008C5B47</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainInterface.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362AF1CC4CA3A003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MainInterface.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362B01CC4CA3A003CF0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53B362AE1CC4CA3A003CF0E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53B362B11CC4CA3A003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362B21CC4CA3A003CF0E7</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>534962871BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>53B362A61CC4CA39003CF0E7</string>
+			<key>remoteInfo</key>
+			<string>Kaohsiung CityBike Widget</string>
+		</dict>
+		<key>53B362B31CC4CA3A003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>53B362A61CC4CA39003CF0E7</string>
+			<key>targetProxy</key>
+			<string>53B362B21CC4CA3A003CF0E7</string>
+		</dict>
+		<key>53B362B41CC4CA3A003CF0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53B362A71CC4CA39003CF0E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>RemoveHeadersOnCopy</string>
+				</array>
+			</dict>
+		</dict>
+		<key>53B362B51CC4CA3A003CF0E7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung CityBike Widget/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike.Kaohsiung-CityBike-Widget</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>53B362B61CC4CA3A003CF0E7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Kaohsiung CityBike Widget/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Sparkrs.CityBike.Kaohsiung-CityBike-Widget</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>53B362B71CC4CA3A003CF0E7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>53B362B51CC4CA3A003CF0E7</string>
+				<string>53B362B61CC4CA3A003CF0E7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>53B362B81CC4CA3A003CF0E7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string></string>
+			<key>dstSubfolderSpec</key>
+			<string>13</string>
+			<key>files</key>
+			<array>
+				<string>53B362B41CC4CA3A003CF0E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>name</key>
+			<string>Embed App Extensions</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>53B362B91CC4CF7C003CF0E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TodayWidgetTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362BA1CC4CF7C003CF0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53B362B91CC4CF7C003CF0E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53B362BB1CC4CFF3003CF0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>534962991BE07BE700BFFD71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53B362BC1CC4D72E003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xml</string>
+			<key>path</key>
+			<string>Kaohsiung City Bike.entitlements</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B362BD1CC4D88C003CF0E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xml</string>
+			<key>path</key>
+			<string>Kaohsiung CityBike Widget.entitlements</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53C362311CC9D54200050EBE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53E2325F1BFE39A700F36B71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53C362331CC9FE2100050EBE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>536E2C151BF726C500B5E7DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53C362341CC9FE2200050EBE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>536E2C151BF726C500B5E7DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53C793DB1C09E0D2000FBA3B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string>$(CONTENTS_FOLDER_PATH)/Watch</string>
+			<key>dstSubfolderSpec</key>
+			<string>16</string>
+			<key>files</key>
+			<array>
+				<string>537EE0FD1C0B35BB008501B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>name</key>
+			<string>Embed Watch Content</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>53E2325D1BFE39A700F36B71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53E2325F1BFE39A700F36B71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53E2325F1BFE39A700F36B71</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53E232601BFE39A800F36B71</string>
+				<string>53E232611BFE39AB00F36B71</string>
+				<string>53928D081C57BB070072FA37</string>
+				<string>53356CCB1D42863000A20515</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53E232601BFE39A800F36B71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53E232611BFE39AB00F36B71</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>zh-Hant</string>
+			<key>path</key>
+			<string>zh-Hant.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53E42D161D436EB0004B9B98</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>Info.plist</string>
+			<key>path</key>
+			<string>Kaohsiung City Bike/Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53F165F11C402F6900E851F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Reachability.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53F165F21C402F6900E851F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53F165F11C402F6900E851F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6E9097E921CBE7FD845A3441</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Kaohsiung City Bike.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7013A5A988DFE3F57B957927</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Kaohsiung City Bike.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F3B8B38637C9C5DF0F3947D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6E9097E921CBE7FD845A3441</string>
+				<string>7013A5A988DFE3F57B957927</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5C872EABF216D2209885B25</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>AA8C478B0EE433A82845A910</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B125F1B793279BF9D4551FB7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_Kaohsiung_City_Bike.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>534962871BE07BE700BFFD71</string>
+</dict>
+</plist>
