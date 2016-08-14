@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseMessaging
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -24,11 +26,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: nil))
         }
         
+        FIRApp.configure()
+        
+        let notificationType: UIUserNotificationType = [.Alert,.Sound]
+        let notificationSettings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
+        application.registerForRemoteNotifications()
+        application.registerUserNotificationSettings(notificationSettings)
+        
         return true
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         application.applicationIconBadgeNumber = 0
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        application.applicationIconBadgeNumber = 0
+        print(userInfo)
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
