@@ -19,7 +19,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
         // Do any additional setup after loading the view from its nib.
         self.tableView.cellLayoutMarginsFollowReadableWidth = false
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
-        self.tableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 10)
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 1)
         self.clearsSelectionOnViewWillAppear = true
         var currentSize: CGSize = self.preferredContentSize
         if let saved = self.userDefault.arrayForKey("staForTodayWidget"){

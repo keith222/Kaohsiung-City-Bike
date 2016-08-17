@@ -98,24 +98,23 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
     
     func likeButtonAction(sender:UIButton){
         if var staArray = self.userDefault.arrayForKey("staForTodayWidget"){
-            if staArray.count < 8{
-                let staName = (self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as? String) : (staInfo[sender.tag]["StationName"] as? String)
-                if staArray.contains({$0 as? String == staName}){
-                    staArray = staArray.filter({$0 as? String != staName})
-                    self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
-                    self.userDefault.synchronize()
-                    NSLog("remove station")
-                    sender.setImage(UIImage(named: "star"), forState: .Normal)
-                }else{
+            let staName = (self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as? String) : (staInfo[sender.tag]["StationName"] as? String)
+            if staArray.contains({$0 as? String == staName}){
+                staArray = staArray.filter({$0 as? String != staName})
+                self.userDefault.setObject(staArray, forKey: "staForTodayWidget")
+                self.userDefault.synchronize()
+                NSLog("remove station")
+                sender.setImage(UIImage(named: "star"), forState: .Normal)
+            }else{
+                if staArray.count < 8{
                     staArray.append(staName!)
                     self.addAlert(staArray, button: sender)
+                }else{
+                    let alert = UIAlertController(title: NSLocalizedString("Reached_the_limit", comment: ""), message: NSLocalizedString("Only_7_Station_can_be_added", comment: ""), preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+                    alert.addAction(okAction)
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
-            }else{
-                let alert = UIAlertController(title: NSLocalizedString("Reached_the_limit", comment: ""), message: NSLocalizedString("Only_7_Station_can_be_added", comment: ""), preferredStyle: .Alert)
-                let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
-                alert.addAction(okAction)
-                self.presentViewController(alert, animated: true, completion: nil)
-
             }
         }else{
             let array = [(self.searchController.active) ?  (self.searchResults[sender.tag]["StationName"] as! String) : (staInfo[sender.tag]["StationName"] as! String)]
