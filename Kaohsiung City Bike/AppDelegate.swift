@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseMessaging
+import FirebaseInstanceID
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -26,14 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: nil))
         }
         
-        FIRApp.configure()
-        
         let notificationType: UIUserNotificationType = [.Alert,.Sound]
         let notificationSettings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
-        application.registerForRemoteNotifications()
         application.registerUserNotificationSettings(notificationSettings)
+        application.registerForRemoteNotifications()
+        
+        FIRApp.configure()
         
         return true
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+            FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.Prod)
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
@@ -92,6 +97,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func tokenRefreshNotification(notification: NSNotification) {
+        if let refreshedToken = FIRInstanceID.instanceID().token() {
+            print("InstanceID token: \(refreshedToken)")
+        }
+    }
 
 }
 

@@ -94,13 +94,14 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
             mapView.showsUserLocation = true;
             locationManager.startUpdatingLocation()
+            //精準度設為100m且移動50公尺才更新位置
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.distanceFilter = CLLocationDistance(50)
         }else{
             locationManager.requestWhenInUseAuthorization()
         }
 
-        //精準度設為100m且移動50公尺才更新位置
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager.distanceFilter = CLLocationDistance(50)
+        
         
         let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
         
