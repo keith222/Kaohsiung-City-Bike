@@ -52,7 +52,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     var stopWatch:NSTimer!
     var count = 0
     var type = 0
-    var annoArray:NSMutableArray? = NSMutableArray()
+    var annoArray:[MKAnnotation]? = [MKAnnotation]()
     var staNum:NSInteger!
     var watchSession:WCSession?
     let customAnnotation:MKPointAnnotation = MKPointAnnotation()
@@ -109,8 +109,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let annotation = MKPointAnnotation()
             annotation.title = element["StationName"] as? String
             annotation.coordinate = CLLocationCoordinate2D(latitude: (element["StationLat"] as! NSString).doubleValue as CLLocationDegrees , longitude: (element["StationLon"] as! NSString).doubleValue as CLLocationDegrees)
-            annoArray?.addObject(annotation)
-            mapView.showAnnotations([annotation], animated: true)
+            annoArray?.append(annotation)
         }
         
         //添加手勢
@@ -207,7 +206,24 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             checkIfInCity()
         }
     }
-
+    
+    func mapViewWillStartRenderingMap(mapView: MKMapView) {
+        print("will start rendering map")
+    }
+    
+    func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
+        //filter annotation in map rect
+        let existAnnotation = annoArray?.filter({ (annotation) in
+            MKMapRectContainsPoint(
+                self.mapView.visibleMapRect, MKMapPointForCoordinate(annotation.coordinate)
+            )
+            &&
+            !self.mapView.annotations.contains{$0.isEqual(annotation)}
+        })
+        self.mapView.addAnnotations(existAnnotation as! [MKPointAnnotation])
+        print("annotation count: \(self.mapView.annotationsInMapRect(self.mapView.visibleMapRect).count)")
+    }
+    
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is MKPointAnnotation) {
@@ -217,14 +233,11 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            anView!.image = UIImage(named:"bikePin")
             anView!.canShowCallout = true
+            anView!.image = !(self.annoArray!.contains{$0.isEqual(anView!.annotation)}) ? UIImage(named:"flagpin") : UIImage(named:"bikePin")
             //anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
         }else {
             anView!.annotation = annotation
-            if(!(self.annoArray!.containsObject((anView?.annotation)!))){
-                anView!.image = UIImage(named:"flagpin")
-            }
         }
         return anView
     }
@@ -238,7 +251,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             var annoType = 0
             
             if !(view.annotation!.isEqual(self.customAnnotation)){
-                self.staNum = self.annoArray?.indexOfObject(view.annotation!)
+                self.staNum = self.annoArray?.indexOf{$0.isEqual(view.annotation)}
                 //點下annotation後的動作
                 mapView.removeOverlays(self.mapView.overlays)
                 self.staName.text = (view.annotation?.title)!
@@ -451,31 +464,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         },completion: nil)
         
     }
-    
-    /*
-    func configureSearchBar(){
-        //將UISearchBar放到Navigation的titleView上
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.delegate = self
-        searchController.searchBar.delegate = self
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = true
-        searchController.searchBar.autocapitalizationType = UITextAutocapitalizationType.None
-        searchController.searchBar.keyboardType = UIKeyboardType.Default
-        navigationItem.titleView = searchController.searchBar
-        definesPresentationContext = true
-    }
-
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        navigationItem.leftBarButtonItem = nil
-        navigationItem.rightBarButtonItem = nil
-    }
-    
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        navigationItem.leftBarButtonItem = leftBarButton
-        navigationItem.rightBarButtonItem = rightBarButton
-    }
-    */
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
