@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     var mDelegate: sendData?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor = UIColor(red: 23.0/255.0, green: 169.0/255.0, blue: 174.0/255.0, alpha: 1.0)
