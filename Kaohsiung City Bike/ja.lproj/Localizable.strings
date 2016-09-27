@@ -24,7 +24,7 @@
 "Search" = "サイト/アドレス";
 "Station_List" = "サイトリスト";
 "Reached_the_limit" = "限界に達して";
-"Only_7_Station_can_be_added" = "7サイトを追加することができます。";
+"Only_8_Station_can_be_added" = "8サイトを追加することができます。";
 "Widget_alert_title" = "\"今日 ウィジェット\"に追加する";
 "Widget_alert_content" = "\"通知センター\"にこのサイトのリアルタイムの情報を入手できることができます";
 "Widget_alert_ok" = "OK";

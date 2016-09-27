@@ -499,12 +499,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Yang Tun-Kai";
 				TargetAttributes = {
 					5349628E1BE07BE700BFFD71 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 8MREJM6257;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -522,15 +523,21 @@
 					};
 					534962A21BE07BE700BFFD71 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = 5349628E1BE07BE700BFFD71;
 					};
 					534962AD1BE07BE700BFFD71 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 5349628E1BE07BE700BFFD71;
 					};
 					537EE0DE1C0B35BB008501B0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 8MREJM6257;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -540,6 +547,7 @@
 					537EE0EA1C0B35BB008501B0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 8MREJM6257;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -552,6 +560,7 @@
 					53B362A61CC4CA39003CF0E7 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8MREJM6257;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -853,6 +862,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -862,8 +872,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -899,6 +911,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -908,8 +921,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
@@ -930,6 +945,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "3e884559-96a2-4197-80c7-f9b2f218944a";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -938,17 +954,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E9097E921CBE7FD845A3441 /* Pods-Kaohsiung City Bike.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f792b694-fdef-4d96-a275-31543b0cf6b4";
+				PROVISIONING_PROFILE_SPECIFIER = "Developement-CityBike";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -956,17 +975,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7013A5A988DFE3F57B957927 /* Pods-Kaohsiung City Bike.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3e884559-96a2-4197-80c7-f9b2f218944a";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -974,10 +994,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
 			};
 			name = Debug;
@@ -986,10 +1009,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
 			};
 			name = Release;
@@ -997,10 +1024,12 @@
 		534962BE1BE07BE700BFFD71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Kaohsiung City Bike";
 				USES_XCTRUNNER = YES;
 			};
@@ -1009,10 +1038,14 @@
 		534962BF1BE07BE700BFFD71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Kaohsiung City Bike";
 				USES_XCTRUNNER = YES;
 			};
@@ -1021,19 +1054,22 @@
 		537EE0FE1C0B35BB008501B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cbeef7c3-a2f6-4516-8acf-25acf35a846a";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: Sparkrs.CityBike.Kaohsiung-CityBikeWatch";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1042,19 +1078,22 @@
 		537EE0FF1C0B35BB008501B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbeef7c3-a2f6-4516-8acf-25acf35a846a";
+				PROVISIONING_PROFILE = "bc515a58-97dd-4fa7-bbd4-9d9879ee1012";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1065,15 +1104,18 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer: Tun-Kai Yang (QMVFD9YCH5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bc515a58-97dd-4fa7-bbd4-9d9879ee1012";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1093,6 +1135,7 @@
 				PROVISIONING_PROFILE = "90d60baa-4940-4aee-9f73-a0ba94bbf197";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1102,6 +1145,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1111,8 +1155,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
@@ -1141,17 +1187,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7013A5A988DFE3F57B957927 /* Pods-Kaohsiung City Bike.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "531fd75c-ddf7-494d-842c-57739c6c52d1";
+				SWIFT_VERSION = 3.0;
 			};
 			name = "Ad-Hoc";
 		};
@@ -1159,10 +1206,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
 			};
 			name = "Ad-Hoc";
@@ -1170,10 +1221,14 @@
 		5383341F1D68A2D200D7F654 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Kaohsiung City Bike";
 				USES_XCTRUNNER = YES;
 			};
@@ -1182,19 +1237,22 @@
 		538334201D68A2D200D7F654 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "61d58caf-c0f1-4b97-a825-d709e3b36c82";
+				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.watchkitapp.Ad-hoc";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1214,6 +1272,7 @@
 				PROVISIONING_PROFILE = "bee1f79d-b3bf-46ae-b795-77185a10e53c";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1233,6 +1292,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d7ae52d8-61c1-4c99-8f42-44341ade5849";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = "Ad-Hoc";
 		};
@@ -1242,14 +1302,17 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8d9fdaa8-a9b3-4ab6-b19e-d96db412a41a";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1267,6 +1330,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8d9fdaa8-a9b3-4ab6-b19e-d96db412a41a";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

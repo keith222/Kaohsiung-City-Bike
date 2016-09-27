@@ -17,10 +17,10 @@ class TimerInterfaceController: WKInterfaceController {
     @IBOutlet var startStopButtonOutlet: WKInterfaceButton!
     var isStopped = true
     var count = 0
-    var stopTimer:NSTimer!
+    var stopTimer:Timer!
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         // Configure interface objects here.
     }
@@ -40,7 +40,7 @@ class TimerInterfaceController: WKInterfaceController {
             self.isStopped = false
             self.timeLabel.setText("00:00:00")
             self.priceLabel.setText("0")
-            self.stopTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(TimerInterfaceController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+            self.stopTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(TimerInterfaceController.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.startStopButtonOutlet.setBackgroundColor(UIColor(red: 243/255, green: 130/255, blue: 174/255, alpha: 1))
             self.startStopButtonOutlet.setTitle(NSLocalizedString("TimeStop", comment: ""))
             
@@ -72,7 +72,7 @@ class TimerInterfaceController: WKInterfaceController {
         
     }
     
-    func stopWatchTimer(timer:NSTimer){
+    func stopWatchTimer(_ timer:Timer){
         count += 1
         let second = count%60
         let minute = (count/60)%60

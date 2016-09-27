@@ -16,7 +16,10 @@ import CoreLocation
 import CoreSpotlight
 import MobileCoreServices
 
-class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate,UISearchControllerDelegate,UIAlertViewDelegate, sendData{
+
+
+class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLocationManagerDelegate,UIAlertViewDelegate, sendData{
+
 
     @IBOutlet var mapView:MKMapView!
     @IBOutlet var travelTimeLabel: UILabel!
@@ -33,7 +36,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     @IBOutlet var customWalkingTimeLabel: UILabel!
     @IBOutlet var customRidingTimeLabel: UILabel!
     
-    
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
     @IBOutlet var costSpend: UILabel!
@@ -41,47 +43,51 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     
     let locationManager = CLLocationManager()
-    var transportType = MKDirectionsTransportType.Walking //以步行方式導航
+    var transportType = MKDirectionsTransportType.walking //以步行方式導航
     var currentLocation: CLLocationCoordinate2D!
-    var searchController: UISearchController!
-    var leftBarButton: UIBarButtonItem!
-    var rightBarButton: UIBarButtonItem!
     var currentA: MKAnnotation!
+    var selectedAnnotation:MKPointAnnotation!
+    let customAnnotation:MKPointAnnotation = MKPointAnnotation()
+    var locateCheck: Bool = true
+
     let bikePlace = DataGet()
-    var timer:NSTimer!
-    var stopWatch:NSTimer!
+    var timer:Timer!
+    var stopWatch:Timer!
     var count = 0
-    var type = 0
     var annoArray:[MKAnnotation]? = [MKAnnotation]()
     var staNum:NSInteger!
+    
     var watchSession:WCSession?
-    let customAnnotation:MKPointAnnotation = MKPointAnnotation()
+    
     var longPress:UILongPressGestureRecognizer!
     var shortPress:UITapGestureRecognizer!
-    var locateCheck: Bool = true
-    var duration: NSDate?
     
-    private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
+    var leftBarButton: UIBarButtonItem!
+    var rightBarButton: UIBarButtonItem!
+    
+    var duration: Date?
+    
+    fileprivate var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //configureSearchBar()
         if(WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
+            watchSession = WCSession.default()
             watchSession!.delegate = self
-            watchSession!.activateSession()
+            watchSession!.activate()
         }
         
         //加入NotificationCenter Observer
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.timeOutAlert(_:)), name: "timeOut:", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.timeOutAlert(_:)), name: NSNotification.Name(rawValue: "timeOut:"), object: nil)
         
         //將一些預設在螢幕外
-        self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
-        self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
-        self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
-        self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, -368)
-        self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 800)
+        self.infoView.transform = CGAffineTransform(translationX: 0, y: -310)
+        self.spendInfo.transform = CGAffineTransform(translationX: 0, y: -368)
+        self.customInfo.transform = CGAffineTransform(translationX: 0, y: -200)
+        self.resultButtonOutlet.transform = CGAffineTransform(translationX: 0, y: -368)
+        self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 800)
         self.blurView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-record")!)
         
         let StationTable = StationTableViewController()
@@ -91,7 +97,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         //確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
-        if(status == CLAuthorizationStatus.AuthorizedWhenInUse){
+        if(status == CLAuthorizationStatus.authorizedWhenInUse){
             mapView.showsUserLocation = true;
             locationManager.startUpdatingLocation()
             //精準度設為100m且移動50公尺才更新位置
@@ -104,6 +110,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         
         let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
+        
         
         for element in stationData{//將位置作成annotation
             let annotation = MKPointAnnotation()
@@ -135,7 +142,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
     }
     
-    func sendData(stationName: String) {
+    func sendData(_ stationName: String) {
         //將車站列表被點選的站點與地圖上的站點對照
         let result = self.mapView.annotations.filter{
             if let staName = $0.title{
@@ -143,27 +150,38 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             }
             return false
         }
-        self.mapView.selectAnnotation(result[0], animated: true)
+        
+        self.mapView.removeAnnotation(self.customAnnotation)
+        
+        //地圖上沒有站點則繪出，有則選擇
+        if result.isEmpty{
+            let newAnn = self.annoArray!.filter{$0.title!! == stationName}.first!
+            self.mapView.addAnnotation(newAnn)
+            self.mapView.selectAnnotation(newAnn, animated: true)
+        }else{
+            self.mapView.selectAnnotation(result[0], animated: true)
+        }
+    
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToStation"{
-            let destination = segue.destinationViewController as! StationTableViewController
+            let destination = segue.destination as! StationTableViewController
             destination.mDelegate = self
         }
     }
     
-    func addAnnotation(gestureRecognizer: UIGestureRecognizer){
+    func addAnnotation(_ gestureRecognizer: UIGestureRecognizer){
         print("add customeAnnotation")
         
         //偵測開始即移除手勢以免多按
-        if(gestureRecognizer.state == .Began){
+        if(gestureRecognizer.state == .began){
             self.mapView.removeGestureRecognizer(gestureRecognizer)
         }
         
         //取得所點位置的座標
-        let touchPoint: CGPoint! = gestureRecognizer.locationInView(self.mapView)
-        let touchMapCoordinate: CLLocationCoordinate2D = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+        let touchPoint: CGPoint! = gestureRecognizer.location(in: self.mapView)
+        let touchMapCoordinate: CLLocationCoordinate2D = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
         
         self.customAnnotation.title = NSLocalizedString("Destination", comment: "")
         self.customAnnotation.coordinate = touchMapCoordinate
@@ -179,7 +197,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
     }
     
-    func removeAnnotation(gestureRecognizer: UIGestureRecognizer){
+    func removeAnnotation(_ gestureRecognizer: UIGestureRecognizer){
         print("remove customeAnnotation")
         //移除路線、customAnnotation、手勢
         self.mapView.removeOverlays(self.mapView.overlays)
@@ -187,16 +205,16 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.mapView.removeGestureRecognizer(gestureRecognizer)
         
         //CustomInfo 回到螢幕外
-        UIView.animateWithDuration(0.5, animations: {
-            self.customInfo.transform = CGAffineTransformMakeTranslation(0, -200)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.customInfo.transform = CGAffineTransform(translationX: 0, y: -200)
         },completion:{(completion) -> Void in
-            self.customInfo.hidden = true
+            self.customInfo.isHidden = true
         })
         
         self.mapView.addGestureRecognizer(self.longPress)
     }
     
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
         if currentA != nil{
             showRoute(currentA)
@@ -207,11 +225,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
     }
     
-    func mapViewWillStartRenderingMap(mapView: MKMapView) {
-        print("will start rendering map")
-    }
-    
-    func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
+    func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
+        print("view did finish render")
         //filter annotation in map rect
         let existAnnotation = annoArray?.filter({ (annotation) in
             MKMapRectContainsPoint(
@@ -220,29 +235,32 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             &&
             !self.mapView.annotations.contains{$0.isEqual(annotation)}
         })
-        self.mapView.addAnnotations(existAnnotation as! [MKPointAnnotation])
-        print("annotation count: \(self.mapView.annotationsInMapRect(self.mapView.visibleMapRect).count)")
+        if existAnnotation?.count != 0{
+            self.mapView.addAnnotations(existAnnotation as! [MKPointAnnotation])
+        }
+        
+        print("annotation count: \(self.mapView.annotations(in: self.mapView.visibleMapRect).count)")
     }
     
-    
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is MKPointAnnotation) {
             return nil
         }
         let reuseId = "pin"
-        var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             anView!.canShowCallout = true
-            anView!.image = !(self.annoArray!.contains{$0.isEqual(anView!.annotation)}) ? UIImage(named:"flagpin") : UIImage(named:"bikePin")
             //anView!.centerOffset = CGPointMake(0, -anView!.frame.size.height/2)
         }else {
             anView!.annotation = annotation
         }
+        anView!.image = !(self.annoArray!.contains{$0.isEqual(anView!.annotation)}) ? UIImage(named:"flagpin") : UIImage(named:"bikePin")
+        
         return anView
     }
     
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         //分離出UserLocation Annotation及Custom Annotation
         if !(view.annotation is MKUserLocation){
             //規劃路徑
@@ -251,7 +269,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             var annoType = 0
             
             if !(view.annotation!.isEqual(self.customAnnotation)){
-                self.staNum = self.annoArray?.indexOf{$0.isEqual(view.annotation)}
+                self.staNum = self.annoArray?.index{$0.isEqual(view.annotation)}
                 //點下annotation後的動作
                 mapView.removeOverlays(self.mapView.overlays)
                 self.staName.text = (view.annotation?.title)!
@@ -260,26 +278,26 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 //偵測網路是否連線
                 if Reachability.isConnectedToNetwork() == true {
                     //啟動timer每五分鐘抓腳踏車資訊
-                    NSTimer.scheduledTimerWithTimeInterval(0, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: false)
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(300, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: true)
+                    Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: false)
+                    self.timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: true)
                 
                     //infoview滑下及timeButton滑上動畫
-                    self.infoView.hidden = false
-                    self.timeButtonOutlet.hidden = false
-                    UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                        self.infoView.transform = CGAffineTransformMakeTranslation(0,0)
-                        self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+                    self.infoView.isHidden = false
+                    self.timeButtonOutlet.isHidden = false
+                    UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                        self.infoView.transform = CGAffineTransform(translationX: 0,y: 0)
+                        self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
                         },completion: nil)
                 }else{
-                    let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }else{
-                self.customInfo.hidden = false
-                UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.customInfo.transform = CGAffineTransformMakeTranslation(0,0)
-                    self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.customInfo.isHidden = false
+                UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    self.customInfo.transform = CGAffineTransform(translationX: 0,y: 0)
+                    self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
                     },completion: nil)
             }
             
@@ -289,21 +307,25 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             let title = view.annotation?.title
             
             
-            if WCSession.defaultSession().reachable == true {
-                let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!, "annoType": annoType]
-                let session = WCSession.defaultSession()
-                session.sendMessage(locationSession as! [String : AnyObject], replyHandler:nil, errorHandler: nil)
+            if WCSession.default().isReachable == true {
+                let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!, "annoType": annoType] as [String : Any]
+                let session = WCSession.default()
+                session.sendMessage(locationSession as [String : AnyObject], replyHandler:nil, errorHandler: nil)
             }
         }
         
     }
     
-    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         //分離出UserLocation Annotation
-        if !(view.annotation is MKUserLocation) && !(view.annotation!.isEqual(self.customAnnotation)){
-            UIView.animateWithDuration(0.5, animations: {
-                self.infoView.transform = CGAffineTransformMakeTranslation(0, -310)
-                self.timeButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 100)
+        if !(view.annotation is MKUserLocation){
+            UIView.animate(withDuration: 0.5, animations: {
+                self.infoView.transform = CGAffineTransform(translationX: 0, y: -310)
+                self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 100)
+                
+                if view.annotation!.isEqual(self.customAnnotation){
+                    self.customInfo.transform = CGAffineTransform(translationX: 0, y: -200)
+                }
             })
             if(self.timer != nil){
                 self.timer.invalidate()
@@ -312,21 +334,21 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
     }
     
-    func showRoute(currentAnnotation: MKAnnotation){
+    func showRoute(_ currentAnnotation: MKAnnotation){
         
         let overlays = self.mapView.overlays//移除位置更新後的舊線條
         mapView.removeOverlays(overlays)
         
         //設定路徑起始與目的地
         let directionRequest = MKDirectionsRequest()
-        directionRequest.source = MKMapItem.mapItemForCurrentLocation()
+        directionRequest.source = MKMapItem.forCurrentLocation()
         let destinationPlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
         directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
-        directionRequest.transportType = MKDirectionsTransportType.Walking
+        directionRequest.transportType = MKDirectionsTransportType.walking
         
         //方位計算
         let directions = MKDirections(request: directionRequest)
-        directions.calculateDirectionsWithCompletionHandler{
+        directions.calculate{
             response, error in
             guard let response = response else {
                 //handle the error here
@@ -334,7 +356,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 return
             }
             let route = response.routes[0] 
-            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
+            self.mapView.add(route.polyline, level: MKOverlayLevel.aboveRoads)
             let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
             
             if currentAnnotation.isEqual(self.customAnnotation){
@@ -346,12 +368,12 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         //計算腳踏車行車時間（以Automobile暫代，因Apple Map不提供 Bike）
         let bikeRequest = MKDirectionsRequest()
-        bikeRequest.source = MKMapItem.mapItemForCurrentLocation()
+        bikeRequest.source = MKMapItem.forCurrentLocation()
         let bikePlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
         bikeRequest.destination = MKMapItem(placemark: bikePlacemark)
-        bikeRequest.transportType = MKDirectionsTransportType.Automobile
+        bikeRequest.transportType = MKDirectionsTransportType.automobile
         let bikeDirections = MKDirections(request: bikeRequest)
-        bikeDirections.calculateDirectionsWithCompletionHandler{
+        bikeDirections.calculate{
             response, error in
             guard let response = response else {
                 //handle the error here
@@ -367,7 +389,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
     }
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         //將路線畫至地圖
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor(red: 40/255, green: 144/255, blue: 244/255, alpha: 1.0)
@@ -376,25 +398,25 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         return renderer
     }
     
-    func bikeInfo(timer:NSTimer){
+    func bikeInfo(_ timer:Timer){
         let xmlParser = BikeParser()
     
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
             
-            if WCSession.defaultSession().reachable == true {
+            if WCSession.default().isReachable == true {
                 let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
-                let session = WCSession.defaultSession()
+                let session = WCSession.default()
                 session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
             }
     
-            dispatch_async(dispatch_get_main_queue(), {
-                if Int(self.xmlItems![self.staNum].ava)<10{
+            DispatchQueue.main.async(execute: {
+                if Int(self.xmlItems![self.staNum].ava)! < 10{
                     self.avaNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
                     self.avaNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
-                if Int(self.xmlItems![self.staNum].unava)<10{
+                if Int(self.xmlItems![self.staNum].unava)! < 10{
                     self.parkNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
                     self.parkNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
@@ -406,27 +428,27 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
     }
     
-    func stopWatchTimer(timer:NSTimer){
+    func stopWatchTimer(_ timer:Timer){
         count += 1
         let second = count%60
         let minute = (count/60)%60
         let hour = Int(count/3600)
-        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), forState: .Normal)
+        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), for: UIControlState())
     }
     
     func pauseStopWatch(){
         if(self.stopWatch != nil){
             self.stopWatch.invalidate()
             self.stopWatch = nil
-            self.duration = NSDate()
+            self.duration = Date()
         }
     }
     
     func startStopWatch(){
         if(self.duration != nil){
-            let newSecond: NSTimeInterval = NSDate().timeIntervalSinceDate(self.duration!)
+            let newSecond: TimeInterval = Date().timeIntervalSince(self.duration!)
             count = count + lround(newSecond)
-            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+            self.stopWatch = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
         }
     }
     
@@ -456,26 +478,27 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.duration = nil
         
         //spendInfo滑下動畫
-        self.spendInfo.hidden = false
-        self.resultButtonOutlet.hidden = false
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.spendInfo.transform = CGAffineTransformMakeTranslation(0,0)
-            self.resultButtonOutlet.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.spendInfo.isHidden = false
+        self.resultButtonOutlet.isHidden = false
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.spendInfo.transform = CGAffineTransform(translationX: 0,y: 0)
+            self.resultButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
         },completion: nil)
         
     }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude , longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        mapView.setRegion(region, animated: false)
-        currentLocation = center
+        self.mapView.setRegion(region, animated: false)
+        self.currentLocation = center
+        
     }
     
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status{
-        case .Denied,.Restricted:
+        case .denied,.restricted:
             requestAgain()
         default:
             break
@@ -487,31 +510,31 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         print("current location:\(currentLocation.longitude);\(currentLocation.latitude)")
         if((currentLocation.longitude < 120.17 || currentLocation.longitude > 120.43) || (currentLocation.latitude > 22.91 || currentLocation.latitude < 22.508)){
             locationManager.stopUpdatingLocation()
-            let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     func requestAgain(){
         //前往設定APP
-        let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("SetButton", comment: ""), style: .Default, handler: {
+        let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("SetButton", comment: ""), style: .default, handler: {
             action in
-            let url = NSURL(string: UIApplicationOpenSettingsURLString)
-            UIApplication.sharedApplication().openURL(url!)
+            let url = URL(string: UIApplicationOpenSettingsURLString)
+            UIApplication.shared.openURL(url!)
         }))
-        alert.addAction(UIAlertAction(title:  NSLocalizedString("OkButton", comment: ""), style: .Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title:  NSLocalizedString("OkButton", comment: ""), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         
     }
     
-    func timeOutAlert(notification:NSNotification){
+    func timeOutAlert(_ notification:Notification){
         //連線逾時AlerView
-        let message = notification.userInfo!["message"] as! String
-        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        let message = (notification as NSNotification).userInfo!["message"] as! String
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         timer.invalidate()
     }
     
@@ -532,13 +555,18 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             keywords.append(element["StationAddress"] as! String)
             searchableItemAttributeSet.keywords = keywords
             
-            let index = stationData.indexOfObject(element)
+            let index = stationData.index(where: {
+                return ($0["StationName"] as! String) == (element["StationName"] as! String)
+            })
             
             let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(index)", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
             searchableItems.append(searchableItem)
+        
+            
+            
         }
         
-        CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(searchableItems, completionHandler: {(error)->Void in
+        CSSearchableIndex.default().indexSearchableItems(searchableItems, completionHandler: {(error)->Void in
             if(error != nil){
                 print(error?.localizedDescription)
             }
@@ -546,14 +574,17 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
     }
     
-    override func restoreUserActivityState(activity: NSUserActivity) {
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
         if activity.activityType == CSSearchableItemActionType{
             if let userInfo = activity.userInfo{
                 //取得spotlight search裡的 identifier
                 let selectedStation = userInfo[CSSearchableItemActivityIdentifier] as! String
+                print(selectedStation)
                 //將identifier切割取最後一位
-                let selectedIndex = Int(selectedStation.componentsSeparatedByString(".").last!)
+                let selectedIndex = Int(selectedStation.components(separatedBy: ".").last!)
+                print(selectedIndex)
                 let stationData = bikePlace.bikeLocationJson()
+                print(stationData[selectedIndex!])
                 let stationName = stationData[selectedIndex!]["StationName"] as! String
                 //將stationname送入senddata以被找出選擇的點
                 sendData(stationName)
@@ -561,19 +592,19 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
     }
 
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         //畫面消失時停止更新位置（節省電量）
         locationManager.stopUpdatingLocation()
         //移除NotificationCenter
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "timeOut", object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationDidBecomeActiveNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "timeOut"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //畫面將要出現時啟動更新位置
         locationManager.startUpdatingLocation()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.startStopWatch), name: UIApplicationDidBecomeActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.pauseStopWatch), name: UIApplicationWillResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.startStopWatch), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.pauseStopWatch), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
 
     }
     
@@ -582,14 +613,26 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func locateMe(sender: AnyObject) {
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(iOS 9.3, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
+    
+    /** Called when all delegate callbacks for the previously selected watch has occurred. The session can be re-activated for the now selected watch using activateSession. */
+    @available(iOS 9.3, *)
+    public func sessionDidDeactivate(_ session: WCSession) {}
+    
+    /** Called when the session can no longer be used to modify or add any new transfers and, all interactive messages will be cancelled, but delegate callbacks for background transfers can still occur. This will happen when the selected watch is being changed. */
+    @available(iOS 9.3, *)
+    public func sessionDidBecomeInactive(_ session: WCSession) {}
+    
+    
+    @IBAction func locateMe(_ sender: AnyObject) {
         //定位按鈕function實作
         let status = CLLocationManager.authorizationStatus()
-        if(status == .AuthorizedWhenInUse){
-            if(currentLocation != nil){
-                let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-    
-                mapView.setRegion(region, animated: true)
+        if(status == .authorizedWhenInUse){
+            if(self.currentLocation != nil){
+                let region = MKCoordinateRegion(center: self.currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                self.mapView.setRegion(region, animated: true)
             }
         }else{
             //取得地理授權
@@ -597,59 +640,59 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
     }
 
-    @IBAction func timeButton(sender: AnyObject) {
+    @IBAction func timeButton(_ sender: AnyObject) {
         if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
-            self.timeButtonOutlet.setTitle("00:00:00", forState: .Normal)
+            self.timeButtonOutlet.setTitle("00:00:00", for: UIControlState())
             
-            self.stopWatch = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
+            self.stopWatch = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
             self.timeButtonOutlet.addShadow(UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1))
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
             
             //設定Local Notification
             let localNotification = UILocalNotification()
-            let pushDate = NSDate(timeIntervalSinceNow: 3000)
+            let pushDate = Date(timeIntervalSinceNow: 3000)
             localNotification.fireDate = pushDate
-            localNotification.timeZone = NSTimeZone.defaultTimeZone()
+            localNotification.timeZone = TimeZone.current
             localNotification.soundName = UILocalNotificationDefaultSoundName
             localNotification.alertBody = NSLocalizedString("Twenty_Minutes_Alert", comment: "")
             localNotification.alertTitle = NSLocalizedString("Time_Alert", comment: "")
             localNotification.category = "myCategory"
-            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+            UIApplication.shared.scheduleLocalNotification(localNotification)
             
             let finalNotification = UILocalNotification()
-            finalNotification.fireDate = NSDate(timeIntervalSinceNow: 3600)
-            finalNotification.timeZone = NSTimeZone.defaultTimeZone()
+            finalNotification.fireDate = Date(timeIntervalSinceNow: 3600)
+            finalNotification.timeZone = TimeZone.current
             finalNotification.soundName = UILocalNotificationDefaultSoundName
             finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")
             finalNotification.alertTitle = NSLocalizedString("Time_Alert", comment: "")
             finalNotification.category = "myCategory"
-            UIApplication.sharedApplication().scheduleLocalNotification(finalNotification)
+            UIApplication.shared.scheduleLocalNotification(finalNotification)
             
         }else{//結束計時
             self.stopWatch.invalidate()
             self.stopWatch = nil
-            self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), forState: .Normal)
+            self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), for: UIControlState())
             self.timeButtonOutlet.backgroundColor = UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1)
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
             self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
             
-            self.blurView.hidden = false
-            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            self.blurView.isHidden = false
+            UIApplication.shared.cancelAllLocalNotifications()
             showSpendInfo()
             self.count = 0
         }
         
     }
-    @IBAction func doneButton(sender: AnyObject) {
+    @IBAction func doneButton(_ sender: AnyObject) {
         let button = sender as! UIButton
-        UIView.animateWithDuration(0.2, animations: {
-            self.spendInfo.transform = CGAffineTransformMakeTranslation(0, -368)
-            button.transform = CGAffineTransformMakeTranslation(0, -368)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.spendInfo.transform = CGAffineTransform(translationX: 0, y: -368)
+            button.transform = CGAffineTransform(translationX: 0, y: -368)
         },completion: {(completion) -> Void in
-            self.spendInfo.hidden = true
-            self.blurView.hidden = true
-            button.hidden = true
+            self.spendInfo.isHidden = true
+            self.blurView.isHidden = true
+            button.isHidden = true
         })
     }
     
@@ -657,16 +700,16 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
 
 extension UIView{
     
-    func addBorder(radius:CGFloat,thickness:CGFloat,color:UIColor){
+    func addBorder(_ radius:CGFloat,thickness:CGFloat,color:UIColor){
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
         self.layer.borderWidth = thickness
-        self.layer.borderColor = color.CGColor
+        self.layer.borderColor = color.cgColor
     }
     
-    func addShadow(color:UIColor){
-        self.layer.shadowColor = color.CGColor
-        self.layer.shadowOffset = CGSizeMake(0, 5)
+    func addShadow(_ color:UIColor){
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
         self.layer.masksToBounds = false
         self.layer.shadowRadius = 15
         self.layer.shadowOpacity = 0.31

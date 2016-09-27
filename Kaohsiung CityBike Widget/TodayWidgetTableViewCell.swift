@@ -19,12 +19,12 @@ class TodayWidgetTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.selectionStyle = .None
+        self.selectionStyle = .none
         self.sitePoint.layer.cornerRadius = self.sitePoint.frame.width / 2
         self.sitePoint.clipsToBounds = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected{
             self.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)

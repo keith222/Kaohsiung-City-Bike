@@ -11,9 +11,6 @@ import WatchConnectivity
 import MapKit
 import Foundation
 
-
-
-
 class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
     @IBOutlet var staNameLabel: WKInterfaceLabel!
@@ -22,8 +19,8 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     @IBOutlet var stationMap: WKInterfaceMap!
     var watchSession:WCSession?
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
     }
 
     override func willActivate() {
@@ -31,10 +28,10 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.willActivate()
         
         if(WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
+            watchSession = WCSession.default()
             // Add self as a delegate of the session so we can handle messages
             watchSession!.delegate = self
-            watchSession!.activateSession()
+            watchSession!.activate()
         }
         
     }
@@ -44,7 +41,12 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.didDeactivate()
     }
     
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
 
         let longitude = message["longitude"] as? Double
         let latitude = message["latitude"] as? Double
@@ -59,21 +61,21 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             self.staNameLabel.setText(title)
             self.stationMap.removeAllAnnotations()
             let imgName = (annoType == 0) ? "locate-pin-custom" : "locate-pin"
-            self.stationMap.addAnnotation(location, withImageNamed: imgName ,centerOffset: CGPointMake(0, 0))
+            self.stationMap.addAnnotation(location, withImageNamed: imgName ,centerOffset: CGPoint(x: 0, y: 0))
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
         if(ava != nil && unava != nil){
             avaLabel.setText(String(ava!))
             unavaLabel.setText(String(unava!))
-            if Int(ava!)<10{
+            if Int(ava!)! < 10{
                 self.avaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
-                self.avaLabel.setTextColor(UIColor.whiteColor())
+                self.avaLabel.setTextColor(UIColor.white)
             }
-            if Int(unava!)<10{
+            if Int(unava!)! < 10{
                 self.unavaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
-                self.unavaLabel.setTextColor(UIColor.whiteColor())
+                self.unavaLabel.setTextColor(UIColor.white)
             }
         }
 

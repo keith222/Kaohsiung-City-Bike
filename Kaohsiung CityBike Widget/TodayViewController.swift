@@ -11,25 +11,25 @@ import NotificationCenter
 
 class TodayViewController: UITableViewController, NCWidgetProviding{
     
-    let userDefault: NSUserDefaults = NSUserDefaults(suiteName: "group.kcb.todaywidget")!
-    private var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
+    let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
+    fileprivate var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         self.tableView.cellLayoutMarginsFollowReadableWidth = false
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 1)
         self.clearsSelectionOnViewWillAppear = true
         var currentSize: CGSize = self.preferredContentSize
-        if let saved = self.userDefault.arrayForKey("staForTodayWidget"){
+        if let saved = self.userDefault.array(forKey: "staForTodayWidget"){
             currentSize.height = (55 * CGFloat(saved.count))
             self.preferredContentSize = currentSize
         }
     }
 
-    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-        return UIEdgeInsetsZero
+    func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
     }
     
  
@@ -42,50 +42,50 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     // MARK: - Table view data source
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let item = self.userDefault.arrayForKey("staForTodayWidget"){
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let item = self.userDefault.array(forKey: "staForTodayWidget"){
             return item.count
         }
         return 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TodayWidgetTableViewCell
-        if let station = self.userDefault.arrayForKey("staForTodayWidget"){
-            cell.stationName.text = station[indexPath.row] as? String
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TodayWidgetTableViewCell
+        if let station = self.userDefault.array(forKey: "staForTodayWidget"){
+            cell.stationName.text = station[(indexPath as NSIndexPath).row] as? String
             if self.xmlItems != nil{
-                cell.available.text = self.xmlItems!.filter({$0.staName == (station[indexPath.row] as? String)})[0].ava
-                cell.available.textColor = (Int(cell.available.text!)! < 10 ) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : UIColor.whiteColor()
-                cell.park.text = self.xmlItems!.filter({$0.staName == (station[indexPath.row] as? String)})[0].unava
-                cell.park.textColor = (Int(cell.park.text!)! < 10 ) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : UIColor.whiteColor()
+                cell.available.text = self.xmlItems!.filter({$0.staName == (station[(indexPath as NSIndexPath).row] as? String)})[0].ava
+                cell.available.textColor = (Int(cell.available.text!)! < 10 ) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : UIColor.white
+                cell.park.text = self.xmlItems!.filter({$0.staName == (station[(indexPath as NSIndexPath).row] as? String)})[0].unava
+                cell.park.textColor = (Int(cell.park.text!)! < 10 ) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : UIColor.white
             }
         }
-        cell.layoutMargins = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsets.zero
         cell.preservesSuperviewLayoutMargins = false
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let station = self.userDefault.arrayForKey("staForTodayWidget"){
-            let urlString = "CityBike://?"+(station[indexPath.row] as! String).stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-            let url: NSURL = NSURL(string: urlString)!
-            self.extensionContext?.openURL(url, completionHandler: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let station = self.userDefault.array(forKey: "staForTodayWidget"){
+            let urlString = "CityBike://?"+(station[(indexPath as NSIndexPath).row] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+            let url: URL = URL(string: urlString)!
+            self.extensionContext?.open(url, completionHandler: nil)
         }
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         getBikeInfo(completionHandler)
     }
     
-    func getBikeInfo(completionHandler: ((NCUpdateResult) -> Void)!){
+    func getBikeInfo(_ completionHandler: ((NCUpdateResult) -> Void)!){
         let xmlParser = BikeParser()
         
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 self.tableView.reloadData()
             })
-            completionHandler(.NewData)
+            completionHandler(.newData)
         })
     }
     

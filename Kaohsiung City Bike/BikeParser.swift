@@ -9,54 +9,54 @@
 import Foundation
 import UIKit
 
-class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate,UIAlertViewDelegate{
+class BikeParser: NSObject, XMLParserDelegate, URLSessionDataDelegate,UIAlertViewDelegate{
 
-    private var xmlItems:[(staID: String, staName: String, ava: String, unava: String)] = []
-    private var currentElement = ""
-    private var currentId = "" {
+    fileprivate var xmlItems:[(staID: String, staName: String, ava: String, unava: String)] = []
+    fileprivate var currentElement = ""
+    fileprivate var currentId = "" {
         didSet{
-            currentId = currentId.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            currentId = currentId.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     }
 
-    private var currentName = ""{
+    fileprivate var currentName = ""{
         didSet{
-            currentName = currentName.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            currentName = currentName.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     }
 
-    private var ava = ""{
+    fileprivate var ava = ""{
         didSet{
-            ava = ava.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            ava = ava.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     }
 
-    private var unava = ""{
+    fileprivate var unava = ""{
         didSet{
-            unava = unava.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            unava = unava.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     }
 
     
-    private var paraserCompletionHandler:([(staID: String, staName: String, ava: String, unava: String)]->Void)?
+    fileprivate var paraserCompletionHandler:(([(staID: String, staName: String, ava: String, unava: String)])->Void)?
     
-    func parserXml(xmlUrl:String,completionHandler:([(staID: String, staName: String, ava: String, unava: String)]->Void)?)->Void{
+    func parserXml(_ xmlUrl:String,completionHandler:(([(staID: String, staName: String, ava: String, unava: String)])->Void)?)->Void{
     
         self.paraserCompletionHandler = completionHandler
-        let request = NSURLRequest(URL: NSURL(string: xmlUrl)!)
-        let urlConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let request = URLRequest(url: URL(string: xmlUrl)!)
+        let urlConfig = URLSessionConfiguration.default
         urlConfig.timeoutIntervalForRequest = 30
         urlConfig.timeoutIntervalForResource = 60
-        let urlSession = NSURLSession(configuration: urlConfig, delegate: self, delegateQueue: nil)
+        let urlSession = URLSession(configuration: urlConfig, delegate: self, delegateQueue: nil)
         
-        let task = urlSession.dataTaskWithRequest(request, completionHandler: {(data,response,error)->Void in
+        let task = urlSession.dataTask(with: request, completionHandler: {(data,response,error)->Void in
             if error != nil{
                 print(error?.localizedDescription)
-                if (error?.code == NSURLErrorTimedOut){
-                    NSNotificationCenter.defaultCenter().postNotificationName("timeOut",object: self, userInfo: ["message":(error?.localizedDescription)!])
+                if (error?._code == NSURLErrorTimedOut){
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "timeOut"),object: self, userInfo: ["message":(error?.localizedDescription)!])
                 }
             }else{
-                let parser = NSXMLParser(data: data!)
+                let parser = XMLParser(data: data!)
                 parser.delegate = self
                 parser.parse()
             }            
@@ -64,11 +64,11 @@ class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate,UIAler
         task.resume()
     }
     
-    func parserDidStartDocument(parser: NSXMLParser) {
+    func parserDidStartDocument(_ parser: XMLParser) {
         xmlItems = []
     }
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         currentElement = elementName
         if currentElement == "Station"{
             currentId = ""
@@ -78,7 +78,7 @@ class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate,UIAler
         }
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentElement{
             case "StationID" :currentId+=string
             case "StationName": currentName += string
@@ -88,18 +88,18 @@ class BikeParser: NSObject, NSXMLParserDelegate, NSURLSessionDataDelegate,UIAler
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "Station"{
             let xmlItem = (staID:currentId,staName:currentName,ava:ava,unava:unava)
             xmlItems+=[xmlItem]
         }
     }
     
-    func parserDidEndDocument(parser: NSXMLParser) {
+    func parserDidEndDocument(_ parser: XMLParser) {
         self.paraserCompletionHandler?(xmlItems)
     }
     
-    func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         print(parseError.localizedDescription)
     }
     

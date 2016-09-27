@@ -8,12 +8,12 @@
 
 import Foundation
 
-class DataGet :NSObject,NSXMLParserDelegate{
+class DataGet :NSObject,XMLParserDelegate{
     
-    func bikeLocationJson()->NSMutableArray{
-        let path:NSString = NSBundle.mainBundle().pathForResource("citybike", ofType: "json")!
-        let data:NSData = try! NSData(contentsOfFile: path as String, options: NSDataReadingOptions.DataReadingMapped)
-        let jsonResult = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSMutableArray
+    func bikeLocationJson()->[[String: AnyObject]]{
+        let path:NSString = Bundle.main.path(forResource: "citybike", ofType: "json")! as NSString
+        let data:NSData = try! NSData(contentsOfFile: path as String, options: NSData.ReadingOptions.dataReadingMapped)
+        let jsonResult = try! JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String: AnyObject]]
         return jsonResult
     }
 }

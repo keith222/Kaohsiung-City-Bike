@@ -23,7 +23,7 @@
 "Search" = "站點/地址";
 "Station_List" = "站點列表";
 "Reached_the_limit" = "已達上限";
-"Only_7_Station_can_be_added" = "最多存取7個站點。";
+"Only_8_Station_can_be_added" = "最多存取8個站點。";
 "Widget_alert_title" = "新增至「腳踏車站點即時查」";
 "Widget_alert_content" = "透過「腳踏車站點即時查」可以讓您在「通知中心」快速掌握站點的即時資訊。";
 "Widget_alert_ok" = "確認";
