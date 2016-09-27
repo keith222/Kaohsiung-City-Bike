@@ -1,14 +1,21 @@
 PODS:
-  - Firebase (3.6.0):
-    - Firebase/Core (= 3.6.0)
   - Firebase/Analytics (3.6.0):
     - FirebaseAnalytics (= 3.4.2)
   - Firebase/Core (3.6.0):
     - Firebase/Analytics
+  - Firebase/Crash (3.6.0):
+    - Firebase/Analytics
+    - FirebaseCrash (= 1.0.7)
   - Firebase/Messaging (3.6.0):
     - Firebase/Analytics
     - FirebaseMessaging (= 1.2.0)
   - FirebaseAnalytics (3.4.2):
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseCrash (1.0.7):
+    - FirebaseAnalytics (~> 3.2)
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
@@ -30,12 +37,14 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0)
 
 DEPENDENCIES:
-  - Firebase
+  - Firebase/Core
+  - Firebase/Crash
   - Firebase/Messaging
 
 SPEC CHECKSUMS:
   Firebase: 34187200ef4979dbd485c7aa685ef078bf587c86
   FirebaseAnalytics: 3f5358d9104adf159cc8d99b7b501e50099a39ad
+  FirebaseCrash: 2efeb3715b76ac843b841529ce413efb67e5fd4d
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   FirebaseMessaging: 789d23fd796594dfb55dcf36cd325541df887c22
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
@@ -43,4 +52,6 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: a99600ea33591e7b52137b80d28f1e25247e745e
+
+COCOAPODS: 1.0.1

@@ -4,27 +4,8 @@
  use_frameworks!
 
 target 'Kaohsiung City Bike' do
-  pod 'Firebase'
-  pod 'Firebase/Messaging' 
-end
-
-target 'Kaohsiung City BikeTests' do
-
-end
-
-target 'Kaohsiung City BikeUITests' do
-
-end
-
-target 'Kaohsiung CityBike WatchApp' do
-
-end
-
-target 'Kaohsiung CityBike WatchApp Extension' do
-
-end
-
-target 'Kaohsiung CityBike Widget' do
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Crash'
 end
 
