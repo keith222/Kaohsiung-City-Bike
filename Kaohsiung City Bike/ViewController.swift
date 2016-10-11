@@ -106,11 +106,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }else{
             locationManager.requestWhenInUseAuthorization()
         }
-
-        
         
         let stationData = bikePlace.bikeLocationJson()//抓腳踏車站點位置
-        
         
         for element in stationData{//將位置作成annotation
             let annotation = MKPointAnnotation()
@@ -221,7 +218,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
         if locateCheck{
             locateCheck = false
-            checkIfInCity()
+            checkIfInCity(location: userLocation)
         }
     }
     
@@ -505,10 +502,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         }
     }
     
-    func checkIfInCity(){
+    func checkIfInCity(location user: MKUserLocation){
         //不在範圍內跳出警示
-        print("current location:\(currentLocation.longitude);\(currentLocation.latitude)")
-        if((currentLocation.longitude < 120.17 || currentLocation.longitude > 120.43) || (currentLocation.latitude > 22.91 || currentLocation.latitude < 22.508)){
+        print("current location:\(user.coordinate.longitude);\(user.coordinate.latitude)")
+        if((user.coordinate.longitude < 120.17 || user.coordinate.longitude > 120.43) || (user.coordinate.latitude > 22.91 || user.coordinate.latitude < 22.508)){
             locationManager.stopUpdatingLocation()
             let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

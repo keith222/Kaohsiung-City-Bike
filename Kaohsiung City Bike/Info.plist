@@ -61,11 +61,6 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>CityBike is required to find out your current location</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-		<string>remote-notification</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
