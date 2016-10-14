@@ -33,34 +33,26 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
             }
             self.preferredContentSize = currentSize
         }
-        
-
     }
     
     @available(iOS 10, *)
-    func widgetActiveDisplayModeDidChange(activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         
         switch activeDisplayMode {
         case .expanded:
-//            var currentSize: CGSize = self.preferredContentSize
-//            if let saved = self.userDefault.array(forKey: "staForTodayWidget"){
-//                currentSize.height = (55 * CGFloat(saved.count))
-//            }else{
-//                currentSize = CGSize(width: currentSize.width, height: 55)
-//            }
-            self.preferredContentSize = CGSize(width: maxSize.width, height: 165)
-            
+            var currentSize: CGSize = self.preferredContentSize
+            if let saved = self.userDefault.array(forKey: "staForTodayWidget") ,saved.count > 0{
+                currentSize.height = (55 * CGFloat(saved.count))
+            }
+            self.preferredContentSize = currentSize
         case .compact:
             self.preferredContentSize = maxSize
         }
-        
     }
 
     func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
         return UIEdgeInsets.zero
     }
-    
- 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,7 +68,6 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(self.userDefault.array(forKey: "staForTodayWidget"))
         if let station = self.userDefault.array(forKey: "staForTodayWidget"){
             if station.count > 0{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TodayWidgetTableViewCell
