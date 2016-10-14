@@ -68,19 +68,32 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "Sparkrs.CityBike"
-         RemotePath = "/Users/Keith/Library/Developer/CoreSimulator/Devices/5A8D44CC-2A0C-487F-8AA7-AC193C2BAD8A/data/Containers/Bundle/Application/75203D8D-2100-4DF0-A7E0-9317A09B81B1/Kaohsiung City Bike.app">
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "53B362A61CC4CA39003CF0E7"
+            BuildableName = "Kaohsiung CityBike Widget.appex"
+            BlueprintName = "Kaohsiung CityBike Widget"
+            ReferencedContainer = "container:Kaohsiung City Bike.xcodeproj">
+         </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5349628E1BE07BE700BFFD71"
-            BuildableName = "Kaohsiung City Bike.app"
-            BlueprintName = "Kaohsiung City Bike"
+            BlueprintIdentifier = "53B362A61CC4CA39003CF0E7"
+            BuildableName = "Kaohsiung CityBike Widget.appex"
+            BlueprintName = "Kaohsiung CityBike Widget"
             ReferencedContainer = "container:Kaohsiung City Bike.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

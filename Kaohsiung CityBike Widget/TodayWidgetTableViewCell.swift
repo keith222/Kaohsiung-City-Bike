@@ -14,14 +14,27 @@ class TodayWidgetTableViewCell: UITableViewCell {
     @IBOutlet weak var available: UILabel!
     @IBOutlet weak var park: UILabel!
     @IBOutlet var sitePoint: UIView!
+    @IBOutlet weak var parkLabel: UILabel!
+    @IBOutlet weak var bikeLabel: UILabel!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
+        
+        self.sitePoint.layoutIfNeeded()
         self.sitePoint.layer.cornerRadius = self.sitePoint.frame.width / 2
-        self.sitePoint.clipsToBounds = true
+        self.sitePoint.layer.masksToBounds = true
+        
+        guard #available(iOS 10, *) else{
+            self.backgroundColor = .black
+            self.stationName.textColor = .white
+            self.parkLabel.textColor = .white
+            self.bikeLabel.textColor = .white
+            return
+        }
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,7 +42,9 @@ class TodayWidgetTableViewCell: UITableViewCell {
         if selected{
             self.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
         }else{
-            self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+            if #available(iOS 10, *){}else{
+               self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+            }
         }
         // Configure the view for the selected state
     }

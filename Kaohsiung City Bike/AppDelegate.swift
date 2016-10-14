@@ -51,10 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         print(userInfo)
     }
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        if sourceApplication == "Sparkrs.CityBike.Kaohsiung-CityBike-Widget"{
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        if url.query!.removingPercentEncoding == "openlist" {
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Station") as! StationTableViewController
+            navigatorController.viewControllers = [viewController]
+            self.window?.rootViewController = navigatorController
+            
+        }else{
             let viewController = storyboard.instantiateViewController(withIdentifier: "Map") as! ViewController
             navigatorController.viewControllers = [viewController]
             self.window?.rootViewController = navigatorController
@@ -63,12 +69,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
                 viewController.sendData(url.query!.removingPercentEncoding!)
             })
-            
-            return true
-        }else{
-            return false
         }
+        return true
     }
+    
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        print(url)
+//        print(sourceApplication)
+//        if sourceApplication == "Sparkrs.CityBike.Kaohsiung-CityBike-Widget"{
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+//            print(url.query!.removingPercentEncoding)
+//            
+//            if url.query!.removingPercentEncoding == "openlist" {
+//                let viewController = storyboard.instantiateViewController(withIdentifier: "Station") as! StationTableViewController
+//                navigatorController.viewControllers = [viewController]
+//                self.window?.rootViewController = navigatorController
+//                
+//            }else{
+//                let viewController = storyboard.instantiateViewController(withIdentifier: "Map") as! ViewController
+//                navigatorController.viewControllers = [viewController]
+//                self.window?.rootViewController = navigatorController
+//                
+//                let triggerTime = (Int64(NSEC_PER_SEC)*1)
+//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
+//                    viewController.sendData(url.query!.removingPercentEncoding!)
+//                })
+//            }
+//            return true
+//        }else{
+//            return false
+//        }
+//    }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! ViewController
