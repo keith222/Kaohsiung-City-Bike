@@ -107,12 +107,8 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var urlString = "CityBike://?"
-        if let station = self.userDefault.array(forKey: "staForTodayWidget"){
-            if station.count > 0{
-                urlString += (station[(indexPath as NSIndexPath).row] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-            }else{
-                urlString += "openlist"
-            }
+        if let station = self.userDefault.array(forKey: "staForTodayWidget"), station.count > 0{
+            urlString += (station[(indexPath as NSIndexPath).row] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         }else{
             urlString += "openlist"
         }
