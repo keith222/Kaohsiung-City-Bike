@@ -333,8 +333,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     func showRoute(_ currentAnnotation: MKAnnotation){
         
-        let overlays = self.mapView.overlays//移除位置更新後的舊線條
-        mapView.removeOverlays(overlays)
+        let oldOverlays = self.mapView.overlays //記錄舊線條
+        
         
         //設定路徑起始與目的地
         let directionRequest = MKDirectionsRequest()
@@ -345,7 +345,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         //方位計算
         let directions = MKDirections(request: directionRequest)
-        directions.calculate{
+        directions.calculate{ [unowned self]
             response, error in
             guard let response = response else {
                 //handle the error here
@@ -354,6 +354,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             }
             let route = response.routes[0] 
             self.mapView.add(route.polyline, level: MKOverlayLevel.aboveRoads)
+            self.mapView.removeOverlays(oldOverlays)//移除位置更新後的舊線條
+            
             let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
             
             if currentAnnotation.isEqual(self.customAnnotation){
