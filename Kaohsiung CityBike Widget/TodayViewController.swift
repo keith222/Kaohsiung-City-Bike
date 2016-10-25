@@ -117,7 +117,10 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ((self.userDefault.array(forKey: "staForTodayWidget")?.count)! > 0) ? 55 : 110
+        if let count = self.userDefault.array(forKey: "staForTodayWidget")?.count{
+            return (count > 0) ? 55 : 110
+        }
+        return 110
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
