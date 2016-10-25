@@ -69,6 +69,8 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     
     fileprivate var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
     
+    let reachability = Reachability()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -273,7 +275,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 annoType = 1
                 
                 //偵測網路是否連線
-                if Reachability.isConnectedToNetwork() == true {
+                if self.reachability.isReachable == true {
                     //啟動timer每五分鐘抓腳踏車資訊
                     Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: false)
                     self.timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(ViewController.bikeInfo(_:)), userInfo: nil, repeats: true)
