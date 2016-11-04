@@ -882,6 +882,15 @@
         "StationDesc": "海富路與海平路口"
         },
         {
+        "StationID": "388",
+        "StationNO": "0196",
+        "StationName": "朝陽寺站",
+        "StationAddress": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內",
+        "StationLat": "22.577509",
+        "StationLon": "120.322038",
+        "StationDesc": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內"
+        },
+        {
         "StationID": "244",
         "StationNO": "0124",
         "StationName": "美術館馬卡道站",
