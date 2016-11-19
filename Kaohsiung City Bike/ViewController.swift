@@ -463,8 +463,9 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         var cost = 0//計算花費
         switch calMinute{
-            case 0...60: cost = 0 //不滿60分鐘免費
-            case 61...90: cost = 10 //90分鐘 10元
+            case 0..<30: cost = 0 //不滿60分鐘免費
+            case 30..<60: cost = 5
+            case 60..<90: cost = 10 //90分鐘 10元
             default: //90分後每30分20元
                 calMinute -= 90
                 if calMinute % 30 != 0{
@@ -472,7 +473,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 }else{
                     calMinute = Int(calMinute/30)
                 }
-                cost = 10 + (calMinute*20)
+                cost = 15 + (calMinute*20)
         }
         let costInfo = "NT$ \(cost)"
         self.costSpend.text = costInfo
