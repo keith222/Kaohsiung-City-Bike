@@ -51,7 +51,7 @@ class BikeParser: NSObject, XMLParserDelegate, URLSessionDataDelegate,UIAlertVie
         
         let task = urlSession.dataTask(with: request, completionHandler: {(data,response,error)->Void in
             if error != nil{
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "no anything")
                 if (error?._code == NSURLErrorTimedOut){
                     NotificationCenter.default.post(name: Notification.Name(rawValue: "timeOut"),object: self, userInfo: ["message":(error?.localizedDescription)!])
                 }

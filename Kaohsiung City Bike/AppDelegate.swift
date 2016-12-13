@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! ViewController
-        print(userActivity.userInfo)
+        print(userActivity.userInfo ?? "no anything")
         viewController.restoreUserActivityState(userActivity)
         return true
     }

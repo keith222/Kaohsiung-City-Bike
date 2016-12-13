@@ -570,7 +570,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         CSSearchableIndex.default().indexSearchableItems(searchableItems, completionHandler: {(error)->Void in
             if(error != nil){
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }
         })
         
@@ -584,7 +584,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 print(selectedStation)
                 //將identifier切割取最後一位
                 let selectedIndex = Int(selectedStation.components(separatedBy: ".").last!)
-                print(selectedIndex)
+                print(selectedIndex ?? 0)
                 let stationData = bikePlace.bikeLocationJson()
                 print(stationData[selectedIndex!])
                 let stationName = stationData[selectedIndex!]["StationName"] as! String
