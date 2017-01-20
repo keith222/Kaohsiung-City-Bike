@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至105-11-04
+//  站點更新至106-01-19
 
 import UIKit
 import MapKit
@@ -101,6 +101,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         let status = CLLocationManager.authorizationStatus()
         if(status == CLAuthorizationStatus.authorizedWhenInUse){
             mapView.showsUserLocation = true;
+            mapView.userTrackingMode = .follow
             locationManager.startUpdatingLocation()
             //精準度設為100m且移動50公尺才更新位置
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -208,6 +209,10 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             self.customInfo.transform = CGAffineTransform(translationX: 0, y: -200)
         },completion:{(completion) -> Void in
             self.customInfo.isHidden = true
+            self.parkNum.text = "--"
+            self.avaNum.text = "--"
+            self.travelTimeLabel.text = "--"
+            self.bikeTravelTimeLabel.text = "--"
         })
         
         self.mapView.addGestureRecognizer(self.longPress)
@@ -492,8 +497,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude , longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        self.mapView.setRegion(region, animated: false)
         self.currentLocation = center
         
     }

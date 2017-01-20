@@ -90,7 +90,7 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = (self.searchController.isActive) ? (self.searchResults[(indexPath as NSIndexPath).row]["StationName"] as? String) : (staInfo[(indexPath as NSIndexPath).row]["StationName"] as? String)
+        let selectedCell = (self.searchController.isActive) ? (self.searchResults[indexPath.row]["StationName"] as? String) : (staInfo[indexPath.row]["StationName"] as? String)
 
         self.mDelegate?.sendData(selectedCell!)
         _ = self.navigationController?.popViewController(animated: true)
@@ -143,6 +143,7 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
     func configureSearchBar(){
         
         self.searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.becomeFirstResponder()
         //結果呈現在此VC上
         definesPresentationContext = true
         //輸入框自動大小寫轉換>不設定
