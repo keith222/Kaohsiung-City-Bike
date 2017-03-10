@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至106-01-19
+//  站點更新至106-03-02
 
 import UIKit
 import MapKit
@@ -156,6 +156,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //地圖上沒有站點則繪出，有則選擇
         if result.isEmpty{
             let newAnn = self.annoArray!.filter{$0.title!! == stationName}.first!
+            print(newAnn)
             self.mapView.addAnnotation(newAnn)
             self.mapView.selectAnnotation(newAnn, animated: true)
         }else{

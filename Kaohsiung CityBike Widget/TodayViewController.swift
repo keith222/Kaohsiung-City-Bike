@@ -106,7 +106,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var urlString = "CityBike://?"
+        var urlString = "   //?"
         if let station = self.userDefault.array(forKey: "staForTodayWidget"), station.count > 0{
             urlString += (station[(indexPath as NSIndexPath).row] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         }else{

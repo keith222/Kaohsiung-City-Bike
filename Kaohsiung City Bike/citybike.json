@@ -567,6 +567,15 @@
           "StationDesc": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內"
         },
         {
+          "StationID": "390",
+          "StationNO": "0225",
+          "StationName": "中山大學社科院站",
+          "StationAddress": "中山大學社會科學院與管理學院中間停車場旁",
+          "StationLat": "22.625742",
+          "StationLon": "120.265350",
+          "StationDesc": "中山大學社會科學院與管理學院中間停車場旁"
+        },
+        {
           "StationID": "392",
           "StationNO": "0197",
           "StationName": "臺灣橋頭地方法院檢察署站",
@@ -583,6 +592,168 @@
           "StationLat": "22.617966",
           "StationLon": "120.305523",
           "StationDesc": "四維三路與文橫二路交叉口(臨四維三路公園人行道)"
+        },
+        {
+          "StationID": "396",
+          "StationNO": "0201",
+          "StationName": "蚵仔寮觀光魚市站",
+          "StationAddress": "港七街與魚港一路口",
+          "StationLat": "22.727122",
+          "StationLon": "120.255518",
+          "StationDesc": "港七街與魚港一路口"
+        },
+        {
+          "StationID": "397",
+          "StationNO": "0202",
+          "StationName": "鳳山共同市場站",
+          "StationAddress": "工協街與勝利路口",
+          "StationLat": "22.630016",
+          "StationLon": "120.373525",
+          "StationDesc": "工協街與勝利路口"
+        },
+        {
+          "StationID": "398",
+          "StationNO": "0208",
+          "StationName": "長庚醫院站",
+          "StationAddress": "庚路上，湖畔星光購物商場與公園路中間",
+          "StationLat": "22.650448",
+          "StationLon": "120.357777",
+          "StationDesc": "庚路上，湖畔星光購物商場與公園路中間"
+        },
+        {
+          "StationID": "399",
+          "StationNO": "0210",
+          "StationName": "鐵道文化園區站(1)",
+          "StationAddress": "臨海新路臨鐵道園區",
+          "StationLat": "22.620440",
+          "StationLon": "120.277112",
+          "StationDesc": "臨海新路臨鐵道園區"
+        },
+        {
+          "StationID": "400",
+          "StationNO": "0211",
+          "StationName": "鐵道文化園區站(2)",
+          "StationAddress": "臨海新路臨鐵道園區",
+          "StationLat": "22.620269",
+          "StationLon": "120.277544",
+          "StationDesc": "臨海新路臨鐵道園區"
+        },
+        {
+          "StationID": "401",
+          "StationNO": "0218",
+          "StationName": "茄萣海岸公園站",
+          "StationAddress": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)",
+          "StationLat": "22.908010",
+          "StationLon": "120.177040",
+          "StationDesc": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)"
+        },
+        {
+          "StationID": "440",
+          "StationNO": "0230",
+          "StationName": "WO旅店站",
+          "StationAddress": "七賢二路WO旅店旁騎樓退縮地",
+          "StationLat": "22.630972",
+          "StationLon": "120.288855",
+          "StationDesc": "七賢二路WO旅店旁騎樓退縮地"
+        },
+        {
+          "StationID": "442",
+          "StationNO": "0229",
+          "StationName": "中山大學海工館站",
+          "StationAddress": "中山大學海工館",
+          "StationLat": "22.629067",
+          "StationLon": "120.262499",
+          "StationDesc": "中山大學海工館"
+        },
+        {
+          "StationID": "444",
+          "StationNO": "0246",
+          "StationName": "新莊國小站",
+          "StationAddress": "新庄仔路與富國路口人行步道",
+          "StationLat": "22.669153",
+          "StationLon": "120.308347",
+          "StationDesc": "新庄仔路與富國路口人行步道"
+        },
+        {
+          "StationID": "446",
+          "StationNO": "0240",
+          "StationName": "輔英科技大學站(2)",
+          "StationAddress": "校門旁腳踏車車棚原租賃站對面",
+          "StationLat": "22.744603",
+          "StationLon": "120.331302",
+          "StationDesc": "校門旁腳踏車車棚原租賃站對面"
+        },
+        {
+          "StationID": "448",
+          "StationNO": "0232",
+          "StationName": "楠梓高中站",
+          "StationAddress": "楠梓高中大門口旁人行道(清豐路)",
+          "StationLat": "22.744603",
+          "StationLon": "120.331302",
+          "StationDesc": "學校大門口旁人行道(清豐路)"
+        },
+        {
+          "StationID": "450",
+          "StationNO": "0226",
+          "StationName": "文府國小站",
+          "StationAddress": "文府國小側門旁候車亭空地",
+          "StationLat": "22.691262",
+          "StationLon": "120.314259",
+          "StationDesc": "文府國小側門旁候車亭空地"
+        },
+        {
+          "StationID": "452",
+          "StationNO": "0237",
+          "StationName": "台鋁站(1)",
+          "StationAddress": "臨成功二路側人行步道",
+          "StationLat": "22.603152",
+          "StationLon": "120.302115",
+          "StationDesc": "臨成功二路側人行步道"
+        },
+        {
+          "StationID": "453",
+          "StationNO": "0238",
+          "StationName": "台鋁站(2)",
+          "StationAddress": "臨成功二路側人行步道",
+          "StationLat": "22.603122",
+          "StationLon": "120.302112",
+          "StationDesc": "臨成功二路側人行步道"
+        },
+        {
+          "StationID": "456",
+          "StationNO": "0245",
+          "StationName": "步道公園站",
+          "StationAddress": "高雄市小港區平和西路與鋼成街口",
+          "StationLat": "22.564387",
+          "StationLon": "120.331133",
+          "StationDesc": "高雄市小港區平和西路與鋼成街口"
+        },
+        {
+          "StationID": "457",
+          "StationNO": "0227",
+          "StationName": "龍華市場站",
+          "StationAddress": "高雄市左營區忠言路與富國路，停車場旁",
+          "StationLat": "22.65834",
+          "StationLon": "120.30651",
+          "StationDesc": "高雄市左營區忠言路與富國路，停車場旁"
+        },
+        {
+          "StationID": "458",
+          "StationNO": "0249",
+          "StationName": "檨仔林埤濕地公園站",
+          "StationAddress": "鼎金後路靠近鼎金路420巷人行步道",
+          "StationLat": "22.673272",
+          "StationLon": "120.327317",
+          "StationDesc": "鼎金後路靠近鼎金路420巷人行步道"
+        },
+        {
+          "StationID": "459",
+          "StationNO": "0250",
+          "StationName": "臺灣高雄少年及家事法院站",
+          "StationAddress": "常順街，少年及家事法院入口旁人行道",
+          "StationLat": "22.73261",
+          "StationLon": "120.33512",
+          "StationDesc": "常順街，少年及家事法院入口旁人行道"
         },
         {
           "StationID": "263",

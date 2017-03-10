@@ -143,7 +143,7 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
     func configureSearchBar(){
         
         self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.searchBar.becomeFirstResponder()
+        
         //結果呈現在此VC上
         definesPresentationContext = true
         //輸入框自動大小寫轉換>不設定
@@ -155,6 +155,9 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         
         //將UISearchBar放到Navigation的titleView上
         self.navigationItem.titleView = self.searchController.searchBar
+        
+        //讓searchbar出現鍵盤
+        self.searchController.searchBar.becomeFirstResponder()
     }
     
     func filterContentForSearchText(_ searchText: String){

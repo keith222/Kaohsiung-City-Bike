@@ -49,6 +49,7 @@
 		53C362311CC9D54200050EBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		53C362331CC9FE2100050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53C362341CC9FE2200050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
+		53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CE89DE1E61582900C528BC /* MapKit.framework */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		53F165F21C402F6900E851F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F165F11C402F6900E851F0 /* Reachability.swift */; };
 /* End PBXBuildFile section */
@@ -187,6 +188,7 @@
 		53B362B91CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayWidgetTableViewCell.swift; sourceTree = "<group>"; };
 		53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kaohsiung City Bike.entitlements"; sourceTree = "<group>"; };
 		53B362BD1CC4D88C003CF0E7 /* Kaohsiung CityBike Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kaohsiung CityBike Widget.entitlements"; sourceTree = "<group>"; };
+		53CE89DE1E61582900C528BC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		53E42D161D436EB0004B9B98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +367,7 @@
 		53B362A81CC4CA39003CF0E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53CE89DE1E61582900C528BC /* MapKit.framework */,
 				53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */,
 				1D9C45F10040D0671A83D7B7 /* Pods_Kaohsiung_City_Bike.framework */,
 				3ECE2FEF40EA7804E963A22A /* Pods_Kaohsiung_City_BikeTests.framework */,
@@ -547,7 +551,7 @@
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 8MREJM6257;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 5349628E1BE07BE700BFFD71;
 					};
 					534962AD1BE07BE700BFFD71 = {
@@ -1048,7 +1052,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
