@@ -55,7 +55,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
     var stopWatch:Timer!
     var count = 0
     var annoArray:[MKAnnotation]? = [MKAnnotation]()
-    var staNum:NSInteger!
+    var stationName:String!
     
     var watchSession:WCSession?
     
@@ -156,7 +156,6 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         //地圖上沒有站點則繪出，有則選擇
         if result.isEmpty{
             let newAnn = self.annoArray!.filter{$0.title!! == stationName}.first!
-            print(newAnn)
             self.mapView.addAnnotation(newAnn)
             self.mapView.selectAnnotation(newAnn, animated: true)
         }else{
@@ -274,7 +273,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             var annoType = 0
             
             if !(view.annotation!.isEqual(self.customAnnotation)){
-                self.staNum = self.annoArray?.index{$0.isEqual(view.annotation)}
+                self.stationName = (view.annotation?.title)!
                 //點下annotation後的動作
                 mapView.removeOverlays(self.mapView.overlays)
                 self.staName.text = (view.annotation?.title)!
@@ -411,25 +410,29 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
             self.xmlItems = xmlItems
             
+            let index = self.xmlItems?.index(where: {
+                return $0.staName == self.stationName
+            })
+            
             if WCSession.default().isReachable == true {
-                let bikeSession = ["ava" : xmlItems[self.staNum].ava, "unava": xmlItems[self.staNum].unava]
+                let bikeSession = ["ava" : xmlItems[index!].ava, "unava": xmlItems[index!].unava]
                 let session = WCSession.default()
                 session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
             }
     
             DispatchQueue.main.async(execute: {
-                if Int(self.xmlItems![self.staNum].ava)! < 10{
+                if Int(self.xmlItems![index!].ava)! < 10{
                     self.avaNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
                     self.avaNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
-                if Int(self.xmlItems![self.staNum].unava)! < 10{
+                if Int(self.xmlItems![index!].unava)! < 10{
                     self.parkNum.textColor = UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1)
                 }else{
                     self.parkNum.textColor = UIColor(red: 93/255, green: 119/255, blue: 120/255, alpha: 1.0)
                 }
-                self.avaNum.text = self.xmlItems![self.staNum].ava
-                self.parkNum.text = self.xmlItems![self.staNum].unava
+                self.avaNum.text = self.xmlItems![index!].ava
+                self.parkNum.text = self.xmlItems![index!].unava
             })
         })
 
