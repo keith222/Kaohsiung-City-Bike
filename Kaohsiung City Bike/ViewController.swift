@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至106-03-02
+//  站點更新至106-04-06
 
 import UIKit
 import MapKit
@@ -383,7 +383,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             response, error in
             guard let response = response else {
                 //handle the error here
-                print("Error: \(error?.localizedDescription)")
+                print("Error: \(String(describing: error?.localizedDescription))")
                 return
             }
             let bikeTime = response.routes[0].expectedTravelTime
@@ -472,9 +472,9 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         
         var cost = 0//計算花費
         switch calMinute{
-            case 0..<30: cost = 0 //不滿60分鐘免費
+            case 0..<30: cost = 0 //不滿30分鐘免費
             case 30..<60: cost = 5
-            case 60..<90: cost = 10 //90分鐘 10元
+            case 60..<90: cost = 15 //90分鐘 10元 + 5元
             default: //90分後每30分20元
                 calMinute -= 90
                 if calMinute % 30 != 0{
@@ -660,7 +660,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             
             //設定Local Notification
             let localNotification = UILocalNotification()
-            let pushDate = Date(timeIntervalSinceNow: 3000)
+            let pushDate = Date(timeIntervalSinceNow: 1200)
             localNotification.fireDate = pushDate
             localNotification.timeZone = TimeZone.current
             localNotification.soundName = UILocalNotificationDefaultSoundName
@@ -670,7 +670,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             UIApplication.shared.scheduleLocalNotification(localNotification)
             
             let finalNotification = UILocalNotification()
-            finalNotification.fireDate = Date(timeIntervalSinceNow: 3600)
+            finalNotification.fireDate = Date(timeIntervalSinceNow: 1800)
             finalNotification.timeZone = TimeZone.current
             finalNotification.soundName = UILocalNotificationDefaultSoundName
             finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")

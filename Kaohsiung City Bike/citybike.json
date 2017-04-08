@@ -648,6 +648,15 @@
           "StationDesc": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)"
         },
         {
+          "StationID": "409",
+          "StationNO": "0199",
+          "StationName": "前鎮國中站",
+          "StationAddress": "新衙路上，前鎮國中大門左側",
+          "StationLat": "22.583112",
+          "StationLon": "120.320345",
+          "StationDesc": "新衙路上，前鎮國中大門左側"
+        },
+        {
           "StationID": "440",
           "StationNO": "0230",
           "StationName": "WO旅店站",
@@ -754,6 +763,42 @@
           "StationLat": "22.73261",
           "StationLon": "120.33512",
           "StationDesc": "常順街，少年及家事法院入口旁人行道"
+        },
+        {
+          "StationID": "464",
+          "StationNO": "0247",
+          "StationName": "仁和公園站",
+          "StationAddress": "仁和公園前人行步道",
+          "StationLat": "22.6811",
+          "StationLon": "120.3518",
+          "StationDesc": "仁和公園前人行步道"
+        },
+        {
+          "StationID": "465",
+          "StationNO": "0228",
+          "StationName": "鳳東公園站",
+          "StationAddress": "東公園旁人行步道（臨鳳東路）",
+          "StationLat": "22.62665",
+          "StationLon": "120.37977",
+          "StationDesc": "東公園旁人行步道（臨鳳東路）"
+        },
+        {
+          "StationID": "466",
+          "StationNO": "0242",
+          "StationName": "市立歷史博物館站",
+          "StationAddress": "歷史博物館旁臨中正四路人行步道",
+          "StationLat": "22.62636",
+          "StationLon": "120.2867",
+          "StationDesc": "歷史博物館旁臨中正四路人行步道"
+        },
+        {
+          "StationID": "467",
+          "StationNO": "0233",
+          "StationName": "龍華國中站",
+          "StationAddress": "龍華國中人行步道（自由二路）",
+          "StationLat": "22.65863",
+          "StationLon": "120.30894",
+          "StationDesc": "龍華國中人行步道（自由二路）"
         },
         {
           "StationID": "263",
