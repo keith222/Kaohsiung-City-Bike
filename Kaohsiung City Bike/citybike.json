@@ -801,6 +801,33 @@
           "StationDesc": "龍華國中人行步道（自由二路）"
         },
         {
+          "StationID": "472",
+          "StationNO": "0236",
+          "StationName": "竹林公園站",
+          "StationAddress": "竹林公園臨隆豐路側原機車停車格",
+          "StationLat": "22.756118",
+          "StationLon": "120.305734",
+          "StationDesc": "竹林公園臨隆豐路側原機車停車格"
+        },
+        {
+          "StationID": "473",
+          "StationNO": "0243",
+          "StationName": "河北立德站",
+          "StationAddress": "河北二路與立德街運河旁人行步道空間",
+          "StationLat": "22.635532",
+          "StationLon": "120.294940",
+          "StationDesc": "河北二路與立德街運河旁人行步道空間"
+        },
+        {
+          "StationID": "474",
+          "StationNO": "0244",
+          "StationName": "介壽先鋒站",
+          "StationAddress": "介壽路與先鋒路口人行步道前空地",
+          "StationLat": "22.68124",
+          "StationLon": "120.28281",
+          "StationDesc": "介壽路與先鋒路口人行步道前空地"
+        },
+        {
           "StationID": "263",
           "StationNO": "0140",
           "StationName": "扶輪公園站",

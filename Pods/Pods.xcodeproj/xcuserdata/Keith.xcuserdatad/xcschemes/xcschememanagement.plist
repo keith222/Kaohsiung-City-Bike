@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Kaohsiung City Bike.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Protobuf.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3999655F34111314C2D312D54CD24DA4</key>
+		<key>1664A581754CC70ACAD65BDFC01ED12A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85023D788490B72F05E1E74C827CC419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC182A2951CD6A034E493BC294DE9995</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -356,7 +356,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
             response, error in
             guard let response = response else {
                 //handle the error here
-                print("Error: \(error?.localizedDescription)")
+                print("Error: \(String(describing: error?.localizedDescription))")
                 return
             }
             let route = response.routes[0] 
@@ -568,7 +568,7 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
                 return ($0["StationName"] as! String) == (element["StationName"] as! String)
             })
             
-            let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(index)", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
+            let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(String(describing: index))", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
             searchableItems.append(searchableItem)
         
             
