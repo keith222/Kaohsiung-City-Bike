@@ -14,7 +14,7 @@ protocol sendData {
 
 class StationTableViewController: UITableViewController, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating{
 
-    let staInfo = DataGet().bikeLocationJson()
+    var staInfo = DataGet().bikeLocationJson()
     let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
     var mDelegate: sendData?
     var searchButton: UIBarButtonItem!
@@ -43,6 +43,15 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
         //呈現結果不會有black mask
         self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.loadViewIfNeeded()
+        
+        if let likeArray = self.userDefault.object(forKey: "staForTodayWidget"){
+            for (index,element) in self.staInfo.enumerated(){
+                if (likeArray as! NSArray).contains(where: {$0 as? String == (element["StationName"] as? String)}){
+                    let tempElement = staInfo.remove(at: index)
+                    staInfo.insert(tempElement, at: 0)
+                }
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,8 +80,8 @@ class StationTableViewController: UITableViewController, UISearchControllerDeleg
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: StationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StationTableViewCell
         
-        cell.nameLabel.text = (self.searchController.isActive) ? (self.searchResults[(indexPath as NSIndexPath).row]["StationName"] as? String) : (staInfo[(indexPath as NSIndexPath).row]["StationName"] as? String)
-        cell.addressLabel.text = (self.searchController.isActive) ? (self.searchResults[(indexPath as NSIndexPath).row]["StationAddress"] as? String) : (staInfo[(indexPath as NSIndexPath).row]["StationAddress"] as? String)
+        cell.nameLabel.text = (self.searchController.isActive) ? (self.searchResults[indexPath.row]["StationName"] as? String) : (staInfo[indexPath.row]["StationName"] as? String)
+        cell.addressLabel.text = (self.searchController.isActive) ? (self.searchResults[indexPath.row]["StationAddress"] as? String) : (staInfo[indexPath.row]["StationAddress"] as? String)
         
         cell.likeButton.tag = (indexPath as NSIndexPath).row
         cell.likeButton.addTarget(self, action: #selector(self.likeButtonAction(_:)), for: .touchUpInside)

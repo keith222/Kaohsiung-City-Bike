@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至106-04-06
+//  站點更新至106-04-27
 
 import UIKit
 import MapKit
@@ -154,13 +154,19 @@ class ViewController: UIViewController,WCSessionDelegate,MKMapViewDelegate,CLLoc
         self.mapView.removeAnnotation(self.customAnnotation)
         
         //地圖上沒有站點則繪出，有則選擇
+        let location: CLLocationCoordinate2D?
         if result.isEmpty{
             let newAnn = self.annoArray!.filter{$0.title!! == stationName}.first!
             self.mapView.addAnnotation(newAnn)
             self.mapView.selectAnnotation(newAnn, animated: true)
+            location = newAnn.coordinate
         }else{
             self.mapView.selectAnnotation(result[0], animated: true)
+            location = result[0].coordinate
         }
+        
+        let region = MKCoordinateRegion(center: location!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        self.mapView.setRegion(region, animated: true)
     
     }
     

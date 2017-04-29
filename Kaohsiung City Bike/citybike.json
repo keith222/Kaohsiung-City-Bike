@@ -387,6 +387,15 @@
           "StationDesc": "O14鳳山國中站1號出入口，中山東路上"
         },
         {
+          "StationID": "413",
+          "StationNO": "0206",
+          "StationName": "捷運後勁站",
+          "StationAddress": "加昌路上，捷運後勁1號出入口旁",
+          "StationLat": "22.722583",
+          "StationLon": "120.316493",
+          "StationDesc": "加昌路上，捷運後勁1號出入口旁"
+        },
+        {
           "StationID": "260",
           "StationNO": "0137",
           "StationName": "捷運大寮站",
@@ -648,6 +657,15 @@
           "StationDesc": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)"
         },
         {
+          "StationID": "408",
+          "StationNO": "0198",
+          "StationName": "建民公園站",
+          "StationAddress": "興昌街與正興路163巷口",
+          "StationLat": "22.646565",
+          "StationLon": "120.318354",
+          "StationDesc": "興昌街與正興路163巷口"
+        },
+        {
           "StationID": "409",
           "StationNO": "0199",
           "StationName": "前鎮國中站",
@@ -655,6 +673,24 @@
           "StationLat": "22.583112",
           "StationLon": "120.320345",
           "StationDesc": "新衙路上，前鎮國中大門左側"
+        },
+        {
+          "StationID": "412",
+          "StationNO": "0205",
+          "StationName": "精華公園站",
+          "StationAddress": "錦州街與哈爾濱街口",
+          "StationLat": "22.642316",
+          "StationLon": "120.299238",
+          "StationDesc": "錦州街與哈爾濱街口"
+        },
+        {
+          "StationID": "421",
+          "StationNO": "0217",
+          "StationName": "新民國小站",
+          "StationAddress": "自由三路與曾子路口",
+          "StationLat": "22.676383",
+          "StationLon": "120.312624",
+          "StationDesc": "自由三路與曾子路口"
         },
         {
           "StationID": "440",
@@ -826,6 +862,42 @@
           "StationLat": "22.68124",
           "StationLon": "120.28281",
           "StationDesc": "介壽路與先鋒路口人行步道前空地"
+        },
+        {
+          "StationID": "475",
+          "StationNO": "0235",
+          "StationName": "城市光廊站",
+          "StationAddress": "新興區中華路與五福路側,靠近中華路圓環",
+          "StationLat": "22.62275",
+          "StationLon": "120.29926",
+          "StationDesc": "新興區中華路與五福路側,靠近中華路圓環"
+        },
+        {
+          "StationID": "476",
+          "StationNO": "0251",
+          "StationName": "慈濟靜思堂站",
+          "StationAddress": "河堤南路與自由一路口",
+          "StationLat": "22.65436",
+          "StationLon": "120.30887",
+          "StationDesc": "河堤南路與自由一路口"
+        },
+        {
+          "StationID": "477",
+          "StationNO": "0252",
+          "StationName": "民族國中站",
+          "StationAddress": "民族國中旁，大昌二路與覺民路口",
+          "StationLat": "22.64082",
+          "StationLon": "120.33245",
+          "StationDesc": "民族國中旁，大昌二路與覺民路口"
+        },
+        {
+          "StationID": "478",
+          "StationNO": "0253",
+          "StationName": "武漢里活動中心站",
+          "StationAddress": "活動中心西北側廣場(武營路239巷上廣場人行道)",
+          "StationLat": "22.610988",
+          "StationLon": "120.336050",
+          "StationDesc": "活動中心西北側廣場(武營路239巷上廣場人行道)"
         },
         {
           "StationID": "263",
