@@ -684,6 +684,24 @@
           "StationDesc": "錦州街與哈爾濱街口"
         },
         {
+          "StationID": "417",
+          "StationNO": "0213",
+          "StationName": "鼓山渡船頭站",
+          "StationAddress": "濱海二路上，鼓波街與鼓南街中間",
+          "StationLat": "22.620758",
+          "StationLon": "120.270147",
+          "StationDesc": "濱海二路上，鼓波街與鼓南街中間"
+        },
+        {
+          "StationID": "418",
+          "StationNO": "0214",
+          "StationName": "五甲公園站",
+          "StationAddress": "瑞南街與凱興街",
+          "StationLat": "22.595525",
+          "StationLon": "120.321994",
+          "StationDesc": "瑞南街與凱興街"
+        },
+        {
           "StationID": "421",
           "StationNO": "0217",
           "StationName": "新民國小站",
@@ -898,6 +916,15 @@
           "StationLat": "22.610988",
           "StationLon": "120.336050",
           "StationDesc": "活動中心西北側廣場(武營路239巷上廣場人行道)"
+        },
+        {
+          "StationID": "486",
+          "StationNO": "0254",
+          "StationName": "大灣國中站",
+          "StationAddress": "大灣國中大門右側人行道,臨仁雄路",
+          "StationLat": "22.67661",
+          "StationLon": "120.34195",
+          "StationDesc": "大灣國中大門右側人行道,臨仁雄路"
         },
         {
           "StationID": "263",
