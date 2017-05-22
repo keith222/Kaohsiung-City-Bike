@@ -675,6 +675,15 @@
           "StationDesc": "新衙路上，前鎮國中大門左側"
         },
         {
+          "StationID": "410",
+          "StationNO": "0203",
+          "StationName": "愛河之心站(2)",
+          "StationAddress": "同盟二路上，天津街與重慶街中間",
+          "StationLat": "22.651675",
+          "StationLon": "120.302047",
+          "StationDesc": "同盟二路上，天津街與重慶街中間"
+        },
+        {
           "StationID": "412",
           "StationNO": "0205",
           "StationName": "精華公園站",
@@ -700,6 +709,24 @@
           "StationLat": "22.595525",
           "StationLon": "120.321994",
           "StationDesc": "瑞南街與凱興街"
+        },
+        {
+          "StationID": "419",
+          "StationNO": "0215",
+          "StationName": "三民游泳池站",
+          "StationAddress": "自由一路與遼寧一街口",
+          "StationLat": "22.642476",
+          "StationLon": "120.308711",
+          "StationDesc": "自由一路與遼寧一街口"
+        },
+        {
+          "StationID": "420",
+          "StationNO": "0216",
+          "StationName": "美術東二路站",
+          "StationAddress": "美術東二路與美術東五路口",
+          "StationLat": "22.659491",
+          "StationLon": "120.288197",
+          "StationDesc": "美術東二路與美術東五路口"
         },
         {
           "StationID": "421",
