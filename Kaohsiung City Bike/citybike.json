@@ -738,6 +738,15 @@
           "StationDesc": "自由三路與曾子路口"
         },
         {
+        "StationID": "423",
+        "StationNO": "0220",
+        "StationName": "果貿社區站",
+        "StationAddress": "翠華路與翠峰路口",
+        "StationLat": "22.670810",
+        "StationLon": "120.289827",
+        "StationDesc": "翠華路與翠峰路口"
+        },
+        {
           "StationID": "440",
           "StationNO": "0230",
           "StationName": "WO旅店站",
