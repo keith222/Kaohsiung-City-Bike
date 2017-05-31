@@ -963,6 +963,42 @@
           "StationDesc": "大灣國中大門右側人行道,臨仁雄路"
         },
         {
+          "StationID": "488",
+          "StationNO": "0258",
+          "StationName": "海光兒童公園站",
+          "StationAddress": "瑞大街與瑞智街交叉口",
+          "StationLat": "22.631881",
+          "StationLon": "120.368270",
+          "StationDesc": "瑞大街與瑞智街交叉口"
+        },
+        {
+          "StationID": "489",
+          "StationNO": "0255",
+          "StationName": "漁港公園站",
+          "StationAddress": "林園漁港公園前，占岸路上",
+          "StationLat": "22.484821",
+          "StationLon": "120.399454",
+          "StationDesc": "林園漁港公園前，占岸路上"
+        },
+        {
+          "StationID": "490",
+          "StationNO": "0256",
+          "StationName": "明誠高中站",
+          "StationAddress": "明誠高中後門停車場入口旁，華寧路上",
+          "StationLat": "22.6675",
+          "StationLon": "120.29223",
+          "StationDesc": "明誠高中後門停車場入口旁，華寧路上"
+        },
+        {
+        "StationID": "491",
+        "StationNO": "0259",
+        "StationName": "八仙公園站",
+        "StationAddress": "國泰路一段與和興街口",
+        "StationLat": "22.61557",
+        "StationLon": "120.35475",
+        "StationDesc": "國泰路一段與和興街口"
+        },
+        {
           "StationID": "263",
           "StationNO": "0140",
           "StationName": "扶輪公園站",
