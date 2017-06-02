@@ -684,6 +684,15 @@
           "StationDesc": "同盟二路上，天津街與重慶街中間"
         },
         {
+          "StationID": "411",
+          "StationNO": "0204",
+          "StationName": "曹公圳公園站",
+          "StationAddress": "大東二路與和德街口",
+          "StationLat": "22.620335",
+          "StationLon": "120.360163",
+          "StationDesc": "大東二路與和德街口"
+        },
+        {
           "StationID": "412",
           "StationNO": "0205",
           "StationName": "精華公園站",
@@ -691,6 +700,15 @@
           "StationLat": "22.642316",
           "StationLon": "120.299238",
           "StationDesc": "錦州街與哈爾濱街口"
+        },
+        {
+          "StationID": "415",
+          "StationNO": "0209",
+          "StationName": "福山國中站",
+          "StationAddress": "自由路四路與重信路口",
+          "StationLat": "22.681130",
+          "StationLon": "120.313956",
+          "StationDesc": "自由路四路與重信路口"
         },
         {
           "StationID": "417",
@@ -983,6 +1001,15 @@
         {
           "StationID": "490",
           "StationNO": "0256",
+          "StationName": "八仙公園站",
+          "StationAddress": "國泰路一段與和興街口",
+          "StationLat": "22.61557",
+          "StationLon": "120.35475",
+          "StationDesc": "國泰路一段與和興街口"
+        },
+        {
+          "StationID": "491",
+          "StationNO": "0259",
           "StationName": "明誠高中站",
           "StationAddress": "明誠高中後門停車場入口旁，華寧路上",
           "StationLat": "22.6675",
@@ -990,13 +1017,13 @@
           "StationDesc": "明誠高中後門停車場入口旁，華寧路上"
         },
         {
-        "StationID": "491",
-        "StationNO": "0259",
-        "StationName": "八仙公園站",
-        "StationAddress": "國泰路一段與和興街口",
-        "StationLat": "22.61557",
-        "StationLon": "120.35475",
-        "StationDesc": "國泰路一段與和興街口"
+        "StationID": "496",
+        "StationNO": "0231",
+        "StationName": "管仲民裕站",
+        "StationAddress": "民裕街與管仲南路口",
+        "StationLat": "22.60557",
+        "StationLon": "120.31267",
+        "StationDesc": "民裕街與管仲南路口"
         },
         {
           "StationID": "263",

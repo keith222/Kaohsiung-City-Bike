@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至106-06-01
+//  站點更新至106-06-02
 
 import UIKit
 import MapKit
