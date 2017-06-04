@@ -765,6 +765,15 @@
           "StationDesc": "自由三路與曾子路口"
         },
         {
+          "StationID": "422",
+          "StationNO": "0219",
+          "StationName": "雄鋒公園站",
+          "StationAddress": "九如四路與九如四路1991巷口",
+          "StationLat": "22.667540",
+          "StationLon": "120.285300",
+          "StationDesc": "九如四路與九如四路1991巷口"
+        },
+        {
         "StationID": "423",
         "StationNO": "0220",
         "StationName": "果貿社區站",
