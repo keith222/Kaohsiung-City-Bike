@@ -1035,13 +1035,49 @@
           "StationDesc": "明誠高中後門停車場入口旁，華寧路上"
         },
         {
-        "StationID": "496",
-        "StationNO": "0231",
-        "StationName": "管仲民裕站",
-        "StationAddress": "民裕街與管仲南路口",
-        "StationLat": "22.60557",
-        "StationLon": "120.31267",
-        "StationDesc": "民裕街與管仲南路口"
+          "StationID": "496",
+          "StationNO": "0231",
+          "StationName": "管仲民裕站",
+          "StationAddress": "民裕街與管仲南路口",
+          "StationLat": "22.60557",
+          "StationLon": "120.31267",
+          "StationDesc": "民裕街與管仲南路口"
+        },
+        {
+          "StationID": "498",
+          "StationNO": "0260",
+          "StationName": "鼓山國小站",
+          "StationAddress": "鼓山國小大門旁，臨海二路與鼓波街口",
+          "StationLat": "22.623279",
+          "StationLon": "120.271726",
+          "StationDesc": "鼓山國小大門旁，臨海二路與鼓波街口"
+        },
+        {
+          "StationID": "499",
+          "StationNO": "0261",
+          "StationName": "陽明公園站",
+          "StationAddress": "陽明公園前，澄和路與澄和路158巷口",
+          "StationLat": "22.64536",
+          "StationLon": "120.34127",
+          "StationDesc": "陽明公園前，澄和路與澄和路158巷口"
+        },
+        {
+          "StationID": "500",
+          "StationNO": "0257",
+          "StationName": "鳳儀書院站",
+          "StationAddress": "鳳儀書院大門旁",
+          "StationLat": "22.62748",
+          "StationLon": "120.35976",
+          "StationDesc": "鳳儀書院大門旁"
+        },
+        {
+          "StationID": "504",
+          "StationNO": "0264",
+          "StationName": "鳳山公園站",
+          "StationAddress": "公園人行步道,園茂路與園中路交叉口",
+          "StationLat": "22.59456",
+          "StationLon": "120.35774",
+          "StationDesc": "公園人行步道,園茂路與園中路交叉口"
         },
         {
           "StationID": "263",
