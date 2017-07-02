@@ -1080,6 +1080,60 @@
           "StationDesc": "公園人行步道,園茂路與園中路交叉口"
         },
         {
+          "StationID": "506",
+          "StationNO": "0262",
+          "StationName": "空中大學站",
+          "StationAddress": "空中大學大門旁，大業北路上",
+          "StationLat": "22.56657",
+          "StationLon": "120.3455",
+          "StationDesc": "空中大學大門旁，大業北路上"
+        },
+        {
+          "StationID": "508",
+          "StationNO": "0265",
+          "StationName": "瑞祥高中站",
+          "StationAddress": "凱旋四路與班超路口",
+          "StationLat": "22.60311",
+          "StationLon": "120.32405",
+          "StationDesc": "凱旋四路與班超路口"
+        },
+        {
+          "StationID": "509",
+          "StationNO": "0234",
+          "StationName": "金獅湖橋站",
+          "StationAddress": "新金獅湖橋旁，鼎金後路與天祥一路口",
+          "StationLat": "22.66633",
+          "StationLon": "120.32522",
+          "StationDesc": "新金獅湖橋旁，鼎金後路與天祥一路口"
+        },
+        {
+          "StationID": "510",
+          "StationNO": "0239",
+          "StationName": "台糖楠梓量販店站",
+          "StationAddress": "量販店大門旁，清豐一路上",
+          "StationLat": "22.73629",
+          "StationLon": "120.33146",
+          "StationDesc": "量販店大門旁，清豐一路上"
+        },
+        {
+          "StationID": "511",
+          "StationNO": "0241",
+          "StationName": "右昌森林公園站",
+          "StationAddress": "右昌森林公園前，加宏路與加宏路156巷口",
+          "StationLat": "22.7175",
+          "StationLon": "120.29495",
+          "StationDesc": "右昌森林公園前，加宏路與加宏路156巷口"
+        },
+        {
+          "StationID": "512",
+          "StationNO": "0266",
+          "StationName": "華夏西北扶輪公園站",
+          "StationAddress": "重義路與華夏路口",
+          "StationLat": "22.68662",
+          "StationLon": "120.31233",
+          "StationDesc": "重義路與華夏路口"
+        },
+        {
           "StationID": "263",
           "StationNO": "0140",
           "StationName": "扶輪公園站",
