@@ -1134,6 +1134,24 @@
           "StationDesc": "重義路與華夏路口"
         },
         {
+          "StationID": "520",
+          "StationNO": "0268",
+          "StationName": "圖書總館站(2)",
+          "StationAddress": "新光路上，面對大門廣場左側自行車停車場內",
+          "StationLat": "22.61053",
+          "StationLon": "120.30211",
+          "StationDesc": "新光路上，面對大門廣場左側自行車停車場內"
+        },
+        {
+          "StationID": "521",
+          "StationNO": "0269",
+          "StationName": "岡山高中站",
+          "StationAddress": "岡山高中大門旁，公園路上",
+          "StationLat": "22.797096",
+          "StationLon": "120.290730",
+          "StationDesc": "岡山高中大門旁，公園路上"
+        },
+        {
           "StationID": "263",
           "StationNO": "0140",
           "StationName": "扶輪公園站",
