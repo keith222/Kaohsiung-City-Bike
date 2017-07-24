@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseMessaging
-import FirebaseInstanceID
+import UserNotifications
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -23,23 +25,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor = UIColor(red: 23.0/255.0, green: 169.0/255.0, blue: 174.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
         
-        if(UIApplication.instancesRespond(to: #selector(UIApplication.registerUserNotificationSettings(_:)))) {
-            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert,.sound,.badge], categories: nil))
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
         }
         
-        let notificationType: UIUserNotificationType = [.alert,.sound]
-        let notificationSettings = UIUserNotificationSettings(types: notificationType, categories: nil)
-        application.registerUserNotificationSettings(notificationSettings)
         application.registerForRemoteNotifications()
         
-        FIRApp.configure()
+        // Fabric
+        Fabric.with([Crashlytics.self])
         
         return true
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-            FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.prod)
+            Messaging.messaging().apnsToken = deviceToken
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
@@ -101,5 +116,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
+
+@available(iOS 10, *)
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    
+    // Receive displayed notifications for iOS 10 devices.
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        // Print message ID.
+        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        
+        // Print full message.
+        print("%@", userInfo)
+        
+    }
+    
+}
+
+extension AppDelegate : MessagingDelegate {
+    // [START refresh_token]
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print("Received data message: \(remoteMessage.appData)")
+    }
+    // [END ios_10_data_message]
 }
 

@@ -417,6 +417,7 @@
 				5396A6B01D9ADCBE0072D9CB /* ShellScript */,
 				313548013FB8B6E897E4FE82 /* [CP] Embed Pods Frameworks */,
 				B0A838B213EB3BBD0D93616D /* [CP] Copy Pods Resources */,
+				5397B90B1F2649CE0056938D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -716,6 +717,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:307339286334:ios:489544cdbc0e9361\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${PODS_ROOT}\"/FirebaseCrash/\"CityBike-RemoteNotification-9e8c964f8c03.json\"";
+		};
+		5397B90B1F2649CE0056938D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7e59115715190eb6df483058be96c12df9c938d3 2f411f234f0a60c3127a7780c126ea52b1c55cce06c9d02357841188726cdee8";
 		};
 		765B575F70E6793501F9EB83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

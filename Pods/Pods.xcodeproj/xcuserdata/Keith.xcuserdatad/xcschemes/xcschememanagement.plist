@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,6 +39,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwifterSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>nanopb.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -27,12 +62,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85023D788490B72F05E1E74C827CC419</key>
+		<key>3ACDE3A35754950C66A91F738B6C0C51</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC182A2951CD6A034E493BC294DE9995</key>
+		<key>3EF063674F9E73B4B63D4631C9E58EDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5920BEF6D814D9C7388C84718F765191</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66B239826EF1D39D2D6C594AC2DBFF77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C5630186C03090F609280675E8B5F23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD718FD48328A6D198730FD98A52E7DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B030E75946976E90E56E52F61B636581</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C17D485246B7B40B01412BDD1AF837C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF9D62D7D29756A1C4D4C0185BD40E1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
