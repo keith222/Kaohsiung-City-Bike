@@ -41,6 +41,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - Kanna (2.1.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Crash
   - Firebase/Messaging
+  - Kanna (~> 2.1.0)
   - PKHUD (~> 4.0)
   - SwifterSwift
   - SwiftyJSON
@@ -82,13 +84,14 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   FirebaseMessaging: 227406c05b0dc9290702d2e9f18ab5528f0c2cf2
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
+  Kanna: 9b4b086c218703f2b94f5b21a466217dd2f9332e
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
   SwifterSwift: f84eb7308f7742724b3cbf84283ce00f7c06d7fc
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 7582ddcb89794f0ab4790ae860ce469b7d432148
+PODFILE CHECKSUM: 18235ed8709cd9e15553b6ec4b998d7e21c1b6c3
 
 COCOAPODS: 1.1.1

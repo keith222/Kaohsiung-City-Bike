@@ -27,7 +27,7 @@
 "Only_8_Station_can_be_added" = "最多存取8个站点。";
 "Widget_alert_title" = "新增至「脚踏车站点即时查」";
 "Widget_alert_content" = "透过「脚踏车站点即时查」可以让您在「通知中心」快速掌握站点的即时资讯。";
-"Widget_alert_ok" = "确认";
+"Widget_alert_ok" = "确定";
 "Widget_alert_cancel" = "不允许";
 "Watch_Bike" = " / 脚踏车";
 "Watch_Parking" = " / 停车位";

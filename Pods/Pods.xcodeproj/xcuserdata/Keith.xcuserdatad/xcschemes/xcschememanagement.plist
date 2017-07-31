@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kanna.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,12 +39,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Kaohsiung CityBike WatchApp Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Kaohsiung CityBike Widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Protobuf.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwifterSwift.xcscheme</key>
+		<key>SwifterSwift-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwifterSwift-watchOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,7 +77,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>099EF15D32B484E66254551E5E520AE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1664A581754CC70ACAD65BDFC01ED12A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C5C979738CB23F9BD29ABCEE202727F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EF063674F9E73B4B63D4631C9E58EDE</key>
+		<key>42D8BE05C24B84E5CB733F18B263A56D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,27 +112,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>78AC1AB4FABFBAA54422F74F6202AD02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EADC4C5A174B6E574CB4D06F760846C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9C5630186C03090F609280675E8B5F23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD718FD48328A6D198730FD98A52E7DE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B030E75946976E90E56E52F61B636581</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C17D485246B7B40B01412BDD1AF837C1</key>
+		<key>D55916767D968ACDA28C66F5E613011E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DF9D62D7D29756A1C4D4C0185BD40E1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E869EA3A09BE2A90C6F01D200D236DA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCA4BFC4E08805B343C700C15DAFA848</key>
 		<dict>
 			<key>primary</key>
 			<true/>

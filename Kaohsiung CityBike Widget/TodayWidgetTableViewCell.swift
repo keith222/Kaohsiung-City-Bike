@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodayWidgetTableViewCell: UITableViewCell {
+class TodayWidgetTableViewCell: UITableViewCell, ReactiveView {
     
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var available: UILabel!
@@ -22,7 +22,9 @@ class TodayWidgetTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
-        
+        self.layoutMargins = .zero
+        self.preservesSuperviewLayoutMargins = false
+    
         self.sitePoint.layoutIfNeeded()
         self.sitePoint.layer.cornerRadius = self.sitePoint.frame.width / 2
         self.sitePoint.layer.masksToBounds = true
@@ -34,7 +36,25 @@ class TodayWidgetTableViewCell: UITableViewCell {
             self.bikeLabel.textColor = .white
             return
         }
+    }
     
+    func bindViewModel(_ dataModel: Any) {
+        if let viewModel = dataModel as? HomeViewModel {
+            self.stationName.text = viewModel.name
+            
+            var normalColor: UIColor?
+            if #available(iOS 10, *){
+                normalColor = .darkGray
+            }else{
+                normalColor = .white
+            }
+            
+            self.available.textColor = (viewModel.available < 10) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : normalColor
+            self.available.text = "\(viewModel.available!)"
+            
+            self.park.textColor = (viewModel.park < 10) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : normalColor
+            self.park.text = "\(viewModel.park!)"
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

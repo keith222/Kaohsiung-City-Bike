@@ -12,20 +12,22 @@ import FirebaseMessaging
 import UserNotifications
 import Fabric
 import Crashlytics
+import SwifterSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-    var mDelegate: sendData?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
-        UINavigationBar.appearance().barTintColor = UIColor(red: 23.0/255.0, green: 169.0/255.0, blue: 174.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor(hexString: "#17A9AE")
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 
+//        let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
+//        userDefault.removeObject(forKey: "staForTodayWidget")
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
@@ -71,25 +73,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         if url.query!.removingPercentEncoding == "openlist" {
-            let viewController = storyboard.instantiateViewController(withIdentifier: "Station") as! StationTableViewController
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Station") as! StationViewController
             navigatorController.viewControllers = [viewController]
             self.window?.rootViewController = navigatorController
             
         }else{
-            let viewController = storyboard.instantiateViewController(withIdentifier: "Map") as! ViewController
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Map") as! HomeViewController
             navigatorController.viewControllers = [viewController]
             self.window?.rootViewController = navigatorController
             
             let triggerTime = (Int64(NSEC_PER_SEC)*1)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
-                viewController.sendData(url.query!.removingPercentEncoding!)
+                viewController.didSelect(String(url.query!.removingPercentEncoding!)!)
             })
         }
         return true
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! ViewController
+        let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! HomeViewController
         print(userActivity.userInfo ?? "no anything")
         viewController.restoreUserActivityState(userActivity)
         return true

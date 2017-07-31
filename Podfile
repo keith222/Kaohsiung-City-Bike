@@ -12,6 +12,7 @@ target 'Kaohsiung City Bike' do
   pod 'Alamofire'
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'SwiftyJSON'
+  pod 'Kanna', '~> 2.1.0'
 
   #Pods about UI
   pod 'PKHUD', '~> 4.0'
@@ -25,4 +26,18 @@ target 'Kaohsiung City Bike' do
   pod 'Fabric'
   pod 'Crashlytics'
 
+end
+
+target 'Kaohsiung CityBike WatchApp Extension' do
+    platform :watchos, '2.0'
+    pod 'SwifterSwift'
+end
+
+target 'Kaohsiung CityBike Widget' do
+    
+    #Pods about internet request/response/parse
+    pod 'Alamofire'
+    pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'SwiftyJSON'
+    pod 'Kanna', '~> 2.1.0'
 end

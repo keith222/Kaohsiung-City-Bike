@@ -1,0 +1,6 @@
+framework module Pods_Kaohsiung_CityBike_WatchApp_Extension {
+  umbrella header "Pods-Kaohsiung CityBike WatchApp Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}
