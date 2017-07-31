@@ -25,6 +25,7 @@
 		53439F521F2A5C1100311DF8 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D59A1F2780EE0048CFFC /* TableViewHelper.swift */; };
 		53439F531F2CAF4B00311DF8 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D531F2A3FF000D7EC1E /* Park.swift */; };
 		53439F561F2DC18400311DF8 /* TodayWidgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53439F541F2DC18400311DF8 /* TodayWidgetTableViewCell.xib */; };
+		53439F651F2F7DE100311DF8 /* version.json in Resources */ = {isa = PBXBuildFile; fileRef = 53439F641F2F7DE100311DF8 /* version.json */; };
 		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
 		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
 		5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
@@ -167,6 +168,7 @@
 		53439F601F2DC1C200311DF8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TodayWidgetTableViewCell.strings; sourceTree = "<group>"; };
 		53439F621F2DC1C400311DF8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TodayWidgetTableViewCell.strings"; sourceTree = "<group>"; };
 		53439F631F2DC1E200311DF8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TodayWidgetTableViewCell.strings"; sourceTree = "<group>"; };
+		53439F641F2F7DE100311DF8 /* version.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = version.json; sourceTree = "<group>"; };
 		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534962971BE07BE700BFFD71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				534962921BE07BE700BFFD71 /* AppDelegate.swift */,
 				534962991BE07BE700BFFD71 /* Assets.xcassets */,
 				534962C21BE39D6600BFFD71 /* citybike.json */,
+				53439F641F2F7DE100311DF8 /* version.json */,
 				53E2325F1BFE39A700F36B71 /* InfoPlist.strings */,
 				53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */,
 				53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */,
@@ -720,6 +723,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53439F651F2F7DE100311DF8 /* version.json in Resources */,
 				53B2D5A01F2782080048CFFC /* StationCell.xib in Resources */,
 				53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */,
 				53134F631D60AF4000B44343 /* GoogleService-Info.plist in Resources */,
