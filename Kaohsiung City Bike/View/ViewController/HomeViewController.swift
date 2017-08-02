@@ -12,6 +12,7 @@ import MapKit
 import SwifterSwift
 import WatchConnectivity
 import CoreLocation
+import PKHUD
 
 //for spotlight search
 import CoreSpotlight
@@ -86,29 +87,20 @@ class HomeViewController: UIViewController {
         //加入NotificationCenter Observer
         self.addNotificationObserver(name: NSNotification.Name(rawValue: "timeOut"), selector: #selector(self.timeOutAlert(_:)))
         
+        guard self.reachability.isReachable else {
+            UIAlertController(title: "提示", message: "網路連線異常。").show()
+            return
+        }
+        
+        
         //設定Delegate
         self.mapView.delegate = self
         self.locationManager.delegate = self
         
         self.setUpUI()
+        self.checkData()
         self.requestLocationAuthorization()
         
-        self.homeViewModel.fetchStationList(handler: { [weak self] stations in
-            self?.source = stations.map{ value -> HomeViewModel in
-                return HomeViewModel(data: value)
-            }
-            
-            for element in (self?.source)! {
-                let annotation = Annotation()
-                annotation.title = (Locale.current.languageCode == "zh") ? element.name : element.englishname
-                annotation.coordinate = CLLocationCoordinate2D(latitude: element.latitude , longitude: element.longitude)
-                annotation.id = element.id
-                annotation.no = element.no
-                self?.annoArray?.append(annotation)
-            }
-            
-            self?.setupSearchableContent()
-        })
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -148,6 +140,22 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func checkData(){
+        HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Update", comment: "")))
+        self.homeViewModel.updateInfoVersion(handler: { [weak self] isUpdated in
+            if isUpdated {
+                self?.homeViewModel.updateStationInfo(handler: { completed in
+                    if completed {
+                        self?.setMap()
+                    }
+                })
+            }else{
+                self?.setMap()
+            }
+        })
+        
+    }
+    
     private func requestLocationAuthorization() {
         //確認地理位置請求
         let status = CLLocationManager.authorizationStatus()
@@ -161,6 +169,26 @@ class HomeViewController: UIViewController {
         }else{
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    private func setMap() {
+        self.homeViewModel.fetchStationList(handler: { [weak self] stations in
+            self?.source = stations.map{ value -> HomeViewModel in
+                return HomeViewModel(data: value)
+            }
+            
+            for element in (self?.source)! {
+                let annotation = Annotation()
+                annotation.title = (Locale.current.languageCode == "zh") ? element.name : element.englishname
+                annotation.coordinate = CLLocationCoordinate2D(latitude: element.latitude , longitude: element.longitude)
+                annotation.id = element.id
+                annotation.no = element.no
+                self?.annoArray?.append(annotation)
+            }
+            
+            HUD.hide()
+            self?.setupSearchableContent()
+        })
     }
     
     private func setUpUI() {
@@ -543,7 +571,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         case .denied,.restricted:
             self.requestAgain()
         default:
-            break
+            self.locationManager.startUpdatingLocation()
         }
     }
 }

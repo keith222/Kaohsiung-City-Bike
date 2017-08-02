@@ -36,7 +36,9 @@ class StationViewModel {
     }
     
     func fetchStationList(handler: @escaping (([Station]) -> ())){
-        let path: String = Bundle.main.path(forResource: "citybike", ofType: "json")!
+//        let path: String = Bundle.main.path(forResource: "citybike", ofType: "json")!
+        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path = doc.appendingPathComponent("version.json").path
         
         do {
             let jsonData: Data = try Data(contentsOf: URL(fileURLWithPath: path))

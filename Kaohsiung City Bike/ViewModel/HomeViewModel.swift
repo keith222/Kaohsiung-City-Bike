@@ -48,12 +48,13 @@ class HomeViewModel {
     }
     
     func fetchStationList(handler: @escaping (([Station]) -> ())){
-        let path: String = Bundle.main.path(forResource: "citybike", ofType: "json")!
+        //let path: String = Bundle.main.path(forResource: "citybike", ofType: "json")!
+        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path = doc.appendingPathComponent("citybike.json").path
         
         do {
             let jsonData: Data = try Data(contentsOf: URL(fileURLWithPath: path))
             let json = JSON(data: jsonData)
-            
             let station = json.map({ (station: (String, value: SwiftyJSON.JSON)) -> Station in
                 return Mapper<Station>().map(JSONObject: station.value.dictionaryObject)!
             })
@@ -87,5 +88,46 @@ class HomeViewModel {
             
             handler(parks)
         })
+    }
+    
+    func updateInfoVersion(handler: @escaping ((Bool)->())) {
+        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path = doc.appendingPathComponent("version.json")
+        do{
+            let jsonData: Data = try Data(contentsOf: path)
+            let oldJson = JSON(data: jsonData)
+            let url = "https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/recreate/Kaohsiung%20City%20Bike/version.json"
+            APIService.request(url, completionHandler: { data in
+                let newJson = JSON(data: data)
+                
+                if oldJson["version"] == newJson["version"] {
+                    do {
+                        try! data.write(to: path)
+                        handler(true)
+                    }
+                }else{
+                    handler(false)
+                }
+            })
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func updateStationInfo(handler: @escaping ((Bool)->())) {
+        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path = doc.appendingPathComponent("citybike.json")
+
+        let url = "https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/recreate/Kaohsiung%20City%20Bike/citybike.json"
+        APIService.request(url, completionHandler: { data in
+            do {
+                try data.write(to: path)
+                handler(true)
+            } catch let error {
+                handler(false)
+                print(error.localizedDescription)
+            }
+        })
+
     }
 }

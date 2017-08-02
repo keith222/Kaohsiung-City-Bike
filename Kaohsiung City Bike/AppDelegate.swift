@@ -25,6 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor = UIColor(hexString: "#17A9AE")
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        //if there is not json file in document, copy it from bundle to document
+        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let versionPath = doc.appendingPathComponent("version.json").path
+        let infoPath = doc.appendingPathComponent("citybike.json").path
+        if !FileManager.default.fileExists(atPath: versionPath) {
+            do{
+                let versionBundlePath = Bundle.main.path(forResource: "version", ofType: "json")
+                try FileManager.default.copyItem(atPath: versionBundlePath!, toPath: versionPath)
+                
+                let infoBundlePath = Bundle.main.path(forResource: "citybike", ofType: "json")
+                try FileManager.default.copyItem(atPath: infoBundlePath!, toPath: infoPath)
+                
+            }catch{
+                print(error)
+            }
+        }
+        
 
 //        let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
 //        userDefault.removeObject(forKey: "staForTodayWidget")
