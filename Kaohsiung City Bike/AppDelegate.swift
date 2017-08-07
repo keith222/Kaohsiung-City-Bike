@@ -9,37 +9,92 @@
 import UIKit
 import Firebase
 import FirebaseMessaging
-import FirebaseInstanceID
+import UserNotifications
+import Fabric
+import Crashlytics
+import SwifterSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
-    var mDelegate: sendData?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
-        UINavigationBar.appearance().barTintColor = UIColor(red: 23.0/255.0, green: 169.0/255.0, blue: 174.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor(hexString: "#17A9AE")
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-        if(UIApplication.instancesRespond(to: #selector(UIApplication.registerUserNotificationSettings(_:)))) {
-            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert,.sound,.badge], categories: nil))
+        //if there is not json file in document, copy it from bundle to document
+        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let versionPath = doc.appendingPathComponent("version.json").path
+        let infoPath = doc.appendingPathComponent("citybike.json").path
+        if !FileManager.default.fileExists(atPath: versionPath) {
+            do{
+                let versionBundlePath = Bundle.main.path(forResource: "version", ofType: "json")
+                try FileManager.default.copyItem(atPath: versionBundlePath!, toPath: versionPath)
+                
+                let infoBundlePath = Bundle.main.path(forResource: "citybike", ofType: "json")
+                try FileManager.default.copyItem(atPath: infoBundlePath!, toPath: infoPath)
+                
+            }catch{
+                print(error)
+            }
         }
         
-        let notificationType: UIUserNotificationType = [.alert,.sound]
-        let notificationSettings = UIUserNotificationSettings(types: notificationType, categories: nil)
-        application.registerUserNotificationSettings(notificationSettings)
+        
+
+        let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
+        if !userDefault.bool(forKey: "updateStorage") {
+            var todayWidgetArray = userDefault.array(forKey: "staForTodayWidget")
+            
+            var homeViewModel: HomeViewModel? = HomeViewModel()
+            homeViewModel?.fetchStationList(handler: { stations in
+                for station in stations {
+                    let index = todayWidgetArray?.index(where: {
+                        print($0)
+                        print(station.name)
+                        return ($0 as! String) == station.name
+                    })
+                    guard let _ = index else { continue }
+                    todayWidgetArray?[index!] = station.no
+                }
+            })
+            userDefault.set(todayWidgetArray, forKey: "staForTodayWidget")
+            userDefault.set(true, forKey: "updateStorage")
+            userDefault.synchronize()
+            homeViewModel = nil
+        }
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
         application.registerForRemoteNotifications()
         
-        FIRApp.configure()
+        // Fabric
+        Fabric.with([Crashlytics.self])
         
         return true
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-            FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.prod)
+            Messaging.messaging().apnsToken = deviceToken
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
@@ -56,25 +111,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         if url.query!.removingPercentEncoding == "openlist" {
-            let viewController = storyboard.instantiateViewController(withIdentifier: "Station") as! StationTableViewController
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Station") as! StationViewController
             navigatorController.viewControllers = [viewController]
             self.window?.rootViewController = navigatorController
             
         }else{
-            let viewController = storyboard.instantiateViewController(withIdentifier: "Map") as! ViewController
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Map") as! HomeViewController
             navigatorController.viewControllers = [viewController]
             self.window?.rootViewController = navigatorController
             
             let triggerTime = (Int64(NSEC_PER_SEC)*1)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
-                viewController.sendData(url.query!.removingPercentEncoding!)
+                viewController.didSelect(String(url.query!.removingPercentEncoding!)!)
             })
         }
         return true
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! ViewController
+        let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! HomeViewController
         print(userActivity.userInfo ?? "no anything")
         viewController.restoreUserActivityState(userActivity)
         return true
@@ -101,5 +156,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
+
+@available(iOS 10, *)
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    
+    // Receive displayed notifications for iOS 10 devices.
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        // Print message ID.
+        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        
+        // Print full message.
+        print("%@", userInfo)
+        
+    }
+    
+}
+
+extension AppDelegate : MessagingDelegate {
+    // [START refresh_token]
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print("Received data message: \(remoteMessage.appData)")
+    }
+    // [END ios_10_data_message]
 }
 

@@ -7,19 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7AF90A555D3D691BEFA985 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE55F0A8F1419123AD7C6369 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */; };
 		1DDA67064284468611BA2453 /* Pods_Kaohsiung_City_Bike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C45F10040D0671A83D7B7 /* Pods_Kaohsiung_City_Bike.framework */; };
-		530A42E51CC76A5E00796DCF /* BikeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F22331BF3A18D00ECE80D /* BikeParser.swift */; };
+		53029D4D1F28D3D200D7EC1E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D4C1F28D3D200D7EC1E /* UIButton+Extension.swift */; };
+		53029D501F28EB9C00D7EC1E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D4F1F28EB9C00D7EC1E /* Annotation.swift */; };
+		53029D521F2A396400D7EC1E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D511F2A396400D7EC1E /* APIService.swift */; };
+		53029D541F2A3FF000D7EC1E /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D531F2A3FF000D7EC1E /* Park.swift */; };
 		53134F631D60AF4000B44343 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53134F621D60AF4000B44343 /* GoogleService-Info.plist */; };
 		5319C3871D4657CB0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		5319C3881D4657CC0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F22331BF3A18D00ECE80D /* BikeParser.swift */; };
 		53235FD51D4363B6008C5B47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
-		5333917E1CA67804005EFA48 /* StationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5333917D1CA67804005EFA48 /* StationTableViewController.swift */; };
-		533391801CA6781D005EFA48 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */; };
 		533391811CA67D55005EFA48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534962C01BE3719400BFFD71 /* MapKit.framework */; };
 		53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */; };
+		53439F4A1F2A56FB00311DF8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5AD1F28A1670048CFFC /* HomeViewModel.swift */; };
+		53439F4B1F2A5AA100311DF8 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5A91F27840F0048CFFC /* Station.swift */; };
+		53439F511F2A5ABE00311DF8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D511F2A396400D7EC1E /* APIService.swift */; };
+		53439F521F2A5C1100311DF8 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D59A1F2780EE0048CFFC /* TableViewHelper.swift */; };
+		53439F531F2CAF4B00311DF8 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D531F2A3FF000D7EC1E /* Park.swift */; };
+		53439F561F2DC18400311DF8 /* TodayWidgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53439F541F2DC18400311DF8 /* TodayWidgetTableViewCell.xib */; };
+		53439F651F2F7DE100311DF8 /* version.json in Resources */ = {isa = PBXBuildFile; fileRef = 53439F641F2F7DE100311DF8 /* version.json */; };
 		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
-		534962951BE07BE700BFFD71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962941BE07BE700BFFD71 /* ViewController.swift */; };
 		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
 		5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
 		534962A81BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */; };
@@ -39,7 +46,16 @@
 		537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
 		537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
 		5380329C1C20236C00E07131 /* geojson.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 5380329B1C20236B00E07131 /* geojson.geojson */; };
-		53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53893AED1BE9CAF700E32ECD /* DataGet.swift */; };
+		53B2D59B1F2780EE0048CFFC /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D59A1F2780EE0048CFFC /* TableViewHelper.swift */; };
+		53B2D59D1F2781AB0048CFFC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D59C1F2781AB0048CFFC /* Reachability.swift */; };
+		53B2D5A01F2782080048CFFC /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B2D59F1F2782080048CFFC /* StationCell.xib */; };
+		53B2D5A21F2782380048CFFC /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5A11F2782380048CFFC /* StationCell.swift */; };
+		53B2D5A41F2783490048CFFC /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5A31F2783490048CFFC /* StationViewController.swift */; };
+		53B2D5A61F2783DD0048CFFC /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5A51F2783DD0048CFFC /* StationViewModel.swift */; };
+		53B2D5AA1F27840F0048CFFC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5A91F27840F0048CFFC /* Station.swift */; };
+		53B2D5AC1F282F940048CFFC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5AB1F282F940048CFFC /* SearchViewController.swift */; };
+		53B2D5AE1F28A1670048CFFC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5AD1F28A1670048CFFC /* HomeViewModel.swift */; };
+		53B2D5B01F28A1E30048CFFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5AF1F28A1E30048CFFC /* HomeViewController.swift */; };
 		53B362AA1CC4CA39003CF0E7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */; };
 		53B362AD1CC4CA3A003CF0E7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B362AC1CC4CA3A003CF0E7 /* TodayViewController.swift */; };
 		53B362B01CC4CA3A003CF0E7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B362AE1CC4CA3A003CF0E7 /* MainInterface.storyboard */; };
@@ -51,7 +67,7 @@
 		53C362341CC9FE2200050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CE89DE1E61582900C528BC /* MapKit.framework */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
-		53F165F21C402F6900E851F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F165F11C402F6900E851F0 /* Reachability.swift */; };
+		652B6194A17B64CB8B168AAC /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,26 +147,30 @@
 /* Begin PBXFileReference section */
 		1C3229461B46070AFDE8D270 /* Pods_Kaohsiung_CityBike_WatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_WatchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9C45F10040D0671A83D7B7 /* Pods_Kaohsiung_City_Bike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_Bike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2795D267C15D00260CE40D26 /* Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig"; sourceTree = "<group>"; };
+		3CD590F36FD0DAB87B250ABA /* Pods-Kaohsiung CityBike Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.release.xcconfig"; sourceTree = "<group>"; };
 		3ECE2FEF40EA7804E963A22A /* Pods_Kaohsiung_City_BikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_BikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53029D4C1F28D3D200D7EC1E /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Extension/UIButton+Extension.swift"; sourceTree = "<group>"; };
+		53029D4F1F28EB9C00D7EC1E /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Annotation.swift; path = Model/Annotation.swift; sourceTree = "<group>"; };
+		53029D511F2A396400D7EC1E /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = Helper/APIService.swift; sourceTree = "<group>"; };
+		53029D531F2A3FF000D7EC1E /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Park.swift; path = Model/Park.swift; sourceTree = "<group>"; };
 		53134F621D60AF4000B44343 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5319C38C1D46615C0014C51E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 		5319C38D1D4661630014C51E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
 		5319C38E1D46616A0014C51E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
-		531F22331BF3A18D00ECE80D /* BikeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeParser.swift; sourceTree = "<group>"; };
-		53235FD71D4364F7008C5B47 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainInterface.strings"; sourceTree = "<group>"; };
-		53235FD91D4364F9008C5B47 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainInterface.strings; sourceTree = "<group>"; };
-		53235FDB1D4364FA008C5B47 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
-		5333917D1CA67804005EFA48 /* StationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewController.swift; sourceTree = "<group>"; };
-		5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		53356CBE1D4279BC00A20515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		53356CCB1D42863000A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53356CD71D42889700A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		53356CD81D42889F00A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		53356CD91D4288A600A20515 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		53439F551F2DC18400311DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayWidgetTableViewCell.xib; sourceTree = "<group>"; };
+		53439F601F2DC1C200311DF8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TodayWidgetTableViewCell.strings; sourceTree = "<group>"; };
+		53439F621F2DC1C400311DF8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TodayWidgetTableViewCell.strings"; sourceTree = "<group>"; };
+		53439F631F2DC1E200311DF8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TodayWidgetTableViewCell.strings"; sourceTree = "<group>"; };
+		53439F641F2F7DE100311DF8 /* version.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = version.json; sourceTree = "<group>"; };
 		5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung City Bike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		534962941BE07BE700BFFD71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		534962971BE07BE700BFFD71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		534962991BE07BE700BFFD71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaohsiung City BikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,9 +197,18 @@
 		537EE0FA1C0B35BB008501B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		5380329B1C20236B00E07131 /* geojson.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = geojson.geojson; path = "Kaohsiung City Bike/geojson.geojson"; sourceTree = "<group>"; };
-		53893AED1BE9CAF700E32ECD /* DataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGet.swift; sourceTree = "<group>"; };
 		53928D071C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		53928D081C57BB070072FA37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		53B2D59A1F2780EE0048CFFC /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewHelper.swift; path = Helper/TableViewHelper.swift; sourceTree = "<group>"; };
+		53B2D59C1F2781AB0048CFFC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helper/Reachability.swift; sourceTree = "<group>"; };
+		53B2D59F1F2782080048CFFC /* StationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StationCell.xib; path = View/StationCell.xib; sourceTree = "<group>"; };
+		53B2D5A11F2782380048CFFC /* StationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationCell.swift; path = View/StationCell.swift; sourceTree = "<group>"; };
+		53B2D5A31F2783490048CFFC /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationViewController.swift; path = View/ViewController/StationViewController.swift; sourceTree = "<group>"; };
+		53B2D5A51F2783DD0048CFFC /* StationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationViewModel.swift; path = ViewModel/StationViewModel.swift; sourceTree = "<group>"; };
+		53B2D5A91F27840F0048CFFC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Station.swift; path = Model/Station.swift; sourceTree = "<group>"; };
+		53B2D5AB1F282F940048CFFC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Helper/SearchViewController.swift; sourceTree = "<group>"; };
+		53B2D5AD1F28A1670048CFFC /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ViewModel/HomeViewModel.swift; sourceTree = "<group>"; };
+		53B2D5AF1F28A1E30048CFFC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = View/ViewController/HomeViewController.swift; sourceTree = "<group>"; };
 		53B362A71CC4CA39003CF0E7 /* Kaohsiung CityBike Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Kaohsiung CityBike Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		53B362AC1CC4CA3A003CF0E7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -192,11 +221,14 @@
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		53E42D161D436EB0004B9B98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
-		53F165F11C402F6900E851F0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D9665E42FEB35580287751 /* Pods_Kaohsiung_City_BikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_BikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig"; sourceTree = "<group>"; };
+		9B16792D19CAFB6F74C8B532 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A714ADB3A9D7BEB40D8E0FE0 /* Pods-Kaohsiung City Bike.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.ad-hoc.xcconfig"; sourceTree = "<group>"; };
+		B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA8AB7D23C92F938D3858EC /* Pods-Kaohsiung City Bike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1F9DC7F5C600E99AF3C4ED /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		DE55F0A8F1419123AD7C6369 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_WatchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55FC91A663D0480A5618FE4 /* Pods-Kaohsiung City Bike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */,
+				0B7AF90A555D3D691BEFA985 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,36 +279,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				53B362AA1CC4CA39003CF0E7 /* NotificationCenter.framework in Frameworks */,
+				652B6194A17B64CB8B168AAC /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5340DAF51BE51047009EBF16 /* image */ = {
+		53029D4E1F28D3D800D7EC1E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				53029D4C1F28D3D200D7EC1E /* UIButton+Extension.swift */,
 			);
-			name = image;
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		534962861BE07BE700BFFD71 = {
 			isa = PBXGroup;
 			children = (
-				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
 				534962C01BE3719400BFFD71 /* MapKit.framework */,
-				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
+				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
 				5380329B1C20236B00E07131 /* geojson.geojson */,
 				53134F621D60AF4000B44343 /* GoogleService-Info.plist */,
 				53E42D161D436EB0004B9B98 /* Info.plist */,
+				53B362A81CC4CA39003CF0E7 /* Frameworks */,
+				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
 				534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
 				534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
 				537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
 				537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
 				53B362AB1CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */,
-				53B362A81CC4CA39003CF0E7 /* Frameworks */,
-				534962901BE07BE700BFFD71 /* Products */,
 				FC11EEAEF67D522603859DFA /* Pods */,
+				534962901BE07BE700BFFD71 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,21 +330,20 @@
 		534962911BE07BE700BFFD71 /* Kaohsiung City Bike */ = {
 			isa = PBXGroup;
 			children = (
-				53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */,
-				5340DAF51BE51047009EBF16 /* image */,
 				534962921BE07BE700BFFD71 /* AppDelegate.swift */,
-				534962941BE07BE700BFFD71 /* ViewController.swift */,
-				53893AED1BE9CAF700E32ECD /* DataGet.swift */,
-				531F22331BF3A18D00ECE80D /* BikeParser.swift */,
-				53F165F11C402F6900E851F0 /* Reachability.swift */,
-				5333917D1CA67804005EFA48 /* StationTableViewController.swift */,
-				5333917F1CA6781D005EFA48 /* StationTableViewCell.swift */,
-				534962961BE07BE700BFFD71 /* Main.storyboard */,
 				534962991BE07BE700BFFD71 /* Assets.xcassets */,
-				53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */,
 				534962C21BE39D6600BFFD71 /* citybike.json */,
-				536E2C151BF726C500B5E7DE /* Localizable.strings */,
+				53439F641F2F7DE100311DF8 /* version.json */,
 				53E2325F1BFE39A700F36B71 /* InfoPlist.strings */,
+				53B362BC1CC4D72E003CF0E7 /* Kaohsiung City Bike.entitlements */,
+				53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */,
+				536E2C151BF726C500B5E7DE /* Localizable.strings */,
+				534962961BE07BE700BFFD71 /* Main.storyboard */,
+				53029D4E1F28D3D800D7EC1E /* Extension */,
+				53B2D5991F2780B50048CFFC /* Helper */,
+				53B2D5A81F2783F10048CFFC /* Model */,
+				53B2D5981F2780AD0048CFFC /* View */,
+				53B2D5A71F2783E90048CFFC /* ViewModel */,
 			);
 			path = "Kaohsiung City Bike";
 			sourceTree = "<group>";
@@ -364,6 +398,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		53B2D5981F2780AD0048CFFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D5A11F2782380048CFFC /* StationCell.swift */,
+				53B2D59F1F2782080048CFFC /* StationCell.xib */,
+				53B2D59E1F2781CC0048CFFC /* ViewController */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53B2D5991F2780B50048CFFC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D59C1F2781AB0048CFFC /* Reachability.swift */,
+				53B2D5AB1F282F940048CFFC /* SearchViewController.swift */,
+				53B2D59A1F2780EE0048CFFC /* TableViewHelper.swift */,
+				53029D511F2A396400D7EC1E /* APIService.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		53B2D59E1F2781CC0048CFFC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D5AF1F28A1E30048CFFC /* HomeViewController.swift */,
+				53B2D5A31F2783490048CFFC /* StationViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		53B2D5A71F2783E90048CFFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D5A51F2783DD0048CFFC /* StationViewModel.swift */,
+				53B2D5AD1F28A1670048CFFC /* HomeViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		53B2D5A81F2783F10048CFFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53B2D5A91F27840F0048CFFC /* Station.swift */,
+				53029D4F1F28EB9C00D7EC1E /* Annotation.swift */,
+				53029D531F2A3FF000D7EC1E /* Park.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		53B362A81CC4CA39003CF0E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +470,7 @@
 				53B362B91CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift */,
 				53B362AE1CC4CA3A003CF0E7 /* MainInterface.storyboard */,
 				53B362B11CC4CA3A003CF0E7 /* Info.plist */,
+				53439F541F2DC18400311DF8 /* TodayWidgetTableViewCell.xib */,
 			);
 			path = "Kaohsiung CityBike Widget";
 			sourceTree = "<group>";
@@ -397,6 +481,12 @@
 				BEA8AB7D23C92F938D3858EC /* Pods-Kaohsiung City Bike.debug.xcconfig */,
 				E55FC91A663D0480A5618FE4 /* Pods-Kaohsiung City Bike.release.xcconfig */,
 				A714ADB3A9D7BEB40D8E0FE0 /* Pods-Kaohsiung City Bike.ad-hoc.xcconfig */,
+				CA1F9DC7F5C600E99AF3C4ED /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */,
+				9B16792D19CAFB6F74C8B532 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */,
+				2795D267C15D00260CE40D26 /* Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig */,
+				B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */,
+				3CD590F36FD0DAB87B250ABA /* Pods-Kaohsiung CityBike Widget.release.xcconfig */,
+				8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -417,6 +507,7 @@
 				5396A6B01D9ADCBE0072D9CB /* ShellScript */,
 				313548013FB8B6E897E4FE82 /* [CP] Embed Pods Frameworks */,
 				B0A838B213EB3BBD0D93616D /* [CP] Copy Pods Resources */,
+				5397B90B1F2649CE0056938D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -487,9 +578,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 537EE1021C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp Extension" */;
 			buildPhases = (
+				D20250740CC297C4B5D230AC /* [CP] Check Pods Manifest.lock */,
 				537EE0E71C0B35BB008501B0 /* Sources */,
 				537EE0E81C0B35BB008501B0 /* Frameworks */,
 				537EE0E91C0B35BB008501B0 /* Resources */,
+				BAB327983B3F86C2547BD791 /* [CP] Embed Pods Frameworks */,
+				D8C1BEFD2DEFEF0A35FB9998 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -504,9 +598,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53B362B71CC4CA3A003CF0E7 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike Widget" */;
 			buildPhases = (
+				AA43A539664F921A05728E19 /* [CP] Check Pods Manifest.lock */,
 				53B362A31CC4CA39003CF0E7 /* Sources */,
 				53B362A41CC4CA39003CF0E7 /* Frameworks */,
 				53B362A51CC4CA39003CF0E7 /* Resources */,
+				33F5D4A93BD76A61208E15D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -524,7 +620,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Yang Tun-Kai";
 				TargetAttributes = {
 					5349628E1BE07BE700BFFD71 = {
@@ -627,6 +723,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53439F651F2F7DE100311DF8 /* version.json in Resources */,
+				53B2D5A01F2782080048CFFC /* StationCell.xib in Resources */,
 				53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */,
 				53134F631D60AF4000B44343 /* GoogleService-Info.plist in Resources */,
 				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
@@ -682,6 +780,7 @@
 				53B362BB1CC4CFF3003CF0E7 /* Assets.xcassets in Resources */,
 				53C362331CC9FE2100050EBE /* Localizable.strings in Resources */,
 				53C362311CC9D54200050EBE /* InfoPlist.strings in Resources */,
+				53439F561F2DC18400311DF8 /* TodayWidgetTableViewCell.xib in Resources */,
 				53B362B01CC4CA3A003CF0E7 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +803,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		33F5D4A93BD76A61208E15D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5396A6B01D9ADCBE0072D9CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -717,7 +831,35 @@
 			shellPath = /bin/sh;
 			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:307339286334:ios:489544cdbc0e9361\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${PODS_ROOT}\"/FirebaseCrash/\"CityBike-RemoteNotification-9e8c964f8c03.json\"";
 		};
+		5397B90B1F2649CE0056938D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7e59115715190eb6df483058be96c12df9c938d3 2f411f234f0a60c3127a7780c126ea52b1c55cce06c9d02357841188726cdee8";
+		};
 		765B575F70E6793501F9EB83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA43A539664F921A05728E19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -747,6 +889,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BAB327983B3F86C2547BD791 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D20250740CC297C4B5D230AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C1BEFD2DEFEF0A35FB9998 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -754,13 +941,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				534962951BE07BE700BFFD71 /* ViewController.swift in Sources */,
-				53893AEE1BE9CAF700E32ECD /* DataGet.swift in Sources */,
+				53B2D5A61F2783DD0048CFFC /* StationViewModel.swift in Sources */,
+				53029D521F2A396400D7EC1E /* APIService.swift in Sources */,
+				53029D541F2A3FF000D7EC1E /* Park.swift in Sources */,
+				53029D4D1F28D3D200D7EC1E /* UIButton+Extension.swift in Sources */,
 				534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */,
-				533391801CA6781D005EFA48 /* StationTableViewCell.swift in Sources */,
-				53F165F21C402F6900E851F0 /* Reachability.swift in Sources */,
-				5333917E1CA67804005EFA48 /* StationTableViewController.swift in Sources */,
-				531F22341BF3A18D00ECE80D /* BikeParser.swift in Sources */,
+				53B2D59B1F2780EE0048CFFC /* TableViewHelper.swift in Sources */,
+				53B2D59D1F2781AB0048CFFC /* Reachability.swift in Sources */,
+				53B2D5AA1F27840F0048CFFC /* Station.swift in Sources */,
+				53B2D5AE1F28A1670048CFFC /* HomeViewModel.swift in Sources */,
+				53B2D5A21F2782380048CFFC /* StationCell.swift in Sources */,
+				53B2D5AC1F282F940048CFFC /* SearchViewController.swift in Sources */,
+				53B2D5B01F28A1E30048CFFC /* HomeViewController.swift in Sources */,
+				53029D501F28EB9C00D7EC1E /* Annotation.swift in Sources */,
+				53B2D5A41F2783490048CFFC /* StationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,7 +990,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				53B362AD1CC4CA3A003CF0E7 /* TodayViewController.swift in Sources */,
-				530A42E51CC76A5E00796DCF /* BikeParser.swift in Sources */,
+				53439F531F2CAF4B00311DF8 /* Park.swift in Sources */,
+				53439F521F2A5C1100311DF8 /* TableViewHelper.swift in Sources */,
+				53439F4A1F2A56FB00311DF8 /* HomeViewModel.swift in Sources */,
+				53439F4B1F2A5AA100311DF8 /* Station.swift in Sources */,
+				53439F511F2A5ABE00311DF8 /* APIService.swift in Sources */,
 				53B362BA1CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,6 +1038,17 @@
 			name = "Launch Screen.storyboard";
 			sourceTree = "<group>";
 		};
+		53439F541F2DC18400311DF8 /* TodayWidgetTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53439F551F2DC18400311DF8 /* Base */,
+				53439F601F2DC1C200311DF8 /* ja */,
+				53439F621F2DC1C400311DF8 /* zh-Hans */,
+				53439F631F2DC1E200311DF8 /* zh-Hant */,
+			);
+			name = TodayWidgetTableViewCell.xib;
+			sourceTree = "<group>";
+		};
 		534962961BE07BE700BFFD71 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -877,9 +1086,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				53B362AF1CC4CA3A003CF0E7 /* Base */,
-				53235FD71D4364F7008C5B47 /* zh-Hant */,
-				53235FD91D4364F9008C5B47 /* ja */,
-				53235FDB1D4364FA008C5B47 /* zh-Hans */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -999,6 +1205,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1143,6 +1350,7 @@
 		};
 		537EE1001C0B35BB008501B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1F9DC7F5C600E99AF3C4ED /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1165,6 +1373,7 @@
 		};
 		537EE1011C0B35BB008501B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B16792D19CAFB6F74C8B532 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
@@ -1306,6 +1515,7 @@
 		};
 		538334211D68A2D200D7F654 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2795D267C15D00260CE40D26 /* Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
@@ -1328,6 +1538,7 @@
 		};
 		538334221D68A2D200D7F654 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
@@ -1348,6 +1559,7 @@
 		};
 		53B362B51CC4CA3A003CF0E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
@@ -1368,6 +1580,7 @@
 		};
 		53B362B61CC4CA3A003CF0E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD590F36FD0DAB87B250ABA /* Pods-Kaohsiung CityBike Widget.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";

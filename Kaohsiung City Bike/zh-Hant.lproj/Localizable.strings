@@ -26,8 +26,9 @@
 "Only_8_Station_can_be_added" = "最多存取8個站點。";
 "Widget_alert_title" = "新增至「腳踏車站點即時查」";
 "Widget_alert_content" = "透過「腳踏車站點即時查」可以讓您在「通知中心」快速掌握站點的即時資訊。";
-"Widget_alert_ok" = "確認";
+"Widget_alert_ok" = "確定";
 "Widget_alert_cancel" = "不允許";
 "Watch_Bike" = " / 腳踏車";
 "Watch_Parking" = " / 停車位";
 "Notification_Set" = "尚未設定站點，點一下進行設定";
+"Update" = "更新中";

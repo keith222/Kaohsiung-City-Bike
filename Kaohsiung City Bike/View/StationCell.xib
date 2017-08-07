@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationCell" id="zd4-nc-aZr" customClass="StationCell" customModule="Kaohsiung_City_Bike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zd4-nc-aZr" id="ddH-ws-WIf">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SoN-Yz-Pxv">
+                        <rect key="frame" x="25" y="11" width="47" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="SoN-Yz-Pxv" secondAttribute="height" multiplier="1:1" id="0y9-Ro-Gsm"/>
+                            <constraint firstAttribute="height" constant="47" id="bU0-Lf-Boc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-hY-ze7">
+                        <rect key="frame" x="102" y="15" width="212" height="19"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                        <color key="textColor" red="0.36470588240000001" green="0.46666666670000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfi-SR-B3d">
+                        <rect key="frame" x="102" y="39" width="212" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <color key="textColor" red="0.36470588240000001" green="0.46666666670000001" blue="0.47058823529999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ3-em-vph">
+                        <rect key="frame" x="344" y="12" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="KmG-37-zrn"/>
+                            <constraint firstAttribute="width" secondItem="qJ3-em-vph" secondAttribute="height" multiplier="1:1" id="P3o-Wk-JBB"/>
+                        </constraints>
+                        <state key="normal" image="star"/>
+                        <connections>
+                            <action selector="favoriteAction:" destination="zd4-nc-aZr" eventType="touchUpInside" id="2IB-99-Ids"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="qJ3-em-vph" secondAttribute="trailing" constant="17" id="Aw3-9a-aGE"/>
+                    <constraint firstItem="SoN-Yz-Pxv" firstAttribute="leading" secondItem="ddH-ws-WIf" secondAttribute="leading" constant="25" id="FG1-b5-bTV"/>
+                    <constraint firstAttribute="bottom" secondItem="rfi-SR-B3d" secondAttribute="bottom" constant="14" id="H5c-am-1LD"/>
+                    <constraint firstItem="yjY-hY-ze7" firstAttribute="leading" secondItem="SoN-Yz-Pxv" secondAttribute="trailing" constant="29.5" id="Jif-jX-2Hc"/>
+                    <constraint firstItem="rfi-SR-B3d" firstAttribute="top" secondItem="yjY-hY-ze7" secondAttribute="bottom" constant="5" id="Syo-2N-FRs"/>
+                    <constraint firstItem="rfi-SR-B3d" firstAttribute="leading" secondItem="SoN-Yz-Pxv" secondAttribute="trailing" constant="29.5" id="TTH-4A-8za"/>
+                    <constraint firstItem="qJ3-em-vph" firstAttribute="centerY" secondItem="ddH-ws-WIf" secondAttribute="centerY" id="W9U-BN-wUZ"/>
+                    <constraint firstItem="qJ3-em-vph" firstAttribute="leading" secondItem="yjY-hY-ze7" secondAttribute="trailing" constant="30" id="bjV-QY-wtt"/>
+                    <constraint firstItem="SoN-Yz-Pxv" firstAttribute="centerY" secondItem="ddH-ws-WIf" secondAttribute="centerY" id="hEF-1Y-lMa"/>
+                    <constraint firstItem="yjY-hY-ze7" firstAttribute="top" secondItem="ddH-ws-WIf" secondAttribute="top" constant="15" id="niM-5r-gk0"/>
+                    <constraint firstItem="qJ3-em-vph" firstAttribute="leading" secondItem="rfi-SR-B3d" secondAttribute="trailing" constant="30" id="uKh-e9-M0f"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="SoN-Yz-Pxv"/>
+                        <exclude reference="yjY-hY-ze7"/>
+                        <exclude reference="rfi-SR-B3d"/>
+                        <exclude reference="qJ3-em-vph"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="SoN-Yz-Pxv"/>
+                        <include reference="yjY-hY-ze7"/>
+                        <include reference="rfi-SR-B3d"/>
+                        <include reference="qJ3-em-vph"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="favoriteButton" destination="qJ3-em-vph" id="e1n-PW-5y3"/>
+                <outlet property="staImage" destination="SoN-Yz-Pxv" id="FFu-0X-G6E"/>
+                <outlet property="subtitleLabel" destination="rfi-SR-B3d" id="I9a-If-8dE"/>
+                <outlet property="titleLabel" destination="yjY-hY-ze7" id="aQZ-FX-3w1"/>
+            </connections>
+            <point key="canvasLocation" x="-94" y="79"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" width="29" height="27"/>
+        <image name="stationIcon" width="48" height="48"/>
+    </resources>
+</document>

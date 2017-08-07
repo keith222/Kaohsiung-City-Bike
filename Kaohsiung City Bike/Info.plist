@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APIService</key>
+	<dict>
+		<key>infoEngSourceURL</key>
+		<string>http://www.c-bike.com.tw/xml/StationListEnOpenData.aspx</string>
+		<key>infoSourceURL</key>
+		<string>http://www.c-bike.com.tw/xml/stationlistopendata.aspx</string>
+		<key>stationSourceURL</key>
+		<string>https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/master/Kaohsiung%20City%20Bike/citybike.json</string>
+		<key>versionSourceURL</key>
+		<string>https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/master/Kaohsiung%20City%20Bike/version.json</string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_TW</string>
 	<key>CFBundleDisplayName</key>
@@ -28,7 +39,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2.3</string>
+	<string>2.3.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -44,6 +55,20 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>7e59115715190eb6df483058be96c12df9c938d3</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption</key>

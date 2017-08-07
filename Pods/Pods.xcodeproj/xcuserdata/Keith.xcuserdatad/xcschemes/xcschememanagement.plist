@@ -4,7 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kanna.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -14,7 +39,37 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Kaohsiung CityBike WatchApp Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Kaohsiung CityBike Widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwifterSwift-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwifterSwift-watchOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +77,72 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>099EF15D32B484E66254551E5E520AE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1664A581754CC70ACAD65BDFC01ED12A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85023D788490B72F05E1E74C827CC419</key>
+		<key>1C5C979738CB23F9BD29ABCEE202727F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC182A2951CD6A034E493BC294DE9995</key>
+		<key>3ACDE3A35754950C66A91F738B6C0C51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>42D8BE05C24B84E5CB733F18B263A56D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5920BEF6D814D9C7388C84718F765191</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66B239826EF1D39D2D6C594AC2DBFF77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78AC1AB4FABFBAA54422F74F6202AD02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EADC4C5A174B6E574CB4D06F760846C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C5630186C03090F609280675E8B5F23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D55916767D968ACDA28C66F5E613011E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF9D62D7D29756A1C4D4C0185BD40E1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E869EA3A09BE2A90C6F01D200D236DA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCA4BFC4E08805B343C700C15DAFA848</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayWidgetTableViewCell" rowHeight="56" id="Ogt-vT-n82" customClass="TodayWidgetTableViewCell" customModule="Kaohsiung_CityBike_Widget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogt-vT-n82" id="Avx-UI-JD8">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-l5-wLk">
+                        <rect key="frame" x="30" y="10" width="14" height="14"/>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.66274509800000003" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fW6-l5-wLk" secondAttribute="height" multiplier="1:1" id="YMj-B7-trd"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OL-Ul-aM6">
+                        <rect key="frame" x="131" y="31" width="14" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="4g7-bK-LzF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-Ms-VEy">
+                        <rect key="frame" x="57" y="31" width="14" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="E5e-QG-RdU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StationName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-T7-HT3">
+                        <rect key="frame" x="57" y="7" width="89" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="JnM-Ru-U4q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bikes；" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPQ-VV-JRw">
+                        <rect key="frame" x="76" y="31" width="52" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="vTL-Jh-w1B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-Xd-C4I">
+                        <rect key="frame" x="150" y="31" width="51" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="ZRf-uv-qxh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ng3-Ms-VEy" firstAttribute="top" secondItem="NcR-T7-HT3" secondAttribute="bottom" constant="6" id="0Iw-ll-0d8"/>
+                    <constraint firstItem="fW6-l5-wLk" firstAttribute="width" secondItem="Avx-UI-JD8" secondAttribute="height" multiplier="14:55" id="3Yf-zi-fSH"/>
+                    <constraint firstItem="fW6-l5-wLk" firstAttribute="top" secondItem="Avx-UI-JD8" secondAttribute="top" constant="10" id="9Le-0q-Bz9"/>
+                    <constraint firstItem="NcR-T7-HT3" firstAttribute="leading" secondItem="fW6-l5-wLk" secondAttribute="trailing" constant="13" id="AP5-Ic-AkO"/>
+                    <constraint firstItem="ng3-Ms-VEy" firstAttribute="leading" secondItem="NcR-T7-HT3" secondAttribute="leading" id="BLb-Be-KpM"/>
+                    <constraint firstItem="BPQ-VV-JRw" firstAttribute="top" secondItem="ng3-Ms-VEy" secondAttribute="top" id="NXr-CQ-SxD"/>
+                    <constraint firstItem="NcR-T7-HT3" firstAttribute="top" secondItem="Avx-UI-JD8" secondAttribute="top" constant="7" id="Nmn-8K-CZ6"/>
+                    <constraint firstAttribute="bottom" secondItem="BPQ-VV-JRw" secondAttribute="bottom" constant="6" id="SYR-Es-QwH"/>
+                    <constraint firstItem="q1R-Xd-C4I" firstAttribute="leading" secondItem="0OL-Ul-aM6" secondAttribute="trailing" constant="5" id="Xw9-PC-ONT"/>
+                    <constraint firstItem="BPQ-VV-JRw" firstAttribute="leading" secondItem="ng3-Ms-VEy" secondAttribute="trailing" constant="5" id="Yiy-y9-AKO"/>
+                    <constraint firstAttribute="bottom" secondItem="ng3-Ms-VEy" secondAttribute="bottom" constant="6" id="gMK-KT-rla"/>
+                    <constraint firstItem="fW6-l5-wLk" firstAttribute="leading" secondItem="Avx-UI-JD8" secondAttribute="leading" constant="30" id="ggh-6b-oBj"/>
+                    <constraint firstItem="q1R-Xd-C4I" firstAttribute="top" secondItem="ng3-Ms-VEy" secondAttribute="top" id="hwx-yi-Ns4"/>
+                    <constraint firstAttribute="bottom" secondItem="q1R-Xd-C4I" secondAttribute="bottom" constant="6" id="i2N-6O-bSB"/>
+                    <constraint firstItem="0OL-Ul-aM6" firstAttribute="leading" secondItem="BPQ-VV-JRw" secondAttribute="trailing" constant="3" id="lB7-qf-FDP"/>
+                    <constraint firstItem="0OL-Ul-aM6" firstAttribute="top" secondItem="ng3-Ms-VEy" secondAttribute="top" id="sx5-7G-Jmj"/>
+                    <constraint firstAttribute="bottom" secondItem="0OL-Ul-aM6" secondAttribute="bottom" constant="6" id="tMg-NU-jLu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="available" destination="ng3-Ms-VEy" id="Gp6-lG-2eK"/>
+                <outlet property="bikeLabel" destination="BPQ-VV-JRw" id="Kdn-bq-oZp"/>
+                <outlet property="park" destination="0OL-Ul-aM6" id="Av1-pN-nxi"/>
+                <outlet property="parkLabel" destination="q1R-Xd-C4I" id="Vnq-gy-poo"/>
+                <outlet property="sitePoint" destination="fW6-l5-wLk" id="V9u-w7-KSG"/>
+                <outlet property="stationName" destination="NcR-T7-HT3" id="FVr-zC-iIk"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -31,4 +31,5 @@
 "Widget_alert_cancel" = "Cancel";
 "Watch_Bike" = " / 自転車";
 "Watch_Parking" = " /　駐車スペース";
-"Notification_Set" = "尚未設定站點，點一下進行設定";
+"Notification_Set" = "設定するにはクリックしてください";
+"Update" = "更新する";

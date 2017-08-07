@@ -9,18 +9,40 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UITableViewController, NCWidgetProviding{
+class TodayViewController: UIViewController, NCWidgetProviding{
     
-    let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
-    fileprivate var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
-
+    @IBOutlet weak var todayTableView: UITableView!
+    @IBOutlet weak var defaultButton: UIButton!
+    
+    private let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
+    private var source: [HomeViewModel]?
+    private var tableHelper: TableViewHelper?
+    
+    lazy var homeViewModel = {
+        return HomeViewModel()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
-        self.tableView.cellLayoutMarginsFollowReadableWidth = false
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-        self.tableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 1)
-        self.clearsSelectionOnViewWillAppear = true
+        
+        self.setUp()
+        
+        self.tableHelper = TableViewHelper(
+            tableView: self.todayTableView,
+            nibName: "TodayWidgetTableViewCell",
+            source: self.source ?? [],
+            selectAction: { [weak self] num in
+                print("selected")
+                if let station = self?.userDefault.array(forKey: "staForTodayWidget") {
+                    var urlString = "CityBike://?"
+                    urlString += (station[num] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                    let url: URL = URL(string: urlString)!
+                    self?.extensionContext?.open(url, completionHandler: nil)
+                }
+        }
+        )
+        
         
         if #available(iOS 10, *) {
             self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
@@ -35,6 +57,24 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
         }
     }
     
+    private func setUp() {
+        self.todayTableView.isHidden = true
+        self.todayTableView.estimatedRowHeight = 56
+        self.todayTableView.rowHeight = UITableViewAutomaticDimension
+        self.todayTableView.cellLayoutMarginsFollowReadableWidth = false
+        self.todayTableView.tableFooterView = UIView(frame: .zero)
+        self.todayTableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 1)
+        self.todayTableView.separatorColor = .blue
+        
+        self.defaultButton.setTitle(NSLocalizedString("Notification_Set", comment: ""), for: .normal)
+    }
+    
+    @IBAction func defaultAction(_ sender: UIButton) {
+        let url: URL = URL(string: "CityBike://?openlist")!
+        self.extensionContext?.open(url, completionHandler: nil)
+    }
+
+
     @available(iOS 10, *)
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         
@@ -51,76 +91,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     }
 
     func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let item = self.userDefault.array(forKey: "staForTodayWidget"){
-            return (item.count == 0) ? 1 : item.count
-        }
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let station = self.userDefault.array(forKey: "staForTodayWidget"){
-            if station.count > 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TodayWidgetTableViewCell
-                cell.stationName.text = station[(indexPath as NSIndexPath).row] as? String
-                if self.xmlItems != nil{
-                
-                    var normalColor: UIColor?
-                    if #available(iOS 10, *){
-                        normalColor = .darkGray
-                    }else{
-                        normalColor = .white
-                    }
-                
-                    cell.available.text = self.xmlItems!.filter({$0.staName == (station[(indexPath as NSIndexPath).row] as? String)})[0].ava
-                    cell.available.textColor = (Int(cell.available.text!)! < 10 ) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : normalColor
-                    cell.park.text = self.xmlItems!.filter({$0.staName == (station[(indexPath as NSIndexPath).row] as? String)})[0].unava
-                    cell.park.textColor = (Int(cell.park.text!)! < 10 ) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : normalColor
-                }
-                cell.layoutMargins = UIEdgeInsets.zero
-                cell.preservesSuperviewLayoutMargins = false
-                return cell
-            }else{
-                let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "Default")
-                cell.textLabel?.text = NSLocalizedString("Notification_Set", comment: "")
-                cell.textLabel?.textColor = .darkGray
-                tableView.separatorStyle = .none
-                return cell
-            }
-        }else{
-            let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "Default")
-            cell.textLabel?.text = NSLocalizedString("Notification_Set", comment: "")
-            cell.textLabel?.textColor = .darkGray
-            tableView.separatorStyle = .none
-            return cell
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var urlString = "CityBike//?"
-        if let station = self.userDefault.array(forKey: "staForTodayWidget"), station.count > 0{
-            urlString += (station[(indexPath as NSIndexPath).row] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        }else{
-            urlString += "openlist"
-        }
-        let url: URL = URL(string: urlString)!
-        self.extensionContext?.open(url, completionHandler: nil)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if let count = self.userDefault.array(forKey: "staForTodayWidget")?.count{
-            return (count > 0) ? 55 : 110
-        }
-        return 110
+        return .zero
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -128,15 +99,25 @@ class TodayViewController: UITableViewController, NCWidgetProviding{
     }
     
     func getBikeInfo(_ completionHandler: ((NCUpdateResult) -> Void)!){
-        let xmlParser = BikeParser()
-        
-        xmlParser.parserXml("http://www.c-bike.com.tw/xml/stationlistopendata.aspx", completionHandler: {(xmlItems:[(staID:String,staName:String,ava:String,unava:String)])->Void in
-            self.xmlItems = xmlItems
-            DispatchQueue.main.async(execute: {
-                self.tableView.reloadData()
+        if let savedArray = self.userDefault.array(forKey: "staForTodayWidget"), savedArray.count > 0 {
+            self.defaultButton.isHidden = true
+            
+            self.homeViewModel.fetchStationInfo(handler: { [weak self] data in
+                guard data.count > 0 else{ return }
+                
+                self?.source = data.map({value -> HomeViewModel in
+                    return HomeViewModel(data: value)
+                }).filter({ value in
+                    return (savedArray.contains(where: {($0 as! String) == value.no }))
+                })
+                self?.tableHelper?.reloadData = (self?.source)!
+                self?.todayTableView.isHidden = false
+                
+                completionHandler(.newData)
             })
-            completionHandler(.newData)
-        })
+        }else{
+            self.defaultButton.isHidden = false
+        }
     }
     
 }
