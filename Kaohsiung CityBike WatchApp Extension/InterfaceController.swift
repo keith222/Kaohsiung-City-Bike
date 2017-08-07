@@ -51,8 +51,8 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         let longitude = message["longitude"] as? Double
         let latitude = message["latitude"] as? Double
         let title = message["stationName"] as? String
-        let ava = message["ava"] as? String
-        let unava = message["unava"] as? String
+        let ava = message["ava"] as? Int
+        let unava = message["unava"] as? Int
         let annoType = message["annoType"] as? Int
         
         if(longitude != nil && latitude != nil && title != nil){
@@ -65,14 +65,15 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
         if(ava != nil && unava != nil){
+            print(ava)
             avaLabel.setText(String(ava!))
             unavaLabel.setText(String(unava!))
-            if Int(ava!)! < 10{
+            if ava! < 10{
                 self.avaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
                 self.avaLabel.setTextColor(UIColor.white)
             }
-            if Int(unava!)! < 10{
+            if unava! < 10{
                 self.unavaLabel.setTextColor(UIColor(red: 213/255, green: 71/255, blue: 104/255, alpha: 1))
             }else{
                 self.unavaLabel.setTextColor(UIColor.white)

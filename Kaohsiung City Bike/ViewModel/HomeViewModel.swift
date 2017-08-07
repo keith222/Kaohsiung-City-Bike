@@ -48,7 +48,6 @@ class HomeViewModel {
     }
     
     func fetchStationList(handler: @escaping (([Station]) -> ())){
-        //let path: String = Bundle.main.path(forResource: "citybike", ofType: "json")!
         let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let path = doc.appendingPathComponent("citybike.json").path
         
@@ -96,11 +95,12 @@ class HomeViewModel {
         do{
             let jsonData: Data = try Data(contentsOf: path)
             let oldJson = JSON(data: jsonData)
-            let url = "https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/recreate/Kaohsiung%20City%20Bike/version.json"
+            let url = APIService.versionSourceURL
+            
             APIService.request(url, completionHandler: { data in
                 let newJson = JSON(data: data)
                 
-                if oldJson["version"] == newJson["version"] {
+                if oldJson["version"] != newJson["version"] {
                     do {
                         try! data.write(to: path)
                         handler(true)
@@ -118,7 +118,7 @@ class HomeViewModel {
         let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let path = doc.appendingPathComponent("citybike.json")
 
-        let url = "https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/recreate/Kaohsiung%20City%20Bike/citybike.json"
+        let url = APIService.stationSourceURL
         APIService.request(url, completionHandler: { data in
             do {
                 try data.write(to: path)

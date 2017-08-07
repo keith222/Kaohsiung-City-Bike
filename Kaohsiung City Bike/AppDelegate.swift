@@ -43,9 +43,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             }
         }
         
+        
 
-//        let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
-//        userDefault.removeObject(forKey: "staForTodayWidget")
+        let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
+        if !userDefault.bool(forKey: "updateStorage") {
+            var todayWidgetArray = userDefault.array(forKey: "staForTodayWidget")
+            
+            var homeViewModel: HomeViewModel? = HomeViewModel()
+            homeViewModel?.fetchStationList(handler: { stations in
+                for station in stations {
+                    let index = todayWidgetArray?.index(where: {
+                        print($0)
+                        print(station.name)
+                        return ($0 as! String) == station.name
+                    })
+                    guard let _ = index else { continue }
+                    todayWidgetArray?[index!] = station.no
+                }
+            })
+            userDefault.set(todayWidgetArray, forKey: "staForTodayWidget")
+            userDefault.set(true, forKey: "updateStorage")
+            userDefault.synchronize()
+            homeViewModel = nil
+        }
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()

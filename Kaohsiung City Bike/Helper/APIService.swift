@@ -12,8 +12,14 @@ import Alamofire
 
 class APIService {
     
-    static let sourceURL: String = "http://www.c-bike.com.tw/xml/stationlistopendata.aspx"
-    static let engSourceURL: String = "http://www.c-bike.com.tw/xml/StationListEnOpenData.aspx"
+    //url of c-bike station info
+    static let sourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["infoSourceURL"]!
+    //url of c-bike station info english version
+    static let engSourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["infoEngSourceURL"]!
+    //url of station list
+    static let stationSourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["stationSourceURL"]!
+    //url of version
+    static let versionSourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["versionSourceURL"]!
     
     static func request(_ route: String, completionHandler: ((_ data: Data)->Void)? = nil) {
         Alamofire.request(
