@@ -1,5 +1,5 @@
 framework module SwifterSwift {
-  umbrella header "SwifterSwift-watchOS-umbrella.h"
+  umbrella header "SwifterSwift-umbrella.h"
 
   export *
   module * { export * }

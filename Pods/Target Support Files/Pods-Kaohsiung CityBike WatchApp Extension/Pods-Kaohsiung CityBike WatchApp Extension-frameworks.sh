@@ -82,13 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/SwifterSwift-watchOS/SwifterSwift.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/SwifterSwift-watchOS/SwifterSwift.framework"
-fi
-if [[ "$CONFIGURATION" == "Ad-Hoc" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/SwifterSwift-watchOS/SwifterSwift.framework"
-fi

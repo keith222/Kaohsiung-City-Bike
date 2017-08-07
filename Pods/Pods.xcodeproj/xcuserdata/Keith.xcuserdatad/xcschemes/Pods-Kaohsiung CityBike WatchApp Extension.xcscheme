@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "099EF15D32B484E66254551E5E520AE1"
+               BlueprintIdentifier = "1E013E1E7F732EB9E53EFBAD3E778A77"
                BuildableName = "Pods_Kaohsiung_CityBike_WatchApp_Extension.framework"
                BlueprintName = "Pods-Kaohsiung CityBike WatchApp Extension"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "099EF15D32B484E66254551E5E520AE1"
+            BlueprintIdentifier = "1E013E1E7F732EB9E53EFBAD3E778A77"
             BuildableName = "Pods_Kaohsiung_CityBike_WatchApp_Extension.framework"
             BlueprintName = "Pods-Kaohsiung CityBike WatchApp Extension"
             ReferencedContainer = "container:Pods.xcodeproj">

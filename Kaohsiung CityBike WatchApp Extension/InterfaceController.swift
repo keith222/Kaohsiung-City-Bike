@@ -65,7 +65,6 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             self.stationMap.setRegion(MKCoordinateRegion(center: location, span: coordinateSpan))
         }
         if(ava != nil && unava != nil){
-            print(ava)
             avaLabel.setText(String(ava!))
             unavaLabel.setText(String(unava!))
             if ava! < 10{

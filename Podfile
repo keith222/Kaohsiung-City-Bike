@@ -30,7 +30,6 @@ end
 
 target 'Kaohsiung CityBike WatchApp Extension' do
     platform :watchos, '2.0'
-    pod 'SwifterSwift'
 end
 
 target 'Kaohsiung CityBike Widget' do

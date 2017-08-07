@@ -40,7 +40,7 @@ class StationViewController: SearchViewController{
             //re-arrange station list
             if let favoriteList = self?.userDefault.array(forKey: "staForTodayWidget") {
                 for (index, element) in (self?.source?.enumerated())! {
-                    if favoriteList.contains(where: { ($0 as! Int) == element.id }) {
+                    if favoriteList.contains(where: { ($0 as! String) == element.no }) {
                         let tempElement = self?.source?.remove(at: index)
                         self?.source?.insert(tempElement!, at: 0)
                     }
