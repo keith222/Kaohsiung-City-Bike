@@ -609,13 +609,6 @@ extension HomeViewController: MKMapViewDelegate {
         }
     }
     
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        if currentA != nil {
-            let region = MKCoordinateRegion(center: self.currentA.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-            mapView.setRegion(region, animated: true)
-        }
-    }
-    
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         print("view did finish render")
         

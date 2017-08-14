@@ -1,0 +1,75 @@
+
+/* Class = "UILabel"; text = "Walking Time："; ObjectID = "0Ho-z7-sSo"; */
+"0Ho-z7-sSo.text" = "도보 시간：";
+
+/* Class = "UILabel"; text = "Walking Time："; ObjectID = "3xp-Cc-D7A"; */
+"3xp-Cc-D7A.text" = "도보 시간：";
+
+/* Class = "UIButton"; normalTitle = "Rental Timing"; ObjectID = "4k9-6D-3g5"; */
+"4k9-6D-3g5.normalTitle" = "임대시간 시작";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "7oU-y1-Hc3"; */
+"7oU-y1-Hc3.text" = "--";
+
+/* Class = "UILabel"; text = "Riding Time："; ObjectID = "DQN-oU-HZn"; */
+"DQN-oU-HZn.text" = "승차 시간：";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "KPl-25-HmO"; */
+"KPl-25-HmO.text" = "--";
+
+/* Class = "UILabel"; text = "Min"; ObjectID = "Kyz-F5-WrK"; */
+"Kyz-F5-WrK.text" = "분";
+
+/* Class = "UILabel"; text = "Time："; ObjectID = "P5h-Mn-xj4"; */
+"P5h-Mn-xj4.text" = "임대 시간：";
+
+/* Class = "UINavigationItem"; title = "Kaohsiung CityBike"; ObjectID = "TLt-Vv-NrU"; */
+"TLt-Vv-NrU.title" = "가오슝 시티 바이크";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "Y8Q-8Z-BQC"; */
+"Y8Q-8Z-BQC.text" = "--";
+
+/* Class = "UILabel"; text = "Min"; ObjectID = "YVR-k0-x7f"; */
+"YVR-k0-x7f.text" = "분";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "YnB-32-cFG"; */
+"YnB-32-cFG.normalTitle" = "반환";
+
+/* Class = "UILabel"; text = "Trip Record"; ObjectID = "ZgZ-uz-J8Z"; */
+"ZgZ-uz-J8Z.text" = "임대 기록";
+
+/* Class = "UILabel"; text = "Min"; ObjectID = "bLN-Vw-PmY"; */
+"bLN-Vw-PmY.text" = "분";
+
+/* Class = "UILabel"; text = "/ Parking"; ObjectID = "c9n-UB-EPQ"; */
+"c9n-UB-EPQ.text" = "/ 주차 공간";
+
+/* Class = "UILabel"; text = "Destination"; ObjectID = "ecY-Up-qTJ"; */
+"ecY-Up-qTJ.text" = "위치 사용자 정의";
+
+/* Class = "UILabel"; text = "/ Bikes"; ObjectID = "g5t-pP-YYH"; */
+"g5t-pP-YYH.text" = "/ 자전거";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "j50-6a-fWj"; */
+"j50-6a-fWj.text" = "00:00:00";
+
+/* Class = "UILabel"; text = "Min"; ObjectID = "jWH-8r-gAb"; */
+"jWH-8r-gAb.text" = "분";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "kEI-Dj-7LM"; */
+"kEI-Dj-7LM.text" = "--";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "kUZ-xI-qPS"; */
+"kUZ-xI-qPS.text" = "--";
+
+/* Class = "UILabel"; text = "Riding Time："; ObjectID = "lWa-Fo-Bza"; */
+"lWa-Fo-Bza.text" = "승차 시간：";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "n9O-qe-dOk"; */
+"n9O-qe-dOk.text" = "--";
+
+/* Class = "UILabel"; text = "NT$"; ObjectID = "nst-lC-46h"; */
+"nst-lC-46h.text" = "NT$";
+
+/* Class = "UILabel"; text = "Cost："; ObjectID = "r9g-v8-ykh"; */
+"r9g-v8-ykh.text" = "임대 비용：";

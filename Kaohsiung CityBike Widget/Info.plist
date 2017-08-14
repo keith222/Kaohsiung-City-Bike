@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APIService</key>
+	<dict>
+		<key>infoEngSourceURL</key>
+		<string>http://www.c-bike.com.tw/xml/StationListEnOpenData.aspx</string>
+		<key>infoSourceURL</key>
+		<string>http://www.c-bike.com.tw/xml/stationlistopendata.aspx</string>
+		<key>stationSourceURL</key>
+		<string>https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/master/Kaohsiung%20City%20Bike/citybike.json</string>
+		<key>versionSourceURL</key>
+		<string>https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/master/Kaohsiung%20City%20Bike/version.json</string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -21,7 +32,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

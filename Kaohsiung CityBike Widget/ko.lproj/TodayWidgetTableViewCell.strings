@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "--"; ObjectID = "0OL-Ul-aM6"; */
+"0OL-Ul-aM6.text" = "--";
+
+/* Class = "UILabel"; text = "Bikes；"; ObjectID = "BPQ-VV-JRw"; */
+"BPQ-VV-JRw.text" = "자전거；";
+
+/* Class = "UILabel"; text = "StationName"; ObjectID = "NcR-T7-HT3"; */
+"NcR-T7-HT3.text" = "StationName";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "ng3-Ms-VEy"; */
+"ng3-Ms-VEy.text" = "--";
+
+/* Class = "UILabel"; text = "Parking"; ObjectID = "q1R-Xd-C4I"; */
+"q1R-Xd-C4I.text" = "주차 공간";

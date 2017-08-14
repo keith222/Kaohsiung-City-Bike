@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Kaohsiung City Bike
+
+  Created by Yang Tun-Kai on 2015/11/14.
+  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
+*/
+"Time_Start" = "임대시간 시작";
+"Time_Stop" = "임대시간 종료";
+"Twenty_Minutes_Alert" = "Kaohsiung CityBike 무료 기간은 10 분 안에 끝납니다.";
+"Thirty_Minutes_Alert" = "Kaohsiung CityBike 무료 기간 종료. 지금 충전 시작!";
+"TimeStart" = "타이밍 시작";
+"TimeStop" = "타이밍 종료";
+"Time_Alert" = "시간 경고";
+"Alert" = "오류";
+"Error_Log" = "인터넷 연결이 오프라인 인 것 같습니다.";
+"Title" = "위치 서비스가 꺼져";
+"Content" = "Kaohsiung CityBike가 현재 위치를 결정할 수 있도록 설정> 개인 정보 보호에서 위치 서비스를 사용합니다.";
+"SetButton" = "조절";
+"OkButton" = "확인";
+"Range" = "근처에 자전거 정류장이 없습니다。";
+"Destination" = "목적지";
+"Search" = "자전거 역 / 주소";
+"Station_List" = "역 목록";
+"Reached_the_limit" = "도달 한도";
+"Only_8_Station_can_be_added" = "사용 가능한 자전거 역은 최대 8 개입니다.";
+"Widget_alert_title" = "\"Today Widget\" 에 추가하십시오";
+"Widget_alert_content" = "\"공지 센터\"에서이 방송국의 실시간 정보를 얻을 수 있습니다.";
+"Widget_alert_ok" = "확인";
+"Widget_alert_cancel" = "취소";
+"Watch_Bike" = " / 자전거";
+"Watch_Parking" = " / 주차 공간";
+"Notification_Set" = "아직 설정된 역이 없습니다. 설정하려면 여기를 클릭하십시오.";
+"Update" = "최신 정보";

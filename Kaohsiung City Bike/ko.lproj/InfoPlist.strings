@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Kaohsiung City Bike
+
+  Created by Yang Tun-Kai on 2015/11/20.
+  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
+*/
+"NSLocationWhenInUseUsageDescription" = "\"가오슝 시티 바이크\" 는 현재 위치를 알아야합니다";
+"CFBundleDisplayName" = "가오슝 시티 바이크";

@@ -182,6 +182,11 @@
 		534962C01BE3719400BFFD71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
 		534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
+		535CC5051F3E2866003398CC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		535CC5061F3E2866003398CC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Interface.strings; sourceTree = "<group>"; };
+		535CC5081F3E2866003398CC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/TodayWidgetTableViewCell.strings; sourceTree = "<group>"; };
+		535CC5091F3E2866003398CC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		535CC50A1F3E2866003398CC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -702,6 +707,7 @@
 				"zh-Hant",
 				ja,
 				"zh-Hans",
+				ko,
 			);
 			mainGroup = 534962861BE07BE700BFFD71;
 			productRefGroup = 534962901BE07BE700BFFD71 /* Products */;
@@ -1045,6 +1051,7 @@
 				53439F601F2DC1C200311DF8 /* ja */,
 				53439F621F2DC1C400311DF8 /* zh-Hans */,
 				53439F631F2DC1E200311DF8 /* zh-Hant */,
+				535CC5081F3E2866003398CC /* ko */,
 			);
 			name = TodayWidgetTableViewCell.xib;
 			sourceTree = "<group>";
@@ -1056,6 +1063,7 @@
 				53356CD71D42889700A20515 /* zh-Hant */,
 				53356CD81D42889F00A20515 /* ja */,
 				53356CD91D4288A600A20515 /* zh-Hans */,
+				535CC5051F3E2866003398CC /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1067,6 +1075,7 @@
 				536E2C161BF726C900B5E7DE /* en */,
 				531551261C08B65E00DA0285 /* ja */,
 				53928D071C57BB070072FA37 /* zh-Hans */,
+				535CC50A1F3E2866003398CC /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1078,6 +1087,7 @@
 				5319C38C1D46615C0014C51E /* zh-Hant */,
 				5319C38D1D4661630014C51E /* ja */,
 				5319C38E1D46616A0014C51E /* zh-Hans */,
+				535CC5061F3E2866003398CC /* ko */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1097,6 +1107,7 @@
 				53E232611BFE39AB00F36B71 /* zh-Hant */,
 				53928D081C57BB070072FA37 /* zh-Hans */,
 				53356CCB1D42863000A20515 /* ja */,
+				535CC5091F3E2866003398CC /* ko */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
