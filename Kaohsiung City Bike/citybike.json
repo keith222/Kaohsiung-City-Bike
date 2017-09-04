@@ -480,6 +480,16 @@
           "description": "自由路四路與重信路口"
         },
         {
+          "id": 213,
+          "no": "0212",
+          "name": "海巡隊站",
+          "englishname": "OffshoreFlotilla",
+          "address": "七賢三路與蓬萊路銜接處",
+          "latitude": 22.620589,
+          "longitude": 120.279365,
+          "description": "七賢三路與蓬萊路銜接處"
+        },
+        {
           "id": 417,
           "no": "0213",
           "name": "鼓山渡船頭站",
@@ -958,6 +968,136 @@
           "latitude": 22.797096,
           "longitude": 120.290730,
           "description": "岡山高中大門旁，公園路上"
+        },
+        {
+          "id": 262,
+          "no": "0274",
+          "name": "民權少康站",
+          "englishname": "MincyuanShaokang",
+          "address": "民權二路與少康街口",
+          "latitude": 22.60933,
+          "longitude": 120.3131,
+          "description": "民權二路與少康街口"
+        },
+        {
+          "id": 263,
+          "no": "0272",
+          "name": "瑞豐公車總站",
+          "englishname": "RueifongBusStation",
+          "address": "瑞隆公車總站前，瑞隆路上",
+          "latitude": 22.60614,
+          "longitude": 120.33876,
+          "description": "瑞隆公車總站前，瑞隆路上"
+        },
+        {
+          "id": 264,
+          "no": "0271",
+          "name": "中崙國中站",
+          "englishname": "JhonglunJuniorhighSchool",
+          "address": "中崙路與中崙二路口",
+          "latitude": 22.60223,
+          "longitude": 120.35337,
+          "description": "中崙路與中崙二路口"
+        },
+        {
+          "id": 265,
+          "no": "0273",
+          "name": "牛潮埔公園站",
+          "englishname": "NiouchaopuPark",
+          "address": "北賢街與永忠街口",
+          "latitude": 22.64632,
+          "longitude": 120.37048,
+          "description": "北賢街與永忠街口"
+        },
+        {
+          "id": 266,
+          "no": "0263",
+          "name": "輕軌凱旋瑞田站",
+          "englishname": "KaisyuanRueitian(LRT)",
+          "address": "凱旋四路與瑞田街口",
+          "latitude": 22.599155,
+          "longitude": 120.319892,
+          "description": "凱旋四路與瑞田街口"
+        },
+        {
+          "id": 267,
+          "no": "0270",
+          "name": "永安區休閒公園站",
+          "englishname": "YonganDistrictLeisurePark",
+          "address": "永安區永華路與永安路口",
+          "latitude": 22.818683,
+          "longitude": 120.226385,
+          "description": "永安區永華路與永安路口"
+        },
+        {
+          "id": 268,
+          "no": "0267",
+          "name": "彌陀漁民活動中心",
+          "englishname": "MituoFishermen'sActivityCenter",
+          "address": "彌陀區漁會活動中心前，漁港一街與南寮路口",
+          "latitude": 22.76143,
+          "longitude": 120.2347,
+          "description": "彌陀區漁會活動中心前，漁港一街與南寮路口"
+        },
+        {
+          "id": 269,
+          "no": "0275",
+          "name": "八卦休閒公園站",
+          "englishname": "BaguaLeisurePark",
+          "address": "八卦休閒公園前，八德西路上",
+          "latitude": 22.690106,
+          "longitude": 120.337416,
+          "description": "八卦休閒公園前，八德西路上"
+        },
+        {
+          "id": 271,
+          "no": "0278",
+          "name": "大樹舊鐵橋站(2)",
+          "englishname": "RailwayBridgeMarshPark(2)",
+          "address": "竹寮路大樹舊鐵橋生態公園機車停車場內",
+          "latitude": 22.66458,
+          "longitude": 120.4272,
+          "description": "竹寮路大樹舊鐵橋生態公園機車停車場內"
+        },
+        {
+          "id": 272,
+          "no": "0277",
+          "name": "大樹舊鐵橋站(1)",
+          "englishname": "RailwayBridgeMarshPark(1)",
+          "address": "竹寮路舊鐵橋遊客中心大門旁",
+          "latitude": 22.66209,
+          "longitude": 120.4268,
+          "description": "竹寮路舊鐵橋遊客中心大門旁"
+        },
+        {
+          "id": 273,
+          "no": "0279",
+          "name": "九曲堂火車站(1)",
+          "englishname": "JioucyutangStation(1)",
+          "address": "九曲堂火車站前，復興街上",
+          "latitude": 22.65679,
+          "longitude": 120.42084,
+          "description": "九曲堂火車站前，復興街上"
+        },
+        {
+          "id": 274,
+          "no": "0280",
+          "name": "九曲堂火車站(2)",
+          "englishname": "JioucyutangStation(2)",
+          "address": "九曲堂火車站前，復興街上",
+          "latitude": 22.656953,
+          "longitude": 120.420897,
+          "description": "九曲堂火車站前，復興街上"
+        },
+        {
+          "id": 275,
+          "no": "0248",
+          "name": "濱海鼓元站",
+          "englishname": "BinhaiGuyuan",
+          "address": "鼓元街與濱海二路口",
+          "latitude": 22.623066,
+          "longitude": 120.269875,
+          "description": "鼓元街與濱海二路口"
         },
         {
           "id": 344,
