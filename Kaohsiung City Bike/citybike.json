@@ -1100,6 +1100,46 @@
           "description": "鼓元街與濱海二路口"
         },
         {
+          "id": 276,
+          "no": "0285",
+          "name": "鼓山厚德站",
+          "englishname": "GushanHoude",
+          "address": "鼓山三路6巷與厚德路口",
+          "latitude": 22.64616,
+          "longitude": 120.278703,
+          "description": "鼓山三路6巷與厚德路口"
+        },
+        {
+          "id": 277,
+          "no": "0289",
+          "name": "龍勝大順站",
+          "englishname": "LongshengDashun",
+          "address": "龍勝路與大順一路口",
+          "latitude": 22.654522,
+          "longitude": 120.295648,
+          "description": "龍勝路與大順一路口"
+        },
+        {
+          "id": 278,
+          "no": "0283",
+          "name": "左營火車站",
+          "englishname": "ZuoyingStation",
+          "address": "新莊一路底，臨公有停車場",
+          "latitude": 22.67407,
+          "longitude": 120.29581,
+          "description": "新莊一路底，臨公有停車場"
+        },
+        {
+          "id": 279,
+          "no": "0281",
+          "name": "屏山國小站",
+          "englishname": "PingshanElementarySchool",
+          "address": "屏山國小大門旁，海功東路上",
+          "latitude": 22.69372,
+          "longitude": 120.30194,
+          "description": "屏山國小大門旁，海功東路上"
+        },
+        {
           "id": 344,
           "no": "0178",
           "name": "新甲國小站",
