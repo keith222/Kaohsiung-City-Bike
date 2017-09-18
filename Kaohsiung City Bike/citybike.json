@@ -2749,5 +2749,45 @@
           "latitude": 22.58682,
           "longitude": 120.31382,
           "description": "德昌路與興仁街口"
+        },
+        {
+          "id": 288,
+          "no": "0287",
+          "name": "北昌路站",
+          "englishname": "BeichangRd",
+          "address": "北昌路與北昌三街口",
+          "latitude": 22.64518,
+          "longitude": 120.37258,
+          "description": "北昌路與北昌三街口"
+        },
+        {
+          "id": 289,
+          "no": "0286",
+          "name": "鳳山火車站(2)",
+          "englishname": "FengshanStation(2)",
+          "address": "面對原站址右側擴充",
+          "latitude": 22.63057,
+          "longitude": 120.35826,
+          "description": "面對原站址右側擴充"
+        },
+        {
+          "id": 290,
+          "no": "0291",
+          "name": "新泰兒童公園站",
+          "englishname": "SintaiChildren'sPark",
+          "address": "新強路上，新國街與新泰街間",
+          "latitude": 22.61092,
+          "longitude": 120.34361,
+          "description": "新強路上，新國街與新泰街間"
+        },
+        {
+          "id": 291,
+          "no": "0282",
+          "name": "瑞豐國中站",
+          "englishname": "RuifengJuniorHighSchool",
+          "address": "公正路與瑞北路口",
+          "latitude": 22.6091,
+          "longitude": 120.33057,
+          "description": "公正路與瑞北路口"
         }
 ]
