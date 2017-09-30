@@ -2789,5 +2789,85 @@
           "latitude": 22.6091,
           "longitude": 120.33057,
           "description": "公正路與瑞北路口"
+        },
+        {
+          "id": 292,
+          "no": "0298",
+          "name": "美都公園站",
+          "englishname": "MeiduPark",
+          "address": "美都路與十全三路口",
+          "latitude": 22.646569,
+          "longitude": 120.289018,
+          "description": "美都路與十全三路口"
+        },
+        {
+          "id": 293,
+          "no": "0300",
+          "name": "中央公園站(3)",
+          "englishname": "CentralPark(3)",
+          "address": "捷運中央公園站3號出口後方人行步道",
+          "latitude": 22.625938,
+          "longitude": 120.301552,
+          "description": "捷運中央公園站3號出口後方人行步道"
+        },
+        {
+          "id": 294,
+          "no": "0297",
+          "name": "輕軌軟體園區站",
+          "englishname": "SoftwareTechnologyPark(LRT)",
+          "address": "復興四路與成功二路口",
+          "latitude": 22.60517,
+          "longitude": 120.30069,
+          "description": "復興四路與成功二路口"
+        },
+        {
+          "id": 295,
+          "no": "0299",
+          "name": "中正預校站",
+          "englishname": "ChungChengArmedForcesPreparatorySchool",
+          "address": "中正預校大門旁，凱旋路上",
+          "latitude": 22.607155,
+          "longitude": 120.359701,
+          "description": "中正預校大門旁，凱旋路上"
+        },
+        {
+          "id": 296,
+          "no": "0299",
+          "name": "航空教育展示館站",
+          "englishname": "AviationEducationExhibitionHall",
+          "address": "航空教育展示館大門旁，致遠路上",
+          "latitude": 22.79462,
+          "longitude": 120.27131,
+          "description": "航空教育展示館大門旁，致遠路上"
+        },
+        {
+          "id": 297,
+          "no": "0301",
+          "name": "國昌國中站",
+          "englishname": "GouchangJuniorHighSchool",
+          "address": "國昌國中大門旁，德民路上",
+          "latitude": 22.71917,
+          "longitude": 120.285997,
+          "description": "國昌國中大門旁，德民路上"
+        },
+        {
+          "id": 298,
+          "no": "0303",
+          "name": "自強新田站",
+          "englishname": "ZihciangSintian",
+          "address": "自強三路公有機車停車場出入口,自強三路與新田路交叉口",
+          "latitude": 22.620423,
+          "longitude": 120.29733,
+          "description": "自強三路公有機車停車場出入口,自強三路與新田路交叉口"
+        },
+        {
+          "id": 299,
+          "no": "0152",
+          "name": "輕軌旅運中心站",
+          "englishname": "CruiseTerminal(LRT)",
+          "address": "海邊路與永平路交叉口",
+          "latitude": 22.6128,
+          "longitude": 120.2921,
+          "description": "海邊路與永平路交叉口"
         }
 ]
