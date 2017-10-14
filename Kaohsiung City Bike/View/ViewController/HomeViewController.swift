@@ -5,7 +5,7 @@
 //  Created by Yang Tun-Kai on 2015/10/28.
 //  Copyright © 2015年 Yang Tun-Kai. All rights reserved.
 //
-//  站點更新至106-09-18
+//  站點更新至106-10-01
 
 import UIKit
 import MapKit
@@ -79,7 +79,7 @@ class HomeViewController: UIViewController {
         
         //Apple Watch
         if(WCSession.isSupported()){
-            watchSession = WCSession.default()
+            watchSession = WCSession.default
             watchSession!.delegate = self
             watchSession!.activate()
         }
@@ -369,7 +369,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func bikeInfo(_ timer:Timer){
+    @objc func bikeInfo(_ timer:Timer){
         self.homeViewModel.fetchStationInfo(handler: { [weak self] data in
             guard data.count > 0 else{ return }
             
@@ -380,13 +380,13 @@ class HomeViewController: UIViewController {
             let index = source.index(where: {($0.name == self?.stationName) || ($0.no == self?.stationNO)})
             
             //傳送資料到 Apple Watch
-            if WCSession.default().isReachable {
+            if WCSession.default.isReachable {
                 let bikeSession = ["ava" : source[index!].available!, "unava": source[index!].park!]
-                let session = WCSession.default()
+                let session = WCSession.default
                 session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
             }
         
-            DispatchQueue.main.async { _ in
+            DispatchQueue.main.async {
                 self?.avaNum.textColor = (source[index!].available < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
                 self?.avaNum.text = "\(source[index!].available!)"
                     
@@ -396,7 +396,7 @@ class HomeViewController: UIViewController {
         })
     }
     
-    func stopWatchTimer(_ timer:Timer){
+    @objc func stopWatchTimer(_ timer:Timer){
         count += 1
         let second = count%60
         let minute = (count/60)%60
@@ -404,7 +404,7 @@ class HomeViewController: UIViewController {
         self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), for: UIControlState())
     }
     
-    func pauseStopWatch(){
+    @objc func pauseStopWatch(){
         if(self.stopWatch != nil){
             self.stopWatch.invalidate()
             self.stopWatch = nil
@@ -412,7 +412,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func startStopWatch(){
+    @objc func startStopWatch(){
         if(self.duration != nil){
             let newSecond: TimeInterval = Date().timeIntervalSince(self.duration!)
             count = count + lround(newSecond)
@@ -456,7 +456,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    func timeOutAlert(_ notification:Notification){
+    @objc func timeOutAlert(_ notification:Notification){
         //連線逾時AlerView
         let message = (notification as NSNotification).userInfo!["message"] as! String
         UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, defaultActionButtonTitle: NSLocalizedString("Widget_alert_ok", comment: "")).show()
@@ -692,9 +692,9 @@ extension HomeViewController: MKMapViewDelegate {
             let region = MKCoordinateRegion(center: view.annotation!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             mapView.setRegion(region, animated: true)
             
-            if WCSession.default().isReachable == true {
+            if WCSession.default.isReachable == true {
                 let locationSession = ["longitude" : annolong!, "latitude": annolati!, "stationName":title!!, "annoType": annoType] as [String : Any]
-                let session = WCSession.default()
+                let session = WCSession.default
                 session.sendMessage(locationSession as [String : AnyObject], replyHandler:nil, errorHandler: nil)
             }
         }

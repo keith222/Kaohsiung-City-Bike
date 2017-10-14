@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AlamofireObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -71,72 +66,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1664A581754CC70ACAD65BDFC01ED12A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>178F57834693B6649DA9AE47B49317F6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1E013E1E7F732EB9E53EFBAD3E778A77</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3ACDE3A35754950C66A91F738B6C0C51</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5920BEF6D814D9C7388C84718F765191</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>66B239826EF1D39D2D6C594AC2DBFF77</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>78AC1AB4FABFBAA54422F74F6202AD02</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7BA851481FBF2B940E8B2EED2805CADD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C5630186C03090F609280675E8B5F23</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0CF123591B9E79E37D49EA00BCFB50A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DCA5BF822B83115E8C9F19940E91B908</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF9D62D7D29756A1C4D4C0185BD40E1B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FCA4BFC4E08805B343C700C15DAFA848</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

@@ -10,12 +10,12 @@ target 'Kaohsiung City Bike' do
 
   #Pods about internet request/response/parse
   pod 'Alamofire'
-  pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'ObjectMapper'
   pod 'SwiftyJSON'
-  pod 'Kanna', '~> 2.1.0'
+  pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
 
   #Pods about UI
-  pod 'PKHUD', '~> 4.0'
+  pod 'PKHUD', '~> 5.0'
  
   #Google Firebase  
   pod 'Firebase/Core'
@@ -36,7 +36,7 @@ target 'Kaohsiung CityBike Widget' do
     
     #Pods about internet request/response/parse
     pod 'Alamofire'
-    pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'ObjectMapper'
     pod 'SwiftyJSON'
-    pod 'Kanna', '~> 2.1.0'
+    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
 end

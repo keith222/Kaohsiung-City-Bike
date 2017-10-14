@@ -23,9 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
-        UINavigationBar.appearance().barTintColor = UIColor(hexString: "#17A9AE")
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        //UINavigationBar.appearance().barTintColor = UIColor(hexString: "#17A9AE")
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        if #available(iOS 11.0, *) {
+            UISearchBar.appearance().tintColor = .white
+            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .lightGray
+        }
+
         //if there is not json file in document, copy it from bundle to document
         let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let versionPath = doc.appendingPathComponent("version.json").path
@@ -122,7 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             
             let triggerTime = (Int64(NSEC_PER_SEC)*1)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
-                viewController.didSelect(String(url.query!.removingPercentEncoding!)!)
+                viewController.didSelect(url.query!.removingPercentEncoding!)
             })
         }
         return true

@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import ObjectMapper
 
 class TodayViewController: UIViewController, NCWidgetProviding{
     
@@ -107,9 +108,11 @@ class TodayViewController: UIViewController, NCWidgetProviding{
                 
                 self?.source = data.map({value -> HomeViewModel in
                     return HomeViewModel(data: value)
-                }).filter({ value in
-                    return (savedArray.contains(where: {($0 as! String) == value.no }))
                 })
+                self?.source = self?.source?.enumerated().filter({ value in
+                    return (savedArray.contains(where: {($0 as! String) == value.element.no}))
+                }).map{$0.element}
+                
                 self?.tableHelper?.reloadData = (self?.source)!
                 self?.todayTableView.isHidden = false
                 

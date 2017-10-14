@@ -21,16 +21,22 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
         //UISearchBar 設定
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
+
         //set search button
-        self.searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(self.configureSearchBar))
-        self.navigationItem.rightBarButtonItem = self.searchButton
+        if #available(iOS 11.0, *) {
+            self.configureSearchBar()
+            
+        } else {
+            self.searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(self.configureSearchBar))
+            self.navigationItem.rightBarButtonItem = self.searchButton
+        }
         //呈現結果不會有black mask
         self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.loadViewIfNeeded()
     }
     
     //搜尋功能
-    func configureSearchBar(){
+    @objc func configureSearchBar(){
         
         self.searchController.hidesNavigationBarDuringPresentation = false
         
@@ -44,10 +50,29 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
         self.searchController.searchBar.placeholder = NSLocalizedString("Search", comment: "")
         
         //將UISearchBar放到Navigation的titleView上
-        self.navigationItem.titleView = self.searchController.searchBar
-        
-        //讓searchbar出現鍵盤
-        self.searchController.searchBar.becomeFirstResponder()
+        if #available(iOS 11.0, *) {
+            if let textfield = self.searchController.searchBar.value(forKey: "searchField") as? UITextField {
+                textfield.textColor = UIColor.blue
+                if let backgroundview = textfield.subviews.first {
+                    
+                    // Background color
+                    backgroundview.backgroundColor = UIColor.white
+                    
+                    // Rounded corner
+                    backgroundview.layer.cornerRadius = 10;
+                    backgroundview.clipsToBounds = true;
+                    
+                }
+            }
+            self.navigationItem.searchController = self.searchController
+            self.navigationItem.hidesSearchBarWhenScrolling = true
+            
+        } else {
+            self.searchController.searchBar.tintColor = .lightGray
+            self.navigationItem.titleView = self.searchController.searchBar
+            //讓searchbar出現鍵盤
+            self.searchController.searchBar.becomeFirstResponder()
+        }
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -64,9 +89,12 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         //離開搜尋
-        self.navigationController?.navigationBar.topItem?.hidesBackButton = false
-        self.navigationItem.rightBarButtonItem = self.searchButton
-        self.navigationItem.titleView = nil
+        if #available(iOS 11.0, *) {} else {
+            self.navigationController?.navigationBar.topItem?.hidesBackButton = false
+            self.navigationItem.rightBarButtonItem = self.searchButton
+            self.navigationItem.titleView = nil
+        }
+        filterContentForSearchText("")
     }
     
     func filterContentForSearchText(_ searchText: String){}

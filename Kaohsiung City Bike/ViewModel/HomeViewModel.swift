@@ -66,14 +66,14 @@ class HomeViewModel {
     }
     
     func fetchStationInfo(handler: @escaping ([Park]) -> ()) {
-        
         let url = (Locale.current.languageCode == "zh") ? APIService.sourceURL : APIService.engSourceURL
         APIService.request(url, completionHandler: { data in
             var parks: [Park] = []
-
-            if let doc = XML(xml: data, encoding: .utf8) {
+            
+            do {
+                let doc = try XML(xml: data, encoding: .utf8)
+                
                 for node in doc.xpath("//Station") {
-
                     let id = Int((node.at_css("StationID")?.text)!)
                     let no = node.at_css("StationNO")?.text
                     let name = node.at_css("StationName")?.text
@@ -83,6 +83,9 @@ class HomeViewModel {
                     parks.append(Park(JSON: ["id": id!, "no": no!, "name": name!, "available": available!, "park": park!])!)
          
                 }
+                
+            } catch let error as NSError{
+                print(error.localizedDescription)
             }
             
             handler(parks)

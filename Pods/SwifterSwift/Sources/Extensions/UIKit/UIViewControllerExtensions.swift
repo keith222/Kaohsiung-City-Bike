@@ -9,7 +9,6 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-
 // MARK: - Properties
 public extension UIViewController {
 	
@@ -17,11 +16,6 @@ public extension UIViewController {
 	public var isVisible: Bool {
 		// http://stackoverflow.com/questions/2777438/how-to-tell-if-uiviewcontrollers-view-is-visible
 		return self.isViewLoaded && view.window != nil
-	}
-	
-	/// SwifterSwift: NavigationBar in a ViewController.
-	public var navigationBar: UINavigationBar? {
-		return navigationController?.navigationBar
 	}
 	
 }

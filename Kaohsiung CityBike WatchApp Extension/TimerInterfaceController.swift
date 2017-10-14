@@ -72,7 +72,7 @@ class TimerInterfaceController: WKInterfaceController {
         
     }
     
-    func stopWatchTimer(_ timer:Timer){
+    @objc func stopWatchTimer(_ timer:Timer){
         count += 1
         let second = count%60
         let minute = (count/60)%60

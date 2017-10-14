@@ -9,7 +9,6 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-
 // MARK: - Properties
 public extension UICollectionView {
 	
@@ -23,8 +22,15 @@ public extension UICollectionView {
 		return numberOfSections > 0 ? numberOfSections - 1 : 0
 	}
 	
+}
+
+// MARK: - Methods
+public extension UICollectionView {
+	
 	/// SwifterSwift: Number of all items in all sections of collectionView.
-	public var numberOfItems: Int {
+	///
+	/// - Returns: The count of all rows in the collectionView.
+	public func numberOfItems() -> Int {
 		var section = 0
 		var itemsCount = 0
 		while section < self.numberOfSections {
@@ -33,12 +39,6 @@ public extension UICollectionView {
 		}
 		return itemsCount
 	}
-	
-}
-
-
-// MARK: - Methods
-public extension UICollectionView {
     
 	/// SwifterSwift: IndexPath for last item in section.
 	///
@@ -74,8 +74,8 @@ public extension UICollectionView {
 	///   - name: UICollectionViewCell type.
 	///   - indexPath: location of cell in collectionView.
 	/// - Returns: UICollectionViewCell object with associated class name.
-	public func dequeueReusableCell<T: UICollectionViewCell>(withClass name: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withReuseIdentifier: String(describing: name), for: indexPath) as! T
+	public func dequeueReusableCell<T: UICollectionViewCell>(withClass name: T.Type, for indexPath: IndexPath) -> T? {
+		return dequeueReusableCell(withReuseIdentifier: String(describing: name), for: indexPath) as? T
     }
 
 	/// SwifterSwift: Dequeue reusable UICollectionReusableView using class name.
@@ -85,8 +85,8 @@ public extension UICollectionView {
 	///   - name: UICollectionReusableView type.
 	///   - indexPath: location of cell in collectionView.
 	/// - Returns: UICollectionReusableView object with associated class name.
-	public func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: String, withClass name: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: name), for: indexPath) as! T
+	public func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: String, withClass name: T.Type, for indexPath: IndexPath) -> T? {
+		return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: name), for: indexPath) as? T
     }
 
 	/// SwifterSwift: Register UICollectionReusableView using class name.

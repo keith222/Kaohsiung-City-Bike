@@ -9,7 +9,6 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-
 // MARK: - Properties
 public extension UITableView {
 	
@@ -23,8 +22,15 @@ public extension UITableView {
 		return numberOfSections > 0 ? numberOfSections - 1 : 0
 	}
 	
+}
+
+// MARK: - Methods
+public extension UITableView {
+	
 	/// SwifterSwift: Number of all rows in all sections of tableView.
-	public var numberOfRows: Int {
+	///
+	/// - Returns: The count of all rows in the tableView.
+	public func numberOfRows() -> Int {
 		var section = 0
 		var rowCount = 0
 		while section < numberOfSections {
@@ -33,11 +39,6 @@ public extension UITableView {
 		}
 		return rowCount
 	}
-	
-}
-    
-// MARK: - Methods
-public extension UITableView {
 
 	/// SwifterSwift: IndexPath for last row in section.
 	///
@@ -74,7 +75,6 @@ public extension UITableView {
 		tableHeaderView = nil
 	}
 	
-	
 	/// SwifterSwift: Scroll to bottom of TableView.
 	///
 	/// - Parameter animated: set true to animate scroll (default is true).
@@ -104,8 +104,8 @@ public extension UITableView {
 	///   - name: UITableViewCell type.
 	///   - indexPath: location of cell in tableView.
 	/// - Returns: UITableViewCell object with associated class name.
-	public func dequeueReusableCell<T: UITableViewCell>(withClass name: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withIdentifier: String(describing: name), for: indexPath) as! T
+	public func dequeueReusableCell<T: UITableViewCell>(withClass name: T.Type, for indexPath: IndexPath) -> T? {
+		return dequeueReusableCell(withIdentifier: String(describing: name), for: indexPath) as? T
     }
     
     /// SwiferSwift: Dequeue reusable UITableViewHeaderFooterView using class name

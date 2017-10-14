@@ -85,10 +85,15 @@ class StationViewController: SearchViewController{
     
     override func filterContentForSearchText(_ searchText: String) {
         //搜尋結果
-        self.filteredSource = source?.filter({ value in
-            return (value.name.range(of: searchText) != nil) || (value.address.range(of: searchText) != nil) || (value.englishname.lowercased().range(of: searchText.lowercased()) != nil)
-        })
-        
-        self.tableHelper?.reloadData = self.filteredSource!
+        if !searchText.isEmpty {
+            self.filteredSource = source?.filter({ value in
+                return (value.name.contains(searchText)) || (value.address.contains(searchText)) || (value.englishname.contains(searchText.lowercased()))
+            })
+            
+            self.tableHelper?.reloadData = self.filteredSource!
+            
+        } else {
+            self.tableHelper?.reloadData = source!
+        }
     }
 }
