@@ -2869,5 +2869,45 @@
           "latitude": 22.6128,
           "longitude": 120.2921,
           "description": "海邊路與永平路交叉口"
+        },
+        {
+          "id": 300,
+          "no": "0307",
+          "name": "凱旋醫院站",
+          "englishname": "KaisyuanHospital",
+          "address": "凱旋醫院大門前，凱旋二路上",
+          "latitude": 22.62489,
+          "longitude": 120.32405,
+          "description": "凱旋醫院大門前，凱旋二路上"
+        },
+        {
+          "id": 301,
+          "no": "0306",
+          "name": "鳳山商工站",
+          "englishname": "NationalFeng-ShanSenioCcommercialIndustrialVocationalSchool",
+          "address": "鳳山商工旁，建國三路上",
+          "latitude": 22.63627,
+          "longitude": 120.35689,
+          "description": "鳳山商工旁，建國三路上"
+        },
+        {
+        "id": 302,
+        "no": "0304",
+        "name": "桂林公園站(1)",
+        "englishname": "GueilinPark(1)",
+        "address": "桂林國小對面，桂陽路上",
+        "latitude": 22.581963,
+        "longitude": 120.350604,
+        "description": "桂林國小對面，桂陽路上"
+        },
+        {
+        "id": 303,
+        "no": "0305",
+        "name": "桂林公園站(2)",
+        "englishname": "CruiseTerminal(LRT)",
+        "address": "桂林國小對面，桂陽路上",
+        "latitude": 22.581987,
+        "longitude": 120.350347,
+        "description": "桂林國小對面，桂陽路上"
         }
 ]
