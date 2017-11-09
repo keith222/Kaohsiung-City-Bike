@@ -2891,23 +2891,53 @@
           "description": "鳳山商工旁，建國三路上"
         },
         {
-        "id": 302,
-        "no": "0304",
-        "name": "桂林公園站(1)",
-        "englishname": "GueilinPark(1)",
-        "address": "桂林國小對面，桂陽路上",
-        "latitude": 22.581963,
-        "longitude": 120.350604,
-        "description": "桂林國小對面，桂陽路上"
+          "id": 302,
+          "no": "0304",
+          "name": "桂林公園站(1)",
+          "englishname": "GueilinPark(1)",
+          "address": "桂林國小對面，桂陽路上",
+          "latitude": 22.581963,
+          "longitude": 120.350604,
+          "description": "桂林國小對面，桂陽路上"
         },
         {
-        "id": 303,
-        "no": "0305",
-        "name": "桂林公園站(2)",
-        "englishname": "CruiseTerminal(LRT)",
-        "address": "桂林國小對面，桂陽路上",
-        "latitude": 22.581987,
-        "longitude": 120.350347,
-        "description": "桂林國小對面，桂陽路上"
+          "id": 303,
+          "no": "0305",
+          "name": "桂林公園站(2)",
+          "englishname": "CruiseTerminal(LRT)",
+          "address": "桂林國小對面，桂陽路上",
+          "latitude": 22.581987,
+          "longitude": 120.350347,
+          "description": "桂林國小對面，桂陽路上"
+        },
+        {
+          "id": 304,
+          "no": "0301",
+          "name": "月世界站",
+          "englishname": "MoonWorld",
+          "address": "大群停車場，鄰近停車場公廁",
+          "latitude": 22.88657,
+          "longitude": 120.39162,
+          "description": "大群停車場，鄰近停車場公廁"
+        },
+        {
+          "id": 305,
+          "no": "0309",
+          "name": "清水嚴榕樹休憩公園站",
+          "englishname": "CingshueiyanBanyanLeisurePark",
+          "address": "清水巖榕樹休憩公園入口旁，清水岩路上",
+          "latitude": 22.52183,
+          "longitude": 120.39078,
+          "description": "清水巖榕樹休憩公園入口旁，清水岩路上"
+        },
+        {
+          "id": 306,
+          "no": "0308",
+          "name": "鼓山一路站",
+          "englishname": "Gusha1stRd.",
+          "address": "鼓山一路與鼓山一路119巷口",
+          "latitude": 22.627848,
+          "longitude": 120.279371,
+          "description": "鼓山一路與鼓山一路119巷口"
         }
 ]
