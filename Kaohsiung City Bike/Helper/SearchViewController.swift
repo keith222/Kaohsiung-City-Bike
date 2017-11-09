@@ -37,33 +37,32 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
     
     //搜尋功能
     @objc func configureSearchBar(){
-        
-        self.searchController.hidesNavigationBarDuringPresentation = false
-        
         //結果呈現在此VC上
         definesPresentationContext = true
         //輸入框自動大小寫轉換>不設定
-        self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationType.none
+        self.searchController.searchBar.autocapitalizationType = .none
         //使用預設鍵盤
-        self.searchController.searchBar.keyboardType = UIKeyboardType.default
+        self.searchController.searchBar.keyboardType = .default
         //search bar placeholder
         self.searchController.searchBar.placeholder = NSLocalizedString("Search", comment: "")
         
         //將UISearchBar放到Navigation的titleView上
         if #available(iOS 11.0, *) {
+            self.searchController.hidesNavigationBarDuringPresentation = true
+            
             if let textfield = self.searchController.searchBar.value(forKey: "searchField") as? UITextField {
                 textfield.textColor = UIColor.blue
                 if let backgroundview = textfield.subviews.first {
-                    
+
                     // Background color
                     backgroundview.backgroundColor = UIColor.white
-                    
+
                     // Rounded corner
-                    backgroundview.layer.cornerRadius = 10;
-                    backgroundview.clipsToBounds = true;
-                    
+                    backgroundview.layer.cornerRadius = 10
+                    backgroundview.clipsToBounds = true
                 }
             }
+            
             self.navigationItem.searchController = self.searchController
             self.navigationItem.hidesSearchBarWhenScrolling = true
             
@@ -82,9 +81,11 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        //按下搜尋按鈕
-        self.navigationController?.navigationBar.topItem?.rightBarButtonItem = nil
-        self.navigationController?.navigationBar.topItem?.hidesBackButton = true
+        if #available(iOS 11.0, *) {} else {
+            //按下搜尋按鈕
+            self.navigationController?.navigationBar.topItem?.rightBarButtonItem = nil
+            self.navigationController?.navigationBar.topItem?.hidesBackButton = true
+        }
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

@@ -1287,8 +1287,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e884559-96a2-4197-80c7-f9b2f218944a";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: Sparkrs.CityBike";
+				PROVISIONING_PROFILE = "c20c9db2-51a8-47ff-8f24-807fbe011bdb";
+				PROVISIONING_PROFILE_SPECIFIER = Sparkrs.CityBike;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1397,8 +1397,8 @@
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbeef7c3-a2f6-4516-8acf-25acf35a846a";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: Sparkrs.CityBike.Kaohsiung-CityBikeWatch";
+				PROVISIONING_PROFILE = "13092646-cbbe-4a4a-91c4-630220ec9018";
+				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.Kaohsiung-CityBikeWatch";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1444,8 +1444,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "7295be5c-3ec3-4ee8-adca-1847f2580e30";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: Sparkrs.CityBike.Watchapp.watchextension";
+				PROVISIONING_PROFILE = "5a9c1f0e-6859-48a4-8961-ce30392a1f48";
+				PROVISIONING_PROFILE_SPECIFIER = Sparkrs.CityBike.Watchapp.watchextension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -1666,8 +1666,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d198cd77-325e-4154-8906-85cd1eeea609";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
+				PROVISIONING_PROFILE = "b5e57b83-327e-45b9-8715-5277e7dfb32a";
+				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
