@@ -2939,5 +2939,25 @@
           "latitude": 22.627848,
           "longitude": 120.279371,
           "description": "鼓山一路與鼓山一路119巷口"
+        },
+        {
+          "id": 307,
+          "no": "0311",
+          "name": "滷博館站",
+          "englishname": "Soya-mixedMeatMuseum",
+          "address": "岡山區本洲五街與本洲六街口",
+          "latitude": 22.81849,
+          "longitude": 120.26778,
+          "description": "岡山區本洲五街與本洲六街口"
+        },
+        {
+          "id": 308,
+          "no": "0312",
+          "name": "臨海兒童公園站",
+          "englishname": "LinhaiChildren'sPark",
+          "address": "臨海兒童公園內，東亞南路轉彎處",
+          "latitude": 22.81849,
+          "longitude": 120.26778,
+          "description": "臨海兒童公園內，東亞南路轉彎處"
         }
 ]

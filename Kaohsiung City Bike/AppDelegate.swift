@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         if #available(iOS 11.0, *) {
             UISearchBar.appearance().tintColor = .white
             UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .lightGray
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
         }
 
         //if there is not json file in document, copy it from bundle to document
