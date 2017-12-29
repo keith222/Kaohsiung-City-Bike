@@ -2959,5 +2959,15 @@
           "latitude": 22.81849,
           "longitude": 120.26778,
           "description": "臨海兒童公園內，東亞南路轉彎處"
+        },
+        {
+          "id": 309,
+          "no": "0313",
+          "name": "中崙公園站",
+          "englishname": "JhonglunPark",
+          "address": "中崙公共托嬰中心旁，中崙五路上",
+          "latitude": 22.59713,
+          "longitude": 120.35371,
+          "description": "中崙公共托嬰中心旁，中崙五路上"
         }
 ]
