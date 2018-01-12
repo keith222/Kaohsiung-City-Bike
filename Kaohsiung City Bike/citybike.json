@@ -2969,5 +2969,15 @@
           "latitude": 22.59713,
           "longitude": 120.35371,
           "description": "中崙公共托嬰中心旁，中崙五路上"
+        },
+        {
+          "id": 310,
+          "no": "0314",
+          "name": "岡山火車站",
+          "englishname": "GangshanStation",
+          "address": "岡山火車站前，中山北路上",
+          "latitude": 22.79291,
+          "longitude": 120.29933,
+          "description": "岡山火車站前，中山北路上"
         }
 ]
