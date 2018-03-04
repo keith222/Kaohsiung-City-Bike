@@ -3,15 +3,10 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/6/16.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
 
-import Foundation
-#if os(macOS)
-	import Cocoa
-#else
-	import UIKit
-#endif
+import CoreGraphics
 
 // MARK: - Properties
 public extension Int {
@@ -56,7 +51,7 @@ public extension Int {
 		var sign: String {
 			return self >= 0 ? "" : "-"
 		}
-		let abs = self.abs
+		let abs = Swift.abs(self)
 		if abs == 0 {
 			return "0k"
 		} else if abs >= 0 && abs < 1000 {
@@ -90,24 +85,25 @@ public extension Int {
 		let delta = UInt32(range.upperBound - range.lowerBound + 1)
 		return range.lowerBound + Int(arc4random_uniform(delta))
 	}
-
+	
 	/// SwifterSwift: check if given integer prime or not.
 	/// Warning: Using big numbers can be computationally expensive!
 	/// - Returns: true or false depending on prime-ness
 	public func isPrime() -> Bool {
-		guard self > 1 || self % 2 == 0 else {
-			return false
-		}
 		// To improve speed on latter loop :)
 		if self == 2 {
 			return true
+		}
+		
+		guard self > 1 && self % 2 != 0 else {
+			return false
 		}
 		// Explanation: It is enough to check numbers until
 		// the square root of that number. If you go up from N by one,
 		// other multiplier will go 1 down to get similar result
 		// (integer-wise operation) such way increases speed of operation
-		let base = Int(sqrt(Double(self)) + 1)
-		for i in Swift.stride(from: 3, to: base, by: 2) where self % i == 0 {
+		let base = Int(sqrt(Double(self)))
+		for i in Swift.stride(from: 3, through: base, by: 2) where self % i == 0 {
 			return false
 		}
 		return true
@@ -141,7 +137,7 @@ public extension Int {
 		}
 		return romanValue
 	}
-
+	
 }
 
 // MARK: - Initializers

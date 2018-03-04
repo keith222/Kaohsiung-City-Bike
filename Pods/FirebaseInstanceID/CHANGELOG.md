@@ -1,3 +1,21 @@
+# 2018-02-06 -- v2.0.9
+- Improved support for language targeting for FCM service. Server updates happen more efficiently when language changes.
+- Improved support for FCM token auto generation enable/disable functions.
+
+# 2017-12-11 -- v2.0.8
+- Fixed a crash caused by a reflection call during logging.
+- Updating server with the latest parameters and deprecating old ones.
+
+# 2017-11-27 -- v2.0.7
+- Improve identity reset process, ensuring all information is reset during Identity deletion.
+
+# 2017-11-06 -- v2.0.6
+- Make token refresh weekly.
+- Fixed a crash when performing token operation.
+
+# 2017-10-11 -- v2.0.5
+- Improved support for working in shared Keychain environments.
+
 # 2017-09-26 -- v2.0.4
 - Fixed an issue where the FCM token was not associating correctly with an APNs
   device token, depending on when the APNs device token was made available.

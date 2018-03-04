@@ -3,10 +3,8 @@
 //  SwifterSwift
 //
 //  Created by Sergey Fedortsov on 19.12.16.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
-
-import Foundation
 
 // MARK: - Methods
 public extension Collection {
@@ -37,10 +35,6 @@ public extension Collection {
 		}
 	}
 	
-}
-
-public extension Collection {
-
 	/// SwifterSwift: Safe protects the array from out of bounds by use of optional.
 	///
 	///		let arr = [1, 2, 3, 4, 5]
@@ -54,6 +48,7 @@ public extension Collection {
 	
 }
 
+// MARK: - Methods (Int)
 public extension Collection where Index == Int, IndexDistance == Int {
 	
 	/// SwifterSwift: Random item from array.
@@ -61,12 +56,12 @@ public extension Collection where Index == Int, IndexDistance == Int {
 		let index = Int(arc4random_uniform(UInt32(count)))
 		return self[index]
 	}
-
+	
 }
 
 // MARK: - Methods (Integer)
 public extension Collection where Iterator.Element == Int, Index == Int {
-
+	
 	/// SwifterSwift: Average of all elements in array.
 	///
 	/// - Returns: the average of the array's elements.

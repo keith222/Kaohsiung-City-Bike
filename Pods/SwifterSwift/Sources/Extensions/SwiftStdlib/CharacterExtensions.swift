@@ -3,10 +3,8 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/8/16.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
-
-import Foundation
 
 // MARK: - Properties
 public extension Character {
@@ -39,15 +37,15 @@ public extension Character {
 		return Int(String(self)) != nil
 	}
 	
-    /// SwifterSwift: Check if character is a letter.
+	/// SwifterSwift: Check if character is a letter.
 	///
 	///		Character("4").isLetter -> false
 	///		Character("a").isLetter -> true
 	///
-    public var isLetter: Bool {
-        return String(self).rangeOfCharacter(from: .letters, options: .numeric, range: nil) != nil
-    }
-    
+	public var isLetter: Bool {
+		return String(self).rangeOfCharacter(from: .letters, options: .numeric, range: nil) != nil
+	}
+	
 	/// SwifterSwift: Check if character is uppercased.
 	///
 	///		Character("a").isUppercased -> false
@@ -66,15 +64,15 @@ public extension Character {
 		return String(self) == String(self).lowercased()
 	}
 	
-    /// SwifterSwift: Check if character is white space.
+	/// SwifterSwift: Check if character is white space.
 	///
 	///		Character(" ").isWhiteSpace -> true
 	///		Character("A").isWhiteSpace -> false
 	///
-    public var isWhiteSpace: Bool {
-        return String(self) == " "
-    }
-    
+	public var isWhiteSpace: Bool {
+		return String(self) == " "
+	}
+	
 	/// SwifterSwift: Integer from character (if applicable).
 	///
 	///		Character("1").int -> 1
@@ -92,22 +90,22 @@ public extension Character {
 		return String(self)
 	}
 	
-    /// SwifterSwift: Return the character lowercased.
+	/// SwifterSwift: Return the character lowercased.
 	///
 	///		Character("A").lowercased -> Character("a")
 	///
-    public var lowercased: Character {
-        return String(self).lowercased().characters.first!
-    }
-    
-    /// SwifterSwift: Return the character uppercased.
+	public var lowercased: Character {
+		return String(self).lowercased().first!
+	}
+	
+	/// SwifterSwift: Return the character uppercased.
 	///
 	///		Character("a").uppercased -> Character("A")
 	///
-    public var uppercased: Character {
-        return String(self).uppercased().characters.first!
-    }
-    
+	public var uppercased: Character {
+		return String(self).uppercased().first!
+	}
+	
 }
 
 // MARK: - Operators

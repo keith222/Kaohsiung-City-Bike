@@ -3,11 +3,10 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/15/17.
-//
+//  Copyright © 2017 SwifterSwift
 //
 
-import Foundation
-
+// MARK: - Properties
 public extension SignedNumeric {
 	
 	/// SwifterSwift: String.
@@ -23,4 +22,5 @@ public extension SignedNumeric {
 		guard let number = self as? NSNumber else { return "" }
 		return formatter.string(from: number) ?? ""
 	}
+	
 }

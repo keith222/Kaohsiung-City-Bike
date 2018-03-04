@@ -34,7 +34,6 @@ class TodayViewController: UIViewController, NCWidgetProviding{
             nibName: "TodayWidgetTableViewCell",
             source: self.source ?? [],
             selectAction: { [weak self] num in
-                print("selected")
                 if let station = self?.userDefault.array(forKey: "staForTodayWidget") {
                     var urlString = "CityBike://?"
                     urlString += (station[num] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!

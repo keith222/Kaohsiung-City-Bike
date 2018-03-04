@@ -3,10 +3,8 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/15/17.
+//  Copyright © 2017 SwifterSwift
 //
-//
-
-import Foundation
 
 // MARK: - Properties
 public extension SignedInteger {
@@ -66,7 +64,7 @@ public extension SignedInteger {
 		}
 		return "\(hours)h \(mins)m"
 	}
-
+	
 }
 
 // MARK: - Methods

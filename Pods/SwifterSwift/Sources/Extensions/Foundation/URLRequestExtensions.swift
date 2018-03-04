@@ -3,8 +3,9 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 9/5/17.
+//  Copyright © 2017 SwifterSwift
 //
-//
+
 import Foundation
 
 // MARK: - Initializers

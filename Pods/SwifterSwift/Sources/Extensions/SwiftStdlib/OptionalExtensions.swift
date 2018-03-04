@@ -3,11 +3,10 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 3/3/17.
-//  Copyright © 2017 omaralbeik. All rights reserved.
+//  Copyright © 2017 SwifterSwift
 //
 
-import Foundation
-
+// MARK: - Methods
 public extension Optional {
 	
 	/// SwifterSwift: Get self of default value (if self is nil).
@@ -45,4 +44,21 @@ public extension Optional {
 		_ = self.map(block)
 	}
 	
+	/// SwifterSwift: Assign an optional value to a variable only if the value is not nil.
+	///
+	///     let someParameter: String? = nil
+	///     let parameters = [String:Any]() //Some parameters to be attached to a GET request
+	///     parameters[someKey] ??= someParameter //It won't be added to the parameters dict
+	///
+	/// - Parameters:
+	///   - lhs: Any?
+	///   - rhs: Any?
+	public static func ??= (lhs: inout Optional, rhs: Optional) {
+		guard let rhs = rhs else { return }
+		lhs = rhs
+	}
+	
 }
+
+// MARK: - Operators
+infix operator ??= : AssignmentPrecedence

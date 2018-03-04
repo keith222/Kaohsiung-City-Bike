@@ -3,23 +3,23 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/5/16.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
-
-import Foundation
 
 // MARK: - Methods (Integer)
 public extension Array where Element: Numeric {
 	
 	/// SwifterSwift: Sum of all elements in array.
 	///
-	///		[1, 2, 3, 4, 5].sum -> 15
+	///		[1, 2, 3, 4, 5].sum() -> 15
 	///
 	/// - Returns: sum of the array's elements.
 	public func sum() -> Element {
-        var total: Element = 0
-        forEach { total += $0 }
-        return total
+		var total: Element = 0
+		for i in 0..<count {
+			total += self[i]
+		}
+		return total
 	}
 	
 }
@@ -29,16 +29,18 @@ public extension Array where Element: FloatingPoint {
 	
 	/// SwifterSwift: Average of all elements in array.
 	///
-	///		[1.2, 2.3, 4.5, 3.4, 4.5].average = 3.18
+	///		[1.2, 2.3, 4.5, 3.4, 4.5].average() = 3.18
 	///
 	/// - Returns: average of the array's elements.
 	public func average() -> Element {
-        guard !isEmpty else { return 0 }
-        var total: Element = 0
-        forEach { total += $0 }
-        return total / Element(count)
+		guard !isEmpty else { return 0 }
+		var total: Element = 0
+		for i in 0..<count {
+			total += self[i]
+		}
+		return total / Element(count)
 	}
-
+	
 }
 
 // MARK: - Methods
@@ -402,17 +404,13 @@ public extension Array {
 	public mutating func rotate(by places: Int) {
 		self = rotated(by: places)
 	}
-}
-
-// MARK: - Methods (Equatable)
-public extension Array where Element: Equatable {
 	
 	/// SwifterSwift: Shuffle array. (Using Fisher-Yates Algorithm)
 	///
 	///		[1, 2, 3, 4, 5].shuffle() // shuffles array
 	///
 	public mutating func shuffle() {
-		//http://stackoverflow.com/questions/37843647/shuffle-array-swift-3
+		// http://stackoverflow.com/questions/37843647/shuffle-array-swift-3
 		guard count > 1 else { return }
 		for index in startIndex..<endIndex - 1 {
 			let randomIndex = Int(arc4random_uniform(UInt32(endIndex - index))) + index
@@ -430,6 +428,56 @@ public extension Array where Element: Equatable {
 		array.shuffle()
 		return array
 	}
+	
+	/// SwifterSwift: Return a sorted array based on an optional keypath.
+	///
+	/// - Parameter path: Key path to sort. The key path type must be Comparable.
+	/// - Parameter ascending: If order must be ascending.
+	/// - Returns: Sorted array based on keyPath.
+	public func sorted<T: Comparable>(by path: KeyPath<Element, T?>, ascending: Bool = true) -> [Element] {
+		return sorted(by: { (lhs, rhs) -> Bool in
+			guard let lhsValue = lhs[keyPath: path], let rhsValue = rhs[keyPath: path] else { return false }
+			if ascending {
+				return lhsValue < rhsValue
+			}
+			return lhsValue > rhsValue
+		})
+	}
+	
+	/// SwifterSwift: Return a sorted array based on a keypath.
+	///
+	/// - Parameter path: Key path to sort. The key path type must be Comparable.
+	/// - Parameter ascending: If order must be ascending.
+	/// - Returns: Sorted array based on keyPath.
+	public func sorted<T: Comparable>(by path: KeyPath<Element, T>, ascending: Bool = true) -> [Element] {
+		return sorted(by: { (lhs, rhs) -> Bool in
+			if ascending {
+				return lhs[keyPath: path] < rhs[keyPath: path]
+			}
+			return lhs[keyPath: path] > rhs[keyPath: path]
+		})
+	}
+	
+	/// SwifterSwift: Sort the array based on an optional keypath.
+	///
+	/// - Parameter path: Key path to sort. The key path type must be Comparable.
+	/// - Parameter ascending: If order must be ascending.
+	public mutating func sort<T: Comparable>(by path: KeyPath<Element, T?>, ascending: Bool = true) {
+		self = sorted(by: path, ascending: ascending)
+	}
+	
+	/// SwifterSwift: Sort the array based on a keypath.
+	///
+	/// - Parameter path: Key path to sort. The key path type must be Comparable.
+	/// - Parameter ascending: If order must be ascending.
+	public mutating func sort<T: Comparable>(by path: KeyPath<Element, T>, ascending: Bool = true) {
+		self = sorted(by: path, ascending: ascending)
+	}
+	
+}
+
+// MARK: - Methods (Equatable)
+public extension Array where Element: Equatable {
 	
 	/// SwifterSwift: Check if array contains an array of elements.
 	///
@@ -450,20 +498,20 @@ public extension Array where Element: Equatable {
 		return found
 	}
 	
-	/// SwifterSwift: All indexes of specified item.
+	/// SwifterSwift: All indices of specified item.
 	///
-	///		[1, 2, 2, 3, 4, 2, 5].indexes(of 2) -> [1, 2, 5]
-	///		[1.2, 2.3, 4.5, 3.4, 4.5].indexes(of 2.3) -> [1]
-	///		["h", "e", "l", "l", "o"].indexes(of "l") -> [2, 3]
+	///		[1, 2, 2, 3, 4, 2, 5].indices(of 2) -> [1, 2, 5]
+	///		[1.2, 2.3, 4.5, 3.4, 4.5].indices(of 2.3) -> [1]
+	///		["h", "e", "l", "l", "o"].indices(of "l") -> [2, 3]
 	///
 	/// - Parameter item: item to check.
-	/// - Returns: an array with all indexes of the given item.
-	public func indexes(of item: Element) -> [Int] {
-		var indexes: [Int] = []
+	/// - Returns: an array with all indices of the given item.
+	public func indices(of item: Element) -> [Int] {
+		var indices: [Int] = []
 		for index in startIndex..<endIndex where self[index] == item {
-			indexes.append(index)
+			indices.append(index)
 		}
-		return indexes
+		return indices
 	}
 	
 	/// SwifterSwift: Remove all instances of an item from array.
@@ -494,25 +542,34 @@ public extension Array where Element: Equatable {
 	///
 	public mutating func removeDuplicates() {
 		// Thanks to https://github.com/sairamkotha for improving the method
-		self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+		self = reduce(into: [Element]()) {
+			if !$0.contains($1) {
+				$0.append($1)
+			}
+		}
 	}
 	
 	/// SwifterSwift: Return array with all duplicate elements removed.
 	///
-	///		[1, 2, 2, 3, 4, 5, 5].duplicatesRemoved() -> [ 2, 5]
-	///		["h", "e", "l", "l", "o"]. duplicatesRemoved() -> ["l"]
+	///     [1, 1, 2, 2, 3, 3, 3, 4, 5].duplicatesRemoved() -> [1, 2, 3, 4, 5])
+	///     ["h", "e", "l", "l", "o"].duplicatesRemoved() -> ["h", "e", "l", "o"])
 	///
 	/// - Returns: an array of unique elements.
+	///
 	public func duplicatesRemoved() -> [Element] {
 		// Thanks to https://github.com/sairamkotha for improving the property
-		return reduce([]) { ($0 as [Element]).contains($1) ? $0 : $0 + [$1] }
+		return reduce(into: [Element]()) {
+			if !$0.contains($1) {
+				$0.append($1)
+			}
+		}
 	}
 	
 	/// SwifterSwift: First index of a given item in an array.
 	///
-	///		[1, 2, 2, 3, 4, 2, 5].firstIndex(of 2) -> 1
-	///		[1.2, 2.3, 4.5, 3.4, 4.5].firstIndex(of 6.5) -> nil
-	///		["h", "e", "l", "l", "o"].firstIndex(of "l") -> 2
+	///		[1, 2, 2, 3, 4, 2, 5].firstIndex(of: 2) -> 1
+	///		[1.2, 2.3, 4.5, 3.4, 4.5].firstIndex(of: 6.5) -> nil
+	///		["h", "e", "l", "l", "o"].firstIndex(of: "l") -> 2
 	///
 	/// - Parameter item: item to check.
 	/// - Returns: first index of item in array (if exists).
@@ -525,9 +582,9 @@ public extension Array where Element: Equatable {
 	
 	/// SwifterSwift: Last index of element in array.
 	///
-	///		[1, 2, 2, 3, 4, 2, 5].lastIndex(of 2) -> 5
-	///		[1.2, 2.3, 4.5, 3.4, 4.5].lastIndex(of 6.5) -> nil
-	///		["h", "e", "l", "l", "o"].lastIndex(of "l") -> 3
+	///		[1, 2, 2, 3, 4, 2, 5].lastIndex(of: 2) -> 5
+	///		[1.2, 2.3, 4.5, 3.4, 4.5].lastIndex(of: 6.5) -> nil
+	///		["h", "e", "l", "l", "o"].lastIndex(of: "l") -> 3
 	///
 	/// - Parameter item: item to check.
 	/// - Returns: last index of item in array (if exists).

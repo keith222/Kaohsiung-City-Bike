@@ -3,7 +3,7 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/5/16.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
 
 #if os(iOS) || os(tvOS)
@@ -48,9 +48,7 @@ public extension UIView {
 	/// SwifterSwift: Border color of view; also inspectable from Storyboard.
 	@IBInspectable public var borderColor: UIColor? {
 		get {
-			guard let color = layer.borderColor else {
-				return nil
-			}
+			guard let color = layer.borderColor else { return nil }
 			return UIColor(cgColor: color)
 		}
 		set {
@@ -85,9 +83,7 @@ public extension UIView {
 	
 	/// SwifterSwift: First responder.
 	public var firstResponder: UIView? {
-		guard !isFirstResponder else {
-			return self
-		}
+		guard !isFirstResponder else { return self }
 		for subView in subviews where subView.isFirstResponder {
 			return subView
 		}
@@ -119,9 +115,7 @@ public extension UIView {
 		defer {
 			UIGraphicsEndImageContext()
 		}
-		guard let context = UIGraphicsGetCurrentContext() else {
-			return nil
-		}
+		guard let context = UIGraphicsGetCurrentContext() else { return nil }
 		layer.render(in: context)
 		return UIGraphicsGetImageFromCurrentImageContext()
 	}
@@ -129,9 +123,7 @@ public extension UIView {
 	/// SwifterSwift: Shadow color of view; also inspectable from Storyboard.
 	@IBInspectable public var shadowColor: UIColor? {
 		get {
-			guard let color = layer.shadowColor else {
-				return nil
-			}
+			guard let color = layer.shadowColor else { return nil }
 			return UIColor(cgColor: color)
 		}
 		set {
@@ -248,7 +240,7 @@ public extension UIView {
 	///   - radius: shadow radius (default is 3).
 	///   - offset: shadow offset (default is .zero).
 	///   - opacity: shadow opacity (default is 0.5).
-	public func addShadow(ofColor color: UIColor = UIColor(hex: 0x137992)!, radius: CGFloat = 3, offset: CGSize = .zero, opacity: Float = 0.5) {
+	public func addShadow(ofColor color: UIColor = UIColor(red: 0.07, green: 0.47, blue: 0.57, alpha: 1.0), radius: CGFloat = 3, offset: CGSize = .zero, opacity: Float = 0.5) {
 		layer.shadowColor = color.cgColor
 		layer.shadowOffset = offset
 		layer.shadowRadius = radius

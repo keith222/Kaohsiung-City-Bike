@@ -42,7 +42,7 @@ class StationViewModel {
         
         do {
             let jsonData: Data = try Data(contentsOf: URL(fileURLWithPath: path))
-            let json = JSON(data: jsonData)
+            let json = try JSON(data: jsonData)
             
             let station = json.map({ (station: (String, value: SwiftyJSON.JSON)) -> Station in
                 return Mapper<Station>().map(JSONObject: station.value.dictionaryObject)!

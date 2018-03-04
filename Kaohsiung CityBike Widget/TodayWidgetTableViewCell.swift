@@ -44,7 +44,7 @@ class TodayWidgetTableViewCell: UITableViewCell, ReactiveView {
             
             var normalColor: UIColor?
             if #available(iOS 10, *){
-                normalColor = .darkGray
+                normalColor = .black
             }else{
                 normalColor = .white
             }

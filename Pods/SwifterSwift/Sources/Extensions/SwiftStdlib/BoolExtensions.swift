@@ -3,10 +3,8 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 07/12/2016.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
-
-import Foundation
 
 // MARK: - Properties
 public extension Bool {
@@ -37,15 +35,15 @@ public extension Bool {
 	public var toggled: Bool {
 		return !self
 	}
-    
-    /// SwifterSwift: Returns a random boolean value.
-    ///
-    ///     Bool.random -> true
-    ///     Bool.random -> false
-    ///
-    public static var random: Bool {
-        return arc4random_uniform(2) == 1
-    }
+	
+	/// SwifterSwift: Returns a random boolean value.
+	///
+	///     Bool.random -> true
+	///     Bool.random -> false
+	///
+	public static var random: Bool {
+		return arc4random_uniform(2) == 1
+	}
 	
 }
 

@@ -1,33 +1,33 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Crashlytics (3.9.0):
-    - Fabric (~> 1.7.0)
-  - Fabric (1.7.0)
-  - Firebase/Core (4.3.0):
-    - FirebaseAnalytics (= 4.0.4)
-    - FirebaseCore (= 4.0.8)
-  - Firebase/Crash (4.3.0):
+  - Alamofire (4.6.0)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.5)
+  - Firebase/Core (4.9.0):
+    - FirebaseAnalytics (= 4.0.9)
+    - FirebaseCore (= 4.0.15)
+  - Firebase/Crash (4.9.0):
     - Firebase/Core
     - FirebaseCrash (= 2.0.2)
-  - Firebase/Messaging (4.3.0):
+  - Firebase/Messaging (4.9.0):
     - Firebase/Core
-    - FirebaseMessaging (= 2.0.4)
-  - FirebaseAnalytics (4.0.4):
+    - FirebaseMessaging (= 2.1.0)
+  - FirebaseAnalytics (4.0.9):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseCore (4.0.8):
+  - FirebaseCore (4.0.15):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-    - nanopb (~> 0.3)
   - FirebaseCrash (2.0.2):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - Protobuf (~> 3.1)
-  - FirebaseInstanceID (2.0.4)
-  - FirebaseMessaging (2.0.4):
+  - FirebaseInstanceID (2.0.9):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.1.0):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -44,23 +44,23 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - ObjectMapper (3.0.0)
+  - ObjectMapper (3.1.0)
   - PKHUD (5.0.0)
-  - Protobuf (3.4.0)
-  - SwifterSwift (4.0.1):
-    - SwifterSwift/AppKit (= 4.0.1)
-    - SwifterSwift/CoreGraphics (= 4.0.1)
-    - SwifterSwift/CoreLocation (= 4.0.1)
-    - SwifterSwift/Foundation (= 4.0.1)
-    - SwifterSwift/SwiftStdlib (= 4.0.1)
-    - SwifterSwift/UIKit (= 4.0.1)
-  - SwifterSwift/AppKit (4.0.1)
-  - SwifterSwift/CoreGraphics (4.0.1)
-  - SwifterSwift/CoreLocation (4.0.1)
-  - SwifterSwift/Foundation (4.0.1)
-  - SwifterSwift/SwiftStdlib (4.0.1)
-  - SwifterSwift/UIKit (4.0.1)
-  - SwiftyJSON (3.1.4)
+  - Protobuf (3.5.0)
+  - SwifterSwift (4.1.1):
+    - SwifterSwift/AppKit (= 4.1.1)
+    - SwifterSwift/CoreGraphics (= 4.1.1)
+    - SwifterSwift/CoreLocation (= 4.1.1)
+    - SwifterSwift/Foundation (= 4.1.1)
+    - SwifterSwift/SwiftStdlib (= 4.1.1)
+    - SwifterSwift/UIKit (= 4.1.1)
+  - SwifterSwift/AppKit (4.1.1)
+  - SwifterSwift/CoreGraphics (4.1.1)
+  - SwifterSwift/CoreLocation (4.1.1)
+  - SwifterSwift/Foundation (4.1.1)
+  - SwifterSwift/SwiftStdlib (4.1.1)
+  - SwifterSwift/UIKit (4.1.1)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -82,28 +82,28 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Kanna:
-    :commit: 9091f84ed0e39b7fa8536da98a1812c3456bc4e3
+    :commit: 81ce91fd485b637517c340c73590a9b59ac9f7d5
     :git: https://github.com/tid-kijyun/Kanna.git
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
-  Fabric: e6be012366472553807dada21243c5ab8d904151
-  Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
-  FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
-  FirebaseCore: 69b1a5ac5f857ba6d5fd9d5fe794f4786dd5e579
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
+  Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
+  FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
+  FirebaseCore: 3bd047463058fa6b5d312c97502c52e45401cdfb
   FirebaseCrash: cded0fc566c03651aea606a101bc156085f333ca
-  FirebaseInstanceID: 70c2b877e9338971b2429ea5a4293df6961aa44e
-  FirebaseMessaging: 3dd86bfda2acb680b05c97f3f8ac566e9bb87b2a
+  FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
+  FirebaseMessaging: 2bafab2d0f3ab3dfd753101c2c32995c2051b5da
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   Kanna: d5ae2a26472f7e7a474e7f36a9cd8aa2c8c63ad3
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
-  SwifterSwift: 5f406a5f831343312d6d5b34282b57ef3f52c40b
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  SwifterSwift: bfcae9d659dfd306d164f13f72cad09198f30723
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
 PODFILE CHECKSUM: 0d79ebb47c85b669e3574795712e73c007b0b695
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

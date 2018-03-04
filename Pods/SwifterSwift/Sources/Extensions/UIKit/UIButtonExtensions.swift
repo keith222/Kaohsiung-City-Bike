@@ -3,7 +3,7 @@
 //  SwifterSwift
 //
 //  Created by Omar Albeik on 8/22/16.
-//  Copyright © 2016 Omar Albeik. All rights reserved.
+//  Copyright © 2016 SwifterSwift
 //
 
 #if os(iOS) || os(tvOS)
@@ -136,16 +136,16 @@ public extension UIButton {
 
 // MARK: - Methods
 public extension UIButton {
-    
-    private var states: [UIControlState] {
-        return [.normal, .selected, .highlighted, .disabled]
-    }
+	
+	private var states: [UIControlState] {
+		return [.normal, .selected, .highlighted, .disabled]
+	}
 	
 	/// SwifterSwift: Set image for all states.
 	///
 	/// - Parameter image: UIImage.
 	public func setImageForAllStates(_ image: UIImage) {
-		states.forEach { self.setImage(image, for:  $0) }
+		states.forEach { self.setImage(image, for: $0) }
 	}
 	
 	/// SwifterSwift: Set title color for all states.
