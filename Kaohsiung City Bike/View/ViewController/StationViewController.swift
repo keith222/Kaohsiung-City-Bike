@@ -53,7 +53,9 @@ class StationViewController: SearchViewController{
                 source: self!.source!,
                 selectAction: { num in
                     let selectedNO = (self?.searchController.isActive)! ? self?.filteredSource?[num].no : self?.source?[num].no
-                    self?.mDelegate?.didSelect(selectedNO!)
+                    
+                    guard let selectedNo = selectedNO else { return }
+                    self?.mDelegate?.didSelect(selectedNo)
                     self?.navigationController?.popToRootViewController(animated: true)
                 }
             )

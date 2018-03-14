@@ -58,13 +58,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kaohsiung City Bike/View/ViewController/HomeViewController.swift"
-            timestampString = "531332430.15041"
+            timestampString = "542738697.67308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "455"
-            endingLineNumber = "455"
+            startingLineNumber = "459"
+            endingLineNumber = "459"
             landmarkName = "showSpendInfo()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kaohsiung_City_Bike.HomeViewController.showSpendInfo() -&gt; ()"
+                  moduleName = "Kaohsiung City Bike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keith/Documents/iOS%20App/Kaohsiung%20City%20Bike/Kaohsiung%20City%20Bike/View/ViewController/HomeViewController.swift"
+                  timestampString = "542738697.957782"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "459"
+                  endingLineNumber = "459"
+                  offsetFromSymbolStart = "3852">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Kaohsiung_City_Bike.HomeViewController.showSpendInfo() -&gt; ()"
+                  moduleName = "Kaohsiung City Bike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keith/Documents/iOS%20App/Kaohsiung%20City%20Bike/Kaohsiung%20City%20Bike/View/ViewController/HomeViewController.swift"
+                  timestampString = "542738697.960534"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "459"
+                  endingLineNumber = "459"
+                  offsetFromSymbolStart = "488">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

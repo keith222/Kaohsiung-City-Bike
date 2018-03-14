@@ -171,7 +171,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func setMap() {
+    func setMap() {
         self.homeViewModel.fetchStationList(handler: { [weak self] stations in
             self?.source = stations.map{ value -> HomeViewModel in
                 return HomeViewModel(data: value)
@@ -326,7 +326,7 @@ class HomeViewController: UIViewController {
         
         //方位計算
         let directions = MKDirections(request: directionRequest)
-        directions.calculate{ [unowned self]
+        directions.calculate{ [weak self]
             response, error in
             guard let response = response else {
                 //handle the error here
@@ -334,15 +334,15 @@ class HomeViewController: UIViewController {
                 return
             }
             let route = response.routes[0] 
-            self.mapView.add(route.polyline, level: .aboveRoads)
-            self.mapView.removeOverlays(oldOverlays)//移除位置更新後的舊線條
+            self?.mapView.add(route.polyline, level: .aboveRoads)
+            self?.mapView.removeOverlays(oldOverlays)//移除位置更新後的舊線條
             
             let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
             
-            if currentAnnotation.isEqual(self.customAnnotation){
-                self.customWalkingTimeLabel.text = String(etaMin)
+            if currentAnnotation.isEqual(self?.customAnnotation){
+                self?.customWalkingTimeLabel.text = String(etaMin)
             }else{
-                self.travelTimeLabel.text = String(etaMin)
+                self?.travelTimeLabel.text = String(etaMin)
             }
         }
         
@@ -370,6 +370,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc func bikeInfo(_ timer:Timer){
+        HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Loading", comment: "")))
+        
         self.homeViewModel.fetchStationInfo(handler: { [weak self] data in
             guard data.count > 0 else{ return }
             
@@ -385,7 +387,7 @@ class HomeViewController: UIViewController {
                 let session = WCSession.default
                 session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
             }
-        
+            
             DispatchQueue.main.async {
                 self?.avaNum.textColor = (source[index!].available < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
                 self?.avaNum.text = "\(source[index!].available!)"
@@ -393,6 +395,8 @@ class HomeViewController: UIViewController {
                 self?.parkNum.textColor = (source[index!].park < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
                 self?.parkNum.text = "\(source[index!].park!)"
             }
+            
+            HUD.hide()
         })
     }
     

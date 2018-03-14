@@ -33,3 +33,5 @@
 "Watch_Parking" = " / 停车位";
 "Notification_Set" = "尚未设定站点，点一下进行设定";
 "Update" = "更新中";
+"Loading" = "读取中";
+

@@ -35,8 +35,9 @@ class TodayViewController: UIViewController, NCWidgetProviding{
             source: self.source ?? [],
             selectAction: { [weak self] num in
                 if let station = self?.userDefault.array(forKey: "staForTodayWidget") {
+                    let stationNo = station.sorted{($0 as! String) < ($1 as! String)}
                     var urlString = "CityBike://?"
-                    urlString += (station[num] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                    urlString += (stationNo[num] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
                     let url: URL = URL(string: urlString)!
                     self?.extensionContext?.open(url, completionHandler: nil)
                 }

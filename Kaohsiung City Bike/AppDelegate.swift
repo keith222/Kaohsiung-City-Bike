@@ -128,6 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             
             let triggerTime = (Int64(NSEC_PER_SEC)*1)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
+                viewController.setMap()
                 viewController.didSelect(url.query!.removingPercentEncoding!)
             })
         }

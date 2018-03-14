@@ -80,7 +80,8 @@ class HomeViewModel {
                     let available = Int((node.at_css("StationNums1")?.text)!)
                     let park = Int((node.at_css("StationNums2")?.text)!)
                     
-                    parks.append(Park(JSON: ["id": id!, "no": no!, "name": name!, "available": available!, "park": park!])!)
+                    
+                    parks.append(Park(JSON: ["id": id!, "no": no!, "name": name!, "available": available ?? 0, "park": park ?? 0])!)
          
                 }
                 
