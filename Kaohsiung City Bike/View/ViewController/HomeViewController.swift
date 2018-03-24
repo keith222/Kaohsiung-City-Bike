@@ -182,7 +182,7 @@ class HomeViewController: UIViewController {
                 annotation.title = (Locale.current.languageCode == "zh") ? element.name : element.englishname
                 annotation.coordinate = CLLocationCoordinate2D(latitude: element.latitude , longitude: element.longitude)
                 annotation.id = element.id
-                annotation.no = element.no
+                annotation.no = element.no                
                 self?.annoArray?.append(annotation)
             }
             
@@ -373,7 +373,10 @@ class HomeViewController: UIViewController {
         HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Loading", comment: "")))
         
         self.homeViewModel.fetchStationInfo(handler: { [weak self] data in
-            guard data.count > 0 else{ return }
+            guard data.count > 0 else{
+                HUD.hide()
+                return
+            }
             
             let source: [HomeViewModel] = data.map({value -> HomeViewModel in
                 return HomeViewModel(data: value)
@@ -386,6 +389,11 @@ class HomeViewController: UIViewController {
                 let bikeSession = ["ava" : source[index!].available!, "unava": source[index!].park!]
                 let session = WCSession.default
                 session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
+            }
+            
+            guard index != nil else {
+                HUD.hide()
+                return                
             }
             
             DispatchQueue.main.async {

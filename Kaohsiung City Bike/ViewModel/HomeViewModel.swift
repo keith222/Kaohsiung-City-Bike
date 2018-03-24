@@ -106,8 +106,10 @@ class HomeViewModel {
                 
                 if oldJson["version"] != newJson!["version"] {
                     do {
-                        try! data.write(to: path)
+                        try data.write(to: path)
                         handler(true)
+                    } catch {
+                        handler(false)
                     }
                 }else{
                     handler(false)
