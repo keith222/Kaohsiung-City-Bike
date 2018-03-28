@@ -182,7 +182,7 @@ class HomeViewController: UIViewController {
                 annotation.title = (Locale.current.languageCode == "zh") ? element.name : element.englishname
                 annotation.coordinate = CLLocationCoordinate2D(latitude: element.latitude , longitude: element.longitude)
                 annotation.id = element.id
-                annotation.no = element.no                
+                annotation.no = element.no
                 self?.annoArray?.append(annotation)
             }
             
