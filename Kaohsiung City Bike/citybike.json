@@ -2979,5 +2979,15 @@
           "latitude": 22.79291,
           "longitude": 120.29933,
           "description": "岡山火車站前，中山北路上"
+        },
+        {
+        "id": 311,
+        "no": "0315",
+        "name": "輕軌真愛碼頭站",
+        "englishname": "LovePier(LRT)",
+        "address": "公園二路與輕軌C11站出入口",
+        "latitude": 22.62,
+        "longitude": 120.289262,
+        "description": "公園二路與輕軌C11站出入口"
         }
 ]
