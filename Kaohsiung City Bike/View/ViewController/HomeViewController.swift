@@ -113,8 +113,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //畫面將要出現時啟動更新位置
         locationManager.startUpdatingLocation()
-        self.addNotificationObserver(name: NSNotification.Name.UIApplicationDidBecomeActive, selector: #selector(self.startStopWatch))
-        self.addNotificationObserver(name: NSNotification.Name.UIApplicationWillResignActive, selector: #selector(self.pauseStopWatch))
+        self.addNotificationObserver(name: UIApplication.didBecomeActiveNotification, selector: #selector(self.startStopWatch))
+        self.addNotificationObserver(name: UIApplication.willResignActiveNotification, selector: #selector(self.pauseStopWatch))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -228,7 +228,7 @@ class HomeViewController: UIViewController {
             let searchableItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
             searchableItemAttributeSet.title = element.name
             searchableItemAttributeSet.contentDescription = (Locale.current.languageCode == "zh") ? element.address : element.englishname
-            searchableItemAttributeSet.thumbnailData = UIImagePNGRepresentation(UIImage(named:"bike-mark-fill")!)
+            searchableItemAttributeSet.thumbnailData = UIImage(named:"bike-mark-fill")!.pngData()
             
             var keywords = [String]()
             keywords.append(element.name)
@@ -307,7 +307,7 @@ class HomeViewController: UIViewController {
         //前往設定APP
         let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .alert)
         alert.addAction(title: NSLocalizedString("SetButton", comment: ""), style: .default, handler: { _ in
-            let url = URL(string: UIApplicationOpenSettingsURLString)
+            let url = URL(string: UIApplication.openSettingsURLString)
             UIApplication.shared.openURL(url!)
         })
         alert.addAction(title: NSLocalizedString("OkButton", comment: ""), style: .default, handler: nil)
@@ -318,7 +318,7 @@ class HomeViewController: UIViewController {
         let oldOverlays = self.mapView.overlays //記錄舊線條
         
         //設定路徑起始與目的地
-        let directionRequest = MKDirectionsRequest()
+        let directionRequest = MKDirections.Request()
         directionRequest.source = .forCurrentLocation()
         let destinationPlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
         directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
@@ -334,7 +334,7 @@ class HomeViewController: UIViewController {
                 return
             }
             let route = response.routes[0] 
-            self?.mapView.add(route.polyline, level: .aboveRoads)
+            self?.mapView.addOverlay(route.polyline, level: .aboveRoads)
             self?.mapView.removeOverlays(oldOverlays)//移除位置更新後的舊線條
             
             let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
@@ -347,7 +347,7 @@ class HomeViewController: UIViewController {
         }
         
         //計算腳踏車行車時間（以Automobile暫代，因Apple Map不提供Bike）
-        let bikeRequest = MKDirectionsRequest()
+        let bikeRequest = MKDirections.Request()
         bikeRequest.source = .forCurrentLocation()
         let bikePlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
         bikeRequest.destination = MKMapItem(placemark: bikePlacemark)
@@ -413,7 +413,7 @@ class HomeViewController: UIViewController {
         let second = count%60
         let minute = (count/60)%60
         let hour = Int(count/3600)
-        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), for: UIControlState())
+        self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), for: UIControl.State())
     }
     
     @objc func pauseStopWatch(){
@@ -461,7 +461,7 @@ class HomeViewController: UIViewController {
         //spendInfo滑下動畫
         self.spendInfo.isHidden = false
         self.resultButtonOutlet.isHidden = false
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.spendInfo.transform = CGAffineTransform(translationX: 0,y: 0)
             self.resultButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
         },completion: nil)
@@ -491,7 +491,7 @@ class HomeViewController: UIViewController {
 
     @IBAction func timeButton(_ sender: AnyObject) {
         if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
-            self.timeButtonOutlet.setTitle("00:00:00", for: UIControlState())
+            self.timeButtonOutlet.setTitle("00:00:00", for: UIControl.State())
             
             self.stopWatch = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
             self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
@@ -521,7 +521,7 @@ class HomeViewController: UIViewController {
         }else{//結束計時
             self.stopWatch.invalidate()
             self.stopWatch = nil
-            self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), for: UIControlState())
+            self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), for: UIControl.State())
             self.timeButtonOutlet.backgroundColor = UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1)
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
             self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
@@ -626,8 +626,7 @@ extension HomeViewController: MKMapViewDelegate {
         
         //filter annotation in map rect
         let existAnnotation = annoArray?.filter({ (annotation) in
-            MKMapRectContainsPoint(
-                self.mapView.visibleMapRect, MKMapPointForCoordinate(annotation.coordinate)
+            self.mapView.visibleMapRect.contains(MKMapPoint.init(annotation.coordinate)
                 )
                 &&
                 !self.mapView.annotations.contains{$0.isEqual(annotation)}
@@ -681,7 +680,7 @@ extension HomeViewController: MKMapViewDelegate {
                     //infoview滑下及timeButton滑上動畫
                     self.infoView.isHidden = false
                     self.timeButtonOutlet.isHidden = false
-                    UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
                         self.infoView.transform = CGAffineTransform(translationX: 0,y: 0)
                         self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
                     },completion: nil)
@@ -690,7 +689,7 @@ extension HomeViewController: MKMapViewDelegate {
                 }
             }else{
                 self.customInfo.isHidden = false
-                UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
                     self.customInfo.transform = CGAffineTransform(translationX: 0,y: 0)
                     self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
                 },completion: nil)

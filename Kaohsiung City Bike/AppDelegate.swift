@@ -19,12 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
-        UIApplication.shared.statusBarStyle = .lightContent
         //UINavigationBar.appearance().barTintColor = UIColor(hexString: "#17A9AE")
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         if #available(iOS 11.0, *) {
             UISearchBar.appearance().tintColor = .white
@@ -112,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         print(userInfo)
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let navigatorController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
@@ -135,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         return true
     }
     
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         let viewController = (window?.rootViewController as? UINavigationController)?.viewControllers[0] as! HomeViewController
         print(userActivity.userInfo ?? "no anything")
         viewController.restoreUserActivityState(userActivity)
@@ -184,7 +183,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 
 extension AppDelegate : MessagingDelegate {
     // [START refresh_token]
-    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
     }
     

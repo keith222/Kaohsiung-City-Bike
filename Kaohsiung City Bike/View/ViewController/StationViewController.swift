@@ -77,7 +77,7 @@ class StationViewController: SearchViewController{
 
         //set tableview cell self-sizing
         self.stationTableView.estimatedRowHeight = 70.0
-        self.stationTableView.rowHeight = UITableViewAutomaticDimension
+        self.stationTableView.rowHeight = UITableView.automaticDimension
         
         //no title back button
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

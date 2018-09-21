@@ -29,8 +29,6 @@
 		534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962921BE07BE700BFFD71 /* AppDelegate.swift */; };
 		534962981BE07BE700BFFD71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534962961BE07BE700BFFD71 /* Main.storyboard */; };
 		5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534962991BE07BE700BFFD71 /* Assets.xcassets */; };
-		534962A81BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */; };
-		534962B31BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */; };
 		534962C31BE39D6600BFFD71 /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
 		534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */; };
 		536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
@@ -71,20 +69,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		534962A41BE07BE700BFFD71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5349628E1BE07BE700BFFD71;
-			remoteInfo = "Kaohsiung City Bike";
-		};
-		534962AF1BE07BE700BFFD71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5349628E1BE07BE700BFFD71;
-			remoteInfo = "Kaohsiung City Bike";
-		};
 		537EE0ED1C0B35BB008501B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 534962871BE07BE700BFFD71 /* Project object */;
@@ -173,12 +157,6 @@
 		534962921BE07BE700BFFD71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534962971BE07BE700BFFD71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		534962991BE07BE700BFFD71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaohsiung City BikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaohsiung_City_BikeTests.swift; sourceTree = "<group>"; };
-		534962A91BE07BE700BFFD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaohsiung City BikeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaohsiung_City_BikeUITests.swift; sourceTree = "<group>"; };
-		534962B41BE07BE700BFFD71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534962C01BE3719400BFFD71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		534962C21BE39D6600BFFD71 /* citybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citybike.json; sourceTree = "<group>"; };
 		534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
@@ -256,20 +234,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		534962A01BE07BE700BFFD71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962AB1BE07BE700BFFD71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		537EE0E81C0B35BB008501B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,8 +273,6 @@
 				53E42D161D436EB0004B9B98 /* Info.plist */,
 				53B362A81CC4CA39003CF0E7 /* Frameworks */,
 				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
-				534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
-				534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
 				537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
 				537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
 				53B362AB1CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */,
@@ -323,8 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */,
-				534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */,
-				534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */,
 				537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */,
 				537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */,
 				53B362A71CC4CA39003CF0E7 /* Kaohsiung CityBike Widget.appex */,
@@ -351,24 +311,6 @@
 				53B2D5A71F2783E90048CFFC /* ViewModel */,
 			);
 			path = "Kaohsiung City Bike";
-			sourceTree = "<group>";
-		};
-		534962A61BE07BE700BFFD71 /* Kaohsiung City BikeTests */ = {
-			isa = PBXGroup;
-			children = (
-				534962A71BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift */,
-				534962A91BE07BE700BFFD71 /* Info.plist */,
-			);
-			path = "Kaohsiung City BikeTests";
-			sourceTree = "<group>";
-		};
-		534962B11BE07BE700BFFD71 /* Kaohsiung City BikeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				534962B21BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift */,
-				534962B41BE07BE700BFFD71 /* Info.plist */,
-			);
-			path = "Kaohsiung City BikeUITests";
 			sourceTree = "<group>";
 		};
 		537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */ = {
@@ -525,42 +467,6 @@
 			productReference = 5349628F1BE07BE700BFFD71 /* Kaohsiung City Bike.app */;
 			productType = "com.apple.product-type.application";
 		};
-		534962A21BE07BE700BFFD71 /* Kaohsiung City BikeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 534962BA1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeTests" */;
-			buildPhases = (
-				5349629F1BE07BE700BFFD71 /* Sources */,
-				534962A01BE07BE700BFFD71 /* Frameworks */,
-				534962A11BE07BE700BFFD71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				534962A51BE07BE700BFFD71 /* PBXTargetDependency */,
-			);
-			name = "Kaohsiung City BikeTests";
-			productName = "Kaohsiung City BikeTests";
-			productReference = 534962A31BE07BE700BFFD71 /* Kaohsiung City BikeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		534962AD1BE07BE700BFFD71 /* Kaohsiung City BikeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 534962BD1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeUITests" */;
-			buildPhases = (
-				534962AA1BE07BE700BFFD71 /* Sources */,
-				534962AB1BE07BE700BFFD71 /* Frameworks */,
-				534962AC1BE07BE700BFFD71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				534962B01BE07BE700BFFD71 /* PBXTargetDependency */,
-			);
-			name = "Kaohsiung City BikeUITests";
-			productName = "Kaohsiung City BikeUITests";
-			productReference = 534962AE1BE07BE700BFFD71 /* Kaohsiung City BikeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 537EE1041C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp" */;
@@ -625,13 +531,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Yang Tun-Kai";
 				TargetAttributes = {
 					5349628E1BE07BE700BFFD71 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -648,19 +554,6 @@
 							};
 						};
 					};
-					534962A21BE07BE700BFFD71 = {
-						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5349628E1BE07BE700BFFD71;
-					};
-					534962AD1BE07BE700BFFD71 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5349628E1BE07BE700BFFD71;
-					};
 					537EE0DE1C0B35BB008501B0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 8MREJM6257;
@@ -675,7 +568,7 @@
 					537EE0EA1C0B35BB008501B0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -688,7 +581,7 @@
 					53B362A61CC4CA39003CF0E7 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -715,8 +608,6 @@
 			projectRoot = "";
 			targets = (
 				5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */,
-				534962A21BE07BE700BFFD71 /* Kaohsiung City BikeTests */,
-				534962AD1BE07BE700BFFD71 /* Kaohsiung City BikeUITests */,
 				537EE0DE1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
 				537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
 				53B362A61CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */,
@@ -739,20 +630,6 @@
 				534962C31BE39D6600BFFD71 /* citybike.json in Resources */,
 				5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */,
 				534962981BE07BE700BFFD71 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962A11BE07BE700BFFD71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962AC1BE07BE700BFFD71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +680,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
@@ -815,6 +693,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
@@ -992,22 +871,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5349629F1BE07BE700BFFD71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				534962A81BE07BE700BFFD71 /* Kaohsiung_City_BikeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		534962AA1BE07BE700BFFD71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				534962B31BE07BE700BFFD71 /* Kaohsiung_City_BikeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		537EE0E71C0B35BB008501B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1036,16 +899,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		534962A51BE07BE700BFFD71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */;
-			targetProxy = 534962A41BE07BE700BFFD71 /* PBXContainerItemProxy */;
-		};
-		534962B01BE07BE700BFFD71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5349628E1BE07BE700BFFD71 /* Kaohsiung City Bike */;
-			targetProxy = 534962AF1BE07BE700BFFD71 /* PBXContainerItemProxy */;
-		};
 		537EE0EE1C0B35BB008501B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 537EE0EA1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */;
@@ -1156,12 +1009,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1212,12 +1067,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1267,8 +1124,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f792b694-fdef-4d96-a275-31543b0cf6b4";
 				PROVISIONING_PROFILE_SPECIFIER = "Developement-CityBike";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1289,73 +1145,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c20c9db2-51a8-47ff-8f24-807fbe011bdb";
 				PROVISIONING_PROFILE_SPECIFIER = Sparkrs.CityBike;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		534962BB1BE07BE700BFFD71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8MREJM6257;
-				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
-			};
-			name = Debug;
-		};
-		534962BC1BE07BE700BFFD71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8MREJM6257;
-				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
-			};
-			name = Release;
-		};
-		534962BE1BE07BE700BFFD71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = "Kaohsiung City Bike";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		534962BF1BE07BE700BFFD71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = "Kaohsiung City Bike";
-				USES_XCTRUNNER = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1424,8 +1214,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Development-CityBike-watchapp-extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1448,8 +1237,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = Sparkrs.CityBike.Watchapp.watchextension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1468,12 +1256,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1521,42 +1311,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "531fd75c-ddf7-494d-842c-57739c6c52d1";
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs-CityBike-Ad-hoc";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = "Ad-Hoc";
-		};
-		5383341E1D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Kaohsiung City BikeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaohsiung City Bike.app/Kaohsiung City Bike";
-			};
-			name = "Ad-Hoc";
-		};
-		5383341F1D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Kaohsiung City BikeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkr.Kaohsiung-City-BikeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = "Kaohsiung City Bike";
-				USES_XCTRUNNER = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = "Ad-Hoc";
 		};
@@ -1601,8 +1356,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.watchkitextension.Ad-hoc";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1625,8 +1379,7 @@
 				PROVISIONING_PROFILE = "751c1207-0bb5-471b-bac8-ef34acce573f";
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.City.Widget.Ad-hoc";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = "Ad-Hoc";
 		};
@@ -1647,8 +1400,7 @@
 				PROVISIONING_PROFILE = "0e695ad0-fd8a-4bf3-b809-bfc60b0b2349";
 				PROVISIONING_PROFILE_SPECIFIER = "Development-CityBike-widget";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1669,8 +1421,7 @@
 				PROVISIONING_PROFILE = "b5e57b83-327e-45b9-8715-5277e7dfb32a";
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1693,26 +1444,6 @@
 				534962B81BE07BE700BFFD71 /* Debug */,
 				534962B91BE07BE700BFFD71 /* Release */,
 				5383341D1D68A2D200D7F654 /* Ad-Hoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		534962BA1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				534962BB1BE07BE700BFFD71 /* Debug */,
-				534962BC1BE07BE700BFFD71 /* Release */,
-				5383341E1D68A2D200D7F654 /* Ad-Hoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		534962BD1BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City BikeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				534962BE1BE07BE700BFFD71 /* Debug */,
-				534962BF1BE07BE700BFFD71 /* Release */,
-				5383341F1D68A2D200D7F654 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -61,10 +61,10 @@ class TodayViewController: UIViewController, NCWidgetProviding{
     private func setUp() {
         self.todayTableView.isHidden = true
         self.todayTableView.estimatedRowHeight = 56
-        self.todayTableView.rowHeight = UITableViewAutomaticDimension
+        self.todayTableView.rowHeight = UITableView.automaticDimension
         self.todayTableView.cellLayoutMarginsFollowReadableWidth = false
         self.todayTableView.tableFooterView = UIView(frame: .zero)
-        self.todayTableView.separatorInset = UIEdgeInsetsMake(0, 55, 0, 1)
+        self.todayTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 55, bottom: 0, right: 1)
         self.todayTableView.separatorColor = .blue
         
         self.defaultButton.setTitle(NSLocalizedString("Notification_Set", comment: ""), for: .normal)

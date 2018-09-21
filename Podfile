@@ -12,7 +12,7 @@ target 'Kaohsiung City Bike' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'SwiftyJSON'
-  pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
+  pod 'Kanna', '~> 4.0.0'
 
   #Pods about UI
   pod 'PKHUD', '~> 5.0'
@@ -38,5 +38,5 @@ target 'Kaohsiung CityBike Widget' do
     pod 'Alamofire'
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
-    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
+    pod 'Kanna', '~> 4.0.0'
 end
