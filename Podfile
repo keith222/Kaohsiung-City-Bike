@@ -15,7 +15,7 @@ target 'Kaohsiung City Bike' do
   pod 'Kanna', '~> 4.0.0'
 
   #Pods about UI
-  pod 'PKHUD', '~> 5.0'
+  pod 'PKHUD'
  
   #Google Firebase  
   pod 'Firebase/Core'

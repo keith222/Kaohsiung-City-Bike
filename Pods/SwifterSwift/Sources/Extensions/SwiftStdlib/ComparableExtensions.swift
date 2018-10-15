@@ -8,6 +8,7 @@
 
 // MARK: - Methods
 public extension Comparable {
+
     /// SwifterSwift: Returns true if value is in the provided range.
     ///
     ///    1.isBetween(5...7) // false
@@ -38,4 +39,5 @@ public extension Comparable {
     public func clamped(to range: ClosedRange<Self>) -> Self {
         return max(range.lowerBound, min(self, range.upperBound))
     }
+
 }

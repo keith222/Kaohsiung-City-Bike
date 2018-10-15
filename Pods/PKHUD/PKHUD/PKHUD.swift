@@ -59,7 +59,7 @@ open class PKHUD: NSObject {
         #if swift(>=4.2)
         let notificationName = UIApplication.willEnterForegroundNotification
         #else
-        let notificationName = NSNotification.Name.UIApplicationWillEnterForeground
+        let notificationName = UIApplication.willEnterForegroundNotification
         #endif
 
         NotificationCenter.default.addObserver(self,
@@ -118,6 +118,10 @@ open class PKHUD: NSObject {
         }
     }
 
+    open var leadingMargin: CGFloat = 0
+
+    open var trailingMargin: CGFloat = 0
+
     open func show(onView view: UIView? = nil) {
         let view: UIView = view ?? viewToPresentOn ?? UIApplication.shared.keyWindow!
         if  !view.subviews.contains(container) {
@@ -134,7 +138,11 @@ open class PKHUD: NSObject {
         // If the grace time is set, postpone the HUD display
         if gracePeriod > 0.0 {
             let timer = Timer(timeInterval: gracePeriod, target: self, selector: #selector(PKHUD.handleGraceTimer(_:)), userInfo: nil, repeats: false)
-            RunLoop.current.add(timer, forMode: .commonModes)
+            #if swift(>=4.2)
+            RunLoop.current.add(timer, forMode: .common)
+            #else
+            RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
+            #endif
             graceTimer = timer
         } else {
             showContent()

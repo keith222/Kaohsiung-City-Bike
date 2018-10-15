@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BAF4CEDF48AFF65E708D5EEE186E177"
+               BlueprintIdentifier = "027AB622F6C8C073926B69792C8CEB90"
                BuildableName = "PKHUD.framework"
                BlueprintName = "PKHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5BAF4CEDF48AFF65E708D5EEE186E177"
+            BlueprintIdentifier = "027AB622F6C8C073926B69792C8CEB90"
             BuildableName = "PKHUD.framework"
             BlueprintName = "PKHUD"
             ReferencedContainer = "container:Pods.xcodeproj">

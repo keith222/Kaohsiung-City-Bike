@@ -6,7 +6,9 @@
 //  Copyright © 2018 SwifterSwift
 //
 
+#if canImport(Foundation)
 import Foundation
+#endif
 
 public extension Sequence {
 
@@ -155,6 +157,7 @@ public extension Sequence {
         }
         return singleElement
     }
+
 }
 
 public extension Sequence where Element: Equatable {
@@ -193,6 +196,7 @@ public extension Sequence where Element: Hashable {
         }
         return false
     }
+
 }
 
 // MARK: - Methods (Numeric)

@@ -6,13 +6,12 @@
 //  Copyright © 2018 SwifterSwift
 //
 
-#if canImport(UIKit)
-    import UIKit
-#if !os(watchOS)
+#if canImport(UIKit) && !os(watchOS)
+import UIKit
 
 // MARK: - Methods
 public extension UIScrollView {
-    //Original Source: https://gist.github.com/thestoics/1204051
+
     /// SwifterSwift: Takes a snapshot of an entire ScrollView
     ///
     ///    AnySubclassOfUIScroolView().snapshot
@@ -20,6 +19,7 @@ public extension UIScrollView {
     ///
     /// - Returns: Snapshot as UIimage for rendered ScrollView
     public var snapshot: UIImage? {
+        // Original Source: https://gist.github.com/thestoics/1204051
         UIGraphicsBeginImageContextWithOptions(contentSize, false, 0)
         defer {
             UIGraphicsEndImageContext()
@@ -32,7 +32,4 @@ public extension UIScrollView {
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
-
-#endif
-
 #endif

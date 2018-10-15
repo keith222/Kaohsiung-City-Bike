@@ -2986,8 +2986,18 @@
         "name": "輕軌真愛碼頭站",
         "englishname": "LovePier(LRT)",
         "address": "公園二路與輕軌C11站出入口",
-        "latitude": 22.62,
-        "longitude": 120.289262,
+        "latitude": 22.619799,
+        "longitude": 120.288904,
         "description": "公園二路與輕軌C11站出入口"
+        },
+        {
+        "id": 312,
+        "no": "0316",
+        "name": "輕軌前鎮之星站",
+        "englishname": "CianjhenStar(LRT)",
+        "address": "捷運凱旋站1號出口旁人行道,中山三路上",
+        "latitude": 22.59634,
+        "longitude": 120.31537,
+        "description": "捷運凱旋站1號出口旁人行道,中山三路上"
         }
 ]

@@ -6,10 +6,10 @@
 //  Copyright © 2018 SwifterSwift
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
-#if os(iOS)
+// MARK: - Methods
 public extension UIWindow {
 
     /// SwifterSwift: Switch current root view controller with a new view controller.
@@ -24,7 +24,7 @@ public extension UIWindow {
         to viewController: UIViewController,
         animated: Bool = true,
         duration: TimeInterval = 0.5,
-        options: UIViewAnimationOptions = .transitionFlipFromRight,
+        options: UIView.AnimationOptions = .transitionFlipFromRight,
         _ completion: (() -> Void)? = nil) {
 
         guard animated else {
@@ -44,5 +44,4 @@ public extension UIWindow {
     }
 
 }
-#endif
 #endif
