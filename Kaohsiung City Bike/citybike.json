@@ -32,12 +32,12 @@
         {
           "id": 5,
           "no": "0005",
-          "name": "漁人碼頭站",
-          "englishname": "Fisherman'sWharf",
-          "address": "高雄市鹽埕區七賢三路高雄港務警察局對面",
-          "latitude": 22.618799,
-          "longitude": 120.278621,
-          "description": "七賢三路底高雄港務警察局對面"
+          "name": "棧貳庫站",
+          "englishname": "KaoshiungPortWarehouseNo.2",
+          "address": "棧貳庫站外停車場",
+          "latitude": 22.618946,
+          "longitude": 120.2778,
+          "description": "棧貳庫站外停車場"
         },
         {
           "id": 6,
