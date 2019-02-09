@@ -95,7 +95,7 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
             self.navigationItem.rightBarButtonItem = self.searchButton
             self.navigationItem.titleView = nil
         }
-        filterContentForSearchText("")
+//        filterContentForSearchText("")
     }
     
     func filterContentForSearchText(_ searchText: String){}

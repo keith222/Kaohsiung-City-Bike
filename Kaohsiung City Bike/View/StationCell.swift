@@ -80,8 +80,6 @@ class StationCell: UITableViewCell, ReactiveView {
         }
         
         sender.isSelected = !sender.isSelected
-    
-        
     }
 
     private func showAlert(with title: String, message: String) {
