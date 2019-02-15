@@ -1,2986 +1,2976 @@
 [
-        {
-          "id": 1,
-          "no": "0001",
-          "name": "蓮池潭站",
-          "englishname": "LotusPond",
-          "address": "高雄市左營區環潭路蓮池潭風景區管理所後方入口處",
-          "latitude": 22.680599,
-          "longitude": 120.297466,
-          "description": "蓮池潭環潭路-停車場"
-        },
-        {
-          "id": 2,
-          "no": "0002",
-          "name": "鳳山火車站",
-          "englishname": "FengshanStation",
-          "address": "高雄市鳳山區曹公路與協和路交叉口",
-          "latitude": 22.630663,
-          "longitude": 120.357928,
-          "description": "曹公路與協和路交叉口"
-        },
-        {
-          "id": 3,
-          "no": "0003",
-          "name": "美麗島站",
-          "englishname": "FormosaBoulevard(MRT)",
-          "address": "高雄市前金區六合二路",
-          "latitude": 22.632193347424834,
-          "longitude": 120.30173599720001,
-          "description": "O5R10美麗島站 9號出口"
-        },
-        {
-          "id": 5,
-          "no": "0005",
-          "name": "棧貳庫站",
-          "englishname": "KaoshiungPortWarehouseNo.2",
-          "address": "棧貳庫站外停車場",
-          "latitude": 22.618946,
-          "longitude": 120.2778,
-          "description": "棧貳庫站外停車場"
-        },
-        {
-          "id": 6,
-          "no": "0006",
-          "name": "西子灣站",
-          "englishname": "Sizihwan(MRT)",
-          "address": "高雄市鼓山區鼓山一路",
-          "latitude": 22.622260627731624,
-          "longitude": 120.27546644210815,
-          "description": "O1西子灣站 2號出口"
-        },
-        {
-          "id": 7,
-          "no": "0007",
-          "name": "高雄電影館站",
-          "englishname": "KaohsiungFilmArchive",
-          "address": "高雄市盬埕區下水道展示館前",
-          "latitude": 22.62257258348331,
-          "longitude": 120.2891618013382,
-          "description": "電影圖書館旁下水道展示館前自行車道休息區"
-        },
-        {
-          "id": 8,
-          "no": "0008",
-          "name": "市議會(舊址)站",
-          "englishname": "CityCouncilFormerSite(MRT)",
-          "address": "高雄市前金區中華三路與中正四路口",
-          "latitude": 22.629470090910246,
-          "longitude": 120.29563128948212,
-          "description": "O4市議會站 4號出口"
-        },
-        {
-          "id": 9,
-          "no": "0009",
-          "name": "中央公園站",
-          "englishname": "CentralPark(MRT)",
-          "address": "高雄市前金區中山二路",
-          "latitude": 22.623751076601955,
-          "longitude": 120.30080795288086,
-          "description": "R9中央公園站"
-        },
-        {
-          "id": 10,
-          "no": "0010",
-          "name": "獅甲站",
-          "englishname": "Shihjia(MRT)",
-          "address": "高雄市前鎮區中山三路勞工公園",
-          "latitude": 22.605800244407053,
-          "longitude": 120.30856490135193,
-          "description": "R7獅甲站 2號出口"
-        },
-        {
-          "id": 11,
-          "no": "0011",
-          "name": "市府四維站",
-          "englishname": "CityGovernment-SihweiAdministrationCenter",
-          "address": "高雄市苓雅區四維三路與永定街口",
-          "latitude": 22.619958075292246,
-          "longitude": 120.31145095825195,
-          "description": "苓雅區四維三路2號"
-        },
-        {
-          "id": 12,
-          "no": "0012",
-          "name": "文化師大站",
-          "englishname": "NationalKaohsiungNormalUniversity",
-          "address": "高雄市苓雅區和平一路文化中心旁",
-          "latitude": 22.625204,
-          "longitude": 120.319704,
-          "description": "文化中心東南角、高師大對面"
-        },
-        {
-          "id": 13,
-          "no": "0013",
-          "name": "衛武營站",
-          "englishname": "Weiwuying(MRT)",
-          "address": "高雄市苓雅區中正一路與建軍路口",
-          "latitude": 22.624937,
-          "longitude": 120.341108,
-          "description": "衛武營站"
-        },
-        {
-          "id": 14,
-          "no": "0015",
-          "name": "新興區公所站",
-          "englishname": "SinsingDistrictOffice",
-          "address": "高雄市新興區錦田路",
-          "latitude": 22.63099512120638,
-          "longitude": 120.31023323535919,
-          "description": "O6信義國小站 1號出口"
-        },
-        {
-          "id": 15,
-          "no": "0016",
-          "name": "後火車站",
-          "englishname": "RearofRailStation",
-          "address": "高雄市三民區九如二路",
-          "latitude": 22.641105445967362,
-          "longitude": 120.30279278755188,
-          "description": "R11火車站 後火車站出口"
-        },
-        {
-          "id": 16,
-          "no": "0017",
-          "name": "後驛站",
-          "englishname": "Houyi(MRT)",
-          "address": "高雄市三民區博愛一路",
-          "latitude": 22.648180250289816,
-          "longitude": 120.30351161956787,
-          "description": "R12後驛站 2號出口"
-        },
-        {
-          "id": 17,
-          "no": "0018",
-          "name": "凹仔底站",
-          "englishname": "Aozihdi(MRT)",
-          "address": "高雄市鼓山區博愛二路",
-          "latitude": 22.658611084805095,
-          "longitude": 120.30269086360931,
-          "description": "R13凹仔底站 4號出口"
-        },
-        {
-          "id": 18,
-          "no": "0019",
-          "name": "生態園區站",
-          "englishname": "EcologicalDistrict(MRT)",
-          "address": "高雄市左營區博愛三路",
-          "latitude": 22.676995542475076,
-          "longitude": 120.30648350715637,
-          "description": "R15生態園區站 2號出口"
-        },
-        {
-          "id": 20,
-          "no": "0021",
-          "name": "三多站",
-          "englishname": "SanduoShoppingDistrict(MRT)",
-          "address": "高雄市苓雅區中山二路與三多三路圓環處",
-          "latitude": 22.614347608684472,
-          "longitude": 120.30465960502625,
-          "description": "R8三多商圈站 5號出口"
-        },
-        {
-          "id": 21,
-          "no": "0022",
-          "name": "巨蛋站",
-          "englishname": "KaohsiungArena(MRT)",
-          "address": "高雄市左營區博愛二路",
-          "latitude": 22.665981993881495,
-          "longitude": 120.30310928821564,
-          "description": "R14巨蛋站 1號出口"       
-        },
-        {
-          "id": 22,
-          "no": "0023",
-          "name": "民生圓環站",
-          "englishname": "MinshengRoundabout",
-          "address": "新興區榮治里中山一路距民生一路30米處",
-          "latitude": 22.627638051622682,
-          "longitude": 120.30126392841339,
-          "description": "民生圓環（民生一路與中山一路，近美利達）"
-        },
-        {
-          "id": 23,
-          "no": "0024",
-          "name": "民生民權站",
-          "englishname": "MinshengMingcheng",
-          "address": "苓雅區德生里民權一路與民生一路東南側人行道上",
-          "latitude": 22.627251834818622,
-          "longitude": 120.31089842319489,
-          "description": "民權一路與民生一路東南側人行道上"
-        },
-        {
-          "id": 24,
-          "no": "0025",
-          "name": "七賢忠孝站",
-          "englishname": "Cisianjhongsiao",
-          "address": "新興區成功里七賢一路距忠孝一路50米處",
-          "latitude": 22.634203571250502,
-          "longitude": 120.30589878559113,
-          "description": "中華電信總局"
-        },
-        {
-          "id": 25,
-          "no": "0026",
-          "name": "凱旋站",
-          "englishname": "Kaisyuan(MRT)",
-          "address": "高雄市前鎮區中山三路與時代大道口",
-          "latitude": 22.598782689245358,
-          "longitude": 120.31339287757874,
-          "description": "R6凱旋站 3號出口"
-        },
-        {
-          "id": 26,
-          "no": "0027",
-          "name": "技擊館站",
-          "englishname": "MartialArtsStadium(MRT)",
-          "address": "高雄市苓雅區中正一路",
-          "latitude": 22.627368,
-          "longitude": 120.333654,
-          "description": "O9捷運 2號出口"
-        },
-        {
-          "id": 27,
-          "no": "0028",
-          "name": "新光中山站",
-          "englishname": "SinguangZhongshan",
-          "address": "高雄市前鎮區中山二路與新光路口",
-          "latitude": 22.611980547065592,
-          "longitude": 120.30495464801788,
-          "description": "R8三多站 2號出口"
-        },
-        {
-          "id": 28,
-          "no": "0029",
-          "name": "五塊厝站",
-          "englishname": "Wukuaicuo(MRT)",
-          "address": "高雄市苓雅區中正一路",
-          "latitude": 22.628955141793917,
-          "longitude": 120.32898724079132,
-          "description": "O8五塊厝 4號出口"
-        },
-        {
-          "id": 29,
-          "no": "0030",
-          "name": "市警局站",
-          "englishname": "KaohsiungCityGovernmentPoliceBureau",
-          "address": "前金區中正四路與市中一路(市警局前)",
-          "latitude": 22.62771232396059,
-          "longitude": 120.29067993164062,
-          "description": "高雄市政府警察局"
-        },
-        {
-          "id": 30,
-          "no": "0031",
-          "name": "明誠光興站",
-          "englishname": "MingchengGuangsing",
-          "address": "左營區明誠二路距光興街口52米處",
-          "latitude": 22.660912989455902,
-          "longitude": 120.31067848205566,
-          "description": "近明誠路光興路"
-        },
-        {
-          "id": 31,
-          "no": "0032",
-          "name": "家樂福愛河站",
-          "englishname": "CarrefourLoveRiverStore",
-          "address": "三民區河東路距河北二路約72米處",
-          "latitude": 22.633975813377926,
-          "longitude": 120.28585195541382,
-          "description": "愛河家樂福"
-        },
-        {
-          "id": 32,
-          "no": "0033",
-          "name": "愛河之心站",
-          "englishname": "HeartofLoveRiver",
-          "address": "三民區博愛一路距同盟一路約80米處",
-          "latitude": 22.65225960789147,
-          "longitude": 120.30389249324799,
-          "description": "愛河之心"
-        },
-        {
-          "id": 33,
-          "no": "0034",
-          "name": "高雄醫學大學站",
-          "englishname": "KaohsiungMedicalUniversity",
-          "address": "高雄市三民區同盟一路(高醫大學大門旁)",
-          "latitude": 22.64921,
-          "longitude": 120.309919,
-          "description": "高雄醫學大學大門旁"
-        },
-        {
-          "id": 34,
-          "no": "0035",
-          "name": "新光成功站",
-          "englishname": "SinguangZhengkong",
-          "address": "高雄市前鎮區成功二路距新光路18米處",
-          "latitude": 22.610202748062417,
-          "longitude": 120.29934346675873,
-          "description": "新光公園（新光路成功路口）"
-        },
-        {
-          "id": 35,
-          "no": "0036",
-          "name": "夢時代站",
-          "englishname": "DreamMall",
-          "address": "高雄市前鎮區成功二路與時代大道口東北側",
-          "latitude": 22.595860665927464,
-          "longitude": 120.30492782592773,
-          "description": "統一阪急前方草坪(時代大道與成功路口)"
-        },
-        {
-          "id": 36,
-          "no": "0037",
-          "name": "裕誠辛亥站",
-          "englishname": "YuchengXinhai",
-          "address": "左營區裕誠路與辛亥路辛亥停車場旁",
-          "latitude": 22.664694959713724,
-          "longitude": 120.3101795911789,
-          "description": "辛亥停車場"
-        },
-        {
-          "id": 37,
-          "no": "0038",
-          "name": "文化中正站",
-          "englishname": "CulturalCenter(MRT)",
-          "address": "高雄市苓雅區和平一路與中正一路口",
-          "latitude": 22.629767176061296,
-          "longitude": 120.31825304031372,
-          "description": "O7文化中心站 3號出口"
-        },
-        {
-          "id": 39,
-          "no": "0040",
-          "name": "光華公園站",
-          "englishname": "GuanghuaPark",
-          "address": "前鎮區民裕街與一心一路口",
-          "latitude": 22.608548730588577,
-          "longitude": 120.31643450260162,
-          "description": "光華公園（一心路光華路口）"
-        },
-        {
-          "id": 40,
-          "no": "0041",
-          "name": "民權公園站",
-          "englishname": "MincyuanPark",
-          "address": "前鎮區民權二路與二聖二路民權公園旁",
-          "latitude": 22.613619667293644,
-          "longitude": 120.31397759914398,
-          "description": "民權公園"
-        },
-        {
-          "id": 41,
-          "no": "0042",
-          "name": "國賓飯店站",
-          "englishname": "AmbassadorHotel",
-          "address": "前金區河東路與民生二路國賓飯店旁",
-          "latitude": 22.624053125732924,
-          "longitude": 120.2904063463211,
-          "description": "國賓飯店西側，河東路民生路"
-        },
-        {
-          "id": 42,
-          "no": "0043",
-          "name": "鹽埕埔站",
-          "englishname": "Yanchengpu(MRT)",
-          "address": "鹽埕區大勇路",
-          "latitude": 22.62258743850145,
-          "longitude": 120.28315901756287,
-          "description": "O1鹽埕埔站 1號出口"
-        },
-        {
-          "id": 43,
-          "no": "0044",
-          "name": "家樂福成功站",
-          "englishname": "CarrefourZhengKongStore",
-          "address": "前鎮區中華五路與復興三路家樂福前",
-          "latitude": 22.605002925530105,
-          "longitude": 120.30487954616547,
-          "description": "家樂福成功店"
-        },
-        {
-          "id": 44,
-          "no": "0045",
-          "name": "高雄女中站",
-          "englishname": "KaohsiungGirls'SeniorHighSchool",
-          "address": "前金區五福三路高雄女中前",
-          "latitude": 22.620789969654606,
-          "longitude": 120.29359817504883,
-          "description": "高雄女中前"
-        },
-        {
-          "id": 45,
-          "no": "0046",
-          "name": "中山大學站",
-          "englishname": "NationalSunYat-SenUniversity",
-          "address": "中山大學內",
-          "latitude": 22.624337,
-          "longitude": 120.26566,
-          "description": "中山大學行政大樓門口"
-        },
-        {
-          "id": 46,
-          "no": "0047",
-          "name": "科工館站",
-          "englishname": "NationalScienceandTechnologyMuseum",
-          "address": "三民區九如一路科工館前",
-          "latitude": 22.639877591172358,
-          "longitude": 120.32280743122101,
-          "description": "科工館大門"
-        },
-        {
-          "id": 47,
-          "no": "0048",
-          "name": "華榮公園站",
-          "englishname": "HuarongPark",
-          "address": "鼓山區文信路與華榮路口華榮公園旁",
-          "latitude": 22.664363298952562,
-          "longitude": 120.29687583446503,
-          "description": "華榮公園"
-        },
-        {
-          "id": 48,
-          "no": "0049",
-          "name": "森林公園站",
-          "englishname": "AozihdiForestPark",
-          "address": "鼓山區神農路與龍勝路口",
-          "latitude": 22.657992286648,
-          "longitude": 120.29633402824402,
-          "description": "凹子底森林公園"
-        },
-        {
-          "id": 49,
-          "no": "0050",
-          "name": "美術館藝片天站",
-          "englishname": "KaohsiungMuseumofFineArt",
-          "address": "高雄市鼓山區美術東一路(中華藝術學校後面)",
-          "latitude": 22.655918,
-          "longitude": 120.289135,
-          "description": "美術東一路(中華藝術學校後面)"
-        },
-        {
-          "id": 50,
-          "no": "0051",
-          "name": "大東文化藝術中心站-02",
-          "englishname": "Da-DongArtCenter-02",
-          "address": "高雄市鳳山區光遠路",
-          "latitude": 22.625133,
-          "longitude": 120.362708,
-          "description": "O13大東站 2號出口"
-        },
-        {
-          "id": 51,
-          "no": "0052",
-          "name": "大東文化藝術中心站-01",
-          "englishname": "Da-DongArtCenter-01",
-          "address": "高雄市鳳山區光遠路",
-          "latitude": 22.625063,
-          "longitude": 120.363416,
-          "description": "O13大東站 1號出口對面"
-        },
-        {
-          "id": 52,
-          "no": "0053",
-          "name": "捷運鳳山站",
-          "englishname": "Fongshan(MRT)",
-          "address": "高雄市鳳山區光遠路",
-          "latitude": 22.62594,
-          "longitude": 120.355828,
-          "description": "O12鳳山站 1號出口"
-        },
-        {
-          "id": 53,
-          "no": "0054",
-          "name": "鳳凌廣場站",
-          "englishname": "FonglingPlaza",
-          "address": "鳳凌廣場左邊",
-          "latitude": 22.623472,
-          "longitude": 120.355930,
-          "description": "鳳凌廣場左邊"
-        },
-        {
-          "id": 54,
-          "no": "0055",
-          "name": "市議會(新址)站",
-          "englishname": "CityCouncil(New)",
-          "address": "鳳山區國泰路2段136號對面(東區稅捐稽徵處)",
-          "latitude": 22.619844,
-          "longitude": 120.348068,
-          "description": "高雄市東區稅捐稽徵處"
-        },
-        {
-          "id": 55,
-          "no": "0056",
-          "name": "捷運鳳山西站",
-          "englishname": "FongshanWest(MRT)",
-          "address": "高雄市鳳山區自由路",
-          "latitude": 22.625313,
-          "longitude": 120.348543,
-          "description": "O11鳳山西站 2號出口"
-        },
-        {
-          "id": 56,
-          "no": "0057",
-          "name": "市府鳳山行政中心站",
-          "englishname": "CityGovernmentFongshanAdministrationCenter",
-          "address": "澄清路與光復路二段交叉路口",
-          "latitude": 22.62974,
-          "longitude": 120.344351,
-          "description": "澄清路與光復路二段交叉路口"
-        },
-        {
-          "id": 57,
-          "no": "0058",
-          "name": "澄清湖站",
-          "englishname": "ChengcingLake",
-          "address": "面對澄清湖正門左邊-意向園區",
-          "latitude": 22.653562,
-          "longitude": 120.349281,
-          "description": "面對澄清湖正門左邊"
-        },
-        {
-          "id": 58,
-          "no": "0059",
-          "name": "捷運小港站",
-          "englishname": "Siaogang(MRT)",
-          "address": "高雄市小港區沿海一路",
-          "latitude": 22.564789,
-          "longitude": 120.353658,
-          "description": "R3小港站 4號出口"
-        },
-        {
-          "id": 59,
-          "no": "0060",
-          "name": "餐旅高中站",
-          "englishname": "HospitalitySeniorHighSchool",
-          "address": "餐旅高中正門右邊",
-          "latitude": 22.566265,
-          "longitude": 120.372176,
-          "description": "餐旅國中站-餐旅國中正門右邊"
-        },
-        {
-          "id": 60,
-          "no": "0061",
-          "name": "社教館站",
-          "englishname": "SocialEducationCenter",
-          "address": "學府路與大鵬路口",
-          "latitude": 22.565198,
-          "longitude": 120.358618,
-          "description": "學府路與大鵬路口"
-        },
-        {
-          "id": 61,
-          "no": "0062",
-          "name": "班超公園站",
-          "englishname": "BanchaoPark",
-          "address": "班超路上(岡山中街與忠誠路284巷中間)",
-          "latitude": 22.600957,
-          "longitude": 120.32557,
-          "description": "班超路上"
-        },
-        {
-          "id": 62,
-          "no": "0063",
-          "name": "高雄中學站",
-          "englishname": "KaohsiungSeniorHighschool",
-          "address": "高雄中學大門右側",
-          "latitude": 22.637937,
-          "longitude": 120.298753,
-          "description": "高雄中學大門右側"
-        },
-        {
-          "id": 63,
-          "no": "0064",
-          "name": "博愛國小站",
-          "englishname": "BoAiElementarySchool",
-          "address": "十全與自由路周邊商圈",
-          "latitude": 22.645225,
-          "longitude": 120.307481,
-          "description": "十全與自由路周邊商圈"
-        },
-        {
-          "id": 64,
-          "no": "0065",
-          "name": "客家文物館站",
-          "englishname": "HakkaCultureGallery",
-          "address": "客家文物會館左側",
-          "latitude": 22.650571,
-          "longitude": 120.295722,
-          "description": "客家文物會館左側"
-        },
-        {
-          "id": 65,
-          "no": "0066",
-          "name": "明堤公園站",
-          "englishname": "MingtiPark",
-          "address": "明堤公園-明仁路上",
-          "latitude": 22.662922,
-          "longitude": 120.312202,
-          "description": "明堤公園-明仁路上"
-        },
-        {
-          "id": 66,
-          "no": "0067",
-          "name": "微笑公園站",
-          "englishname": "SmilePark",
-          "address": "博愛三路與至真路交叉路口",
-          "latitude": 22.671912,
-          "longitude": 120.304348,
-          "description": "博愛3路與至真路交叉路口"
-        },
-        {
-          "id": 67,
-          "no": "0068",
-          "name": "左營國小站",
-          "englishname": "ZuoyingElementaryschool",
-          "address": "左營國小側門(實踐路與軍校路交叉口)",
-          "latitude": 22.690574,
-          "longitude": 120.292463,
-          "description": "左營國小側門"
-        },
-        {
-          "id": 68,
-          "no": "0069",
-          "name": "捷運世運主場館站",
-          "englishname": "WorldGames(MRT)",
-          "address": "高雄市楠梓區左楠路",
-          "latitude": 22.700928,
-          "longitude": 120.302471,
-          "description": "R17世運主場館站 1號出口對面"
-        },
-        {
-          "id": 69,
-          "no": "0070",
-          "name": "世運主場館站",
-          "englishname": "WorldGames",
-          "address": "國軍左營醫院對面",
-          "latitude": 22.701989,
-          "longitude": 120.29259,
-          "description": "國軍左營醫院對面"
-        },
-        {
-          "id": 70,
-          "no": "0071",
-          "name": "捷運楠梓加工出口區站",
-          "englishname": "NanzihExportProcessingZone(MRT)",
-          "address": "高雄市楠梓區加昌路",
-          "latitude": 22.718406,
-          "longitude": 120.306221,
-          "description": "R19楠梓加工出口區站 1號出口"
-        },
-        {
-          "id": 71,
-          "no": "0072",
-          "name": "加昌國小站",
-          "englishname": "JiachangElementarySchool",
-          "address": "高雄市楠梓區樂群路220號",
-          "latitude": 22.721474,
-          "longitude": 120.296452,
-          "description": "高雄市楠梓區樂群路220號"
-        },
-        {
-          "id": 72,
-          "no": "0073",
-          "name": "捷運都會公園站",
-          "englishname": "MetropolitanPark(MRT)",
-          "address": "高雄市楠梓區高楠公路",
-          "latitude": 22.730211,
-          "longitude": 120.32053,
-          "description": "R21都會公園站 4號出口"
-        },
-        {
-          "id": 73,
-          "no": "0074",
-          "name": "高雄第一科技大學站",
-          "englishname": "KaohsiungFirstUniversityofScienceandTechnology",
-          "address": "高雄市楠梓區卓越路2號",
-          "latitude": 22.752699,
-          "longitude": 120.331084,
-          "description": "高雄第一科技大學校內"
-        },
-        {
-          "id": 74,
-          "no": "0075",
-          "name": "捷運青埔站",
-          "englishname": "Cingpu(MRT)",
-          "address": "高雄市橋頭區經武路",
-          "latitude": 22.744869,
-          "longitude": 120.317899,
-          "description": "R22青埔站 站外機車停車場"
-        },
-        {
-          "id": 75,
-          "no": "0077",
-          "name": "捷運南岡山站",
-          "englishname": "GangshanSouth(MRT)",
-          "address": "高雄市岡山區中山南路",
-          "latitude": 22.780613,
-          "longitude": 120.300722,
-          "description": "R24南岡山站 1號出口公車轉候庭"
-        },
-        {
-          "id": 76,
-          "no": "0078",
-          "name": "岡山區公所站",
-          "englishname": "GangshanDistrictOffice",
-          "address": "高雄市岡山區岡山路343號(區公所後方停車場旁)",
-          "latitude": 22.797512,
-          "longitude": 120.294591,
-          "description": "岡山區公所後方停車場旁"
-        },
-        {
-          "id": 77,
-          "no": "0079",
-          "name": "西子樓站",
-          "englishname": "SunYat-SenAlumniHouse",
-          "address": "中山大學西子樓前空地",
-          "latitude": 22.618200,
-          "longitude": 120.266181,
-          "description": "中山大學校友會館"
-        },
-        {
-          "id": 78,
-          "no": "0080",
-          "name": "龍虎塔站",
-          "englishname": "DragonandTigerPagoda",
-          "address": "高雄市左營區勝利路110號(蓮池潭旅遊服務中心旁)",
-          "latitude": 22.679928,
-          "longitude": 120.292102,
-          "description": "蓮池潭旅遊服務中心旁"
-        },
-        {
-          "id": 79,
-          "no": "0081",
-          "name": "右昌圖書館站",
-          "englishname": "KaohsiungPublicLibrary(Youchang)",
-          "address": "高雄市楠梓區藍昌路72號",
-          "latitude": 22.715581,
-          "longitude": 120.290213,
-          "description": "高雄市楠梓區藍昌路72號(圖書館旁空地)"
-        },
-        {
-          "id": 80,
-          "no": "0082",
-          "name": "中鋼台船站",
-          "englishname": "ChinaShipBuildingCorporation",
-          "address": "面對台船大門口之左側人行道上",
-          "latitude": 22.554138,
-          "longitude": 120.347570,
-          "description": "面對台船大門口之左側人行道上"
-        },
-        {
-          "id": 81,
-          "no": "0083",
-          "name": "金獅湖站",
-          "englishname": "JinshiLakeBusStation",
-          "address": "金鼎路與鼎力路交叉路口(位於鼎力路上)",
-          "latitude": 22.665096,
-          "longitude": 120.321665,
-          "description": "金鼎路與鼎力路交叉路口(位於鼎力路上)"
-        },
-        {
-          "id": 82,
-          "no": "0084",
-          "name": "文藻外語大學站",
-          "englishname": "WenzaoUrsulineUniversityofLanguages",
-          "address": "獅湖國小側門人行道（位於鼎中路上）",
-          "latitude": 22.67117,
-          "longitude": 120.320951,
-          "description": "獅湖國小側門人行道（位於鼎中路上）"
-        },
-        {
-          "id": 83,
-          "no": "0085",
-          "name": "莊敬公園站",
-          "englishname": "JhuangJingPark",
-          "address": "明誠一路與大園街交叉路口左近人行道(臨明誠一路上)",
-          "latitude": 22.659621,
-          "longitude": 120.324749,
-          "description": "明誠一路與大園街交叉路口左近人行道(臨明誠一路上)"
-        },
-        {
-          "id": 84,
-          "no": "0086",
-          "name": "高雄高工站",
-          "englishname": "KaohsiungMunicipalKaohsiungIndustrialHighSchool",
-          "address": "雄工側門臨中華電信機房",
-          "latitude": 22.650378,
-          "longitude": 120.325634,
-          "description": "雄工側門臨中華電信機房"
-        },
-        {
-          "id": 85,
-          "no": "0087",
-          "name": "鼎金國小站",
-          "englishname": "DingJinElementarySchool",
-          "address": "大昌一路，面對鼎金國小側門左側人行道上",
-          "latitude": 22.656168,
-          "longitude": 120.322775,
-          "description": "大昌一路，面對鼎金國小側門左側人行道上"
-        },
-        {
-          "id": 86,
-          "no": "0088",
-          "name": "高雄國際機場站",
-          "englishname": "KaohsiungInternationalAirport(MRT)",
-          "address": "高雄市小港區中山四路",
-          "latitude": 22.569418,
-          "longitude": 120.343726,
-          "description": "R4高雄國際機場站 1號出口"
-        },
-        {
-          "id": 88,
-          "no": "0090",
-          "name": "左營高中站",
-          "englishname": "TsoyingSeniorHighSchool",
-          "address": "海功路上，左營高中校門口",
-          "latitude": 22.693598,
-          "longitude": 120.295864,
-          "description": "海功路上，左營高中校門口"
-        },
-        {
-          "id": 89,
-          "no": "0091",
-          "name": "蓮潭會館站",
-          "englishname": "GardenVilla",
-          "address": "蓮潭會館左側AC路面",
-          "latitude": 22.677816,
-          "longitude": 120.299942,
-          "description": "蓮潭會館左側"
-        },
-        {
-          "id": 90,
-          "no": "0092",
-          "name": "高鐵左營站",
-          "englishname": "KaohsiungInternationalAirport(MRT)",
-          "address": "高雄市左營區高鐵路",
-          "latitude": 22.686674,
-          "longitude": 120.308278,
-          "description": "高鐵站大門前3塊人行道上"
-        },
-        {
-          "id": 91,
-          "no": "0093",
-          "name": "孔廟站",
-          "englishname": "ConfuciusTemple",
-          "address": "31號公園人行道(臨孔營路)",
-          "latitude": 22.688085,
-          "longitude": 120.297361,
-          "description": "31號公園人行道"
-        },
-        {
-          "id": 92,
-          "no": "0094",
-          "name": "草衙站",
-          "englishname": "Caoya(MRT)",
-          "address": "高雄市前鎮區翠亨南路",
-          "latitude": 22.579527,
-          "longitude": 120.329016,
-          "description": "R4A捷運草衙站 1號出口"
-        },
-        {
-          "id": 93,
-          "no": "0095",
-          "englishname": "FogongElementarySchool",
-          "name": "佛公國小站",
-          "address": "后平路與佛德路交叉路口",
-          "latitude": 22.573815,
-          "longitude": 120.320044,
-          "description": "后平路與佛德路交叉路口"
-        },
-        {
-          "id": 94,
-          "no": "0096",
-          "name": "海洋局站",
-          "englishname": "KaohsiungCityMarineBureau",
-          "address": "漁港中二路與漁港東二路交叉路口",
-          "latitude": 22.571972,
-          "longitude": 120.317287,
-          "description": "漁港中二路與漁港東二路交叉路口"
-        },
-        {
-          "id": 95,
-          "no": "0097",
-          "name": "二聖公園站",
-          "englishname": "ErshengPark",
-          "address": "光華二路及英德街交叉路口",
-          "latitude": 22.61385,
-          "longitude": 120.318304,
-          "description": "光華二路及英德街交叉路口"
-        },
-        {
-          "id": 96,
-          "no": "0098",
-          "name": "福誠高中站",
-          "englishname": "Caoya(MRT)",
-          "address": "高雄市前鎮區五甲三路上",
-          "latitude": 22.589048,
-          "longitude": 120.322925,
-          "description": "福誠高中側門旁臨媽祖港橋"
-        },
-        {
-          "id": 97,
-          "no": "0099",
-          "name": "道明中學站",
-          "englishname": "SaintDominicCatholicHighSchool",
-          "address": "建國一路上，道明中學與聖功醫院中間空地",
-          "latitude": 22.633129,
-          "longitude": 120.323558,
-          "description": "建國一路上，道明中學與聖功醫院中間空地"
-        },
-        {
-          "id": 98,
-          "no": "0100",
-          "name": "英明公園站",
-          "englishname": "YingMingPark",
-          "address": "英明路上，英明公園近英明國中側",
-          "latitude": 22.616351,
-          "longitude": 120.324878,
-          "description": "英明路上，英明公園近英明國中側"
-        },
-        {
-          "id": 99,
-          "no": "0101",
-          "name": "四維公園站",
-          "englishname": "SiweiPark",
-          "address": "自強路與四維路交叉路口附近",
-          "latitude": 22.615717,
-          "longitude": 120.299094,
-          "description": "自強路與四維路交叉路口附近"
-        },
-        {
-          "id": 100,
-          "no": "0102",
-          "name": "正修大學站",
-          "englishname": "ChengshiuUniversity",
-          "address": "面對正修科大校門口右側",
-          "latitude": 22.650698,
-          "longitude": 120.3488,
-          "description": "面對正修科大校門口右側"
-        },
-        {
-          "id": 101,
-          "no": "0103",
-          "englishname": "NanhuaMarket",
-          "name": "南華市場站",
-          "address": "高雄市前金區中正三路",
-          "latitude": 22.631456,
-          "longitude": 120.303227,
-          "description": "O5R10美麗島站 7號出口"
-        },
-        {
-          "id": 102,
-          "no": "0104",
-          "name": "郵政總局站",
-          "englishname": "KaohsiungGeneralPostOffice",
-          "address": "高雄市前金區中正三路",
-          "latitude": 22.631089,
-          "longitude": 120.304429,
-          "description": "O5R10美麗島站 6號出口"
-        },
-        {
-          "id": 103,
-          "no": "0105",
-          "name": "民族八德站",
-          "englishname": "MinzuBade",
-          "address": "民族一路與八德路交叉路口(臨民族一路上)",
-          "latitude": 22.635323,
-          "longitude": 120.313318,
-          "description": "民族一路與八德路交叉路口"
-        },
-        {
-          "id": 104,
-          "no": "0106",
-          "name": "高雄大學站",
-          "englishname": "NationalUniversityOfKaohsiung",
-          "address": "高雄大學路與大學南路交叉口",
-          "latitude": 22.732634,
-          "longitude": 120.284253,
-          "description": "高雄大學路與大學南路交叉口"
-        },
-        {
-          "id": 105,
-          "no": "0107",
-          "name": "中山高中站",
-          "englishname": "ChungshanSeniorHighSchool",
-          "address": "藍昌路與藍田路交叉路口",
-          "latitude": 22.727406,
-          "longitude": 120.292047,
-          "description": "藍昌路與藍田路交叉路口"
-        },
-        {
-          "id": 106,
-          "no": "0108",
-          "name": "龍華國小站",
-          "englishname": "LonhuaElementarySchool",
-          "address": "大順一路與南屏路交叉路口左近人行道(位於南屏路)",
-          "latitude": 22.655851,
-          "longitude": 120.299933,
-          "description": "大順一路與南屏路交叉路口左近人行道"
-        },
-        {
-          "id": 107,
-          "no": "0109",
-          "name": "海科大旗津站(1)",
-          "englishname": "NationalKaohsiungMarineUniversityCijinDistrict(1)",
-          "address": "位於中洲三路上，面對校門口之左側",
-          "latitude": 22.608252,
-          "longitude": 120.272264,
-          "description": "位於中洲三路上，面對校門口之左、右側"
-        },
-        {
-          "id": 109,
-          "no": "0111",
-          "name": "巨蛋站(2)",
-          "englishname": "KaohsiungArena(2)(MRT)",
-          "address": "高雄市左營區博愛二路",
-          "latitude": 22.666014,
-          "longitude": 120.303262,
-          "description": "面對原站址右側擴充"
-        },
-        {
-          "id": 110,
-          "no": "0112",
-          "name": "後驛站(2)",
-          "englishname": "Houyi(2)(MRT)",
-          "address": "高雄市三民區博愛一路",
-          "latitude": 22.647866,
-          "longitude": 120.303345,
-          "description": "面對原站址左側擴充"
-        },
-        {
-          "id": 111,
-          "no": "0113",
-          "name": "高雄醫學大學站(2)",
-          "englishname": "KaohsiungMedicalUniversity(2)",
-          "address": "面對原站址左側擴充",
-          "latitude": 22.649398,
-          "longitude": 120.309879,
-          "description": "高雄醫學大學大門旁"
-        },
-        {
-          "id": 112,
-          "no": "0114",
-          "name": "中央公園站(2)",
-          "englishname": "CentralPark(2)(MRT)",
-          "address": "高雄市前金區中山一路",
-          "latitude": 22.624214,
-          "longitude": 120.300923,
-          "description": "面對原站址右側擴充"
-        },
-        {
-          "id": 113,
-          "no": "0115",
-          "name": "高雄女中站(2)",
-          "englishname": "KaohsiungGirls'SeniorHighSchool(2)",
-          "address": "面對原站址左側擴充",
-          "latitude": 22.620733,
-          "longitude": 120.293601,
-          "description": "高雄女中前"
-        },
-        {
-          "id": 114,
-          "no": "0116",
-          "name": "三多站(2)",
-          "englishname": "SanduoShoppingDistrict(2)(MRT)",
-          "address": "高雄市苓雅區中山二路與三多三路圓環處",
-          "latitude": 22.614432,
-          "longitude": 120.304416,
-          "description": "面對原站址左側擴充"
-        },
-        {
-          "id": 115,
-          "no": "0117",
-          "name": "市府四維站(2)",
-          "englishname": "CityGovernment-SihweiAdministrationCenter(2)",
-          "address": "面對原站址左側擴充",
-          "latitude": 22.620097,
-          "longitude": 120.311969,
-          "description": "市政府前"
-        },
-        {
-          "id": 116,
-          "no": "0118",
-          "name": "文化中正站(2)",
-          "englishname": "CulturalCenter(2)(MRT)",
-          "address": "高雄市苓雅區和平一路與中正一路口",
-          "latitude": 22.629797,
-          "longitude": 120.318221,
-          "description": "面對原站址左側擴充"
-        },
-        {
-          "id": 117,
-          "no": "0119",
-          "name": "文化師大站(2)",
-          "englishname": "NationalKaohsiungNormalUniversity(2)",
-          "address": "面對原站址右側擴充",
-          "latitude": 22.625373,
-          "longitude": 120.319594,
-          "description": "文化中心東南角、高師大對面"
-        },
-        {
-          "id": 118,
-          "no": "0120",
-          "name": "光華公園站(2)",
-          "englishname": "GuanghuaPark(2)",
-          "address": "面對原站址右側擴充",
-          "latitude": 22.608306,
-          "longitude": 120.316265,
-          "description": "光華公園"
-        },
-        {
-          "id": 119,
-          "no": "0121",
-          "name": "海科大旗津站(2)",
-          "englishname": "NationalKaohsiungMarineUniversityCijinDistrict(2)",
-          "address": "位於中洲三路上，面對校門口之右側",
-          "latitude": 22.608217,
-          "longitude": 120.272334,
-          "description": "位於中洲三路上，面對校門口之左、右側"
-        },
-        {
-          "id": 120,
-          "no": "0122",
-          "name": "鳳新高中站",
-          "englishname": "Feng-HsinSeniorHighSchool",
-          "address": "高雄市鳳山區新富路257號‎(鳳新高中旁)",
-          "latitude": 22.61302,
-          "longitude": 120.343262,
-          "description": "鳳新高中旁"
-        },
-        {
-          "id": 121,
-          "no": "0123",
-          "name": "前鎮高中站",
-          "englishname": "CianjhenSeniorHighSchool(MRT)",
-          "address": "高雄市前鎮區翠亨北路",
-          "latitude": 22.588154,
-          "longitude": 120.32193,
-          "description": "R5前鎮高中站 1號出口"
-        },
-        {
-          "id": 122,
-          "no": "0124",
-          "name": "美術館馬卡道站",
-          "englishname": "MeishuguanMakatao",
-          "address": "立體停車場入口前平面停車格，美術館路上，近龍水路",
-          "latitude": 22.65495,
-          "longitude": 120.283089,
-          "description": "立體停車場入口前平面停車格，美術館路上，近龍水路"
-        },
-        {
-          "id": 123,
-          "no": "0125",
-          "name": "福山廣場站",
-          "englishname": "FushanSquare",
-          "address": "文川路上，重義路與重愛路中間",
-          "latitude": 22.685999,
-          "longitude": 120.314104,
-          "description": "文川路上，重義路與重愛路中間"
-        },
-        {
-          "id": 124,
-          "no": "0126",
-          "name": "阿公店水庫站",
-          "englishname": "AgongdianReservoir",
-          "address": "阿公店水庫大門口右側停車場",
-          "latitude": 22.801439,
-          "longitude": 120.357113,
-          "description": "阿公店水庫大門口右側停車場"
-        },
-        {
-          "id": 125,
-          "no": "0127",
-          "name": "澄清湖站(2)",
-          "englishname": "ChengcingLake(2)",
-          "address": "澄清湖兒童園區停車場內",
-          "latitude": 22.658443,
-          "longitude": 120.346107,
-          "description": "澄清湖兒童園區停車場內"
-        },
-        {
-          "id": 126,
-          "no": "0128",
-          "name": "寶業里滯洪池站",
-          "englishname": "BaoyeFloodDetentionPark",
-          "address": "寶業里滯洪池控制中心前，褒揚東街上",
-          "latitude": 22.640026,
-          "longitude": 120.345803,
-          "description": "寶業里滯洪池控制中心前，褒揚東街上"
-        },
-        {
-          "id": 127,
-          "no": "0129",
-          "name": "陽明溜冰場站",
-          "englishname": "YangmingSkatingRink",
-          "address": "陽明溜冰場前，義華路上",
-          "latitude": 22.643133,
-          "longitude": 120.339539,
-          "description": "陽明溜冰場前，義華路上"
-        },
-        {
-          "id": 128,
-          "no": "0130",
-          "name": "義民廟站",
-          "englishname": "HeroesTemple",
-          "address": "三民義民廟旁，壽昌路91巷與壽昌路口",
-          "latitude": 22.642492,
-          "longitude": 120.333667,
-          "description": "三民義民廟旁，壽昌路91巷與壽昌路口"
-        },
-        {
-          "id": 129,
-          "no": "0131",
-          "name": "鼎泰廣場站",
-          "englishname": "DingtaiSquare",
-          "address": "鼎瑞街與裕誠路口",
-          "latitude": 22.663888,
-          "longitude": 120.315002,
-          "description": "鼎瑞街與裕誠路口"
-        },
-        {
-          "id": 130,
-          "no": "0132",
-          "name": "平和停車場站",
-          "englishname": "PingheParkingLot",
-          "address": "平和停車場後方，平和五路與平和路口",
-          "latitude": 22.562743,
-          "longitude": 120.335459,
-          "description": "平和停車場後方，平和五路與平和路口"
-        },
-        {
-          "id": 131,
-          "no": "0133",
-          "name": "小港區公所站",
-          "englishname": "SiaogangDistrictOffice",
-          "address": "小港區公所前方，小港路上",
-          "latitude": 22.565069,
-          "longitude": 120.338391,
-          "description": "小港區公所前方，小港路上"
-        },
-        {
-          "id": 132,
-          "no": "0134",
-          "name": "大寮區公所站",
-          "englishname": "DaliaoDistrictOffice",
-          "address": "大寮區公所內，臨鳳林三路",
-          "latitude": 22.605399,
-          "longitude": 120.395458,
-          "description": "大寮區公所內，臨鳳林三路"
-        },
-        {
-          "id": 133,
-          "no": "0135",
-          "name": "和春技術學院站(1)",
-          "englishname": "FortuneInstituteofTechnology1",
-          "address": "和春技術學院大發校區內，臨農場路",
-          "latitude": 22.60608,
-          "longitude": 120.427392,
-          "description": "和春技術學院大發校區內，臨農場路"
-        },
-        {
-          "id": 134,
-          "no": "0136",
-          "name": "和春技術學院站(2)",
-          "englishname": "FortuneInstituteofTechnology2",
-          "address": "和春技術學院大寮分校前，信義路上",
-          "latitude": 22.633877,
-          "longitude": 120.392021,
-          "description": "和春技術學院大寮分校前，信義路上"
-        },
-        {
-          "id": 135,
-          "no": "0137",
-          "name": "捷運大寮站",
-          "englishname": "Daliao(MRT)",
-          "address": "高雄市大寮區捷西路",
-          "latitude": 22.621312,
-          "longitude": 120.390423,
-          "description": "OT1大寮站 1號出口"
-        },
-        {
-          "id": 136,
-          "no": "0138",
-          "name": "輔英科技大學站",
-          "englishname": "FooyinUniversity",
-          "address": "高雄市大寮區進學路",
-          "latitude": 22.604022,
-          "longitude": 120.391128,
-          "description": "輔英科技大學校內停車場"
-        },
-        {
-          "id": 137,
-          "no": "0139",
-          "name": "台鐵新左營站",
-          "englishname": "Xinzuoying(TRA)",
-          "address": "高雄市左營區站前北路",
-          "latitude": 22.688380,
-          "longitude": 120.307605,
-          "description": "台鐵新左營站旁，臨站前北路"
-        },
-        {
-          "id": 138,
-          "no": "0140",
-          "name": "扶輪公園站",
-          "englishname": "RotaryPark",
-          "address": "高雄市左營區博愛四路與重信路口",
-          "latitude": 22.682814,
-          "longitude": 120.312075,
-          "description": "博愛四路與重信路口"
-        },
-        {
-          "id": 139,
-          "no": "0141",
-          "name": "高雄榮總站",
-          "address": "高雄市左營區榮總路",
-          "englishname": "KaohsiungVeteransGeneralHospital",
-          "latitude": 22.680077,
-          "longitude": 120.321723,
-          "description": "高雄榮民總醫院急診室對面，榮總路上"
-        },
-        {
-          "id": 141,
-          "no": "0143",
-          "name": "岡山河堤公園站",
-          "englishname": "GangshanRiverbankPark",
-          "address": "高雄市岡山區仁義路與河堤路二段路口",
-          "latitude": 22.786133,
-          "longitude": 120.295002,
-          "description": "仁義路與河堤路二段路口"
-        },
-        {
-          "id": 142,
-          "no": "0144",
-          "name": "岡山稽徵所站",
-          "englishname": "GangshanTaxationOffice",
-          "address": "高雄市岡山區健鷹南路",
-          "latitude": 22.785084,
-          "longitude": 120.290891,
-          "description": "岡山稽徵所後方，臨健鷹南路"
-        },
-        {
-          "id": 143,
-          "no": "0145",
-          "name": "岡山忠孝里站",
-          "englishname": "GangshanZhongxiaoVillage",
-          "address": "高雄市岡山區岡山路",
-          "latitude": 22.790537,
-          "longitude": 120.296173,
-          "description": "岡山移民署後方，臨岡山路"
-        },
-        {
-          "id": 144,
-          "no": "0146",
-          "name": "岡山文化中心站",
-          "englishname": "GangshanCulturalCenter",
-          "address": "高雄市岡山區岡山南路與介壽東路口",
-          "latitude": 22.784278,
-          "longitude": 120.297605,
-          "description": "岡山文化中心停車場旁，岡山南路與介壽東路口"
-        },
-        {
-          "id": 145,
-          "no": "0147",
-          "name": "原住民故事館站",
-          "englishname": "IndigenousHub",
-          "address": "高雄市前鎮區翠亨北路",
-          "latitude": 22.593917,
-          "longitude": 120.316238,
-          "description": "高雄原住民服務中心對面，翠亨北路上"
-        },
-        {
-          "id": 146,
-          "no": "0148",
-          "name": "消防局站",
-          "englishname": "FireBureau",
-          "address": "高雄市前鎮區凱旋四路",
-          "latitude": 22.593092,
-          "longitude": 120.307349,
-          "description": "高雄市消防局門口"
-        },
-        {
-          "id": 147,
-          "no": "0149",
-          "name": "前鎮加工區站(1)",
-          "englishname": "QianzhenExportProcessingZone1",
-          "address": "高雄市前鎮區中一路與中四路口",
-          "latitude": 22.601729,
-          "longitude": 120.291757,
-          "description": "加工出口區內，中一路與中四路口"
-        },
-        {
-          "id": 148,
-          "no": "0150",
-          "name": "前鎮加工區站(2)",
-          "englishname": "QianzhenExportProcessingZone2",
-          "address": "高雄市前鎮區中一路與中四路口",
-          "latitude": 22.60167,
-          "longitude": 120.291622,
-          "description": "加工出口區內，中一路與中四路口"
-        },
-        {
-          "id": 151,
-          "no": "0153",
-          "name": "文化中心站",
-          "englishname": "CulturalCenter",
-          "address": "高雄市苓雅區廣州一街與青年一路口",
-          "latitude": 22.624979,
-          "longitude": 120.31697,
-          "description": "廣州一街與青年一路口"
-        },
-        {
-          "id": 152,
-          "no": "0154",
-          "name": "正義市場站",
-          "englishname": "ZhengyiMarket",
-          "address": "高雄市苓雅區文昌路",
-          "latitude": 22.631218,
-          "longitude": 120.338583,
-          "description": "正義市場後方，文昌路上"
-        },
-        {
-          "id": 153,
-          "no": "0155",
-          "name": "高雄高商站",
-          "englishname": "KaohsiungCommercialHighSchool",
-          "address": "高雄市新興區復興二路與五福二路口",
-          "latitude": 22.625217,
-          "longitude": 120.308457,
-          "description": "復興二路與五福二路口"
-        },
-        {
-          "id": 154,
-          "no": "0156",
-          "name": "高雄監理所站",
-          "englishname": "KaohsiungCityMotorVehiclesOffice",
-          "address": "高雄市楠梓區德民路",
-          "latitude": 22.731704,
-          "longitude": 120.318005,
-          "description": "公路總局高雄市區監理站門口旁"
-        },
-        {
-          "id": 155,
-          "no": "0157",
-          "name": "楠梓翠屏站",
-          "englishname": "NanziCuibing",
-          "address": "高雄市楠梓區德賢路",
-          "latitude": 22.726234,
-          "longitude": 120.302495,
-          "description": "翠屏活動中心旁"
-        },
-        {
-          "id": 156,
-          "no": "0158",
-          "name": "鳳新高中站(2)",
-          "englishname": "FenghsinSeniorHighSchool2",
-          "address": "高雄市鳳山區新康街",
-          "latitude": 22.614189,
-          "longitude": 120.343893,
-          "description": "鳳新高中側門"
-        },
-        {
-          "id": 157,
-          "no": "0159",
-          "name": "森林公園站(2)",
-          "englishname": "AozihdiForestPark2",
-          "address": "高雄市鼓山區至聖路與龍德路口",
-          "latitude": 22.659623,
-          "longitude": 120.296881,
-          "description": "凹子底森林公園"
-        },
-        {
-          "id": 158,
-          "no": "0160",
-          "name": "高雄真愛館站",
-          "englishname": "KaohsiungChenai",
-          "address": "高雄市鹽埕區必信街與大義街口",
-          "latitude": 22.619285,
-          "longitude": 120.284972,
-          "description": "鹽埕海霸王飯店後方，必信街與大義街口"
-        },
-        {
-          "id": 159,
-          "no": "0161",
-          "name": "小港醫院站",
-          "englishname": "HsiaokangHospital",
-          "address": "高雄市小港區山明路與漢民路口",
-          "latitude": 22.567722,
-          "longitude": 120.362808,
-          "description": "小港醫院門口休憩區"
-        },
-        {
-          "id": 160,
-          "no": "0162",
-          "name": "自由市場站",
-          "englishname": "ZiyouMarket",
-          "address": "自由黃昏市場對面，臨自由三路",
-          "latitude": 22.672155,
-          "longitude": 120.311353,
-          "description": "自由黃昏市場對面，臨自由三路"
-        },
-        {
-          "id": 161,
-          "no": "0163",
-          "name": "興達港站",
-          "englishname": "SingdaHarbor",
-          "address": "高雄市茄萣區正大路與東方路一段中間",
-          "latitude": 22.879024,
-          "longitude": 120.211033,
-          "description": "興達港情人碼頭海上劇場旁"
-        },
-        {
-          "id": 162,
-          "no": "0164",
-          "name": "文山高中站",
-          "englishname": "Wun-ShanSeniorHighSchool",
-          "address": "文山高中大門旁，公園路上",
-          "latitude": 22.648561,
-          "longitude": 120.353384,
-          "description": "文山高中大門旁，公園路上"
-        },
-        {
-          "id": 163,
-          "no": "0165",
-          "name": "市府鳳山行政中心站(2)",
-          "englishname": "CityGovernment-FongshanAdministrationCenter2",
-          "address": "市府鳳山行政中心旁，澄清路上",
-          "latitude": 22.630168,
-          "longitude": 120.343234,
-          "description": "市府鳳山行政中心旁，澄清路上"
-        },
-        {
-          "id": 164,
-          "no": "0166",
-          "name": "澄清湖站(3)",
-          "englishname": "ChengcingLake3",
-          "address": "澄清湖海洋奇珍園旁停車場內",
-          "latitude": 22.655859,
-          "longitude": 120.351552,
-          "description": "澄清湖海洋奇珍園旁停車場內"
-        },
-        {
-          "id": 165,
-          "no": "0167",
-          "name": "澄清湖站(4)",
-          "englishname": "ChengcingLake4",
-          "address": "澄清湖仁智亭前停車場內",
-          "latitude": 22.662492,
-          "longitude": 120.341789,
-          "description": "澄清湖仁智亭前停車場內"
-        },
-        {
-          "id": 166,
-          "no": "0168",
-          "name": "澄清湖站(5)",
-          "englishname": "ChengcingLake5",
-          "address": "澄清湖後門入口處左方",
-          "latitude": 22.668333,
-          "longitude": 120.34591,
-          "description": "澄清湖後門入口處左方"
-        },
-        {
-          "id": 167,
-          "no": "0170",
-          "name": "長青綜合服務中心站",
-          "englishname": "SeniorCitizen'sServiceCenter",
-          "address": "長青綜合服務中心停車場內，臨英明路",
-          "latitude": 22.623122,
-          "longitude": 120.322092,
-          "description": "長青綜合服務中心停車場內，臨英明路"
-        },
-        {
-          "id": 168,
-          "no": "0171",
-          "name": "翠平公園站",
-          "englishname": "CueipingPark",
-          "address": "翠亨南路上，豐田街與平和東路間",
-          "latitude": 22.570005,
-          "longitude": 120.335748,
-          "description": "翠亨南路上，豐田街與平和東路間"
-        },
-        {
-          "id": 169,
-          "no": "0172",
-          "name": "中鋼成功站",
-          "englishname": "ChinaSteelChenggong",
-          "address": "中鋼會館7-11前方，忠勤路上",
-          "latitude": 22.60411,
-          "longitude": 120.302531,
-          "description": "中鋼會館7-11前方，忠勤路上"
-        },
-        {
-          "id": 170,
-          "no": "0173",
-          "name": "聖和公園站",
-          "englishname": "ShenghePark",
-          "address": "二聖一路上，和平二路與英明一路間",
-          "latitude": 22.61211,
-          "longitude": 120.323489,
-          "description": "二聖一路上，和平二路與英明一路間"
-        },
-        {
-          "id": 171,
-          "no": "0174",
-          "name": "圖書總館站",
-          "englishname": "KaohsiungMainPublicLibrary",
-          "address": "新光路上，面對大門廣場左側自行車停車場內",
-          "latitude": 22.610606,
-          "longitude": 120.302104,
-          "description": "新光路上，面對大門廣場左側自行車停車場內"
-        },
-        {
-          "id": 172,
-          "no": "0175",
-          "name": "中山公園站",
-          "englishname": "JhongshanPark",
-          "address": "誠義路與國泰路一段路口",
-          "latitude": 22.614312,
-          "longitude": 120.360651,
-          "description": "誠義路與國泰路一段路口"
-        },
-        {
-          "id": 173,
-          "no": "0176",
-          "name": "高雄監理所(武營)站",
-          "englishname": "KaohsiungMotorVehiclesOffice(Wuying)",
-          "address": "高雄區監理所側門旁，武林路與武營路口",
-          "latitude": 22.614298,
-          "longitude": 120.336654,
-          "description": "高雄區監理所側門旁，武林路與武營路口"
-        },
-        {
-          "id": 174,
-          "no": "0177",
-          "name": "捷運鳳山國中站",
-          "englishname": "FongshanJuniorHighSchool(MRT)",
-          "address": "O14鳳山國中站1號出入口，中山東路上",
-          "latitude": 22.624523,
-          "longitude": 120.371078,
-          "description": "O14鳳山國中站1號出入口，中山東路上"
-        },
-        {
-          "id": 175,
-          "no": "0178",
-          "name": "新甲國小站",
-          "englishname": "HsinchyaElementarySchool",
-          "address": "新甲國小對面，新富路上，大明路與新強路間",
-          "latitude": 22.61274,
-          "longitude": 120.34035,
-          "description": "新甲國小對面，新富路上，大明路與新強路間"
-        },
-        {
-          "id": 177,
-          "no": "0180",
-          "name": "三信家商站",
-          "englishname": "SansinHighSchool",
-          "address": "三信家商大門旁，三多一路上",
-          "latitude": 22.622089,
-          "longitude": 120.32909,
-          "description": "三信家商大門旁，三多一路上"
-        },
-        {
-          "id": 178,
-          "no": "0181",
-          "name": "大同醫院站",
-          "englishname": "TatungHospital",
-          "address": "大同一路與中華三路口",
-          "latitude": 22.627568,
-          "longitude": 120.296977,
-          "description": "大同一路與中華三路口"
-        },
-        {
-          "id": 179,
-          "no": "0182",
-          "name": "公二公園站",
-          "englishname": "GongerPark",
-          "address": "正義路與九如一路口",
-          "latitude": 22.636053,
-          "longitude": 120.343413,
-          "description": "正義路與九如一路口"
-        },
-        {
-          "id": 180,
-          "no": "0183",
-          "name": "後備指揮部站",
-          "englishname": "KaohsiungCityReserveCommand",
-          "address": "高雄市後備指揮部大門旁，武功巷上",
-          "latitude": 22.672199,
-          "longitude": 120.331266,
-          "description": "高雄市後備指揮部大門旁，武功巷上"
-        },
-        {
-          "id": 181,
-          "no": "0184",
-          "name": "三民高中站",
-          "englishname": "SanminSeniorHighSchool",
-          "address": "金鼎路與金山路口",
-          "latitude": 22.663383,
-          "longitude": 120.326475,
-          "description": "金鼎路與金山路口"
-        },
-        {
-          "id": 182,
-          "no": "0185",
-          "name": "家樂福鼎山站",
-          "englishname": "CarrefourDingshanStore",
-          "address": "家樂福鼎山店旁，鼎山街上",
-          "latitude": 22.653207,
-          "longitude": 120.318751,
-          "description": "家樂福鼎山店旁，鼎山街上"
-        },
-        {
-          "id": 183,
-          "no": "0186",
-          "name": "新光國小站",
-          "englishname": "ShinkuangElementarySchool",
-          "address": "新光國小側門旁，曾子路上",
-          "latitude": 22.680522,
-          "longitude": 120.305831,
-          "description": "新光國小側門旁，曾子路上"
-        },
-        {
-          "id": 184,
-          "no": "0187",
-          "name": "新莊高中站",
-          "englishname": "HsinchuangSeniorHighSchool",
-          "address": "新莊高中大門旁，文慈路上",
-          "latitude": 22.680827,
-          "longitude": 120.317428,
-          "description": "新莊高中大門旁，文慈路上"
-        },
-        {
-          "id": 185,
-          "no": "0188",
-          "name": "海青工商站",
-          "englishname": "HaicingVocationalHighSchool",
-          "address": "海青工商側門旁，左營大路上",
-          "latitude": 22.674425,
-          "longitude": 120.286455,
-          "description": "海青工商側門旁，左營大路上"
-        },
-        {
-          "id": 186,
-          "no": "0189",
-          "name": "合群新城和區站",
-          "englishname": "HecyunSinchengHeCyu",
-          "address": "合群新城和區，緯九路與海景街口",
-          "latitude": 22.695437,
-          "longitude": 120.287370,
-          "description": "合群新城和區，緯九路與海景街口"
-        },
-        {
-          "id": 187,
-          "no": "0190",
-          "name": "富國公園站",
-          "englishname": "FuguoPark",
-          "address": "富國路與保靖街口",
-          "latitude": 22.663878,
-          "longitude": 120.306713,
-          "description": "富國路與保靖街口"
-        },
-        {
-          "id": 188,
-          "no": "0191",
-          "name": "鼓山高中站",
-          "englishname": "GushanSeniorHighschool",
-          "address": "青海路與鼓山三路口",
-          "latitude": 22.651728,
-          "longitude": 120.276293,
-          "description": "青海路與鼓山三路口"
-        },
-        {
-          "id": 189,
-          "no": "0192",
-          "name": "仁武區運動公園站",
-          "englishname": "RenwuDistrictSportsPark",
-          "address": "仁武區運動公園旁，仁信巷與仁祥街口",
-          "latitude": 22.703625,
-          "longitude": 120.345135,
-          "description": "仁武區運動公園旁，仁信巷與仁祥街口"
-        },
-        {
-          "id": 190,
-          "no": "0193",
-          "name": "旗津醫院站",
-          "englishname": "CijinHospital",
-          "address": "旗津醫院大門旁，旗港路上",
-          "latitude": 22.590139,
-          "longitude": 120.285186,
-          "description": "旗津醫院急診室旁，旗港路上"
-        },
-        {
-          "id": 191,
-          "no": "0194",
-          "name": "興達港站(2)",
-          "englishname": "SingdaHarbor(2)",
-          "address": "興達港立體停車場旁，民有路上，民族路與尚禮街間",
-          "latitude": 22.871535,
-          "longitude": 120.19391,
-          "description": "興達港立體停車場旁，民有路上，民族路與尚禮街間"
-        },
-        {
-          "id": 192,
-          "no": "0195",
-          "name": "明德國小站",
-          "englishname": "MingdeElementarySchool",
-          "address": "海富路與海平路口",
-          "latitude": 22.687264,
-          "longitude": 120.289478,
-          "description": "海富路與海平路口"
-        },
-        {
-          "id": 193,
-          "no": "0196",
-          "name": "朝陽寺站",
-          "englishname": "ChaoyangTemple",
-          "address": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內",
-          "latitude": 22.577509,
-          "longitude": 120.322038,
-          "description": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內"
-        },
-        {
-          "id": 194,
-          "no": "0197",
-          "name": "橋頭地檢署站",
-          "englishname": "CiaotouDistrictProsecutorsOffice",
-          "address": "經武路與橋新三路交叉口(臨經武路人行道)",
-          "latitude": 22.739188,
-          "longitude": 120.305053,
-          "description": "經武路與橋新三路交叉口(臨經武路人行道)"
-        },
-        {
-          "id": 195,
-          "no": "0200",
-          "name": "生日公園站",
-          "englishname": "BirthdayPark",
-          "address": "四維三路與文橫二路交叉口(臨四維三路公園人行道)",
-          "latitude": 22.617966,
-          "longitude": 120.305523,
-          "description": "四維三路與文橫二路交叉口(臨四維三路公園人行道)"
-        },
-        {
-          "id": 196,
-          "no": "0201",
-          "name": "蚵仔寮觀光魚市站",
-          "englishname": "KezailiaoTouristFishMarket",
-          "address": "港七街與魚港一路口",
-          "latitude": 22.727122,
-          "longitude": 120.255518,
-          "description": "港七街與魚港一路口"
-        },
-        {
-          "id": 197,
-          "no": "0202",
-          "name": "鳳山共同市場站",
-          "englishname": "FongshanCommonmarket",
-          "address": "工協街與勝利路口",
-          "latitude": 22.630016,
-          "longitude": 120.373525,
-          "description": "工協街與勝利路口"
-        },
-        {
-          "id": 198,
-          "no": "0208",
-          "name": "長庚醫院站",
-          "englishname": "ChanggungMemorialHospital",
-          "address": "長庚路上，湖畔星光購物商場與公園路中間",
-          "latitude": 22.650448,
-          "longitude": 120.357777,
-          "description": "長庚路上，湖畔星光購物商場與公園路中間"
-        },
-        {
-          "id": 199,
-          "no": "0210",
-          "name": "鐵道文化園區站(1)",
-          "englishname": "RailroadHistoricalPark(1)",
-          "address": "臨海新路臨鐵道園區",
-          "latitude": 22.620440,
-          "longitude": 120.277112,
-          "description": "臨海新路臨鐵道園區"
-        },
-        {
-          "id": 200,
-          "no": "0211",
-          "name": "鐵道文化園區站(2)",
-          "englishname": "RailroadHistoricalPark(2)",
-          "address": "臨海新路臨鐵道園區",
-          "latitude": 22.620269,
-          "longitude": 120.277544,
-          "description": "臨海新路臨鐵道園區"
-        },
-        {
-          "id": 201,
-          "no": "0218",
-          "name": "茄萣海岸公園站",
-          "englishname": "CiedingCoastalPark",
-          "address": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)",
-          "latitude": 22.908010,
-          "longitude": 120.177040,
-          "description": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)"
-        },
-        {
-          "id": 202,
-          "no": "0225",
-          "name": "中山大學社科院站",
-          "englishname": "NSYSU-CollegeofMarineSciences",
-          "address": "中山大學社會科學院與管理學院中間停車場旁",
-          "latitude": 22.62632,
-          "longitude": 120.26504,
-          "description": "中山大學社會科學院與管理學院中間停車場旁"
-        },
-        {
-          "id": 205,
-          "no": "0198",
-          "name": "建民公園站",
-          "englishname": "JianminPark",
-          "address": "興昌街與正興路163巷口",
-          "latitude": 22.646565,
-          "longitude": 120.318354,
-          "description": "興昌街與正興路163巷口"
-        },
-        {
-          "id": 206,
-          "no": "0199",
-          "name": "前鎮國中站",
-          "englishname": "CianjhenJuniorHighSchool",
-          "address": "新衙路上，前鎮國中大門左側",
-          "latitude": 22.583112,
-          "longitude": 120.320345,
-          "description": "新衙路上，前鎮國中大門左側"
-        },
-        {
-          "id": 207,
-          "no": "0203",
-          "name": "愛河之心站(2)",
-          "englishname": "HeartofLoveRiver(2)",
-          "address": "同盟二路上，天津街與重慶街中間",
-          "latitude": 22.651675,
-          "longitude": 120.302047,
-          "description": "同盟二路上，天津街與重慶街中間"
-        },
-        {
-          "id": 208,
-          "no": "0204",
-          "name": "曹公圳公園站",
-          "englishname": "CaogongzunPark",
-          "address": "大東二路與和德街口",
-          "latitude": 22.620335,
-          "longitude": 120.360163,
-          "description": "大東二路與和德街口"
-        },
-        {
-          "id": 209,
-          "no": "0205",
-          "name": "精華公園站",
-          "englishname": "JinghuaPark",
-          "address": "錦州街與哈爾濱街口",
-          "latitude": 22.642316,
-          "longitude": 120.299238,
-          "description": "錦州街與哈爾濱街口"
-        },
-        {
-          "id": 210,
-          "no": "0206",
-          "name": "捷運後勁站",
-          "englishname": "Houjing(MRT)",
-          "address": "加昌路上，捷運後勁1號出入口旁",
-          "latitude": 22.722583,
-          "longitude": 120.316493,
-          "description": "加昌路上，捷運後勁1號出入口旁"
-        },
-        {
-          "id": 211,
-          "no": "0207",
-          "name": "願景橋站",
-          "englishname": "VisionBridge",
-          "address": "河西一路與美術東二路口",
-          "latitude": 22.650770,
-          "longitude": 120.287537,
-          "description": "河西一路與美術東二路口"
-        },
-        {
-          "id": 212,
-          "no": "0209",
-          "name": "福山國中站",
-          "englishname": "FushanJuniorHighSchool",
-          "address": "自由路四路與重信路口",
-          "latitude": 22.681130,
-          "longitude": 120.313956,
-          "description": "自由路四路與重信路口"
-        },
-        {
-          "id": 213,
-          "no": "0212",
-          "name": "海巡隊站",
-          "englishname": "OffshoreFlotilla",
-          "address": "七賢三路與蓬萊路銜接處",
-          "latitude": 22.620589,
-          "longitude": 120.279365,
-          "description": "七賢三路與蓬萊路銜接處"
-        },
-        {
-          "id": 214,
-          "no": "0213",
-          "name": "鼓山渡船頭站",
-          "englishname": "GushanFerryStation",
-          "address": "濱海二路上，鼓波街與鼓南街中間",
-          "latitude": 22.620987,
-          "longitude": 120.270048,
-          "description": "濱海二路上，鼓波街與鼓南街中間"
-        },
-        {
-          "id": 215,
-          "no": "0214",
-          "name": "五甲公園站",
-          "englishname": "WujiaPark",
-          "address": "瑞南街與凱興街",
-          "latitude": 22.595525,
-          "longitude": 120.321994,
-          "description": "瑞南街與凱興街"
-        },
-        {
-          "id": 216,
-          "no": "0215",
-          "name": "三民游泳池站",
-          "englishname": "SanminSwimmingPool",
-          "address": "自由一路與遼寧一街口",
-          "latitude": 22.642476,
-          "longitude": 120.308711,
-          "description": "自由一路與遼寧一街口"
-        },
-        {
-          "id": 217,
-          "no": "0216",
-          "name": "美術東二路站",
-          "englishname": "MeishuEast2ndRd",
-          "address": "美術東二路與美術東五路口",
-          "latitude": 22.659491,
-          "longitude": 120.288197,
-          "description": "美術東二路與美術東五路口"
-        },
-        {
-          "id": 218,
-          "no": "0217",
-          "name": "新民國小站",
-          "englishname": "Sinminelementaryschool",
-          "address": "自由三路與曾子路口",
-          "latitude": 22.676383,
-          "longitude": 120.312624,
-          "description": "自由三路與曾子路口"
-        },
-        {
-          "id": 219,
-          "no": "0219",
-          "name": "雄鋒公園站",
-          "englishname": "SyongfongPark",
-          "address": "九如四路與九如四路1991巷口",
-          "latitude": 22.667540,
-          "longitude": 120.285300,
-          "description": "九如四路與九如四路1991巷口"
-        },
-        {
-          "id": 220,
-          "no": "0220",
-          "name": "果貿社區站",
-          "englishname": "GuomaoCommunity",
-          "address": "翠華路與翠峰路口",
-          "latitude": 22.670810,
-          "longitude": 120.289827,
-          "description": "翠華路與翠峰路口"
-        },
-        {
-          "id": 221,
-          "no": "0226",
-          "name": "文府國小站",
-          "englishname": "Wun-FuElementarySchool",
-          "address": "文府國小側門旁候車亭空地",
-          "latitude": 22.691503,
-          "longitude": 120.316115,
-          "description": "文府國小側門旁候車亭空地"
-        },
-        {
-          "id": 222,
-          "no": "0227",
-          "name": "龍華市場站",
-          "englishname": "LonghuaMarket",
-          "address": "高雄市左營區忠言路與富國路，停車場旁",
-          "latitude": 22.65838,
-          "longitude": 120.30641,
-          "description": "高雄市左營區忠言路與富國路，停車場旁"
-        },
-        {
-          "id": 223,
-          "no": "0228",
-          "name": "鳳東公園站",
-          "englishname": "FongdongPark",
-          "address": "東公園旁人行步道（臨鳳東路）",
-          "latitude": 22.62665,
-          "longitude": 120.37977,
-          "description": "東公園旁人行步道（臨鳳東路）"
-        },
-        {
-          "id": 224,
-          "no": "0229",
-          "name": "中山大學海工館站",
-          "englishname": "NSYSU-DepartmentofMarineEnvironmentandEnginnering",
-          "address": "中山大學海工館",
-          "latitude": 22.62879,
-          "longitude": 120.26266,
-          "description": "中山大學海工館"
-        },
-        {
-          "id": 225,
-          "no": "0230",
-          "name": "WOHotel",
-          "englishname": "GuomaoCommunity",
-          "address": "七賢二路WO旅店旁騎樓退縮地",
-          "latitude": 22.630972,
-          "longitude": 120.288855,
-          "description": "七賢二路WO旅店旁騎樓退縮地"
-        },
-        {
-          "id": 226,
-          "no": "0231",
-          "name": "管仲民裕站",
-          "englishname": "GuanzhongMinyu",
-          "address": "民裕街與管仲南路口",
-          "latitude": 22.60557,
-          "longitude": 120.31267,
-          "description": "民裕街與管仲南路口"
-        },
-        {
-          "id": 227,
-          "no": "0232",
-          "name": "楠梓高中站",
-          "englishname": "NanzihSeniorHighSchool",
-          "address": "楠梓高中大門口旁人行道(清豐路)",
-          "latitude": 22.7446,
-          "longitude": 120.33132,
-          "description": "學校大門口旁人行道(清豐路)"
-        },
-        {
-          "id": 228,
-          "no": "0233",
-          "name": "龍華國中站",
-          "englishname": "LonghuaJuniorHighSchool",
-          "address": "龍華國中人行步道（自由二路）",
-          "latitude": 22.65713,
-          "longitude": 120.30899,
-          "description": "龍華國中人行步道（自由二路）"
-        },
-        {
-          "id": 229,
-          "no": "0234",
-          "name": "金獅湖橋站",
-          "englishname": "JinshiLakeBridge",
-          "address": "新金獅湖橋旁，鼎金後路與天祥一路口",
-          "latitude": 22.66633,
-          "longitude": 120.32522,
-          "description": "新金獅湖橋旁，鼎金後路與天祥一路口"
-        },
-        {
-          "id": 230,
-          "no": "0235",
-          "name": "城市光廊站",
-          "englishname": "UrbanSpotlight",
-          "address": "新興區中華路與五福路側,靠近中華路圓環",
-          "latitude": 22.62275,
-          "longitude": 120.29926,
-          "description": "新興區中華路與五福路側,靠近中華路圓環"
-        },
-        {
-          "id": 231,
-          "no": "0236",
-          "name": "竹林公園站",
-          "englishname": "ZhulinPark",
-          "address": "竹林公園臨隆豐路側原機車停車格",
-          "latitude": 22.756118,
-          "longitude": 120.305734,
-          "description": "竹林公園臨隆豐路側原機車停車格"
-        },
-        {
-          "id": 232,
-          "no": "0237",
-          "name": "台鋁站(1)",
-          "englishname": "MLD(1)",
-          "address": "臨成功二路側人行步道",
-          "latitude": 22.603362,
-          "longitude": 120.302008,
-          "description": "臨成功二路側人行步道"
-        },
-        {
-          "id": 233,
-          "no": "0238",
-          "name": "台鋁站(2)",
-          "englishname": "MLD(2)",
-          "address": "臨成功二路側人行步道",
-          "latitude": 22.603152,
-          "longitude": 120.302115,
-          "description": "臨成功二路側人行步道"
-        },
-        {
-          "id": 234,
-          "no": "0239",
-          "name": "台糖楠梓量販店站",
-          "englishname": "Taisuco(Nanzihshop)",
-          "address": "量販店大門旁，清豐一路上",
-          "latitude": 22.73629,
-          "longitude": 120.33146,
-          "description": "量販店大門旁，清豐一路上"
-        },
-        {
-          "id": 235,
-          "no": "0240",
-          "name": "輔英科技大學站(2)",
-          "englishname": "FooyinUniversity(2)",
-          "address": "校門旁腳踏車車棚原租賃站對面",
-          "latitude": 22.603916,
-          "longitude": 120.391096,
-          "description": "校門旁腳踏車車棚原租賃站對面"
-        },
-        {
-          "id": 236,
-          "no": "0241",
-          "name": "右昌森林公園站",
-          "englishname": "YouchangForestPark",
-          "address": "右昌森林公園前，加宏路與加宏路156巷口",
-          "latitude": 22.7175,
-          "longitude": 120.29495,
-          "description": "右昌森林公園前，加宏路與加宏路156巷口"
-        },
-        {
-          "id": 237,
-          "no": "0242",
-          "name": "市立歷史博物館站",
-          "englishname": "KaohsiungMuseumOfHistory",
-          "address": "歷史博物館旁臨中正四路人行步道",
-          "latitude": 22.62636,
-          "longitude": 120.2867,
-          "description": "歷史博物館旁臨中正四路人行步道"
-        },
-        {
-          "id": 238,
-          "no": "0243",
-          "name": "河北立德站",
-          "englishname": "HebeiLide",
-          "address": "河北二路與立德街運河旁人行步道空間",
-          "latitude": 22.635532,
-          "longitude": 120.294940,
-          "description": "河北二路與立德街運河旁人行步道空間"
-        },
-        {
-          "id": 239,
-          "no": "0244",
-          "name": "介壽先鋒站",
-          "englishname": "JieshoXianfeng",
-          "address": "介壽路與先鋒路口人行步道前空地",
-          "latitude": 22.68124,
-          "longitude": 120.28281,
-          "description": "介壽路與先鋒路口人行步道前空地"
-        },
-        {
-          "id": 240,
-          "no": "0245",
-          "name": "步道公園站",
-          "englishname": "TrailPark",
-          "address": "高雄市小港區平和西路與鋼成街口",
-          "latitude": 22.56442,
-          "longitude": 120.33113,
-          "description": "高雄市小港區平和西路與鋼成街口"
-        },
-        {
-          "id": 241,
-          "no": "0246",
-          "name": "新莊國小站",
-          "englishname": "SinJhuangPrimarySchool",
-          "address": "新庄仔路與富國路口人行步道",
-          "latitude": 22.668842,
-          "longitude": 120.309522,
-          "description": "新庄仔路與富國路口人行步道"
-        },
-        {
-          "id": 242,
-          "no": "0247",
-          "name": "仁和公園站",
-          "englishname": "RenhePark",
-          "address": "仁和公園前人行步道",
-          "latitude": 22.6811,
-          "longitude": 120.3518,
-          "description": "仁和公園前人行步道"
-        },
-        {
-          "id": 243,
-          "no": "0249",
-          "name": "檨仔林埤濕地公園站",
-          "englishname": "SheTzaiLinPiWetlandPark",
-          "address": "鼎金後路靠近鼎金路420巷人行步道",
-          "latitude": 22.670838,
-          "longitude": 120.324777,
-          "description": "鼎金後路靠近鼎金路420巷人行步道"
-        },
-        {
-          "id": 244,
-          "no": "0250",
-          "name": "臺灣高雄少年及家事法院站",
-          "englishname": "TaiwanKaochsiungJuvenileandFamilyCourt",
-          "address": "常順街，少年及家事法院入口旁人行道",
-          "latitude": 22.73261,
-          "longitude": 120.33512,
-          "description": "常順街，少年及家事法院入口旁人行道"
-        },
-        {
-          "id": 245,
-          "no": "0251",
-          "name": "慈濟靜思堂站",
-          "englishname": "TzuChi",
-          "address": "河堤南路與自由一路口",
-          "latitude": 22.65436,
-          "longitude": 120.30887,
-          "description": "河堤南路與自由一路口"
-        },
-        {
-          "id": 246,
-          "no": "0252",
-          "name": "民族國中站",
-          "englishname": "MinzuJuniorHighSchool",
-          "address": "民族國中旁，大昌二路與覺民路口",
-          "latitude": 22.640612,
-          "longitude": 120.332317,
-          "description": "民族國中旁，大昌二路與覺民路口"
-        },
-        {
-          "id": 247,
-          "no": "0253",
-          "name": "武漢里活動中心站",
-          "englishname": "WuhanVillageActivityCenter",
-          "address": "活動中心西北側廣場(武營路239巷上廣場人行道)",
-          "latitude": 22.610988,
-          "longitude": 120.336050,
-          "description": "活動中心西北側廣場(武營路239巷上廣場人行道)"
-        },
-        {
-          "id": 248,
-          "no": "0254",
-          "name": "大灣國中站",
-          "englishname": "DawanJuniorHighSchool",
-          "address": "大灣國中大門右側人行道,臨仁雄路",
-          "latitude": 22.67661,
-          "longitude": 120.34195,
-          "description": "大灣國中大門右側人行道,臨仁雄路"
-        },
-        {
-          "id": 249,
-          "no": "0255",
-          "name": "漁港公園站",
-          "englishname": "YugangPark",
-          "address": "林園漁港公園前，占岸路上",
-          "latitude": 22.484821,
-          "longitude": 120.399454,
-          "description": "林園漁港公園前，占岸路上"
-        },
-        {
-          "id": 250,
-          "no": "0256",
-          "name": "八仙公園站",
-          "englishname": "BaxianPark",
-          "address": "國泰路一段與和興街口",
-          "latitude": 22.61557,
-          "longitude": 120.35475,
-          "description": "國泰路一段與和興街口"
-        },
-        {
-          "id": 251,
-          "no": "0257",
-          "name": "鳳儀書院站",
-          "englishname": "FongyiTutorialAcademy",
-          "address": "鳳儀書院大門旁",
-          "latitude": 22.62748,
-          "longitude": 120.35976,
-          "description": "鳳儀書院大門旁"
-        },
-        {
-          "id": 252,
-          "no": "0258",
-          "name": "海光兒童公園站",
-          "englishname": "HaiguangChildren'sPark",
-          "address": "瑞大街與瑞智街交叉口",
-          "latitude": 22.631881,
-          "longitude": 120.368270,
-          "description": "瑞大街與瑞智街交叉口"
-        },
-        {
-          "id": 253,
-          "no": "0259",
-          "name": "明誠高中站",
-          "englishname": "St.Paul'sHighSchool",
-          "address": "明誠高中後門停車場入口旁，華寧路上",
-          "latitude": 22.6675,
-          "longitude": 120.29223,
-          "description": "明誠高中後門停車場入口旁，華寧路上"
-        },
-        {
-          "id": 254,
-          "no": "0260",
-          "name": "鼓山國小站",
-          "englishname": "GushanElementarySchool",
-          "address": "鼓山國小大門旁，臨海二路與鼓波街口",
-          "latitude": 22.623279,
-          "longitude": 120.271726,
-          "description": "鼓山國小大門旁，臨海二路與鼓波街口"
-        },
-        {
-          "id": 255,
-          "no": "0261",
-          "name": "陽明公園站",
-          "englishname": "YangmingPark",
-          "address": "陽明公園前，澄和路與澄和路158巷口",
-          "latitude": 22.64536,
-          "longitude": 120.34127,
-          "description": "陽明公園前，澄和路與澄和路158巷口"
-        },
-        {
-          "id": 256,
-          "no": "0262",
-          "name": "空中大學站",
-          "englishname": "OpenUniversity",
-          "address": "空中大學大門旁，大業北路上",
-          "latitude": 22.56657,
-          "longitude": 120.3455,
-          "description": "空中大學大門旁，大業北路上"
-        },
-
-        {
-          "id": 257,
-          "no": "0264",
-          "name": "鳳山公園站",
-          "englishname": "FongshanPark",
-          "address": "公園人行步道,園茂路與園中路交叉口",
-          "latitude": 22.59456,
-          "longitude": 120.35774,
-          "description": "公園人行步道,園茂路與園中路交叉口"
-        },
-        {
-          "id": 258,
-          "no": "0265",
-          "name": "瑞祥高中站",
-          "englishname": "RueisiangHighSchool",
-          "address": "凱旋四路與班超路口",
-          "latitude": 22.60311,
-          "longitude": 120.32405,
-          "description": "凱旋四路與班超路口"
-        },
-        {
-          "id": 259,
-          "no": "0266",
-          "name": "華夏西北扶輪公園站",
-          "englishname": "HuasiaSibeiRotaryPark",
-          "address": "重義路與華夏路口",
-          "latitude": 22.68662,
-          "longitude": 120.31233,
-          "description": "重義路與華夏路口"
-        },
-        {
-          "id": 260,
-          "no": "0269",
-          "name": "岡山高中站",
-          "englishname": "KangshanSeniorHighSchool",
-          "address": "岡山高中大門旁，公園路上",
-          "latitude": 22.797096,
-          "longitude": 120.290730,
-          "description": "岡山高中大門旁，公園路上"
-        },
-        {
-          "id": 261,
-          "no": "0268",
-          "name": "圖書總館站(2)",
-          "englishname": "KaohsiungMainPublicLibrary2",
-          "address": "新光路上，面對大門廣場左側自行車停車場內",
-          "latitude": 22.61053,
-          "longitude": 120.30211,
-          "description": "新光路上，面對大門廣場左側自行車停車場內"
-        },
-        {
-          "id": 262,
-          "no": "0274",
-          "name": "民權少康站",
-          "englishname": "MincyuanShaokang",
-          "address": "民權二路與少康街口",
-          "latitude": 22.60933,
-          "longitude": 120.3131,
-          "description": "民權二路與少康街口"
-        },
-        {
-          "id": 263,
-          "no": "0272",
-          "name": "瑞豐公車總站",
-          "englishname": "RueifongBusStation",
-          "address": "瑞隆公車總站前，瑞隆路上",
-          "latitude": 22.60614,
-          "longitude": 120.33876,
-          "description": "瑞隆公車總站前，瑞隆路上"
-        },
-        {
-          "id": 264,
-          "no": "0271",
-          "name": "中崙國中站",
-          "englishname": "JhonglunJuniorhighSchool",
-          "address": "中崙路與中崙二路口",
-          "latitude": 22.60223,
-          "longitude": 120.35337,
-          "description": "中崙路與中崙二路口"
-        },
-        {
-          "id": 265,
-          "no": "0273",
-          "name": "牛潮埔公園站",
-          "englishname": "NiouchaopuPark",
-          "address": "北賢街與永忠街口",
-          "latitude": 22.64632,
-          "longitude": 120.37048,
-          "description": "北賢街與永忠街口"
-        },
-        {
-          "id": 266,
-          "no": "0263",
-          "name": "輕軌凱旋瑞田站",
-          "englishname": "KaisyuanRueitian(LRT)",
-          "address": "凱旋四路與瑞田街口",
-          "latitude": 22.599155,
-          "longitude": 120.319892,
-          "description": "凱旋四路與瑞田街口"
-        },
-        {
-          "id": 267,
-          "no": "0270",
-          "name": "永安區休閒公園站",
-          "englishname": "YonganDistrictLeisurePark",
-          "address": "永安區永華路與永安路口",
-          "latitude": 22.818683,
-          "longitude": 120.226385,
-          "description": "永安區永華路與永安路口"
-        },
-        {
-          "id": 268,
-          "no": "0267",
-          "name": "彌陀漁民活動中心",
-          "englishname": "MituoFishermen'sActivityCenter",
-          "address": "彌陀區漁會活動中心前，漁港一街與南寮路口",
-          "latitude": 22.76143,
-          "longitude": 120.2347,
-          "description": "彌陀區漁會活動中心前，漁港一街與南寮路口"
-        },
-        {
-          "id": 269,
-          "no": "0275",
-          "name": "八卦休閒公園站",
-          "englishname": "BaguaLeisurePark",
-          "address": "八卦休閒公園前，八德西路上",
-          "latitude": 22.690106,
-          "longitude": 120.337416,
-          "description": "八卦休閒公園前，八德西路上"
-        },
-        {
-          "id": 271,
-          "no": "0278",
-          "name": "大樹舊鐵橋站(2)",
-          "englishname": "RailwayBridgeMarshPark(2)",
-          "address": "竹寮路大樹舊鐵橋生態公園機車停車場內",
-          "latitude": 22.66458,
-          "longitude": 120.4272,
-          "description": "竹寮路大樹舊鐵橋生態公園機車停車場內"
-        },
-        {
-          "id": 272,
-          "no": "0277",
-          "name": "大樹舊鐵橋站(1)",
-          "englishname": "RailwayBridgeMarshPark(1)",
-          "address": "竹寮路舊鐵橋遊客中心大門旁",
-          "latitude": 22.66209,
-          "longitude": 120.4268,
-          "description": "竹寮路舊鐵橋遊客中心大門旁"
-        },
-        {
-          "id": 273,
-          "no": "0279",
-          "name": "九曲堂火車站(1)",
-          "englishname": "JioucyutangStation(1)",
-          "address": "九曲堂火車站前，復興街上",
-          "latitude": 22.65679,
-          "longitude": 120.42084,
-          "description": "九曲堂火車站前，復興街上"
-        },
-        {
-          "id": 274,
-          "no": "0280",
-          "name": "九曲堂火車站(2)",
-          "englishname": "JioucyutangStation(2)",
-          "address": "九曲堂火車站前，復興街上",
-          "latitude": 22.656953,
-          "longitude": 120.420897,
-          "description": "九曲堂火車站前，復興街上"
-        },
-        {
-          "id": 275,
-          "no": "0248",
-          "name": "濱海鼓元站",
-          "englishname": "BinhaiGuyuan",
-          "address": "鼓元街與濱海二路口",
-          "latitude": 22.623066,
-          "longitude": 120.269875,
-          "description": "鼓元街與濱海二路口"
-        },
-        {
-          "id": 276,
-          "no": "0285",
-          "name": "鼓山厚德站",
-          "englishname": "GushanHoude",
-          "address": "鼓山三路6巷與厚德路口",
-          "latitude": 22.64616,
-          "longitude": 120.278703,
-          "description": "鼓山三路6巷與厚德路口"
-        },
-        {
-          "id": 277,
-          "no": "0289",
-          "name": "龍勝大順站",
-          "englishname": "LongshengDashun",
-          "address": "龍勝路與大順一路口",
-          "latitude": 22.654522,
-          "longitude": 120.295648,
-          "description": "龍勝路與大順一路口"
-        },
-        {
-          "id": 278,
-          "no": "0283",
-          "name": "左營火車站",
-          "englishname": "ZuoyingStation",
-          "address": "新莊一路底，臨公有停車場",
-          "latitude": 22.67407,
-          "longitude": 120.29581,
-          "description": "新莊一路底，臨公有停車場"
-        },
-        {
-          "id": 279,
-          "no": "0281",
-          "name": "屏山國小站",
-          "englishname": "PingshanElementarySchool",
-          "address": "屏山國小大門旁，海功東路上",
-          "latitude": 22.69372,
-          "longitude": 120.30194,
-          "description": "屏山國小大門旁，海功東路上"
-        },
-        {
-          "id": 280,
-          "no": "0295",
-          "name": "永安溼地站",
-          "englishname": "YonganWetlands",
-          "address": "永安區永達路與新興路交叉口人行步道",
-          "latitude": 22.83408,
-          "longitude": 120.2098,
-          "description": "永安區永達路與新興路交叉口人行步道"
-        },
-        {
-          "id": 281,
-          "no": "0296",
-          "name": "空軍軍史館站",
-          "englishname": "AirForceMuseum",
-          "address": "空軍第三後勤指揮部大門旁，介壽西路上",
-          "latitude": 22.78448,
-          "longitude": 120.27589,
-          "description": "空軍第三後勤指揮部大門旁，介壽西路上"
-        },
-        {
-          "id": 282,
-          "no": "0284",
-          "name": "捷運橋頭火車站",
-          "englishname": "CiaotouStation(MRT)",
-          "address": "捷運橋頭火車站2號出口旁",
-          "latitude": 22.76102,
-          "longitude": 120.30996,
-          "description": "捷運橋頭火車站2號出口旁"
-        },
-        {
-          "id": 283,
-          "no": "0294",
-          "name": "橋頭地院站",
-          "englishname": "CiaotouStation(MRT)",
-          "address": "橋頭地院側門出入口右側人行步道",
-          "latitude": 22.73764,
-          "longitude": 120.304188,
-          "description": "橋頭地院側門出入口右側人行步道"
-        },
-        {
-          "id": 284,
-          "no": "0276",
-          "name": "北辰兒童公園站",
-          "englishname": "BeichenChildren'sPark",
-          "address": "文龍東路與北辰街15巷口",
-          "latitude": 22.64049,
-          "longitude": 120.36525,
-          "description": "文龍東路與北辰街15巷口"
-        },
-        {
-          "id": 285,
-          "no": "0290",
-          "name": "五甲社區活動中心站",
-          "englishname": "WujiaCommunityActivityCenter",
-          "address": "新富路與新富路590巷口",
-          "latitude": 22.61514,
-          "longitude": 120.34825,
-          "description": "新富路與新富路590巷口"
-        },
-        {
-          "id": 286,
-          "no": "0292",
-          "name": "國際商工站",
-          "englishname": "KuochiSeniorVocationalHighSchoolOfCommerceandTechnology",
-          "address": "三多二路與凱旋二路口",
-          "latitude": 22.62101,
-          "longitude": 120.32574,
-          "description": "三多二路與凱旋二路口"
-        },
-        {
-          "id": 287,
-          "no": "0293",
-          "name": "興仁國中站",
-          "englishname": "SingrenJuniorHighSchool",
-          "address": "德昌路與興仁街口",
-          "latitude": 22.58682,
-          "longitude": 120.31382,
-          "description": "德昌路與興仁街口"
-        },
-        {
-          "id": 288,
-          "no": "0287",
-          "name": "北昌路站",
-          "englishname": "BeichangRd",
-          "address": "北昌路與北昌三街口",
-          "latitude": 22.64518,
-          "longitude": 120.37258,
-          "description": "北昌路與北昌三街口"
-        },
-        {
-          "id": 289,
-          "no": "0286",
-          "name": "鳳山火車站(2)",
-          "englishname": "FengshanStation(2)",
-          "address": "面對原站址右側擴充",
-          "latitude": 22.63057,
-          "longitude": 120.35826,
-          "description": "面對原站址右側擴充"
-        },
-        {
-          "id": 290,
-          "no": "0291",
-          "name": "新泰兒童公園站",
-          "englishname": "SintaiChildren'sPark",
-          "address": "新強路上，新國街與新泰街間",
-          "latitude": 22.61092,
-          "longitude": 120.34361,
-          "description": "新強路上，新國街與新泰街間"
-        },
-        {
-          "id": 291,
-          "no": "0282",
-          "name": "瑞豐國中站",
-          "englishname": "RuifengJuniorHighSchool",
-          "address": "公正路與瑞北路口",
-          "latitude": 22.6091,
-          "longitude": 120.33057,
-          "description": "公正路與瑞北路口"
-        },
-        {
-          "id": 292,
-          "no": "0298",
-          "name": "美都公園站",
-          "englishname": "MeiduPark",
-          "address": "美都路與十全三路口",
-          "latitude": 22.646569,
-          "longitude": 120.289018,
-          "description": "美都路與十全三路口"
-        },
-        {
-          "id": 293,
-          "no": "0300",
-          "name": "中央公園站(3)",
-          "englishname": "CentralPark(3)",
-          "address": "捷運中央公園站3號出口後方人行步道",
-          "latitude": 22.625938,
-          "longitude": 120.301552,
-          "description": "捷運中央公園站3號出口後方人行步道"
-        },
-        {
-          "id": 294,
-          "no": "0297",
-          "name": "輕軌軟體園區站",
-          "englishname": "SoftwareTechnologyPark(LRT)",
-          "address": "復興四路與成功二路口",
-          "latitude": 22.60517,
-          "longitude": 120.30069,
-          "description": "復興四路與成功二路口"
-        },
-        {
-          "id": 295,
-          "no": "0299",
-          "name": "中正預校站",
-          "englishname": "ChungChengArmedForcesPreparatorySchool",
-          "address": "中正預校大門旁，凱旋路上",
-          "latitude": 22.607155,
-          "longitude": 120.359701,
-          "description": "中正預校大門旁，凱旋路上"
-        },
-        {
-          "id": 296,
-          "no": "0299",
-          "name": "航空教育展示館站",
-          "englishname": "AviationEducationExhibitionHall",
-          "address": "航空教育展示館大門旁，致遠路上",
-          "latitude": 22.79462,
-          "longitude": 120.27131,
-          "description": "航空教育展示館大門旁，致遠路上"
-        },
-        {
-          "id": 297,
-          "no": "0301",
-          "name": "國昌國中站",
-          "englishname": "GouchangJuniorHighSchool",
-          "address": "國昌國中大門旁，德民路上",
-          "latitude": 22.71917,
-          "longitude": 120.285997,
-          "description": "國昌國中大門旁，德民路上"
-        },
-        {
-          "id": 298,
-          "no": "0303",
-          "name": "自強新田站",
-          "englishname": "ZihciangSintian",
-          "address": "自強三路公有機車停車場出入口,自強三路與新田路交叉口",
-          "latitude": 22.620423,
-          "longitude": 120.29733,
-          "description": "自強三路公有機車停車場出入口,自強三路與新田路交叉口"
-        },
-        {
-          "id": 299,
-          "no": "0152",
-          "name": "輕軌旅運中心站",
-          "englishname": "CruiseTerminal(LRT)",
-          "address": "海邊路與永平路交叉口",
-          "latitude": 22.6128,
-          "longitude": 120.2921,
-          "description": "海邊路與永平路交叉口"
-        },
-        {
-          "id": 300,
-          "no": "0307",
-          "name": "凱旋醫院站",
-          "englishname": "KaisyuanHospital",
-          "address": "凱旋醫院大門前，凱旋二路上",
-          "latitude": 22.62489,
-          "longitude": 120.32405,
-          "description": "凱旋醫院大門前，凱旋二路上"
-        },
-        {
-          "id": 301,
-          "no": "0306",
-          "name": "鳳山商工站",
-          "englishname": "NationalFeng-ShanSenioCcommercialIndustrialVocationalSchool",
-          "address": "鳳山商工旁，建國三路上",
-          "latitude": 22.63627,
-          "longitude": 120.35689,
-          "description": "鳳山商工旁，建國三路上"
-        },
-        {
-          "id": 302,
-          "no": "0304",
-          "name": "桂林公園站(1)",
-          "englishname": "GueilinPark(1)",
-          "address": "桂林國小對面，桂陽路上",
-          "latitude": 22.581963,
-          "longitude": 120.350604,
-          "description": "桂林國小對面，桂陽路上"
-        },
-        {
-          "id": 303,
-          "no": "0305",
-          "name": "桂林公園站(2)",
-          "englishname": "CruiseTerminal(LRT)",
-          "address": "桂林國小對面，桂陽路上",
-          "latitude": 22.581987,
-          "longitude": 120.350347,
-          "description": "桂林國小對面，桂陽路上"
-        },
-        {
-          "id": 304,
-          "no": "0301",
-          "name": "月世界站",
-          "englishname": "MoonWorld",
-          "address": "大群停車場，鄰近停車場公廁",
-          "latitude": 22.88657,
-          "longitude": 120.39162,
-          "description": "大群停車場，鄰近停車場公廁"
-        },
-        {
-          "id": 305,
-          "no": "0309",
-          "name": "清水嚴榕樹休憩公園站",
-          "englishname": "CingshueiyanBanyanLeisurePark",
-          "address": "清水巖榕樹休憩公園入口旁，清水岩路上",
-          "latitude": 22.52183,
-          "longitude": 120.39078,
-          "description": "清水巖榕樹休憩公園入口旁，清水岩路上"
-        },
-        {
-          "id": 306,
-          "no": "0308",
-          "name": "鼓山一路站",
-          "englishname": "Gusha1stRd.",
-          "address": "鼓山一路與鼓山一路119巷口",
-          "latitude": 22.627848,
-          "longitude": 120.279371,
-          "description": "鼓山一路與鼓山一路119巷口"
-        },
-        {
-          "id": 307,
-          "no": "0311",
-          "name": "滷博館站",
-          "englishname": "Soya-mixedMeatMuseum",
-          "address": "岡山區本洲五街與本洲六街口",
-          "latitude": 22.81849,
-          "longitude": 120.26778,
-          "description": "岡山區本洲五街與本洲六街口"
-        },
-        {
-          "id": 308,
-          "no": "0312",
-          "name": "臨海兒童公園站",
-          "englishname": "LinhaiChildren'sPark",
-          "address": "臨海兒童公園內，東亞南路轉彎處",
-          "latitude": 22.81849,
-          "longitude": 120.26778,
-          "description": "臨海兒童公園內，東亞南路轉彎處"
-        },
-        {
-          "id": 309,
-          "no": "0313",
-          "name": "中崙公園站",
-          "englishname": "JhonglunPark",
-          "address": "中崙公共托嬰中心旁，中崙五路上",
-          "latitude": 22.59713,
-          "longitude": 120.35371,
-          "description": "中崙公共托嬰中心旁，中崙五路上"
-        },
-        {
-          "id": 310,
-          "no": "0314",
-          "name": "岡山火車站",
-          "englishname": "GangshanStation",
-          "address": "岡山火車站前，中山北路上",
-          "latitude": 22.79291,
-          "longitude": 120.29933,
-          "description": "岡山火車站前，中山北路上"
-        },
-        {
+    {
+        "id": 1,
+        "no": "0001",
+        "name": "蓮池潭站",
+        "englishname": "LotusPond",
+        "address": "高雄市左營區環潭路蓮池潭風景區管理所後方入口處",
+        "latitude": 22.680599,
+        "longitude": 120.297466,
+        "description": "蓮池潭環潭路-停車場"
+    },
+    {
+        "id": 2,
+        "no": "0002",
+        "name": "鳳山火車站",
+        "englishname": "FengshanStation",
+        "address": "高雄市鳳山區曹公路與協和路交叉口",
+        "latitude": 22.630663,
+        "longitude": 120.357928,
+        "description": "曹公路與協和路交叉口"
+    },
+    {
+        "id": 3,
+        "no": "0003",
+        "name": "美麗島站",
+        "englishname": "FormosaBoulevard(MRT)",
+        "address": "高雄市前金區六合二路",
+        "latitude": 22.632193347424834,
+        "longitude": 120.30173599720001,
+        "description": "O5R10美麗島站 9號出口"
+    },
+    {
+        "id": 5,
+        "no": "0005",
+        "name": "棧貳庫站",
+        "englishname": "KaoshiungPortWarehouseNo.2",
+        "address": "棧貳庫站外停車場",
+        "latitude": 22.618946,
+        "longitude": 120.2778,
+        "description": "棧貳庫站外停車場"
+    },
+    {
+        "id": 6,
+        "no": "0006",
+        "name": "西子灣站",
+        "englishname": "Sizihwan(MRT)",
+        "address": "高雄市鼓山區鼓山一路",
+        "latitude": 22.622260627731624,
+        "longitude": 120.27546644210815,
+        "description": "O1西子灣站 2號出口"
+    },
+    {
+        "id": 7,
+        "no": "0007",
+        "name": "高雄電影館站",
+        "englishname": "KaohsiungFilmArchive",
+        "address": "高雄市盬埕區下水道展示館前",
+        "latitude": 22.62257258348331,
+        "longitude": 120.2891618013382,
+        "description": "電影圖書館旁下水道展示館前自行車道休息區"
+    },
+    {
+        "id": 8,
+        "no": "0008",
+        "name": "市議會(舊址)站",
+        "englishname": "CityCouncilFormerSite(MRT)",
+        "address": "高雄市前金區中華三路與中正四路口",
+        "latitude": 22.629470090910246,
+        "longitude": 120.29563128948212,
+        "description": "O4市議會站 4號出口"
+    },
+    {
+        "id": 9,
+        "no": "0009",
+        "name": "中央公園站",
+        "englishname": "CentralPark(MRT)",
+        "address": "高雄市前金區中山二路",
+        "latitude": 22.623751076601955,
+        "longitude": 120.30080795288086,
+        "description": "R9中央公園站"
+    },
+    {
+        "id": 10,
+        "no": "0010",
+        "name": "獅甲站",
+        "englishname": "Shihjia(MRT)",
+        "address": "高雄市前鎮區中山三路勞工公園",
+        "latitude": 22.605800244407053,
+        "longitude": 120.30856490135193,
+        "description": "R7獅甲站 2號出口"
+    },
+    {
+        "id": 11,
+        "no": "0011",
+        "name": "市府四維站",
+        "englishname": "CityGovernment-SihweiAdministrationCenter",
+        "address": "高雄市苓雅區四維三路與永定街口",
+        "latitude": 22.619958075292246,
+        "longitude": 120.31145095825195,
+        "description": "苓雅區四維三路2號"
+    },
+    {
+        "id": 12,
+        "no": "0012",
+        "name": "文化師大站",
+        "englishname": "NationalKaohsiungNormalUniversity",
+        "address": "高雄市苓雅區和平一路文化中心旁",
+        "latitude": 22.625204,
+        "longitude": 120.319704,
+        "description": "文化中心東南角、高師大對面"
+    },
+    {
+        "id": 13,
+        "no": "0013",
+        "name": "衛武營站",
+        "englishname": "Weiwuying(MRT)",
+        "address": "高雄市苓雅區中正一路與建軍路口",
+        "latitude": 22.624937,
+        "longitude": 120.341108,
+        "description": "衛武營站"
+    },
+    {
+        "id": 14,
+        "no": "0015",
+        "name": "新興區公所站",
+        "englishname": "SinsingDistrictOffice",
+        "address": "高雄市新興區錦田路",
+        "latitude": 22.63099512120638,
+        "longitude": 120.31023323535919,
+        "description": "O6信義國小站 1號出口"
+    },
+    {
+        "id": 16,
+        "no": "0017",
+        "name": "後驛站",
+        "englishname": "Houyi(MRT)",
+        "address": "高雄市三民區博愛一路",
+        "latitude": 22.648180250289816,
+        "longitude": 120.30351161956787,
+        "description": "R12後驛站 2號出口"
+    },
+    {
+        "id": 17,
+        "no": "0018",
+        "name": "凹仔底站",
+        "englishname": "Aozihdi(MRT)",
+        "address": "高雄市鼓山區博愛二路",
+        "latitude": 22.658611084805095,
+        "longitude": 120.30269086360931,
+        "description": "R13凹仔底站 4號出口"
+    },
+    {
+        "id": 18,
+        "no": "0019",
+        "name": "生態園區站",
+        "englishname": "EcologicalDistrict(MRT)",
+        "address": "高雄市左營區博愛三路",
+        "latitude": 22.676995542475076,
+        "longitude": 120.30648350715637,
+        "description": "R15生態園區站 2號出口"
+    },
+    {
+        "id": 20,
+        "no": "0021",
+        "name": "三多站",
+        "englishname": "SanduoShoppingDistrict(MRT)",
+        "address": "高雄市苓雅區中山二路與三多三路圓環處",
+        "latitude": 22.614347608684472,
+        "longitude": 120.30465960502625,
+        "description": "R8三多商圈站 5號出口"
+    },
+    {
+        "id": 21,
+        "no": "0022",
+        "name": "巨蛋站",
+        "englishname": "KaohsiungArena(MRT)",
+        "address": "高雄市左營區博愛二路",
+        "latitude": 22.665981993881495,
+        "longitude": 120.30310928821564,
+        "description": "R14巨蛋站 1號出口"
+    },
+    {
+        "id": 22,
+        "no": "0023",
+        "name": "民生圓環站",
+        "englishname": "MinshengRoundabout",
+        "address": "新興區榮治里中山一路距民生一路30米處",
+        "latitude": 22.627638051622682,
+        "longitude": 120.30126392841339,
+        "description": "民生圓環（民生一路與中山一路，近美利達）"
+    },
+    {
+        "id": 23,
+        "no": "0024",
+        "name": "民生民權站",
+        "englishname": "MinshengMingcheng",
+        "address": "苓雅區德生里民權一路與民生一路東南側人行道上",
+        "latitude": 22.627251834818622,
+        "longitude": 120.31089842319489,
+        "description": "民權一路與民生一路東南側人行道上"
+    },
+    {
+        "id": 24,
+        "no": "0025",
+        "name": "七賢忠孝站",
+        "englishname": "Cisianjhongsiao",
+        "address": "新興區成功里七賢一路距忠孝一路50米處",
+        "latitude": 22.634203571250502,
+        "longitude": 120.30589878559113,
+        "description": "中華電信總局"
+    },
+    {
+        "id": 25,
+        "no": "0026",
+        "name": "凱旋站",
+        "englishname": "Kaisyuan(MRT)",
+        "address": "高雄市前鎮區中山三路與時代大道口",
+        "latitude": 22.598782689245358,
+        "longitude": 120.31339287757874,
+        "description": "R6凱旋站 3號出口"
+    },
+    {
+        "id": 26,
+        "no": "0027",
+        "name": "技擊館站",
+        "englishname": "MartialArtsStadium(MRT)",
+        "address": "高雄市苓雅區中正一路",
+        "latitude": 22.627368,
+        "longitude": 120.333654,
+        "description": "O9捷運 2號出口"
+    },
+    {
+        "id": 27,
+        "no": "0028",
+        "name": "新光中山站",
+        "englishname": "SinguangZhongshan",
+        "address": "高雄市前鎮區中山二路與新光路口",
+        "latitude": 22.611980547065592,
+        "longitude": 120.30495464801788,
+        "description": "R8三多站 2號出口"
+    },
+    {
+        "id": 28,
+        "no": "0029",
+        "name": "五塊厝站",
+        "englishname": "Wukuaicuo(MRT)",
+        "address": "高雄市苓雅區中正一路",
+        "latitude": 22.628955141793917,
+        "longitude": 120.32898724079132,
+        "description": "O8五塊厝 4號出口"
+    },
+    {
+        "id": 29,
+        "no": "0030",
+        "name": "市警局站",
+        "englishname": "KaohsiungCityGovernmentPoliceBureau",
+        "address": "前金區中正四路與市中一路(市警局前)",
+        "latitude": 22.62771232396059,
+        "longitude": 120.29067993164062,
+        "description": "高雄市政府警察局"
+    },
+    {
+        "id": 30,
+        "no": "0031",
+        "name": "明誠光興站",
+        "englishname": "MingchengGuangsing",
+        "address": "左營區明誠二路距光興街口52米處",
+        "latitude": 22.660912989455902,
+        "longitude": 120.31067848205566,
+        "description": "近明誠路光興路"
+    },
+    {
+        "id": 31,
+        "no": "0032",
+        "name": "家樂福愛河站",
+        "englishname": "CarrefourLoveRiverStore",
+        "address": "三民區河東路距河北二路約72米處",
+        "latitude": 22.633975813377926,
+        "longitude": 120.28585195541382,
+        "description": "愛河家樂福"
+    },
+    {
+        "id": 32,
+        "no": "0033",
+        "name": "愛河之心站",
+        "englishname": "HeartofLoveRiver",
+        "address": "三民區博愛一路距同盟一路約80米處",
+        "latitude": 22.65225960789147,
+        "longitude": 120.30389249324799,
+        "description": "愛河之心"
+    },
+    {
+        "id": 33,
+        "no": "0034",
+        "name": "高雄醫學大學站",
+        "englishname": "KaohsiungMedicalUniversity",
+        "address": "高雄市三民區同盟一路(高醫大學大門旁)",
+        "latitude": 22.64921,
+        "longitude": 120.309919,
+        "description": "高雄醫學大學大門旁"
+    },
+    {
+        "id": 34,
+        "no": "0035",
+        "name": "新光成功站",
+        "englishname": "SinguangZhengkong",
+        "address": "高雄市前鎮區成功二路距新光路18米處",
+        "latitude": 22.610202748062417,
+        "longitude": 120.29934346675873,
+        "description": "新光公園（新光路成功路口）"
+    },
+    {
+        "id": 35,
+        "no": "0036",
+        "name": "夢時代站",
+        "englishname": "DreamMall",
+        "address": "高雄市前鎮區成功二路與時代大道口東北側",
+        "latitude": 22.595860665927464,
+        "longitude": 120.30492782592773,
+        "description": "統一阪急前方草坪(時代大道與成功路口)"
+    },
+    {
+        "id": 36,
+        "no": "0037",
+        "name": "裕誠辛亥站",
+        "englishname": "YuchengXinhai",
+        "address": "左營區裕誠路與辛亥路辛亥停車場旁",
+        "latitude": 22.664694959713724,
+        "longitude": 120.3101795911789,
+        "description": "辛亥停車場"
+    },
+    {
+        "id": 37,
+        "no": "0038",
+        "name": "文化中正站",
+        "englishname": "CulturalCenter(MRT)",
+        "address": "高雄市苓雅區和平一路與中正一路口",
+        "latitude": 22.629767176061296,
+        "longitude": 120.31825304031372,
+        "description": "O7文化中心站 3號出口"
+    },
+    {
+        "id": 39,
+        "no": "0040",
+        "name": "光華公園站",
+        "englishname": "GuanghuaPark",
+        "address": "前鎮區民裕街與一心一路口",
+        "latitude": 22.608548730588577,
+        "longitude": 120.31643450260162,
+        "description": "光華公園（一心路光華路口）"
+    },
+    {
+        "id": 40,
+        "no": "0041",
+        "name": "民權公園站",
+        "englishname": "MincyuanPark",
+        "address": "前鎮區民權二路與二聖二路民權公園旁",
+        "latitude": 22.613619667293644,
+        "longitude": 120.31397759914398,
+        "description": "民權公園"
+    },
+    {
+        "id": 41,
+        "no": "0042",
+        "name": "國賓飯店站",
+        "englishname": "AmbassadorHotel",
+        "address": "前金區河東路與民生二路國賓飯店旁",
+        "latitude": 22.624053125732924,
+        "longitude": 120.2904063463211,
+        "description": "國賓飯店西側，河東路民生路"
+    },
+    {
+        "id": 42,
+        "no": "0043",
+        "name": "鹽埕埔站",
+        "englishname": "Yanchengpu(MRT)",
+        "address": "鹽埕區大勇路",
+        "latitude": 22.62258743850145,
+        "longitude": 120.28315901756287,
+        "description": "O1鹽埕埔站 1號出口"
+    },
+    {
+        "id": 43,
+        "no": "0044",
+        "name": "家樂福成功站",
+        "englishname": "CarrefourZhengKongStore",
+        "address": "前鎮區中華五路與復興三路家樂福前",
+        "latitude": 22.605002925530105,
+        "longitude": 120.30487954616547,
+        "description": "家樂福成功店"
+    },
+    {
+        "id": 44,
+        "no": "0045",
+        "name": "高雄女中站",
+        "englishname": "KaohsiungGirls'SeniorHighSchool",
+        "address": "前金區五福三路高雄女中前",
+        "latitude": 22.620789969654606,
+        "longitude": 120.29359817504883,
+        "description": "高雄女中前"
+    },
+    {
+        "id": 45,
+        "no": "0046",
+        "name": "中山大學站",
+        "englishname": "NationalSunYat-SenUniversity",
+        "address": "中山大學內",
+        "latitude": 22.624337,
+        "longitude": 120.26566,
+        "description": "中山大學行政大樓門口"
+    },
+    {
+        "id": 46,
+        "no": "0047",
+        "name": "科工館站",
+        "englishname": "NationalScienceandTechnologyMuseum",
+        "address": "三民區九如一路科工館前",
+        "latitude": 22.639877591172358,
+        "longitude": 120.32280743122101,
+        "description": "科工館大門"
+    },
+    {
+        "id": 47,
+        "no": "0048",
+        "name": "華榮公園站",
+        "englishname": "HuarongPark",
+        "address": "鼓山區文信路與華榮路口華榮公園旁",
+        "latitude": 22.664363298952562,
+        "longitude": 120.29687583446503,
+        "description": "華榮公園"
+    },
+    {
+        "id": 48,
+        "no": "0049",
+        "name": "森林公園站",
+        "englishname": "AozihdiForestPark",
+        "address": "鼓山區神農路與龍勝路口",
+        "latitude": 22.657992286648,
+        "longitude": 120.29633402824402,
+        "description": "凹子底森林公園"
+    },
+    {
+        "id": 49,
+        "no": "0050",
+        "name": "美術館藝片天站",
+        "englishname": "KaohsiungMuseumofFineArt",
+        "address": "高雄市鼓山區美術東一路(中華藝術學校後面)",
+        "latitude": 22.655918,
+        "longitude": 120.289135,
+        "description": "美術東一路(中華藝術學校後面)"
+    },
+    {
+        "id": 50,
+        "no": "0051",
+        "name": "大東文化藝術中心站-02",
+        "englishname": "Da-DongArtCenter-02",
+        "address": "高雄市鳳山區光遠路",
+        "latitude": 22.625133,
+        "longitude": 120.362708,
+        "description": "O13大東站 2號出口"
+    },
+    {
+        "id": 51,
+        "no": "0052",
+        "name": "大東文化藝術中心站-01",
+        "englishname": "Da-DongArtCenter-01",
+        "address": "高雄市鳳山區光遠路",
+        "latitude": 22.625063,
+        "longitude": 120.363416,
+        "description": "O13大東站 1號出口對面"
+    },
+    {
+        "id": 52,
+        "no": "0053",
+        "name": "捷運鳳山站",
+        "englishname": "Fongshan(MRT)",
+        "address": "高雄市鳳山區光遠路",
+        "latitude": 22.62594,
+        "longitude": 120.355828,
+        "description": "O12鳳山站 1號出口"
+    },
+    {
+        "id": 53,
+        "no": "0054",
+        "name": "鳳凌廣場站",
+        "englishname": "FonglingPlaza",
+        "address": "鳳凌廣場左邊",
+        "latitude": 22.623472,
+        "longitude": 120.355930,
+        "description": "鳳凌廣場左邊"
+    },
+    {
+        "id": 54,
+        "no": "0055",
+        "name": "市議會(新址)站",
+        "englishname": "CityCouncil(New)",
+        "address": "鳳山區國泰路2段136號對面(東區稅捐稽徵處)",
+        "latitude": 22.619844,
+        "longitude": 120.348068,
+        "description": "高雄市東區稅捐稽徵處"
+    },
+    {
+        "id": 55,
+        "no": "0056",
+        "name": "捷運鳳山西站",
+        "englishname": "FongshanWest(MRT)",
+        "address": "高雄市鳳山區自由路",
+        "latitude": 22.625313,
+        "longitude": 120.348543,
+        "description": "O11鳳山西站 2號出口"
+    },
+    {
+        "id": 56,
+        "no": "0057",
+        "name": "市府鳳山行政中心站",
+        "englishname": "CityGovernmentFongshanAdministrationCenter",
+        "address": "澄清路與光復路二段交叉路口",
+        "latitude": 22.62974,
+        "longitude": 120.344351,
+        "description": "澄清路與光復路二段交叉路口"
+    },
+    {
+        "id": 57,
+        "no": "0058",
+        "name": "澄清湖站",
+        "englishname": "ChengcingLake",
+        "address": "面對澄清湖正門左邊-意向園區",
+        "latitude": 22.653562,
+        "longitude": 120.349281,
+        "description": "面對澄清湖正門左邊"
+    },
+    {
+        "id": 58,
+        "no": "0059",
+        "name": "捷運小港站",
+        "englishname": "Siaogang(MRT)",
+        "address": "高雄市小港區沿海一路",
+        "latitude": 22.564789,
+        "longitude": 120.353658,
+        "description": "R3小港站 4號出口"
+    },
+    {
+        "id": 59,
+        "no": "0060",
+        "name": "餐旅高中站",
+        "englishname": "HospitalitySeniorHighSchool",
+        "address": "餐旅高中正門右邊",
+        "latitude": 22.566265,
+        "longitude": 120.372176,
+        "description": "餐旅國中站-餐旅國中正門右邊"
+    },
+    {
+        "id": 60,
+        "no": "0061",
+        "name": "社教館站",
+        "englishname": "SocialEducationCenter",
+        "address": "學府路與大鵬路口",
+        "latitude": 22.565198,
+        "longitude": 120.358618,
+        "description": "學府路與大鵬路口"
+    },
+    {
+        "id": 61,
+        "no": "0062",
+        "name": "班超公園站",
+        "englishname": "BanchaoPark",
+        "address": "班超路上(岡山中街與忠誠路284巷中間)",
+        "latitude": 22.600957,
+        "longitude": 120.32557,
+        "description": "班超路上"
+    },
+    {
+        "id": 62,
+        "no": "0063",
+        "name": "高雄中學站",
+        "englishname": "KaohsiungSeniorHighschool",
+        "address": "高雄中學大門右側",
+        "latitude": 22.637937,
+        "longitude": 120.298753,
+        "description": "高雄中學大門右側"
+    },
+    {
+        "id": 63,
+        "no": "0064",
+        "name": "博愛國小站",
+        "englishname": "BoAiElementarySchool",
+        "address": "十全與自由路周邊商圈",
+        "latitude": 22.645225,
+        "longitude": 120.307481,
+        "description": "十全與自由路周邊商圈"
+    },
+    {
+        "id": 64,
+        "no": "0065",
+        "name": "客家文物館站",
+        "englishname": "HakkaCultureGallery",
+        "address": "客家文物會館左側",
+        "latitude": 22.650571,
+        "longitude": 120.295722,
+        "description": "客家文物會館左側"
+    },
+    {
+        "id": 65,
+        "no": "0066",
+        "name": "明堤公園站",
+        "englishname": "MingtiPark",
+        "address": "明堤公園-明仁路上",
+        "latitude": 22.662922,
+        "longitude": 120.312202,
+        "description": "明堤公園-明仁路上"
+    },
+    {
+        "id": 66,
+        "no": "0067",
+        "name": "微笑公園站",
+        "englishname": "SmilePark",
+        "address": "博愛三路與至真路交叉路口",
+        "latitude": 22.671912,
+        "longitude": 120.304348,
+        "description": "博愛3路與至真路交叉路口"
+    },
+    {
+        "id": 67,
+        "no": "0068",
+        "name": "左營國小站",
+        "englishname": "ZuoyingElementaryschool",
+        "address": "左營國小側門(實踐路與軍校路交叉口)",
+        "latitude": 22.690574,
+        "longitude": 120.292463,
+        "description": "左營國小側門"
+    },
+    {
+        "id": 68,
+        "no": "0069",
+        "name": "捷運世運主場館站",
+        "englishname": "WorldGames(MRT)",
+        "address": "高雄市楠梓區左楠路",
+        "latitude": 22.700928,
+        "longitude": 120.302471,
+        "description": "R17世運主場館站 1號出口對面"
+    },
+    {
+        "id": 69,
+        "no": "0070",
+        "name": "世運主場館站",
+        "englishname": "WorldGames",
+        "address": "國軍左營醫院對面",
+        "latitude": 22.701989,
+        "longitude": 120.29259,
+        "description": "國軍左營醫院對面"
+    },
+    {
+        "id": 70,
+        "no": "0071",
+        "name": "捷運楠梓加工出口區站",
+        "englishname": "NanzihExportProcessingZone(MRT)",
+        "address": "高雄市楠梓區加昌路",
+        "latitude": 22.718406,
+        "longitude": 120.306221,
+        "description": "R19楠梓加工出口區站 1號出口"
+    },
+    {
+        "id": 71,
+        "no": "0072",
+        "name": "加昌國小站",
+        "englishname": "JiachangElementarySchool",
+        "address": "高雄市楠梓區樂群路220號",
+        "latitude": 22.721474,
+        "longitude": 120.296452,
+        "description": "高雄市楠梓區樂群路220號"
+    },
+    {
+        "id": 72,
+        "no": "0073",
+        "name": "捷運都會公園站",
+        "englishname": "MetropolitanPark(MRT)",
+        "address": "高雄市楠梓區高楠公路",
+        "latitude": 22.730211,
+        "longitude": 120.32053,
+        "description": "R21都會公園站 4號出口"
+    },
+    {
+        "id": 73,
+        "no": "0074",
+        "name": "高雄第一科技大學站",
+        "englishname": "KaohsiungFirstUniversityofScienceandTechnology",
+        "address": "高雄市楠梓區卓越路2號",
+        "latitude": 22.752699,
+        "longitude": 120.331084,
+        "description": "高雄第一科技大學校內"
+    },
+    {
+        "id": 74,
+        "no": "0075",
+        "name": "捷運青埔站",
+        "englishname": "Cingpu(MRT)",
+        "address": "高雄市橋頭區經武路",
+        "latitude": 22.744869,
+        "longitude": 120.317899,
+        "description": "R22青埔站 站外機車停車場"
+    },
+    {
+        "id": 75,
+        "no": "0077",
+        "name": "捷運南岡山站",
+        "englishname": "GangshanSouth(MRT)",
+        "address": "高雄市岡山區中山南路",
+        "latitude": 22.780613,
+        "longitude": 120.300722,
+        "description": "R24南岡山站 1號出口公車轉候庭"
+    },
+    {
+        "id": 76,
+        "no": "0078",
+        "name": "岡山區公所站",
+        "englishname": "GangshanDistrictOffice",
+        "address": "高雄市岡山區岡山路343號(區公所後方停車場旁)",
+        "latitude": 22.797512,
+        "longitude": 120.294591,
+        "description": "岡山區公所後方停車場旁"
+    },
+    {
+        "id": 77,
+        "no": "0079",
+        "name": "西子樓站",
+        "englishname": "SunYat-SenAlumniHouse",
+        "address": "中山大學西子樓前空地",
+        "latitude": 22.618200,
+        "longitude": 120.266181,
+        "description": "中山大學校友會館"
+    },
+    {
+        "id": 78,
+        "no": "0080",
+        "name": "龍虎塔站",
+        "englishname": "DragonandTigerPagoda",
+        "address": "高雄市左營區勝利路110號(蓮池潭旅遊服務中心旁)",
+        "latitude": 22.679928,
+        "longitude": 120.292102,
+        "description": "蓮池潭旅遊服務中心旁"
+    },
+    {
+        "id": 79,
+        "no": "0081",
+        "name": "右昌圖書館站",
+        "englishname": "KaohsiungPublicLibrary(Youchang)",
+        "address": "高雄市楠梓區藍昌路72號",
+        "latitude": 22.715581,
+        "longitude": 120.290213,
+        "description": "高雄市楠梓區藍昌路72號(圖書館旁空地)"
+    },
+    {
+        "id": 80,
+        "no": "0082",
+        "name": "中鋼台船站",
+        "englishname": "ChinaShipBuildingCorporation",
+        "address": "面對台船大門口之左側人行道上",
+        "latitude": 22.554138,
+        "longitude": 120.347570,
+        "description": "面對台船大門口之左側人行道上"
+    },
+    {
+        "id": 81,
+        "no": "0083",
+        "name": "金獅湖站",
+        "englishname": "JinshiLakeBusStation",
+        "address": "金鼎路與鼎力路交叉路口(位於鼎力路上)",
+        "latitude": 22.665096,
+        "longitude": 120.321665,
+        "description": "金鼎路與鼎力路交叉路口(位於鼎力路上)"
+    },
+    {
+        "id": 82,
+        "no": "0084",
+        "name": "文藻外語大學站",
+        "englishname": "WenzaoUrsulineUniversityofLanguages",
+        "address": "獅湖國小側門人行道（位於鼎中路上）",
+        "latitude": 22.67117,
+        "longitude": 120.320951,
+        "description": "獅湖國小側門人行道（位於鼎中路上）"
+    },
+    {
+        "id": 83,
+        "no": "0085",
+        "name": "莊敬公園站",
+        "englishname": "JhuangJingPark",
+        "address": "明誠一路與大園街交叉路口左近人行道(臨明誠一路上)",
+        "latitude": 22.659621,
+        "longitude": 120.324749,
+        "description": "明誠一路與大園街交叉路口左近人行道(臨明誠一路上)"
+    },
+    {
+        "id": 84,
+        "no": "0086",
+        "name": "高雄高工站",
+        "englishname": "KaohsiungMunicipalKaohsiungIndustrialHighSchool",
+        "address": "雄工側門臨中華電信機房",
+        "latitude": 22.650378,
+        "longitude": 120.325634,
+        "description": "雄工側門臨中華電信機房"
+    },
+    {
+        "id": 85,
+        "no": "0087",
+        "name": "鼎金國小站",
+        "englishname": "DingJinElementarySchool",
+        "address": "大昌一路，面對鼎金國小側門左側人行道上",
+        "latitude": 22.656168,
+        "longitude": 120.322775,
+        "description": "大昌一路，面對鼎金國小側門左側人行道上"
+    },
+    {
+        "id": 86,
+        "no": "0088",
+        "name": "高雄國際機場站",
+        "englishname": "KaohsiungInternationalAirport(MRT)",
+        "address": "高雄市小港區中山四路",
+        "latitude": 22.569418,
+        "longitude": 120.343726,
+        "description": "R4高雄國際機場站 1號出口"
+    },
+    {
+        "id": 88,
+        "no": "0090",
+        "name": "左營高中站",
+        "englishname": "TsoyingSeniorHighSchool",
+        "address": "海功路上，左營高中校門口",
+        "latitude": 22.693598,
+        "longitude": 120.295864,
+        "description": "海功路上，左營高中校門口"
+    },
+    {
+        "id": 89,
+        "no": "0091",
+        "name": "蓮潭會館站",
+        "englishname": "GardenVilla",
+        "address": "蓮潭會館左側AC路面",
+        "latitude": 22.677816,
+        "longitude": 120.299942,
+        "description": "蓮潭會館左側"
+    },
+    {
+        "id": 90,
+        "no": "0092",
+        "name": "高鐵左營站",
+        "englishname": "KaohsiungInternationalAirport(MRT)",
+        "address": "高雄市左營區高鐵路",
+        "latitude": 22.686674,
+        "longitude": 120.308278,
+        "description": "高鐵站大門前3塊人行道上"
+    },
+    {
+        "id": 91,
+        "no": "0093",
+        "name": "孔廟站",
+        "englishname": "ConfuciusTemple",
+        "address": "31號公園人行道(臨孔營路)",
+        "latitude": 22.688085,
+        "longitude": 120.297361,
+        "description": "31號公園人行道"
+    },
+    {
+        "id": 92,
+        "no": "0094",
+        "name": "草衙站",
+        "englishname": "Caoya(MRT)",
+        "address": "高雄市前鎮區翠亨南路",
+        "latitude": 22.579527,
+        "longitude": 120.329016,
+        "description": "R4A捷運草衙站 1號出口"
+    },
+    {
+        "id": 93,
+        "no": "0095",
+        "englishname": "FogongElementarySchool",
+        "name": "佛公國小站",
+        "address": "后平路與佛德路交叉路口",
+        "latitude": 22.573815,
+        "longitude": 120.320044,
+        "description": "后平路與佛德路交叉路口"
+    },
+    {
+        "id": 94,
+        "no": "0096",
+        "name": "海洋局站",
+        "englishname": "KaohsiungCityMarineBureau",
+        "address": "漁港中二路與漁港東二路交叉路口",
+        "latitude": 22.571972,
+        "longitude": 120.317287,
+        "description": "漁港中二路與漁港東二路交叉路口"
+    },
+    {
+        "id": 95,
+        "no": "0097",
+        "name": "二聖公園站",
+        "englishname": "ErshengPark",
+        "address": "光華二路及英德街交叉路口",
+        "latitude": 22.61385,
+        "longitude": 120.318304,
+        "description": "光華二路及英德街交叉路口"
+    },
+    {
+        "id": 96,
+        "no": "0098",
+        "name": "福誠高中站",
+        "englishname": "Caoya(MRT)",
+        "address": "高雄市前鎮區五甲三路上",
+        "latitude": 22.589048,
+        "longitude": 120.322925,
+        "description": "福誠高中側門旁臨媽祖港橋"
+    },
+    {
+        "id": 97,
+        "no": "0099",
+        "name": "道明中學站",
+        "englishname": "SaintDominicCatholicHighSchool",
+        "address": "建國一路上，道明中學與聖功醫院中間空地",
+        "latitude": 22.633129,
+        "longitude": 120.323558,
+        "description": "建國一路上，道明中學與聖功醫院中間空地"
+    },
+    {
+        "id": 98,
+        "no": "0100",
+        "name": "英明公園站",
+        "englishname": "YingMingPark",
+        "address": "英明路上，英明公園近英明國中側",
+        "latitude": 22.616351,
+        "longitude": 120.324878,
+        "description": "英明路上，英明公園近英明國中側"
+    },
+    {
+        "id": 99,
+        "no": "0101",
+        "name": "四維公園站",
+        "englishname": "SiweiPark",
+        "address": "自強路與四維路交叉路口附近",
+        "latitude": 22.615717,
+        "longitude": 120.299094,
+        "description": "自強路與四維路交叉路口附近"
+    },
+    {
+        "id": 100,
+        "no": "0102",
+        "name": "正修大學站",
+        "englishname": "ChengshiuUniversity",
+        "address": "面對正修科大校門口右側",
+        "latitude": 22.650698,
+        "longitude": 120.3488,
+        "description": "面對正修科大校門口右側"
+    },
+    {
+        "id": 101,
+        "no": "0103",
+        "englishname": "NanhuaMarket",
+        "name": "南華市場站",
+        "address": "高雄市前金區中正三路",
+        "latitude": 22.631456,
+        "longitude": 120.303227,
+        "description": "O5R10美麗島站 7號出口"
+    },
+    {
+        "id": 102,
+        "no": "0104",
+        "name": "郵政總局站",
+        "englishname": "KaohsiungGeneralPostOffice",
+        "address": "高雄市前金區中正三路",
+        "latitude": 22.631089,
+        "longitude": 120.304429,
+        "description": "O5R10美麗島站 6號出口"
+    },
+    {
+        "id": 103,
+        "no": "0105",
+        "name": "民族八德站",
+        "englishname": "MinzuBade",
+        "address": "民族一路與八德路交叉路口(臨民族一路上)",
+        "latitude": 22.635323,
+        "longitude": 120.313318,
+        "description": "民族一路與八德路交叉路口"
+    },
+    {
+        "id": 104,
+        "no": "0106",
+        "name": "高雄大學站",
+        "englishname": "NationalUniversityOfKaohsiung",
+        "address": "高雄大學路與大學南路交叉口",
+        "latitude": 22.732634,
+        "longitude": 120.284253,
+        "description": "高雄大學路與大學南路交叉口"
+    },
+    {
+        "id": 105,
+        "no": "0107",
+        "name": "中山高中站",
+        "englishname": "ChungshanSeniorHighSchool",
+        "address": "藍昌路與藍田路交叉路口",
+        "latitude": 22.727406,
+        "longitude": 120.292047,
+        "description": "藍昌路與藍田路交叉路口"
+    },
+    {
+        "id": 106,
+        "no": "0108",
+        "name": "龍華國小站",
+        "englishname": "LonhuaElementarySchool",
+        "address": "大順一路與南屏路交叉路口左近人行道(位於南屏路)",
+        "latitude": 22.655851,
+        "longitude": 120.299933,
+        "description": "大順一路與南屏路交叉路口左近人行道"
+    },
+    {
+        "id": 107,
+        "no": "0109",
+        "name": "海科大旗津站(1)",
+        "englishname": "NationalKaohsiungMarineUniversityCijinDistrict(1)",
+        "address": "位於中洲三路上，面對校門口之左側",
+        "latitude": 22.608252,
+        "longitude": 120.272264,
+        "description": "位於中洲三路上，面對校門口之左、右側"
+    },
+    {
+        "id": 109,
+        "no": "0111",
+        "name": "巨蛋站(2)",
+        "englishname": "KaohsiungArena(2)(MRT)",
+        "address": "高雄市左營區博愛二路",
+        "latitude": 22.666014,
+        "longitude": 120.303262,
+        "description": "面對原站址右側擴充"
+    },
+    {
+        "id": 110,
+        "no": "0112",
+        "name": "後驛站(2)",
+        "englishname": "Houyi(2)(MRT)",
+        "address": "高雄市三民區博愛一路",
+        "latitude": 22.647866,
+        "longitude": 120.303345,
+        "description": "面對原站址左側擴充"
+    },
+    {
+        "id": 111,
+        "no": "0113",
+        "name": "高雄醫學大學站(2)",
+        "englishname": "KaohsiungMedicalUniversity(2)",
+        "address": "面對原站址左側擴充",
+        "latitude": 22.649398,
+        "longitude": 120.309879,
+        "description": "高雄醫學大學大門旁"
+    },
+    {
+        "id": 112,
+        "no": "0114",
+        "name": "中央公園站(2)",
+        "englishname": "CentralPark(2)(MRT)",
+        "address": "高雄市前金區中山一路",
+        "latitude": 22.624214,
+        "longitude": 120.300923,
+        "description": "面對原站址右側擴充"
+    },
+    {
+        "id": 113,
+        "no": "0115",
+        "name": "高雄女中站(2)",
+        "englishname": "KaohsiungGirls'SeniorHighSchool(2)",
+        "address": "面對原站址左側擴充",
+        "latitude": 22.620733,
+        "longitude": 120.293601,
+        "description": "高雄女中前"
+    },
+    {
+        "id": 114,
+        "no": "0116",
+        "name": "三多站(2)",
+        "englishname": "SanduoShoppingDistrict(2)(MRT)",
+        "address": "高雄市苓雅區中山二路與三多三路圓環處",
+        "latitude": 22.614432,
+        "longitude": 120.304416,
+        "description": "面對原站址左側擴充"
+    },
+    {
+        "id": 115,
+        "no": "0117",
+        "name": "市府四維站(2)",
+        "englishname": "CityGovernment-SihweiAdministrationCenter(2)",
+        "address": "面對原站址左側擴充",
+        "latitude": 22.620097,
+        "longitude": 120.311969,
+        "description": "市政府前"
+    },
+    {
+        "id": 116,
+        "no": "0118",
+        "name": "文化中正站(2)",
+        "englishname": "CulturalCenter(2)(MRT)",
+        "address": "高雄市苓雅區和平一路與中正一路口",
+        "latitude": 22.629797,
+        "longitude": 120.318221,
+        "description": "面對原站址左側擴充"
+    },
+    {
+        "id": 117,
+        "no": "0119",
+        "name": "文化師大站(2)",
+        "englishname": "NationalKaohsiungNormalUniversity(2)",
+        "address": "面對原站址右側擴充",
+        "latitude": 22.625373,
+        "longitude": 120.319594,
+        "description": "文化中心東南角、高師大對面"
+    },
+    {
+        "id": 118,
+        "no": "0120",
+        "name": "光華公園站(2)",
+        "englishname": "GuanghuaPark(2)",
+        "address": "面對原站址右側擴充",
+        "latitude": 22.608306,
+        "longitude": 120.316265,
+        "description": "光華公園"
+    },
+    {
+        "id": 119,
+        "no": "0121",
+        "name": "海科大旗津站(2)",
+        "englishname": "NationalKaohsiungMarineUniversityCijinDistrict(2)",
+        "address": "位於中洲三路上，面對校門口之右側",
+        "latitude": 22.608217,
+        "longitude": 120.272334,
+        "description": "位於中洲三路上，面對校門口之左、右側"
+    },
+    {
+        "id": 120,
+        "no": "0122",
+        "name": "鳳新高中站",
+        "englishname": "Feng-HsinSeniorHighSchool",
+        "address": "高雄市鳳山區新富路257號‎(鳳新高中旁)",
+        "latitude": 22.61302,
+        "longitude": 120.343262,
+        "description": "鳳新高中旁"
+    },
+    {
+        "id": 121,
+        "no": "0123",
+        "name": "前鎮高中站",
+        "englishname": "CianjhenSeniorHighSchool(MRT)",
+        "address": "高雄市前鎮區翠亨北路",
+        "latitude": 22.588154,
+        "longitude": 120.32193,
+        "description": "R5前鎮高中站 1號出口"
+    },
+    {
+        "id": 122,
+        "no": "0124",
+        "name": "美術館馬卡道站",
+        "englishname": "MeishuguanMakatao",
+        "address": "立體停車場入口前平面停車格，美術館路上，近龍水路",
+        "latitude": 22.65495,
+        "longitude": 120.283089,
+        "description": "立體停車場入口前平面停車格，美術館路上，近龍水路"
+    },
+    {
+        "id": 123,
+        "no": "0125",
+        "name": "福山廣場站",
+        "englishname": "FushanSquare",
+        "address": "文川路上，重義路與重愛路中間",
+        "latitude": 22.685999,
+        "longitude": 120.314104,
+        "description": "文川路上，重義路與重愛路中間"
+    },
+    {
+        "id": 124,
+        "no": "0126",
+        "name": "阿公店水庫站",
+        "englishname": "AgongdianReservoir",
+        "address": "阿公店水庫大門口右側停車場",
+        "latitude": 22.801439,
+        "longitude": 120.357113,
+        "description": "阿公店水庫大門口右側停車場"
+    },
+    {
+        "id": 125,
+        "no": "0127",
+        "name": "澄清湖站(2)",
+        "englishname": "ChengcingLake(2)",
+        "address": "澄清湖兒童園區停車場內",
+        "latitude": 22.658443,
+        "longitude": 120.346107,
+        "description": "澄清湖兒童園區停車場內"
+    },
+    {
+        "id": 126,
+        "no": "0128",
+        "name": "寶業里滯洪池站",
+        "englishname": "BaoyeFloodDetentionPark",
+        "address": "寶業里滯洪池控制中心前，褒揚東街上",
+        "latitude": 22.640026,
+        "longitude": 120.345803,
+        "description": "寶業里滯洪池控制中心前，褒揚東街上"
+    },
+    {
+        "id": 127,
+        "no": "0129",
+        "name": "陽明溜冰場站",
+        "englishname": "YangmingSkatingRink",
+        "address": "陽明溜冰場前，義華路上",
+        "latitude": 22.643133,
+        "longitude": 120.339539,
+        "description": "陽明溜冰場前，義華路上"
+    },
+    {
+        "id": 128,
+        "no": "0130",
+        "name": "義民廟站",
+        "englishname": "HeroesTemple",
+        "address": "三民義民廟旁，壽昌路91巷與壽昌路口",
+        "latitude": 22.642492,
+        "longitude": 120.333667,
+        "description": "三民義民廟旁，壽昌路91巷與壽昌路口"
+    },
+    {
+        "id": 129,
+        "no": "0131",
+        "name": "鼎泰廣場站",
+        "englishname": "DingtaiSquare",
+        "address": "鼎瑞街與裕誠路口",
+        "latitude": 22.663888,
+        "longitude": 120.315002,
+        "description": "鼎瑞街與裕誠路口"
+    },
+    {
+        "id": 130,
+        "no": "0132",
+        "name": "平和停車場站",
+        "englishname": "PingheParkingLot",
+        "address": "平和停車場後方，平和五路與平和路口",
+        "latitude": 22.562743,
+        "longitude": 120.335459,
+        "description": "平和停車場後方，平和五路與平和路口"
+    },
+    {
+        "id": 131,
+        "no": "0133",
+        "name": "小港區公所站",
+        "englishname": "SiaogangDistrictOffice",
+        "address": "小港區公所前方，小港路上",
+        "latitude": 22.565069,
+        "longitude": 120.338391,
+        "description": "小港區公所前方，小港路上"
+    },
+    {
+        "id": 132,
+        "no": "0134",
+        "name": "大寮區公所站",
+        "englishname": "DaliaoDistrictOffice",
+        "address": "大寮區公所內，臨鳳林三路",
+        "latitude": 22.605399,
+        "longitude": 120.395458,
+        "description": "大寮區公所內，臨鳳林三路"
+    },
+    {
+        "id": 133,
+        "no": "0135",
+        "name": "和春技術學院站(1)",
+        "englishname": "FortuneInstituteofTechnology1",
+        "address": "和春技術學院大發校區內，臨農場路",
+        "latitude": 22.60608,
+        "longitude": 120.427392,
+        "description": "和春技術學院大發校區內，臨農場路"
+    },
+    {
+        "id": 134,
+        "no": "0136",
+        "name": "和春技術學院站(2)",
+        "englishname": "FortuneInstituteofTechnology2",
+        "address": "和春技術學院大寮分校前，信義路上",
+        "latitude": 22.633877,
+        "longitude": 120.392021,
+        "description": "和春技術學院大寮分校前，信義路上"
+    },
+    {
+        "id": 135,
+        "no": "0137",
+        "name": "捷運大寮站",
+        "englishname": "Daliao(MRT)",
+        "address": "高雄市大寮區捷西路",
+        "latitude": 22.621312,
+        "longitude": 120.390423,
+        "description": "OT1大寮站 1號出口"
+    },
+    {
+        "id": 136,
+        "no": "0138",
+        "name": "輔英科技大學站",
+        "englishname": "FooyinUniversity",
+        "address": "高雄市大寮區進學路",
+        "latitude": 22.604022,
+        "longitude": 120.391128,
+        "description": "輔英科技大學校內停車場"
+    },
+    {
+        "id": 137,
+        "no": "0139",
+        "name": "台鐵新左營站",
+        "englishname": "Xinzuoying(TRA)",
+        "address": "高雄市左營區站前北路",
+        "latitude": 22.688380,
+        "longitude": 120.307605,
+        "description": "台鐵新左營站旁，臨站前北路"
+    },
+    {
+        "id": 138,
+        "no": "0140",
+        "name": "扶輪公園站",
+        "englishname": "RotaryPark",
+        "address": "高雄市左營區博愛四路與重信路口",
+        "latitude": 22.682814,
+        "longitude": 120.312075,
+        "description": "博愛四路與重信路口"
+    },
+    {
+        "id": 139,
+        "no": "0141",
+        "name": "高雄榮總站",
+        "address": "高雄市左營區榮總路",
+        "englishname": "KaohsiungVeteransGeneralHospital",
+        "latitude": 22.680077,
+        "longitude": 120.321723,
+        "description": "高雄榮民總醫院急診室對面，榮總路上"
+    },
+    {
+        "id": 141,
+        "no": "0143",
+        "name": "岡山河堤公園站",
+        "englishname": "GangshanRiverbankPark",
+        "address": "高雄市岡山區仁義路與河堤路二段路口",
+        "latitude": 22.786133,
+        "longitude": 120.295002,
+        "description": "仁義路與河堤路二段路口"
+    },
+    {
+        "id": 142,
+        "no": "0144",
+        "name": "岡山稽徵所站",
+        "englishname": "GangshanTaxationOffice",
+        "address": "高雄市岡山區健鷹南路",
+        "latitude": 22.785084,
+        "longitude": 120.290891,
+        "description": "岡山稽徵所後方，臨健鷹南路"
+    },
+    {
+        "id": 143,
+        "no": "0145",
+        "name": "岡山忠孝里站",
+        "englishname": "GangshanZhongxiaoVillage",
+        "address": "高雄市岡山區岡山路",
+        "latitude": 22.790537,
+        "longitude": 120.296173,
+        "description": "岡山移民署後方，臨岡山路"
+    },
+    {
+        "id": 144,
+        "no": "0146",
+        "name": "岡山文化中心站",
+        "englishname": "GangshanCulturalCenter",
+        "address": "高雄市岡山區岡山南路與介壽東路口",
+        "latitude": 22.784278,
+        "longitude": 120.297605,
+        "description": "岡山文化中心停車場旁，岡山南路與介壽東路口"
+    },
+    {
+        "id": 145,
+        "no": "0147",
+        "name": "原住民故事館站",
+        "englishname": "IndigenousHub",
+        "address": "高雄市前鎮區翠亨北路",
+        "latitude": 22.593917,
+        "longitude": 120.316238,
+        "description": "高雄原住民服務中心對面，翠亨北路上"
+    },
+    {
+        "id": 146,
+        "no": "0148",
+        "name": "消防局站",
+        "englishname": "FireBureau",
+        "address": "高雄市前鎮區凱旋四路",
+        "latitude": 22.593092,
+        "longitude": 120.307349,
+        "description": "高雄市消防局門口"
+    },
+    {
+        "id": 147,
+        "no": "0149",
+        "name": "前鎮加工區站(1)",
+        "englishname": "QianzhenExportProcessingZone1",
+        "address": "高雄市前鎮區中一路與中四路口",
+        "latitude": 22.601729,
+        "longitude": 120.291757,
+        "description": "加工出口區內，中一路與中四路口"
+    },
+    {
+        "id": 148,
+        "no": "0150",
+        "name": "前鎮加工區站(2)",
+        "englishname": "QianzhenExportProcessingZone2",
+        "address": "高雄市前鎮區中一路與中四路口",
+        "latitude": 22.60167,
+        "longitude": 120.291622,
+        "description": "加工出口區內，中一路與中四路口"
+    },
+    {
+        "id": 151,
+        "no": "0153",
+        "name": "文化中心站",
+        "englishname": "CulturalCenter",
+        "address": "高雄市苓雅區廣州一街與青年一路口",
+        "latitude": 22.624979,
+        "longitude": 120.31697,
+        "description": "廣州一街與青年一路口"
+    },
+    {
+        "id": 152,
+        "no": "0154",
+        "name": "正義市場站",
+        "englishname": "ZhengyiMarket",
+        "address": "高雄市苓雅區文昌路",
+        "latitude": 22.631218,
+        "longitude": 120.338583,
+        "description": "正義市場後方，文昌路上"
+    },
+    {
+        "id": 153,
+        "no": "0155",
+        "name": "高雄高商站",
+        "englishname": "KaohsiungCommercialHighSchool",
+        "address": "高雄市新興區復興二路與五福二路口",
+        "latitude": 22.625217,
+        "longitude": 120.308457,
+        "description": "復興二路與五福二路口"
+    },
+    {
+        "id": 154,
+        "no": "0156",
+        "name": "高雄監理所站",
+        "englishname": "KaohsiungCityMotorVehiclesOffice",
+        "address": "高雄市楠梓區德民路",
+        "latitude": 22.731704,
+        "longitude": 120.318005,
+        "description": "公路總局高雄市區監理站門口旁"
+    },
+    {
+        "id": 155,
+        "no": "0157",
+        "name": "楠梓翠屏站",
+        "englishname": "NanziCuibing",
+        "address": "高雄市楠梓區德賢路",
+        "latitude": 22.726234,
+        "longitude": 120.302495,
+        "description": "翠屏活動中心旁"
+    },
+    {
+        "id": 156,
+        "no": "0158",
+        "name": "鳳新高中站(2)",
+        "englishname": "FenghsinSeniorHighSchool2",
+        "address": "高雄市鳳山區新康街",
+        "latitude": 22.614189,
+        "longitude": 120.343893,
+        "description": "鳳新高中側門"
+    },
+    {
+        "id": 157,
+        "no": "0159",
+        "name": "森林公園站(2)",
+        "englishname": "AozihdiForestPark2",
+        "address": "高雄市鼓山區至聖路與龍德路口",
+        "latitude": 22.659623,
+        "longitude": 120.296881,
+        "description": "凹子底森林公園"
+    },
+    {
+        "id": 158,
+        "no": "0160",
+        "name": "高雄真愛館站",
+        "englishname": "KaohsiungChenai",
+        "address": "高雄市鹽埕區必信街與大義街口",
+        "latitude": 22.619285,
+        "longitude": 120.284972,
+        "description": "鹽埕海霸王飯店後方，必信街與大義街口"
+    },
+    {
+        "id": 159,
+        "no": "0161",
+        "name": "小港醫院站",
+        "englishname": "HsiaokangHospital",
+        "address": "高雄市小港區山明路與漢民路口",
+        "latitude": 22.567722,
+        "longitude": 120.362808,
+        "description": "小港醫院門口休憩區"
+    },
+    {
+        "id": 160,
+        "no": "0162",
+        "name": "自由市場站",
+        "englishname": "ZiyouMarket",
+        "address": "自由黃昏市場對面，臨自由三路",
+        "latitude": 22.672155,
+        "longitude": 120.311353,
+        "description": "自由黃昏市場對面，臨自由三路"
+    },
+    {
+        "id": 161,
+        "no": "0163",
+        "name": "興達港站",
+        "englishname": "SingdaHarbor",
+        "address": "高雄市茄萣區正大路與東方路一段中間",
+        "latitude": 22.879024,
+        "longitude": 120.211033,
+        "description": "興達港情人碼頭海上劇場旁"
+    },
+    {
+        "id": 162,
+        "no": "0164",
+        "name": "文山高中站",
+        "englishname": "Wun-ShanSeniorHighSchool",
+        "address": "文山高中大門旁，公園路上",
+        "latitude": 22.648561,
+        "longitude": 120.353384,
+        "description": "文山高中大門旁，公園路上"
+    },
+    {
+        "id": 163,
+        "no": "0165",
+        "name": "市府鳳山行政中心站(2)",
+        "englishname": "CityGovernment-FongshanAdministrationCenter2",
+        "address": "市府鳳山行政中心旁，澄清路上",
+        "latitude": 22.630168,
+        "longitude": 120.343234,
+        "description": "市府鳳山行政中心旁，澄清路上"
+    },
+    {
+        "id": 164,
+        "no": "0166",
+        "name": "澄清湖站(3)",
+        "englishname": "ChengcingLake3",
+        "address": "澄清湖海洋奇珍園旁停車場內",
+        "latitude": 22.655859,
+        "longitude": 120.351552,
+        "description": "澄清湖海洋奇珍園旁停車場內"
+    },
+    {
+        "id": 165,
+        "no": "0167",
+        "name": "澄清湖站(4)",
+        "englishname": "ChengcingLake4",
+        "address": "澄清湖仁智亭前停車場內",
+        "latitude": 22.662492,
+        "longitude": 120.341789,
+        "description": "澄清湖仁智亭前停車場內"
+    },
+    {
+        "id": 166,
+        "no": "0168",
+        "name": "澄清湖站(5)",
+        "englishname": "ChengcingLake5",
+        "address": "澄清湖後門入口處左方",
+        "latitude": 22.668333,
+        "longitude": 120.34591,
+        "description": "澄清湖後門入口處左方"
+    },
+    {
+        "id": 167,
+        "no": "0170",
+        "name": "長青綜合服務中心站",
+        "englishname": "SeniorCitizen'sServiceCenter",
+        "address": "長青綜合服務中心停車場內，臨英明路",
+        "latitude": 22.623122,
+        "longitude": 120.322092,
+        "description": "長青綜合服務中心停車場內，臨英明路"
+    },
+    {
+        "id": 168,
+        "no": "0171",
+        "name": "翠平公園站",
+        "englishname": "CueipingPark",
+        "address": "翠亨南路上，豐田街與平和東路間",
+        "latitude": 22.570005,
+        "longitude": 120.335748,
+        "description": "翠亨南路上，豐田街與平和東路間"
+    },
+    {
+        "id": 169,
+        "no": "0172",
+        "name": "中鋼成功站",
+        "englishname": "ChinaSteelChenggong",
+        "address": "中鋼會館7-11前方，忠勤路上",
+        "latitude": 22.60411,
+        "longitude": 120.302531,
+        "description": "中鋼會館7-11前方，忠勤路上"
+    },
+    {
+        "id": 170,
+        "no": "0173",
+        "name": "聖和公園站",
+        "englishname": "ShenghePark",
+        "address": "二聖一路上，和平二路與英明一路間",
+        "latitude": 22.61211,
+        "longitude": 120.323489,
+        "description": "二聖一路上，和平二路與英明一路間"
+    },
+    {
+        "id": 171,
+        "no": "0174",
+        "name": "圖書總館站",
+        "englishname": "KaohsiungMainPublicLibrary",
+        "address": "新光路上，面對大門廣場左側自行車停車場內",
+        "latitude": 22.610606,
+        "longitude": 120.302104,
+        "description": "新光路上，面對大門廣場左側自行車停車場內"
+    },
+    {
+        "id": 172,
+        "no": "0175",
+        "name": "中山公園站",
+        "englishname": "JhongshanPark",
+        "address": "誠義路與國泰路一段路口",
+        "latitude": 22.614312,
+        "longitude": 120.360651,
+        "description": "誠義路與國泰路一段路口"
+    },
+    {
+        "id": 173,
+        "no": "0176",
+        "name": "高雄監理所(武營)站",
+        "englishname": "KaohsiungMotorVehiclesOffice(Wuying)",
+        "address": "高雄區監理所側門旁，武林路與武營路口",
+        "latitude": 22.614298,
+        "longitude": 120.336654,
+        "description": "高雄區監理所側門旁，武林路與武營路口"
+    },
+    {
+        "id": 174,
+        "no": "0177",
+        "name": "捷運鳳山國中站",
+        "englishname": "FongshanJuniorHighSchool(MRT)",
+        "address": "O14鳳山國中站1號出入口，中山東路上",
+        "latitude": 22.624523,
+        "longitude": 120.371078,
+        "description": "O14鳳山國中站1號出入口，中山東路上"
+    },
+    {
+        "id": 175,
+        "no": "0178",
+        "name": "新甲國小站",
+        "englishname": "HsinchyaElementarySchool",
+        "address": "新甲國小對面，新富路上，大明路與新強路間",
+        "latitude": 22.61274,
+        "longitude": 120.34035,
+        "description": "新甲國小對面，新富路上，大明路與新強路間"
+    },
+    {
+        "id": 177,
+        "no": "0180",
+        "name": "三信家商站",
+        "englishname": "SansinHighSchool",
+        "address": "三信家商大門旁，三多一路上",
+        "latitude": 22.622089,
+        "longitude": 120.32909,
+        "description": "三信家商大門旁，三多一路上"
+    },
+    {
+        "id": 178,
+        "no": "0181",
+        "name": "大同醫院站",
+        "englishname": "TatungHospital",
+        "address": "大同一路與中華三路口",
+        "latitude": 22.627568,
+        "longitude": 120.296977,
+        "description": "大同一路與中華三路口"
+    },
+    {
+        "id": 179,
+        "no": "0182",
+        "name": "公二公園站",
+        "englishname": "GongerPark",
+        "address": "正義路與九如一路口",
+        "latitude": 22.636053,
+        "longitude": 120.343413,
+        "description": "正義路與九如一路口"
+    },
+    {
+        "id": 180,
+        "no": "0183",
+        "name": "後備指揮部站",
+        "englishname": "KaohsiungCityReserveCommand",
+        "address": "高雄市後備指揮部大門旁，武功巷上",
+        "latitude": 22.672199,
+        "longitude": 120.331266,
+        "description": "高雄市後備指揮部大門旁，武功巷上"
+    },
+    {
+        "id": 181,
+        "no": "0184",
+        "name": "三民高中站",
+        "englishname": "SanminSeniorHighSchool",
+        "address": "金鼎路與金山路口",
+        "latitude": 22.663383,
+        "longitude": 120.326475,
+        "description": "金鼎路與金山路口"
+    },
+    {
+        "id": 182,
+        "no": "0185",
+        "name": "家樂福鼎山站",
+        "englishname": "CarrefourDingshanStore",
+        "address": "家樂福鼎山店旁，鼎山街上",
+        "latitude": 22.653207,
+        "longitude": 120.318751,
+        "description": "家樂福鼎山店旁，鼎山街上"
+    },
+    {
+        "id": 183,
+        "no": "0186",
+        "name": "新光國小站",
+        "englishname": "ShinkuangElementarySchool",
+        "address": "新光國小側門旁，曾子路上",
+        "latitude": 22.680522,
+        "longitude": 120.305831,
+        "description": "新光國小側門旁，曾子路上"
+    },
+    {
+        "id": 184,
+        "no": "0187",
+        "name": "新莊高中站",
+        "englishname": "HsinchuangSeniorHighSchool",
+        "address": "新莊高中大門旁，文慈路上",
+        "latitude": 22.680827,
+        "longitude": 120.317428,
+        "description": "新莊高中大門旁，文慈路上"
+    },
+    {
+        "id": 185,
+        "no": "0188",
+        "name": "海青工商站",
+        "englishname": "HaicingVocationalHighSchool",
+        "address": "海青工商側門旁，左營大路上",
+        "latitude": 22.674425,
+        "longitude": 120.286455,
+        "description": "海青工商側門旁，左營大路上"
+    },
+    {
+        "id": 186,
+        "no": "0189",
+        "name": "合群新城和區站",
+        "englishname": "HecyunSinchengHeCyu",
+        "address": "合群新城和區，緯九路與海景街口",
+        "latitude": 22.695437,
+        "longitude": 120.287370,
+        "description": "合群新城和區，緯九路與海景街口"
+    },
+    {
+        "id": 187,
+        "no": "0190",
+        "name": "富國公園站",
+        "englishname": "FuguoPark",
+        "address": "富國路與保靖街口",
+        "latitude": 22.663878,
+        "longitude": 120.306713,
+        "description": "富國路與保靖街口"
+    },
+    {
+        "id": 188,
+        "no": "0191",
+        "name": "鼓山高中站",
+        "englishname": "GushanSeniorHighschool",
+        "address": "青海路與鼓山三路口",
+        "latitude": 22.651728,
+        "longitude": 120.276293,
+        "description": "青海路與鼓山三路口"
+    },
+    {
+        "id": 189,
+        "no": "0192",
+        "name": "仁武區運動公園站",
+        "englishname": "RenwuDistrictSportsPark",
+        "address": "仁武區運動公園旁，仁信巷與仁祥街口",
+        "latitude": 22.703625,
+        "longitude": 120.345135,
+        "description": "仁武區運動公園旁，仁信巷與仁祥街口"
+    },
+    {
+        "id": 190,
+        "no": "0193",
+        "name": "旗津醫院站",
+        "englishname": "CijinHospital",
+        "address": "旗津醫院大門旁，旗港路上",
+        "latitude": 22.590139,
+        "longitude": 120.285186,
+        "description": "旗津醫院急診室旁，旗港路上"
+    },
+    {
+        "id": 191,
+        "no": "0194",
+        "name": "興達港站(2)",
+        "englishname": "SingdaHarbor(2)",
+        "address": "興達港立體停車場旁，民有路上，民族路與尚禮街間",
+        "latitude": 22.871535,
+        "longitude": 120.19391,
+        "description": "興達港立體停車場旁，民有路上，民族路與尚禮街間"
+    },
+    {
+        "id": 192,
+        "no": "0195",
+        "name": "明德國小站",
+        "englishname": "MingdeElementarySchool",
+        "address": "海富路與海平路口",
+        "latitude": 22.687264,
+        "longitude": 120.289478,
+        "description": "海富路與海平路口"
+    },
+    {
+        "id": 193,
+        "no": "0196",
+        "name": "朝陽寺站",
+        "englishname": "ChaoyangTemple",
+        "address": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內",
+        "latitude": 22.577509,
+        "longitude": 120.322038,
+        "description": "草衙中街上，和運街與和豐街中間，朝陽寺停車場內"
+    },
+    {
+        "id": 194,
+        "no": "0197",
+        "name": "橋頭地檢署站",
+        "englishname": "CiaotouDistrictProsecutorsOffice",
+        "address": "經武路與橋新三路交叉口(臨經武路人行道)",
+        "latitude": 22.739188,
+        "longitude": 120.305053,
+        "description": "經武路與橋新三路交叉口(臨經武路人行道)"
+    },
+    {
+        "id": 195,
+        "no": "0200",
+        "name": "生日公園站",
+        "englishname": "BirthdayPark",
+        "address": "四維三路與文橫二路交叉口(臨四維三路公園人行道)",
+        "latitude": 22.617966,
+        "longitude": 120.305523,
+        "description": "四維三路與文橫二路交叉口(臨四維三路公園人行道)"
+    },
+    {
+        "id": 196,
+        "no": "0201",
+        "name": "蚵仔寮觀光魚市站",
+        "englishname": "KezailiaoTouristFishMarket",
+        "address": "港七街與魚港一路口",
+        "latitude": 22.727122,
+        "longitude": 120.255518,
+        "description": "港七街與魚港一路口"
+    },
+    {
+        "id": 197,
+        "no": "0202",
+        "name": "鳳山共同市場站",
+        "englishname": "FongshanCommonmarket",
+        "address": "工協街與勝利路口",
+        "latitude": 22.630016,
+        "longitude": 120.373525,
+        "description": "工協街與勝利路口"
+    },
+    {
+        "id": 198,
+        "no": "0208",
+        "name": "長庚醫院站",
+        "englishname": "ChanggungMemorialHospital",
+        "address": "長庚路上，湖畔星光購物商場與公園路中間",
+        "latitude": 22.650448,
+        "longitude": 120.357777,
+        "description": "長庚路上，湖畔星光購物商場與公園路中間"
+    },
+    {
+        "id": 199,
+        "no": "0210",
+        "name": "鐵道文化園區站(1)",
+        "englishname": "RailroadHistoricalPark(1)",
+        "address": "臨海新路臨鐵道園區",
+        "latitude": 22.620440,
+        "longitude": 120.277112,
+        "description": "臨海新路臨鐵道園區"
+    },
+    {
+        "id": 200,
+        "no": "0211",
+        "name": "鐵道文化園區站(2)",
+        "englishname": "RailroadHistoricalPark(2)",
+        "address": "臨海新路臨鐵道園區",
+        "latitude": 22.620269,
+        "longitude": 120.277544,
+        "description": "臨海新路臨鐵道園區"
+    },
+    {
+        "id": 201,
+        "no": "0218",
+        "name": "茄萣海岸公園站",
+        "englishname": "CiedingCoastalPark",
+        "address": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)",
+        "latitude": 22.908010,
+        "longitude": 120.177040,
+        "description": "濱海路三段與濱海路四段口(茄萣海岸公園停車場內)"
+    },
+    {
+        "id": 202,
+        "no": "0225",
+        "name": "中山大學社科院站",
+        "englishname": "NSYSU-CollegeofMarineSciences",
+        "address": "中山大學社會科學院與管理學院中間停車場旁",
+        "latitude": 22.62632,
+        "longitude": 120.26504,
+        "description": "中山大學社會科學院與管理學院中間停車場旁"
+    },
+    {
+        "id": 205,
+        "no": "0198",
+        "name": "建民公園站",
+        "englishname": "JianminPark",
+        "address": "興昌街與正興路163巷口",
+        "latitude": 22.646565,
+        "longitude": 120.318354,
+        "description": "興昌街與正興路163巷口"
+    },
+    {
+        "id": 206,
+        "no": "0199",
+        "name": "前鎮國中站",
+        "englishname": "CianjhenJuniorHighSchool",
+        "address": "新衙路上，前鎮國中大門左側",
+        "latitude": 22.583112,
+        "longitude": 120.320345,
+        "description": "新衙路上，前鎮國中大門左側"
+    },
+    {
+        "id": 207,
+        "no": "0203",
+        "name": "愛河之心站(2)",
+        "englishname": "HeartofLoveRiver(2)",
+        "address": "同盟二路上，天津街與重慶街中間",
+        "latitude": 22.651675,
+        "longitude": 120.302047,
+        "description": "同盟二路上，天津街與重慶街中間"
+    },
+    {
+        "id": 208,
+        "no": "0204",
+        "name": "曹公圳公園站",
+        "englishname": "CaogongzunPark",
+        "address": "大東二路與和德街口",
+        "latitude": 22.620335,
+        "longitude": 120.360163,
+        "description": "大東二路與和德街口"
+    },
+    {
+        "id": 209,
+        "no": "0205",
+        "name": "精華公園站",
+        "englishname": "JinghuaPark",
+        "address": "錦州街與哈爾濱街口",
+        "latitude": 22.642316,
+        "longitude": 120.299238,
+        "description": "錦州街與哈爾濱街口"
+    },
+    {
+        "id": 210,
+        "no": "0206",
+        "name": "捷運後勁站",
+        "englishname": "Houjing(MRT)",
+        "address": "加昌路上，捷運後勁1號出入口旁",
+        "latitude": 22.722583,
+        "longitude": 120.316493,
+        "description": "加昌路上，捷運後勁1號出入口旁"
+    },
+    {
+        "id": 211,
+        "no": "0207",
+        "name": "願景橋站",
+        "englishname": "VisionBridge",
+        "address": "河西一路與美術東二路口",
+        "latitude": 22.650770,
+        "longitude": 120.287537,
+        "description": "河西一路與美術東二路口"
+    },
+    {
+        "id": 212,
+        "no": "0209",
+        "name": "福山國中站",
+        "englishname": "FushanJuniorHighSchool",
+        "address": "自由路四路與重信路口",
+        "latitude": 22.681130,
+        "longitude": 120.313956,
+        "description": "自由路四路與重信路口"
+    },
+    {
+        "id": 213,
+        "no": "0212",
+        "name": "海巡隊站",
+        "englishname": "OffshoreFlotilla",
+        "address": "七賢三路與蓬萊路銜接處",
+        "latitude": 22.620589,
+        "longitude": 120.279365,
+        "description": "七賢三路與蓬萊路銜接處"
+    },
+    {
+        "id": 214,
+        "no": "0213",
+        "name": "鼓山渡船頭站",
+        "englishname": "GushanFerryStation",
+        "address": "濱海二路上，鼓波街與鼓南街中間",
+        "latitude": 22.620987,
+        "longitude": 120.270048,
+        "description": "濱海二路上，鼓波街與鼓南街中間"
+    },
+    {
+        "id": 215,
+        "no": "0214",
+        "name": "五甲公園站",
+        "englishname": "WujiaPark",
+        "address": "瑞南街與凱興街",
+        "latitude": 22.595525,
+        "longitude": 120.321994,
+        "description": "瑞南街與凱興街"
+    },
+    {
+        "id": 216,
+        "no": "0215",
+        "name": "三民游泳池站",
+        "englishname": "SanminSwimmingPool",
+        "address": "自由一路與遼寧一街口",
+        "latitude": 22.642476,
+        "longitude": 120.308711,
+        "description": "自由一路與遼寧一街口"
+    },
+    {
+        "id": 217,
+        "no": "0216",
+        "name": "美術東二路站",
+        "englishname": "MeishuEast2ndRd",
+        "address": "美術東二路與美術東五路口",
+        "latitude": 22.659491,
+        "longitude": 120.288197,
+        "description": "美術東二路與美術東五路口"
+    },
+    {
+        "id": 218,
+        "no": "0217",
+        "name": "新民國小站",
+        "englishname": "Sinminelementaryschool",
+        "address": "自由三路與曾子路口",
+        "latitude": 22.676383,
+        "longitude": 120.312624,
+        "description": "自由三路與曾子路口"
+    },
+    {
+        "id": 219,
+        "no": "0219",
+        "name": "雄鋒公園站",
+        "englishname": "SyongfongPark",
+        "address": "九如四路與九如四路1991巷口",
+        "latitude": 22.667540,
+        "longitude": 120.285300,
+        "description": "九如四路與九如四路1991巷口"
+    },
+    {
+        "id": 220,
+        "no": "0220",
+        "name": "果貿社區站",
+        "englishname": "GuomaoCommunity",
+        "address": "翠華路與翠峰路口",
+        "latitude": 22.670810,
+        "longitude": 120.289827,
+        "description": "翠華路與翠峰路口"
+    },
+    {
+        "id": 221,
+        "no": "0226",
+        "name": "文府國小站",
+        "englishname": "Wun-FuElementarySchool",
+        "address": "文府國小側門旁候車亭空地",
+        "latitude": 22.691503,
+        "longitude": 120.316115,
+        "description": "文府國小側門旁候車亭空地"
+    },
+    {
+        "id": 222,
+        "no": "0227",
+        "name": "龍華市場站",
+        "englishname": "LonghuaMarket",
+        "address": "高雄市左營區忠言路與富國路，停車場旁",
+        "latitude": 22.65838,
+        "longitude": 120.30641,
+        "description": "高雄市左營區忠言路與富國路，停車場旁"
+    },
+    {
+        "id": 223,
+        "no": "0228",
+        "name": "鳳東公園站",
+        "englishname": "FongdongPark",
+        "address": "東公園旁人行步道（臨鳳東路）",
+        "latitude": 22.62665,
+        "longitude": 120.37977,
+        "description": "東公園旁人行步道（臨鳳東路）"
+    },
+    {
+        "id": 224,
+        "no": "0229",
+        "name": "中山大學海工館站",
+        "englishname": "NSYSU-DepartmentofMarineEnvironmentandEnginnering",
+        "address": "中山大學海工館",
+        "latitude": 22.62879,
+        "longitude": 120.26266,
+        "description": "中山大學海工館"
+    },
+    {
+        "id": 225,
+        "no": "0230",
+        "name": "WOHotel",
+        "englishname": "GuomaoCommunity",
+        "address": "七賢二路WO旅店旁騎樓退縮地",
+        "latitude": 22.630972,
+        "longitude": 120.288855,
+        "description": "七賢二路WO旅店旁騎樓退縮地"
+    },
+    {
+        "id": 226,
+        "no": "0231",
+        "name": "管仲民裕站",
+        "englishname": "GuanzhongMinyu",
+        "address": "民裕街與管仲南路口",
+        "latitude": 22.60557,
+        "longitude": 120.31267,
+        "description": "民裕街與管仲南路口"
+    },
+    {
+        "id": 227,
+        "no": "0232",
+        "name": "楠梓高中站",
+        "englishname": "NanzihSeniorHighSchool",
+        "address": "楠梓高中大門口旁人行道(清豐路)",
+        "latitude": 22.7446,
+        "longitude": 120.33132,
+        "description": "學校大門口旁人行道(清豐路)"
+    },
+    {
+        "id": 228,
+        "no": "0233",
+        "name": "龍華國中站",
+        "englishname": "LonghuaJuniorHighSchool",
+        "address": "龍華國中人行步道（自由二路）",
+        "latitude": 22.65713,
+        "longitude": 120.30899,
+        "description": "龍華國中人行步道（自由二路）"
+    },
+    {
+        "id": 229,
+        "no": "0234",
+        "name": "金獅湖橋站",
+        "englishname": "JinshiLakeBridge",
+        "address": "新金獅湖橋旁，鼎金後路與天祥一路口",
+        "latitude": 22.66633,
+        "longitude": 120.32522,
+        "description": "新金獅湖橋旁，鼎金後路與天祥一路口"
+    },
+    {
+        "id": 230,
+        "no": "0235",
+        "name": "城市光廊站",
+        "englishname": "UrbanSpotlight",
+        "address": "新興區中華路與五福路側,靠近中華路圓環",
+        "latitude": 22.62275,
+        "longitude": 120.29926,
+        "description": "新興區中華路與五福路側,靠近中華路圓環"
+    },
+    {
+        "id": 231,
+        "no": "0236",
+        "name": "竹林公園站",
+        "englishname": "ZhulinPark",
+        "address": "竹林公園臨隆豐路側原機車停車格",
+        "latitude": 22.756118,
+        "longitude": 120.305734,
+        "description": "竹林公園臨隆豐路側原機車停車格"
+    },
+    {
+        "id": 232,
+        "no": "0237",
+        "name": "台鋁站(1)",
+        "englishname": "MLD(1)",
+        "address": "臨成功二路側人行步道",
+        "latitude": 22.603362,
+        "longitude": 120.302008,
+        "description": "臨成功二路側人行步道"
+    },
+    {
+        "id": 233,
+        "no": "0238",
+        "name": "台鋁站(2)",
+        "englishname": "MLD(2)",
+        "address": "臨成功二路側人行步道",
+        "latitude": 22.603152,
+        "longitude": 120.302115,
+        "description": "臨成功二路側人行步道"
+    },
+    {
+        "id": 234,
+        "no": "0239",
+        "name": "台糖楠梓量販店站",
+        "englishname": "Taisuco(Nanzihshop)",
+        "address": "量販店大門旁，清豐一路上",
+        "latitude": 22.73629,
+        "longitude": 120.33146,
+        "description": "量販店大門旁，清豐一路上"
+    },
+    {
+        "id": 235,
+        "no": "0240",
+        "name": "輔英科技大學站(2)",
+        "englishname": "FooyinUniversity(2)",
+        "address": "校門旁腳踏車車棚原租賃站對面",
+        "latitude": 22.603916,
+        "longitude": 120.391096,
+        "description": "校門旁腳踏車車棚原租賃站對面"
+    },
+    {
+        "id": 236,
+        "no": "0241",
+        "name": "右昌森林公園站",
+        "englishname": "YouchangForestPark",
+        "address": "右昌森林公園前，加宏路與加宏路156巷口",
+        "latitude": 22.7175,
+        "longitude": 120.29495,
+        "description": "右昌森林公園前，加宏路與加宏路156巷口"
+    },
+    {
+        "id": 237,
+        "no": "0242",
+        "name": "市立歷史博物館站",
+        "englishname": "KaohsiungMuseumOfHistory",
+        "address": "歷史博物館旁臨中正四路人行步道",
+        "latitude": 22.62636,
+        "longitude": 120.2867,
+        "description": "歷史博物館旁臨中正四路人行步道"
+    },
+    {
+        "id": 238,
+        "no": "0243",
+        "name": "河北立德站",
+        "englishname": "HebeiLide",
+        "address": "河北二路與立德街運河旁人行步道空間",
+        "latitude": 22.635532,
+        "longitude": 120.294940,
+        "description": "河北二路與立德街運河旁人行步道空間"
+    },
+    {
+        "id": 239,
+        "no": "0244",
+        "name": "介壽先鋒站",
+        "englishname": "JieshoXianfeng",
+        "address": "介壽路與先鋒路口人行步道前空地",
+        "latitude": 22.68124,
+        "longitude": 120.28281,
+        "description": "介壽路與先鋒路口人行步道前空地"
+    },
+    {
+        "id": 240,
+        "no": "0245",
+        "name": "步道公園站",
+        "englishname": "TrailPark",
+        "address": "高雄市小港區平和西路與鋼成街口",
+        "latitude": 22.56442,
+        "longitude": 120.33113,
+        "description": "高雄市小港區平和西路與鋼成街口"
+    },
+    {
+        "id": 241,
+        "no": "0246",
+        "name": "新莊國小站",
+        "englishname": "SinJhuangPrimarySchool",
+        "address": "新庄仔路與富國路口人行步道",
+        "latitude": 22.668842,
+        "longitude": 120.309522,
+        "description": "新庄仔路與富國路口人行步道"
+    },
+    {
+        "id": 242,
+        "no": "0247",
+        "name": "仁和公園站",
+        "englishname": "RenhePark",
+        "address": "仁和公園前人行步道",
+        "latitude": 22.6811,
+        "longitude": 120.3518,
+        "description": "仁和公園前人行步道"
+    },
+    {
+        "id": 243,
+        "no": "0249",
+        "name": "檨仔林埤濕地公園站",
+        "englishname": "SheTzaiLinPiWetlandPark",
+        "address": "鼎金後路靠近鼎金路420巷人行步道",
+        "latitude": 22.670838,
+        "longitude": 120.324777,
+        "description": "鼎金後路靠近鼎金路420巷人行步道"
+    },
+    {
+        "id": 244,
+        "no": "0250",
+        "name": "臺灣高雄少年及家事法院站",
+        "englishname": "TaiwanKaochsiungJuvenileandFamilyCourt",
+        "address": "常順街，少年及家事法院入口旁人行道",
+        "latitude": 22.73261,
+        "longitude": 120.33512,
+        "description": "常順街，少年及家事法院入口旁人行道"
+    },
+    {
+        "id": 245,
+        "no": "0251",
+        "name": "慈濟靜思堂站",
+        "englishname": "TzuChi",
+        "address": "河堤南路與自由一路口",
+        "latitude": 22.65436,
+        "longitude": 120.30887,
+        "description": "河堤南路與自由一路口"
+    },
+    {
+        "id": 246,
+        "no": "0252",
+        "name": "民族國中站",
+        "englishname": "MinzuJuniorHighSchool",
+        "address": "民族國中旁，大昌二路與覺民路口",
+        "latitude": 22.640612,
+        "longitude": 120.332317,
+        "description": "民族國中旁，大昌二路與覺民路口"
+    },
+    {
+        "id": 247,
+        "no": "0253",
+        "name": "武漢里活動中心站",
+        "englishname": "WuhanVillageActivityCenter",
+        "address": "活動中心西北側廣場(武營路239巷上廣場人行道)",
+        "latitude": 22.610988,
+        "longitude": 120.336050,
+        "description": "活動中心西北側廣場(武營路239巷上廣場人行道)"
+    },
+    {
+        "id": 248,
+        "no": "0254",
+        "name": "大灣國中站",
+        "englishname": "DawanJuniorHighSchool",
+        "address": "大灣國中大門右側人行道,臨仁雄路",
+        "latitude": 22.67661,
+        "longitude": 120.34195,
+        "description": "大灣國中大門右側人行道,臨仁雄路"
+    },
+    {
+        "id": 249,
+        "no": "0255",
+        "name": "漁港公園站",
+        "englishname": "YugangPark",
+        "address": "林園漁港公園前，占岸路上",
+        "latitude": 22.484821,
+        "longitude": 120.399454,
+        "description": "林園漁港公園前，占岸路上"
+    },
+    {
+        "id": 250,
+        "no": "0256",
+        "name": "八仙公園站",
+        "englishname": "BaxianPark",
+        "address": "國泰路一段與和興街口",
+        "latitude": 22.61557,
+        "longitude": 120.35475,
+        "description": "國泰路一段與和興街口"
+    },
+    {
+        "id": 251,
+        "no": "0257",
+        "name": "鳳儀書院站",
+        "englishname": "FongyiTutorialAcademy",
+        "address": "鳳儀書院大門旁",
+        "latitude": 22.62748,
+        "longitude": 120.35976,
+        "description": "鳳儀書院大門旁"
+    },
+    {
+        "id": 252,
+        "no": "0258",
+        "name": "海光兒童公園站",
+        "englishname": "HaiguangChildren'sPark",
+        "address": "瑞大街與瑞智街交叉口",
+        "latitude": 22.631881,
+        "longitude": 120.368270,
+        "description": "瑞大街與瑞智街交叉口"
+    },
+    {
+        "id": 253,
+        "no": "0259",
+        "name": "明誠高中站",
+        "englishname": "St.Paul'sHighSchool",
+        "address": "明誠高中後門停車場入口旁，華寧路上",
+        "latitude": 22.6675,
+        "longitude": 120.29223,
+        "description": "明誠高中後門停車場入口旁，華寧路上"
+    },
+    {
+        "id": 254,
+        "no": "0260",
+        "name": "鼓山國小站",
+        "englishname": "GushanElementarySchool",
+        "address": "鼓山國小大門旁，臨海二路與鼓波街口",
+        "latitude": 22.623279,
+        "longitude": 120.271726,
+        "description": "鼓山國小大門旁，臨海二路與鼓波街口"
+    },
+    {
+        "id": 255,
+        "no": "0261",
+        "name": "陽明公園站",
+        "englishname": "YangmingPark",
+        "address": "陽明公園前，澄和路與澄和路158巷口",
+        "latitude": 22.64536,
+        "longitude": 120.34127,
+        "description": "陽明公園前，澄和路與澄和路158巷口"
+    },
+    {
+        "id": 256,
+        "no": "0262",
+        "name": "空中大學站",
+        "englishname": "OpenUniversity",
+        "address": "空中大學大門旁，大業北路上",
+        "latitude": 22.56657,
+        "longitude": 120.3455,
+        "description": "空中大學大門旁，大業北路上"
+    },
+    
+    {
+        "id": 257,
+        "no": "0264",
+        "name": "鳳山公園站",
+        "englishname": "FongshanPark",
+        "address": "公園人行步道,園茂路與園中路交叉口",
+        "latitude": 22.59456,
+        "longitude": 120.35774,
+        "description": "公園人行步道,園茂路與園中路交叉口"
+    },
+    {
+        "id": 258,
+        "no": "0265",
+        "name": "瑞祥高中站",
+        "englishname": "RueisiangHighSchool",
+        "address": "凱旋四路與班超路口",
+        "latitude": 22.60311,
+        "longitude": 120.32405,
+        "description": "凱旋四路與班超路口"
+    },
+    {
+        "id": 259,
+        "no": "0266",
+        "name": "華夏西北扶輪公園站",
+        "englishname": "HuasiaSibeiRotaryPark",
+        "address": "重義路與華夏路口",
+        "latitude": 22.68662,
+        "longitude": 120.31233,
+        "description": "重義路與華夏路口"
+    },
+    {
+        "id": 260,
+        "no": "0269",
+        "name": "岡山高中站",
+        "englishname": "KangshanSeniorHighSchool",
+        "address": "岡山高中大門旁，公園路上",
+        "latitude": 22.797096,
+        "longitude": 120.290730,
+        "description": "岡山高中大門旁，公園路上"
+    },
+    {
+        "id": 261,
+        "no": "0268",
+        "name": "圖書總館站(2)",
+        "englishname": "KaohsiungMainPublicLibrary2",
+        "address": "新光路上，面對大門廣場左側自行車停車場內",
+        "latitude": 22.61053,
+        "longitude": 120.30211,
+        "description": "新光路上，面對大門廣場左側自行車停車場內"
+    },
+    {
+        "id": 262,
+        "no": "0274",
+        "name": "民權少康站",
+        "englishname": "MincyuanShaokang",
+        "address": "民權二路與少康街口",
+        "latitude": 22.60933,
+        "longitude": 120.3131,
+        "description": "民權二路與少康街口"
+    },
+    {
+        "id": 263,
+        "no": "0272",
+        "name": "瑞豐公車總站",
+        "englishname": "RueifongBusStation",
+        "address": "瑞隆公車總站前，瑞隆路上",
+        "latitude": 22.60614,
+        "longitude": 120.33876,
+        "description": "瑞隆公車總站前，瑞隆路上"
+    },
+    {
+        "id": 264,
+        "no": "0271",
+        "name": "中崙國中站",
+        "englishname": "JhonglunJuniorhighSchool",
+        "address": "中崙路與中崙二路口",
+        "latitude": 22.60223,
+        "longitude": 120.35337,
+        "description": "中崙路與中崙二路口"
+    },
+    {
+        "id": 265,
+        "no": "0273",
+        "name": "牛潮埔公園站",
+        "englishname": "NiouchaopuPark",
+        "address": "北賢街與永忠街口",
+        "latitude": 22.64632,
+        "longitude": 120.37048,
+        "description": "北賢街與永忠街口"
+    },
+    {
+        "id": 266,
+        "no": "0263",
+        "name": "輕軌凱旋瑞田站",
+        "englishname": "KaisyuanRueitian(LRT)",
+        "address": "凱旋四路與瑞田街口",
+        "latitude": 22.599155,
+        "longitude": 120.319892,
+        "description": "凱旋四路與瑞田街口"
+    },
+    {
+        "id": 267,
+        "no": "0270",
+        "name": "永安區休閒公園站",
+        "englishname": "YonganDistrictLeisurePark",
+        "address": "永安區永華路與永安路口",
+        "latitude": 22.818683,
+        "longitude": 120.226385,
+        "description": "永安區永華路與永安路口"
+    },
+    {
+        "id": 268,
+        "no": "0267",
+        "name": "彌陀漁民活動中心",
+        "englishname": "MituoFishermen'sActivityCenter",
+        "address": "彌陀區漁會活動中心前，漁港一街與南寮路口",
+        "latitude": 22.76143,
+        "longitude": 120.2347,
+        "description": "彌陀區漁會活動中心前，漁港一街與南寮路口"
+    },
+    {
+        "id": 269,
+        "no": "0275",
+        "name": "八卦休閒公園站",
+        "englishname": "BaguaLeisurePark",
+        "address": "八卦休閒公園前，八德西路上",
+        "latitude": 22.690106,
+        "longitude": 120.337416,
+        "description": "八卦休閒公園前，八德西路上"
+    },
+    {
+        "id": 271,
+        "no": "0278",
+        "name": "大樹舊鐵橋站(2)",
+        "englishname": "RailwayBridgeMarshPark(2)",
+        "address": "竹寮路大樹舊鐵橋生態公園機車停車場內",
+        "latitude": 22.66458,
+        "longitude": 120.4272,
+        "description": "竹寮路大樹舊鐵橋生態公園機車停車場內"
+    },
+    {
+        "id": 272,
+        "no": "0277",
+        "name": "大樹舊鐵橋站(1)",
+        "englishname": "RailwayBridgeMarshPark(1)",
+        "address": "竹寮路舊鐵橋遊客中心大門旁",
+        "latitude": 22.66209,
+        "longitude": 120.4268,
+        "description": "竹寮路舊鐵橋遊客中心大門旁"
+    },
+    {
+        "id": 273,
+        "no": "0279",
+        "name": "九曲堂火車站(1)",
+        "englishname": "JioucyutangStation(1)",
+        "address": "九曲堂火車站前，復興街上",
+        "latitude": 22.65679,
+        "longitude": 120.42084,
+        "description": "九曲堂火車站前，復興街上"
+    },
+    {
+        "id": 274,
+        "no": "0280",
+        "name": "九曲堂火車站(2)",
+        "englishname": "JioucyutangStation(2)",
+        "address": "九曲堂火車站前，復興街上",
+        "latitude": 22.656953,
+        "longitude": 120.420897,
+        "description": "九曲堂火車站前，復興街上"
+    },
+    {
+        "id": 275,
+        "no": "0248",
+        "name": "濱海鼓元站",
+        "englishname": "BinhaiGuyuan",
+        "address": "鼓元街與濱海二路口",
+        "latitude": 22.623066,
+        "longitude": 120.269875,
+        "description": "鼓元街與濱海二路口"
+    },
+    {
+        "id": 276,
+        "no": "0285",
+        "name": "鼓山厚德站",
+        "englishname": "GushanHoude",
+        "address": "鼓山三路6巷與厚德路口",
+        "latitude": 22.64616,
+        "longitude": 120.278703,
+        "description": "鼓山三路6巷與厚德路口"
+    },
+    {
+        "id": 277,
+        "no": "0289",
+        "name": "龍勝大順站",
+        "englishname": "LongshengDashun",
+        "address": "龍勝路與大順一路口",
+        "latitude": 22.654522,
+        "longitude": 120.295648,
+        "description": "龍勝路與大順一路口"
+    },
+    {
+        "id": 278,
+        "no": "0283",
+        "name": "左營火車站",
+        "englishname": "ZuoyingStation",
+        "address": "新莊一路底，臨公有停車場",
+        "latitude": 22.67407,
+        "longitude": 120.29581,
+        "description": "新莊一路底，臨公有停車場"
+    },
+    {
+        "id": 279,
+        "no": "0281",
+        "name": "屏山國小站",
+        "englishname": "PingshanElementarySchool",
+        "address": "屏山國小大門旁，海功東路上",
+        "latitude": 22.69372,
+        "longitude": 120.30194,
+        "description": "屏山國小大門旁，海功東路上"
+    },
+    {
+        "id": 280,
+        "no": "0295",
+        "name": "永安溼地站",
+        "englishname": "YonganWetlands",
+        "address": "永安區永達路與新興路交叉口人行步道",
+        "latitude": 22.83408,
+        "longitude": 120.2098,
+        "description": "永安區永達路與新興路交叉口人行步道"
+    },
+    {
+        "id": 281,
+        "no": "0296",
+        "name": "空軍軍史館站",
+        "englishname": "AirForceMuseum",
+        "address": "空軍第三後勤指揮部大門旁，介壽西路上",
+        "latitude": 22.78448,
+        "longitude": 120.27589,
+        "description": "空軍第三後勤指揮部大門旁，介壽西路上"
+    },
+    {
+        "id": 282,
+        "no": "0284",
+        "name": "捷運橋頭火車站",
+        "englishname": "CiaotouStation(MRT)",
+        "address": "捷運橋頭火車站2號出口旁",
+        "latitude": 22.76102,
+        "longitude": 120.30996,
+        "description": "捷運橋頭火車站2號出口旁"
+    },
+    {
+        "id": 283,
+        "no": "0294",
+        "name": "橋頭地院站",
+        "englishname": "CiaotouStation(MRT)",
+        "address": "橋頭地院側門出入口右側人行步道",
+        "latitude": 22.73764,
+        "longitude": 120.304188,
+        "description": "橋頭地院側門出入口右側人行步道"
+    },
+    {
+        "id": 284,
+        "no": "0276",
+        "name": "北辰兒童公園站",
+        "englishname": "BeichenChildren'sPark",
+        "address": "文龍東路與北辰街15巷口",
+        "latitude": 22.64049,
+        "longitude": 120.36525,
+        "description": "文龍東路與北辰街15巷口"
+    },
+    {
+        "id": 285,
+        "no": "0290",
+        "name": "五甲社區活動中心站",
+        "englishname": "WujiaCommunityActivityCenter",
+        "address": "新富路與新富路590巷口",
+        "latitude": 22.61514,
+        "longitude": 120.34825,
+        "description": "新富路與新富路590巷口"
+    },
+    {
+        "id": 286,
+        "no": "0292",
+        "name": "國際商工站",
+        "englishname": "KuochiSeniorVocationalHighSchoolOfCommerceandTechnology",
+        "address": "三多二路與凱旋二路口",
+        "latitude": 22.62101,
+        "longitude": 120.32574,
+        "description": "三多二路與凱旋二路口"
+    },
+    {
+        "id": 287,
+        "no": "0293",
+        "name": "興仁國中站",
+        "englishname": "SingrenJuniorHighSchool",
+        "address": "德昌路與興仁街口",
+        "latitude": 22.58682,
+        "longitude": 120.31382,
+        "description": "德昌路與興仁街口"
+    },
+    {
+        "id": 288,
+        "no": "0287",
+        "name": "北昌路站",
+        "englishname": "BeichangRd",
+        "address": "北昌路與北昌三街口",
+        "latitude": 22.64518,
+        "longitude": 120.37258,
+        "description": "北昌路與北昌三街口"
+    },
+    {
+        "id": 289,
+        "no": "0286",
+        "name": "鳳山火車站(2)",
+        "englishname": "FengshanStation(2)",
+        "address": "面對原站址右側擴充",
+        "latitude": 22.63057,
+        "longitude": 120.35826,
+        "description": "面對原站址右側擴充"
+    },
+    {
+        "id": 290,
+        "no": "0291",
+        "name": "新泰兒童公園站",
+        "englishname": "SintaiChildren'sPark",
+        "address": "新強路上，新國街與新泰街間",
+        "latitude": 22.61092,
+        "longitude": 120.34361,
+        "description": "新強路上，新國街與新泰街間"
+    },
+    {
+        "id": 291,
+        "no": "0282",
+        "name": "瑞豐國中站",
+        "englishname": "RuifengJuniorHighSchool",
+        "address": "公正路與瑞北路口",
+        "latitude": 22.6091,
+        "longitude": 120.33057,
+        "description": "公正路與瑞北路口"
+    },
+    {
+        "id": 292,
+        "no": "0298",
+        "name": "美都公園站",
+        "englishname": "MeiduPark",
+        "address": "美都路與十全三路口",
+        "latitude": 22.646569,
+        "longitude": 120.289018,
+        "description": "美都路與十全三路口"
+    },
+    {
+        "id": 293,
+        "no": "0300",
+        "name": "中央公園站(3)",
+        "englishname": "CentralPark(3)",
+        "address": "捷運中央公園站3號出口後方人行步道",
+        "latitude": 22.625938,
+        "longitude": 120.301552,
+        "description": "捷運中央公園站3號出口後方人行步道"
+    },
+    {
+        "id": 294,
+        "no": "0297",
+        "name": "輕軌軟體園區站",
+        "englishname": "SoftwareTechnologyPark(LRT)",
+        "address": "復興四路與成功二路口",
+        "latitude": 22.60517,
+        "longitude": 120.30069,
+        "description": "復興四路與成功二路口"
+    },
+    {
+        "id": 295,
+        "no": "0299",
+        "name": "中正預校站",
+        "englishname": "ChungChengArmedForcesPreparatorySchool",
+        "address": "中正預校大門旁，凱旋路上",
+        "latitude": 22.607155,
+        "longitude": 120.359701,
+        "description": "中正預校大門旁，凱旋路上"
+    },
+    {
+        "id": 296,
+        "no": "0299",
+        "name": "航空教育展示館站",
+        "englishname": "AviationEducationExhibitionHall",
+        "address": "航空教育展示館大門旁，致遠路上",
+        "latitude": 22.79462,
+        "longitude": 120.27131,
+        "description": "航空教育展示館大門旁，致遠路上"
+    },
+    {
+        "id": 297,
+        "no": "0301",
+        "name": "國昌國中站",
+        "englishname": "GouchangJuniorHighSchool",
+        "address": "國昌國中大門旁，德民路上",
+        "latitude": 22.71917,
+        "longitude": 120.285997,
+        "description": "國昌國中大門旁，德民路上"
+    },
+    {
+        "id": 298,
+        "no": "0303",
+        "name": "自強新田站",
+        "englishname": "ZihciangSintian",
+        "address": "自強三路公有機車停車場出入口,自強三路與新田路交叉口",
+        "latitude": 22.620423,
+        "longitude": 120.29733,
+        "description": "自強三路公有機車停車場出入口,自強三路與新田路交叉口"
+    },
+    {
+        "id": 299,
+        "no": "0152",
+        "name": "輕軌旅運中心站",
+        "englishname": "CruiseTerminal(LRT)",
+        "address": "海邊路與永平路交叉口",
+        "latitude": 22.6128,
+        "longitude": 120.2921,
+        "description": "海邊路與永平路交叉口"
+    },
+    {
+        "id": 300,
+        "no": "0307",
+        "name": "凱旋醫院站",
+        "englishname": "KaisyuanHospital",
+        "address": "凱旋醫院大門前，凱旋二路上",
+        "latitude": 22.62489,
+        "longitude": 120.32405,
+        "description": "凱旋醫院大門前，凱旋二路上"
+    },
+    {
+        "id": 301,
+        "no": "0306",
+        "name": "鳳山商工站",
+        "englishname": "NationalFeng-ShanSenioCcommercialIndustrialVocationalSchool",
+        "address": "鳳山商工旁，建國三路上",
+        "latitude": 22.63627,
+        "longitude": 120.35689,
+        "description": "鳳山商工旁，建國三路上"
+    },
+    {
+        "id": 302,
+        "no": "0304",
+        "name": "桂林公園站(1)",
+        "englishname": "GueilinPark(1)",
+        "address": "桂林國小對面，桂陽路上",
+        "latitude": 22.581963,
+        "longitude": 120.350604,
+        "description": "桂林國小對面，桂陽路上"
+    },
+    {
+        "id": 303,
+        "no": "0305",
+        "name": "桂林公園站(2)",
+        "englishname": "CruiseTerminal(LRT)",
+        "address": "桂林國小對面，桂陽路上",
+        "latitude": 22.581987,
+        "longitude": 120.350347,
+        "description": "桂林國小對面，桂陽路上"
+    },
+    {
+        "id": 304,
+        "no": "0301",
+        "name": "月世界站",
+        "englishname": "MoonWorld",
+        "address": "大群停車場，鄰近停車場公廁",
+        "latitude": 22.88657,
+        "longitude": 120.39162,
+        "description": "大群停車場，鄰近停車場公廁"
+    },
+    {
+        "id": 305,
+        "no": "0309",
+        "name": "清水嚴榕樹休憩公園站",
+        "englishname": "CingshueiyanBanyanLeisurePark",
+        "address": "清水巖榕樹休憩公園入口旁，清水岩路上",
+        "latitude": 22.52183,
+        "longitude": 120.39078,
+        "description": "清水巖榕樹休憩公園入口旁，清水岩路上"
+    },
+    {
+        "id": 306,
+        "no": "0308",
+        "name": "鼓山一路站",
+        "englishname": "Gusha1stRd.",
+        "address": "鼓山一路與鼓山一路119巷口",
+        "latitude": 22.627848,
+        "longitude": 120.279371,
+        "description": "鼓山一路與鼓山一路119巷口"
+    },
+    {
+        "id": 307,
+        "no": "0311",
+        "name": "滷博館站",
+        "englishname": "Soya-mixedMeatMuseum",
+        "address": "岡山區本洲五街與本洲六街口",
+        "latitude": 22.81849,
+        "longitude": 120.26778,
+        "description": "岡山區本洲五街與本洲六街口"
+    },
+    {
+        "id": 308,
+        "no": "0312",
+        "name": "臨海兒童公園站",
+        "englishname": "LinhaiChildren'sPark",
+        "address": "臨海兒童公園內，東亞南路轉彎處",
+        "latitude": 22.81849,
+        "longitude": 120.26778,
+        "description": "臨海兒童公園內，東亞南路轉彎處"
+    },
+    {
+        "id": 309,
+        "no": "0313",
+        "name": "中崙公園站",
+        "englishname": "JhonglunPark",
+        "address": "中崙公共托嬰中心旁，中崙五路上",
+        "latitude": 22.59713,
+        "longitude": 120.35371,
+        "description": "中崙公共托嬰中心旁，中崙五路上"
+    },
+    {
+        "id": 310,
+        "no": "0314",
+        "name": "岡山火車站",
+        "englishname": "GangshanStation",
+        "address": "岡山火車站前，中山北路上",
+        "latitude": 22.79291,
+        "longitude": 120.29933,
+        "description": "岡山火車站前，中山北路上"
+    },
+    {
         "id": 311,
         "no": "0315",
         "name": "輕軌真愛碼頭站",
@@ -2989,8 +2979,8 @@
         "latitude": 22.619799,
         "longitude": 120.288904,
         "description": "公園二路與輕軌C11站出入口"
-        },
-        {
+    },
+    {
         "id": 312,
         "no": "0316",
         "name": "輕軌前鎮之星站",
@@ -2999,5 +2989,25 @@
         "latitude": 22.59634,
         "longitude": 120.31537,
         "description": "捷運凱旋站1號出口旁人行道,中山三路上"
-        }
+    },
+    {
+        "id": 313,
+        "no": "0320",
+        "name": "高雄後火車站(1)",
+        "englishname": "KaohsiungRearofRailStation1",
+        "address": "九如二路與松江街",
+        "latitude": 22.641065,
+        "longitude": 120.303608,
+        "description": "九如二路與松江街"
+    },
+    {
+        "id": 314,
+        "no": "0321",
+        "name": "高雄後火車站(2)",
+        "englishname": "KaohsiungRearofRailStation2",
+        "address": "九如二路與松江街",
+        "latitude": 22.640956,
+        "longitude": 120.303587,
+        "description": "九如二路與松江街"
+    }
 ]
