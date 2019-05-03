@@ -3009,5 +3009,15 @@
         "latitude": 22.640956,
         "longitude": 120.303587,
         "description": "九如二路與松江街"
+    },
+    {
+        "id": 315,
+        "no": "0322",
+        "name": "大義國中站",
+        "englishname": "Da-YiJuniorHighSchool",
+        "address": "大義國中旁人行道",
+        "latitude": 22.674512,
+        "longitude": 120.293163,
+        "description": "大義國中旁人行道"
     }
 ]
