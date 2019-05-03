@@ -1,0 +1,44 @@
+以 Kaohsiung CityBike 為主題的全新 APP 正式上線！讓在高雄愛騎自行車的你，快速獲得所有資訊！
+Kaohsiung CityBike is Now on App Store!
+Kaohsiung CityBike provides all the information of Kaohsiung CityBike to all the bike traveler. You can find all the KCB information you need on this app.
+You’re a Biker or a Traveller in Kaohsiung City? Just Download it!
+「高雄シティバイク」は、高雄レンタサイクル（高雄シティバイク）のバイク、および駐車サイトなどをご利用いただくお客様へ便利な情報を提供するアプリです。
+
+Kaohsiung, CityBike, 高雄, 公共自行車, Public Bike, c-bike
+
+Kaohsiung CityBike 提供高雄公共自行車(Kaohsiung CityBike)多項資訊查詢：
+Kaohsiung CityBike provides information below:
+高雄シティバイクの特徴：
+
+1.站點地圖：以地圖顯示所有 Kaohsiung CityBike 站點位置，所有站點一覽無遺。
+1.Station Map: All KCB’s Stations on the map in your hand.
+1.サイトマップ：マップで、すべてのサイトを表示します。
+
+2.站點資訊：提供即時自行車租賃點目前車輛、可停格數，讓你不會白跑一趟。
+2.Station Info:  Showing how many bikes are available and parking spaces of the station.
+2.サイト情報：サイトの自転車の数と駐車スペースの情報を提供します。
+
+3.路線指引：指引使用者到達自行車租賃點，同時提供預計所花時間。
+3.Route Direction: Directing Directing Bikers to the Station and Calculating the walking time.
+3.ルート指示：サイトに到着するガイドと歩行時間を提供します。
+
+4.使用計時：租車後按下計時，歸還時結束，完整告知所花時間以及費用，同時提供時間通知。
+4.Time Counter: Telling the lease time and cost that Bikers spent.
+4.タイムカウンター：かかる時間と料金を計算します。
+
+5.自選導航：提供自定位置導航及預估時間
+5.Custom Navigation: Bikers can add and navigate a new place.
+5.オプショナルナビ：地図を長く押すと目的地へのバイクおよび歩き時間が計算します。
+
+6.Today Widget：將常用的站點加入至 Today Widget 中，讓您不用開啟 APP 也可查詢站點資訊。
+6.Today Widget: You can add your favorite stations to Today Widget.
+6.Today Widget：常に使用するサイトを記録して、アプリを起動しなくてもサイトをゲットすることができます。
+
+All Data of KCB is from “Kaohsiung City Government Open Data”
+http://data.kaohsiung.gov.tw/Opendata/index.aspx
+
+Kaohsiung CityBike 使用 「高雄市政府開放資料」官方資料來源
+http://data.kaohsiung.gov.tw/Opendata/index.aspx
+
+「高雄シティバイク」のデータは、「高雄市政府オープンデータ」からのものです
+http://data.kaohsiung.gov.tw/Opendata/index.aspx
