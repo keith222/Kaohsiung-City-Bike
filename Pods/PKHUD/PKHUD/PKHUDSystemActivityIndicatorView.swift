@@ -43,7 +43,7 @@ public final class PKHUDSystemActivityIndicatorView: PKHUDSquareBaseView, PKHUDA
         #if swift(>=4.2)
         let activity = UIActivityIndicatorView(style: .whiteLarge)
         #else
-        let activity = UIActivityIndicatorView(style: .whiteLarge)
+        let activity = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         #endif
         activity.color = UIColor.black
         return activity

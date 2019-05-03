@@ -46,7 +46,7 @@ class StationCell: UITableViewCell, ReactiveView {
         if let favoriteList = self.userDefault.array(forKey: "staForTodayWidget") {
             var list = favoriteList
             
-            if let index = favoriteList.index(where: {($0 as! String) == self.stationNO}) {
+            if let index = favoriteList.firstIndex(where: {($0 as! String) == self.stationNO}) {
                 list.remove(at: index)
                 self.userDefault.set(list, forKey: "staForTodayWidget")
                 self.userDefault.synchronize()

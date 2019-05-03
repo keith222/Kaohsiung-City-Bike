@@ -382,7 +382,7 @@ class HomeViewController: UIViewController {
                 return HomeViewModel(data: value)
             })
             
-            let index = source.index(where: {($0.name == self?.stationName) || ($0.no == self?.stationNO)})
+            let index = source.firstIndex(where: {($0.name == self?.stationName) || ($0.no == self?.stationNO)})
             
             //傳送資料到 Apple Watch
             if WCSession.default.isReachable {

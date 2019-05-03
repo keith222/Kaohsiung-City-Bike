@@ -59,7 +59,7 @@ typedef void (^FIRMessagingTopicOperationCompletion)(NSError *_Nullable error);
 
 /**
  *  The completion handler invoked once the data connection with FIRMessaging is
- *  established.  The data connection is used to send a continous stream of
+ *  established.  The data connection is used to send a continuous stream of
  *  data and all the FIRMessaging data notifications arrive through this connection.
  *  Once the connection is established we invoke the callback with `nil` error.
  *  Correspondingly if we get an error while trying to establish a connection
@@ -245,6 +245,8 @@ NS_SWIFT_NAME(MessagingRemoteMessage)
 @end
 
 @class FIRMessaging;
+@class FIRMessagingExtensionHelper;
+
 /**
  * A protocol to handle token update or data message delivery from FCM.
  *
@@ -321,7 +323,8 @@ NS_SWIFT_NAME(Messaging)
  * If true, the data message sent by direct channel will be delivered via
  * `FIRMessagingDelegate messaging(_:didReceive:)` and across all iOS versions.
  */
-@property(nonatomic, assign) BOOL useMessagingDelegateForDirectChannel;
+@property(nonatomic, assign) BOOL useMessagingDelegateForDirectChannel
+  __deprecated_msg("This is soon to be deprecated. All direct messages will by default delivered in `FIRMessagingDelegate messaging(_:didReceive:)` across all iOS versions");
 
 /**
  *  FIRMessaging
@@ -329,6 +332,17 @@ NS_SWIFT_NAME(Messaging)
  *  @return An instance of FIRMessaging.
  */
 + (instancetype)messaging NS_SWIFT_NAME(messaging());
+
+/**
+ * FIRMessagingExtensionHelper
+ *
+ * Use FIRMessagingExtensionHelper to populate rich UI contents for your notifications.
+ * e.g. If an image URL is set in your notification payload or on the console, call
+ * FIRMessagingExtensionHelper API to render it on your notification.
+ *
+ * @return An instance of FIRMessagingExtensionHelper that handles the extensions API.
+ */
++ (FIRMessagingExtensionHelper *)extensionHelper NS_SWIFT_NAME(serviceExtension()) NS_AVAILABLE_IOS(10.0);
 
 /**
  *  Unavailable. Use +messaging instead.

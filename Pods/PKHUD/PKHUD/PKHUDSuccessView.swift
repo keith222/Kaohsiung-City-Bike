@@ -27,9 +27,9 @@ open class PKHUDSuccessView: PKHUDSquareBaseView, PKHUDAnimating {
         layer.lineCap     = .round
         layer.lineJoin    = .round
         #else
-        layer.fillMode    = CAMediaTimingFillMode.forwards
-        layer.lineCap     = CAShapeLayerLineCap.round
-        layer.lineJoin    = CAShapeLayerLineJoin.round
+        layer.fillMode    = kCAFillModeForwards
+        layer.lineCap     = kCALineCapRound
+        layer.lineJoin    = kCALineJoinRound
         #endif
 
         layer.fillColor   = nil

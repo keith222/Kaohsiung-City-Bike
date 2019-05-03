@@ -30,9 +30,9 @@ open class PKHUDErrorView: PKHUDSquareBaseView, PKHUDAnimating {
         dash.lineJoin    = .round
         dash.fillMode    = .forwards
         #else
-        dash.lineCap     = CAShapeLayerLineCap.round
-        dash.lineJoin    = CAShapeLayerLineJoin.round
-        dash.fillMode    = CAMediaTimingFillMode.forwards
+        dash.lineCap     = kCALineCapRound
+        dash.lineJoin    = kCALineJoinRound
+        dash.fillMode    = kCAFillModeForwards
         #endif
 
         dash.fillColor   = nil
@@ -76,10 +76,10 @@ open class PKHUDErrorView: PKHUDSquareBaseView, PKHUDAnimating {
         #if swift(>=4.2)
         let timingFunctionName = CAMediaTimingFunctionName.easeInEaseOut
         #else
-        let timingFunctionName = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeInEaseOut)
+        let timingFunctionName = kCAMediaTimingFunctionEaseInEaseOut
         #endif
 
-        animation.timingFunction = CAMediaTimingFunction(name: convertToCAMediaTimingFunctionName(timingFunctionName.rawValue))
+        animation.timingFunction = CAMediaTimingFunction(name: timingFunctionName)
         return animation
     }
 
@@ -98,14 +98,4 @@ open class PKHUDErrorView: PKHUDSquareBaseView, PKHUDAnimating {
         dashOneLayer.removeAnimation(forKey: "dashOneAnimation")
         dashTwoLayer.removeAnimation(forKey: "dashTwoAnimation")
     }
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromCAMediaTimingFunctionName(_ input: CAMediaTimingFunctionName) -> String {
-	return input.rawValue
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToCAMediaTimingFunctionName(_ input: String) -> CAMediaTimingFunctionName {
-	return CAMediaTimingFunctionName(rawValue: input)
 }

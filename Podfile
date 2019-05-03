@@ -12,7 +12,7 @@ target 'Kaohsiung City Bike' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'SwiftyJSON'
-  pod 'Kanna', '~> 4.0.0'
+  pod 'Kanna', '~> 5.0.0'
 
   #Pods about UI
   pod 'PKHUD'
@@ -38,5 +38,5 @@ target 'Kaohsiung CityBike Widget' do
     pod 'Alamofire'
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
-    pod 'Kanna', '~> 4.0.0'
+    pod 'Kanna', '~> 5.0.0'
 end

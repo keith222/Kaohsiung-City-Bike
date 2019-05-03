@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             var homeViewModel: HomeViewModel? = HomeViewModel()
             homeViewModel?.fetchStationList(handler: { stations in
                 for station in stations {
-                    let index = todayWidgetArray?.index(where: {
+                    let index = todayWidgetArray?.firstIndex(where: {
                         print($0)
                         print(station.name)
                         return ($0 as! String) == station.name

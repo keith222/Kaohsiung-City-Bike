@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3E8BB940D655AF0E484E7AE65C71E926"
+               BlueprintIdentifier = "AB7EC6BC509DA0A209BECCF31B2238C3"
                BuildableName = "ObjectMapper.framework"
                BlueprintName = "ObjectMapper"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3E8BB940D655AF0E484E7AE65C71E926"
+            BlueprintIdentifier = "AB7EC6BC509DA0A209BECCF31B2238C3"
             BuildableName = "ObjectMapper.framework"
             BlueprintName = "ObjectMapper"
             ReferencedContainer = "container:Pods.xcodeproj">

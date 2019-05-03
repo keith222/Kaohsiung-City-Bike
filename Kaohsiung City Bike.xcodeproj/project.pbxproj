@@ -537,7 +537,7 @@
 					5349628E1BE07BE700BFFD71 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -568,7 +568,7 @@
 					537EE0EA1C0B35BB008501B0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -581,7 +581,7 @@
 					53B362A61CC4CA39003CF0E7 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8MREJM6257;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -592,7 +592,7 @@
 			};
 			buildConfigurationList = 5349628A1BE07BE700BFFD71 /* Build configuration list for PBXProject "Kaohsiung City Bike" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1124,7 +1124,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f792b694-fdef-4d96-a275-31543b0cf6b4";
 				PROVISIONING_PROFILE_SPECIFIER = "Developement-CityBike";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1145,7 +1145,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c20c9db2-51a8-47ff-8f24-807fbe011bdb";
 				PROVISIONING_PROFILE_SPECIFIER = Sparkrs.CityBike;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1214,7 +1214,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Development-CityBike-watchapp-extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1237,7 +1237,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = Sparkrs.CityBike.Watchapp.watchextension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1311,7 +1311,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "531fd75c-ddf7-494d-842c-57739c6c52d1";
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs-CityBike-Ad-hoc";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Ad-Hoc";
 		};
@@ -1356,7 +1356,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.watchkitextension.Ad-hoc";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1379,7 +1379,7 @@
 				PROVISIONING_PROFILE = "751c1207-0bb5-471b-bac8-ef34acce573f";
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.City.Widget.Ad-hoc";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Ad-Hoc";
 		};
@@ -1400,7 +1400,7 @@
 				PROVISIONING_PROFILE = "0e695ad0-fd8a-4bf3-b809-bfc60b0b2349";
 				PROVISIONING_PROFILE_SPECIFIER = "Development-CityBike-widget";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1421,7 +1421,7 @@
 				PROVISIONING_PROFILE = "b5e57b83-327e-45b9-8715-5277e7dfb32a";
 				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

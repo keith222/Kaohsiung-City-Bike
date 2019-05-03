@@ -59,7 +59,7 @@ open class PKHUD: NSObject {
         #if swift(>=4.2)
         let notificationName = UIApplication.willEnterForegroundNotification
         #else
-        let notificationName = UIApplication.willEnterForegroundNotification
+        let notificationName = NSNotification.Name.UIApplicationWillEnterForeground
         #endif
 
         NotificationCenter.default.addObserver(self,
@@ -141,7 +141,7 @@ open class PKHUD: NSObject {
             #if swift(>=4.2)
             RunLoop.current.add(timer, forMode: .common)
             #else
-            RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
+            RunLoop.current.add(timer, forMode: .commonModes)
             #endif
             graceTimer = timer
         } else {
