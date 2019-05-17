@@ -3019,5 +3019,25 @@
         "latitude": 22.674512,
         "longitude": 120.293163,
         "description": "大義國中旁人行道"
+    },
+    {
+        "id": 316,
+        "no": "0323",
+        "name": "美術館火車站",
+        "englishname": "MuseumofFineArtsStation",
+        "address": "美術館火車站對面公園人行道",
+        "latitude": 22.652038,
+        "longitude": 120.281111,
+        "description": "美術館火車站對面公園人行道"
+    },
+    {
+        "id": 317,
+        "no": "0324",
+        "name": "GloryPier(LRT)",
+        "englishname": "Da-YiJuniorHighSchool",
+        "address": "青年路和海邊路交叉口處",
+        "latitude": 22.617278,
+        "longitude": 120.293559,
+        "description": "青年路和海邊路交叉口處"
     }
 ]
