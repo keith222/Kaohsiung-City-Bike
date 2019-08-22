@@ -3033,11 +3033,31 @@
     {
         "id": 317,
         "no": "0324",
-        "name": "GloryPier(LRT)",
-        "englishname": "Da-YiJuniorHighSchool",
+        "name": "輕軌光榮碼頭站",
+        "englishname": "GloryPier(LRT)",
         "address": "青年路和海邊路交叉口處",
         "latitude": 22.617278,
         "longitude": 120.293559,
         "description": "青年路和海邊路交叉口處"
+    },
+    {
+        "id": 319,
+        "no": "0325",
+        "name": "Aozihdi(MRT)2",
+        "englishname": "GloryPier(LRT)",
+        "address": "原凹仔底自行車舊站人行道旁(博愛二路與至聖路)",
+        "latitude": 22.659107,
+        "longitude": 120.302831,
+        "description": "原凹仔底自行車舊站人行道旁(博愛二路與至聖路)"
+    },
+    {
+        "id": 320,
+        "no": "0327",
+        "name": "路竹夜市站",
+        "englishname": "LuzhuNightMarket",
+        "address": "民富街和民強街(公有停車場)",
+        "latitude": 22.853701,
+        "longitude": 120.262653,
+        "description": "民富街和民強街(公有停車場)"
     }
 ]
