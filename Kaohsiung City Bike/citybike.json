@@ -1862,12 +1862,12 @@
     {
         "id": 197,
         "no": "0202",
-        "name": "鳳山共同市場站",
-        "englishname": "FongshanCommonmarket",
-        "address": "工協街與勝利路口",
-        "latitude": 22.630016,
-        "longitude": 120.373525,
-        "description": "工協街與勝利路口"
+        "name": "生態園區站(2)",
+        "englishname": "EcologicalDistrict2(MRT)",
+        "address": "原生態園區站自行車舊站人行道旁",
+        "latitude": 22.67706,
+        "longitude": 120.306536,
+        "description": "原生態園區站自行車舊站人行道旁"
     },
     {
         "id": 198,
