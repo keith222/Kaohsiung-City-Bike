@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         application.registerForRemoteNotifications()
         
         // Fabric
-        Fabric.with([Crashlytics.self])
+//        Fabric.with([Crashlytics.self])
         
         return true
     }
