@@ -3041,10 +3041,20 @@
         "description": "青年路和海邊路交叉口處"
     },
     {
+        "id": 318,
+        "no": "0326",
+        "name": "內惟火車站",
+        "englishname": "NeiweiStation",
+        "address": "內惟火車站對面公園人行道(翠華路上)",
+        "latitude": 22.666149,
+        "longitude": 120.286779,
+        "description": "內惟火車站對面公園人行道(翠華路上)"
+    },
+    {
         "id": 319,
         "no": "0325",
-        "name": "Aozihdi(MRT)2",
-        "englishname": "GloryPier(LRT)",
+        "name": "凹子底站(2)",
+        "englishname": "Aozihdi(MRT)2",
         "address": "原凹仔底自行車舊站人行道旁(博愛二路與至聖路)",
         "latitude": 22.659107,
         "longitude": 120.302831,
@@ -3059,5 +3069,15 @@
         "latitude": 22.853701,
         "longitude": 120.262653,
         "description": "民富街和民強街(公有停車場)"
+    },
+    {
+        "id": 323,
+        "no": "0330",
+        "name": "MinzuStation",
+        "englishname": "LuzhuNightMarket",
+        "address": "凱旋一路民族火車站旁機車停車場內",
+        "latitude": 22.638699,
+        "longitude": 120.315209,
+        "description": "凱旋一路民族火車站旁機車停車場內"
     }
 ]
