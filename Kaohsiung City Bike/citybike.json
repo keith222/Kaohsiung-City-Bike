@@ -2661,16 +2661,6 @@
         "description": "屏山國小大門旁，海功東路上"
     },
     {
-        "id": 280,
-        "no": "0295",
-        "name": "永安溼地站",
-        "englishname": "YonganWetlands",
-        "address": "永安區永達路與新興路交叉口人行步道",
-        "latitude": 22.83408,
-        "longitude": 120.2098,
-        "description": "永安區永達路與新興路交叉口人行步道"
-    },
-    {
         "id": 281,
         "no": "0296",
         "name": "空軍軍史館站",
@@ -2899,16 +2889,6 @@
         "latitude": 22.581987,
         "longitude": 120.350347,
         "description": "桂林國小對面，桂陽路上"
-    },
-    {
-        "id": 304,
-        "no": "0301",
-        "name": "月世界站",
-        "englishname": "MoonWorld",
-        "address": "大群停車場，鄰近停車場公廁",
-        "latitude": 22.88657,
-        "longitude": 120.39162,
-        "description": "大群停車場，鄰近停車場公廁"
     },
     {
         "id": 305,
