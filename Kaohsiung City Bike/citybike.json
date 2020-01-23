@@ -3069,5 +3069,25 @@
         "latitude": 22.638699,
         "longitude": 120.315209,
         "description": "凱旋一路民族火車站旁機車停車場內"
+    },
+    {
+        "id": 324,
+        "no": "0331",
+        "name": "科工館火車站",
+        "englishname": "ScienceandTechnologyMuseumStation",
+        "address": "科工館火車站旁機車停車場內(近大順三路305巷與樂仁路125巷6弄)",
+        "latitude": 22.637178,
+        "longitude": 120.325194,
+        "description": "科工館火車站旁機車停車場內(近大順三路305巷與樂仁路125巷6弄)"
+    },
+    {
+        "id": 325,
+        "no": "0332",
+        "name": "鼓山火車站",
+        "englishname": "GushanStation",
+        "address": "鼓山火車站旁人行道(鐵路街20巷)",
+        "latitude": 22.642038,
+        "longitude": 120.280524,
+        "description": "鼓山火車站旁人行道(鐵路街20巷)"
     }
 ]
