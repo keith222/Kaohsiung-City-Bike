@@ -2661,6 +2661,16 @@
         "description": "屏山國小大門旁，海功東路上"
     },
     {
+        "id": 280,
+        "no": "0295",
+        "name": "光武國小站",
+        "englishname": "GuangWuPrimarySchool",
+        "address": "光武國小旁人行步道(近光武路與九如一路交叉口處)",
+        "latitude": 22.638186,
+        "longitude": 120.334644,
+        "description": "光武國小旁人行步道(近光武路與九如一路交叉口處)"
+    },
+    {
         "id": 281,
         "no": "0296",
         "name": "空軍軍史館站",
