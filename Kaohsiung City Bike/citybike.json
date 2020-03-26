@@ -3061,6 +3061,16 @@
         "description": "民富街和民強街(公有停車場)"
     },
     {
+        "id": 321,
+        "no": "0328",
+        "name": "油廠國小站",
+        "englishname": "OilRefineryElementarySchool",
+        "address": "左楠路與後昌路西南方人行道(油廠國小捷運站1號出口對面人行道)",
+        "latitude": 22.707728,
+        "longitude": 120.301772,
+        "description": "左楠路與後昌路西南方人行道(油廠國小捷運站1號出口對面人行道)"
+    },
+    {
         "id": 322,
         "no": "0329",
         "name": "九番埤濕地公園站",
@@ -3099,5 +3109,35 @@
         "latitude": 22.642038,
         "longitude": 120.280524,
         "description": "鼓山火車站旁人行道(鐵路街20巷)"
+    },
+    {
+        "id": 326,
+        "no": "0333",
+        "name": "高科運動公園站",
+        "englishname": "KaohsiungScienceParkSportsPark",
+        "address": "路科二路南向人行道旁(近路科二路與路科五路人行道)",
+        "latitude": 22.828138,
+        "longitude": 120.256706,
+        "description": "路科二路南向人行道旁(近路科二路與路科五路人行道)"
+    },
+    {
+        "id": 328,
+        "no": "0335",
+        "name": "高雄車站",
+        "englishname": "KaohsiungStation",
+        "address": "國光客運前空地",
+        "latitude": 22.637821,
+        "longitude": 120.303665,
+        "description": "國光客運前空地"
+    },
+    {
+        "id": 329,
+        "no": "0336",
+        "name": "路竹高中站",
+        "englishname": "LuChuSeniorHighSchool",
+        "address": "路竹高中前人行步道",
+        "latitude": 22.854928,
+        "longitude": 120.252892,
+        "description": "路竹高中前人行步道"
     }
 ]
