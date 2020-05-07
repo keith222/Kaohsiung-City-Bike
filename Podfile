@@ -10,22 +10,16 @@ target 'Kaohsiung City Bike' do
 
   #Pods about internet request/response/parse
   pod 'Alamofire'
-  pod 'ObjectMapper'
-  pod 'SwiftyJSON'
-  pod 'Kanna', '~> 5.0.0'
 
   #Pods about UI
   pod 'PKHUD'
  
   #Google Firebase  
   pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
-  pod 'Firebase/Crash'
+  pod 'Firebase/Crashlytics'
   
-  #Fabric
-  pod 'Fabric'
-  pod 'Crashlytics'
-
 end
 
 target 'Kaohsiung CityBike WatchApp Extension' do
@@ -36,7 +30,9 @@ target 'Kaohsiung CityBike Widget' do
     
     #Pods about internet request/response/parse
     pod 'Alamofire'
-    pod 'ObjectMapper'
-    pod 'SwiftyJSON'
-    pod 'Kanna', '~> 5.0.0'
+    
+    #Google Firebase
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'Firebase/Crashlytics'
 end
