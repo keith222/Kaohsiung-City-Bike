@@ -4,6 +4,8 @@
 <dict>
 	<key>APIService</key>
 	<dict>
+        <key>sourceURL</key>
+        <string>https://ptx.transportdata.tw/MOTC/v2/Bike/Availability/Kaohsiung?$format=JSON&amp;$filter=</string>
 		<key>infoEngSourceURL</key>
 		<string>http://www.c-bike.com.tw/xml/StationListEnOpenData.aspx</string>
 		<key>infoSourceURL</key>

@@ -13,10 +13,21 @@
 		53029D501F28EB9C00D7EC1E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D4F1F28EB9C00D7EC1E /* Annotation.swift */; };
 		53029D521F2A396400D7EC1E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D511F2A396400D7EC1E /* APIService.swift */; };
 		53029D541F2A3FF000D7EC1E /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D531F2A3FF000D7EC1E /* Park.swift */; };
-		53134F631D60AF4000B44343 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53134F621D60AF4000B44343 /* GoogleService-Info.plist */; };
+		53086E07246839BC00265D3D /* KeysHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39C2464754600C513C0 /* KeysHelper.swift */; };
+		53086E08246839D100265D3D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39E2464774B00C513C0 /* String+Extension.swift */; };
+		53086E0924686F4E00265D3D /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
+		53086E0A24686FCA00265D3D /* version.json in Resources */ = {isa = PBXBuildFile; fileRef = 53439F641F2F7DE100311DF8 /* version.json */; };
+		53086E0B24686FCD00265D3D /* version.json in Resources */ = {isa = PBXBuildFile; fileRef = 53439F641F2F7DE100311DF8 /* version.json */; };
+		53086E0C24686FD000265D3D /* version.json in Resources */ = {isa = PBXBuildFile; fileRef = 53439F641F2F7DE100311DF8 /* version.json */; };
+		53086E0D24686FD600265D3D /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
+		53086E0E24686FD600265D3D /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
 		5319C3871D4657CB0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		5319C3881D4657CC0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		53235FD51D4363B6008C5B47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
+		5328878A245EA4B60069D426 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D4F1F28EB9C00D7EC1E /* Annotation.swift */; };
+		5328878D245EAD320069D426 /* StationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328878C245EAD320069D426 /* StationHelper.swift */; };
+		5328878E245EB67E0069D426 /* StationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328878C245EAD320069D426 /* StationHelper.swift */; };
+		53288790245F26F70069D426 /* TodayWidgetTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328878F245F26F70069D426 /* TodayWidgetTableViewCellViewModel.swift */; };
 		533391811CA67D55005EFA48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534962C01BE3719400BFFD71 /* MapKit.framework */; };
 		53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53356CBF1D4279BC00A20515 /* Launch Screen.storyboard */; };
 		53439F4A1F2A56FB00311DF8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2D5AD1F28A1670048CFFC /* HomeViewModel.swift */; };
@@ -32,6 +43,8 @@
 		534962C31BE39D6600BFFD71 /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
 		534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E08D11C0DEB9400AA0133 /* TimerInterfaceController.swift */; };
 		536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
+		537019B2245C7E9600111FC8 /* StationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537019B1245C7E9600111FC8 /* StationCellViewModel.swift */; };
+		537019B6245D2C1F00111FC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537019B5245D2C1E00111FC8 /* GoogleService-Info.plist */; };
 		537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537EE0E11C0B35BB008501B0 /* Interface.storyboard */; };
 		537EE0EC1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 537EE0EB1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE0F21C0B35BB008501B0 /* InterfaceController.swift */; };
@@ -65,6 +78,9 @@
 		53C362341CC9FE2200050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CE89DE1E61582900C528BC /* MapKit.framework */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
+		53FFE39B246454FC00C513C0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39A246454FC00C513C0 /* UIColor+Extension.swift */; };
+		53FFE39D2464754600C513C0 /* KeysHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39C2464754600C513C0 /* KeysHelper.swift */; };
+		53FFE39F2464774B00C513C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39E2464774B00C513C0 /* String+Extension.swift */; };
 		652B6194A17B64CB8B168AAC /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,11 +154,12 @@
 		53029D4F1F28EB9C00D7EC1E /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Annotation.swift; path = Model/Annotation.swift; sourceTree = "<group>"; };
 		53029D511F2A396400D7EC1E /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = Helper/APIService.swift; sourceTree = "<group>"; };
 		53029D531F2A3FF000D7EC1E /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Park.swift; path = Model/Park.swift; sourceTree = "<group>"; };
-		53134F621D60AF4000B44343 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5319C38C1D46615C0014C51E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 		5319C38D1D4661630014C51E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
 		5319C38E1D46616A0014C51E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		5328878C245EAD320069D426 /* StationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StationHelper.swift; path = Helper/StationHelper.swift; sourceTree = "<group>"; };
+		5328878F245F26F70069D426 /* TodayWidgetTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWidgetTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		53356CBE1D4279BC00A20515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		53356CCB1D42863000A20515 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53356CD71D42889700A20515 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -167,6 +184,8 @@
 		535CC50A1F3E2866003398CC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		536E2C141BF726C500B5E7DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		536E2C161BF726C900B5E7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		537019B1245C7E9600111FC8 /* StationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StationCellViewModel.swift; path = ViewModel/StationCellViewModel.swift; sourceTree = "<group>"; };
+		537019B5245D2C1E00111FC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		537EE0DF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaohsiung CityBike WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537EE0E21C0B35BB008501B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		537EE0E41C0B35BB008501B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +223,9 @@
 		53E232601BFE39A800F36B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53E232611BFE39AB00F36B71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		53E42D161D436EB0004B9B98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Kaohsiung City Bike/Info.plist"; sourceTree = "<group>"; };
+		53FFE39A246454FC00C513C0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extension/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		53FFE39C2464754600C513C0 /* KeysHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeysHelper.swift; path = Helper/KeysHelper.swift; sourceTree = "<group>"; };
+		53FFE39E2464774B00C513C0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Helper/String+Extension.swift"; sourceTree = "<group>"; };
 		6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D9665E42FEB35580287751 /* Pods_Kaohsiung_City_BikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_BikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				53029D4C1F28D3D200D7EC1E /* UIButton+Extension.swift */,
+				53FFE39A246454FC00C513C0 /* UIColor+Extension.swift */,
+				53FFE39E2464774B00C513C0 /* String+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -269,7 +293,7 @@
 				534962C01BE3719400BFFD71 /* MapKit.framework */,
 				537EE1291C0B5F00008501B0 /* WatchConnectivity.framework */,
 				5380329B1C20236B00E07131 /* geojson.geojson */,
-				53134F621D60AF4000B44343 /* GoogleService-Info.plist */,
+				537019B5245D2C1E00111FC8 /* GoogleService-Info.plist */,
 				53E42D161D436EB0004B9B98 /* Info.plist */,
 				53B362A81CC4CA39003CF0E7 /* Frameworks */,
 				534962911BE07BE700BFFD71 /* Kaohsiung City Bike */,
@@ -359,9 +383,10 @@
 			isa = PBXGroup;
 			children = (
 				53B2D59C1F2781AB0048CFFC /* Reachability.swift */,
-				53B2D5AB1F282F940048CFFC /* SearchViewController.swift */,
 				53B2D59A1F2780EE0048CFFC /* TableViewHelper.swift */,
 				53029D511F2A396400D7EC1E /* APIService.swift */,
+				5328878C245EAD320069D426 /* StationHelper.swift */,
+				53FFE39C2464754600C513C0 /* KeysHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -369,6 +394,7 @@
 		53B2D59E1F2781CC0048CFFC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				53B2D5AB1F282F940048CFFC /* SearchViewController.swift */,
 				53B2D5AF1F28A1E30048CFFC /* HomeViewController.swift */,
 				53B2D5A31F2783490048CFFC /* StationViewController.swift */,
 			);
@@ -380,6 +406,7 @@
 			children = (
 				53B2D5A51F2783DD0048CFFC /* StationViewModel.swift */,
 				53B2D5AD1F28A1670048CFFC /* HomeViewModel.swift */,
+				537019B1245C7E9600111FC8 /* StationCellViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +445,7 @@
 				53B362AE1CC4CA3A003CF0E7 /* MainInterface.storyboard */,
 				53B362B11CC4CA3A003CF0E7 /* Info.plist */,
 				53439F541F2DC18400311DF8 /* TodayWidgetTableViewCell.xib */,
+				5328878F245F26F70069D426 /* TodayWidgetTableViewCellViewModel.swift */,
 			);
 			path = "Kaohsiung CityBike Widget";
 			sourceTree = "<group>";
@@ -623,11 +651,11 @@
 				53439F651F2F7DE100311DF8 /* version.json in Resources */,
 				53B2D5A01F2782080048CFFC /* StationCell.xib in Resources */,
 				53356CBD1D4279BC00A20515 /* Launch Screen.storyboard in Resources */,
-				53134F631D60AF4000B44343 /* GoogleService-Info.plist in Resources */,
 				536E2C131BF726C500B5E7DE /* Localizable.strings in Resources */,
 				5380329C1C20236C00E07131 /* geojson.geojson in Resources */,
 				53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */,
 				534962C31BE39D6600BFFD71 /* citybike.json in Resources */,
+				537019B6245D2C1F00111FC8 /* GoogleService-Info.plist in Resources */,
 				5349629A1BE07BE700BFFD71 /* Assets.xcassets in Resources */,
 				534962981BE07BE700BFFD71 /* Main.storyboard in Resources */,
 			);
@@ -640,7 +668,9 @@
 				537EE1311C0B6EBC008501B0 /* Assets.xcassets in Resources */,
 				53235FD51D4363B6008C5B47 /* Localizable.strings in Resources */,
 				537EE1341C0B73A0008501B0 /* Assets.xcassets in Resources */,
+				53086E0D24686FD600265D3D /* citybike.json in Resources */,
 				537EE0E31C0B35BB008501B0 /* Interface.storyboard in Resources */,
+				53086E0C24686FD000265D3D /* version.json in Resources */,
 				5319C3871D4657CB0014C51E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,10 +679,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53086E0B24686FCD00265D3D /* version.json in Resources */,
 				537EE1331C0B7349008501B0 /* Assets.xcassets in Resources */,
 				5319C3881D4657CC0014C51E /* InfoPlist.strings in Resources */,
 				53C362341CC9FE2200050EBE /* Localizable.strings in Resources */,
 				537EE1301C0B6EBC008501B0 /* Assets.xcassets in Resources */,
+				53086E0E24686FD600265D3D /* citybike.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,8 +695,10 @@
 				53B362BB1CC4CFF3003CF0E7 /* Assets.xcassets in Resources */,
 				53C362331CC9FE2100050EBE /* Localizable.strings in Resources */,
 				53C362311CC9D54200050EBE /* InfoPlist.strings in Resources */,
+				53086E0A24686FCA00265D3D /* version.json in Resources */,
 				53439F561F2DC18400311DF8 /* TodayWidgetTableViewCell.xib in Resources */,
 				53B362B01CC4CA3A003CF0E7 /* MainInterface.storyboard in Resources */,
+				53086E0924686F4E00265D3D /* citybike.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,27 +713,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +761,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:307339286334:ios:489544cdbc0e9361\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym-util.bash \"${PODS_ROOT}\"/FirebaseCrash/\"CityBike-RemoteNotification-9e8c964f8c03.json\"";
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:307339286334:ios:489544cdbc0e9361\n";
 		};
 		5397B90B1F2649CE0056938D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -741,12 +769,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7e59115715190eb6df483058be96c12df9c938d3 2f411f234f0a60c3127a7780c126ea52b1c55cce06c9d02357841188726cdee8";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		765B575F70E6793501F9EB83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -854,9 +883,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5328878D245EAD320069D426 /* StationHelper.swift in Sources */,
 				53B2D5A61F2783DD0048CFFC /* StationViewModel.swift in Sources */,
 				53029D521F2A396400D7EC1E /* APIService.swift in Sources */,
+				53FFE39F2464774B00C513C0 /* String+Extension.swift in Sources */,
 				53029D541F2A3FF000D7EC1E /* Park.swift in Sources */,
+				53FFE39B246454FC00C513C0 /* UIColor+Extension.swift in Sources */,
 				53029D4D1F28D3D200D7EC1E /* UIButton+Extension.swift in Sources */,
 				534962931BE07BE700BFFD71 /* AppDelegate.swift in Sources */,
 				53B2D59B1F2780EE0048CFFC /* TableViewHelper.swift in Sources */,
@@ -868,6 +900,8 @@
 				53B2D5B01F28A1E30048CFFC /* HomeViewController.swift in Sources */,
 				53029D501F28EB9C00D7EC1E /* Annotation.swift in Sources */,
 				53B2D5A41F2783490048CFFC /* StationViewController.swift in Sources */,
+				537019B2245C7E9600111FC8 /* StationCellViewModel.swift in Sources */,
+				53FFE39D2464754600C513C0 /* KeysHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,11 +921,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				53B362AD1CC4CA3A003CF0E7 /* TodayViewController.swift in Sources */,
+				53086E07246839BC00265D3D /* KeysHelper.swift in Sources */,
 				53439F531F2CAF4B00311DF8 /* Park.swift in Sources */,
+				53288790245F26F70069D426 /* TodayWidgetTableViewCellViewModel.swift in Sources */,
+				53086E08246839D100265D3D /* String+Extension.swift in Sources */,
 				53439F521F2A5C1100311DF8 /* TableViewHelper.swift in Sources */,
 				53439F4A1F2A56FB00311DF8 /* HomeViewModel.swift in Sources */,
 				53439F4B1F2A5AA100311DF8 /* Station.swift in Sources */,
+				5328878E245EB67E0069D426 /* StationHelper.swift in Sources */,
 				53439F511F2A5ABE00311DF8 /* APIService.swift in Sources */,
+				5328878A245EA4B60069D426 /* Annotation.swift in Sources */,
 				53B362BA1CC4CF7C003CF0E7 /* TodayWidgetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1044,7 +1083,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -1096,7 +1135,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "3e884559-96a2-4197-80c7-f9b2f218944a";
 				SDKROOT = iphoneos;
@@ -1118,7 +1157,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1139,7 +1178,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1243,146 +1282,6 @@
 			};
 			name = Release;
 		};
-		5383341C1D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "3e884559-96a2-4197-80c7-f9b2f218944a";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "Ad-Hoc";
-		};
-		5383341D1D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A714ADB3A9D7BEB40D8E0FE0 /* Pods-Kaohsiung City Bike.ad-hoc.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 8MREJM6257;
-				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "531fd75c-ddf7-494d-842c-57739c6c52d1";
-				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs-CityBike-Ad-hoc";
-				SWIFT_VERSION = 5.0;
-			};
-			name = "Ad-Hoc";
-		};
-		538334201D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 8MREJM6257;
-				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
-				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "61d58caf-c0f1-4b97-a825-d709e3b36c82";
-				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.watchkitapp.Ad-hoc";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = "Ad-Hoc";
-		};
-		538334211D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2795D267C15D00260CE40D26 /* Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				DEVELOPMENT_TEAM = 8MREJM6257;
-				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "ace6e70e-73a4-4e42-bdb1-42e3ec34ad46";
-				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.CityBike.watchkitextension.Ad-hoc";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = "Ad-Hoc";
-		};
-		538334221D68A2D200D7F654 /* Ad-Hoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				DEVELOPMENT_TEAM = 8MREJM6257;
-				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "751c1207-0bb5-471b-bac8-ef34acce573f";
-				PROVISIONING_PROFILE_SPECIFIER = "Sparkrs.City.Widget.Ad-hoc";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = "Ad-Hoc";
-		};
 		53B362B51CC4CA3A003CF0E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */;
@@ -1393,7 +1292,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1414,7 +1313,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1433,7 +1332,6 @@
 			buildConfigurations = (
 				534962B51BE07BE700BFFD71 /* Debug */,
 				534962B61BE07BE700BFFD71 /* Release */,
-				5383341C1D68A2D200D7F654 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1443,7 +1341,6 @@
 			buildConfigurations = (
 				534962B81BE07BE700BFFD71 /* Debug */,
 				534962B91BE07BE700BFFD71 /* Release */,
-				5383341D1D68A2D200D7F654 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1453,7 +1350,6 @@
 			buildConfigurations = (
 				537EE1001C0B35BB008501B0 /* Debug */,
 				537EE1011C0B35BB008501B0 /* Release */,
-				538334211D68A2D200D7F654 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1463,7 +1359,6 @@
 			buildConfigurations = (
 				537EE0FE1C0B35BB008501B0 /* Debug */,
 				537EE0FF1C0B35BB008501B0 /* Release */,
-				538334201D68A2D200D7F654 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1473,7 +1368,6 @@
 			buildConfigurations = (
 				53B362B51CC4CA3A003CF0E7 /* Debug */,
 				53B362B61CC4CA3A003CF0E7 /* Release */,
-				538334221D68A2D200D7F654 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

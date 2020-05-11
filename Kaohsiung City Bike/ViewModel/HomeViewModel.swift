@@ -7,133 +7,149 @@
 //
 
 import Foundation
-import SwiftyJSON
 import Alamofire
-import ObjectMapper
-import Kanna
+import CoreLocation
 
 class HomeViewModel {
     
-    var id: Int!
-    var no: String!
-    var name: String!
-    var englishname: String!
-    var latitude: Double!
-    var longitude: Double!
-    var address: String!
-    var description: String!
+    private var stations: [Station] = []
+    private var annotations: [Annotation] = []
     
-    var available: Int!
-    var park: Int!
-    
-    init(){}
-    
-    init(data: Station){
-        self.id = data.id
-        self.no = data.no
-        self.name = data.name
-        self.englishname = data.englishname
-        self.latitude = data.latitude
-        self.longitude = data.longitude
-        self.address = data.address
-        self.description = data.description
+    init(){
+        initStations()
     }
     
-    init(data: Park){
-        self.id = data.id
-        self.no = data.no
-        self.name = data.name
-        self.available = data.available
-        self.park = data.park
+    private func initStations() {
+        stations = StationHelper.shared.stations
     }
-    
-    func fetchStationList(handler: @escaping (([Station]) -> ())){
-        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let path = doc.appendingPathComponent("citybike.json").path
         
-        do {
-            let jsonData: Data = try Data(contentsOf: URL(fileURLWithPath: path))
-            let json = try JSON(data: jsonData)
-            let station = json.map({ (station: (String, value: SwiftyJSON.JSON)) -> Station in
-                return Mapper<Station>().map(JSONObject: station.value.dictionaryObject)!
-            })
-            
-            handler(station)
-            
-        } catch let error {
-            print(error.localizedDescription)
+    func setMapAnnotation() {
+        for station in stations {
+            let annotation = Annotation()
+            annotation.title = (Locale.current.languageCode == "zh") ? station.name : station.englishname
+            annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude ?? 0 , longitude: station.longitude ?? 0)
+            annotation.id = station.id
+            annotation.no = station.no
+            self.annotations.append(annotation)
         }
     }
     
-    func fetchStationInfo(handler: @escaping ([Park]) -> ()) {
-        let url = (Locale.current.languageCode == "zh") ? APIService.sourceURL : APIService.engSourceURL
-        APIService.request(url, completionHandler: { data in
-            var parks: [Park] = []
+    func getAnnotations() -> [Annotation] {
+        return annotations
+    }
+    
+    func getAnnotations(at index: Int) -> Annotation {
+        return annotations[index]
+    }
+    
+    func getAnnotations(by id: Int) -> Annotation? {
+        return annotations.filter({$0.id == id}).first
+    }
+    
+    func getAllStationData() -> [Station] {
+        return stations
+    }
+    
+    func getStationData(at index: Int) -> Station {
+        return stations[index]
+    }
+    
+    func getStationData(by id: Int) -> Station? {
+        return stations.filter({$0.id == id}).first
+    }
+    
+    func fetchStationListForWidget() -> [Station] {
+        if let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let path = doc.appendingPathComponent("citybike.json").path
             
             do {
-                let doc = try XML(xml: data, encoding: .utf8)
+                let jsonData: Data = try Data(contentsOf: URL(fileURLWithPath: path))
+                let stations = try JSONDecoder().decode([Station].self, from: jsonData)
+                return stations
                 
-                for node in doc.xpath("//Station") {
-                    let id = Int((node.at_css("StationID")?.text)!)
-                    let no = node.at_css("StationNO")?.text
-                    let name = node.at_css("StationName")?.text
-                    let available = Int((node.at_css("StationNums1")?.text)!)
-                    let park = Int((node.at_css("StationNums2")?.text)!)
-                    
-                    
-                    parks.append(Park(JSON: ["id": id!, "no": no!, "name": name!, "available": available ?? 0, "park": park ?? 0])!)
-         
-                }
-                
+            } catch let error {
+                print(error.localizedDescription)
+                return []
+            }
+        }
+        
+        return []
+    }
+    
+    func fetchStationInfo(with stationIDs: [Int], handler: @escaping ([Park]?) -> ()) {
+        var url = APIService.sourceURL
+        for (index, element) in stationIDs.enumerated() {
+            if index != stationIDs.count - 1 {
+                url += "StationID%20eq%20'\(element)'%20or%20"
+            } else {
+                url += "StationID%20eq%20'\(element)'"
+            }
+        }
+        
+        let xdate:String = APIService.getServerTime();
+        let signDate = "x-date: " + xdate;
+        let base64HmacStr = signDate.hmac(algorithm: .SHA1, key: KeysHelper.l1key)
+        let authorization: String = "hmac username=\""+KeysHelper.l1id+"\", algorithm=\"hmac-sha1\", headers=\"x-date\", signature=\""+base64HmacStr+"\""
+        let headers: HTTPHeaders = ["x-date": xdate,
+                                    "Authorization": authorization,
+                                    "Accept-Encoding": "gzip"]
+        
+        APIService.request(url, headers: headers, completionHandler: { data in
+            do {
+                let park = try JSONDecoder().decode([Park].self, from: data)
+                handler(park)
             } catch let error as NSError{
                 print(error.localizedDescription)
+                handler(nil)
             }
-            
-            handler(parks)
         })
     }
     
-    func updateInfoVersion(handler: @escaping ((Bool)->())) {
-        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let path = doc.appendingPathComponent("version.json")
-        do{
-            let jsonData: Data = try Data(contentsOf: path)
-            let oldJson = try JSON(data: jsonData)
-            let url = APIService.versionSourceURL
-            
-            APIService.request(url, completionHandler: { data in
-                let newJson = try? JSON(data: data)
+    func updateInfoVersion(handler: @escaping (()->())) {
+        if let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let path = doc.appendingPathComponent("version.json")
+            do{
+                let jsonData: Data = try Data(contentsOf: path)
+                let oldJson = try JSONDecoder().decode([String:Float].self, from: jsonData)
+                let url = APIService.versionSourceURL
                 
-                if oldJson["version"] != newJson!["version"] {
-                    do {
-                        try data.write(to: path)
-                        handler(true)
-                    } catch {
-                        handler(false)
+                APIService.request(url, completionHandler: { [weak self] data in
+                    let newJson = try? JSONDecoder().decode([String:Float].self, from: data)
+                    
+                    if oldJson["version"] != newJson!["version"] {
+                        do {
+                            try data.write(to: path)
+                            self?.updateStationInfo(handler: { result in
+                                handler()
+                            })
+                            
+                        } catch {
+                            handler()
+                        }
+                    }else{
+                        handler()
                     }
-                }else{
-                    handler(false)
-                }
-            })
-        } catch let error {
-            print(error.localizedDescription)
+                })
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
     
     func updateStationInfo(handler: @escaping ((Bool)->())) {
-        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let path = doc.appendingPathComponent("citybike.json")
-
-        let url = APIService.stationSourceURL
-        APIService.request(url, completionHandler: { data in
-            do {
-                try data.write(to: path)
-                handler(true)
-            } catch let error {
-                handler(false)
-                print(error.localizedDescription)
-            }
-        })
-
+        if let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let path = doc.appendingPathComponent("citybike.json")
+            
+            let url = APIService.stationSourceURL
+            APIService.request(url, completionHandler: { data in
+                do {
+                    try data.write(to: path)
+                    handler(true)
+                } catch let error {
+                    handler(false)
+                    print(error.localizedDescription)
+                }
+            })
+        }
     }
 }

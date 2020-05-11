@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,13 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kcb-logo" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-AC-54s">
-                                <rect key="frame" x="121" y="172" width="173" height="186"/>
+                                <rect key="frame" x="120.66666666666669" y="275" width="173" height="186"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.66274509800000003" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aqK-AC-54s" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Mv-ls-1zG"/>
-                            <constraint firstItem="aqK-AC-54s" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="152" id="mRV-tm-hHp"/>
+                            <constraint firstItem="aqK-AC-54s" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UzZ-WI-u4g"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -35,7 +34,6 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6Mv-ls-1zG"/>
-                                <exclude reference="mRV-tm-hHp"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -44,7 +42,6 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="6Mv-ls-1zG"/>
-                                <include reference="mRV-tm-hHp"/>
                             </mask>
                         </variation>
                     </view>

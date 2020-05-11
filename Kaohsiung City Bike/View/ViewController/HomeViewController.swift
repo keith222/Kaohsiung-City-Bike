@@ -40,37 +40,33 @@ class HomeViewController: UIViewController {
     @IBOutlet var costSpend: UILabel!
     @IBOutlet var blurView: UIView!
     
-    fileprivate let locationManager: CLLocationManager = CLLocationManager()
-    fileprivate let customAnnotation: MKPointAnnotation = MKPointAnnotation()
-    fileprivate var currentLocation: CLLocationCoordinate2D!
-    fileprivate var selectedAnnotation: Annotation!
-    fileprivate var annoArray: [Annotation]? = [Annotation]()
-    fileprivate var currentA: MKAnnotation!
-    fileprivate var locateCheck: Bool = true
+    private let locationManager: CLLocationManager = CLLocationManager()
+    private let customAnnotation: MKPointAnnotation = MKPointAnnotation()
+    private var currentLocation: CLLocationCoordinate2D!
+    private var selectedAnnotation: Annotation!
+    private var currentA: MKAnnotation!
+    private var locateCheck: Bool = true
 
-    fileprivate var timer: Timer!
-    fileprivate var stopWatch: Timer!
-    fileprivate var count: Int = 0
-    fileprivate var stationName: String!
-    fileprivate var stationNO: String!
+    private var timer: Timer!
+    private var stopWatch: Timer!
+    private var count: Int = 0
+    private var stationName: String!
+    private var stationID: Int?
     
-    fileprivate var watchSession: WCSession?
+    private var watchSession: WCSession?
     
-    fileprivate var longPress: UILongPressGestureRecognizer!
-    fileprivate var shortPress: UITapGestureRecognizer!
+    private var longPress: UILongPressGestureRecognizer!
+    private var shortPress: UITapGestureRecognizer!
     
-    fileprivate var leftBarButton: UIBarButtonItem!
-    fileprivate var rightBarButton: UIBarButtonItem!
+    private var leftBarButton: UIBarButtonItem!
+    private var rightBarButton: UIBarButtonItem!
     
-    fileprivate var duration: Date?
-    fileprivate var source: [HomeViewModel]?
+    private var duration: Date?
     
     lazy var homeViewModel = {
         return HomeViewModel()
     }()
-    
-    fileprivate var xmlItems:[(staID:String,staName:String,ava:String,unava:String)]?
-    
+        
     fileprivate let reachability: Reachability = Reachability()!
     
     override func viewDidLoad() {
@@ -100,7 +96,6 @@ class HomeViewController: UIViewController {
         self.setUpUI()
         self.checkData()
         self.requestLocationAuthorization()
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -120,40 +115,33 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToStation"{
             let destination = segue.destination as! StationViewController
+            destination.stationViewModel = StationViewModel()
             destination.mDelegate = self
         }
     }
     
     override func restoreUserActivityState(_ activity: NSUserActivity) {
         if activity.activityType == CSSearchableItemActionType{
-            if let userInfo = activity.userInfo{
+            if let userInfo = activity.userInfo {
                 //取得spotlight search裡的 identifier
                 let selectedStation = userInfo[CSSearchableItemActivityIdentifier] as! String
                 print(selectedStation)
                 //將identifier切割取最後一位
                 let selectedIndex = Int(selectedStation.components(separatedBy: ".").last!)
                 print(selectedIndex ?? 0)
-                let stationNO = self.source?[selectedIndex!].no
-                //將stationname送入senddata以被找出選擇的點
-                didSelect(stationNO!)
+                if let stationID = homeViewModel.getStationData(at: selectedIndex!).id {
+                    //將stationname送入senddata以被找出選擇的點
+                    didSelect(stationID)
+                }
             }
         }
     }
-    
+        
     private func checkData(){
         HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Update", comment: "")))
-        self.homeViewModel.updateInfoVersion(handler: { [weak self] isUpdated in
-            if isUpdated {
-                self?.homeViewModel.updateStationInfo(handler: { completed in
-                    if completed {
-                        self?.setMap()
-                    }
-                })
-            }else{
-                self?.setMap()
-            }
+        self.homeViewModel.updateInfoVersion(handler: { [weak self] in
+            self?.setMap()
         })
-        
     }
     
     private func requestLocationAuthorization() {
@@ -172,23 +160,9 @@ class HomeViewController: UIViewController {
     }
     
     func setMap() {
-        self.homeViewModel.fetchStationList(handler: { [weak self] stations in
-            self?.source = stations.map{ value -> HomeViewModel in
-                return HomeViewModel(data: value)
-            }
-            
-            for element in (self?.source)! {
-                let annotation = Annotation()
-                annotation.title = (Locale.current.languageCode == "zh") ? element.name : element.englishname
-                annotation.coordinate = CLLocationCoordinate2D(latitude: element.latitude , longitude: element.longitude)
-                annotation.id = element.id
-                annotation.no = element.no
-                self?.annoArray?.append(annotation)
-            }
-            
-            HUD.hide()
-            self?.setupSearchableContent()
-        })
+        homeViewModel.setMapAnnotation()
+        HUD.hide()
+        self.setupSearchableContent()
     }
     
     private func setUpUI() {
@@ -197,8 +171,10 @@ class HomeViewController: UIViewController {
         self.spendInfo.transform = CGAffineTransform(translationX: 0, y: -368)
         self.customInfo.transform = CGAffineTransform(translationX: 0, y: -200)
         self.resultButtonOutlet.transform = CGAffineTransform(translationX: 0, y: -368)
+        self.resultButtonOutlet.backgroundColor = .naviColor
         self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 800)
-        self.blurView.backgroundColor = UIColor(patternImage: UIImage(named: "bg-record")!)
+        self.timeButtonOutlet.backgroundColor = .naviColor
+        self.blurView.layer.contents = UIImage(named: "bg-record")?.cgImage
         
         //設定UIView,UIButton 邊線及陰影
         self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
@@ -206,11 +182,11 @@ class HomeViewController: UIViewController {
         self.resultButtonOutlet.addBorder(10.0, thickness: 0, color: self.resultButtonOutlet.backgroundColor!)
         self.resultButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
         
-        self.infoView.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.infoView.addBorder(5.0, thickness: 0.7, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 0.8))
         self.infoView.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
-        self.customInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.customInfo.addBorder(5.0, thickness: 0.7, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 0.8))
         self.customInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
-        self.spendInfo.addBorder(5.0, thickness: 1.0, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 1.0))
+        self.spendInfo.addBorder(5.0, thickness: 0.7, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 0.8))
         self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
         
         //添加手勢
@@ -220,20 +196,27 @@ class HomeViewController: UIViewController {
         self.mapView.addGestureRecognizer(longPress)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
+    
     // spotlight search feature
     private func setupSearchableContent(){
         var searchableItems = [CSSearchableItem]()
         
-        for (index, element) in self.source!.enumerated(){//將位置作成Searchable data
+        for (index, element) in homeViewModel.getAllStationData().enumerated(){//將位置作成Searchable data
             let searchableItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
             searchableItemAttributeSet.title = element.name
             searchableItemAttributeSet.contentDescription = (Locale.current.languageCode == "zh") ? element.address : element.englishname
             searchableItemAttributeSet.thumbnailData = UIImage(named:"bike-mark-fill")!.pngData()
             
             var keywords = [String]()
-            keywords.append(element.name)
-            keywords.append(element.address)
-            keywords.append(element.englishname)
+            guard let name = element.name, let address = element.address, let englishName = element.englishname else { continue }
+            
+            keywords.append(name)
+            keywords.append(address)
+            keywords.append(englishName)
             searchableItemAttributeSet.keywords = keywords
             
             let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(String(describing: index))", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
@@ -293,7 +276,7 @@ class HomeViewController: UIViewController {
         self.mapView.addGestureRecognizer(self.longPress)
     }
     
-    fileprivate func checkIfInCity(location user: MKUserLocation){
+    private func checkIfInCity(location user: MKUserLocation){
         //不在範圍內跳出警示
         print("current location:\(user.coordinate.longitude);\(user.coordinate.latitude)")
         if((user.coordinate.longitude < 120.17 || user.coordinate.longitude > 120.43) || (user.coordinate.latitude > 22.91 || user.coordinate.latitude < 22.508)){
@@ -303,18 +286,21 @@ class HomeViewController: UIViewController {
         }
     }
     
-    fileprivate func requestAgain(){
+    private func requestAgain(){
         //前往設定APP
         let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .alert)
         alert.addAction(title: NSLocalizedString("SetButton", comment: ""), style: .default, handler: { _ in
-            let url = URL(string: UIApplication.openSettingsURLString)
-            UIApplication.shared.openURL(url!)
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: nil)
+            }
         })
         alert.addAction(title: NSLocalizedString("OkButton", comment: ""), style: .default, handler: nil)
         alert.show()
     }
     
-    func showRoute(_ currentAnnotation: MKAnnotation){
+    private func showRoute(_ currentAnnotation: MKAnnotation){
         let oldOverlays = self.mapView.overlays //記錄舊線條
         
         //設定路徑起始與目的地
@@ -369,46 +355,40 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @objc func bikeInfo(_ timer:Timer){
+    @objc private func bikeInfo(_ timer:Timer){
         HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Loading", comment: "")))
         
-        self.homeViewModel.fetchStationInfo(handler: { [weak self] data in
-            guard data.count > 0 else{
+        guard let id = self.stationID else {
+            HUD.hide()
+            return
+        }
+        
+        self.homeViewModel.fetchStationInfo(with: [id], handler: { [weak self] parks in
+            guard let park = parks?.first else{
                 HUD.hide()
                 return
             }
             
-            let source: [HomeViewModel] = data.map({value -> HomeViewModel in
-                return HomeViewModel(data: value)
-            })
-            
-            let index = source.firstIndex(where: {($0.name == self?.stationName) || ($0.no == self?.stationNO)})
-            
             //傳送資料到 Apple Watch
             if WCSession.default.isReachable {
-                let bikeSession = ["ava" : source[index!].available!, "unava": source[index!].park!]
+                let bikeSession = ["ava" : park.AvailableRentBikes, "unava": park.AvailableReturnBikes]
                 let session = WCSession.default
                 session.sendMessage(bikeSession, replyHandler: nil, errorHandler: nil)
             }
             
-            guard index != nil else {
-                HUD.hide()
-                return                
-            }
-            
             DispatchQueue.main.async {
-                self?.avaNum.textColor = (source[index!].available < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
-                self?.avaNum.text = "\(source[index!].available!)"
+                self?.avaNum.textColor = (park.AvailableRentBikes < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
+                self?.avaNum.text = "\(park.AvailableRentBikes)"
                     
-                self?.parkNum.textColor = (source[index!].park < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
-                self?.parkNum.text = "\(source[index!].park!)"
+                self?.parkNum.textColor = (park.AvailableReturnBikes < 10) ? UIColor(hexString: "#D54768") : UIColor(hexString: "#5D7778")
+                self?.parkNum.text = "\(park.AvailableReturnBikes)"
             }
             
             HUD.hide()
         })
     }
     
-    @objc func stopWatchTimer(_ timer:Timer){
+    @objc private func stopWatchTimer(_ timer:Timer){
         count += 1
         let second = count%60
         let minute = (count/60)%60
@@ -416,7 +396,7 @@ class HomeViewController: UIViewController {
         self.timeButtonOutlet.setTitle(String(format: "%02d:%02d:%02d",hour,minute,second), for: UIControl.State())
     }
     
-    @objc func pauseStopWatch(){
+    @objc private func pauseStopWatch(){
         if(self.stopWatch != nil){
             self.stopWatch.invalidate()
             self.stopWatch = nil
@@ -424,7 +404,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @objc func startStopWatch(){
+    @objc private func startStopWatch(){
         if(self.duration != nil){
             let newSecond: TimeInterval = Date().timeIntervalSince(self.duration!)
             count = count + lround(newSecond)
@@ -432,7 +412,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func showSpendInfo(){
+    private func showSpendInfo(){
         let second = count%60
         let minute = (count/60)%60//計算使用時間
         var calMinute = Int(count/60)
@@ -468,7 +448,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    @objc func timeOutAlert(_ notification:Notification){
+    @objc private func timeOutAlert(_ notification:Notification){
         //連線逾時AlerView
         let message = (notification as NSNotification).userInfo!["message"] as! String
         UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, defaultActionButtonTitle: NSLocalizedString("Widget_alert_ok", comment: "")).show()
@@ -490,7 +470,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func timeButton(_ sender: AnyObject) {
-        if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: ""){//一開始按下後
+        if timeButtonOutlet.titleLabel?.text == NSLocalizedString("Time_Start", comment: "") {//一開始按下後
             self.timeButtonOutlet.setTitle("00:00:00", for: UIControl.State())
             
             self.stopWatch = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
@@ -499,26 +479,25 @@ class HomeViewController: UIViewController {
             self.timeButtonOutlet.addShadow(UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1))
             
             //設定Local Notification
-            let localNotification = UILocalNotification()
-            let pushDate = Date(timeIntervalSinceNow: 1200)
-            localNotification.fireDate = pushDate
-            localNotification.timeZone = TimeZone.current
-            localNotification.soundName = UILocalNotificationDefaultSoundName
-            localNotification.alertBody = NSLocalizedString("Twenty_Minutes_Alert", comment: "")
-            localNotification.alertTitle = NSLocalizedString("Time_Alert", comment: "")
-            localNotification.category = "myCategory"
-            UIApplication.shared.scheduleLocalNotification(localNotification)
+            let localNotification = UNMutableNotificationContent()
+            localNotification.sound = .default
+            localNotification.body = NSLocalizedString("Twenty_Minutes_Alert", comment: "")
+            localNotification.title = NSLocalizedString("Time_Alert", comment: "")
+            localNotification.categoryIdentifier = "myCategory"
+            let localNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1200, repeats: false)
+            let localNotificationRequest = UNNotificationRequest(identifier: "local", content: localNotification, trigger: localNotificationTrigger)
+            UNUserNotificationCenter.current().add(localNotificationRequest, withCompletionHandler: nil)
             
-            let finalNotification = UILocalNotification()
-            finalNotification.fireDate = Date(timeIntervalSinceNow: 1800)
-            finalNotification.timeZone = TimeZone.current
-            finalNotification.soundName = UILocalNotificationDefaultSoundName
-            finalNotification.alertBody = NSLocalizedString("Thirty_Minutes_Alert", comment: "")
-            finalNotification.alertTitle = NSLocalizedString("Time_Alert", comment: "")
-            finalNotification.category = "myCategory"
-            UIApplication.shared.scheduleLocalNotification(finalNotification)
+            let finalNotification = UNMutableNotificationContent()
+            finalNotification.sound = .default
+            finalNotification.body = NSLocalizedString("Thirty_Minutes_Alert", comment: "")
+            finalNotification.title = NSLocalizedString("Time_Alert", comment: "")
+            finalNotification.categoryIdentifier = "myCategory"
+            let finalNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1800, repeats: false)
+            let finalNotificationRequest = UNNotificationRequest(identifier: "final", content: finalNotification, trigger: finalNotificationTrigger)
+            UNUserNotificationCenter.current().add(finalNotificationRequest, withCompletionHandler: nil)
             
-        }else{//結束計時
+        } else {//結束計時
             self.stopWatch.invalidate()
             self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), for: UIControl.State())
@@ -527,40 +506,42 @@ class HomeViewController: UIViewController {
             self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
             
             self.blurView.isHidden = false
-            UIApplication.shared.cancelAllLocalNotifications()
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
             showSpendInfo()
             self.count = 0
         }
         
     }
+    
     @IBAction func doneButton(_ sender: AnyObject) {
-        let button = sender as! UIButton
-        UIView.animate(withDuration: 0.2, animations: {
-            self.spendInfo.transform = CGAffineTransform(translationX: 0, y: -368)
-            button.transform = CGAffineTransform(translationX: 0, y: -368)
-        },completion: {(completion) -> Void in
-            self.spendInfo.isHidden = true
-            self.blurView.isHidden = true
-            button.isHidden = true
+        let button = sender as? UIButton
+        
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.spendInfo.transform = CGAffineTransform(translationX: 0, y: -368)
+            button?.transform = CGAffineTransform(translationX: 0, y: -368)
+        },completion: { [weak self] (completion) -> Void in
+            self?.spendInfo.isHidden = true
+            self?.blurView.isHidden = true
+            button?.isHidden = true
         })
     }
     
 }
 
 extension HomeViewController: SelectStation {
-    
-    func didSelect(_ stationNO: String) {
-        self.stationNO = stationNO
+
+    func didSelect(_ stationID: Int) {
+        self.stationID = stationID
         
         //將車站列表被點選的站點與地圖上的站點對照
-        let filter = self.source?.filter({$0.no == stationNO}).first
+        let filter = homeViewModel.getStationData(by: stationID)
         let result = self.mapView.annotations.filter({$0.title! == filter?.name})
         
         self.mapView.removeAnnotation(self.customAnnotation)
         
         //地圖上沒有站點則繪出，有則選擇
         if result.isEmpty{
-            let newAnn = self.annoArray!.filter{ $0.no! == stationNO }.first!
+            let newAnn = homeViewModel.getAnnotations(by: stationID)!
             self.mapView.addAnnotation(newAnn)
             self.mapView.selectAnnotation(newAnn, animated: true)
         }else{
@@ -625,14 +606,14 @@ extension HomeViewController: MKMapViewDelegate {
         print("view did finish render")
         
         //filter annotation in map rect
-        let existAnnotation = annoArray?.filter({ (annotation) in
-            self.mapView.visibleMapRect.contains(MKMapPoint.init(annotation.coordinate)
-                )
+        let existAnnotation = homeViewModel.getAnnotations().filter({ [weak self] (annotation) in
+            self?.mapView.visibleMapRect.contains(MKMapPoint.init(annotation.coordinate)
+                ) ?? false
                 &&
-                !self.mapView.annotations.contains{$0.isEqual(annotation)}
+                !(self?.mapView.annotations.contains{$0.isEqual(annotation)} ?? true)
         })
-        if existAnnotation?.count != 0{
-            self.mapView.addAnnotations(existAnnotation!)
+        if !existAnnotation.isEmpty{
+            self.mapView.addAnnotations(existAnnotation)
         }
         
         print("annotation count: \(self.mapView.annotations(in: self.mapView.visibleMapRect).count)")
@@ -651,7 +632,7 @@ extension HomeViewController: MKMapViewDelegate {
         }else {
             anView!.annotation = annotation
         }
-        anView!.image = !(self.annoArray!.contains{$0.isEqual(anView!.annotation)}) ? UIImage(named:"flagpin") : UIImage(named:"bikePin")
+        anView!.image = !(homeViewModel.getAnnotations().contains{$0.isEqual(anView!.annotation)}) ? UIImage(named:"flagpin") : UIImage(named:"bikePin")
         
         return anView
     }

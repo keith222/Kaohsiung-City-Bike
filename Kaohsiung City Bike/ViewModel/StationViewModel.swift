@@ -7,51 +7,46 @@
 //
 
 import Foundation
-import SwiftyJSON
 import Alamofire
-import ObjectMapper
 
 class StationViewModel {
+   
+    private var stationCellViewModels: [StationCellViewModel] = [] {
+        didSet {
+            self.reloadTableViewClosure?(stationCellViewModels)
+        }
+    }
     
-    var id: Int!
-    var no: String!
-    var name: String!
-    var englishname: String!
-    var latitude: Double!
-    var longitude: Double!
-    var address: String!
-    var description: String!
+    var numberOfCells: Int {
+        return stationCellViewModels.count
+    }
+    
+    var reloadTableViewClosure: (([StationCellViewModel])->())?
     
     init(){}
     
-    init(data: Station){
-        self.id = data.id
-        self.no = data.no
-        self.name = data.name
-        self.englishname = data.englishname
-        self.latitude = data.latitude
-        self.longitude = data.longitude
-        self.address = data.address
-        self.description = data.description
+    func initStations() {
+        let stations = StationHelper.shared.stations
+        self.processFetched(stations)
     }
     
-    func fetchStationList(handler: @escaping (([Station]) -> ())){
-//        let path: String = Bundle.main.path(forResource: "citybike", ofType: "json")!
-        let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let path = doc.appendingPathComponent("citybike.json").path
-        
-        do {
-            let jsonData: Data = try Data(contentsOf: URL(fileURLWithPath: path))
-            let json = try JSON(data: jsonData)
-            
-            let station = json.map({ (station: (String, value: SwiftyJSON.JSON)) -> Station in
-                return Mapper<Station>().map(JSONObject: station.value.dictionaryObject)!
-            })
-            
-            handler(station)
-            
-        } catch let error {
-            print(error.localizedDescription)
+    func getCellViewModels() -> [StationCellViewModel] {
+        return self.stationCellViewModels
+    }
+    
+    private func getCellViewModel(with index: Int) -> StationCellViewModel {
+        return self.stationCellViewModels[index]
+    }
+    
+    private func processFetched(_ stations: [Station]) {
+        var viewModels = [StationCellViewModel]()
+        for station in stations {
+            viewModels.append(createCellViewModel(with: station))
         }
+        self.stationCellViewModels.append(contentsOf: viewModels)
+    }
+    
+    private func createCellViewModel(with station: Station) -> StationCellViewModel {
+        return StationCellViewModel(id: station.id, no: station.no, name: station.name, englishname: station.englishname, latitude: station.latitude, longitude: station.longitude, address: station.address, description: station.description)
     }
 }

@@ -1,14 +1,14 @@
 //
-//  Station.swift
+//  StationCellViewModel.swift
 //  Kaohsiung City Bike
 //
-//  Created by Yang Tun-Kai on 2017/7/25.
-//  Copyright © 2017年 Yang Tun-Kai. All rights reserved.
+//  Created by Yang Tun-Kai on 2020/5/1.
+//  Copyright © 2020 Yang Tun-Kai. All rights reserved.
 //
 
 import Foundation
 
-struct Station: Codable {
+struct StationCellViewModel {
     
     let id: Int?
     let no: String?

@@ -26,7 +26,7 @@ class TableViewHelper: NSObject {
         }
     }
     
-    init(tableView: UITableView, nibName: String, source: [AnyObject], selectAction: ((Int)->())? = nil) {
+    init(tableView: UITableView, nibName: String, source: [AnyObject] = [], selectAction: ((Int)->())? = nil) {
         self.tableView = tableView
         
         let nib = UINib(nibName: nibName, bundle: nil)

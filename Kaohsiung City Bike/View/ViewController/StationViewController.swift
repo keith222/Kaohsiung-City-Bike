@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol SelectStation {
-    func didSelect(_ stationID: String)
+    func didSelect(_ stationID: Int)
 }
 
 class StationViewController: SearchViewController{
@@ -18,11 +18,11 @@ class StationViewController: SearchViewController{
     
     private let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
     private var tableHelper: TableViewHelper?
-    private var source: [StationViewModel]?
-    private var filteredSource: [StationViewModel]?
+    private var source: [StationCellViewModel]?
+    private var filteredSource: [StationCellViewModel]?
     
     var mDelegate: SelectStation?
-
+    
     lazy var stationViewModel = {
         return StationViewModel()
     }()
@@ -31,50 +31,49 @@ class StationViewController: SearchViewController{
         super.viewDidLoad()
         
         self.setUp()
+        self.bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        self.stationViewModel.fetchStationList(handler: { [weak self] stations in
-            self?.source = stations.map{ value -> StationViewModel in
-                return StationViewModel(data: value)
-            }
+        
+    }
+    
+    private func bindViewModel() {
+        self.stationViewModel.reloadTableViewClosure = { [weak self] source in
+            var tempSource = source
             
             //re-arrange station list
             if let favoriteList = self?.userDefault.array(forKey: "staForTodayWidget") {
-                for (index, element) in (self?.source?.enumerated())! {
+                for (index, element) in tempSource.enumerated() {
                     if favoriteList.contains(where: { ($0 as! String) == element.no }) {
-                        let tempElement = self?.source?.remove(at: index)
-                        self?.source?.insert(tempElement!, at: 0)
+                        let tempElement = tempSource.remove(at: index)
+                        tempSource.insert(tempElement, at: 0)
                     }
                 }
             }
             
-            self?.tableHelper = TableViewHelper(
-                tableView: self!.stationTableView,
-                nibName: "StationCell",
-                source: self!.source!,
-                selectAction: { num in
-                    let selectedNO = (self?.searchController.isActive)! ? self?.filteredSource?[num].no : self?.source?[num].no
-                    
-                    guard let selectedNo = selectedNO else { return }
-                    self?.mDelegate?.didSelect(selectedNo)
-                    self?.navigationController?.popToRootViewController(animated: true)
-                }
-            )
+            self?.tableHelper?.reloadData = tempSource as [AnyObject]
+            self?.source = tempSource
+        }
+        
+        self.tableHelper = TableViewHelper(
+            tableView: self.stationTableView,
+            nibName: "StationCell",
+            selectAction: { [weak self] num in
+                guard let selectedID = (self?.searchController.isActive)! ? self?.filteredSource?[num].id : self?.source?[num].id else { return }
+                
+                self?.mDelegate?.didSelect(selectedID)
+                self?.navigationController?.popToRootViewController(animated: true)
         })
+        
+        self.stationViewModel.initStations()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    deinit {
-        print("==========")
-        print("StationViewController deinit")
-        print("==========")
-    }
-
     private func setUp() {
         self.title = NSLocalizedString("Station_List", comment: "")
-
+        
         //set tableview cell self-sizing
         self.stationTableView.estimatedRowHeight = 70.0
         self.stationTableView.rowHeight = UITableView.automaticDimension
@@ -89,13 +88,23 @@ class StationViewController: SearchViewController{
         //搜尋結果
         if !searchText.isEmpty {
             self.filteredSource = source?.filter({ value in
-                return (value.name.contains(searchText)) || (value.address.contains(searchText)) || (value.englishname.contains(searchText.lowercased()))
+                let name = value.name ?? ""
+                let address = value.address ?? ""
+                let englishName = value.englishname ?? ""
+                
+                return name.contains(searchText) || address.contains(searchText) || englishName.contains(searchText.lowercased())
             })
             
-            self.tableHelper?.reloadData = self.filteredSource!
+            self.tableHelper?.reloadData = (self.filteredSource ?? []) as [AnyObject]
             
         } else {
-            self.tableHelper?.reloadData = source!
+            self.tableHelper?.reloadData = (source ?? []) as [AnyObject]
         }
+    }
+    
+    deinit {
+        print("==========")
+        print("StationViewController deinit")
+        print("==========")
     }
 }

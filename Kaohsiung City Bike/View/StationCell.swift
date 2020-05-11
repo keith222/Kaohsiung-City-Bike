@@ -25,10 +25,11 @@ class StationCell: UITableViewCell, ReactiveView {
         
         self.favoriteButton.setImage(UIImage(named: "star"), for: .normal)
         self.favoriteButton.setImage(UIImage(named: "starfilled"), for: .selected)
+        self.subtitleLabel.textColor = UIColor.subTitleColor
     }
     
     func bindViewModel(_ dataModel: Any) {
-        if let viewModel = dataModel as? StationViewModel {
+        if let viewModel = dataModel as? StationCellViewModel {
             self.titleLabel.text = viewModel.name
             self.subtitleLabel.text = (Locale.current.languageCode == "zh") ? viewModel.description : viewModel.englishname
             self.stationNO = viewModel.no

@@ -7,23 +7,11 @@
 //
 
 import Foundation
-import ObjectMapper
 
-struct Park: Mappable {
+struct Park: Codable {
     
-    var id: Int!
-    var no: String!
-    var name: String!
-    var available: Int!
-    var park: Int!
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        self.id <- map["id"]
-        self.no <- map["no"]
-        self.name <- map["name"]
-        self.available <- map["available"]
-        self.park <- map["park"]
-    }
+    let StationID: String
+    let ServiceAvailable: Int
+    let AvailableRentBikes: Int
+    let AvailableReturnBikes: Int
 }

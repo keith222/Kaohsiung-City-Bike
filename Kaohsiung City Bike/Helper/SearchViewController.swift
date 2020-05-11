@@ -35,6 +35,16 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
         self.searchController.loadViewIfNeeded()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if #available(iOS 13.0, *) {
+            self.searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Search", comment: ""), attributes: [NSAttributedString.Key.foregroundColor : UIColor.placeholderColor])
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
     //搜尋功能
     @objc func configureSearchBar(){
         //結果呈現在此VC上
@@ -55,7 +65,7 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
                 if let backgroundview = textfield.subviews.first {
 
                     // Background color
-                    backgroundview.backgroundColor = UIColor.white
+                    backgroundview.backgroundColor = .white
 
                     // Rounded corner
                     backgroundview.layer.cornerRadius = 10
