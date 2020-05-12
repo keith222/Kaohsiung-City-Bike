@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var spendInfo: UIView!
     @IBOutlet var timeSpend: UILabel!
     @IBOutlet var costSpend: UILabel!
-    @IBOutlet var blurView: UIView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
     
     private let locationManager: CLLocationManager = CLLocationManager()
     private let customAnnotation: MKPointAnnotation = MKPointAnnotation()
@@ -136,6 +136,20 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if #available(iOS 12.0, *) {
+            switch traitCollection.userInterfaceStyle {
+            case .dark:
+                break
+            default:
+                break
+            }
+        }
+       
+    }
         
     private func checkData(){
         HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Update", comment: "")))
@@ -174,20 +188,19 @@ class HomeViewController: UIViewController {
         self.resultButtonOutlet.backgroundColor = .naviColor
         self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 800)
         self.timeButtonOutlet.backgroundColor = .naviColor
-        self.blurView.layer.contents = UIImage(named: "bg-record")?.cgImage
         
         //設定UIView,UIButton 邊線及陰影
         self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
-        self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.timeButtonOutlet.addShadow(.naviColor)
         self.resultButtonOutlet.addBorder(10.0, thickness: 0, color: self.resultButtonOutlet.backgroundColor!)
-        self.resultButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.resultButtonOutlet.addShadow(.naviColor)
         
-        self.infoView.addBorder(5.0, thickness: 0.7, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 0.8))
-        self.infoView.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
-        self.customInfo.addBorder(5.0, thickness: 0.7, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 0.8))
-        self.customInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
-        self.spendInfo.addBorder(5.0, thickness: 0.7, color: UIColor(red: 205/255, green: 224/255, blue: 222/255, alpha: 0.8))
-        self.spendInfo.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+        self.infoView.addBorder(5.0, thickness: 0.5, color: UIColor(hex: 0xCDE0DE, transparency: 0.5) ?? .clear)
+        self.infoView.addShadow(.naviColor)
+        self.customInfo.addBorder(5.0, thickness: 0.5, color: UIColor(hex: 0xCDE0DE, transparency: 0.5) ?? .clear)
+        self.customInfo.addShadow(.naviColor)
+        self.spendInfo.addBorder(5.0, thickness: 0.5, color: UIColor(hex: 0xCDE0DE, transparency: 0.5) ?? .clear)
+        self.spendInfo.addShadow(.naviColor)
         
         //添加手勢
         self.longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.addAnnotation(_:)))
@@ -474,9 +487,10 @@ class HomeViewController: UIViewController {
             self.timeButtonOutlet.setTitle("00:00:00", for: UIControl.State())
             
             self.stopWatch = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopWatchTimer(_:)), userInfo: nil, repeats: true)
-            self.timeButtonOutlet.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 153/255, alpha: 1)
+            self.timeButtonOutlet.backgroundColor = .stopColor
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
-            self.timeButtonOutlet.addShadow(UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1))
+            self.timeButtonOutlet.addShadow(UIColor(hex: 0xAE179A) ?? .clear)
+            //UIColor(red: 174/255, green: 23/255, blue: 154/255, alpha: 1)
             
             //設定Local Notification
             let localNotification = UNMutableNotificationContent()
@@ -501,9 +515,9 @@ class HomeViewController: UIViewController {
             self.stopWatch.invalidate()
             self.stopWatch = nil
             self.timeButtonOutlet.setTitle(NSLocalizedString("Time_Start", comment: ""), for: UIControl.State())
-            self.timeButtonOutlet.backgroundColor = UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1)
+            self.timeButtonOutlet.backgroundColor = .naviColor
             self.timeButtonOutlet.addBorder(10.0, thickness: 0, color: self.timeButtonOutlet.backgroundColor!)
-            self.timeButtonOutlet.addShadow(UIColor(red: 23/255, green: 169/255, blue: 174/255, alpha: 1.0))
+            self.timeButtonOutlet.addShadow(.naviColor)
             
             self.blurView.isHidden = false
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
@@ -695,7 +709,7 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         //將路線畫至地圖
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor(red: 40/255, green: 144/255, blue: 244/255, alpha: 1.0)
+        renderer.strokeColor = UIColor(hex: 0x2890F4)
         renderer.lineWidth = 10.0
         
         return renderer
