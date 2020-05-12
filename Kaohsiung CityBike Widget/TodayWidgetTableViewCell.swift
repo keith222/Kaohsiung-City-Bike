@@ -17,6 +17,14 @@ class TodayWidgetTableViewCell: UITableViewCell, ReactiveView {
     @IBOutlet weak var parkLabel: UILabel!
     @IBOutlet weak var bikeLabel: UILabel!
     
+    private let titleColor: UIColor = {
+        if #available(iOS 13, *) {
+            return .label
+        } else {
+            // Return a fallback color for iOS 12 and lower.
+            return .black
+        }
+    }()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,24 +36,16 @@ class TodayWidgetTableViewCell: UITableViewCell, ReactiveView {
         self.sitePoint.layoutIfNeeded()
         self.sitePoint.layer.cornerRadius = self.sitePoint.frame.width / 2
         self.sitePoint.layer.masksToBounds = true
-        
-//        guard #available(iOS 10, *) else{
-//            self.backgroundColor = .black
-//            self.stationName.textColor = .white
-//            self.parkLabel.textColor = .white
-//            self.bikeLabel.textColor = .white
-//            return
-//        }
     }
     
     func bindViewModel(_ dataModel: Any) {
         if let viewModel = dataModel as? TodayWidgetTableViewCellViewModel {
             self.stationName.text = viewModel.name
             
-            self.available.textColor = ((viewModel.available ?? 0) < 10) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : UIColor.black
+            self.available.textColor = ((viewModel.available ?? 0) < 10) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : titleColor
             self.available.text = "\(viewModel.available!)"
             
-            self.park.textColor = ((viewModel.park ?? 0) < 10) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : UIColor.black
+            self.park.textColor = ((viewModel.park ?? 0) < 10) ? UIColor(red: 232/255, green: 87/255, blue: 134/255, alpha: 1) : titleColor
             self.park.text = "\(viewModel.park!)"
         }
     }

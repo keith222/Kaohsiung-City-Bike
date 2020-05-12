@@ -40,14 +40,6 @@ class TodayViewController: UIViewController, NCWidgetProviding{
                 urlString += ("\(savedStations[num].0)").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
                 let url: URL = URL(string: urlString)!
                 self?.extensionContext?.open(url, completionHandler: nil)
-                
-                //                if let station = self?.userDefault.array(forKey: "staForTodayWidget") {
-                //                    let stationNo = station.sorted{($0 as! String) < ($1 as! String)}
-                //                    var urlString = "CityBike://?"
-                //                    urlString += (stationNo[num] as! String).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-                //                    let url: URL = URL(string: urlString)!
-                //                    self?.extensionContext?.open(url, completionHandler: nil)
-                //                }
         })
         
         
@@ -122,14 +114,11 @@ class TodayViewController: UIViewController, NCWidgetProviding{
                 self?.defaultButton.isHidden = false
                 return
             }
-            
-            print("test: \(self?.savedStations); \(Locale.current.languageCode)")
-            
+                        
             self?.source = parks.map({ [weak self] park -> TodayWidgetTableViewCellViewModel in
                 let name = self?.savedStations
                     .filter{ park.StationID == "\($0.0)"}.first
                     .map{ (Locale.current.languageCode == "zh") ? $0.1 : $0.2} ?? ""
-                print("test: \(name)")
                 return TodayWidgetTableViewCellViewModel(name: name, available: park.AvailableRentBikes, park: park.AvailableReturnBikes)
             })
             
@@ -138,29 +127,6 @@ class TodayViewController: UIViewController, NCWidgetProviding{
             
             completionHandler(.newData)
         })
-        
-        //        if let savedArray = self.userDefault.array(forKey: "staForTodayWidget"), savedArray.count > 0 {
-        //            self.defaultButton.isHidden = true
-        //
-        //
-        //            self.homeViewModel.fetchStationInfo(handler: { [weak self] data in
-        //                guard data.count > 0 else{ return }
-        //
-        //                self?.source = data.map({value -> HomeViewModel in
-        //                    return HomeViewModel(data: value)
-        //                })
-        //                self?.source = self?.source?.enumerated().filter({ value in
-        //                    return (savedArray.contains(where: {($0 as! String) == value.element.no}))
-        //                }).map{$0.element}
-        //
-        //                self?.tableHelper?.reloadData = (self?.source)!
-        //                self?.todayTableView.isHidden = false
-        //
-        //                completionHandler(.newData)
-        //            })
-        //        }else{
-        //            self.defaultButton.isHidden = false
-        //        }
     }
     
 }

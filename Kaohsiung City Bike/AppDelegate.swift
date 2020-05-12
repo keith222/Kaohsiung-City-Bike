@@ -40,36 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().standardAppearance = barAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = barAppearance
-        } else {
-            // Fallback on earlier versions
         }
-                           
-         
-        
-        
+                        
         self.initWidgetData(with: StationHelper.shared.stations)
-        
-//        let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
-//        if !userDefault.bool(forKey: "updateStorage") {
-//            var todayWidgetArray = userDefault.array(forKey: "staForTodayWidget")
-//
-//            var homeViewModel: HomeViewModel? = HomeViewModel()
-//            homeViewModel?.fetchStationList(handler: { stations in
-//                for station in stations {
-//                    let index = todayWidgetArray?.firstIndex(where: {
-//                        print($0)
-//                        print(station.name)
-//                        return ($0 as! String) == station.name
-//                    })
-//                    guard let _ = index else { continue }
-//                    todayWidgetArray?[index!] = station.no
-//                }
-//            })
-//            userDefault.set(todayWidgetArray, forKey: "staForTodayWidget")
-//            userDefault.set(true, forKey: "updateStorage")
-//            userDefault.synchronize()
-//            homeViewModel = nil
-//        }
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()

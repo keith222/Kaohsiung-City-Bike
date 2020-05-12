@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogt-vT-n82" id="Avx-UI-JD8">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-l5-wLk">
@@ -27,11 +24,11 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OL-Ul-aM6">
-                        <rect key="frame" x="131" y="31" width="14" height="18"/>
+                        <rect key="frame" x="130" y="31" width="14" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="4g7-bK-LzF"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -40,7 +37,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="E5e-QG-RdU"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -54,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bikes；" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPQ-VV-JRw">
-                        <rect key="frame" x="76" y="31" width="52" height="18"/>
+                        <rect key="frame" x="76" y="31" width="51" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="vTL-Jh-w1B"/>
                         </constraints>
@@ -63,7 +60,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-Xd-C4I">
-                        <rect key="frame" x="150" y="31" width="51" height="18"/>
+                        <rect key="frame" x="149" y="31" width="49.5" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="ZRf-uv-qxh"/>
                         </constraints>
@@ -100,6 +97,7 @@
                 <outlet property="sitePoint" destination="fW6-l5-wLk" id="V9u-w7-KSG"/>
                 <outlet property="stationName" destination="NcR-T7-HT3" id="FVr-zC-iIk"/>
             </connections>
+            <point key="canvasLocation" x="138" y="155"/>
         </tableViewCell>
     </objects>
 </document>
