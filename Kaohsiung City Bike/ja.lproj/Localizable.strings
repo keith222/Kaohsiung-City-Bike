@@ -15,6 +15,7 @@
 "Time_Alert" = "通知";
 "Alert" = "警告";
 "Error_Log" = "インターネット接続がオフラインのようです。";
+"Remove_Old_Data" = "高雄自転車システムが更新されたから、保存されたデータは削除されます。 アプリを更新して、もう一度追加してください。";
 "Title" = "位置情報サービスがオフ";
 "Content" = "マップで位置情報を取得するには、”設定”＞”プライバシー”で位置情報サービスをオンにしてください";
 "SetButton" = "設定";
@@ -25,8 +26,8 @@
 "Station_List" = "サイトリスト";
 "Reached_the_limit" = "限界に達して";
 "Only_8_Station_can_be_added" = "8サイトを追加することができます。";
-"Widget_alert_title" = "\"今日 ウィジェット\"に追加する";
-"Widget_alert_content" = "\"通知センター\"にこのサイトのリアルタイムの情報を入手できることができます";
+"Widget_alert_title" = "\"ウィジェット\"に追加する";
+"Widget_alert_content" = "\"ウィジェット\"にこのサイトのリアルタイムの情報を入手できることができます";
 "Widget_alert_ok" = "OK";
 "Widget_alert_cancel" = "Cancel";
 "Watch_Bike" = " / 自転車";

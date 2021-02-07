@@ -14,6 +14,7 @@
 "Time_Alert" = "시간 경고";
 "Alert" = "오류";
 "Error_Log" = "인터넷 연결이 오프라인 인 것 같습니다.";
+"Remove_Old_Data" = "업데이트 된 자전거 시스템으로 인해 저장된 데이터가 제거됩니다. 앱을 업데이트하고 다시 추가하십시오.";
 "Title" = "위치 서비스가 꺼져";
 "Content" = "Kaohsiung CityBike가 현재 위치를 결정할 수 있도록 설정> 개인 정보 보호에서 위치 서비스를 사용합니다.";
 "SetButton" = "조절";
@@ -24,8 +25,8 @@
 "Station_List" = "역 목록";
 "Reached_the_limit" = "도달 한도";
 "Only_8_Station_can_be_added" = "사용 가능한 자전거 역은 최대 8 개입니다.";
-"Widget_alert_title" = "\"Today Widget\" 에 추가하십시오";
-"Widget_alert_content" = "\"공지 센터\"에서이 방송국의 실시간 정보를 얻을 수 있습니다.";
+"Widget_alert_title" = "\"Widget\" 에 추가하십시오";
+"Widget_alert_content" = "\"Widget\"에서이 방송국의 실시간 정보를 얻을 수 있습니다.";
 "Widget_alert_ok" = "확인";
 "Widget_alert_cancel" = "취소";
 "Watch_Bike" = " / 자전거";
