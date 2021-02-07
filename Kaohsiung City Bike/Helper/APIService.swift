@@ -14,12 +14,13 @@ class APIService {
     
     //url of c-bike station info
     static let sourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["sourceURL"]!
-    //url of c-bike station info english version
-    static let engSourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["infoEngSourceURL"]!
     //url of station list
     static let stationSourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["stationSourceURL"]!
     //url of version
     static let versionSourceURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["versionSourceURL"]!
+    //url of Youbike resgiter weabsite
+    static let registerURL: String = (Bundle.main.object(forInfoDictionaryKey: "APIService") as! Dictionary<String, String>)["RegisterURL"]!
+    
     
     static func request(_ route: String, headers: HTTPHeaders = [:], completionHandler: ((_ data: Data)->Void)? = nil) {
         Alamofire.request(

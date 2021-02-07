@@ -4,12 +4,10 @@
 <dict>
 	<key>APIService</key>
 	<dict>
+		<key>RegisterURL</key>
+		<string>https://kcg.youbike.com.tw/register/terms</string>
 		<key>sourceURL</key>
 		<string>https://ptx.transportdata.tw/MOTC/v2/Bike/Availability/Kaohsiung?$format=JSON&amp;$filter=</string>
-		<key>infoEngSourceURL</key>
-		<string>http://www.c-bike.com.tw/xml/StationListEnOpenData.aspx</string>
-		<key>infoSourceURL</key>
-		<string>http://www.c-bike.com.tw/xml/stationlistopendata.aspx</string>
 		<key>stationSourceURL</key>
 		<string>https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/master/Kaohsiung%20City%20Bike/citybike.json</string>
 		<key>versionSourceURL</key>
@@ -24,6 +22,8 @@
 		<dict>
 			<key>CFBundleTypeName</key>
 			<string>MKDirectionsRequest</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>com.apple.maps.directionsrequest</string>
@@ -41,7 +41,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.4.4</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -56,7 +56,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption</key>
