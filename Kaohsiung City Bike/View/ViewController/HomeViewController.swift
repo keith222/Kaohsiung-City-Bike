@@ -13,6 +13,7 @@ import SwifterSwift
 import WatchConnectivity
 import CoreLocation
 import PKHUD
+import SafariServices
 
 //for spotlight search
 import CoreSpotlight
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var travelTimeLabel: UILabel!
     @IBOutlet var bikeTravelTimeLabel: UILabel!
     @IBOutlet var infoView: UIView!
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet var staName: UILabel!
     @IBOutlet var avaNum: UILabel!
     @IBOutlet var parkNum: UILabel!
@@ -40,6 +42,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var costSpend: UILabel!
     @IBOutlet weak var blurView: UIVisualEffectView!
     
+    private let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
     private let locationManager: CLLocationManager = CLLocationManager()
     private let customAnnotation: MKPointAnnotation = MKPointAnnotation()
     private var currentLocation: CLLocationCoordinate2D!
@@ -51,7 +54,7 @@ class HomeViewController: UIViewController {
     private var stopWatch: Timer!
     private var count: Int = 0
     private var stationName: String!
-    private var stationID: Int?
+    private var stationID: String?
     
     private var watchSession: WCSession?
     
@@ -84,7 +87,7 @@ class HomeViewController: UIViewController {
         self.addNotificationObserver(name: NSNotification.Name(rawValue: "timeOut"), selector: #selector(self.timeOutAlert(_:)))
         
         guard self.reachability.isReachable else {
-            UIAlertController(title: "提示", message: "網路連線異常。").show()
+            self.showAlert(with: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""))
             return
         }
         
@@ -115,7 +118,6 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToStation"{
             let destination = segue.destination as! StationViewController
-            destination.stationViewModel = StationViewModel()
             destination.mDelegate = self
         }
     }
@@ -125,14 +127,10 @@ class HomeViewController: UIViewController {
             if let userInfo = activity.userInfo {
                 //取得spotlight search裡的 identifier
                 let selectedStation = userInfo[CSSearchableItemActivityIdentifier] as! String
-                print(selectedStation)
                 //將identifier切割取最後一位
                 let selectedIndex = Int(selectedStation.components(separatedBy: ".").last!)
-                print(selectedIndex ?? 0)
-                if let stationID = homeViewModel.getStationData(at: selectedIndex!).id {
-                    //將stationname送入senddata以被找出選擇的點
-                    didSelect(stationID)
-                }
+                //將stationname送入senddata以被找出選擇的點
+                didSelect(homeViewModel.getStationData(at: selectedIndex!).id)
             }
         }
     }
@@ -142,10 +140,8 @@ class HomeViewController: UIViewController {
 
         if #available(iOS 12.0, *) {
             switch traitCollection.userInterfaceStyle {
-            case .dark:
-                break
-            default:
-                break
+            case .dark: break
+            default: break
             }
         }
        
@@ -153,9 +149,18 @@ class HomeViewController: UIViewController {
         
     private func checkData(){
         HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Update", comment: "")))
-        self.homeViewModel.updateInfoVersion(handler: { [weak self] in
+
+        self.homeViewModel.updateInfoVersion(handler: { [weak self] version in
+            if let list = self?.userDefault.array(forKey: "staForTodayWidget"), !list.isEmpty, version < 2.5 {
+                self?.showAlert(with: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Remove_Old_Data", comment: ""))
+                self?.removeOldData()
+            }
             self?.setMap()
         })
+    }
+    
+    private func removeOldData() {
+        self.userDefault.removeObject(forKey: "staForTodayWidget")
     }
     
     private func requestLocationAuthorization() {
@@ -171,12 +176,6 @@ class HomeViewController: UIViewController {
         }else{
             locationManager.requestWhenInUseAuthorization()
         }
-    }
-    
-    func setMap() {
-        homeViewModel.setMapAnnotation()
-        HUD.hide()
-        self.setupSearchableContent()
     }
     
     private func setUpUI() {
@@ -208,12 +207,7 @@ class HomeViewController: UIViewController {
         self.longPress.minimumPressDuration = 1.5
         self.mapView.addGestureRecognizer(longPress)
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-    }
-    
+
     // spotlight search feature
     private func setupSearchableContent(){
         var searchableItems = [CSSearchableItem]()
@@ -225,11 +219,10 @@ class HomeViewController: UIViewController {
             searchableItemAttributeSet.thumbnailData = UIImage(named:"bike-mark-fill")!.pngData()
             
             var keywords = [String]()
-            guard let name = element.name, let address = element.address, let englishName = element.englishname else { continue }
             
-            keywords.append(name)
-            keywords.append(address)
-            keywords.append(englishName)
+            keywords.append(element.name)
+            keywords.append(element.address)
+            keywords.append(element.englishname)
             searchableItemAttributeSet.keywords = keywords
             
             let searchableItem = CSSearchableItem(uniqueIdentifier: "Sparkrs.CityBike.SpotIt.\(String(describing: index))", domainIdentifier: "bike", attributeSet: searchableItemAttributeSet)
@@ -241,6 +234,132 @@ class HomeViewController: UIViewController {
                 print(error?.localizedDescription ?? "")
             }
         })
+    }
+    
+    private func checkIfInCity(location user: MKUserLocation){
+        //不在範圍內跳出警示
+        print("current location:\(user.coordinate.longitude);\(user.coordinate.latitude)")
+        if((user.coordinate.longitude < 120.17 || user.coordinate.longitude > 120.43) || (user.coordinate.latitude > 22.91 || user.coordinate.latitude < 22.508)){
+            HUD.hide()
+            locationManager.stopUpdatingLocation()
+            
+            showAlert(with: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""))
+        }
+    }
+    
+    private func requestAgain(){
+        //前往設定APP
+        let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .alert)
+        alert.addAction(title: NSLocalizedString("SetButton", comment: ""), style: .default, handler: { _ in
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: nil)
+            }
+        })
+        alert.addAction(title: NSLocalizedString("OkButton", comment: ""), style: .default, handler: nil)
+        alert.show()
+    }
+    
+    private func showRoute(_ currentAnnotation: MKAnnotation){
+        let oldOverlays = self.mapView.overlays //記錄舊線條
+        
+        //設定路徑起始與目的地
+        let directionRequest = MKDirections.Request()
+        directionRequest.source = .forCurrentLocation()
+        let destinationPlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
+        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
+        directionRequest.transportType = .walking
+        
+        //方位計算
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate{ [weak self]
+            response, error in
+            guard let response = response else {
+                //handle the error here
+                print("Error: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            let route = response.routes[0]
+            self?.mapView.addOverlay(route.polyline, level: .aboveRoads)
+            self?.mapView.removeOverlays(oldOverlays)//移除位置更新後的舊線條
+            
+            let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
+            
+            if currentAnnotation.isEqual(self?.customAnnotation){
+                self?.customWalkingTimeLabel.text = String(etaMin)
+            }else{
+                self?.travelTimeLabel.text = String(etaMin)
+            }
+        }
+        
+        //計算腳踏車行車時間（以Automobile暫代，因Apple Map不提供Bike）
+        let bikeRequest = MKDirections.Request()
+        bikeRequest.source = .forCurrentLocation()
+        let bikePlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
+        bikeRequest.destination = MKMapItem(placemark: bikePlacemark)
+        bikeRequest.transportType = .automobile
+        let bikeDirections = MKDirections(request: bikeRequest)
+        bikeDirections.calculate{
+            response, error in
+            guard let response = response else {
+                //handle the error here
+                print("Error: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            let bikeTime = response.routes[0].expectedTravelTime
+            if currentAnnotation.isEqual(self.customAnnotation){
+                self.customRidingTimeLabel.text = String(NSInteger(bikeTime)/60)
+            }else{
+                self.bikeTravelTimeLabel.text = String(NSInteger(bikeTime)/60)
+            }
+        }
+    }
+    
+    private func showSpendInfo(){
+        let second = count%60
+        let minute = (count/60)%60//計算使用時間
+        var calMinute = Int(count/60)
+        let hour = Int(count/3600)
+        let timeInfo = String(format:"%02d:%02d:%02d",hour,minute,second)
+        self.timeSpend.text = timeInfo
+        
+        var cost = 0//計算花費
+        switch calMinute{
+            case 0..<30: cost = 0 //不滿30分鐘免費
+            case 30..<60: cost = 5
+            case 60..<90: cost = 15 //90分鐘 10元 + 5元
+            default: //90分後每30分20元
+                calMinute -= 90
+                if calMinute % 30 != 0{
+                     calMinute = Int(calMinute/30)+1
+                }else{
+                    calMinute = Int(calMinute/30)
+                }
+                cost = 15 + (calMinute*20)
+        }
+        let costInfo = "NT$ \(cost)"
+        self.costSpend.text = costInfo
+        self.duration = nil
+        
+        //spendInfo滑下動畫
+        self.spendInfo.isHidden = false
+        self.resultButtonOutlet.isHidden = false
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            self.spendInfo.transform = CGAffineTransform(translationX: 0,y: 0)
+            self.resultButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
+        },completion: nil)
+        
+    }
+    
+    private func showAlert(with title: String, message: String) {
+        UIAlertController(title: title, message: message, defaultActionButtonTitle: NSLocalizedString("Widget_alert_ok", comment: "")).show()
+    }
+    
+    func setMap() {
+        homeViewModel.setMapAnnotation()
+        HUD.hide()
+        self.setupSearchableContent()
     }
     
     @objc private func addAnnotation(_ gestureRecognizer: UIGestureRecognizer){
@@ -288,86 +407,7 @@ class HomeViewController: UIViewController {
         
         self.mapView.addGestureRecognizer(self.longPress)
     }
-    
-    private func checkIfInCity(location user: MKUserLocation){
-        //不在範圍內跳出警示
-        print("current location:\(user.coordinate.longitude);\(user.coordinate.latitude)")
-        if((user.coordinate.longitude < 120.17 || user.coordinate.longitude > 120.43) || (user.coordinate.latitude > 22.91 || user.coordinate.latitude < 22.508)){
-            locationManager.stopUpdatingLocation()
-            
-            UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Range", comment: ""), defaultActionButtonTitle: NSLocalizedString("Widget_alert_ok", comment: "")).show()
-        }
-    }
-    
-    private func requestAgain(){
-        //前往設定APP
-        let alert = UIAlertController(title: NSLocalizedString("Title", comment: ""), message: NSLocalizedString("Content", comment: ""), preferredStyle: .alert)
-        alert.addAction(title: NSLocalizedString("SetButton", comment: ""), style: .default, handler: { _ in
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-
-            if UIApplication.shared.canOpenURL(settingsUrl) {
-                UIApplication.shared.open(settingsUrl, completionHandler: nil)
-            }
-        })
-        alert.addAction(title: NSLocalizedString("OkButton", comment: ""), style: .default, handler: nil)
-        alert.show()
-    }
-    
-    private func showRoute(_ currentAnnotation: MKAnnotation){
-        let oldOverlays = self.mapView.overlays //記錄舊線條
         
-        //設定路徑起始與目的地
-        let directionRequest = MKDirections.Request()
-        directionRequest.source = .forCurrentLocation()
-        let destinationPlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
-        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
-        directionRequest.transportType = .walking
-        
-        //方位計算
-        let directions = MKDirections(request: directionRequest)
-        directions.calculate{ [weak self]
-            response, error in
-            guard let response = response else {
-                //handle the error here
-                print("Error: \(String(describing: error?.localizedDescription))")
-                return
-            }
-            let route = response.routes[0] 
-            self?.mapView.addOverlay(route.polyline, level: .aboveRoads)
-            self?.mapView.removeOverlays(oldOverlays)//移除位置更新後的舊線條
-            
-            let etaMin = (NSInteger(route.expectedTravelTime)/60) //預估步行時間
-            
-            if currentAnnotation.isEqual(self?.customAnnotation){
-                self?.customWalkingTimeLabel.text = String(etaMin)
-            }else{
-                self?.travelTimeLabel.text = String(etaMin)
-            }
-        }
-        
-        //計算腳踏車行車時間（以Automobile暫代，因Apple Map不提供Bike）
-        let bikeRequest = MKDirections.Request()
-        bikeRequest.source = .forCurrentLocation()
-        let bikePlacemark = MKPlacemark(coordinate: currentAnnotation.coordinate, addressDictionary: nil)
-        bikeRequest.destination = MKMapItem(placemark: bikePlacemark)
-        bikeRequest.transportType = .automobile
-        let bikeDirections = MKDirections(request: bikeRequest)
-        bikeDirections.calculate{
-            response, error in
-            guard let response = response else {
-                //handle the error here
-                print("Error: \(String(describing: error?.localizedDescription))")
-                return
-            }
-            let bikeTime = response.routes[0].expectedTravelTime
-            if currentAnnotation.isEqual(self.customAnnotation){
-                self.customRidingTimeLabel.text = String(NSInteger(bikeTime)/60)
-            }else{
-                self.bikeTravelTimeLabel.text = String(NSInteger(bikeTime)/60)
-            }
-        }
-    }
-    
     @objc private func bikeInfo(_ timer:Timer){
         HUD.show(.labeledProgress(title: "", subtitle: NSLocalizedString("Loading", comment: "")))
         
@@ -375,7 +415,7 @@ class HomeViewController: UIViewController {
             HUD.hide()
             return
         }
-        
+
         self.homeViewModel.fetchStationInfo(with: [id], handler: { [weak self] parks in
             guard let park = parks?.first else{
                 HUD.hide()
@@ -425,46 +465,10 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func showSpendInfo(){
-        let second = count%60
-        let minute = (count/60)%60//計算使用時間
-        var calMinute = Int(count/60)
-        let hour = Int(count/3600)
-        let timeInfo = String(format:"%02d:%02d:%02d",hour,minute,second)
-        self.timeSpend.text = timeInfo
-        
-        var cost = 0//計算花費
-        switch calMinute{
-            case 0..<30: cost = 0 //不滿30分鐘免費
-            case 30..<60: cost = 5
-            case 60..<90: cost = 15 //90分鐘 10元 + 5元
-            default: //90分後每30分20元
-                calMinute -= 90
-                if calMinute % 30 != 0{
-                     calMinute = Int(calMinute/30)+1
-                }else{
-                    calMinute = Int(calMinute/30)
-                }
-                cost = 15 + (calMinute*20)
-        }
-        let costInfo = "NT$ \(cost)"
-        self.costSpend.text = costInfo
-        self.duration = nil
-        
-        //spendInfo滑下動畫
-        self.spendInfo.isHidden = false
-        self.resultButtonOutlet.isHidden = false
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
-            self.spendInfo.transform = CGAffineTransform(translationX: 0,y: 0)
-            self.resultButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
-        },completion: nil)
-        
-    }
-    
     @objc private func timeOutAlert(_ notification:Notification){
         //連線逾時AlerView
         let message = (notification as NSNotification).userInfo!["message"] as! String
-        UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, defaultActionButtonTitle: NSLocalizedString("Widget_alert_ok", comment: "")).show()
+        showAlert(with: NSLocalizedString("Alert", comment: ""), message: message)
         timer.invalidate()
     }
     
@@ -540,11 +544,65 @@ class HomeViewController: UIViewController {
         })
     }
     
+    @IBAction func favoriteButton(_ sender: Any) {
+        var title = ""
+        var message = ""
+        
+        if let favoriteList = self.userDefault.array(forKey: "staForTodayWidget") {
+            var list = favoriteList
+            
+            if let index = favoriteList.firstIndex(where: {($0 as! String) == self.stationID}) {
+                list.remove(at: index)
+                self.userDefault.set(list, forKey: "staForTodayWidget")
+                self.userDefault.synchronize()
+                
+            } else {
+                if favoriteList.count < 8 {
+                    list.append(self.stationID!)
+                
+                    self.userDefault.set(list, forKey: "staForTodayWidget")
+                    self.userDefault.synchronize()
+                    
+                    title = NSLocalizedString("Widget_alert_title", comment: "")
+                    message = NSLocalizedString("Widget_alert_content", comment: "")
+                
+                } else {
+                    title = NSLocalizedString("Reached_the_limit", comment: "")
+                    message = NSLocalizedString("Only_8_Station_can_be_added", comment: "")
+                    
+                }
+                
+                self.showAlert(with: title, message: message)
+            }
+        } else {
+            let newList = [self.stationID!]
+            self.userDefault.set(newList, forKey: "staForTodayWidget")
+            self.userDefault.synchronize()
+            
+            title = NSLocalizedString("Widget_alert_title", comment: "")
+            message = NSLocalizedString("Widget_alert_content", comment: "")
+            self.showAlert(with: title, message: message)
+        }
+        
+        (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
+    }
+    
+    
+    @IBAction func openButton(_ sender: UIBarButtonItem) {
+        if let url = APIService.registerURL.url {
+            let safari = SFSafariViewController(url: url)
+            safari.preferredBarTintColor = .naviColor
+            safari.preferredControlTintColor = .white
+            safari.delegate = self
+            self.present(safari, animated: true, completion: nil)
+        }
+    }
+    
 }
 
 extension HomeViewController: SelectStation {
 
-    func didSelect(_ stationID: Int) {
+    func didSelect(_ stationID: String) {
         self.stationID = stationID
         
         //將車站列表被點選的站點與地圖上的站點對照
@@ -621,10 +679,9 @@ extension HomeViewController: MKMapViewDelegate {
         
         //filter annotation in map rect
         let existAnnotation = homeViewModel.getAnnotations().filter({ [weak self] (annotation) in
-            self?.mapView.visibleMapRect.contains(MKMapPoint.init(annotation.coordinate)
-                ) ?? false
-                &&
-                !(self?.mapView.annotations.contains{$0.isEqual(annotation)} ?? true)
+            self?.mapView.visibleMapRect.contains(MKMapPoint.init(annotation.coordinate)) ?? false
+            &&
+            !(self?.mapView.annotations.contains{$0.isEqual(annotation)} ?? true)
         })
         if !existAnnotation.isEmpty{
             self.mapView.addAnnotations(existAnnotation)
@@ -659,12 +716,18 @@ extension HomeViewController: MKMapViewDelegate {
             showRoute(currentA)
             var annoType = 0
             
-            if !(view.annotation!.isEqual(self.customAnnotation)){
+            if !(view.annotation!.isEqual(self.customAnnotation)), let annotation = view.annotation as? Annotation {
                 self.stationName = (view.annotation?.title)!
                 //點下annotation後的動作
                 mapView.removeOverlays(self.mapView.overlays)
                 self.staName.text = (view.annotation?.title)!
                 annoType = 1
+                
+                self.stationID = annotation.id
+                //確定站點是否已存
+                if let favoriteList = self.userDefault.array(forKey: "staForTodayWidget") {
+                    self.favoriteButton.isSelected = favoriteList.contains(where: {($0 as! String) == annotation.id})
+                }
                 
                 //偵測網路是否連線
                 if self.reachability.isReachable {
@@ -680,7 +743,7 @@ extension HomeViewController: MKMapViewDelegate {
                         self.timeButtonOutlet.transform = CGAffineTransform(translationX: 0, y: 0)
                     },completion: nil)
                 }else{
-                    UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""), defaultActionButtonTitle: NSLocalizedString("Widget_alert_ok", comment: "")).show()
+                    self.showAlert(with: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("Error_Log", comment: ""))
                 }
             }else{
                 self.customInfo.isHidden = false
@@ -716,6 +779,8 @@ extension HomeViewController: MKMapViewDelegate {
     }
 }
 
+extension HomeViewController: SFSafariViewControllerDelegate {}
+
 extension HomeViewController: WCSessionDelegate {
     
     /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
@@ -730,4 +795,3 @@ extension HomeViewController: WCSessionDelegate {
     @available(iOS 9.3, *)
     public func sessionDidBecomeInactive(_ session: WCSession) {}
 }
-

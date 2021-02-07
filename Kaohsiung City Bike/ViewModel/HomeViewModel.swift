@@ -27,9 +27,8 @@ class HomeViewModel {
         for station in stations {
             let annotation = Annotation()
             annotation.title = (Locale.current.languageCode == "zh") ? station.name : station.englishname
-            annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude ?? 0 , longitude: station.longitude ?? 0)
+            annotation.coordinate = CLLocationCoordinate2D(geohash: station.geohash)
             annotation.id = station.id
-            annotation.no = station.no
             self.annotations.append(annotation)
         }
     }
@@ -42,7 +41,7 @@ class HomeViewModel {
         return annotations[index]
     }
     
-    func getAnnotations(by id: Int) -> Annotation? {
+    func getAnnotations(by id: String) -> Annotation? {
         return annotations.filter({$0.id == id}).first
     }
     
@@ -54,7 +53,7 @@ class HomeViewModel {
         return stations[index]
     }
     
-    func getStationData(by id: Int) -> Station? {
+    func getStationData(by id: String) -> Station? {
         return stations.filter({$0.id == id}).first
     }
     
@@ -76,7 +75,7 @@ class HomeViewModel {
         return []
     }
     
-    func fetchStationInfo(with stationIDs: [Int], handler: @escaping ([Park]?) -> ()) {
+    func fetchStationInfo(with stationIDs: [String], handler: @escaping ([Park]?) -> ()) {
         var url = APIService.sourceURL
         for (index, element) in stationIDs.enumerated() {
             if index != stationIDs.count - 1 {
@@ -105,29 +104,26 @@ class HomeViewModel {
         })
     }
     
-    func updateInfoVersion(handler: @escaping (()->())) {
+    func updateInfoVersion(handler: @escaping ((Double)->())) {
         if let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let path = doc.appendingPathComponent("version.json")
             do{
                 let jsonData: Data = try Data(contentsOf: path)
-                let oldJson = try JSONDecoder().decode([String:Float].self, from: jsonData)
-                let url = APIService.versionSourceURL
+                let oldJson = try JSONDecoder().decode([String: Double].self, from: jsonData)
                 
-                APIService.request(url, completionHandler: { [weak self] data in
-                    let newJson = try? JSONDecoder().decode([String:Float].self, from: data)
+                APIService.request(APIService.versionSourceURL, completionHandler: { [weak self] data in
+                    let newJson = try? JSONDecoder().decode([String: Double].self, from: data)
                     
-                    if oldJson["version"] != newJson!["version"] {
+                    if oldJson["version"] ?? 0.0 < newJson!["version"] ?? 0.0 {
                         do {
                             try data.write(to: path)
-                            self?.updateStationInfo(handler: { result in
-                                handler()
-                            })
+                            self?.updateStationInfo(handler: { _ in handler(oldJson["version"] ?? 0) })
                             
                         } catch {
-                            handler()
+                            handler(oldJson["version"] ?? 0)
                         }
                     }else{
-                        handler()
+                        handler(oldJson["version"] ?? 0)
                     }
                 })
             } catch let error {
@@ -139,12 +135,11 @@ class HomeViewModel {
     func updateStationInfo(handler: @escaping ((Bool)->())) {
         if let doc = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let path = doc.appendingPathComponent("citybike.json")
-            
-            let url = APIService.stationSourceURL
-            APIService.request(url, completionHandler: { data in
+            APIService.request(APIService.stationSourceURL, completionHandler: { data in
                 do {
                     try data.write(to: path)
                     handler(true)
+                    
                 } catch let error {
                     handler(false)
                     print(error.localizedDescription)
