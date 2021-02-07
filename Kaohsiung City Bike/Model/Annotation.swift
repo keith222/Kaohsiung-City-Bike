@@ -10,6 +10,5 @@ import Foundation
 import MapKit
 
 class Annotation: MKPointAnnotation {
-    var id: Int?
-    var no: String?
+    var id: String?
 }

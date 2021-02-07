@@ -10,12 +10,9 @@ import Foundation
 
 struct Station: Codable {
     
-    let id: Int?
-    let no: String?
-    let name: String?
-    let englishname: String?
-    let latitude: Double?
-    let longitude: Double?
-    let address: String?
-    let description: String?
+    let id: String
+    let name: String
+    let englishname: String
+    let geohash: String
+    let address: String
 }
