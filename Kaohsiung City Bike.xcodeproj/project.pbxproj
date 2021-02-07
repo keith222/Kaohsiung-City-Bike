@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B7AF90A555D3D691BEFA985 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE55F0A8F1419123AD7C6369 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */; };
-		1DDA67064284468611BA2453 /* Pods_Kaohsiung_City_Bike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C45F10040D0671A83D7B7 /* Pods_Kaohsiung_City_Bike.framework */; };
 		53029D4D1F28D3D200D7EC1E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D4C1F28D3D200D7EC1E /* UIButton+Extension.swift */; };
 		53029D501F28EB9C00D7EC1E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D4F1F28EB9C00D7EC1E /* Annotation.swift */; };
 		53029D521F2A396400D7EC1E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53029D511F2A396400D7EC1E /* APIService.swift */; };
@@ -21,6 +19,7 @@
 		53086E0C24686FD000265D3D /* version.json in Resources */ = {isa = PBXBuildFile; fileRef = 53439F641F2F7DE100311DF8 /* version.json */; };
 		53086E0D24686FD600265D3D /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
 		53086E0E24686FD600265D3D /* citybike.json in Resources */ = {isa = PBXBuildFile; fileRef = 534962C21BE39D6600BFFD71 /* citybike.json */; };
+		5318B88A25C85A7200E9705D /* GeohashHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318B88925C85A7200E9705D /* GeohashHelper.swift */; };
 		5319C3871D4657CB0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		5319C3881D4657CC0014C51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
 		53235FD51D4363B6008C5B47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
@@ -78,10 +77,14 @@
 		53C362341CC9FE2200050EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536E2C151BF726C500B5E7DE /* Localizable.strings */; };
 		53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CE89DE1E61582900C528BC /* MapKit.framework */; };
 		53E2325D1BFE39A700F36B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53E2325F1BFE39A700F36B71 /* InfoPlist.strings */; };
+		53EAB54525CB18B0001D5BF4 /* GeohashHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318B88925C85A7200E9705D /* GeohashHelper.swift */; };
+		53EAB54A25CB18B3001D5BF4 /* GeohashHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318B88925C85A7200E9705D /* GeohashHelper.swift */; };
 		53FFE39B246454FC00C513C0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39A246454FC00C513C0 /* UIColor+Extension.swift */; };
 		53FFE39D2464754600C513C0 /* KeysHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39C2464754600C513C0 /* KeysHelper.swift */; };
 		53FFE39F2464774B00C513C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FFE39E2464774B00C513C0 /* String+Extension.swift */; };
-		652B6194A17B64CB8B168AAC /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */; };
+		6FC3293118E9CF786DEBB62E /* Pods_Kaohsiung_City_Bike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF359AA6F9A2672731F9C2E3 /* Pods_Kaohsiung_City_Bike.framework */; };
+		9A25652A7162BAC85480545A /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695CB7BACA71CE085B571F10 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */; };
+		A7AA3B1F5D7C5B1C2E153158 /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6F0DCB76854201FE5E967C /* Pods_Kaohsiung_CityBike_Widget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,16 +148,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C3229461B46070AFDE8D270 /* Pods_Kaohsiung_CityBike_WatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_WatchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D9C45F10040D0671A83D7B7 /* Pods_Kaohsiung_City_Bike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_Bike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2795D267C15D00260CE40D26 /* Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig"; sourceTree = "<group>"; };
-		3CD590F36FD0DAB87B250ABA /* Pods-Kaohsiung CityBike Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.release.xcconfig"; sourceTree = "<group>"; };
-		3ECE2FEF40EA7804E963A22A /* Pods_Kaohsiung_City_BikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_BikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1455798244BF3C096B965372 /* Pods-Kaohsiung CityBike Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.release.xcconfig"; path = "Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.release.xcconfig"; sourceTree = "<group>"; };
+		2BDB2362B9AF9E2C956EAD09 /* Pods-Kaohsiung City Bike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.release.xcconfig"; path = "Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.release.xcconfig"; sourceTree = "<group>"; };
 		53029D4C1F28D3D200D7EC1E /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Extension/UIButton+Extension.swift"; sourceTree = "<group>"; };
 		53029D4F1F28EB9C00D7EC1E /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Annotation.swift; path = Model/Annotation.swift; sourceTree = "<group>"; };
 		53029D511F2A396400D7EC1E /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = Helper/APIService.swift; sourceTree = "<group>"; };
 		53029D531F2A3FF000D7EC1E /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Park.swift; path = Model/Park.swift; sourceTree = "<group>"; };
 		531551261C08B65E00DA0285 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5318B88925C85A7200E9705D /* GeohashHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeohashHelper.swift; sourceTree = "<group>"; };
 		5319C38C1D46615C0014C51E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 		5319C38D1D4661630014C51E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
 		5319C38E1D46616A0014C51E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
@@ -226,16 +227,13 @@
 		53FFE39A246454FC00C513C0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extension/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		53FFE39C2464754600C513C0 /* KeysHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeysHelper.swift; path = Helper/KeysHelper.swift; sourceTree = "<group>"; };
 		53FFE39E2464774B00C513C0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Helper/String+Extension.swift"; sourceTree = "<group>"; };
-		6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86D9665E42FEB35580287751 /* Pods_Kaohsiung_City_BikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_BikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig"; sourceTree = "<group>"; };
-		9B16792D19CAFB6F74C8B532 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
-		A714ADB3A9D7BEB40D8E0FE0 /* Pods-Kaohsiung City Bike.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.ad-hoc.xcconfig"; sourceTree = "<group>"; };
-		B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.debug.xcconfig"; sourceTree = "<group>"; };
-		BEA8AB7D23C92F938D3858EC /* Pods-Kaohsiung City Bike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.debug.xcconfig"; sourceTree = "<group>"; };
-		CA1F9DC7F5C600E99AF3C4ED /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		DE55F0A8F1419123AD7C6369 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_WatchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E55FC91A663D0480A5618FE4 /* Pods-Kaohsiung City Bike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.release.xcconfig"; sourceTree = "<group>"; };
+		5900731331140C8F63A749F3 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig"; path = "Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
+		695CB7BACA71CE085B571F10 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_WatchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B30E495D202AFAD659994C /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike Widget.debug.xcconfig"; path = "Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		D6CD747728479B1D5E91A55B /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig"; path = "Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		DA6F0DCB76854201FE5E967C /* Pods_Kaohsiung_CityBike_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_CityBike_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93F7C6F3780EDC2C39FDB25 /* Pods-Kaohsiung City Bike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaohsiung City Bike.debug.xcconfig"; path = "Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike.debug.xcconfig"; sourceTree = "<group>"; };
+		FF359AA6F9A2672731F9C2E3 /* Pods_Kaohsiung_City_Bike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaohsiung_City_Bike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +250,7 @@
 			files = (
 				533391811CA67D55005EFA48 /* MapKit.framework in Frameworks */,
 				537EE12A1C0B5F00008501B0 /* WatchConnectivity.framework in Frameworks */,
-				1DDA67064284468611BA2453 /* Pods_Kaohsiung_City_Bike.framework in Frameworks */,
+				6FC3293118E9CF786DEBB62E /* Pods_Kaohsiung_City_Bike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53CE89DF1E61582900C528BC /* MapKit.framework in Frameworks */,
-				0B7AF90A555D3D691BEFA985 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework in Frameworks */,
+				9A25652A7162BAC85480545A /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,13 +268,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				53B362AA1CC4CA39003CF0E7 /* NotificationCenter.framework in Frameworks */,
-				652B6194A17B64CB8B168AAC /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */,
+				A7AA3B1F5D7C5B1C2E153158 /* Pods_Kaohsiung_CityBike_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3404E50109FBD5EB345A1974 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E93F7C6F3780EDC2C39FDB25 /* Pods-Kaohsiung City Bike.debug.xcconfig */,
+				2BDB2362B9AF9E2C956EAD09 /* Pods-Kaohsiung City Bike.release.xcconfig */,
+				D6CD747728479B1D5E91A55B /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */,
+				5900731331140C8F63A749F3 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */,
+				72B30E495D202AFAD659994C /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */,
+				1455798244BF3C096B965372 /* Pods-Kaohsiung CityBike Widget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		53029D4E1F28D3D800D7EC1E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,8 +311,8 @@
 				537EE0E01C0B35BB008501B0 /* Kaohsiung CityBike WatchApp */,
 				537EE0EF1C0B35BB008501B0 /* Kaohsiung CityBike WatchApp Extension */,
 				53B362AB1CC4CA39003CF0E7 /* Kaohsiung CityBike Widget */,
-				FC11EEAEF67D522603859DFA /* Pods */,
 				534962901BE07BE700BFFD71 /* Products */,
+				3404E50109FBD5EB345A1974 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -387,6 +398,7 @@
 				53029D511F2A396400D7EC1E /* APIService.swift */,
 				5328878C245EAD320069D426 /* StationHelper.swift */,
 				53FFE39C2464754600C513C0 /* KeysHelper.swift */,
+				5318B88925C85A7200E9705D /* GeohashHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -426,12 +438,9 @@
 			children = (
 				53CE89DE1E61582900C528BC /* MapKit.framework */,
 				53B362A91CC4CA39003CF0E7 /* NotificationCenter.framework */,
-				1D9C45F10040D0671A83D7B7 /* Pods_Kaohsiung_City_Bike.framework */,
-				3ECE2FEF40EA7804E963A22A /* Pods_Kaohsiung_City_BikeTests.framework */,
-				86D9665E42FEB35580287751 /* Pods_Kaohsiung_City_BikeUITests.framework */,
-				1C3229461B46070AFDE8D270 /* Pods_Kaohsiung_CityBike_WatchApp.framework */,
-				DE55F0A8F1419123AD7C6369 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */,
-				6F2C25E2B282D9BB904A946B /* Pods_Kaohsiung_CityBike_Widget.framework */,
+				FF359AA6F9A2672731F9C2E3 /* Pods_Kaohsiung_City_Bike.framework */,
+				695CB7BACA71CE085B571F10 /* Pods_Kaohsiung_CityBike_WatchApp_Extension.framework */,
+				DA6F0DCB76854201FE5E967C /* Pods_Kaohsiung_CityBike_Widget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -450,22 +459,6 @@
 			path = "Kaohsiung CityBike Widget";
 			sourceTree = "<group>";
 		};
-		FC11EEAEF67D522603859DFA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BEA8AB7D23C92F938D3858EC /* Pods-Kaohsiung City Bike.debug.xcconfig */,
-				E55FC91A663D0480A5618FE4 /* Pods-Kaohsiung City Bike.release.xcconfig */,
-				A714ADB3A9D7BEB40D8E0FE0 /* Pods-Kaohsiung City Bike.ad-hoc.xcconfig */,
-				CA1F9DC7F5C600E99AF3C4ED /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */,
-				9B16792D19CAFB6F74C8B532 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */,
-				2795D267C15D00260CE40D26 /* Pods-Kaohsiung CityBike WatchApp Extension.ad-hoc.xcconfig */,
-				B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */,
-				3CD590F36FD0DAB87B250ABA /* Pods-Kaohsiung CityBike Widget.release.xcconfig */,
-				8A7F83C1A80B6605766F96B4 /* Pods-Kaohsiung CityBike Widget.ad-hoc.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,16 +466,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 534962B71BE07BE700BFFD71 /* Build configuration list for PBXNativeTarget "Kaohsiung City Bike" */;
 			buildPhases = (
-				765B575F70E6793501F9EB83 /* [CP] Check Pods Manifest.lock */,
+				AB1310F6F7E96B4831B8D022 /* [CP] Check Pods Manifest.lock */,
 				5349628B1BE07BE700BFFD71 /* Sources */,
 				5349628C1BE07BE700BFFD71 /* Frameworks */,
 				5349628D1BE07BE700BFFD71 /* Resources */,
 				53C793DB1C09E0D2000FBA3B /* Embed Watch Content */,
 				53B362B81CC4CA3A003CF0E7 /* Embed App Extensions */,
 				5396A6B01D9ADCBE0072D9CB /* ShellScript */,
-				313548013FB8B6E897E4FE82 /* [CP] Embed Pods Frameworks */,
-				B0A838B213EB3BBD0D93616D /* [CP] Copy Pods Resources */,
 				5397B90B1F2649CE0056938D /* ShellScript */,
+				6FDB833E3BB0EDAD133B5949 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -517,12 +509,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 537EE1021C0B35BB008501B0 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike WatchApp Extension" */;
 			buildPhases = (
-				D20250740CC297C4B5D230AC /* [CP] Check Pods Manifest.lock */,
+				FB0447864A0576B5C919CB89 /* [CP] Check Pods Manifest.lock */,
 				537EE0E71C0B35BB008501B0 /* Sources */,
 				537EE0E81C0B35BB008501B0 /* Frameworks */,
 				537EE0E91C0B35BB008501B0 /* Resources */,
-				BAB327983B3F86C2547BD791 /* [CP] Embed Pods Frameworks */,
-				D8C1BEFD2DEFEF0A35FB9998 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -537,11 +527,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53B362B71CC4CA3A003CF0E7 /* Build configuration list for PBXNativeTarget "Kaohsiung CityBike Widget" */;
 			buildPhases = (
-				AA43A539664F921A05728E19 /* [CP] Check Pods Manifest.lock */,
+				DB154C2FF3CE85AC1201CDA1 /* [CP] Check Pods Manifest.lock */,
 				53B362A31CC4CA39003CF0E7 /* Sources */,
 				53B362A41CC4CA39003CF0E7 /* Frameworks */,
 				53B362A51CC4CA39003CF0E7 /* Resources */,
-				33F5D4A93BD76A61208E15D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -559,7 +548,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Yang Tun-Kai";
 				TargetAttributes = {
 					5349628E1BE07BE700BFFD71 = {
@@ -705,51 +694,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		313548013FB8B6E897E4FE82 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		33F5D4A93BD76A61208E15D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung CityBike Widget/Pods-Kaohsiung CityBike Widget-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5396A6B01D9ADCBE0072D9CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,16 +721,50 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
-		765B575F70E6793501F9EB83 /* [CP] Check Pods Manifest.lock */ = {
+		6FDB833E3BB0EDAD133B5949 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB1310F6F7E96B4831B8D022 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Kaohsiung City Bike-checkManifestLockResult.txt",
 			);
@@ -795,16 +773,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AA43A539664F921A05728E19 /* [CP] Check Pods Manifest.lock */ = {
+		DB154C2FF3CE85AC1201CDA1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Kaohsiung CityBike Widget-checkManifestLockResult.txt",
 			);
@@ -813,67 +795,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0A838B213EB3BBD0D93616D /* [CP] Copy Pods Resources */ = {
+		FB0447864A0576B5C919CB89 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung City Bike/Pods-Kaohsiung City Bike-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAB327983B3F86C2547BD791 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D20250740CC297C4B5D230AC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Kaohsiung CityBike WatchApp Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D8C1BEFD2DEFEF0A35FB9998 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaohsiung CityBike WatchApp Extension/Pods-Kaohsiung CityBike WatchApp Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -884,6 +825,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5328878D245EAD320069D426 /* StationHelper.swift in Sources */,
+				5318B88A25C85A7200E9705D /* GeohashHelper.swift in Sources */,
 				53B2D5A61F2783DD0048CFFC /* StationViewModel.swift in Sources */,
 				53029D521F2A396400D7EC1E /* APIService.swift in Sources */,
 				53FFE39F2464774B00C513C0 /* String+Extension.swift in Sources */,
@@ -910,6 +852,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				537EE0F71C0B35BB008501B0 /* NotificationController.swift in Sources */,
+				53EAB54A25CB18B3001D5BF4 /* GeohashHelper.swift in Sources */,
 				537EE0F51C0B35BB008501B0 /* ExtensionDelegate.swift in Sources */,
 				537EE0F31C0B35BB008501B0 /* InterfaceController.swift in Sources */,
 				534E08D21C0DEB9400AA0133 /* TimerInterfaceController.swift in Sources */,
@@ -928,6 +871,7 @@
 				53439F521F2A5C1100311DF8 /* TableViewHelper.swift in Sources */,
 				53439F4A1F2A56FB00311DF8 /* HomeViewModel.swift in Sources */,
 				53439F4B1F2A5AA100311DF8 /* Station.swift in Sources */,
+				53EAB54525CB18B0001D5BF4 /* GeohashHelper.swift in Sources */,
 				5328878E245EB67E0069D426 /* StationHelper.swift in Sources */,
 				53439F511F2A5ABE00311DF8 /* APIService.swift in Sources */,
 				5328878A245EA4B60069D426 /* Annotation.swift in Sources */,
@@ -1058,6 +1002,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1083,7 +1028,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -1116,6 +1061,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1135,7 +1081,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "3e884559-96a2-4197-80c7-f9b2f218944a";
 				SDKROOT = iphoneos;
@@ -1147,18 +1093,20 @@
 		};
 		534962B81BE07BE700BFFD71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEA8AB7D23C92F938D3858EC /* Pods-Kaohsiung City Bike.debug.xcconfig */;
+			baseConfigurationReference = E93F7C6F3780EDC2C39FDB25 /* Pods-Kaohsiung City Bike.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f792b694-fdef-4d96-a275-31543b0cf6b4";
@@ -1169,17 +1117,19 @@
 		};
 		534962B91BE07BE700BFFD71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E55FC91A663D0480A5618FE4 /* Pods-Kaohsiung City Bike.release.xcconfig */;
+			baseConfigurationReference = 2BDB2362B9AF9E2C956EAD09 /* Pods-Kaohsiung City Bike.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c20c9db2-51a8-47ff-8f24-807fbe011bdb";
@@ -1197,9 +1147,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7fb40217-7db0-43bc-ad04-be86ccd1ff2a";
@@ -1221,9 +1173,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "13092646-cbbe-4a4a-91c4-630220ec9018";
@@ -1238,15 +1192,17 @@
 		};
 		537EE1001C0B35BB008501B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA1F9DC7F5C600E99AF3C4ED /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */;
+			baseConfigurationReference = D6CD747728479B1D5E91A55B /* Pods-Kaohsiung CityBike WatchApp Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "a9efae0a-cba5-40f5-8bbe-28fe7aad2d23";
@@ -1261,15 +1217,18 @@
 		};
 		537EE1011C0B35BB008501B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B16792D19CAFB6F74C8B532 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */;
+			baseConfigurationReference = 5900731331140C8F63A749F3 /* Pods-Kaohsiung CityBike WatchApp Extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Tun-Kai Yang (8MREJM6257)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Distribution: Tun-Kai Yang (8MREJM6257)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sparkrs.CityBike.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "5a9c1f0e-6859-48a4-8961-ce30392a1f48";
@@ -1284,16 +1243,18 @@
 		};
 		53B362B51CC4CA3A003CF0E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4B2AF2D38AC5037DCB06846 /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */;
+			baseConfigurationReference = 72B30E495D202AFAD659994C /* Pods-Kaohsiung CityBike Widget.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0e695ad0-fd8a-4bf3-b809-bfc60b0b2349";
@@ -1305,16 +1266,19 @@
 		};
 		53B362B61CC4CA3A003CF0E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CD590F36FD0DAB87B250ABA /* Pods-Kaohsiung CityBike Widget.release.xcconfig */;
+			baseConfigurationReference = 1455798244BF3C096B965372 /* Pods-Kaohsiung CityBike Widget.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Tun-Kai Yang (8MREJM6257)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Sparkrs.CityBike.Kaohsiung-CityBike-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b5e57b83-327e-45b9-8715-5277e7dfb32a";

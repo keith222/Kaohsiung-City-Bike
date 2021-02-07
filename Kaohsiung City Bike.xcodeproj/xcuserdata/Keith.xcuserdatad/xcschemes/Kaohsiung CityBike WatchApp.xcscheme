@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1140"
+   LastUpgradeVersion = "1240"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -81,7 +81,7 @@
       notificationPayloadFile = "Kaohsiung CityBike WatchApp Extension/PushNotificationPayload.apns">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
+         BundleIdentifier = "com.apple.Carousel"
          RemotePath = "/KCB Watch">
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -100,8 +100,8 @@
       debugDocumentVersioning = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
-         RemotePath = "/Kaohsiung CityBike">
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/KCB Watch">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "537EE0DE1C0B35BB008501B0"
