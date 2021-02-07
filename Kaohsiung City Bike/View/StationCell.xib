@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,18 +48,18 @@
                         </connections>
                     </button>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
+                    <constraint firstItem="rfi-SR-B3d" firstAttribute="leading" secondItem="SoN-Yz-Pxv" secondAttribute="trailing" constant="29.5" id="46t-Zc-nOP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="qJ3-em-vph" secondAttribute="trailing" constant="17" id="Aw3-9a-aGE"/>
                     <constraint firstItem="SoN-Yz-Pxv" firstAttribute="leading" secondItem="ddH-ws-WIf" secondAttribute="leading" constant="25" id="FG1-b5-bTV"/>
                     <constraint firstAttribute="bottom" secondItem="rfi-SR-B3d" secondAttribute="bottom" constant="14" id="H5c-am-1LD"/>
                     <constraint firstItem="yjY-hY-ze7" firstAttribute="leading" secondItem="SoN-Yz-Pxv" secondAttribute="trailing" constant="29.5" id="Jif-jX-2Hc"/>
                     <constraint firstItem="rfi-SR-B3d" firstAttribute="top" secondItem="yjY-hY-ze7" secondAttribute="bottom" constant="5" id="Syo-2N-FRs"/>
-                    <constraint firstItem="rfi-SR-B3d" firstAttribute="leading" secondItem="SoN-Yz-Pxv" secondAttribute="trailing" constant="29.5" id="TTH-4A-8za"/>
                     <constraint firstItem="qJ3-em-vph" firstAttribute="centerY" secondItem="ddH-ws-WIf" secondAttribute="centerY" id="W9U-BN-wUZ"/>
                     <constraint firstItem="qJ3-em-vph" firstAttribute="leading" secondItem="yjY-hY-ze7" secondAttribute="trailing" constant="30" id="bjV-QY-wtt"/>
+                    <constraint firstItem="yjY-hY-ze7" firstAttribute="top" secondItem="ddH-ws-WIf" secondAttribute="top" constant="15" id="f4D-to-pqa"/>
                     <constraint firstItem="SoN-Yz-Pxv" firstAttribute="centerY" secondItem="ddH-ws-WIf" secondAttribute="centerY" id="hEF-1Y-lMa"/>
-                    <constraint firstItem="yjY-hY-ze7" firstAttribute="top" secondItem="ddH-ws-WIf" secondAttribute="top" constant="15" id="niM-5r-gk0"/>
                     <constraint firstItem="qJ3-em-vph" firstAttribute="leading" secondItem="rfi-SR-B3d" secondAttribute="trailing" constant="30" id="uKh-e9-M0f"/>
                 </constraints>
                 <variation key="default">
@@ -90,5 +91,8 @@
     <resources>
         <image name="star" width="29" height="27"/>
         <image name="stationIcon" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

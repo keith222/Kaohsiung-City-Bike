@@ -16,7 +16,7 @@ class StationCell: UITableViewCell, ReactiveView {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
+    private let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
     private var stationNO: String?
     
     override func awakeFromNib() {
@@ -31,7 +31,7 @@ class StationCell: UITableViewCell, ReactiveView {
     func bindViewModel(_ dataModel: Any) {
         if let viewModel = dataModel as? StationCellViewModel {
             self.titleLabel.text = viewModel.name
-            self.subtitleLabel.text = (Locale.current.languageCode == "zh") ? viewModel.description : viewModel.englishname
+            self.subtitleLabel.text = (Locale.current.languageCode == "zh") ? viewModel.address : viewModel.englishname
             self.stationNO = viewModel.no
             
             if let favoriteList = self.userDefault.array(forKey: "staForTodayWidget"){
