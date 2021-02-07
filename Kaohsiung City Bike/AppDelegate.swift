@@ -85,9 +85,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             let triggerTime = (Int64(NSEC_PER_SEC)*1)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
                 viewController.setMap()
-                if let id = Int(url.query!.removingPercentEncoding ?? "") {
+                if let id = url.query?.removingPercentEncoding {
                     viewController.didSelect(id)
                 }
+                
             })
         }
         return true
@@ -130,11 +131,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             
             for station in stations {
                 let index = todayWidgetArray?.firstIndex(where: {
-                    print("\($0); \(station.name!)")
+                    print("\($0); \(station.name)")
                     return ($0 as! String) == station.name
                 })
-                guard let i = index, let no = station.no else { continue }
-                todayWidgetArray?[i] = no
+                guard let i = index else { continue }
+                todayWidgetArray?[i] = station.id
             }
             
             userDefault.set(todayWidgetArray, forKey: "staForTodayWidget")

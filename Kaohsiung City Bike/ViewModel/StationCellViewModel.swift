@@ -10,12 +10,9 @@ import Foundation
 
 struct StationCellViewModel {
     
-    let id: Int?
     let no: String?
     let name: String?
     let englishname: String?
-    let latitude: Double?
-    let longitude: Double?
+    let geohash: String?
     let address: String?
-    let description: String?
 }

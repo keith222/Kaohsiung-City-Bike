@@ -17,7 +17,7 @@ class TodayViewController: UIViewController, NCWidgetProviding{
     private let userDefault: UserDefaults = UserDefaults(suiteName: "group.kcb.todaywidget")!
     private var source: [TodayWidgetTableViewCellViewModel]?
     private var tableHelper: TableViewHelper?
-    private var savedStations: [(Int,String,String)] = []
+    private var savedStations: [(String, String, String)] = []
     
     lazy var homeViewModel = {
         return HomeViewModel()
@@ -62,9 +62,9 @@ class TodayViewController: UIViewController, NCWidgetProviding{
         if let savedArray = self.userDefault.array(forKey: "staForTodayWidget") as? [String] {
             
             let stations = self.homeViewModel.fetchStationListForWidget()
-            savedStations = stations.filter{ savedArray.contains($0.no ?? "") }
+            savedStations = stations.filter{ savedArray.contains($0.id) }
                 .compactMap({ value in
-                    return (value.id!,value.name!,value.englishname!)
+                    return (value.id,value.name,value.englishname)
                 })
         }
     }
@@ -108,8 +108,8 @@ class TodayViewController: UIViewController, NCWidgetProviding{
             return
         }
         
-        let ids = savedStations.map{$0.0}
-        self.homeViewModel.fetchStationInfo(with: ids, handler: { [weak self] parks in
+        let nos = savedStations.map{$0.0}
+        self.homeViewModel.fetchStationInfo(with: nos, handler: { [weak self] parks in
             guard let parks = parks else {
                 self?.defaultButton.isHidden = false
                 return
@@ -122,7 +122,7 @@ class TodayViewController: UIViewController, NCWidgetProviding{
                 return TodayWidgetTableViewCellViewModel(name: name, available: park.AvailableRentBikes, park: park.AvailableReturnBikes)
             })
             
-            self?.tableHelper?.reloadData = (self?.source)! as [AnyObject]
+            self?.tableHelper?.reloadData = ((self?.source)! as [AnyObject], true)
             self?.todayTableView.isHidden = false
             
             completionHandler(.newData)

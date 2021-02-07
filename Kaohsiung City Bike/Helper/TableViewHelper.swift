@@ -19,14 +19,15 @@ class TableViewHelper: NSObject {
     private let templateCell: UITableViewCell
     private let dataSource: DataSource
     
-    var reloadData: [AnyObject] = [] {
+    var reloadData: (data: [AnyObject], isLoading: Bool) = ([], true) {
         didSet{
-            dataSource.data = reloadData
+            dataSource.data = reloadData.data
+            dataSource.isLoading = reloadData.isLoading
             tableView.reloadData()
         }
     }
     
-    init(tableView: UITableView, nibName: String, source: [AnyObject] = [], selectAction: ((Int)->())? = nil) {
+    init(tableView: UITableView, nibName: String, source: [AnyObject] = [], selectAction: ((Int)->())? = nil, refreshAction: ((Int)->())? = nil) {
         self.tableView = tableView
         
         let nib = UINib(nibName: nibName, bundle: nil)
@@ -42,9 +43,14 @@ class TableViewHelper: NSObject {
         //set datasource variables
         dataSource.data = source
         dataSource.selectAction = selectAction
+        dataSource.refreshAction = refreshAction
+        dataSource.isLoading = true
         
         self.tableView.dataSource = dataSource
         self.tableView.delegate = dataSource
+        
+        guard !source.isEmpty else { return }
+        
         self.tableView.reloadData()
     }
 }
@@ -52,8 +58,13 @@ class TableViewHelper: NSObject {
 class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     private let templateCell: UITableViewCell
+    private var page: Int = 1
+    
+    fileprivate var isLoading: Bool = true
     fileprivate var selectAction: ((Int)->())?
     fileprivate var data: [AnyObject]
+    
+    var refreshAction: ((Int)->())?
     
     init(data: [AnyObject], templateCell: UITableViewCell, selectAction: ((Int)->())? = nil) {
         self.data = data
@@ -80,5 +91,16 @@ class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectAction!(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if (contentHeight - scrollView.frame.height) - offsetY < 70 && isLoading {
+            page += 1
+            isLoading = false
+            refreshAction?(page)
+        }
     }
 }

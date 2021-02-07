@@ -31,7 +31,7 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
             self.navigationItem.rightBarButtonItem = self.searchButton
         }
         //呈現結果不會有black mask
-        self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.loadViewIfNeeded()
     }
     
@@ -56,12 +56,21 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
         //search bar placeholder
         self.searchController.searchBar.placeholder = NSLocalizedString("Search", comment: "")
         
+        //設定 search bar 輸入框 icon 顏色
+        let textField = searchController.searchBar.value(forKey: "searchField") as! UITextField
+        let glassIconView = textField.leftView as! UIImageView
+        glassIconView.image = glassIconView.image?.withRenderingMode(.alwaysTemplate)
+        glassIconView.tintColor = .white
+
+        let clearButton = textField.value(forKey: "clearButton") as! UIButton
+        clearButton.setImage(clearButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        clearButton.tintColor = .white
+        
         //將UISearchBar放到Navigation的titleView上
         if #available(iOS 11.0, *) {
             self.searchController.hidesNavigationBarDuringPresentation = true
             
             if let textfield = self.searchController.searchBar.value(forKey: "searchField") as? UITextField {
-                textfield.textColor = UIColor.blue
                 if let backgroundview = textfield.subviews.first {
 
                     // Background color
@@ -105,7 +114,6 @@ class SearchViewController: UIViewController, UISearchControllerDelegate, UISear
             self.navigationItem.rightBarButtonItem = self.searchButton
             self.navigationItem.titleView = nil
         }
-//        filterContentForSearchText("")
     }
     
     func filterContentForSearchText(_ searchText: String){}

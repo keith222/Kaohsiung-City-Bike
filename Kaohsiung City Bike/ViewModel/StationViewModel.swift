@@ -47,6 +47,6 @@ class StationViewModel {
     }
     
     private func createCellViewModel(with station: Station) -> StationCellViewModel {
-        return StationCellViewModel(id: station.id, no: station.no, name: station.name, englishname: station.englishname, latitude: station.latitude, longitude: station.longitude, address: station.address, description: station.description)
+        return StationCellViewModel(no: station.id, name: station.name, englishname: station.englishname, geohash: station.geohash, address: station.address)
     }
 }

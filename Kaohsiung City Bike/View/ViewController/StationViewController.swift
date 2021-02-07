@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol SelectStation {
-    func didSelect(_ stationID: Int)
+    func didSelect(_ stationID: String)
 }
 
 class StationViewController: SearchViewController{
@@ -20,6 +20,7 @@ class StationViewController: SearchViewController{
     private var tableHelper: TableViewHelper?
     private var source: [StationCellViewModel]?
     private var filteredSource: [StationCellViewModel]?
+    private var isLoading: Bool = true
     
     var mDelegate: SelectStation?
     
@@ -34,16 +35,10 @@ class StationViewController: SearchViewController{
         self.bindViewModel()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-    }
-    
     private func bindViewModel() {
         self.stationViewModel.reloadTableViewClosure = { [weak self] source in
             var tempSource = source
-            
+
             //re-arrange station list
             if let favoriteList = self?.userDefault.array(forKey: "staForTodayWidget") {
                 for (index, element) in tempSource.enumerated() {
@@ -53,8 +48,8 @@ class StationViewController: SearchViewController{
                     }
                 }
             }
-            
-            self?.tableHelper?.reloadData = tempSource as [AnyObject]
+
+            self?.tableHelper?.reloadData = (Array(tempSource.prefix(10)) as [AnyObject], self?.isLoading ?? true)
             self?.source = tempSource
         }
         
@@ -62,11 +57,15 @@ class StationViewController: SearchViewController{
             tableView: self.stationTableView,
             nibName: "StationCell",
             selectAction: { [weak self] num in
-                guard let selectedID = (self?.searchController.isActive)! ? self?.filteredSource?[num].id : self?.source?[num].id else { return }
+                guard let selectedID = (self?.searchController.isActive)! ? self?.filteredSource?[num].no : self?.source?[num].no else { return }
                 
                 self?.mDelegate?.didSelect(selectedID)
                 self?.navigationController?.popToRootViewController(animated: true)
-        })
+            },
+            refreshAction: { [weak self] page in
+                let max = 10 * page
+                self?.tableHelper?.reloadData = (Array(self?.source?.prefix(max) ?? []) as [AnyObject], self?.isLoading ?? true)
+            })
         
         self.stationViewModel.initStations()
     }
@@ -94,11 +93,12 @@ class StationViewController: SearchViewController{
                 
                 return name.contains(searchText) || address.contains(searchText) || englishName.contains(searchText.lowercased())
             })
-            
-            self.tableHelper?.reloadData = (self.filteredSource ?? []) as [AnyObject]
+            self.isLoading = false
+            self.tableHelper?.reloadData = ((self.filteredSource ?? []) as [AnyObject], self.isLoading)
             
         } else {
-            self.tableHelper?.reloadData = (source ?? []) as [AnyObject]
+            self.isLoading = true
+            self.tableHelper?.reloadData = ((source ?? []) as [AnyObject], self.isLoading)
         }
     }
     
