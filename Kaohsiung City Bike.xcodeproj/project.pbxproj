@@ -1100,7 +1100,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
@@ -1124,7 +1124,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung City Bike/Kaohsiung City Bike.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung City Bike/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1147,7 +1147,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
@@ -1173,7 +1173,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				IBSC_MODULE = Kaohsiung_CityBike_WatchApp_Extension;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp/Info.plist";
@@ -1198,7 +1198,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1224,7 +1224,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Tun-Kai Yang (8MREJM6257)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Distribution: Tun-Kai Yang (8MREJM6257)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1249,7 +1249,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Kaohsiung CityBike Widget/Kaohsiung CityBike Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1273,7 +1273,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Tun-Kai Yang (8MREJM6257)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "Kaohsiung CityBike Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

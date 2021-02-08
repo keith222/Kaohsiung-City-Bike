@@ -49,7 +49,7 @@ class StationViewController: SearchViewController{
                 }
             }
 
-            self?.tableHelper?.reloadData = (Array(tempSource.prefix(10)) as [AnyObject], self?.isLoading ?? true)
+            self?.tableHelper?.reloadData = (Array(tempSource.prefix(11)) as [AnyObject], self?.isLoading ?? true)
             self?.source = tempSource
         }
         
@@ -63,7 +63,7 @@ class StationViewController: SearchViewController{
                 self?.navigationController?.popToRootViewController(animated: true)
             },
             refreshAction: { [weak self] page in
-                let max = 10 * page
+                let max = 11 * page
                 self?.tableHelper?.reloadData = (Array(self?.source?.prefix(max) ?? []) as [AnyObject], self?.isLoading ?? true)
             })
         
@@ -76,6 +76,7 @@ class StationViewController: SearchViewController{
         //set tableview cell self-sizing
         self.stationTableView.estimatedRowHeight = 70.0
         self.stationTableView.rowHeight = UITableView.automaticDimension
+        self.stationTableView.tableFooterView = UIView()
         
         //no title back button
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
