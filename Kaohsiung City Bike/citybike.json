@@ -1295,6 +1295,13 @@
         "address": "建國三路487號(人行道)"
     },
     {
+        "id": "501203085",
+        "name": "河北二路中庸街口",
+        "englishname": "Hebei 2nd Rd. & Zhongyong St. Intersection",
+        "geohash": "wsj8c23jt",
+        "address": "河北二路192號(對面)"
+    },
+    {
         "id": "501203086",
         "name": "民族社區老人活動中心",
         "englishname": "Minzu Community Elderly Activity Center",
@@ -1442,6 +1449,13 @@
         "address": "察哈爾一街/大連街(西南側)"
     },
     {
+        "id": "501203111",
+        "name": "三民區公所",
+        "englishname": "Sanmin District Office",
+        "geohash": "wsj8c6zsz",
+        "address": "哈爾濱街/察哈爾二街(西南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -1538,6 +1552,20 @@
         "englishname": "Daan Park",
         "geohash": "wsj89n81g",
         "address": "大安街74號(西南側)"
+    },
+    {
+        "id": "501204016",
+        "name": "公園二大義街口",
+        "englishname": "Gongyuan 2nd Dayi St. Intersection",
+        "geohash": "wsj89jvkk",
+        "address": "公園二路147號(對側人行道)"
+    },
+    {
+        "id": "501204017",
+        "name": "公園二大勇路口",
+        "englishname": "Gongyuan 2nd Dayong Rd. Intersection",
+        "geohash": "wsj89n5k7",
+        "address": "公園二路83號(東北側)"
     },
     {
         "id": "501204018",
@@ -2919,6 +2947,13 @@
         "address": "中華一路5-14號旁"
     },
     {
+        "id": "501207048",
+        "name": "華夏兒童遊戲場(華夏路側)",
+        "englishname": "Huaxia Children Playground (Huaxia Rd.)",
+        "geohash": "wsj919h5x",
+        "address": "華夏路1017號(對側人行道)"
+    },
+    {
         "id": "501207049",
         "name": "捷運凹子底站(3號出口)",
         "englishname": "KRT Aozihdi Sta. (Exit 3)",
@@ -4256,11 +4291,25 @@
         "address": "正德路96巷6號(對側人行道)"
     },
     {
+        "id": "501209066",
+        "name": "美術東二美術北三路口",
+        "englishname": "Meishu East 2nd Rd. Meishu North 3rd Rd.",
+        "geohash": "wsj8cjxwc",
+        "address": "美術東二路470號前人行道"
+    },
+    {
         "id": "501209067",
         "name": "綠川河川街口",
         "englishname": "Luchuan Hechuan St. Intersection",
         "geohash": "wsj8c0eun",
         "address": "河川街58號(對側)"
+    },
+    {
+        "id": "501209068",
+        "name": "翠華日昌路口",
+        "englishname": "Cuihua Richang Intersection",
+        "geohash": "wsj8chfu8",
+        "address": "翠華路331號(對側人行道)"
     },
     {
         "id": "501210001",
@@ -5523,6 +5572,20 @@
         "address": "樹人路1號"
     },
     {
+        "id": "501216028",
+        "name": "竹圍國小",
+        "englishname": "Zhuwei Elementary School",
+        "geohash": "wsj99x1ju",
+        "address": "大仁北路/竹圍北街(東北側)"
+    },
+    {
+        "id": "501216029",
+        "name": "光潭路134巷光潭路116巷口",
+        "englishname": "Lane 134, Guangtan Rd.Lane 116, Guangtan Rd.",
+        "geohash": "wsj98fqr2",
+        "address": "光潭路134巷59號(東側)"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -5899,6 +5962,13 @@
         "englishname": "Ln. 46, Jinlong Rd.",
         "geohash": "wsj969wy7",
         "address": "金龍路46巷/金龍路口西北側"
+    },
+    {
+        "id": "501222005",
+        "name": "中里社區公園",
+        "englishname": "Zhongli Community Park",
+        "geohash": "wsj968tgm",
+        "address": "文明路17號(對面)"
     },
     {
         "id": "501222006",
