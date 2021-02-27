@@ -2821,6 +2821,13 @@
         "address": "博愛二路上/裕誠路口(近三民家商籃球場)"
     },
     {
+        "id": "501207029",
+        "name": "福山公園(榮佑路側)",
+        "englishname": "Fushan Park (Rongyou Rd.)",
+        "geohash": "wsj91cney",
+        "address": "榮佑路47號(對側人行道)"
+    },
+    {
         "id": "501207030",
         "name": "捷運生態園區站(2號出口)",
         "englishname": "KRT Ecological District Sta. (Exit 2)",
@@ -3288,6 +3295,13 @@
         "englishname": "Chongshi self-help Community Activity Center",
         "geohash": "wsj910e0s",
         "address": "先鋒路293號前"
+    },
+    {
+        "id": "501207104",
+        "name": "自勉公園",
+        "englishname": "Zimian park",
+        "geohash": "wsj91091s",
+        "address": "自勉路/自勉路66巷(西南角)"
     },
     {
         "id": "501207105",
@@ -3869,6 +3883,13 @@
         "englishname": "LRT Kaisyuan Ersheng",
         "geohash": "wsj8dh76b",
         "address": "凱旋三路/二聖路(東南側)"
+    },
+    {
+        "id": "501208082",
+        "name": "林森中華五路口",
+        "englishname": "Linsen Zhonghua 5th Rd.Intersection",
+        "geohash": "wsj89efqj",
+        "address": "林森四路/中華五路口(東北側人行道)"
     },
     {
         "id": "501209001",
@@ -5150,6 +5171,20 @@
         "englishname": "Chongben Ln. 10, Chongming St. Intersection",
         "geohash": "wsj86kbp7",
         "address": "崇本街/崇明街10巷口(西北側)"
+    },
+    {
+        "id": "501212036",
+        "name": "大坪頂公園",
+        "englishname": "Dapingding Park",
+        "geohash": "wsj87e80w",
+        "address": "高坪二十三路/大平路(西南側)"
+    },
+    {
+        "id": "501212038",
+        "name": "高雄市熱帶植物園",
+        "englishname": "Kaohsiung Tropical Botanical Garden",
+        "geohash": "wsj87d0sc",
+        "address": "高坪二十三路/高坪二十三路151巷(東北側)"
     },
     {
         "id": "501213001",
