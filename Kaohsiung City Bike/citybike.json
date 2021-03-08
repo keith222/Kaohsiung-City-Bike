@@ -1199,9 +1199,9 @@
     {
         "id": "501203071",
         "name": "高雄車站(九如二路)",
-        "englishname": "Kaohsiung Station ( Jiuru 2nd Rd)",
-        "geohash": "wsj8c9dmv",
-        "address": "松江街/九如二路西南側"
+        "englishname": "Kaohsiung Station (Jiuru 2nd Rd)",
+        "geohash": "wsj8c99ny",
+        "address": "九如二路/重慶街(東南側)"
     },
     {
         "id": "501203072",
@@ -1447,6 +1447,13 @@
         "englishname": "San-Min Park (North)",
         "geohash": "wsj8cdgdw",
         "address": "察哈爾一街/大連街(西南側)"
+    },
+    {
+        "id": "501203110",
+        "name": "高雄車站(西側)",
+        "englishname": "Kaohsiung Station(west)",
+        "geohash": "wsj8c92zw",
+        "address": "站西路/安寧街(西南側)"
     },
     {
         "id": "501203111",
