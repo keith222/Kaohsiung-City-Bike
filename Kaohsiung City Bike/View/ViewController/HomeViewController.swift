@@ -326,17 +326,18 @@ class HomeViewController: UIViewController {
         
         var cost = 0//計算花費
         switch calMinute{
-            case 0..<30: cost = 0 //不滿30分鐘免費
-            case 30..<60: cost = 5
-            case 60..<90: cost = 15 //90分鐘 10元 + 5元
-            default: //90分後每30分20元
-                calMinute -= 90
+            case 0..<30: cost = 5 //不滿30分鐘5元
+            case 30..<60: cost = 15 //60分鐘 10元 + 5元
+            default: //60分後每30分10元
+                calMinute -= 60
+         
                 if calMinute % 30 != 0{
                      calMinute = Int(calMinute/30)+1
                 }else{
                     calMinute = Int(calMinute/30)
                 }
-                cost = 15 + (calMinute*20)
+                
+                cost = 15 + (calMinute*10)
         }
         let costInfo = "NT$ \(cost)"
         self.costSpend.text = costInfo
