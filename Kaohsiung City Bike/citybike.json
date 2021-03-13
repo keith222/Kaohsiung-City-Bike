@@ -1428,6 +1428,13 @@
         "address": "熱河一街/孝順街(東北側)"
     },
     {
+        "id": "501203104",
+        "name": "博愛熱河二街口",
+        "englishname": "Bo'ai Rehe 2nd St. Intersection",
+        "geohash": "wsj8cd3c4",
+        "address": "博愛一路/熱河二街(西北側)"
+    },
+    {
         "id": "501203105",
         "name": "九如中華二路口",
         "englishname": "Jiouru Zhonghua 2nd Rd.Intersection",
@@ -1447,6 +1454,13 @@
         "englishname": "San-Min Park (North)",
         "geohash": "wsj8cdgdw",
         "address": "察哈爾一街/大連街(西南側)"
+    },
+    {
+        "id": "501203109",
+        "name": "博愛國小",
+        "englishname": "Bo'aiguomin Elementary School",
+        "geohash": "wsj8cdmmc",
+        "address": "十全一路/瀋陽街(北側)"
     },
     {
         "id": "501203110",
@@ -5192,6 +5206,13 @@
         "englishname": "Kaohsiung Tropical Botanical Garden",
         "geohash": "wsj87d0sc",
         "address": "高坪二十三路/高坪二十三路151巷(東北側)"
+    },
+    {
+        "id": "501212039",
+        "name": "松崗停車場",
+        "englishname": "Song Gang Parking",
+        "geohash": "wsj87jtes",
+        "address": "松崗路/松泰街(西南側)"
     },
     {
         "id": "501213001",
