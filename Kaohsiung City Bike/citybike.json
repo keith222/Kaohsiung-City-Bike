@@ -1456,6 +1456,13 @@
         "address": "察哈爾一街/大連街(西南側)"
     },
     {
+        "id": "501203108",
+        "name": "寶業滯洪公園(澄清路)",
+        "englishname": "Baoye Park (Chengqing Rd.)",
+        "geohash": "wsj8f928j",
+        "address": "澄清路/覺民路(東北側)"
+    },
+    {
         "id": "501203109",
         "name": "博愛國小",
         "englishname": "Bo'aiguomin Elementary School",
@@ -4354,6 +4361,13 @@
         "address": "翠華路331號(對側人行道)"
     },
     {
+        "id": "501209072",
+        "name": "龍德新自由一路口",
+        "englishname": "Longdexin Ziyou 1nd Rd.Intersection",
+        "geohash": "wsj8cshvx",
+        "address": "龍德新路222號(東側人行道)"
+    },
+    {
         "id": "501210001",
         "name": "捷運世運站(2號出口)",
         "englishname": "KRT World Games Sta. (Exit 2)",
@@ -5395,6 +5409,13 @@
         "englishname": "Zhonghua  Activity Center",
         "geohash": "wsj94jgvu",
         "address": "華園街/華中街(西南側)"
+    },
+    {
+        "id": "501214025",
+        "name": "高鐵左營基地",
+        "englishname": "High-Speed Rail Base",
+        "geohash": "wsj91gx0b",
+        "address": "高鐵路1999號(前人行道)"
     },
     {
         "id": "501215001",
