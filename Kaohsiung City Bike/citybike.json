@@ -4403,6 +4403,13 @@
         "address": "美術南六街/青海路口(西南側)"
     },
     {
+        "id": "501209074",
+        "name": "輕軌馬卡道站",
+        "englishname": "LRT Makatao Station",
+        "geohash": "wsj8c4f5w",
+        "address": "河西一路1275號(對側人行道)"
+    },
+    {
         "id": "501210001",
         "name": "捷運世運站(2號出口)",
         "englishname": "KRT World Games Sta. (Exit 2)",
@@ -4975,6 +4982,20 @@
         "englishname": "Sheng tai Park",
         "geohash": "wsj964n9r",
         "address": "旗楠路126巷80-5號(對側人行道)"
+    },
+    {
+        "id": "501210088",
+        "name": "高雄大學管理學院",
+        "englishname": "NUK College of Management",
+        "geohash": "wsj934qty",
+        "address": "高雄大學管理學院(西北側)"
+    },
+    {
+        "id": "501210089",
+        "name": "高雄大學(大學南路側)",
+        "englishname": "NUK (Daxue S. Rd.)",
+        "geohash": "wsj93626u",
+        "address": "大學南路335號(對側)"
     },
     {
         "id": "501211001",
