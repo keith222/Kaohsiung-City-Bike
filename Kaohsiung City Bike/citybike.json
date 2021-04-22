@@ -714,6 +714,13 @@
         "address": "和平一路/和平一路80巷(東北側)"
     },
     {
+        "id": "501202077",
+        "name": "和平和平一路80巷口",
+        "englishname": "凱旋凱旋三路915巷口",
+        "geohash": "wsj8djf2u",
+        "address": "凱旋三路/凱旋三路915巷口(西南側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -3927,6 +3934,20 @@
         "address": "林森四路/中華五路口(東北側人行道)"
     },
     {
+        "id": "501208084",
+        "name": "瑞崗兒童遊戲場",
+        "englishname": "Ruigang Park Playground",
+        "geohash": "wsj8d5qdz",
+        "address": "瑞義街/瑞信街口(西北側)"
+    },
+    {
+        "id": "501208085",
+        "name": "獅甲公園",
+        "englishname": "Shihjia Park",
+        "geohash": "wsj89skmq",
+        "address": "崑明街/文橫三路(東南側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -5313,6 +5334,13 @@
         "address": "高坪二十七街/高坪五十路(東側)"
     },
     {
+        "id": "501212044",
+        "name": "泰山兒童遊戲場",
+        "englishname": "Tarzan Park Playground",
+        "geohash": "wsj86vjdj",
+        "address": "松柏街/青山街45巷(東北側)"
+    },
+    {
         "id": "501213001",
         "name": "蚵仔寮觀光魚市",
         "englishname": "Kezailiao Tourist Fish Market",
@@ -5346,6 +5374,13 @@
         "englishname": "Ziguan Elementary School",
         "geohash": "wsj92xmuy",
         "address": "進學路61號(前人行道)"
+    },
+    {
+        "id": "501213006",
+        "name": "梓平公園",
+        "englishname": "Ziping Park",
+        "geohash": "wsj92wrun",
+        "address": "梓官路/梓官路大宅巷(西南側)"
     },
     {
         "id": "501214001",
@@ -5500,6 +5535,13 @@
         "englishname": "High-Speed Rail Base",
         "geohash": "wsj91gx0b",
         "address": "高鐵路1999號(前人行道)"
+    },
+    {
+        "id": "501214026",
+        "name": "八德東八德南路口",
+        "englishname": "Bade E. Bade S. Rd. Intersection",
+        "geohash": "wsj943sey",
+        "address": "八德東路/八德南路口(東北側)"
     },
     {
         "id": "501215001",
@@ -6202,11 +6244,25 @@
         "address": "後鄉路37號(7-11前停車場)"
     },
     {
+        "id": "501224007",
+        "name": "高苑科技大學視聽大樓",
+        "englishname": "KYU Audiovisual Building",
+        "geohash": "wsj9by0hy",
+        "address": "高苑科技大學視聽大樓(南側)"
+    },
+    {
         "id": "501225001",
         "name": "阿蓮國中",
         "englishname": "Alian Junior High School",
         "geohash": "wsjd4n4kx",
         "address": "民生路178號(前人行道)"
+    },
+    {
+        "id": "501225002",
+        "name": "阿蓮區公所",
+        "englishname": "Alian District Office",
+        "geohash": "wsjd4jexk",
+        "address": "民生路94號前"
     },
     {
         "id": "501225003",
@@ -6307,6 +6363,13 @@
         "address": "中西路71巷16號(西南側)"
     },
     {
+        "id": "501228007",
+        "name": "海成福德宮",
+        "englishname": "Highford Palace",
+        "geohash": "wsj99ct1h",
+        "address": "海成二街100號前"
+    },
+    {
         "id": "501229001",
         "name": "鼓山國小(延平一路)",
         "englishname": "Gushan Elementary School",
@@ -6340,6 +6403,13 @@
         "englishname": "Cishan District Office",
         "geohash": "wsjdjwtpx",
         "address": "延平一路499號前"
+    },
+    {
+        "id": "501229006",
+        "name": "中華光復一街路口",
+        "englishname": "Zhonghua Guangfu 1st St. Intersection",
+        "geohash": "wsjdjtqn5",
+        "address": "中華路998號(對側人行道)"
     },
     {
         "id": "501230001",
