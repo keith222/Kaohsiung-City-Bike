@@ -2548,6 +2548,13 @@
         "address": "公園街/明鳳十三街口(西北側)"
     },
     {
+        "id": "501206109",
+        "name": "保泰保泰路370巷",
+        "englishname": "Baotai Ln. 370 Baotai Rd",
+        "geohash": "wsj8d6c3d",
+        "address": "保泰路/保泰路370巷口(東南側)"
+    },
+    {
         "id": "501206110",
         "name": "文教公園",
         "englishname": "Bunkyo Park",
@@ -2602,6 +2609,13 @@
         "englishname": "Zhongzheng Elementary School (Fengshan)",
         "geohash": "wsj8epjwd",
         "address": "勝利路/勝利路2巷(東南側)"
+    },
+    {
+        "id": "501206120",
+        "name": "鳳山公28公園",
+        "englishname": "Fengshan Gong 28 Park",
+        "geohash": "wsj8du6xh",
+        "address": "誠愛路/誠北街(西南側)"
     },
     {
         "id": "501206121",
@@ -4410,6 +4424,13 @@
         "address": "中山大學西灣藝廊(對側人行道)"
     },
     {
+        "id": "501209071",
+        "name": "中山大學海資館",
+        "englishname": "NSYSU Haizi Pavilion",
+        "geohash": "wsj88xsr7",
+        "address": "中山大學海資館(北側)"
+    },
+    {
         "id": "501209072",
         "name": "龍德新自由一路口",
         "englishname": "Longdexin Ziyou 1nd Rd.Intersection",
@@ -5019,6 +5040,13 @@
         "address": "大學南路335號(對側)"
     },
     {
+        "id": "501210090",
+        "name": "鳳楠經建路口",
+        "englishname": "Fengnan Jingjian Rd.Intersection",
+        "geohash": "wsj960w9s",
+        "address": "鳳楠路88號(前人行道)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -5334,6 +5362,13 @@
         "address": "高坪二十七街/高坪五十路(東側)"
     },
     {
+        "id": "501212043",
+        "name": "捷運小港站(3號出口)",
+        "englishname": "KRT Siaogang Sta. (Exit 3)",
+        "geohash": "wsj86sn2h",
+        "address": "沿海一路/漢民路口(東南側)"
+    },
+    {
         "id": "501212044",
         "name": "泰山兒童遊戲場",
         "englishname": "Tarzan Park Playground",
@@ -5407,7 +5442,7 @@
         "id": "501214005",
         "name": "仁慈公園",
         "englishname": "Renci Park",
-        "geohash": "wsj8fz6eq",
+        "geohash": "wsj8fz3c4",
         "address": "仁慈路/仁慈三街口西南側"
     },
     {
@@ -6144,6 +6179,13 @@
         "englishname": "Ciao-Tou Junior High School",
         "geohash": "wsj93xhgd",
         "address": "新興路70號(前人行道)"
+    },
+    {
+        "id": "501220011",
+        "name": "一品公園",
+        "englishname": "Yipin Park",
+        "geohash": "wsj93xcnu",
+        "address": "瑞祥一街35號(南側)"
     },
     {
         "id": "501221001",
