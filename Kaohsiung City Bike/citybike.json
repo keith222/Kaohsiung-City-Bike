@@ -2676,9 +2676,16 @@
     {
         "id": "501206129",
         "name": "環河鳳東七街106巷口",
-        "englishname": "Huanhe  Lane 106 Fengdongqi St. Intersection",
+        "englishname": "Huanhe Lane 106 Fengdongqi St. Intersection",
         "geohash": "wsj8eqvcy",
         "address": "環河街/鳳東七街106巷(東側)"
+    },
+    {
+        "id": "501206130",
+        "name": "五甲國中(龍成路)",
+        "englishname": "Wu Chia Junior High School",
+        "geohash": "wsj8d1vh3",
+        "address": "龍成路123巷/龍成路(西北側)"
     },
     {
         "id": "501207001",
@@ -3946,6 +3953,13 @@
         "englishname": "Linsen Zhonghua 5th Rd.Intersection",
         "geohash": "wsj89efqj",
         "address": "林森四路/中華五路口(東北側人行道)"
+    },
+    {
+        "id": "501208083",
+        "name": "環區一環區四路口",
+        "englishname": "Huanqu 1st Huanqu 4st Rd.Intersection",
+        "geohash": "wsj892jq5",
+        "address": "環區一路/環區四路(西南側)"
     },
     {
         "id": "501208084",
@@ -5560,9 +5574,16 @@
     {
         "id": "501214023",
         "name": "中華里活動中心",
-        "englishname": "Zhonghua  Activity Center",
+        "englishname": "Zhonghua Activity Center",
         "geohash": "wsj94jgvu",
         "address": "華園街/華中街(西南側)"
+    },
+    {
+        "id": "501214024",
+        "name": "仁和南中正路口",
+        "englishname": "Zhonghua  Activity Center",
+        "geohash": "wsj94sdv6",
+        "address": "仁和南街/中正路(東南側)"
     },
     {
         "id": "501214025",
@@ -6286,11 +6307,25 @@
         "address": "後鄉路37號(7-11前停車場)"
     },
     {
+        "id": "501224006",
+        "name": "高苑科技大學生化大樓",
+        "englishname": "KYU Biochemical Building",
+        "geohash": "wsj9bwrq1",
+        "address": "高苑科技大學生化大樓(北側)"
+    },
+    {
         "id": "501224007",
         "name": "高苑科技大學視聽大樓",
         "englishname": "KYU Audiovisual Building",
         "geohash": "wsj9by0hy",
         "address": "高苑科技大學視聽大樓(南側)"
+    },
+    {
+        "id": "501224008",
+        "name": "路竹運動公園",
+        "englishname": "Luzhu Sports Park",
+        "geohash": "wsjd09z6m",
+        "address": "大同路202號(對側人行道)"
     },
     {
         "id": "501225001",
@@ -6312,6 +6347,13 @@
         "englishname": "Alian Elementary School",
         "geohash": "wsjd4jtty",
         "address": "民族路163號"
+    },
+    {
+        "id": "501225004",
+        "name": "南蓮停車場",
+        "englishname": "Nanlian Parking Lot",
+        "geohash": "wsjd4jj2w",
+        "address": "忠孝路176號(南側)"
     },
     {
         "id": "501226001",
