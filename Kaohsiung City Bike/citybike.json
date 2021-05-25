@@ -715,10 +715,17 @@
     },
     {
         "id": "501202077",
-        "name": "和平和平一路80巷口",
-        "englishname": "凱旋凱旋三路915巷口",
+        "name": "凱旋凱旋三路915巷口",
+        "englishname": "Kaisyuan Ln. 915, Kaixuan 3rd Rd.",
         "geohash": "wsj8djf2u",
         "address": "凱旋三路/凱旋三路915巷口(西南側)"
+    },
+    {
+        "id": "501202078",
+        "name": "苓洲國小",
+        "englishname": "Ling Jhou Elementary School",
+        "geohash": "wsj89sbtq",
+        "address": "中華四路/興中二路口(西北側)"
     },
     {
         "id": "501203001",
@@ -3393,6 +3400,13 @@
         "englishname": "Banpingshan Mountain pathway trailhead South",
         "geohash": "wsj91dcgj",
         "address": "翠華路/明潭路東北側"
+    },
+    {
+        "id": "501207110",
+        "name": "富民太原街口",
+        "englishname": "Fumin Rd Taiyuan St.Intersection",
+        "geohash": "wsj8cwebs",
+        "address": "富民路464號(前人行道)"
     },
     {
         "id": "501208001",
