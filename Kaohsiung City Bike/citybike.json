@@ -1505,6 +1505,13 @@
         "address": "哈爾濱街/察哈爾二街(西南側)"
     },
     {
+        "id": "501203112",
+        "name": "寶安里活動中心",
+        "englishname": "Baoanli Activity Center",
+        "geohash": "wsj8f1sv3",
+        "address": "覺民路/建武路(東南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -1622,6 +1629,20 @@
         "englishname": "Gongyuan 2nd Qixian 3rd Rd. Intersection",
         "geohash": "wsj89n37f",
         "address": "公園二路219號(東北側)"
+    },
+    {
+        "id": "501204020",
+        "name": "輕軌駁二蓬萊站",
+        "englishname": "Penglai Pier-2 Station",
+        "geohash": "wsj89jcp1",
+        "address": "駁二蓬萊站(西北側)"
+    },
+    {
+        "id": "501204021",
+        "name": "大義截流站",
+        "englishname": "Dayi Interception Station",
+        "geohash": "wsj89jsjn",
+        "address": "新化街/大智路口(東南側)"
     },
     {
         "id": "501205001",
@@ -2695,6 +2716,13 @@
         "address": "龍成路123巷/龍成路(西北側)"
     },
     {
+        "id": "501206131",
+        "name": "六成保南一路口",
+        "englishname": "Liucheng Baonan 1st Rd.",
+        "geohash": "wsj86xgx8",
+        "address": "六成街/保南一路口(東南側))"
+    },
+    {
         "id": "501207001",
         "name": "捷運生態園區站(1號出口)",
         "englishname": "KRT Ecological District Sta. (Exit 1)",
@@ -3036,6 +3064,13 @@
         "englishname": "KRT Aozihdi Sta. (Exit 3)",
         "geohash": "wsj8csdp5",
         "address": "博愛二路86號(前人行道)"
+    },
+    {
+        "id": "501207050",
+        "name": "明誠富國路口東北側",
+        "englishname": "Mingcheng Fuguo Rd. Intersection",
+        "geohash": "wsj8ctkfy",
+        "address": "明誠二路368號(前人行道)"
     },
     {
         "id": "501207052",
@@ -3400,6 +3435,13 @@
         "englishname": "Banpingshan Mountain pathway trailhead South",
         "geohash": "wsj91dcgj",
         "address": "翠華路/明潭路東北側"
+    },
+    {
+        "id": "501207109",
+        "name": "博愛四重仁路口",
+        "englishname": "Bo'ai 4th Chongren Rd.Intersection",
+        "geohash": "wsj91f5g3",
+        "address": "博愛四路/重仁路(西北側)"
     },
     {
         "id": "501207110",
@@ -3906,6 +3948,13 @@
         "address": "崗山橫街196號(對面)"
     },
     {
+        "id": "501208073",
+        "name": "一心和平二路口",
+        "englishname": "Yixin 1st Heping 2nd Rd. Southwest",
+        "geohash": "wsj89gqx3",
+        "address": "一心一路/和平二路(西南側)"
+    },
+    {
         "id": "501208074",
         "name": "瑞福路公共停車場",
         "englishname": "Ruifu Rd Public Car Park",
@@ -3988,6 +4037,20 @@
         "englishname": "Shihjia Park",
         "geohash": "wsj89skmq",
         "address": "崑明街/文橫三路(東南側)"
+    },
+    {
+        "id": "501208086",
+        "name": "愛群國小",
+        "englishname": "Municipal Aicyun Primary School",
+        "geohash": "wsj89ucnr",
+        "address": "廣西路/育德路(東南側)"
+    },
+    {
+        "id": "501208090",
+        "name": "凱興凱旺街口",
+        "englishname": "Kaixing Kaiwang St.Intersection",
+        "geohash": "wsj89bz9v",
+        "address": "凱興街/凱旺街(東北側)"
     },
     {
         "id": "501209001",
@@ -5075,6 +5138,20 @@
         "address": "鳳楠路88號(前人行道)"
     },
     {
+        "id": "501210091",
+        "name": "大昌無菸公園",
+        "englishname": "Dachang Smoke-free Park",
+        "geohash": "wsj91jzug",
+        "address": "右昌街79巷66弄56號(對側)"
+    },
+    {
+        "id": "501210093",
+        "name": "楠梓特殊學校",
+        "englishname": "Municipal Special School",
+        "geohash": "wsj93c906",
+        "address": "德民路211號(前人行道)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -5390,6 +5467,13 @@
         "address": "高坪二十七街/高坪五十路(東側)"
     },
     {
+        "id": "501212041",
+        "name": "天順港福街29巷口",
+        "englishname": "Tianshun Ln. 29, Gangfu St.Intersection",
+        "geohash": "wsj86k2xn",
+        "address": "天順街/港福街29巷(東北側)"
+    },
+    {
         "id": "501212043",
         "name": "捷運小港站(3號出口)",
         "englishname": "KRT Siaogang Sta. (Exit 3)",
@@ -5402,6 +5486,13 @@
         "englishname": "Tarzan Park Playground",
         "geohash": "wsj86vjdj",
         "address": "松柏街/青山街45巷(東北側)"
+    },
+    {
+        "id": "501212045",
+        "name": "小港森林公園(秀峰街)",
+        "englishname": "Xiaogang Forest Park(Sioufong St.)",
+        "geohash": "wsj87h7k8",
+        "address": "營口路/秀峰街(西北側)"
     },
     {
         "id": "501213001",
@@ -6146,6 +6237,13 @@
         "address": "大寮路/周廣街(西南側)"
     },
     {
+        "id": "501219019",
+        "name": "三隆兒童公園",
+        "englishname": "Sanlong Children's Park",
+        "geohash": "wsj8ef5vu",
+        "address": "安隆街/立隆街123巷口(西北側)"
+    },
+    {
         "id": "501220001",
         "name": "捷運青埔站(1號出口)東側",
         "englishname": "KRT Cingpu Sta. (Exit 1) East",
@@ -6466,6 +6564,13 @@
         "englishname": "Highford Palace",
         "geohash": "wsj99ct1h",
         "address": "海成二街100號前"
+    },
+    {
+        "id": "501228008",
+        "name": "角宿天后宮活動中心",
+        "englishname": "Spica Tianhou Temple Activity Center",
+        "geohash": "wsj9dc5qm",
+        "address": "角宿路6-1號(南側)"
     },
     {
         "id": "501229001",
