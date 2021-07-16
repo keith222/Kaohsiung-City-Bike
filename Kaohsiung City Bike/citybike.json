@@ -1512,6 +1512,20 @@
         "address": "覺民路/建武路(東南側)"
     },
     {
+        "id": "501203114",
+        "name": "自由察哈爾一街口",
+        "englishname": "Ziyou Chaha'er 1st St.Intersection",
+        "geohash": "wsj8cdy77",
+        "address": "自由一路/察哈爾一街口(東北側)"
+    },
+    {
+        "id": "501203115",
+        "name": "正義車站(鐵道街)",
+        "englishname": "Zhengyi Station(TiehDao St.)",
+        "geohash": "wsj8f2qn7",
+        "address": "鐵道街/正義路(西北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2476,6 +2490,20 @@
         "englishname": "Fengshan New Residential Quarter Apartment Complex A",
         "geohash": "wsj8epsm1",
         "address": "工協街33號(對面)"
+    },
+    {
+        "id": "501206092",
+        "name": "海風社區公園",
+        "englishname": "Haifeng Community Park",
+        "geohash": "wsj8g0npy",
+        "address": "勝利路22號(東北側人行道)"
+    },
+    {
+        "id": "501206093",
+        "name": "勝利建國路一段口",
+        "englishname": "Shengli Jianguo 1st Rd.",
+        "geohash": "wsj8g0tux",
+        "address": "勝利路/建國路一段(東南側)"
     },
     {
         "id": "501206094",
@@ -4046,6 +4074,13 @@
         "address": "廣西路/育德路(東南側)"
     },
     {
+        "id": "501208087",
+        "name": "捷運三多商圈站(3號出口)",
+        "englishname": "KRT Sanduo Shopping District Sta. (Exit 3)",
+        "geohash": "wsj89se7e",
+        "address": "中山二路/一心二路(東南側)"
+    },
+    {
         "id": "501208090",
         "name": "凱興凱旺街口",
         "englishname": "Kaixing Kaiwang St.Intersection",
@@ -4452,6 +4487,13 @@
         "address": "西藏翠華路口東北側"
     },
     {
+        "id": "501209061",
+        "name": "中華郵政前峰郵局",
+        "englishname": "Chunghwa Post Qianfeng Post Office",
+        "geohash": "wsj8cntu6",
+        "address": "九如四路2008號北側"
+    },
+    {
         "id": "501209062",
         "name": "鼓山國小(登山街)",
         "englishname": "Gushan Elementary School (Dengshan St.)",
@@ -4541,6 +4583,34 @@
         "englishname": "LRT Makatao Station",
         "geohash": "wsj8c4f5w",
         "address": "河西一路1275號(對側人行道)"
+    },
+    {
+        "id": "501209075",
+        "name": "內惟國小(鼓山三路)",
+        "englishname": "Neiwei Elementary School(Gushan 3rd Rd.)",
+        "geohash": "wsj8bumzy",
+        "address": "鼓山三路/新疆路(東北側人行道)"
+    },
+    {
+        "id": "501209076",
+        "name": "高雄市立圖書館鼓山分館",
+        "englishname": "Kaohsiung Public Library(Gushan Branch)",
+        "geohash": "wsj8bgyn6",
+        "address": "鼓山三路19之3號(前人行道)"
+    },
+    {
+        "id": "501209077",
+        "name": "前峰兒童遊戲場",
+        "englishname": "Qianfeng Children's Playground",
+        "geohash": "wsj8cnhkk",
+        "address": "九如四路/銘傳路(東北側人行道)"
+    },
+    {
+        "id": "501209078",
+        "name": "中華一青海路口",
+        "englishname": "Zhonghua 1st Qinghai Rd.Intersection",
+        "geohash": "wsj8c79b0",
+        "address": "中華一路2300號(前人行道)"
     },
     {
         "id": "501210001",
@@ -5082,6 +5152,34 @@
         "address": "大學西路168號(對側人行道)"
     },
     {
+        "id": "501210079",
+        "name": "高雄科大第一西校區游泳池",
+        "englishname": "NKUST(1st West Campus) Swimming Pool",
+        "geohash": "wsj96nqsr",
+        "address": "西校區游泳池(北側)"
+    },
+    {
+        "id": "501210080",
+        "name": "高雄科大第一東校區財金學院",
+        "englishname": "NKUST (1st East Campus) C.F.B",
+        "geohash": "wsj96q8cp",
+        "address": "東校區財金學院(南側)"
+    },
+    {
+        "id": "501210081",
+        "name": "高雄科大第一東校區校門",
+        "englishname": "NKUST (1st East Campus) School gate",
+        "geohash": "wsj96r44e",
+        "address": "東校區校門(西側)"
+    },
+    {
+        "id": "501210082",
+        "name": "高雄科大第一東校區第三停車場",
+        "englishname": "NKUST(1st East Campus) Third parking lot",
+        "geohash": "wsj96qude",
+        "address": "東校區第三停車場(東側)"
+    },
+    {
         "id": "501210083",
         "name": "右昌國小(後昌路)",
         "englishname": "Yo-Cheng Elementary School (Houchang Rd.)",
@@ -5493,6 +5591,13 @@
         "englishname": "Xiaogang Forest Park(Sioufong St.)",
         "geohash": "wsj87h7k8",
         "address": "營口路/秀峰街(西北側)"
+    },
+    {
+        "id": "501212049",
+        "name": "台機大地街口",
+        "englishname": "Taiji Dadi St.Intersection",
+        "geohash": "wsj86e47v",
+        "address": "台機路/大地街口(南側)"
     },
     {
         "id": "501213001",
@@ -5957,6 +6062,20 @@
         "address": "光潭路134巷59號(東側)"
     },
     {
+        "id": "501216030",
+        "name": "空軍軍史館",
+        "englishname": "Air Force Military History Museum",
+        "geohash": "wsj98gg6r",
+        "address": "介壽西路西首1號(西側)"
+    },
+    {
+        "id": "501216031",
+        "name": "鹽埔農村社區活動中心",
+        "englishname": "Yanpu Rural Community Activity Center",
+        "geohash": "wsj99160p",
+        "address": "白米路/白米路96巷(南側)"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -6319,6 +6438,13 @@
         "englishname": "Yipin Park",
         "geohash": "wsj93xcnu",
         "address": "瑞祥一街35號(南側)"
+    },
+    {
+        "id": "501220012",
+        "name": "小機堡停車場",
+        "englishname": "Small machine fort  Parking Lot",
+        "geohash": "wsj93y920",
+        "address": "糖北路3-1號(南側)"
     },
     {
         "id": "501221001",
