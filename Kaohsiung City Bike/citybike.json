@@ -1526,6 +1526,13 @@
         "address": "鐵道街/正義路(西北側)"
     },
     {
+        "id": "501203117",
+        "name": "中山河北一路口",
+        "englishname": "Zhongshan Hebei 1st Rd. Intersection",
+        "geohash": "wsj8c8csn",
+        "address": "中山一路/河北一路(東南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -3474,9 +3481,16 @@
     {
         "id": "501207110",
         "name": "富民太原街口",
-        "englishname": "Fumin Rd Taiyuan St.Intersection",
+        "englishname": "Fumin Rd Taiyuan St. Intersection",
         "geohash": "wsj8cwebs",
         "address": "富民路464號(前人行道)"
+    },
+    {
+        "id": "501207113",
+        "name": "崇德翠華路口",
+        "englishname": "Chongde Cuihua Rd. Intersection",
+        "geohash": "wsj912qx9",
+        "address": "崇德路/翠華路(東南側)"
     },
     {
         "id": "501208001",
@@ -4079,6 +4093,13 @@
         "englishname": "KRT Sanduo Shopping District Sta. (Exit 3)",
         "geohash": "wsj89se7e",
         "address": "中山二路/一心二路(東南側)"
+    },
+    {
+        "id": "501208089",
+        "name": "西山兒童遊戲場",
+        "englishname": "Xishan Children's Playground",
+        "geohash": "wsj89ezqf",
+        "address": "台鋁四巷/台鋁中巷(東北側)"
     },
     {
         "id": "501208090",
@@ -5591,6 +5612,20 @@
         "englishname": "Xiaogang Forest Park(Sioufong St.)",
         "geohash": "wsj87h7k8",
         "address": "營口路/秀峰街(西北側)"
+    },
+    {
+        "id": "501212046",
+        "name": "宏平沿海一路口",
+        "englishname": "Hongping Yanhai 1st Rd. Intersection",
+        "geohash": "wsj86ssk9",
+        "address": "宏平路/沿海一路口(東南側)"
+    },
+    {
+        "id": "501212048",
+        "name": "餐旅大學(松信路)",
+        "englishname": "NKUHT(Songxin Rd.)",
+        "geohash": "wsj875j6h",
+        "address": "松信路/松華路(西北側)"
     },
     {
         "id": "501212049",
