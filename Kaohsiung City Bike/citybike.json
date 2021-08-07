@@ -728,6 +728,13 @@
         "address": "中華四路/興中二路口(西北側)"
     },
     {
+        "id": "501202079",
+        "name": "武昌武昌路40巷口",
+        "englishname": "Wuchang Ln. 40, Wuchang Rd. Intersection",
+        "geohash": "wsj8dm9g2",
+        "address": "武昌路/武昌路40巷口(東北側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -4107,6 +4114,13 @@
         "englishname": "Kaixing Kaiwang St.Intersection",
         "geohash": "wsj89bz9v",
         "address": "凱興街/凱旺街(東北側)"
+    },
+    {
+        "id": "501208093",
+        "name": "鎮東公園",
+        "englishname": "Zhendong Park",
+        "geohash": "wsj898y2q",
+        "address": "鎮東街/鎮東四街口(東北側)"
     },
     {
         "id": "501209001",
