@@ -1673,6 +1673,13 @@
         "address": "新化街/大智路口(東南側)"
     },
     {
+        "id": "501204022",
+        "name": "公園二光榮街口",
+        "englishname": "Gongyuan 2nd Guangrong St.Intersection",
+        "geohash": "wsj89nh2k",
+        "address": "公園二路/光榮街(東北側人行道)"
+    },
+    {
         "id": "501205001",
         "name": "高雄文學館",
         "englishname": "Kaohsiung Literary Museum",
@@ -2762,7 +2769,14 @@
         "name": "六成保南一路口",
         "englishname": "Liucheng Baonan 1st Rd.",
         "geohash": "wsj86xgx8",
-        "address": "六成街/保南一路口(東南側))"
+        "address": "六成街/保南一路口(東南側)"
+    },
+    {
+        "id": "501206132",
+        "name": "長樂和興街口",
+        "englishname": "Changle Hexing St.Intersection",
+        "geohash": "wsj8dv2d2",
+        "address": "長樂街/和興街(南側)"
     },
     {
         "id": "501207001",
@@ -4102,6 +4116,13 @@
         "address": "中山二路/一心二路(東南側)"
     },
     {
+        "id": "501208088",
+        "name": "凱旋一心一路口",
+        "englishname": "Kaixuan Yixin 1st Rd.Intersection",
+        "geohash": "wsj8d51vd",
+        "address": "凱旋三路/一心一路口(東北側)"
+    },
+    {
         "id": "501208089",
         "name": "西山兒童遊戲場",
         "englishname": "Xishan Children's Playground",
@@ -4116,11 +4137,32 @@
         "address": "凱興街/凱旺街(東北側)"
     },
     {
+        "id": "501208091",
+        "name": "高雄軟體園區",
+        "englishname": "Kaohsiung Software Technology Park",
+        "geohash": "wsj896yxg",
+        "address": "復興四路9號(前)"
+    },
+    {
+        "id": "501208092",
+        "name": "三多桂林街口",
+        "englishname": "Sanduo Guilin St.Intersection",
+        "geohash": "wsj89v7jn",
+        "address": "三多二路/桂林街口(西南側)"
+    },
+    {
         "id": "501208093",
         "name": "鎮東公園",
         "englishname": "Zhendong Park",
         "geohash": "wsj898y2q",
         "address": "鎮東街/鎮東四街口(東北側)"
+    },
+    {
+        "id": "501208094",
+        "name": "育群兒童遊戲場",
+        "englishname": "Yuqun Children's Playground",
+        "geohash": "wsj89gpu6",
+        "address": "憲德街/育群街口(西北側)"
     },
     {
         "id": "501209001",
@@ -5278,11 +5320,25 @@
         "address": "右昌街79巷66弄56號(對側)"
     },
     {
+        "id": "501210092",
+        "name": "廣昌公園",
+        "englishname": "Guangchang Park",
+        "geohash": "wsj91jqr7",
+        "address": "廣昌街/右昌忠義六巷(西南側)"
+    },
+    {
         "id": "501210093",
         "name": "楠梓特殊學校",
         "englishname": "Municipal Special School",
         "geohash": "wsj93c906",
         "address": "德民路211號(前人行道)"
+    },
+    {
+        "id": "501210094",
+        "name": "創新芎林一街口",
+        "englishname": "Chuangxin Qionglin 1st St.Intersection",
+        "geohash": "wsj96jwdw",
+        "address": "創新路761號前"
     },
     {
         "id": "501211001",
@@ -5687,8 +5743,15 @@
         "id": "501213006",
         "name": "梓平公園",
         "englishname": "Ziping Park",
-        "geohash": "wsj92wrun",
+        "geohash": "wsj92y257",
         "address": "梓官路/梓官路大宅巷(西南側)"
+    },
+    {
+        "id": "501213007",
+        "name": "梓和公園",
+        "englishname": "Zihe Park",
+        "geohash": "wsj92wyhr",
+        "address": "和平路220巷40號(東側)"
     },
     {
         "id": "501214001",
@@ -5857,6 +5920,13 @@
         "englishname": "Bade E. Bade S. Rd. Intersection",
         "geohash": "wsj943sey",
         "address": "八德東路/八德南路口(東北側)"
+    },
+    {
+        "id": "501214027",
+        "name": "八德重劃公園",
+        "englishname": "Bade Rezoning Park",
+        "geohash": "wsj943ptb",
+        "address": "京吉五路/京吉六路(西南側)"
     },
     {
         "id": "501215001",
@@ -6312,6 +6382,13 @@
         "englishname": "Shan Ding Elementary School",
         "geohash": "wsj8ee85j",
         "address": "山頂路192號(對面)"
+    },
+    {
+        "id": "501219005",
+        "name": "中庄國小",
+        "englishname": "Zhongzhuang Elementary School",
+        "geohash": "wsj8g8qxm",
+        "address": "中庄路/華德街口(西北側)"
     },
     {
         "id": "501219006",
