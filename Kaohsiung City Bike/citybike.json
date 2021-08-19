@@ -1519,6 +1519,13 @@
         "address": "覺民路/建武路(東南側)"
     },
     {
+        "id": "501203113",
+        "name": "十全康平街口",
+        "englishname": "Shiquan Kangping St.Intersection",
+        "geohash": "wsj8c6etq",
+        "address": "十全二路/康平街口(西北側)"
+    },
+    {
         "id": "501203114",
         "name": "自由察哈爾一街口",
         "englishname": "Ziyou Chaha'er 1st St.Intersection",
@@ -1536,8 +1543,15 @@
         "id": "501203117",
         "name": "中山河北一路口",
         "englishname": "Zhongshan Hebei 1st Rd. Intersection",
-        "geohash": "wsj8c8csn",
+        "geohash": "wsj8c8cs7",
         "address": "中山一路/河北一路(東南側)"
+    },
+    {
+        "id": "501203118",
+        "name": "鐵道復興一路口",
+        "englishname": "TiehDao Fuxing 1st Rd.Intersection",
+        "geohash": "wsj8c9q1c",
+        "address": "鐵道二街/復興一路口(東南側)"
     },
     {
         "id": "501204001",
@@ -4690,6 +4704,20 @@
         "address": "中華一路2300號(前人行道)"
     },
     {
+        "id": "501209081",
+        "name": "翠華葆楨路口",
+        "englishname": "Cuihua Baozhen Rd.Intersection",
+        "geohash": "wsj8cj7fb",
+        "address": "翠華路/葆禎路(西南側)"
+    },
+    {
+        "id": "501209085",
+        "name": "鼓山車站",
+        "englishname": "Gushan Station",
+        "geohash": "wsj8c1cd5",
+        "address": "鐵路街20巷/鐵路街(東側)"
+    },
+    {
         "id": "501210001",
         "name": "捷運世運站(2號出口)",
         "englishname": "KRT World Games Sta. (Exit 2)",
@@ -5383,6 +5411,13 @@
         "address": "發祥街4-2號(對側人行道)"
     },
     {
+        "id": "501211007",
+        "name": "旗津海岸公園停車場",
+        "englishname": "Qijin Coastal Park Parking Lot",
+        "geohash": "wsj88gc4y",
+        "address": "旗津三路/中洲三路687巷(西側)"
+    },
+    {
         "id": "501212001",
         "name": "宏平大鵬路口",
         "englishname": "Hongping Dapeng Rd. Intersection",
@@ -5927,6 +5962,13 @@
         "englishname": "Bade Rezoning Park",
         "geohash": "wsj943ptb",
         "address": "京吉五路/京吉六路(西南側)"
+    },
+    {
+        "id": "501214028",
+        "name": "九番埤濕地公園",
+        "englishname": "Jiupanpi Wetland Park",
+        "geohash": "wsj941cdm",
+        "address": "霞海路/霞海東一街(東南側)"
     },
     {
         "id": "501215001",
@@ -6571,6 +6613,20 @@
         "englishname": "Small machine fort  Parking Lot",
         "geohash": "wsj93y920",
         "address": "糖北路3-1號(南側)"
+    },
+    {
+        "id": "501220013",
+        "name": "橋新一橋新八路口",
+        "englishname": "Qiaoxin 1st Qiaoxin 8th Rd.Intersection",
+        "geohash": "wsj93g4m8",
+        "address": "橋新一路/橋新八路(東北側)"
+    },
+    {
+        "id": "501220014",
+        "name": "橋新七新東一街口",
+        "englishname": "Qiaoxin 7st Xindong 1st St.Intersection",
+        "geohash": "wsj93ge8h",
+        "address": "橋新七路/新東一街(東北側)"
     },
     {
         "id": "501221001",
