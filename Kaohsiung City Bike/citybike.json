@@ -1554,6 +1554,13 @@
         "address": "鐵道二街/復興一路口(東南側)"
     },
     {
+        "id": "501203121",
+        "name": "鐵道三中庸街口",
+        "englishname": "TiehDao 3th Zhongyong St.Intersection",
+        "geohash": "wsj8c0zrt",
+        "address": "鐵道三街/中庸街(西南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2793,6 +2800,13 @@
         "address": "長樂街/和興街(南側)"
     },
     {
+        "id": "501206133",
+        "name": "鳳埤鳳埤街50巷口",
+        "englishname": "Fengpi Ln. 50, Fengpi St.Intersection",
+        "geohash": "wsj8er98w",
+        "address": "鳳埤街60巷/鳳埤街50巷口(西南側)"
+    },
+    {
         "id": "501207001",
         "name": "捷運生態園區站(1號出口)",
         "englishname": "KRT Ecological District Sta. (Exit 1)",
@@ -3521,11 +3535,39 @@
         "address": "富民路464號(前人行道)"
     },
     {
+        "id": "501207112",
+        "name": "海功海富路口",
+        "englishname": "Haigong Haifu Rd.Intersection",
+        "geohash": "wsj915rbx",
+        "address": "海功路/海富路(北側)"
+    },
+    {
         "id": "501207113",
         "name": "崇德翠華路口",
         "englishname": "Chongde Cuihua Rd. Intersection",
         "geohash": "wsj912qx9",
         "address": "崇德路/翠華路(東南側)"
+    },
+    {
+        "id": "501207114",
+        "name": "華榮翠華路口",
+        "englishname": "Huarong Cuihua Rd.Intersection",
+        "geohash": "wsj8cr1ry",
+        "address": "華榮路/翠華路(東南側)"
+    },
+    {
+        "id": "501207115",
+        "name": "菜公公園",
+        "englishname": "Cai Gong Park",
+        "geohash": "wsj8czgkc",
+        "address": "文育路161號(對側)"
+    },
+    {
+        "id": "501207116",
+        "name": "富國公園(安吉街)",
+        "englishname": "Fuguo Park(Anji St.)",
+        "geohash": "wsj8ctvq5",
+        "address": "安吉街/保靖街(西北側)"
     },
     {
         "id": "501208001",
@@ -5369,6 +5411,13 @@
         "address": "創新路761號前"
     },
     {
+        "id": "501210095",
+        "name": "高雄大學行政大樓",
+        "englishname": "NUK Administration Building",
+        "geohash": "wsj934ewz",
+        "address": "高雄大學行政大樓(西北側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -5724,6 +5773,13 @@
         "englishname": "Hongping Yanhai 1st Rd. Intersection",
         "geohash": "wsj86ssk9",
         "address": "宏平路/沿海一路口(東南側)"
+    },
+    {
+        "id": "501212047",
+        "name": "宏光宏智街口",
+        "englishname": "Hongguang Hongzhi St.Intersection",
+        "geohash": "wsj86utu3",
+        "address": "宏光街/宏智街口(東南側)"
     },
     {
         "id": "501212048",
