@@ -5418,6 +5418,20 @@
         "address": "高雄大學行政大樓(西北側)"
     },
     {
+        "id": "501210096",
+        "name": "援中港濕地公園",
+        "englishname": "Yuanjhong Harbor Wetland",
+        "geohash": "wsj9281xx",
+        "address": "援中港濕地公園(西側)"
+    },
+    {
+        "id": "501210097",
+        "name": "中和兒童公園",
+        "englishname": "Neutralize Children Park",
+        "geohash": "wsj9309gd",
+        "address": "大學六街/大學二十七街(西南側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
