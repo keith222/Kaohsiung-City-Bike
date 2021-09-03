@@ -1540,6 +1540,13 @@
         "address": "鐵道街/正義路(西北側)"
     },
     {
+        "id": "501203116",
+        "name": "南區環保公園",
+        "englishname": "Southern District Environmental Park",
+        "geohash": "wsj8fjssg",
+        "address": "金鼎路/金鼎路66巷口(東北側)"
+    },
+    {
         "id": "501203117",
         "name": "中山河北一路口",
         "englishname": "Zhongshan Hebei 1st Rd. Intersection",
@@ -4751,6 +4758,13 @@
         "englishname": "Cuihua Baozhen Rd.Intersection",
         "geohash": "wsj8cj7fb",
         "address": "翠華路/葆禎路(西南側)"
+    },
+    {
+        "id": "501209082",
+        "name": "桃子園鼓山三路(東南側)",
+        "englishname": "Taozihyuan Gushan 3rd Rd.(Southeast)",
+        "geohash": "wsj8cpjm2",
+        "address": "桃子園路/鼓山三路(東南側)"
     },
     {
         "id": "501209085",
