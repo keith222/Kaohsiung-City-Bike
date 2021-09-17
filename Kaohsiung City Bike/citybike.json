@@ -2688,6 +2688,13 @@
         "address": "建國路二段/文英路口(西北側)"
     },
     {
+        "id": "501206115",
+        "name": "山仔頂溝滯洪池",
+        "englishname": "Shanziding Detention Ponds",
+        "geohash": "wsj8g23qn",
+        "address": "埤山路/埤北路305巷口東側"
+    },
+    {
         "id": "501206116",
         "name": "正義國小",
         "englishname": "Gaoxiongshizhengyi Elementary School",
@@ -2812,6 +2819,13 @@
         "englishname": "Fengpi Ln. 50, Fengpi St.Intersection",
         "geohash": "wsj8er98w",
         "address": "鳳埤街60巷/鳳埤街50巷口(西南側)"
+    },
+    {
+        "id": "501206135",
+        "name": "鳳松博愛路口",
+        "englishname": "Fengsong Bo'ai Rd.Intersection",
+        "geohash": "wsj8dzggr",
+        "address": "鳳松路/博愛路(東北側)"
     },
     {
         "id": "501207001",
