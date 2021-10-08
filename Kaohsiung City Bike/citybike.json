@@ -735,6 +735,20 @@
         "address": "武昌路/武昌路40巷口(東北側)"
     },
     {
+        "id": "501202080",
+        "name": "中山苓雅二路口",
+        "englishname": "Zhongshan Lingya 2nd Rd.Intersection",
+        "geohash": "wsj89t9eu",
+        "address": "中山二路/苓雅二路(西北側)"
+    },
+    {
+        "id": "501202081",
+        "name": "捷運三多商圈站(6號出口)",
+        "englishname": "KRT Sanduo Shopping District Sta.(Exit 6)",
+        "geohash": "wsj89sfug",
+        "address": "中山二路/三多三路(東北側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -1559,6 +1573,13 @@
         "englishname": "TiehDao Fuxing 1st Rd.Intersection",
         "geohash": "wsj8c9q1c",
         "address": "鐵道二街/復興一路口(東南側)"
+    },
+    {
+        "id": "501203119",
+        "name": "鐵道九如一路381巷口",
+        "englishname": "TiehDao Ln. 381, Jiuru 1st Rd.Intersection",
+        "geohash": "wsj8f0yf1",
+        "address": "鐵道一街/九如一路381巷口(南側)"
     },
     {
         "id": "501203121",
@@ -2819,6 +2840,13 @@
         "englishname": "Fengpi Ln. 50, Fengpi St.Intersection",
         "geohash": "wsj8er98w",
         "address": "鳳埤街60巷/鳳埤街50巷口(西南側)"
+    },
+    {
+        "id": "501206134",
+        "name": "文福青年路口",
+        "englishname": "Wenfu Qingnian Rd.Intersection",
+        "geohash": "wsj8f8hp3",
+        "address": "文福街/青年路二段(西南側)"
     },
     {
         "id": "501206135",
@@ -4767,6 +4795,20 @@
         "address": "中華一路2300號(前人行道)"
     },
     {
+        "id": "501209079",
+        "name": "內惟車站(翠華路)",
+        "englishname": "Neiwei Station (Cuihua Rd.)",
+        "geohash": "wsj8cnq25",
+        "address": "內惟車站西側出口人行道"
+    },
+    {
+        "id": "501209080",
+        "name": "內惟車站(馬卡道路)",
+        "englishname": "Neiwei Station (Makadao Rd.)",
+        "geohash": "wsj8cnn7d",
+        "address": "內惟車站東側出口人行道"
+    },
+    {
         "id": "501209081",
         "name": "翠華葆楨路口",
         "englishname": "Cuihua Baozhen Rd.Intersection",
@@ -4781,11 +4823,25 @@
         "address": "桃子園路/鼓山三路(東南側)"
     },
     {
-        "id": "501209085",
-        "name": "鼓山車站",
-        "englishname": "Gushan Station",
-        "geohash": "wsj8c1cd5",
-        "address": "鐵路街20巷/鐵路街(東側)"
+        "id": "501209082",
+        "name": "桃子園鼓山三路(東南側)",
+        "englishname": "Taozihyuan Gushan 3rd Rd.(Southeast)",
+        "geohash": "wsj8cpjm2",
+        "address": "桃子園路/鼓山三路(東南側)"
+    },
+    {
+        "id": "501209083",
+        "name": "中華翠華路口",
+        "englishname": "Zhonghua Cuihua Rd.Intersection",
+        "geohash": "wsj8cnx0m",
+        "address": "中華一路/翠華路(東南側)"
+    },
+    {
+        "id": "501209084",
+        "name": "美術北三馬卡道路口",
+        "englishname": "Meishu N. 3rd Makadao Rd.Intersection",
+        "geohash": "wsj8cjvsy",
+        "address": "美術北三路/馬卡道路(西北側)"
     },
     {
         "id": "501210001",
@@ -5836,6 +5892,13 @@
         "englishname": "Taiji Dadi St.Intersection",
         "geohash": "wsj86e47v",
         "address": "台機路/大地街口(南側)"
+    },
+    {
+        "id": "501212050",
+        "name": "孔宅兒童遊戲場",
+        "englishname": "KZ Children's Playground",
+        "geohash": "wsj87negy",
+        "address": "孔宅街93號(對面)"
     },
     {
         "id": "501213001",
