@@ -749,6 +749,13 @@
         "address": "中山二路/三多三路(東北側)"
     },
     {
+        "id": "501202082",
+        "name": "海邊新田路口",
+        "englishname": "Haibian Xintian Rd.Intersection",
+        "geohash": "wsj89mdsp",
+        "address": "海邊路/新田路(西南側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -6529,6 +6536,13 @@
         "englishname": "The Grand Hotel",
         "geohash": "wsj8fs1h7",
         "address": "圓山路2號(右側)"
+    },
+    {
+        "id": "501218014",
+        "name": "憲兵204指揮部",
+        "englishname": "Military Police 204 Command",
+        "geohash": "wsj8ffg73",
+        "address": "恆山西巷/公園路(東北側)"
     },
     {
         "id": "501218015",
