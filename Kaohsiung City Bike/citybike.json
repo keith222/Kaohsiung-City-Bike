@@ -1596,6 +1596,13 @@
         "address": "鐵道三街/中庸街(西南側)"
     },
     {
+        "id": "501203122",
+        "name": "中華橫巷力行路口",
+        "englishname": "Zhonghua Side Lixing Rd.Intersection",
+        "geohash": "wsj8c335b",
+        "address": "中華橫巷/力行路口(西南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -4849,6 +4856,20 @@
         "englishname": "Meishu N. 3rd Makadao Rd.Intersection",
         "geohash": "wsj8cjvsy",
         "address": "美術北三路/馬卡道路(西北側)"
+    },
+    {
+        "id": "501209085",
+        "name": "鼓山車站",
+        "englishname": "Gushan Station",
+        "geohash": "wsj8c1cd5",
+        "address": "鐵路街20巷/鐵路街(東側)"
+    },
+    {
+        "id": "501209087",
+        "name": "七賢國中(美術東四路)",
+        "englishname": "Cisian junior high school",
+        "geohash": "wsj8ckbsd",
+        "address": "美術東四路/美術東五路(西南側)"
     },
     {
         "id": "501210001",
