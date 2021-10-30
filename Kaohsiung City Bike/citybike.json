@@ -1603,6 +1603,27 @@
         "address": "中華橫巷/力行路口(西南側)"
     },
     {
+        "id": "501203123",
+        "name": "大豐大豐二路19巷口",
+        "englishname": "Lane 19, Dafeng 2nd Road, Dafeng",
+        "geohash": "wsj8f4dv0",
+        "address": "大豐二路19巷(南側)"
+    },
+    {
+        "id": "501203124",
+        "name": "同盟孝順街",
+        "englishname": "Tongmeng Xiaoshun Street",
+        "geohash": "wsj8cfc60",
+        "address": "同盟一路/孝順街口(西北側)"
+    },
+    {
+        "id": "501203125",
+        "name": "同盟大連街",
+        "englishname": "Tongmeng Dalian Street",
+        "geohash": "wsj8ceev6",
+        "address": "同盟一路/大連街口(西北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -3596,6 +3617,13 @@
         "englishname": "Fumin Rd Taiyuan St. Intersection",
         "geohash": "wsj8cwebs",
         "address": "富民路464號(前人行道)"
+    },
+    {
+        "id": "501207111",
+        "name": "實踐海景街口",
+        "englishname": "Practice Seaview Jiekou",
+        "geohash": "wsj914wuw",
+        "address": "實踐路211號前"
     },
     {
         "id": "501207112",
@@ -6424,6 +6452,20 @@
         "englishname": "Yanpu Rural Community Activity Center",
         "geohash": "wsj99160p",
         "address": "白米路/白米路96巷(南側)"
+    },
+    {
+        "id": "501216032",
+        "name": "典寶溪A區滯洪池(清水路)",
+        "englishname": "DR Area A Detention Ponds.(Qingshui Rd.)",
+        "geohash": "wsj994epf",
+        "address": "清水路37號對側"
+    },
+    {
+        "id": "501216033",
+        "name": "岡山陽明公園",
+        "englishname": "Gangshan Yangming Park",
+        "geohash": "wsj99hj24",
+        "address": "協仁街/仁壽路(東南側)"
     },
     {
         "id": "501217001",
