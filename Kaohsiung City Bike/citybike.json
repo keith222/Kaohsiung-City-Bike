@@ -3661,6 +3661,13 @@
         "address": "安吉街/保靖街(西北側)"
     },
     {
+        "id": "501207117",
+        "name": "新莊翠華路口",
+        "englishname": "Xinzhuang Cuihua Intersection",
+        "geohash": "wsj8cru97",
+        "address": "新莊一路9號(西側)"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -5570,6 +5577,13 @@
         "englishname": "Neutralize Children Park",
         "geohash": "wsj9309gd",
         "address": "大學六街/大學二十七街(西南側)"
+    },
+    {
+        "id": "501210098",
+        "name": "宏昌兒童遊戲場(加宏路191巷)",
+        "englishname": "Hongchang Children's Playground (Lane 191, Jiahong Road)",
+        "geohash": "wsj91r5zu",
+        "address": "加宏路191巷/後昌路960巷(西北側)"
     },
     {
         "id": "501211001",
