@@ -7000,6 +7000,20 @@
         "address": "大同路202號(對側人行道)"
     },
     {
+        "id": "501224009",
+        "name": "大湖車站",
+        "englishname": "Dahu Station",
+        "geohash": "wsjd0ky4w",
+        "address": "天祐路24號前"
+    },
+    {
+        "id": "501224010",
+        "name": "樹人醫護管理專科學校",
+        "englishname": "Shuren Medical and Nursing Management College",
+        "geohash": "wsjd0tejj",
+        "address": "環球路452號前"
+    },
+    {
         "id": "501225001",
         "name": "阿蓮國中",
         "englishname": "Alian Junior High School",
