@@ -6258,6 +6258,13 @@
         "address": "半廓路6巷7-19號(左側人行道)"
     },
     {
+        "id": "501215009",
+        "name": "田中央公園",
+        "englishname": "Tachuo Park",
+        "geohash": "wsj85823t",
+        "address": "田厝路75巷10弄/東林西路249巷(西北側)"
+    },
+    {
         "id": "501216001",
         "name": "醒村(後門)",
         "englishname": "Hsing Village (Side Door)",
@@ -6781,6 +6788,13 @@
         "englishname": "Sanlong Children's Park",
         "geohash": "wsj8ef5vu",
         "address": "安隆街/立隆街123巷口(西北側)"
+    },
+    {
+        "id": "501219020",
+        "name": "大寮國中",
+        "englishname": "Daliao Junior High",
+        "geohash": "wsj8eder8",
+        "address": "進學路150號前空地"
     },
     {
         "id": "501220001",
