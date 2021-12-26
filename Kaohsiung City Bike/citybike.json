@@ -4326,6 +4326,13 @@
         "address": "憲德街/育群街口(西北側)"
     },
     {
+        "id": "501208096",
+        "name": "廣西梧州街口",
+        "englishname": "Guangxi Wuzhou St.",
+        "geohash": "wsj89ugpp",
+        "address": "廣西路/梧州街口(東南側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -6207,6 +6214,13 @@
         "englishname": "Jiupanpi Wetland Park",
         "geohash": "wsj941cdm",
         "address": "霞海路/霞海東一街(東南側)"
+    },
+    {
+        "id": "501214029",
+        "name": "霞海榮總路522巷口",
+        "englishname": "Lane 522, Rongzong Road, Xiahai",
+        "geohash": "wsj9440tu",
+        "address": "霞海路/榮總路522巷(西北側)"
     },
     {
         "id": "501215001",
