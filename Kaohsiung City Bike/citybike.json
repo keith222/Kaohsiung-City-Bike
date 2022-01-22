@@ -756,6 +756,20 @@
         "address": "海邊路/新田路(西南側)"
     },
     {
+        "id": "501202083",
+        "name": "國民市場(仁愛三街)",
+        "englishname": "National Market (Renai Third Street)",
+        "geohash": "wsj89wn5w",
+        "address": "仁愛三街356號對面"
+    },
+    {
+        "id": "501202084",
+        "name": "三多文橫二路口",
+        "englishname": "Sanduowen Heng 2 Intersection",
+        "geohash": "wsj89suvs",
+        "address": "三多三路/文橫二路口(東北側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -2898,6 +2912,13 @@
         "address": "五甲二路149巷17弄12號"
     },
     {
+        "id": "501206140",
+        "name": "海涵紅毛港路口",
+        "englishname": "Haihan Hongmaogang intersection",
+        "geohash": "wsj8d88ky",
+        "address": "海涵/紅毛港路口(東南側)"
+    },
+    {
         "id": "501207001",
         "name": "捷運生態園區站(1號出口)",
         "englishname": "KRT Ecological District Sta. (Exit 1)",
@@ -4333,6 +4354,13 @@
         "address": "廣西路/梧州街口(東南側)"
     },
     {
+        "id": "501208098",
+        "name": "高雄捷運股份有限公司",
+        "englishname": "Kaohsiung Rapid Transit Corporation",
+        "geohash": "wsj86ppe7",
+        "address": "中安路1號前"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -5600,6 +5628,13 @@
         "address": "加宏路191巷/後昌路960巷(西北側)"
     },
     {
+        "id": "501210099",
+        "name": "惠智惠勇街口",
+        "englishname": "Hueijhih Huiyong St.Intersection",
+        "geohash": "wsj964c0u",
+        "address": "惠智街98號對面"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -6508,6 +6543,13 @@
         "englishname": "Gangshan Yangming Park",
         "geohash": "wsj99hj24",
         "address": "協仁街/仁壽路(東南側)"
+    },
+    {
+        "id": "501216034",
+        "name": "河華壽華路口",
+        "englishname": "Hehua Shouhua Intersection",
+        "geohash": "wsj99qc6u",
+        "address": "河華路/壽華路(西南側)"
     },
     {
         "id": "501217001",
