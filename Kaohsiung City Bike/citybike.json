@@ -182,6 +182,13 @@
         "address": "大同一路229巷口西南側"
     },
     {
+        "id": "501201027",
+        "name": "民族河南路口",
+        "englishname": "National Henan Road",
+        "geohash": "wsj8cbcbu",
+        "address": "民族二路/河南路口(南側)"
+    },
+    {
         "id": "501202001",
         "name": "中正民族路口(東南角)",
         "englishname": "Zhongzheng Minzu Rd. Intersection (Southeast)",
@@ -857,8 +864,8 @@
         "id": "501203013",
         "name": "三塊厝車站",
         "englishname": "Sankuaicuo Station",
-        "geohash": "wsj8c37mk",
-        "address": "三民德北公園西南側"
+        "geohash": "wsj8c37vn",
+        "address": "鐵道三街/三德西街44巷口(北側)"
     },
     {
         "id": "501203014",
@@ -3696,6 +3703,13 @@
         "address": "新莊一路9號(西側)"
     },
     {
+        "id": "501207119",
+        "name": "新庄仔博愛二路口(東南側)",
+        "englishname": "Xinzhuangz Bo'ai 2nd Rd. (southeast side)",
+        "geohash": "wsj8cwfy3",
+        "address": "新庄仔路512號前"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -6018,6 +6032,13 @@
         "englishname": "KZ Children's Playground",
         "geohash": "wsj87negy",
         "address": "孔宅街93號(對面)"
+    },
+    {
+        "id": "501212051",
+        "name": "宏平金府路口",
+        "englishname": "Hongping Jinfu Road",
+        "geohash": "wsj86sxqh",
+        "address": "宏平路/金府路(西南角)"
     },
     {
         "id": "501213001",
