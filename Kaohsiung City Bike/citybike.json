@@ -1645,6 +1645,13 @@
         "address": "同盟一路/大連街口(西北側)"
     },
     {
+        "id": "501203126",
+        "name": "鐵道建國一路62巷口",
+        "englishname": "Tielu Lane 62, Jianguoyi Rd.",
+        "geohash": "wsj8f2e57",
+        "address": "鐵道街/九如一路237巷口(東北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2912,6 +2919,13 @@
         "address": "鳳松路/博愛路(東北側)"
     },
     {
+        "id": "501206137",
+        "name": "勝利工協街口",
+        "englishname": "Shengli Gongxiejiekou",
+        "geohash": "wsj8eptm5",
+        "address": "勝利路/工協街(西北側)"
+    },
+    {
         "id": "501206138",
         "name": "五甲七老爺停車場",
         "englishname": "Wujiaqilao Parking Lot",
@@ -2924,6 +2938,13 @@
         "englishname": "Haihan Hongmaogang intersection",
         "geohash": "wsj8d88ky",
         "address": "海涵/紅毛港路口(東南側)"
+    },
+    {
+        "id": "501206143",
+        "name": "家和五偉成街口",
+        "englishname": "Jiahe 5th Weicheng St. Intersection",
+        "geohash": "wsj86x8m8",
+        "address": "家和五街/偉成街(東南側)"
     },
     {
         "id": "501207001",
@@ -4361,6 +4382,13 @@
         "address": "憲德街/育群街口(西北側)"
     },
     {
+        "id": "501208095",
+        "name": "勞工公園",
+        "englishname": "Labour Park",
+        "geohash": "wsj89erh7",
+        "address": "民權二路/民壽街口(西南側)"
+    },
+    {
         "id": "501208096",
         "name": "廣西梧州街口",
         "englishname": "Guangxi Wuzhou St.",
@@ -4368,11 +4396,25 @@
         "address": "廣西路/梧州街口(東南側)"
     },
     {
+        "id": "501208097",
+        "name": "樂群國小",
+        "englishname": "Lequn Elementary School",
+        "geohash": "wsj8d589b",
+        "address": "育群街/育群街318巷口(北側)"
+    },
+    {
         "id": "501208098",
         "name": "高雄捷運股份有限公司",
         "englishname": "Kaohsiung Rapid Transit Corporation",
         "geohash": "wsj86ppe7",
         "address": "中安路1號前"
+    },
+    {
+        "id": "501208099",
+        "name": "中華中華五路939巷口",
+        "englishname": "Zhonghua Zhonghua 5th Road, Lane 939",
+        "geohash": "wsj89dk3z",
+        "address": "中華五路939巷/中華五路(西南側)"
     },
     {
         "id": "501209001",
@@ -4961,6 +5003,13 @@
         "englishname": "Cisian junior high school",
         "geohash": "wsj8ckbsd",
         "address": "美術東四路/美術東五路(西南側)"
+    },
+    {
+        "id": "501209088",
+        "name": "壽山國中",
+        "englishname": "Shoushan Junior High",
+        "geohash": "wsj8c00n5",
+        "address": "鼓山二路37巷108號前"
     },
     {
         "id": "501210001",
@@ -5901,6 +5950,13 @@
         "address": "高松路78-1號(對面)"
     },
     {
+        "id": "501212030",
+        "name": "中安保華一路口",
+        "englishname": "Zhongan Baohua 1st Rd. Intersection",
+        "geohash": "wsj86x33j",
+        "address": "中安路318號(對面)"
+    },
+    {
         "id": "501212031",
         "name": "高雄市立圖書館小港分館",
         "englishname": "Kaohsiung Municipal Library Xiaogang Branch",
@@ -6039,6 +6095,13 @@
         "englishname": "Hongping Jinfu Road",
         "geohash": "wsj86sxqh",
         "address": "宏平路/金府路(西南角)"
+    },
+    {
+        "id": "501212053",
+        "name": "中安德仁路口",
+        "englishname": "Zhong'an Deren Rd.Intersection",
+        "geohash": "wsj86x7w4",
+        "address": "中安路德仁路口西北側"
     },
     {
         "id": "501213001",
