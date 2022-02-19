@@ -2919,6 +2919,13 @@
         "address": "鳳松路/博愛路(東北側)"
     },
     {
+        "id": "501206136",
+        "name": "台鐵鳳山車站(西側)",
+        "englishname": "Fengshan Station(west)",
+        "geohash": "wsj8f8pcd",
+        "address": "台鐵鳳山車站(西側)"
+    },
+    {
         "id": "501206137",
         "name": "勝利工協街口",
         "englishname": "Shengli Gongxiejiekou",
@@ -2933,11 +2940,32 @@
         "address": "五甲二路149巷17弄12號"
     },
     {
+        "id": "501206139",
+        "name": "鳳山高中(文建街)",
+        "englishname": "Fengshan Senior High School (Wenjian Street)",
+        "geohash": "wsj8dx9et",
+        "address": "光復路二段/文建街(西北側)"
+    },
+    {
         "id": "501206140",
         "name": "海涵紅毛港路口",
         "englishname": "Haihan Hongmaogang intersection",
         "geohash": "wsj8d88ky",
         "address": "海涵/紅毛港路口(東南側)"
+    },
+    {
+        "id": "501206141",
+        "name": "捷運鳳山國中站(3號出口)",
+        "englishname": "Fongshan Junior High School Sta. (Exit 3)",
+        "geohash": "wsj8env3j",
+        "address": "捷運鳳山國中站(3號出口前)"
+    },
+    {
+        "id": "501206142",
+        "name": "和德街公園(南側)",
+        "englishname": "Hedejie Park (South)",
+        "geohash": "wsj8dve1b",
+        "address": "和德街175號對面"
     },
     {
         "id": "501206143",
@@ -6097,6 +6125,13 @@
         "address": "宏平路/金府路(西南角)"
     },
     {
+        "id": "501212052",
+        "name": "店鎮公園",
+        "englishname": "Dianjhen Park",
+        "geohash": "wsj86epby",
+        "address": "店陽街/店陽街86巷(東北側)"
+    },
+    {
         "id": "501212053",
         "name": "中安德仁路口",
         "englishname": "Zhong'an Deren Rd.Intersection",
@@ -6151,6 +6186,13 @@
         "englishname": "Zihe Park",
         "geohash": "wsj92wyhr",
         "address": "和平路220巷40號(東側)"
+    },
+    {
+        "id": "501213008",
+        "name": "梓官老人日照中心",
+        "englishname": "Ziguan elder care center",
+        "geohash": "wsj92z1pn",
+        "address": "平等路190號(東側)"
     },
     {
         "id": "501214001",
@@ -6802,6 +6844,20 @@
         "englishname": "Niaosong Elementary School",
         "geohash": "wsj8fvv5e",
         "address": "大仁北路/大智路(西南側)"
+    },
+    {
+        "id": "501218019",
+        "name": "仁美國小",
+        "englishname": "Renmei Elementary School",
+        "geohash": "wsj8gsud9",
+        "address": "學堂路/美山路(西北側)"
+    },
+    {
+        "id": "501218020",
+        "name": "江埤美德二街口",
+        "englishname": "Jiangpi Meide 2nd St.Intersection",
+        "geohash": "wsj8ge9gk",
+        "address": "江埤路/美德二街(西北側)"
     },
     {
         "id": "501219001",
