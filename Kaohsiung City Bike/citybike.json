@@ -777,6 +777,13 @@
         "address": "三多三路/文橫二路口(東北側)"
     },
     {
+        "id": "501202085",
+        "name": "高雄國軍英雄館",
+        "englishname": "Kaohsiung Hero House",
+        "geohash": "wsj89mft7",
+        "address": "五福三路145號前"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -3752,6 +3759,13 @@
         "address": "新莊一路9號(西側)"
     },
     {
+        "id": "501207118",
+        "name": "介壽先勝路口",
+        "englishname": "Jieshou Xiansheng Road",
+        "geohash": "wsj910cz3",
+        "address": "介壽路253號前"
+    },
+    {
         "id": "501207119",
         "name": "新庄仔博愛二路口(東南側)",
         "englishname": "Xinzhuangz Bo'ai 2nd Rd. (southeast side)",
@@ -4443,6 +4457,13 @@
         "englishname": "Zhonghua Zhonghua 5th Road, Lane 939",
         "geohash": "wsj89dk3z",
         "address": "中華五路939巷/中華五路(西南側)"
+    },
+    {
+        "id": "501208100",
+        "name": "興東公園",
+        "englishname": "Xingdong Park",
+        "geohash": "wsj89u4wm",
+        "address": "嘉陵街/天山路口(西南側)"
     },
     {
         "id": "501209001",
@@ -5724,6 +5745,13 @@
         "englishname": "Hueijhih Huiyong St.Intersection",
         "geohash": "wsj964c0u",
         "address": "惠智街98號對面"
+    },
+    {
+        "id": "501210100",
+        "name": "大學援中路68巷口",
+        "englishname": "Lane 68, Daxueyuan Middle Road",
+        "geohash": "wsj933eb5",
+        "address": "大學一街/援中路68巷(東南側)"
     },
     {
         "id": "501211001",
