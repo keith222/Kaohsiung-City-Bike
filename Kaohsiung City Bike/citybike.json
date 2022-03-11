@@ -189,6 +189,13 @@
         "address": "民族二路/河南路口(南側)"
     },
     {
+        "id": "501201028",
+        "name": "七賢民族二路口",
+        "englishname": "Qixian Minzu 2nd Rd.",
+        "geohash": "wsj8cb37f",
+        "address": "七賢一路/民族二路口(西北側)"
+    },
+    {
         "id": "501202001",
         "name": "中正民族路口(東南角)",
         "englishname": "Zhongzheng Minzu Rd. Intersection (Southeast)",
@@ -2980,6 +2987,13 @@
         "englishname": "Jiahe 5th Weicheng St. Intersection",
         "geohash": "wsj86x8m8",
         "address": "家和五街/偉成街(東南側)"
+    },
+    {
+        "id": "501206144",
+        "name": "天天公園",
+        "englishname": "Tiantian Park",
+        "geohash": "wsj8eqe43",
+        "address": "環河街/中山東路290巷(東南側)"
     },
     {
         "id": "501207001",
@@ -6410,6 +6424,13 @@
         "englishname": "Lane 522, Rongzong Road, Xiahai",
         "geohash": "wsj9440tu",
         "address": "霞海路/榮總路522巷(西北側)"
+    },
+    {
+        "id": "501214030",
+        "name": "八卦里公有停車場",
+        "englishname": "Baguali public parking lot",
+        "geohash": "wsj941r00",
+        "address": "永仁街/永仁街200巷(西北側)"
     },
     {
         "id": "501215001",
