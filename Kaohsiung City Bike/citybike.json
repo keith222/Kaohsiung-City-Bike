@@ -5768,6 +5768,13 @@
         "address": "大學一街/援中路68巷(東南側)"
     },
     {
+        "id": "501210101",
+        "name": "愛國超市(德賢店)",
+        "englishname": "Aiguo Supermarket (Dexian Store)",
+        "geohash": "wsj939m31",
+        "address": "德祥路223號前"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -6725,6 +6732,13 @@
         "englishname": "Hehua Shouhua Intersection",
         "geohash": "wsj99qc6u",
         "address": "河華路/壽華路(西南側)"
+    },
+    {
+        "id": "501216036",
+        "name": "前峰國小",
+        "englishname": "Qianfeng Elementary School",
+        "geohash": "wsj99j5d0",
+        "address": "育英路/育英二巷口(西南側)"
     },
     {
         "id": "501217001",
