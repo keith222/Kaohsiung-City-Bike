@@ -1666,6 +1666,27 @@
         "address": "鐵道街/九如一路237巷口(東北側)"
     },
     {
+        "id": "501203127",
+        "name": "高雄第一殯儀館(本館路600巷)",
+        "englishname": "Kaohsiung No. 1 Funeral Home(Lane 600, Benguan Rd.)",
+        "geohash": "wsj8fm0p5",
+        "address": "本館路600巷(人行道)"
+    },
+    {
+        "id": "501203128",
+        "name": "高雄第一殯儀館(家屬服務中心)",
+        "englishname": "Kaohsiung No. 1 Funeral Home(Family Service Center)",
+        "geohash": "wsj8fm2p4",
+        "address": "本館路600巷30號南側"
+    },
+    {
+        "id": "501203129",
+        "name": "澄清澄明街口",
+        "englishname": "Chengqing Chengming St.Intersection",
+        "geohash": "wsj8fd3y6",
+        "address": "澄清路/澄明街口(東南側"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2994,6 +3015,13 @@
         "englishname": "Tiantian Park",
         "geohash": "wsj8eqe43",
         "address": "環河街/中山東路290巷(東南側)"
+    },
+    {
+        "id": "501206145",
+        "name": "中和公園",
+        "englishname": "Zhonghe Park",
+        "geohash": "wsj8dwcr3",
+        "address": "中泰街/中樂街口(東南側)"
     },
     {
         "id": "501207001",
