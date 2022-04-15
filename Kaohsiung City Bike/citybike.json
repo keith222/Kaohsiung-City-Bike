@@ -791,6 +791,13 @@
         "address": "五福三路145號前"
     },
     {
+        "id": "501202086",
+        "name": "民權興中一路口",
+        "englishname": "Minquan Xingzhong 1st Rd",
+        "geohash": "wsj89vd56",
+        "address": "民權一路/興中一路(東南側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -1684,7 +1691,14 @@
         "name": "澄清澄明街口",
         "englishname": "Chengqing Chengming St.Intersection",
         "geohash": "wsj8fd3y6",
-        "address": "澄清路/澄明街口(東南側"
+        "address": "澄清路/澄明街口(東南側)"
+    },
+    {
+        "id": "501203130",
+        "name": "建興正忠路口",
+        "englishname": "Jianxing Zhengzhong Rd.",
+        "geohash": "wsj8f1vsn",
+        "address": "建興路/正忠路口(西南側)"
     },
     {
         "id": "501204001",
@@ -2035,6 +2049,13 @@
         "englishname": "Southern Taiwan Joint Services Center",
         "geohash": "wsj89r9f3",
         "address": "成功一路436號北側"
+    },
+    {
+        "id": "501205034",
+        "name": "五福成功一路口",
+        "englishname": "Wufu Chenggong 1st Rd.Intersection",
+        "geohash": "wsj89q5fj",
+        "address": "五福三路/成功一路口(西北側)"
     },
     {
         "id": "501206001",
@@ -6940,15 +6961,29 @@
         "id": "501218019",
         "name": "仁美國小",
         "englishname": "Renmei Elementary School",
-        "geohash": "wsj8gsud9",
+        "geohash": "wsj8gsu2w",
         "address": "學堂路/美山路(西北側)"
     },
     {
         "id": "501218020",
         "name": "江埤美德二街口",
         "englishname": "Jiangpi Meide 2nd St.Intersection",
-        "geohash": "wsj8ge9gk",
+        "geohash": "wsj8ge9t5",
         "address": "江埤路/美德二街(西北側)"
+    },
+    {
+        "id": "501218022",
+        "name": "大埤忠誠路口",
+        "englishname": "Dapi Zhongcheng Rd.Intersection",
+        "geohash": "wsj8fuue2",
+        "address": "大埤路/忠誠路口(東南側)"
+    },
+    {
+        "id": "501218023",
+        "name": "華美里活動中心",
+        "englishname": "Huameili Activity Center",
+        "geohash": "wsj8gtdc3",
+        "address": "中山西路115號"
     },
     {
         "id": "501219001",
