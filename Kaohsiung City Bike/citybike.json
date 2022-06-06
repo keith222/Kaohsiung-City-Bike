@@ -1701,6 +1701,13 @@
         "address": "建興路/正忠路口(西南側)"
     },
     {
+        "id": "501203131",
+        "name": "榕樹公園",
+        "englishname": "Rongshu Park",
+        "geohash": "wsj8c621d",
+        "address": "德勝街/德旺街(西南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2056,6 +2063,13 @@
         "englishname": "Wufu Chenggong 1st Rd.Intersection",
         "geohash": "wsj89q5fj",
         "address": "五福三路/成功一路口(西北側)"
+    },
+    {
+        "id": "501205035",
+        "name": "河南中華三路口",
+        "englishname": "Henan Zhonghua 3rd Rd.",
+        "geohash": "wsj8c26xz",
+        "address": "河南二路/中華三路口(西北側)"
     },
     {
         "id": "501206001",
@@ -4705,8 +4719,8 @@
     },
     {
         "id": "501209026",
-        "name": "高雄鼓山郵局",
-        "englishname": "Gushan Post Office",
+        "name": "捷運西子灣站(1號出口)",
+        "englishname": "KRT Sizihwan Sta. (Exit 1)",
         "geohash": "wsj88yhty",
         "address": "臨海二路/臨海一路口(西側人行道)"
     },
@@ -5108,6 +5122,13 @@
         "englishname": "Gushan Station",
         "geohash": "wsj8c1cd5",
         "address": "鐵路街20巷/鐵路街(東側)"
+    },
+    {
+        "id": "501209086",
+        "name": "龍德新新順路口",
+        "englishname": "Longdexin Xinshun Rd.Intersection",
+        "geohash": "wsj8cs5gm",
+        "address": "龍德新路/新順路(西南側)"
     },
     {
         "id": "501209087",
@@ -5824,6 +5845,27 @@
         "address": "德祥路223號前"
     },
     {
+        "id": "501210102",
+        "name": "高雄大學活動中心",
+        "englishname": "Kaohsiung University Activity Center",
+        "geohash": "wsj93438f",
+        "address": "大學南路/高雄大學路口"
+    },
+    {
+        "id": "501210103",
+        "name": "金富金和街口",
+        "englishname": "Jinfu Jinhe St. Intersection",
+        "geohash": "wsj93cjuw",
+        "address": "金富街/金和街口(東南側)"
+    },
+    {
+        "id": "501210104",
+        "name": "經一東三街口",
+        "englishname": "Jingyi Dongsan St. Intersection",
+        "geohash": "wsj938q4t",
+        "address": "經一路/東三街(東南側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -6235,6 +6277,13 @@
         "englishname": "Zhong'an Deren Rd.Intersection",
         "geohash": "wsj86x7w4",
         "address": "中安路德仁路口西北側"
+    },
+    {
+        "id": "501212054",
+        "name": "高坪高坪二十二路口",
+        "englishname": "Gaoping Gaoping 22 Rd.intersection",
+        "geohash": "wsj871zv8",
+        "address": "高坪七十六街/高坪二十二路口(西北側)"
     },
     {
         "id": "501213001",
@@ -6783,6 +6832,13 @@
         "address": "河華路/壽華路(西南側)"
     },
     {
+        "id": "501216035",
+        "name": "夢-飛翔公園",
+        "englishname": "Dream-Flying Park",
+        "geohash": "wsj99eds4",
+        "address": "和平路62號對面"
+    },
+    {
         "id": "501216036",
         "name": "前峰國小",
         "englishname": "Qianfeng Elementary School",
@@ -6830,6 +6886,13 @@
         "englishname": "Jiading Wetland Tourist center",
         "geohash": "wsj6pjv0n",
         "address": "正順北路180號"
+    },
+    {
+        "id": "501217007",
+        "name": "茄萣國中",
+        "englishname": "Tomato middle school",
+        "geohash": "wsj6qf1f3",
+        "address": "濱海路四段66號對面"
     },
     {
         "id": "501218001",
@@ -7126,6 +7189,13 @@
         "address": "進學路150號前空地"
     },
     {
+        "id": "501219021",
+        "name": "鳳林宣武路口",
+        "englishname": "Fenglin Xuanwu Rd.Intersection",
+        "geohash": "wsj8es8z4",
+        "address": "鳳林四路/宣武路(東北側)"
+    },
+    {
         "id": "501220001",
         "name": "捷運青埔站(1號出口)東側",
         "englishname": "KRT Cingpu Sta. (Exit 1) East",
@@ -7215,13 +7285,20 @@
         "englishname": "Qiaoxin 1st Qiaoxin 8th Rd.Intersection",
         "geohash": "wsj93g4m8",
         "address": "橋新一路/橋新八路(東北側)"
-    },
+    },    
     {
         "id": "501220014",
         "name": "橋新七新東一街口",
         "englishname": "Qiaoxin 7st Xindong 1st St.Intersection",
         "geohash": "wsj93ge8h",
         "address": "橋新七路/新東一街(東北側)"
+    },
+    {
+        "id": "501220015",
+        "name": "橋新環新東一街口",
+        "englishname": "Qiaoxinhuan Xindong 1st St.Intersection",
+        "geohash": "wsj93g9yb",
+        "address": "橋新環路/新東一街(東南側)"
     },
     {
         "id": "501221001",

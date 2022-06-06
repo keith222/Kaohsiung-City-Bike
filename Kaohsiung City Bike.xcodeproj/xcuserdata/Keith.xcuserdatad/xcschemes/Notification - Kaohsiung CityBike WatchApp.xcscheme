@@ -80,10 +80,8 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "Kaohsiung CityBike WatchApp Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/KCB Watch">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "537EE0DE1C0B35BB008501B0"
@@ -91,7 +89,7 @@
             BlueprintName = "Kaohsiung CityBike WatchApp"
             ReferencedContainer = "container:Kaohsiung City Bike.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -101,10 +99,8 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "Kaohsiung CityBike WatchApp Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/KCB Watch">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "537EE0DE1C0B35BB008501B0"
@@ -112,16 +108,7 @@
             BlueprintName = "Kaohsiung CityBike WatchApp"
             ReferencedContainer = "container:Kaohsiung City Bike.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "537EE0DE1C0B35BB008501B0"
-            BuildableName = "Kaohsiung CityBike WatchApp.app"
-            BlueprintName = "Kaohsiung CityBike WatchApp"
-            ReferencedContainer = "container:Kaohsiung City Bike.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Release">
