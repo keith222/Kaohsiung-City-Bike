@@ -798,6 +798,13 @@
         "address": "民權一路/興中一路(東南側)"
     },
     {
+        "id": "501202087",
+        "name": "高雄市青少年籃球場",
+        "englishname": "KHH Youth Basketball Court",
+        "geohash": "wsj8dqb4c",
+        "address": "明德街/體育場路西北側人行道"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -1708,6 +1715,20 @@
         "address": "德勝街/德旺街(西南側)"
     },
     {
+        "id": "501203132",
+        "name": "天祥天祥一路142巷口",
+        "englishname": "Tianxiang Lane 142, Tiansiang 1st Rd.",
+        "geohash": "wsj8cyt9j",
+        "address": "天祥一路/天祥一路142巷口(西北側)"
+    },
+    {
+        "id": "501203133",
+        "name": "秋元皓東路口",
+        "englishname": "Qiuyuan Haodong Rd. Intersection",
+        "geohash": "wsj8f7drd",
+        "address": "秋元街/皓東路(西北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -1846,6 +1867,13 @@
         "englishname": "Gongyuan 2nd Guangrong St.Intersection",
         "geohash": "wsj89nh2k",
         "address": "公園二路/光榮街(東北側人行道)"
+    },
+    {
+        "id": "501204023",
+        "name": "七賢大公路口",
+        "englishname": "Qixian Dagong Rd.",
+        "geohash": "wsj89p5nr",
+        "address": "七賢三路/大公路口(西南側)"
     },
     {
         "id": "501205001",
@@ -3057,6 +3085,13 @@
         "englishname": "Zhonghe Park",
         "geohash": "wsj8dwcr3",
         "address": "中泰街/中樂街口(東南側)"
+    },
+    {
+        "id": "501206146",
+        "name": "建國青年路口",
+        "englishname": "Jianguo Cingnian Rd. Intersection",
+        "geohash": "wsj8f9hb0",
+        "address": "建國路三段/青年路二段口(南側)"
     },
     {
         "id": "501207001",
@@ -4971,10 +5006,10 @@
     },
     {
         "id": "501209065",
-        "name": "正德兒童遊戲場",
-        "englishname": "Zhengde Park Playground",
-        "geohash": "wsj8bgn44",
-        "address": "正德路96巷6號(對側人行道)"
+        "name": "河邊興隆路口",
+        "englishname": "Hebian Xinglong Rd.",
+        "geohash": "wsj8c0u50",
+        "address": "河邊街/興隆路(東北側)"
     },
     {
         "id": "501209066",
@@ -6286,6 +6321,13 @@
         "address": "高坪七十六街/高坪二十二路口(西北側)"
     },
     {
+        "id": "501212057",
+        "name": "漢民宮安街口",
+        "englishname": "Hanmin Gong'an St.",
+        "geohash": "wsj86e7vn",
+        "address": "漢民路/宮安街口(西南側)"
+    },
+    {
         "id": "501213001",
         "name": "蚵仔寮觀光魚市",
         "englishname": "Kezailiao Tourist Fish Market",
@@ -6536,6 +6578,13 @@
         "englishname": "Baguali public parking lot",
         "geohash": "wsj941r00",
         "address": "永仁街/永仁街200巷(西北側)"
+    },
+    {
+        "id": "501214031",
+        "name": "仁林中華路口",
+        "englishname": "Renlin Zhonghua Rd. Intersection",
+        "geohash": "wsj94szq8",
+        "address": "仁林路/中華路口(東側)"
     },
     {
         "id": "501215001",
@@ -6846,6 +6895,13 @@
         "address": "育英路/育英二巷口(西南側)"
     },
     {
+        "id": "501216037",
+        "name": "正氣兒童公園",
+        "englishname": "Zhengqi Children's Park",
+        "geohash": "wsj9c061w",
+        "address": "育才路/育才路38巷(東北側)"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -7033,6 +7089,13 @@
         "englishname": "Jiangpi Meide 2nd St.Intersection",
         "geohash": "wsj8ge9t5",
         "address": "江埤路/美德二街(西北側)"
+    },
+    {
+        "id": "501218021",
+        "name": "福德公園",
+        "englishname": "Fude Park",
+        "geohash": "wsj8gkgwz",
+        "address": "松美路/福德路(東南側)"
     },
     {
         "id": "501218022",
@@ -7635,5 +7698,12 @@
         "englishname": "Kaohsiung Public Library Meinong Branch",
         "geohash": "wsjdr0b50",
         "address": "中正路一段53號南側"
+    },
+    {
+        "id": "501235001",
+        "name": "甲仙親水公園停車場",
+        "englishname": "Jiaxian Water Park Parking Lot",
+        "geohash": "wsjg240bb",
+        "address": "忠孝路/林森路(西南側)"
     }
 ]
