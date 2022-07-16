@@ -834,10 +834,10 @@
     },
     {
         "id": "501203005",
-        "name": "建國市中路口",
-        "englishname": "Jianguo Shizhong Rd. Intersection",
-        "geohash": "wsj8c0wdc",
-        "address": "建國三路/市中一路口西北側"
+        "name": "河濱國小",
+        "englishname": "Hebin Elementary School",
+        "geohash": "wsj8c0wd7",
+        "address": "建國三路/市中一路口(西南側)"
     },
     {
         "id": "501203006",
@@ -2663,8 +2663,8 @@
         "id": "501206083",
         "name": "中正預校",
         "englishname": "Chung Cheng Armed Forces Preparatory School",
-        "geohash": "wsj8dge20",
-        "address": "凱旋路/誠愛一街口東南側"
+        "geohash": "wsj8dg6xb",
+        "address": "凱旋路/誠愛一街口西南側"
     },
     {
         "id": "501206084",
@@ -5901,6 +5901,13 @@
         "address": "經一路/東三街(東南側)"
     },
     {
+        "id": "501210105",
+        "name": "莒光國小(後昌路782巷)",
+        "englishname": "Jyu Guang Elementary School",
+        "geohash": "wsj91qmps",
+        "address": "後昌路782巷/後昌路(西北側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -7437,7 +7444,7 @@
         "id": "501224001",
         "name": "路竹夜市",
         "englishname": "Luzhu Night Market",
-        "geohash": "wsjd08ks6",
+        "geohash": "wsjd08ksg",
         "address": "民富街與民強街口西南側停車場"
     },
     {
@@ -7677,6 +7684,13 @@
         "englishname": "Zhonghua Guangfu 1st St. Intersection",
         "geohash": "wsjdjtqn5",
         "address": "中華路998號(對側人行道)"
+    },
+    {
+        "id": "501229007",
+        "name": "旗糖農創園區",
+        "englishname": "Qi Tang Agriculture Park",
+        "geohash": "wsjdjuydh",
+        "address": "運蔗路/旗屏一路(西北側)"
     },
     {
         "id": "501230001",
