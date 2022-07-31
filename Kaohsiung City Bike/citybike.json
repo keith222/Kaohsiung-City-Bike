@@ -6328,6 +6328,13 @@
         "address": "高坪七十六街/高坪二十二路口(西北側)"
     },
     {
+        "id": "501212056",
+        "name": "廈莊兒童公園",
+        "englishname": "Shazhuang Children Park",
+        "geohash": "wsj86yuq2",
+        "address": "廈莊一街/廈莊二街(東北側)"
+    },
+    {
         "id": "501212057",
         "name": "漢民宮安街口",
         "englishname": "Hanmin Gong'an St.",
@@ -7376,6 +7383,20 @@
         "englishname": "Ka Wai Park",
         "geohash": "wsj937mny",
         "address": "甲樹路/甲昌路龍泉巷口(東北側)"
+    },
+    {
+        "id": "501220018",
+        "name": "五林國小",
+        "englishname": "Wu-Lin Elementary School",
+        "geohash": "wsj93r5qq",
+        "address": "五林路/白樹路口(西北側)"
+    },
+    {
+        "id": "501220019",
+        "name": "橋頭國小",
+        "englishname": "Qiaotou Elementary School",
+        "geohash": "wsj93xemk",
+        "address": "樹德路/中正路(西南側)"
     },
     {
         "id": "501221001",
