@@ -2831,7 +2831,7 @@
         "id": "501206108",
         "name": "明鳳公園",
         "englishname": "Mingfeng  Park",
-        "geohash": "wsj8d20v1",
+        "geohash": "wsj8d20ss",
         "address": "公園街/明鳳十三街口(西北側)"
     },
     {
@@ -5180,6 +5180,27 @@
         "address": "鼓山二路37巷108號前"
     },
     {
+        "id": "501209091",
+        "name": "美術東四美術東一路口",
+        "englishname": "Meishu E. 4th Meishu E. 1st Rd.",
+        "geohash": "wsj8ck2sh",
+        "address": "美術東四路/美術東一路(西南側)"
+    },
+    {
+        "id": "501209092",
+        "name": "內惟公園(九如四路側)",
+        "englishname": "Neiwei Park (Jiuru 4th Rd.)",
+        "geohash": "wsj8chb27",
+        "address": "九如四路1402號(對側公園人行道)"
+    },
+    {
+        "id": "501209093",
+        "name": "大榮高中",
+        "englishname": "Dah Yung Senior High School",
+        "geohash": "wsj8c5bes",
+        "address": "九如四路/迪化街口(東北側)"
+    },
+    {
         "id": "501210001",
         "name": "捷運世運站(2號出口)",
         "englishname": "KRT World Games Sta. (Exit 2)",
@@ -6662,6 +6683,13 @@
         "englishname": "Tachuo Park",
         "geohash": "wsj85823t",
         "address": "田厝路75巷10弄/東林西路249巷(西北側)"
+    },
+    {
+        "id": "501215010",
+        "name": "沿海工業一路口",
+        "englishname": "Yanhai Gongye 1st Rd.",
+        "geohash": "wevxgzufz",
+        "address": "沿海路一段/工業一路西南側"
     },
     {
         "id": "501216001",
