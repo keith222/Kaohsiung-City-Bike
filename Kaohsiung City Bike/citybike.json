@@ -1729,6 +1729,27 @@
         "address": "秋元街/皓東路(西北側)"
     },
     {
+        "id": "501203134",
+        "name": "同盟合江街口",
+        "englishname": "Tongmeng Hejiang St.",
+        "geohash": "wsj8cemvg",
+        "address": "同盟一路/合江街(東北側)"
+    },
+    {
+        "id": "501203135",
+        "name": "鐵道平等路口",
+        "englishname": "Tiedao Pingdeng Rd.",
+        "geohash": "wsj8ccnuh",
+        "address": "鐵道一街/平等路(南側)"
+    },
+    {
+        "id": "501203136",
+        "name": "灣愛公園",
+        "englishname": "Bay Love Park",
+        "geohash": "wsj8cvj53",
+        "address": "明誠一路/鼎泰街2巷(西南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -3885,6 +3906,20 @@
         "address": "新庄仔路512號前"
     },
     {
+        "id": "501207120",
+        "name": "蓮潭滑水樂園",
+        "englishname": "Lotus Wake Park",
+        "geohash": "wsj912krq",
+        "address": "新庄仔路46號前人行道"
+    },
+    {
+        "id": "501207121",
+        "name": "新莊一文上路口",
+        "englishname": "Xinzhuang 1st Wenshang Rd.",
+        "geohash": "wsj8cx0p2",
+        "address": "新莊一路/文上路(西北側)"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -4578,6 +4613,13 @@
         "address": "嘉陵街/天山路口(西南側)"
     },
     {
+        "id": "501208102",
+        "name": "時代大道時代南二路口",
+        "englishname": "Shidai Blvd Shidai S. 2nd Rd.",
+        "geohash": "wsj899xzk",
+        "address": "時代大道/時代南二路(東南側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -5178,6 +5220,13 @@
         "englishname": "Shoushan Junior High",
         "geohash": "wsj8c00n5",
         "address": "鼓山二路37巷108號前"
+    },
+    {
+        "id": "501209090",
+        "name": "富農龍德路口",
+        "englishname": "Funong Longde Rd.",
+        "geohash": "wsj8ckmzt",
+        "address": "富農路/龍德路(東南側)"
     },
     {
         "id": "501209091",
