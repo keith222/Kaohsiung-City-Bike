@@ -196,6 +196,20 @@
         "address": "七賢一路/民族二路口(西北側)"
     },
     {
+        "id": "501201029",
+        "name": "六合公園(六合一路)",
+        "englishname": "Liuhe Park(Liuhe 1st Rd)",
+        "geohash": "wsj8c85vf",
+        "address": "六合一路/忠孝一路(東南側)"
+    },
+    {
+        "id": "501201030",
+        "name": "中正忠孝一路口",
+        "englishname": "Zhongzheng Zhongxiao 1st Rd.",
+        "geohash": "wsj89xu71",
+        "address": "中正三路/忠孝一路(東南側)"
+    },
+    {
         "id": "501202001",
         "name": "中正民族路口(東南角)",
         "englishname": "Zhongzheng Minzu Rd. Intersection (Southeast)",
@@ -1748,6 +1762,20 @@
         "englishname": "Bay Love Park",
         "geohash": "wsj8cvj53",
         "address": "明誠一路/鼎泰街2巷(西南側)"
+    },
+    {
+        "id": "501203137",
+        "name": "三民區民眾活動中心",
+        "englishname": "Sanmin Dist People Activity Center",
+        "geohash": "wsj8f51yb",
+        "address": "大順二路/建工路口(東南側)"
+    },
+    {
+        "id": "501203138",
+        "name": "鐵道憲政路138巷口",
+        "englishname": "Tiedao Ln. 138, Xianzheng Rd.",
+        "geohash": "wsj8f10cw",
+        "address": "鐵道一街/憲政路138巷口(北側)"
     },
     {
         "id": "501204001",
@@ -4620,6 +4648,20 @@
         "address": "時代大道/時代南二路(東南側)"
     },
     {
+        "id": "501208103",
+        "name": "瑞南公園(瑞南街)",
+        "englishname": "Ruinan Park(Ruinan St.)",
+        "geohash": "wsj89ckmv",
+        "address": "瑞南街/瑞吉街(西南側)"
+    },
+    {
+        "id": "501208104",
+        "name": "文小九公園(鎮東五街)",
+        "englishname": "Wen Xiaojiu Park(Zhendong 5th St.)",
+        "geohash": "wsj89b0j4",
+        "address": "鎮東五街/新生路148巷(西北側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -6669,6 +6711,13 @@
         "englishname": "Renlin Zhonghua Rd. Intersection",
         "geohash": "wsj94szq8",
         "address": "仁林路/中華路口(東側)"
+    },
+    {
+        "id": "501214032",
+        "name": "九番埤濕地公園(霞海南二街)",
+        "englishname": "Jiupanpi Wetland Park(Xiahai S. 2nd St)",
+        "geohash": "wsj940cqw",
+        "address": "霞海南二街/後港巷(西北側)"
     },
     {
         "id": "501215001",
