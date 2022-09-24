@@ -819,6 +819,13 @@
         "address": "明德街/體育場路西北側人行道"
     },
     {
+        "id": "501202088",
+        "name": "海邊苓中路口",
+        "englishname": "Haibian Lingzhong Rd.",
+        "geohash": "wsj89m47q",
+        "address": "海邊路/苓中路(西北側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -7042,6 +7049,13 @@
         "address": "育才路/育才路38巷(東北側)"
     },
     {
+        "id": "501216039",
+        "name": "本洲里活動中心",
+        "englishname": "Benzhou Activity Center",
+        "geohash": "wsj9b87se",
+        "address": "本洲二街6號前"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -7509,6 +7523,13 @@
         "englishname": "Ka Wai Park",
         "geohash": "wsj937mny",
         "address": "甲樹路/甲昌路龍泉巷口(東北側)"
+    },
+    {
+        "id": "501220017",
+        "name": "仕隆國小",
+        "englishname": "Shihlong Elementary School",
+        "geohash": "wsj93txbq",
+        "address": "仕隆南路/大崎巷(西北側)"
     },
     {
         "id": "501220018",
