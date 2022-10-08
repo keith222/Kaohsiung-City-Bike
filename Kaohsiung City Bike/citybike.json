@@ -826,6 +826,13 @@
         "address": "海邊路/苓中路(西北側)"
     },
     {
+        "id": "501202088",
+        "name": "輕軌旅運中心站(海邊路)",
+        "englishname": "Cruise Terminal Station",
+        "geohash": "wsj89k751",
+        "address": "海邊路/苓南前路(東北側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -2154,6 +2161,20 @@
         "englishname": "Henan Zhonghua 3rd Rd.",
         "geohash": "wsj8c26xz",
         "address": "河南二路/中華三路口(西北側)"
+    },
+    {
+        "id": "501205036",
+        "name": "國民市中一路口",
+        "englishname": "Guomin Shizhong 1st Rd.",
+        "geohash": "wsj89qc8x",
+        "address": "國民街/市中一路(東北側)"
+    },
+    {
+        "id": "501205037",
+        "name": "五福文武二街口",
+        "englishname": "Wufu Wenwu 2nd St.",
+        "geohash": "wsj89qjzn",
+        "address": "五福三路/文武二街(西北側)"
     },
     {
         "id": "501206001",
@@ -6027,6 +6048,20 @@
         "address": "後昌路782巷/後昌路(西北側)"
     },
     {
+        "id": "501210108",
+        "name": "土庫公園",
+        "englishname": "Tuku Park",
+        "geohash": "wsj965pvf",
+        "address": "清豐一路/土庫五路(東北側)"
+    },
+    {
+        "id": "501210110",
+        "name": "惠義惠心街口",
+        "englishname": "Huiyi Huixin St.",
+        "geohash": "wsj964195",
+        "address": "惠義街/惠心街(東北側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -7056,6 +7091,13 @@
         "address": "本洲二街6號前"
     },
     {
+        "id": "501216040",
+        "name": "壽天國小",
+        "englishname": "Shoutian Elementary School",
+        "geohash": "wsj99q3xw",
+        "address": "公園東路/壽華路(西南側)"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -7586,6 +7628,13 @@
         "englishname": "Guanyin Mountain Rest Area",
         "geohash": "wsj971fdm",
         "address": "翠屏路/翠屏路112巷口(南側)"
+    },
+    {
+        "id": "501222007",
+        "name": "大社區公所",
+        "englishname": "Dashe District Office",
+        "geohash": "wsj969cez",
+        "address": "自強街/自強街2巷(西側)"
     },
     {
         "id": "501223001",
