@@ -3171,6 +3171,20 @@
         "address": "建國路三段/青年路二段口(南側)"
     },
     {
+        "id": "501206147",
+        "name": "杭州公園",
+        "englishname": "Hangzhou Park",
+        "geohash": "wsj8ennfp",
+        "address": "西湖街/西湖街39巷口(西北側)"
+    },
+    {
+        "id": "501206148",
+        "name": "環河鳳東三街口",
+        "englishname": "Huanhe Fengdong 3rd St.",
+        "geohash": "wsj8erqtj",
+        "address": "環河東街/鳳東三街(東北側)"
+    },
+    {
         "id": "501207001",
         "name": "捷運生態園區站(1號出口)",
         "englishname": "KRT Ecological District Sta. (Exit 1)",
@@ -4690,6 +4704,34 @@
         "address": "鎮東五街/新生路148巷(西北側)"
     },
     {
+        "id": "501208105",
+        "name": "興仁公園(興旺路)",
+        "englishname": "Xingren Park(Xingwang Rd.)",
+        "geohash": "wsj83xxve",
+        "address": "興旺路/興旺路385巷(東北側)"
+    },
+    {
+        "id": "501208107",
+        "name": "光華鄭和南路口",
+        "englishname": "Guanghua Zhenghe S. Rd.",
+        "geohash": "wsj89g5m6",
+        "address": "光華三路/鄭和南路(東南側)"
+    },
+    {
+        "id": "501208108",
+        "name": "籬仔內公園",
+        "englishname": "Lizainei  Park",
+        "geohash": "wsj89gnhj",
+        "address": "和平三路/籬仔內路(東南側)"
+    },
+    {
+        "id": "501208109",
+        "name": "翠亨北漁港路口",
+        "englishname": "Cuiheng N.Yugang Rd.",
+        "geohash": "wsj86p61s",
+        "address": "翠亨北路/漁港路(西北側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -6046,6 +6088,13 @@
         "englishname": "Jyu Guang Elementary School",
         "geohash": "wsj91qmps",
         "address": "後昌路782巷/後昌路(西北側)"
+    },
+    {
+        "id": "501210107",
+        "name": "楠梓國中",
+        "englishname": "Nanzi Junior High School",
+        "geohash": "wsj964fwq",
+        "address": "楠梓路/土庫一路(東南側)"
     },
     {
         "id": "501210108",
