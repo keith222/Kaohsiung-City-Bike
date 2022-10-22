@@ -1107,10 +1107,10 @@
     },
     {
         "id": "501203040",
-        "name": "高雄車站北側",
-        "englishname": "Kaohsiung Station (North)",
-        "geohash": "wsj8c99yg",
-        "address": "九如二路/博愛一路口"
+        "name": "博愛九如二路(東北側)",
+        "englishname": "_Bo'ai Jiuru 2nd Rd.(Northeast)",
+        "geohash": "wsj8c99zw",
+        "address": "博愛一路/九如二路(東北側)"
     },
     {
         "id": "501203041",
@@ -1790,6 +1790,13 @@
         "englishname": "Tiedao Ln. 138, Xianzheng Rd.",
         "geohash": "wsj8f10cw",
         "address": "鐵道一街/憲政路138巷口(北側)"
+    },
+    {
+        "id": "501203140",
+        "name": "博愛九如二路口(西北側)",
+        "englishname": "Bo'ai Jiuru 2nd Rd.(Northwest)",
+        "geohash": "wsj8c99xu",
+        "address": "博愛一路/九如二路(西北側)"
     },
     {
         "id": "501204001",
@@ -6811,6 +6818,20 @@
         "address": "霞海南二街/後港巷(西北側)"
     },
     {
+        "id": "501214033",
+        "name": "大灣綜合活動中心",
+        "englishname": "Grand Bay Comprehensive activity center",
+        "geohash": "wsj9425k0",
+        "address": "大智二街90巷/仁雄路240巷(東北側)"
+    },
+    {
+        "id": "501214034",
+        "name": "後安羽球館",
+        "englishname": "Hou'an Badminton Hall",
+        "geohash": "wsj94tfrp",
+        "address": "安樂東街/安樂一街(東南側)"
+    },
+    {
         "id": "501215001",
         "name": "林園行政中心",
         "englishname": "Linyuan District Office",
@@ -7502,6 +7523,13 @@
         "englishname": "Fenglin Xuanwu Rd.Intersection",
         "geohash": "wsj8es8z4",
         "address": "鳳林四路/宣武路(東北側)"
+    },
+    {
+        "id": "501219022",
+        "name": "捷運大寮機廠",
+        "englishname": "KRT Daliao machine factory",
+        "geohash": "wsj8eqz34",
+        "address": "捷西路300號前"
     },
     {
         "id": "501220001",
