@@ -4243,10 +4243,10 @@
     },
     {
         "id": "501208037",
-        "name": "高雄區漁會漁業大樓",
-        "englishname": "Kaohsiung Fishermen's Association",
+        "name": "高雄市漁民服務中心",
+        "englishname": "Kaohsiung Fishermen's Service Center",
         "geohash": "wsj83vhs2",
-        "address": "漁港東二路3號(對面)"
+        "address": "漁港中二路/漁港東二路(西北側)"
     },
     {
         "id": "501208038",
@@ -4737,6 +4737,13 @@
         "englishname": "Cuiheng N.Yugang Rd.",
         "geohash": "wsj86p61s",
         "address": "翠亨北路/漁港路(西北側)"
+    },
+    {
+        "id": "501208111",
+        "name": "修文一心二路口",
+        "englishname": "Xiuwen Yixin 2nd Rd.",
+        "geohash": "wsj89sqfu",
+        "address": "一心二路/修文街(東北側)"
     },
     {
         "id": "501209001",
@@ -7378,6 +7385,13 @@
         "address": "中山西路115號"
     },
     {
+        "id": "501218024",
+        "name": "大華夢公園",
+        "englishname": "Dahua Dream Park",
+        "geohash": "wsj8f7xkp",
+        "address": "大華路/大華路55巷(東北側)"
+    },
+    {
         "id": "501219001",
         "name": "永芳公園",
         "englishname": "Yong Fang Park",
@@ -7530,6 +7544,13 @@
         "englishname": "KRT Daliao machine factory",
         "geohash": "wsj8eqz34",
         "address": "捷西路300號前"
+    },
+    {
+        "id": "501219023",
+        "name": "大寮運動公園",
+        "englishname": "Daliao Sports Park",
+        "geohash": "wsj8ed732",
+        "address": "正氣路79號(西北側)"
     },
     {
         "id": "501220001",
