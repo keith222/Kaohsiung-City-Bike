@@ -1799,6 +1799,13 @@
         "address": "博愛一路/九如二路(西北側)"
     },
     {
+        "id": "501203142",
+        "name": "高雄車站(東南側)",
+        "englishname": "Kaohsiung Station(Southeast)",
+        "geohash": "wsj8c9470",
+        "address": "站東路/建國二路(東北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2182,6 +2189,20 @@
         "englishname": "Wufu Wenwu 2nd St.",
         "geohash": "wsj89qjzn",
         "address": "五福三路/文武二街(西北側)"
+    },
+    {
+        "id": "501205038",
+        "name": "河南市中一路口",
+        "englishname": "Henan Shizhong 1st Rd.",
+        "geohash": "wsj8c0prh",
+        "address": "河南二路/市中一路(東北側)"
+    },
+    {
+        "id": "501205039",
+        "name": "七賢新盛一街口",
+        "englishname": "Qixian Xinsheng 1st St.",
+        "geohash": "wsj8c2hxb",
+        "address": "七賢二路/新盛一街(東北側)"
     },
     {
         "id": "501206001",
@@ -3190,6 +3211,13 @@
         "englishname": "Huanhe Fengdong 3rd St.",
         "geohash": "wsj8erqtj",
         "address": "環河東街/鳳東三街(東北側)"
+    },
+    {
+        "id": "501206149",
+        "name": "福誠一三誠路口",
+        "englishname": "Fucheng 1st Sancheng Rd.",
+        "geohash": "wsj8d0fhm",
+        "address": "福誠一街/三誠路(西側)"
     },
     {
         "id": "501207001",
@@ -4718,6 +4746,13 @@
         "address": "興旺路/興旺路385巷(東北側)"
     },
     {
+        "id": "501208106",
+        "name": "民瑞中山三路口",
+        "englishname": "Minrui St./Zhongshan 3rd Rd.(Southeast)",
+        "geohash": "wsj89dyzr",
+        "address": "民瑞街/中山三路(東南側)"
+    },
+    {
         "id": "501208107",
         "name": "光華鄭和南路口",
         "englishname": "Guanghua Zhenghe S. Rd.",
@@ -5374,6 +5409,13 @@
         "englishname": "Dah Yung Senior High School",
         "geohash": "wsj8c5bes",
         "address": "九如四路/迪化街口(東北側)"
+    },
+    {
+        "id": "501209096",
+        "name": "鼓山鼓山三路209巷口",
+        "englishname": "Gushan 3rd Ln. 209, Gushan 3rd Rd.",
+        "geohash": "wsj8cn13z",
+        "address": "鼓山三路/鼓山三路209巷(西南側)"
     },
     {
         "id": "501210001",
@@ -7175,6 +7217,13 @@
         "address": "公園東路/壽華路(西南側)"
     },
     {
+        "id": "501216041",
+        "name": "台上里活動中心",
+        "englishname": "Taishang Vil Activity Center",
+        "geohash": "wsj99rtx8",
+        "address": "嘉新東路139之1號"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -7686,6 +7735,13 @@
         "address": "樹德路/中正路(西南側)"
     },
     {
+        "id": "501220020",
+        "name": "成功南橋新六路口",
+        "englishname": "Chenggong S.Qiaoxin 6th Rd.",
+        "geohash": "wsj93v6j9",
+        "address": "成功南路/橋新六路(西南側)"
+    },
+    {
         "id": "501221001",
         "name": "高雄市立圖書館湖內分館",
         "englishname": "Kaohsiung Public Hunei Branch",
@@ -7733,6 +7789,13 @@
         "englishname": "Dashe District Office",
         "geohash": "wsj969cez",
         "address": "自強街/自強街2巷(西側)"
+    },
+    {
+        "id": "501222008",
+        "name": "大社國中(中山路)",
+        "englishname": "Dashe Junior High School(Zhongshan Rd.)",
+        "geohash": "wsj96f02f",
+        "address": "中山路/中山路497巷(西南側)"
     },
     {
         "id": "501223001",
