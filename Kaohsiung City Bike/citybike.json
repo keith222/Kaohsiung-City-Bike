@@ -1792,6 +1792,13 @@
         "address": "鐵道一街/憲政路138巷口(北側)"
     },
     {
+        "id": "501203139",
+        "name": "民族自忠街口",
+        "englishname": "Minzu Zizhong St.",
+        "geohash": "wsj8cfdhq",
+        "address": "民族一路/自忠街(西北側)"
+    },
+    {
         "id": "501203140",
         "name": "博愛九如二路口(西北側)",
         "englishname": "Bo'ai Jiuru 2nd Rd.(Northwest)",
@@ -1799,11 +1806,25 @@
         "address": "博愛一路/九如二路(西北側)"
     },
     {
+        "id": "501203141",
+        "name": "鐵道同盟三路口",
+        "englishname": "Tiedao Tongmeng 3rd Rd.",
+        "geohash": "wsj8c0v74",
+        "address": "鐵道三街/同盟三路(東北側)"
+    },
+    {
         "id": "501203142",
         "name": "高雄車站(東南側)",
         "englishname": "Kaohsiung Station(Southeast)",
         "geohash": "wsj8c9470",
         "address": "站東路/建國二路(東北側)"
+    },
+    {
+        "id": "501203143",
+        "name": "大順鐵道一街口",
+        "englishname": "Dashun Tiedao 1rd St.",
+        "geohash": "wsj8f0gt4",
+        "address": "大順三路/鐵道一街(東南側)"
     },
     {
         "id": "501204001",
@@ -4025,6 +4046,13 @@
         "address": "新莊一路/文上路(西北側)"
     },
     {
+        "id": "501207123",
+        "name": "華夏民族一路口",
+        "englishname": "Huaxia Minzu 1st Rd.",
+        "geohash": "wsj91fnzc",
+        "address": "華夏路/民族一路(西北側)"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -5418,6 +5446,13 @@
         "address": "鼓山三路/鼓山三路209巷(西南側)"
     },
     {
+        "id": "501209097",
+        "name": "鼓山鼓山三路153巷口",
+        "englishname": "Gushan 3rd Rd./Ln. 153, Gushan 3rd Rd.(Southwest)",
+        "geohash": "wsj8bvxdp",
+        "address": "鼓山三路/鼓山三路153巷(西南側)"
+    },
+    {
         "id": "501210001",
         "name": "捷運世運站(2號出口)",
         "englishname": "KRT World Games Sta. (Exit 2)",
@@ -6160,6 +6195,13 @@
         "address": "清豐一路/土庫五路(東北側)"
     },
     {
+        "id": "501210109",
+        "name": "都會公園停車場(德民路)",
+        "englishname": "Metropolitan Parking (Demin Rd.)",
+        "geohash": "wsj93fm9y",
+        "address": "德民路/德民路18巷(東南側)"
+    },
+    {
         "id": "501210110",
         "name": "惠義惠心街口",
         "englishname": "Huiyi Huixin St.",
@@ -6599,6 +6641,20 @@
         "englishname": "Hanmin Gong'an St.",
         "geohash": "wsj86e7vn",
         "address": "漢民路/宮安街口(西南側)"
+    },
+    {
+        "id": "501212058",
+        "name": "永忠兒童遊戲場",
+        "englishname": "Yongzhong Children's Playground",
+        "geohash": "wsj8758pr",
+        "address": "永忠街/水秀路(西南側)"
+    },
+    {
+        "id": "501212059",
+        "name": "松樂松光街95巷口",
+        "englishname": "Songle Ln. 95, Songguang St.",
+        "geohash": "wsj87k2r8",
+        "address": "松樂街/松光街95巷(公園處)"
     },
     {
         "id": "501213001",
@@ -8020,6 +8076,20 @@
         "englishname": "Spica Tianhou Temple Activity Center",
         "geohash": "wsj9dc5qm",
         "address": "角宿路6-1號(南側)"
+    },
+    {
+        "id": "501228009",
+        "name": "東側兒一公園",
+        "englishname": "East side Er Yi Park",
+        "geohash": "wsj9djgq9",
+        "address": "瓊林路393巷/瓊興路381巷口(東北側)"
+    },
+    {
+        "id": "501228010",
+        "name": "鳳雄國小",
+        "englishname": "Fengxiong Elementary School",
+        "geohash": "wsj96y4he",
+        "address": "鳳加路55號前"
     },
     {
         "id": "501229001",
