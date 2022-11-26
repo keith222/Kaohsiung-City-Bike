@@ -1834,6 +1834,13 @@
         "address": "大順三路/鐵道一街(東南側)"
     },
     {
+        "id": "501203144",
+        "name": "大順寶興路口",
+        "englishname": "Dashun Baoxing Rd.",
+        "geohash": "wsj8f46cs",
+        "address": "大順二路/寶興路(東南側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -4074,6 +4081,13 @@
         "address": "華夏路/民族一路(西北側)"
     },
     {
+        "id": "501207124",
+        "name": "龍德新大順一路口",
+        "englishname": "Longdexin Dashun 1nd Rd.",
+        "geohash": "wsj8csrtm",
+        "address": "龍德新路/大順一路(東南側)"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -4830,6 +4844,13 @@
         "address": "一心二路/修文街(東北側)"
     },
     {
+        "id": "501208112",
+        "name": "漁港南一興漁三路口",
+        "englishname": "Yugang S. 1st Xingyu 3nd Rd.",
+        "geohash": "wsj83u5ru",
+        "address": "漁港南一路/興漁三路(西南側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -5458,6 +5479,20 @@
         "englishname": "Dah Yung Senior High School",
         "geohash": "wsj8c5bes",
         "address": "九如四路/迪化街口(東北側)"
+    },
+    {
+        "id": "501209094",
+        "name": "青海美術東四路口",
+        "englishname": "Qinghai Meishu E. 4th Rd.",
+        "geohash": "wsj8c5xcq",
+        "address": "青海路/美術東四路(西南側)"
+    },
+    {
+        "id": "501209095",
+        "name": "中華美明路口",
+        "englishname": "Zhonghua Meiming Rd.",
+        "geohash": "wsj8cmfp8",
+        "address": "中華一路/美明路(西南側)"
     },
     {
         "id": "501209096",
@@ -6237,6 +6272,13 @@
         "address": "惠義街/惠心街(東北側)"
     },
     {
+        "id": "501210111",
+        "name": "援中大學十七街口",
+        "englishname": "Yuanzhong Daxue 17th St.",
+        "geohash": "wsj930s9u",
+        "address": "援中路/大學十七街(東北側)"
+    },
+    {
         "id": "501210112",
         "name": "中山高級中學(藍昌路側)",
         "englishname": "Chungshan Senior High School (Lanchang Rd.)",
@@ -6744,8 +6786,29 @@
         "id": "501213008",
         "name": "梓官老人日照中心",
         "englishname": "Ziguan elder care center",
-        "geohash": "wsj92z1pn",
+        "geohash": "wsj92z0vt",
         "address": "平等路190號(東側)"
+    },
+    {
+        "id": "501213009",
+        "name": "大舍南大舍南路96巷口",
+        "englishname": "Dashe S. Ln. 96, Dashe S. Rd.",
+        "geohash": "wsj92ss6f",
+        "address": "大舍南路/大舍南路96巷(西南側)"
+    },
+    {
+        "id": "501213010",
+        "name": "梓信社區活動中心",
+        "englishname": "Zixinli Activity Center",
+        "geohash": "wsj988jv7",
+        "address": "信興一路/中學路(西南側)"
+    },
+    {
+        "id": "501213011",
+        "name": "信蚵里社區聯合活動中心",
+        "englishname": "Xin Oili Activity Center",
+        "geohash": "wsj923ybb",
+        "address": "Guangze Rd./Zhongzheng 6th St.(Northeast)"
     },
     {
         "id": "501214001",
@@ -7700,6 +7763,20 @@
         "address": "正氣路79號(西北側)"
     },
     {
+        "id": "501219024",
+        "name": "潮寮國中",
+        "englishname": "Chaoliao Junior High School",
+        "geohash": "wsj8k7e34",
+        "address": "潮寮路/潮興路(西北側)"
+    },
+    {
+        "id": "501219025",
+        "name": "琉球黃厝路口",
+        "englishname": "Liuqiu Huangcuo Rd.",
+        "geohash": "wsj8euzv5",
+        "address": "琉球路/黃厝路(西南側)"
+    },
+    {
         "id": "501220001",
         "name": "捷運青埔站(1號出口)東側",
         "englishname": "KRT Cingpu Sta. (Exit 1) East",
@@ -7838,6 +7915,13 @@
         "englishname": "Chenggong S.Qiaoxin 6th Rd.",
         "geohash": "wsj93v6j9",
         "address": "成功南路/橋新六路(西南側)"
+    },
+    {
+        "id": "501220021",
+        "name": "橋都新南二街口",
+        "englishname": "Qiaodu Xinnan 2nd St.",
+        "geohash": "wsj93d3je",
+        "address": "橋都路/新南二街(東北側)"
     },
     {
         "id": "501221001",
