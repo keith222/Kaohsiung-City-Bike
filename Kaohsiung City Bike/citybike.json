@@ -4088,6 +4088,13 @@
         "address": "龍德新路/大順一路(東南側)"
     },
     {
+        "id": "501207126",
+        "name": "高鐵大中二路口",
+        "englishname": "Gaotie Dazhong 2nd Rd.",
+        "geohash": "wsj919sj3",
+        "address": "高鐵路/大中二路(西北側)"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -4837,6 +4844,13 @@
         "address": "翠亨北路/漁港路(西北側)"
     },
     {
+        "id": "501208110",
+        "name": "瑞祥高中(忠誠路)",
+        "englishname": "Rueisiang High School(Zhongcheng Rd.)",
+        "geohash": "wsj8d431p",
+        "address": "忠誠路/崗山中街(東北側)"
+    },
+    {
         "id": "501208111",
         "name": "修文一心二路口",
         "englishname": "Xiuwen Yixin 2nd Rd.",
@@ -4849,6 +4863,20 @@
         "englishname": "Yugang S. 1st Xingyu 3nd Rd.",
         "geohash": "wsj83u5ru",
         "address": "漁港南一路/興漁三路(西南側)"
+    },
+    {
+        "id": "501208113",
+        "name": "環區一南二路口",
+        "englishname": "Huanqu 1st S. 2nd Rd.",
+        "geohash": "wsj893g2h",
+        "address": "環區一路/南二路(西北側)"
+    },
+    {
+        "id": "501208114",
+        "name": "環區四南二路口",
+        "englishname": "Huanqu 4st S. 2nd Rd.",
+        "geohash": "wsj8933w8",
+        "address": "環區四路/南二路(東南側)"
     },
     {
         "id": "501209001",
@@ -6286,11 +6314,32 @@
         "address": "藍昌路/大學二十八街(東南側)"
     },
     {
-        "id": "501211001",
-        "name": "高雄科技大學旗津校區",
-        "englishname": "NKUST Cijin Campus",
-        "geohash": "wsj88gewd",
-        "address": "中洲三路482號前人行道"
+        "id": "501210113",
+        "name": "內環南經五路口",
+        "englishname": "Neihuan S. Jing 5th Rd",
+        "geohash": "wsj91xd5p",
+        "address": "內環南路/經五路(西北側)"
+    },
+    {
+        "id": "501210114",
+        "name": "經四開發路口",
+        "englishname": "Jing 4th Kaifa Rd.",
+        "geohash": "wsj938624",
+        "address": "經四路/開發路(東南側)"
+    },
+    {
+        "id": "501210114",
+        "name": "經四開發路口",
+        "englishname": "Jing 4th Kaifa Rd.",
+        "geohash": "wsj938624",
+        "address": "經四路/開發路(東南側)"
+    },
+    {
+        "id": "501210115",
+        "name": "中三經五路口",
+        "englishname": "Central 3rd Jing 5th Rd.",
+        "geohash": "wsj9388te",
+        "address": "中三街/經五路(東南側)"
     },
     {
         "id": "501211002",
@@ -6733,6 +6782,34 @@
         "geohash": "wsj87k2r8",
         "address": "松樂街/松光街95巷(公園處)"
     },
+    {
+        "id": "501212060",
+        "name": "孔鳳兒童遊戲場",
+        "englishname": "Kong Feng Children's Playground",
+        "geohash": "wsj86ycxu",
+        "address": "桂德街/桂田街(西北側)"
+    },    
+    {
+        "id": "501212061",
+        "name": "桂林兒童遊戲場",
+        "englishname": "Guilin Children's Playground",
+        "geohash": "wsj86wxhu",
+        "address": "桂陽路257巷23弄旁"
+    },    
+    {
+        "id": "501212062",
+        "name": "小港國中",
+        "englishname": "Xiaogang Junior High School",
+        "geohash": "wsj86k5f7",
+        "address": "平和南路/平順街(西側)"
+    },    
+    {
+        "id": "501212063",
+        "name": "中安桂平街口",
+        "englishname": "Zhong'an Guiping St.",
+        "geohash": "wsj86xmzj",
+        "address": "中安路/桂平街(西北側)"
+    },    
     {
         "id": "501213001",
         "name": "蚵仔寮觀光魚市",
@@ -7999,6 +8076,13 @@
         "englishname": "Mituo Junior High School",
         "geohash": "wsj9863jh",
         "address": "進學路136號(前人行道)"
+    },
+    {
+        "id": "501223004",
+        "name": "漯底山自然公園",
+        "englishname": "Luodi Mountain Natural Park",
+        "geohash": "wsj983mfu",
+        "address": "山頂路(南側)"
     },
     {
         "id": "501224001",
