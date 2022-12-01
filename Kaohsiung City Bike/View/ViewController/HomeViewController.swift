@@ -99,6 +99,7 @@ class HomeViewController: UIViewController {
         self.setUpUI()
         self.checkData()
         self.requestLocationAuthorization()
+        self.homeViewModel.checkToken()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

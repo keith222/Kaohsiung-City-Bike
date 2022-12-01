@@ -55,5 +55,117 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87DDA45D-369C-45A1-B5E9-63CF27C22A19"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kaohsiung City Bike/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "fetchStationInfo(with:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "87DDA45D-369C-45A1-B5E9-63CF27C22A19 - e2cfeead8e54b54c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kaohsiung_CityBike_Widget.HomeViewModel.fetchStationInfo(with: Swift.Array&lt;Swift.String&gt;, handler: (Swift.Optional&lt;Swift.Array&lt;Kaohsiung_CityBike_Widget.Park&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Kaohsiung CityBike Widget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keith/Documents/My%20Project/Kaohsiung%20City%20Bike/Kaohsiung%20City%20Bike/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "2122">
+               </Location>
+               <Location
+                  uuid = "87DDA45D-369C-45A1-B5E9-63CF27C22A19 - 5fea2c30f2b6e1a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Kaohsiung_CityBike_Widget.HomeViewModel.fetchStationInfo(with: Swift.Array&lt;Swift.String&gt;, handler: (Swift.Optional&lt;Swift.Array&lt;Kaohsiung_CityBike_Widget.Park&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Kaohsiung CityBike Widget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keith/Documents/My%20Project/Kaohsiung%20City%20Bike/Kaohsiung%20City%20Bike/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CC8BF54-80EA-4D63-B9AB-7E18220B0857"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kaohsiung CityBike Widget/TodayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "getBikeInfo(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C8DB778-FB69-48A2-9C25-A504451C093D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kaohsiung City Bike/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "fetchToken(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1C8DB778-FB69-48A2-9C25-A504451C093D - ade762df905187ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kaohsiung_CityBike_Widget.HomeViewModel.fetchToken(handler: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Kaohsiung CityBike Widget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keith/Documents/My%20Project/Kaohsiung%20City%20Bike/Kaohsiung%20City%20Bike/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "477">
+               </Location>
+               <Location
+                  uuid = "1C8DB778-FB69-48A2-9C25-A504451C093D - 6674de820736c6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Kaohsiung_CityBike_Widget.HomeViewModel.fetchToken(handler: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Kaohsiung CityBike Widget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keith/Documents/My%20Project/Kaohsiung%20City%20Bike/Kaohsiung%20City%20Bike/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "217">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

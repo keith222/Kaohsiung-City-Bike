@@ -11,7 +11,7 @@ import Foundation
 struct Park: Codable {
     
     let StationID: String
-    let ServiceAvailable: Int
+    let ServiceStatus: Int
     let AvailableRentBikes: Int
     let AvailableReturnBikes: Int
 }

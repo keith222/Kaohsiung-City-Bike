@@ -4,10 +4,16 @@
 <dict>
 	<key>APIService</key>
 	<dict>
+		<key>ClientID</key>
+		<string>${CLIENT_ID}</string>
+		<key>ClientSecret</key>
+		<string>${CLIENT_SECRET}</string>
+		<key>TokenURL</key>
+		<string>https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token</string>
 		<key>RegisterURL</key>
 		<string>https://kcg.youbike.com.tw/register/terms</string>
 		<key>sourceURL</key>
-		<string>https://ptx.transportdata.tw/MOTC/v2/Bike/Availability/Kaohsiung?$format=JSON&amp;$filter=</string>
+		<string>https://tdx.transportdata.tw/api/basic/v2/Bike/Availability/City/Kaohsiung?$format=JSON&amp;$filter=</string>
 		<key>stationSourceURL</key>
 		<string>https://raw.githubusercontent.com/keith222/Kaohsiung-City-Bike/master/Kaohsiung%20City%20Bike/citybike.json</string>
 		<key>versionSourceURL</key>

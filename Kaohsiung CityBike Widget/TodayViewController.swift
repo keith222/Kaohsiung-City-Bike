@@ -65,7 +65,7 @@ class TodayViewController: UIViewController, NCWidgetProviding{
             savedStations = stations.filter{ savedArray.contains($0.id) }
                 .compactMap({ value in
                     return (value.id,value.name,value.englishname)
-                })
+                })            
         }
     }
     
@@ -96,13 +96,15 @@ class TodayViewController: UIViewController, NCWidgetProviding{
         return .zero
     }
     
-    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        getBikeInfo(completionHandler)
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {       
+        homeViewModel.checkToken(handler: { [weak self] in
+            self?.getBikeInfo(completionHandler)
+        })
     }
     
-    func getBikeInfo(_ completionHandler: ((NCUpdateResult) -> Void)!){
+    func getBikeInfo(_ completionHandler: ((NCUpdateResult) -> Void)!) {
         self.defaultButton.isHidden = true
-        
+
         guard savedStations.count > 0 else {
             self.defaultButton.isHidden = false
             return
