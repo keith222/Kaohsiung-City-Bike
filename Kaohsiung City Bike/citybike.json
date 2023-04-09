@@ -260,10 +260,10 @@
     },
     {
         "id": "501202008",
-        "name": "建軍建國一路口(東南角)",
-        "englishname": "Jianjun Jianguo Intersection (Southeast)",
-        "geohash": "wsj8drqe5",
-        "address": "建軍路11號(對面)"
+        "name": "凱旋青樹",
+        "englishname": "Triumph Green Tree",
+        "geohash": "wsj8cchtv",
+        "address": "凱旋一路/凱歌路164巷口(西北側)"
     },
     {
         "id": "501202009",
@@ -4877,6 +4877,13 @@
         "englishname": "Huanqu 4st S. 2nd Rd.",
         "geohash": "wsj8933w8",
         "address": "環區四路/南二路(東南側)"
+    },
+    {
+        "id": "501208115",
+        "name": "臨海工業區前鎮園區公園",
+        "englishname": "Linhai Industrial Park Center",
+        "geohash": "wsj83ygv2",
+        "address": "新衙路/德昌街94巷(西南側)"
     },
     {
         "id": "501209001",
