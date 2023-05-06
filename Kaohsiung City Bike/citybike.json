@@ -1841,6 +1841,13 @@
         "address": "大順二路/寶興路(東南側)"
     },
     {
+        "id": "501203145",
+        "name": "同盟興安街口",
+        "englishname": "Tongmeng Xing'an St.",
+        "geohash": "wsj8c7x05",
+        "address": "同盟二路/興安街(北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -2238,6 +2245,13 @@
         "englishname": "Qixian Xinsheng 1st St.",
         "geohash": "wsj8c2hxb",
         "address": "七賢二路/新盛一街(東北側)"
+    },
+    {
+        "id": "501205040",
+        "name": "河東光復二街口",
+        "englishname": "Hedong Guangfu 2nd St.",
+        "geohash": "wsj89q1n4",
+        "address": "河東路/光復二街(西側)"
     },
     {
         "id": "501206001",
@@ -3260,6 +3274,13 @@
         "englishname": "Furong Park",
         "geohash": "wsj8d3dck",
         "address": "林森路/林森路290巷(西南側)"
+    },
+    {
+        "id": "501206151",
+        "name": "鳳山日照社福多功能中心",
+        "englishname": "Fengshan Rizhao Social Welfare Center",
+        "geohash": "wsj8g0hpy",
+        "address": "勝中路/勝民路(西南側)"
     },
     {
         "id": "501207001",
@@ -4886,6 +4907,13 @@
         "address": "新衙路/德昌街94巷(西南側)"
     },
     {
+        "id": "501208116",
+        "name": "鎮興鎮昌五巷口",
+        "englishname": "Zhenxing Ln. 5, Zhenchang.",
+        "geohash": "wsj89b96t",
+        "address": "鎮興路/鎮昌五巷(北側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -6347,6 +6375,13 @@
         "englishname": "Central 3rd Jing 5th Rd.",
         "geohash": "wsj9388te",
         "address": "中三街/經五路(東南側)"
+    },
+    {
+        "id": "501210116",
+        "name": "後勁鳳屏宮",
+        "englishname": "Houjing Fengping Palace",
+        "geohash": "wsj91z4jm",
+        "address": "後勁東路/後勁東路30巷(西南側)"
     },
     {
         "id": "501211002",
