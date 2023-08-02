@@ -7553,6 +7553,13 @@
         "address": "濱海路四段66號對面"
     },
     {
+        "id": "501217008",
+        "name": "興達平面停車場",
+        "englishname": "Xing Da Flat parking",
+        "geohash": "wsj6p519t",
+        "address": "濱海路一段/崎漏路(東南側)"
+    },
+    {
         "id": "501218001",
         "name": "正修科技大學東側",
         "englishname": "Cheng Shiu University (East)",
@@ -8125,6 +8132,13 @@
         "englishname": "Luodi Mountain Natural Park",
         "geohash": "wsj983mfu",
         "address": "山頂路(南側)"
+    },
+    {
+        "id": "501223007",
+        "name": "鹽埕過港安樂宮",
+        "englishname": "Yancheng Crossing Anle Palace",
+        "geohash": "wsj98hmyn",
+        "address": "產業路15號"
     },
     {
         "id": "501224001",
