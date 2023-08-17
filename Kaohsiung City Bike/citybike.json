@@ -6384,6 +6384,27 @@
         "address": "後勁東路/後勁東路30巷(西南側)"
     },
     {
+        "id": "501210118",
+        "name": "惠正惠誠街口",
+        "englishname": "Huizheng Huicheng St.",
+        "geohash": "wsj96437v",
+        "address": "惠正街/惠誠街(東北側)"
+    },
+    {
+        "id": "501210119",
+        "name": "捷運油廠國小(4號出口)",
+        "englishname": "Oil Refinery Elem. Schl.(Exit 4)",
+        "geohash": "wsj91tcx0",
+        "address": "捷運油廠國小(4號出口)"
+    },
+    {
+        "id": "501211001",
+        "name": "高雄科技大學旗津校區",
+        "englishname": "NKUST Cijin Campus",
+        "geohash": "wsj88gewd",
+        "address": "中洲三路482號前人行道"
+    },
+    {
         "id": "501211002",
         "name": "高雄市立旗津醫院(旗港路)",
         "englishname": "Kaohsiung Municipal Cijin Hospital (Qigang Rd.)",
@@ -6851,6 +6872,13 @@
         "englishname": "Zhong'an Guiping St.",
         "geohash": "wsj86xmzj",
         "address": "中安路/桂平街(西北側)"
+    }, 
+    {
+        "id": "501212064",
+        "name": "孔宅綠園",
+        "englishname": "Kongzhai Green Garden",
+        "geohash": "wsj87nqeb",
+        "address": "孔宅十街/孔宅三路(東北側)"
     },    
     {
         "id": "501213001",
@@ -7504,6 +7532,41 @@
         "address": "岡山文化中心後門(中山南路側)"
     },
     {
+        "id": "501216043",
+        "name": "華崗休憩公園",
+        "englishname": "Huagang Recreational Park",
+        "geohash": "wsj9cgqhw",
+        "address": "拕子三街/拕子中街(西側)"
+    },
+    {
+        "id": "501216044",
+        "name": "嘉興國小",
+        "englishname": "Jiaxing Elementary School",
+        "geohash": "wsj9cde75",
+        "address": "嘉興路322號"
+    },
+    {
+        "id": "501216045",
+        "name": "岡山和平公園(大德一路)",
+        "englishname": "Gangshan Heping Park(Dade 1st Rd.)",
+        "geohash": "wsj99w4es",
+        "address": "大德一路/竹圍東街(西北側)"
+    },
+    {
+        "id": "501216046",
+        "name": "河堤懷德路口",
+        "englishname": "Heti Huaide Rd.",
+        "geohash": "wsj99sqxt",
+        "address": "河堤路一段/懷德路(西北側)"
+    },
+    {
+        "id": "501216047",
+        "name": "河堤大仁南路口",
+        "englishname": "Heti Daren S. Rd.",
+        "geohash": "wsj99s614",
+        "address": "河堤路一段/大仁南路(東北側)"
+    },
+    {
         "id": "501217001",
         "name": "興達港情人碼頭",
         "englishname": "Xingda Harbour Lover's Wharf",
@@ -8132,6 +8195,13 @@
         "englishname": "Luodi Mountain Natural Park",
         "geohash": "wsj983mfu",
         "address": "山頂路(南側)"
+    },
+    {
+        "id": "501223006",
+        "name": "彌陀國小",
+        "englishname": "Mituo Elementary School",
+        "geohash": "wsj9879yu",
+        "address": "中正路213號"
     },
     {
         "id": "501223007",
