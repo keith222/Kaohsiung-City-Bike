@@ -3283,6 +3283,27 @@
         "address": "勝中路/勝民路(西南側)"
     },
     {
+        "id": "501206152",
+        "name": "警察局鳳山分局",
+        "englishname": "Police Bureau Fengshan Precinct",
+        "geohash": "wsj8fcc8z",
+        "address": "文龍東路/文山路(西北側)"
+    },
+    {
+        "id": "501206153",
+        "name": "國隆國隆路15巷口",
+        "englishname": "Guolong Ln. 15, Guolong Rd.",
+        "geohash": "wsj8dt4pm",
+        "address": "國隆路/國隆路15巷(東北側)"
+    },
+    {
+        "id": "501206154",
+        "name": "環河中山東路380巷口",
+        "englishname": "Huanhe Ln. 380, Zhongshan E. Rd.",
+        "geohash": "wsj8eqsw5",
+        "address": "環河街/中山東路380巷(東南側)"
+    },
+    {
         "id": "501207001",
         "name": "捷運生態園區站(1號出口)",
         "englishname": "KRT Ecological District Sta. (Exit 1)",
@@ -8118,6 +8139,27 @@
         "englishname": "Kaohsiung Public Hunei Branch",
         "geohash": "wsj6rf029",
         "address": "保生路101號前"
+    },
+    {
+        "id": "501221002",
+        "name": "文賢國小",
+        "englishname": "Wenshien Elementary School",
+        "geohash": "wsj6rd2ey",
+        "address": "中正路二段/信義路(西南側)"
+    },
+    {
+        "id": "501221003",
+        "name": "湖內國中",
+        "englishname": "Hunei Junior High School",
+        "geohash": "wsj6rf5pp",
+        "address": "中山路二段63號"
+    },
+    {
+        "id": "501221005",
+        "name": "湖東公園",
+        "englishname": "Hudong Park",
+        "geohash": "wsjd0m512",
+        "address": "東方路45巷35弄/東方路45巷(東南側)"
     },
     {
         "id": "501222001",
