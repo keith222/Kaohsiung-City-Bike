@@ -206,6 +206,13 @@
         "id": "501201030",
         "name": "中正忠孝一路口",
         "englishname": "Zhongzheng Zhongxiao 1st Rd.",
+        "geohash": "wsj89xvh2",
+        "address": "中正三路/仁愛一街(西北側)"
+    },
+    {
+        "id": "501201031",
+        "name": "中正仁愛一街口",
+        "englishname": "Zhongzheng Ren'ai 1st St.",
         "geohash": "wsj89xu71",
         "address": "中正三路/忠孝一路(東南側)"
     },
@@ -257,14 +264,7 @@
         "englishname": "Jhong Jheng Senior High School",
         "geohash": "wsj8dqgxh",
         "address": "中正一路8號(校門左側人行道)"
-    },
-    {
-        "id": "501202008",
-        "name": "凱旋青樹",
-        "englishname": "Triumph Green Tree",
-        "geohash": "wsj8cchtv",
-        "address": "凱旋一路/凱歌路164巷口(西北側)"
-    },
+    },   
     {
         "id": "501202009",
         "name": "泰順河南路口",
@@ -838,6 +838,20 @@
         "englishname": "Sanduo Public Parking",
         "geohash": "wsj8dqe6r",
         "address": "三多一路/高雄交流道(東南側)"
+    },
+    {
+        "id": "501202091",
+        "name": "凱旋青樹",
+        "englishname": "Triumph Green Tree",
+        "geohash": "wsj8cchtv",
+        "address": "凱旋一路/凱歌路164巷口(西北側)"
+    },
+    {
+        "id": "501202094",
+        "name": "正憲公有停車場",
+        "englishname": "Zhengxian Public Parking",
+        "geohash": "wsj8cbzrp",
+        "address": "安康路20巷/憲政路242巷(北側)"
     },
     {
         "id": "501203001",
@@ -1673,6 +1687,13 @@
         "address": "鐵道一街/九如一路381巷口(南側)"
     },
     {
+        "id": "501203120",
+        "name": "本和公園",
+        "englishname": "Benhe Park",
+        "geohash": "wsj8fhhd1",
+        "address": "大裕路/大和街(西北側)"
+    },
+    {
         "id": "501203121",
         "name": "鐵道三中庸街口",
         "englishname": "TiehDao 3th Zhongyong St.Intersection",
@@ -2492,6 +2513,13 @@
         "address": "保泰路/龍成路123巷口西南側"
     },
     {
+        "id": "501206035",
+        "name": "南京南京路326巷口",
+        "englishname": "Nanjing Ln. 326, Nanjing Rd.",
+        "geohash": "wsj8dt1jk",
+        "address": "南京路/南京路326巷(東南側)"
+    },
+    {
         "id": "501206036",
         "name": "福誠國小",
         "englishname": "Fucheng Elementary School",
@@ -2919,6 +2947,13 @@
         "address": "福安二街20巷39弄/福安二街86巷口(東側)"
     },
     {
+        "id": "501206098",
+        "name": "和興里活動中心",
+        "englishname": "Hexing Vil Activity Center",
+        "geohash": "wsj8dv0cu",
+        "address": "國泰路一段210巷9號"
+    },
+    {
         "id": "501206099",
         "name": "鳳山地政事務所(忠義街)",
         "englishname": "Fengshan Land Office",
@@ -3302,6 +3337,34 @@
         "englishname": "Huanhe Ln. 380, Zhongshan E. Rd.",
         "geohash": "wsj8eqsw5",
         "address": "環河街/中山東路380巷(東南側)"
+    },
+    {
+        "id": "501206155",
+        "name": "保安兒童貨櫃主題公園",
+        "englishname": "Baoan Children Container Theme Park",
+        "geohash": "wsj8d91b1",
+        "address": "保華二路/保孝街(西南側)"
+    },
+    {
+        "id": "501206156",
+        "name": "鳳頂田中央路口",
+        "englishname": "Fengding Tianzhongyang Rd.",
+        "geohash": "wsj8dc4vv",
+        "address": "鳳頂路/田中央路(東南側)"
+    },
+    {
+        "id": "501206157",
+        "name": "維武東六巷口",
+        "englishname": "Weiwu E.6th Ln.",
+        "geohash": "wsj8dvr7s",
+        "address": "維武路/黃埔新村東六巷(西南側)"
+    },
+    {
+        "id": "501206158",
+        "name": "中崙一中崙路口",
+        "englishname": "Zhonglun 1st Zhonglun Rd.",
+        "geohash": "wsj8ddsdn",
+        "address": "中崙一路/中崙路(東南側)"
     },
     {
         "id": "501207001",
@@ -4935,6 +4998,13 @@
         "address": "鎮興路/鎮昌五巷(北側)"
     },
     {
+        "id": "501208117",
+        "name": "瑞和兒童遊戲場",
+        "englishname": "Ruihe Children's Park",
+        "geohash": "wsj8d4yv0",
+        "address": "公正路/公正路83巷(西北側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -6419,6 +6489,41 @@
         "address": "捷運油廠國小(4號出口)"
     },
     {
+        "id": "501210120",
+        "name": "後勁宿舍(後昌路)",
+        "englishname": "Houjing Dormitory (Houchang Rd.)",
+        "geohash": "wsj91wy02",
+        "address": "高雄煉油廠新北門(對側人行道)"
+    },
+    {
+        "id": "501210121",
+        "name": "樂群秀群路457巷口",
+        "englishname": "Lequn Ln.457 Xiuqun Rd.",
+        "geohash": "wsj91rqt8",
+        "address": "樂群路72巷/秀群路457巷(西南側)"
+    },
+    {
+        "id": "501210122",
+        "name": "國昌國中(智昌街)",
+        "englishname": "Guochang Junior High School (Zhichang)",
+        "geohash": "wsj930h86",
+        "address": "智昌街/仁昌街(西南側)"
+    },
+    {
+        "id": "501210123",
+        "name": "經三中二街口",
+        "englishname": "Jing 3rd Central 2nd St.",
+        "geohash": "wsj938eqm",
+        "address": "經三路/中二街(西南側)"
+    },
+    {
+        "id": "501210124",
+        "name": "楠梓高中(土庫六路側)",
+        "englishname": "Nanzhi Senior High School(Tuku 6th Rd.)",
+        "geohash": "wsj96hpk7",
+        "address": "土庫六路/清豐三路(西北側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -6900,7 +7005,35 @@
         "englishname": "Kongzhai Green Garden",
         "geohash": "wsj87nqeb",
         "address": "孔宅十街/孔宅三路(東北側)"
+    },   
+    {
+        "id": "501212065",
+        "name": "新豐兒童遊戲場",
+        "englishname": "Xinfeng Children's Park",
+        "geohash": "wsj86uk5c",
+        "address": "漢民路675巷/華盛街86巷(東側)"
     },    
+    {
+        "id": "501212066",
+        "name": "港興兒童遊戲場",
+        "englishname": "Gangxing Children's Park",
+        "geohash": "wsj86kjfe",
+        "address": "小港路142巷/小港路90巷3弄(東北側)"
+    },    
+    {
+        "id": "501212067",
+        "name": "東亞南路綠帶公園",
+        "englishname": "Dongya S.Rd Greenbelt Park",
+        "geohash": "wsj865r1u",
+        "address": "東亞南路/和平七路(東北側)"
+    }, 
+    {
+        "id": "501212068",
+        "name": "港明兒童遊戲場",
+        "englishname": "Kang Ming Children's Park",
+        "geohash": "wsj86hwuf",
+        "address": "平和路248巷/孝先街(西北側)"
+    }, 
     {
         "id": "501213001",
         "name": "蚵仔寮觀光魚市",
@@ -7203,6 +7336,13 @@
         "address": "安樂東街/安樂一街(東南側)"
     },
     {
+        "id": "501214035",
+        "name": "仁武文學公園",
+        "englishname": "Renwu Wenxue Park",
+        "geohash": "wsj94srw1",
+        "address": "文學路二段 /文學六街(西南側)"
+    },
+    {
         "id": "501215001",
         "name": "林園行政中心",
         "englishname": "Linyuan District Office",
@@ -7271,6 +7411,20 @@
         "englishname": "Yanhai Gongye 1st Rd.",
         "geohash": "wevxgzufz",
         "address": "沿海路一段/工業一路西南側"
+    },
+    {
+        "id": "501215011",
+        "name": "汕尾地區聯合社區活動中心",
+        "englishname": "Shanwei District Activity Center",
+        "geohash": "wevxguwe5",
+        "address": "中汕路218號"
+    },
+    {
+        "id": "501215012",
+        "name": "爐濟殿公園",
+        "englishname": "Luji Temple Park",
+        "geohash": "wevxu5ek3",
+        "address": "東汕路32號"
     },
     {
         "id": "501216001",
@@ -7812,6 +7966,27 @@
         "address": "大華路/大華路55巷(東北側)"
     },
     {
+        "id": "501218025",
+        "name": "鳳山圳滯洪公園",
+        "englishname": "Fengshan Town Basin Park",
+        "geohash": "wsj8g39tx",
+        "address": "美山路21號(對側)"
+    },
+    {
+        "id": "501218026",
+        "name": "鳥松國中",
+        "englishname": "Niaosong Junior High School",
+        "geohash": "wsj8gnkfe",
+        "address": "松埔北巷2之23號(對面)"
+    },
+    {
+        "id": "501218027",
+        "name": "恆山南竹安街口",
+        "englishname": "Hengshan S. Zhu'an St.",
+        "geohash": "wsj8ffywp",
+        "address": "恆山南巷/竹安街(東南側)"
+    },
+    {
         "id": "501219001",
         "name": "永芳公園",
         "englishname": "Yong Fang Park",
@@ -7987,6 +8162,27 @@
         "address": "琉球路/黃厝路(西南側)"
     },
     {
+        "id": "501219026",
+        "name": "溪寮公車站",
+        "englishname": "Xiliao Bus Station",
+        "geohash": "wsj8spj6k",
+        "address": "溪寮路105號"
+    },
+    {
+        "id": "501219027",
+        "name": "上寮綜合活動中心",
+        "englishname": "Shangliao Comprehensive activity center",
+        "geohash": "wsj8s6294",
+        "address": "上寮路140號"
+    },
+    {
+        "id": "501219028",
+        "name": "義和河堤路口",
+        "englishname": "Yihe Heti Rd.",
+        "geohash": "wsj8u1q5s",
+        "address": "義和路/河堤路一段(東南側)"
+    },
+    {
         "id": "501220001",
         "name": "捷運青埔站(1號出口)東側",
         "englishname": "KRT Cingpu Sta. (Exit 1) East",
@@ -8155,6 +8351,13 @@
         "address": "中山路二段63號"
     },
     {
+        "id": "501221004",
+        "name": "長壽路公有停車場",
+        "englishname": "Changshou Rd Public Parking",
+        "geohash": "wsjd0njfn",
+        "address": "長壽路/長春四街(西南側)"
+    },
+    {
         "id": "501221005",
         "name": "湖東公園",
         "englishname": "Hudong Park",
@@ -8239,6 +8442,13 @@
         "address": "山頂路(南側)"
     },
     {
+        "id": "501223005",
+        "name": "南安國小公車站",
+        "englishname": "Nanan Elementary School Bus Statio",
+        "geohash": "wsj980ne7",
+        "address": "南安國小公車站(南側)"
+    },
+    {
         "id": "501223006",
         "name": "彌陀國小",
         "englishname": "Mituo Elementary School",
@@ -8289,6 +8499,13 @@
     },
     {
         "id": "501224006",
+        "name": "路竹車站",
+        "englishname": "LuZhu Station",
+        "geohash": "wsjd08wck",
+        "address": "中正路333號(對側)"
+    },
+    {
+        "id": "501224006",
         "name": "高苑科技大學生化大樓",
         "englishname": "KYU Biochemical Building",
         "geohash": "wsj9bwrq1",
@@ -8319,8 +8536,29 @@
         "id": "501224010",
         "name": "樹人醫護管理專科學校",
         "englishname": "Shuren Medical and Nursing Management College",
-        "geohash": "wsjd0tejj",
+        "geohash": "wsjd0t7pm",
         "address": "環球路452號前"
+    },
+    {
+        "id": "501224011",
+        "name": "路科六路科一路口",
+        "englishname": "Luke 6th Luke 1th Rd.",
+        "geohash": "wsj9bssw6",
+        "address": "路科六路/路科一路(西北側)"
+    },
+    {
+        "id": "501224012",
+        "name": "一甲國中",
+        "englishname": "Yijia Junior High School",
+        "geohash": "wsjd0g4bd",
+        "address": "一甲路(東側)"
+    },
+    {
+        "id": "501224013",
+        "name": "路竹區第二停車場",
+        "englishname": "Luzhu Dist Second Parking Lot",
+        "geohash": "wsjd090qj",
+        "address": "延平路/永福路(西北側)"
     },
     {
         "id": "501225001",
