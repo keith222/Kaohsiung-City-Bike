@@ -1869,6 +1869,34 @@
         "address": "同盟二路/興安街(北側)"
     },
     {
+        "id": "501203146",
+        "name": "三雅新公園",
+        "englishname": "Sanya New Park",
+        "geohash": "wsj8cb7yw",
+        "address": "和平一路/河北一路(西南側)"
+    },
+    {
+        "id": "501203147",
+        "name": "彩虹公園",
+        "englishname": "Rainbow Park",
+        "geohash": "wsj8cbmht",
+        "address": "建國一路/建國一路385巷(東南側)"
+    },
+    {
+        "id": "501203149",
+        "name": "九如一臥龍路口",
+        "englishname": "Jiuru 1st Wolong Rd.",
+        "geohash": "wsj8f1jxr",
+        "address": "九如一路/臥龍路(東南側)"
+    },
+    {
+        "id": "501203150",
+        "name": "大豐大裕路202巷口",
+        "englishname": "Dafeng Ln. 202, Dayu Rd.",
+        "geohash": "wsj8fhyhd",
+        "address": "大豐一路/大裕路202巷(西北側)"
+    },
+    {
         "id": "501204001",
         "name": "高雄國際會議中心",
         "englishname": "International Convention Center Kaohsiung",
@@ -4200,6 +4228,20 @@
         "address": "高鐵路/大中二路(西北側)"
     },
     {
+        "id": "501207127",
+        "name": "華夏重文街口",
+        "englishname": "Huaxia Chongwen St",
+        "geohash": "wsj919m0e",
+        "address": "華夏路/重文街(西南側)"
+    },
+    {
+        "id": "501207128",
+        "name": "新莊一新榮街口",
+        "englishname": "Xinzhuang 1st Xinrong St.",
+        "geohash": "wsj8cx172",
+        "address": "新莊一路/新榮街(西北側)"
+    },
+    {
         "id": "501208001",
         "name": "時代大道中華路口(西北側)",
         "englishname": "Shihdai Zhonghua Rd. Intersection (Northwest)",
@@ -5003,6 +5045,13 @@
         "englishname": "Ruihe Children's Park",
         "geohash": "wsj8d4yv0",
         "address": "公正路/公正路83巷(西北側)"
+    },
+    {
+        "id": "501208118",
+        "name": "允棟公園",
+        "englishname": "Yundong Park",
+        "geohash": "wsj898x99",
+        "address": "鎮州路/鎮東三街(西南側)"
     },
     {
         "id": "501209001",
@@ -8328,6 +8377,34 @@
         "englishname": "Qiaodu Xinnan 2nd St.",
         "geohash": "wsj93d3je",
         "address": "橋都路/新南二街(東北側)"
+    },
+    {
+        "id": "501220022",
+        "name": "新莊義山宮",
+        "englishname": "Xinzhuang Yishan Palace",
+        "geohash": "wsj93kxzh",
+        "address": "明神路定祥巷1號"
+    },
+    {
+        "id": "501220023",
+        "name": "經武甲樹路1186巷口",
+        "englishname": "Jingwu Ln. 1186, Jiashu Rd.",
+        "geohash": "wsj93e21h",
+        "address": "經武路/甲樹路1186巷(西南側)"
+    },
+    {
+        "id": "501220024",
+        "name": "成功南經武路口",
+        "englishname": "Chenggong S.Jingwu Rd.",
+        "geohash": "wsj93u7f5",
+        "address": "成功南路/經武路(西北側)"
+    },
+    {
+        "id": "501220025",
+        "name": "高苑工商",
+        "englishname": "Kao-Yuan Vocational High school",
+        "geohash": "wsj93qfkc",
+        "address": "芋寮路1號"
     },
     {
         "id": "501221001",
