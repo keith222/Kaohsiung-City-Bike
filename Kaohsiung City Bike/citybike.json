@@ -847,6 +847,13 @@
         "address": "凱旋一路/凱歌路164巷口(西北側)"
     },
     {
+        "id": "501202093",
+        "name": "三多二光華一路口",
+        "englishname": "Sanduo 2nd /Guanghua 1st Rd.",
+        "geohash": "wsj89vs2g",
+        "address": "三多二路/光華一路(西北側)"
+    },
+    {
         "id": "501202094",
         "name": "正憲公有停車場",
         "englishname": "Zhengxian Public Parking",
@@ -1883,6 +1890,13 @@
         "address": "建國一路/建國一路385巷(東南側)"
     },
     {
+        "id": "501203148",
+        "name": "平等九如一路口",
+        "englishname": "Pingdeng Jiuru 1st Rd.",
+        "geohash": "wsj8ccrh0",
+        "address": "平等路/九如一路(東南側)"
+    },
+    {
         "id": "501203149",
         "name": "九如一臥龍路口",
         "englishname": "Jiuru 1st Wolong Rd.",
@@ -1895,6 +1909,20 @@
         "englishname": "Dafeng Ln. 202, Dayu Rd.",
         "geohash": "wsj8fhyhd",
         "address": "大豐一路/大裕路202巷(西北側)"
+    },
+    {
+        "id": "501203151",
+        "name": "九如二青島街口",
+        "englishname": "Jiuru 2nd Qingdao St.",
+        "geohash": "wsj8c9x6f",
+        "address": "九如二路/青島街(東南側)"
+    },
+    {
+        "id": "501203152",
+        "name": "鐵道克武路31巷口",
+        "englishname": "Tiedao Ln. 31, Kewu Rd.",
+        "geohash": "wsj8f28wt",
+        "address": "鐵道一街/克武路31巷(南側)"
     },
     {
         "id": "501204001",
@@ -2301,6 +2329,13 @@
         "englishname": "Hedong Guangfu 2nd St.",
         "geohash": "wsj89q1n4",
         "address": "河東路/光復二街(西側)"
+    },
+    {
+        "id": "501205041",
+        "name": "七賢自立一路口",
+        "englishname": "Qixian Zili 1st Rd.",
+        "geohash": "wsj8c2qh4",
+        "address": "七賢二路/自立一路(西北側)"
     },
     {
         "id": "501206001",
@@ -2728,6 +2763,13 @@
         "englishname": "Erjia Village Activity Center",
         "geohash": "wsj8d6h8z",
         "address": "林森路/林森路416巷口東北側"
+    },
+    {
+        "id": "501206062",
+        "name": "北平力行路口",
+        "englishname": "Beiping Lixing Rd.",
+        "geohash": "wsj8g142b",
+        "address": "北平路/力行路(西南側)"
     },
     {
         "id": "501206063",
@@ -5712,6 +5754,20 @@
         "address": "鼓山三路/鼓山三路153巷(西南側)"
     },
     {
+        "id": "501209098",
+        "name": "壽山動物園停車場",
+        "englishname": "Shou Shan Zoo Parking",
+        "geohash": "wsj8c092x",
+        "address": "萬壽路350號"
+    },
+    {
+        "id": "501209101",
+        "name": "翠華九如四路口",
+        "englishname": "Cuihua Jiuru 4th Rd.",
+        "geohash": "wsj8c43yu",
+        "address": "翠華路/九如四路(東南側)"
+    },
+    {
         "id": "501210001",
         "name": "捷運世運站(2號出口)",
         "englishname": "KRT World Games Sta. (Exit 2)",
@@ -6221,6 +6277,13 @@
         "englishname": "World Games Boulevard",
         "geohash": "wsj91kw6z",
         "address": "世運大道3號(東北側人行道)"
+    },
+    {
+        "id": "501210074",
+        "name": "德富德富街286巷口",
+        "englishname": "Defu Ln. 286, Defu St.",
+        "geohash": "wsj933y1j",
+        "address": "德富街/德富街286巷(北側)"
     },
     {
         "id": "501210075",
@@ -8706,6 +8769,13 @@
         "englishname": "Kaohsiung Public Library Dashu 2nd Branch",
         "geohash": "wsj8uhtzf",
         "address": "久堂路97之1號前"
+    },
+    {
+        "id": "501226007",
+        "name": "大樹國小",
+        "englishname": "Dashu Elementary School",
+        "geohash": "wsj9hd1v6",
+        "address": "中正一路/中正一路245巷(北側)"
     },
     {
         "id": "501227001",
