@@ -5096,6 +5096,13 @@
         "address": "鎮州路/鎮東三街(西南側)"
     },
     {
+        "id": "501208119",
+        "name": "漁港德昌路口",
+        "englishname": "Yugang Dechang Rd.",
+        "geohash": "wsj83yw6k",
+        "address": "德昌路/漁港路(西北側)"
+    },
+    {
         "id": "501209001",
         "name": "捷運巨蛋站(2號出口)",
         "englishname": "KRT Kaohsiung Arena Sta. (Exit 2)",
@@ -6683,6 +6690,13 @@
         "englishname": "Qijin Coastal Park Parking Lot",
         "geohash": "wsj88gc4y",
         "address": "旗津三路/中洲三路687巷(西側)"
+    },
+    {
+        "id": "501211008",
+        "name": "上竹公園",
+        "englishname": "Shangzhu Park",
+        "geohash": "wsj83q5z7",
+        "address": "旗津二路/上竹巷(西北側)"
     },
     {
         "id": "501212001",
