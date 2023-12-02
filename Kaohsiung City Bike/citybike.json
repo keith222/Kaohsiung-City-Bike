@@ -861,6 +861,13 @@
         "address": "安康路20巷/憲政路242巷(北側)"
     },
     {
+        "id": "501202095",
+        "name": "和平三多二路口",
+        "englishname": "Heping Sanduo 2nd Rd.",
+        "geohash": "wsj89vzb4",
+        "address": "和平二路/三多二路(西南側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -4138,10 +4145,10 @@
     },
     {
         "id": "501207106",
-        "name": "合群新城(建業緯六路口)",
+        "name": "合群新城(緯六海景街口)",
         "englishname": "Hequn New Residential(chien yeh Weiliu Rd. Intersection)",
-        "geohash": "wsj915vzy",
-        "address": "緯六路268號(北側)"
+        "geohash": "wsj915yqq",
+        "address": "緯六路/海景街(西北側)"
     },
     {
         "id": "501207107",
@@ -8526,6 +8533,13 @@
         "address": "東方路45巷35弄/東方路45巷(東南側)"
     },
     {
+        "id": "501221006",
+        "name": "保生湖中路378巷口",
+        "englishname": "Baosheng Ln. 378, Huzhong Rd.",
+        "geohash": "wsj6rd5fn",
+        "address": "保生路/湖中路378巷(西南側)"
+    },
+    {
         "id": "501222001",
         "name": "觀音牛路巷公園",
         "englishname": "Guanyinniu Road & Lane Park",
@@ -8876,6 +8890,13 @@
         "address": "鳳加路55號前"
     },
     {
+        "id": "501228011",
+        "name": "南燕公園",
+        "englishname": "Nanyan Park",
+        "geohash": "wsj9dudhk",
+        "address": "燕南三街/燕南五街(東側)"
+    },
+    {
         "id": "501229001",
         "name": "鼓山國小(延平一路)",
         "englishname": "Gushan Elementary School",
@@ -8944,6 +8965,13 @@
         "englishname": "Kaohsiung Public Library Meinong Branch",
         "geohash": "wsjdr0b50",
         "address": "中正路一段53號南側"
+    },
+    {
+        "id": "501230004",
+        "name": "高雄市美濃運動中心",
+        "englishname": "Kaohsiung Meinong Sportscenter",
+        "geohash": "wsjdpp8nz",
+        "address": "中正路一段191號"
     },
     {
         "id": "501235001",
