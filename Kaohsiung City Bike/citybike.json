@@ -5782,6 +5782,13 @@
         "address": "萬壽路350號"
     },
     {
+        "id": "501209100",
+        "name": "鼓山鼓山三路101巷口",
+        "englishname": "Gushan  Ln. 101, Gushan 3rd Rd.",
+        "geohash": "wsj8buyn5",
+        "address": "鼓山三路/鼓山三路101巷(西側)"
+    },
+    {
         "id": "501209101",
         "name": "翠華九如四路口",
         "englishname": "Cuihua Jiuru 4th Rd.",
@@ -8498,6 +8505,20 @@
         "address": "芋寮路1號"
     },
     {
+        "id": "501220026",
+        "name": "橋都新南三街口",
+        "englishname": "Qiaodu Xinnan 3nd St.",
+        "geohash": "wsj93d2hb",
+        "address": "橋都路/新南三街(東北側)"
+    },
+    {
+        "id": "501220027",
+        "name": "典寶溪D區滯洪池",
+        "englishname": "DR Area D Detention Ponds.",
+        "geohash": "wsj93p8uf",
+        "address": "典寶溪D區滯洪池入口處(芋寮路側)"
+    },
+    {
         "id": "501221001",
         "name": "高雄市立圖書館湖內分館",
         "englishname": "Kaohsiung Public Hunei Branch",
@@ -8734,6 +8755,41 @@
         "englishname": "Luzhu Dist Second Parking Lot",
         "geohash": "wsjd090qj",
         "address": "延平路/永福路(西北側)"
+    },
+    {
+        "id": "501224014",
+        "name": "路竹區老人活動中心",
+        "englishname": "Luzhu Dist Elderly Activity Center",
+        "geohash": "wsjd02wfc",
+        "address": "國昌路/國昌路115巷(西南側)"
+    },
+    {
+        "id": "501224015",
+        "name": "竹滬國小",
+        "englishname": "Chu Hu Elementary School",
+        "geohash": "wsj6pcvhq",
+        "address": "成功路2號"
+    },
+    {
+        "id": "501224016",
+        "name": "一甲公園",
+        "englishname": "Yijia Park",
+        "geohash": "wsjd0ex9j",
+        "address": "大仁路/信義路178巷(西南側)"
+    },
+    {
+        "id": "501224017",
+        "name": "一甲國小",
+        "englishname": "Yijia Elementary School",
+        "geohash": "wsjd0u4ng",
+        "address": "大智路43號"
+    },
+    {
+        "id": "501224018",
+        "name": "路竹竹東停車場",
+        "englishname": "Luzhu Zhudong Parking Lot",
+        "geohash": "wsjd08u8c",
+        "address": "中正路/中正路104巷(北側)"
     },
     {
         "id": "501225001",
