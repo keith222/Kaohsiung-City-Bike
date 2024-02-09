@@ -868,6 +868,13 @@
         "address": "和平二路/三多二路(西南側)"
     },
     {
+        "id": "501202096",
+        "name": "苓南前苓安路口",
+        "englishname": "Lingnan Ling'an Rd.",
+        "geohash": "wsj89ke4f",
+        "address": "苓南前路/苓安路(西南側)"
+    },
+    {
         "id": "501203001",
         "name": "建國同愛街口西北側",
         "englishname": "Jianguo Tong'ai St. Intersection (Northwest)",
@@ -4991,6 +4998,13 @@
         "address": "嘉陵街/天山路口(西南側)"
     },
     {
+        "id": "501208101",
+        "name": "漁業廣播電台",
+        "englishname": "Fishery Radio Station",
+        "geohash": "wsj83v0d5",
+        "address": "漁港北一路/豐漁二路口(西北側)"
+    },
+    {
         "id": "501208102",
         "name": "時代大道時代南二路口",
         "englishname": "Shidai Blvd Shidai S. 2nd Rd.",
@@ -5439,6 +5453,20 @@
         "address": "翠華路/青海路口(西北側人行道)"
     },
     {
+        "id": "501209047",
+        "name": "富農龍勝路口",
+        "englishname": "TFunong Longsheng Rd.",
+        "geohash": "wsj8cks8p",
+        "address": "富農路/龍勝路(西南側)"
+    },
+    {
+        "id": "501209048",
+        "name": "明誠高中(中華一路)",
+        "englishname": "Saint Paul's High School (Zhonghua 1st Rd.)",
+        "geohash": "wsj8cq38k",
+        "address": "中華一路97號前"
+    },
+    {
         "id": "501209049",
         "name": "輕軌內惟藝術中心",
         "englishname": "Neiwei Arts Center",
@@ -5719,6 +5747,13 @@
         "address": "鼓山二路37巷108號前"
     },
     {
+        "id": "501209089",
+        "name": "棧貳庫",
+        "englishname": "KW2",
+        "geohash": "wsj88vxn9",
+        "address": "蓬萊路17號"
+    },
+    {
         "id": "501209090",
         "name": "富農龍德路口",
         "englishname": "Funong Longde Rd.",
@@ -5780,6 +5815,13 @@
         "englishname": "Shou Shan Zoo Parking",
         "geohash": "wsj8c092x",
         "address": "萬壽路350號"
+    },
+    {
+        "id": "501209099",
+        "name": "大港倉",
+        "englishname": "Kaohsiung Port Depot",
+        "geohash": "wsj89j7hw",
+        "address": "蓬萊路6-6號"
     },
     {
         "id": "501209100",
@@ -6664,6 +6706,13 @@
         "address": "土庫六路/清豐三路(西北側)"
     },
     {
+        "id": "501210126",
+        "name": "廣昌廣昌街175巷口",
+        "englishname": "Guangchang  Ln. 175, Guangchang St.",
+        "geohash": "wsj91ju8j",
+        "address": "廣昌街43巷/廣昌街175巷(東南側)"
+    },
+    {
         "id": "501211001",
         "name": "高雄科技大學旗津校區",
         "englishname": "NKUST Cijin Campus",
@@ -7182,6 +7231,13 @@
         "address": "平和路248巷/孝先街(西北側)"
     }, 
     {
+        "id": "501212069",
+        "name": "松山公園",
+        "englishname": "Songshan Park",
+        "geohash": "wsj87jhfh",
+        "address": "松華路/松直街82巷(西南側)"
+    }, 
+    {
         "id": "501213001",
         "name": "蚵仔寮觀光魚市",
         "englishname": "Kezailiao Tourist Fish Market",
@@ -7488,6 +7544,20 @@
         "englishname": "Renwu Wenxue Park",
         "geohash": "wsj94srw1",
         "address": "文學路二段 /文學六街(西南側)"
+    },
+    {
+        "id": "501214036",
+        "name": "考潭巡守隊(成功路)",
+        "englishname": "Kaotan Patrol Team(Chenggong Rd.)",
+        "geohash": "wsj94ck1h",
+        "address": "成功路51-1號"
+    },
+    {
+        "id": "501214037",
+        "name": "灣內社區活動中心",
+        "englishname": "Wannei Activity Center",
+        "geohash": "wsj94c31e",
+        "address": "灣內一巷23號"
     },
     {
         "id": "501215001",
@@ -7887,6 +7957,13 @@
         "englishname": "Heti Daren S. Rd.",
         "geohash": "wsj99s614",
         "address": "河堤路一段/大仁南路(東北側)"
+    },
+    {
+        "id": "501216049",
+        "name": "中山北忠誠街口",
+        "englishname": "Zhongshan N.Zhongcheng St.",
+        "geohash": "wsj99qnhr",
+        "address": "中山北路/忠誠街(東北側)"
     },
     {
         "id": "501217001",
@@ -8519,6 +8596,13 @@
         "address": "典寶溪D區滯洪池入口處(芋寮路側)"
     },
     {
+        "id": "501220028",
+        "name": "六班長紀念公園",
+        "englishname": "Sixth Squad Leader Memorial Park",
+        "geohash": "wsj93q411",
+        "address": "三仙路23號"
+    },
+    {
         "id": "501221001",
         "name": "高雄市立圖書館湖內分館",
         "englishname": "Kaohsiung Public Hunei Branch",
@@ -8659,6 +8743,13 @@
         "address": "產業路15號"
     },
     {
+        "id": "501223008",
+        "name": "彌陀彌壽宮",
+        "englishname": "Mituo Mishou Palace",
+        "geohash": "wsj9869p7",
+        "address": "中正西路11號"
+    },
+    {
         "id": "501224001",
         "name": "路竹夜市",
         "englishname": "Luzhu Night Market",
@@ -8792,6 +8883,13 @@
         "address": "中正路/中正路104巷(北側)"
     },
     {
+        "id": "501224019",
+        "name": "蔡文國小",
+        "englishname": "Tsai Wen Elementary School",
+        "geohash": "wsjd03zft",
+        "address": "國昌路548號前"
+    },
+    {
         "id": "501225001",
         "name": "阿蓮國中",
         "englishname": "Alian Junior High School",
@@ -8867,6 +8965,13 @@
         "englishname": "Dashu Elementary School",
         "geohash": "wsj9hd1v6",
         "address": "中正一路/中正一路245巷(北側)"
+    },
+    {
+        "id": "501226008",
+        "name": "九曲福德宮",
+        "englishname": "Jiuqu Fude Temple",
+        "geohash": "wsj8u5jte",
+        "address": "九曲路5巷55之1號"
     },
     {
         "id": "501227001",
@@ -9000,6 +9105,13 @@
         "englishname": "Qi Tang Agriculture Park",
         "geohash": "wsjdjuydh",
         "address": "運蔗路/旗屏一路(西北側)"
+    },
+    {
+        "id": "501229009",
+        "name": "旗山農工",
+        "englishname": "CAIS",
+        "geohash": "wsjdm8uy7",
+        "address": "旗甲路一段195號"
     },
     {
         "id": "501230001",
