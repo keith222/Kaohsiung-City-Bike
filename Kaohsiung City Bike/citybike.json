@@ -1373,7 +1373,7 @@
     },
     {
         "id": "501203072",
-        "name": "高雄車站(建國二路)",
+        "name": "高雄車站(東南側)",
         "englishname": "Kaohsiung Station (Jianguo 2nd Rd,)",
         "geohash": "wsj8c946y",
         "address": "建國二路306號(前面)"
@@ -1849,7 +1849,7 @@
     },
     {
         "id": "501203140",
-        "name": "博愛九如二路口(西北側)",
+        "name": "博愛九如二路口",
         "englishname": "Bo'ai Jiuru 2nd Rd.(Northwest)",
         "geohash": "wsj8c99xu",
         "address": "博愛一路/九如二路(西北側)"
@@ -6706,6 +6706,13 @@
         "address": "土庫六路/清豐三路(西北側)"
     },
     {
+        "id": "501210125",
+        "name": "高楠惠心街口",
+        "englishname": "Gaonan Huixin St.",
+        "geohash": "wsj93cx7h",
+        "address": "高楠公路/惠心街(東北側)"
+    },
+    {
         "id": "501210126",
         "name": "廣昌廣昌街175巷口",
         "englishname": "Guangchang  Ln. 175, Guangchang St.",
@@ -7336,6 +7343,13 @@
         "address": "赤仁路/慈惠一街西南方"
     },
     {
+        "id": "501214004",
+        "name": "竹後國小",
+        "englishname": "Jhu Hou Elementary School",
+        "geohash": "wsj94q2bw",
+        "address": "竹楠路250號"
+    },
+    {
         "id": "501214005",
         "name": "仁慈公園",
         "englishname": "Renci Park",
@@ -7773,8 +7787,8 @@
         "id": "501216020",
         "name": "岡山車站",
         "englishname": "Gangshan Station",
-        "geohash": "wsj99mr4q",
-        "address": "中山北路2號旁"
+        "geohash": "wsj99mpk2",
+        "address": "中山南路535號(對側)"
     },
     {
         "id": "501216021",
@@ -8020,6 +8034,13 @@
         "englishname": "Xing Da Flat parking",
         "geohash": "wsj6p519t",
         "address": "濱海路一段/崎漏路(東南側)"
+    },
+    {
+        "id": "501217009",
+        "name": "茄萣運動公園",
+        "englishname": "Qieding Sports Park",
+        "geohash": "wsj6qfkjt",
+        "address": "公園路81號(東南側)"
     },
     {
         "id": "501218001",
@@ -8645,6 +8666,13 @@
         "address": "保生路/湖中路378巷(西南側)"
     },
     {
+        "id": "501221007",
+        "name": "公館公園",
+        "englishname": "Mansion Park",
+        "geohash": "wsj6rcdfn",
+        "address": "福安路/福安路28巷(西南側)"
+    },
+    {
         "id": "501222001",
         "name": "觀音牛路巷公園",
         "englishname": "Guanyinniu Road & Lane Park",
@@ -8979,6 +9007,20 @@
         "englishname": "Yong'an Leisure Park",
         "geohash": "wsj3zf40m",
         "address": "永安路/永華路口東側公車站旁"
+    },
+    {
+        "id": "501227002",
+        "name": "竹仔港文興宮",
+        "englishname": "Chuk Tsai Port Wen Hing Palace",
+        "geohash": "wsj98r881",
+        "address": "維新路光明九巷66號"
+    },
+    {
+        "id": "501227003",
+        "name": "永新漁港安檢所",
+        "englishname": "Yong’an Fishing Port Inspection Office",
+        "geohash": "wsj3z6kyf",
+        "address": "新興路27號"
     },
     {
         "id": "501228001",
